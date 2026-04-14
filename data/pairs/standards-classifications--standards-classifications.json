@@ -1,0 +1,230 @@
+{
+  "source": "standards-classifications",
+  "target": "standards-classifications",
+  "edges": [
+    [
+      "sc-masterformat",
+      "sc-uniformat",
+      "COMPLEMENTS"
+    ],
+    [
+      "sc-uniformat",
+      "sc-masterformat",
+      "CROSS-MAPS TO"
+    ],
+    [
+      "sc-omniclass",
+      "sc-masterformat",
+      "INCORPORATES"
+    ],
+    [
+      "sc-omniclass",
+      "sc-uniformat",
+      "INCORPORATES"
+    ],
+    [
+      "sc-ifc-class",
+      "sc-omniclass",
+      "ALIGNS WITH"
+    ],
+    [
+      "sc-ifc-class",
+      "sc-uniformat",
+      "MAPS ENTITIES TO"
+    ],
+    [
+      "sc-specification-se",
+      "sc-masterformat",
+      "NUMBERED PER"
+    ],
+    [
+      "sc-std-cost-code",
+      "sc-masterformat",
+      "DERIVED FROM"
+    ],
+    [
+      "sc-wbs-code",
+      "sc-std-cost-code",
+      "SEGMENTS"
+    ],
+    [
+      "sc-budget-code",
+      "sc-std-cost-code",
+      "ROLLS UP"
+    ],
+    [
+      "sc-budget-code",
+      "sc-uniformat",
+      "ALIGNS WITH"
+    ],
+    [
+      "sc-osha-hazard",
+      "sc-osha-recordkeepi",
+      "CLASSIFIES INCIDENTS FOR"
+    ],
+    [
+      "sc-ansi-injury",
+      "sc-osha-recordkeepi",
+      "DETAILS INJURIES FOR"
+    ],
+    [
+      "sc-ansi-injury",
+      "sc-osha-hazard",
+      "REFINES"
+    ],
+    [
+      "sc-nfpa-stds",
+      "sc-international-bu",
+      "REFERENCED BY"
+    ],
+    [
+      "sc-ada-accessibilit",
+      "sc-international-bu",
+      "REFERENCED BY"
+    ],
+    [
+      "sc-energy-code-stds",
+      "sc-international-bu",
+      "REFERENCED BY"
+    ],
+    [
+      "sc-international-bu",
+      "sc-masterformat",
+      "DRIVES SCOPE IN"
+    ],
+    [
+      "sc-leed-certificati",
+      "sc-energy-code-stds",
+      "EXCEEDS"
+    ],
+    [
+      "sc-well-building",
+      "sc-leed-certificati",
+      "COMPLEMENTS"
+    ],
+    [
+      "sc-resilience-net",
+      "sc-international-bu",
+      "AUGMENTS"
+    ],
+    [
+      "sc-resilience-net",
+      "sc-leed-certificati",
+      "EXTENDS"
+    ],
+    [
+      "sc-leed-certificati",
+      "sc-specification-se",
+      "ADDS REQUIREMENTS TO"
+    ],
+    [
+      "sc-aia-contract",
+      "sc-dlvy-method",
+      "FORMALIZES"
+    ],
+    [
+      "sc-aace-cost",
+      "sc-std-cost-code",
+      "PROVIDES METHODOLOGY FOR"
+    ],
+    [
+      "sc-aace-cost",
+      "sc-wbs-code",
+      "PROVIDES METHODOLOGY FOR"
+    ],
+    [
+      "sc-aia-contract",
+      "sc-specification-se",
+      "GOVERNS WORKFLOW FOR"
+    ],
+    [
+      "sc-dlvy-method",
+      "sc-budget-code",
+      "SHAPES STRUCTURE OF"
+    ],
+    [
+      "sc-nfpa-stds",
+      "sc-specification-se",
+      "DICTATES CONTENT OF"
+    ],
+    [
+      "sc-masterformat-map",
+      "sc-masterformat",
+      "MEASURES ADOPTION OF"
+    ],
+    [
+      "sc-cost-code",
+      "sc-std-cost-code",
+      "MEASURES ADOPTION OF"
+    ],
+    [
+      "sc-specification-se-2",
+      "sc-specification-se",
+      "MEASURES ADOPTION OF"
+    ],
+    [
+      "sc-safety-class",
+      "sc-osha-hazard",
+      "MEASURES ADOPTION OF"
+    ],
+    [
+      "sc-wbs-adoption",
+      "sc-wbs-code",
+      "MEASURES ADOPTION OF"
+    ],
+    [
+      "sc-certification-ad",
+      "sc-leed-certificati",
+      "MEASURES ADOPTION OF"
+    ],
+    [
+      "sc-certification-ad",
+      "sc-well-building",
+      "MEASURES ADOPTION OF"
+    ],
+    [
+      "sc-well-building",
+      "sc-energy-code-stds",
+      "BUILDS UPON"
+    ],
+    [
+      "sc-nfpa-stds",
+      "sc-osha-hazard",
+      "CODIFIES PROTECTIONS FOR"
+    ],
+    [
+      "sc-aia-contract",
+      "sc-masterformat",
+      "REFERENCES"
+    ]
+  ],
+  "verbGlossary": {
+    "COMPLEMENTS": "The source {target} provides an alternative organizational view of the same construction scope as the target \u2014 one classifies by product/material, the other by function/system, and together they provide a complete picture",
+    "CROSS-MAPS TO": "Elements in {source} have defined crosswalk relationships to divisions in {target}, enabling translation between functional and product-based classification",
+    "INCORPORATES": "{source} includes {target} or facets, unifying it within a broader multi-table taxonomy",
+    "ALIGNS WITH": "The source {target} categories are designed to correspond with the target's hierarchy, enabling consistent cross-referencing between the two systems",
+    "MAPS ENTITIES TO": "{source} classified by {target}, enabling BIM-to-classification traceability",
+    "NUMBERED PER": "{source} type uses {target} numbering scheme as its primary organizational identifier (e.g., specification sections numbered per MasterFormat)",
+    "DERIVED FROM": "{source} is created by selecting and adapting divisions and sections from {target} classification for company-specific use",
+    "SEGMENTS": "{source} already classified by {target} dimension (phase, location, category)",
+    "ROLLS UP": "{source} classified by {target} summary categories for executive reporting",
+    "CLASSIFIES INCIDENTS FOR": "{source} provides the cause-based {target} that feeds into the target's severity-based recordkeeping determination",
+    "DETAILS INJURIES FOR": "The source injury {target} provides granular nature/body-part/cause detail that enriches the target's severity-level recordkeeping with root-cause specificity",
+    "REFINES": "The source {target} adds finer-grained subcategories to the target's broader hazard types, enabling deeper pattern analysis within each hazard category",
+    "REFERENCED BY": "{source} is adopted by reference within {target} code, making compliance with the source a legal requirement when the target code is enforced",
+    "DRIVES SCOPE IN": "{target} code's occupancy and construction-type classifications determine which divisions and sections of {source} classification apply to a given project",
+    "EXCEEDS": "{source}requires performance levels that go beyond the minimum thresholds set by {target} standard, effectively using the code as a baseline",
+    "AUGMENTS": "{source}performance requirements (resilience, hazard resistance) not covered by {target}, supplementing code-minimum design with additional criteria",
+    "EXTENDS": "{source}of the target certification into additional performance dimensions (climate resilience, net-zero carbon) that the target does not fully address",
+    "ADDS REQUIREMENTS TO": "{source}ation requirements on top of what {target} already demands",
+    "FORMALIZES": "{source} document series provides the legal form and standard terms that give contractual effect to the target delivery method's risk and responsibility allocation",
+    "PROVIDES METHODOLOGY FOR": "{source} defines the calculation methods, classification rules, and recommended practices that inform how {target} structure is designed and applied",
+    "GOVERNS WORKFLOW FOR": "{source} documents define the submittal, review, approval, and rejection procedures that control how documents referencing {target} flow between parties",
+    "SHAPES STRUCTURE OF": "{source}ic of {target} code hierarchy",
+    "DICTATES CONTENT OF": "The source technical standard specifies the design criteria, installation methods, and testing procedures that must appear within the relevant target {target}",
+    "MEASURES ADOPTION OF": "{source} quantifies the percentage of projects or companies actively using {target} or classification, indicating data readiness and benchmarking viability",
+    "BUILDS UPON": "The source standard uses {target} baseline performance requirements as a foundation and adds occupant-health-focused criteria on top of them",
+    "CODIFIES PROTECTIONS FOR": "{source} that directly mitigate the hazard types classified by the target",
+    "REFERENCES": "{source} documents cite {target} system by name as the standard for organizing specifications, pay applications, and other contract administration forms"
+  }
+}

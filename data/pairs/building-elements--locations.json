@@ -1,0 +1,459 @@
+{
+  "source": "building-elements",
+  "target": "locations",
+  "edges": [
+    [
+      "be-excav",
+      "loc-project-site",
+      "PERFORMED AT"
+    ],
+    [
+      "be-backfill",
+      "loc-exterior-zone",
+      "PERFORMED AT"
+    ],
+    [
+      "be-dewater",
+      "loc-below-grade",
+      "OPERATES AT"
+    ],
+    [
+      "be-erosion",
+      "loc-exterior-zone",
+      "PROTECTS"
+    ],
+    [
+      "be-deep-fdn",
+      "loc-below-grade",
+      "BEARS ON"
+    ],
+    [
+      "be-shallow-fdn",
+      "loc-below-grade",
+      "BEARS ON"
+    ],
+    [
+      "be-fdn-walls",
+      "loc-below-grade",
+      "ENCLOSES"
+    ],
+    [
+      "be-grade-beams",
+      "loc-below-grade",
+      "SPANS"
+    ],
+    [
+      "be-sog",
+      "loc-floor-level",
+      "INSTALLED AT"
+    ],
+    [
+      "be-bg-wp",
+      "loc-below-grade",
+      "APPLIED AT"
+    ],
+    [
+      "be-water-main",
+      "loc-right-way",
+      "ROUTED THROUGH"
+    ],
+    [
+      "be-sanitary",
+      "loc-right-way",
+      "ROUTED THROUGH"
+    ],
+    [
+      "be-storm",
+      "loc-exterior-zone",
+      "ROUTED THROUGH"
+    ],
+    [
+      "be-gas-svc",
+      "loc-right-way",
+      "ROUTED THROUGH"
+    ],
+    [
+      "be-site-elec",
+      "loc-right-way",
+      "ROUTED THROUGH"
+    ],
+    [
+      "be-columns",
+      "loc-floor-level",
+      "SPANS"
+    ],
+    [
+      "be-beams",
+      "loc-floor-level",
+      "SPANS"
+    ],
+    [
+      "be-slabs",
+      "loc-floor-level",
+      "INSTALLED AT"
+    ],
+    [
+      "be-roof-struct",
+      "loc-roof-level",
+      "INSTALLED AT"
+    ],
+    [
+      "be-connections",
+      "loc-grid-line",
+      "LOCATED AT"
+    ],
+    [
+      "be-stairs",
+      "loc-core-shaft",
+      "LOCATED IN"
+    ],
+    [
+      "be-misc-metals",
+      "loc-floor-level",
+      "INSTALLED AT"
+    ],
+    [
+      "be-curtainwall",
+      "loc-building",
+      "ENCLOSES"
+    ],
+    [
+      "be-windows",
+      "loc-wall-surface",
+      "INSTALLED IN"
+    ],
+    [
+      "be-ext-doors",
+      "loc-building",
+      "ACCESSED FROM"
+    ],
+    [
+      "be-masonry-v",
+      "loc-wall-surface",
+      "ATTACHED TO"
+    ],
+    [
+      "be-panels",
+      "loc-wall-surface",
+      "ATTACHED TO"
+    ],
+    [
+      "be-amb",
+      "loc-wall-surface",
+      "APPLIED AT"
+    ],
+    [
+      "be-ext-insul",
+      "loc-wall-surface",
+      "APPLIED AT"
+    ],
+    [
+      "be-roof-mem",
+      "loc-roof-level",
+      "APPLIED AT"
+    ],
+    [
+      "be-roof-insul",
+      "loc-roof-level",
+      "APPLIED AT"
+    ],
+    [
+      "be-flashing",
+      "loc-roof-level",
+      "APPLIED AT"
+    ],
+    [
+      "be-roof-drain",
+      "loc-roof-level",
+      "PENETRATES"
+    ],
+    [
+      "be-skylights",
+      "loc-roof-level",
+      "PENETRATES"
+    ],
+    [
+      "be-ductwork",
+      "loc-ceiling-plenum",
+      "ROUTED THROUGH"
+    ],
+    [
+      "be-hvac-pipe",
+      "loc-penetration-open",
+      "PENETRATES"
+    ],
+    [
+      "be-ahu",
+      "loc-equip-location",
+      "LOCATED AT"
+    ],
+    [
+      "be-heating",
+      "loc-equip-location",
+      "LOCATED AT"
+    ],
+    [
+      "be-cooling",
+      "loc-roof-level",
+      "LOCATED AT"
+    ],
+    [
+      "be-duct-insul",
+      "loc-ceiling-plenum",
+      "APPLIED AT"
+    ],
+    [
+      "be-hvac-ctrl",
+      "loc-room-space",
+      "SERVES"
+    ],
+    [
+      "be-tab",
+      "loc-cx-zone",
+      "BALANCED WITHIN"
+    ],
+    [
+      "be-dom-water",
+      "loc-core-shaft",
+      "ROUTED THROUGH"
+    ],
+    [
+      "be-waste-vent",
+      "loc-wet-area",
+      "SERVES"
+    ],
+    [
+      "be-int-storm",
+      "loc-roof-level",
+      "DRAINS"
+    ],
+    [
+      "be-gas-pipe",
+      "loc-equip-location",
+      "ROUTED TO"
+    ],
+    [
+      "be-plumb-fix",
+      "loc-wet-area",
+      "INSTALLED IN"
+    ],
+    [
+      "be-water-htr",
+      "loc-equip-location",
+      "LOCATED AT"
+    ],
+    [
+      "be-pipe-insul",
+      "loc-ceiling-plenum",
+      "APPLIED AT"
+    ],
+    [
+      "be-power-dist",
+      "loc-equip-location",
+      "LOCATED AT"
+    ],
+    [
+      "be-branch",
+      "loc-room-space",
+      "SERVES"
+    ],
+    [
+      "be-conduit",
+      "loc-penetration-open",
+      "PENETRATES"
+    ],
+    [
+      "be-lighting",
+      "loc-room-space",
+      "SERVES"
+    ],
+    [
+      "be-emerg-pwr",
+      "loc-equip-location",
+      "LOCATED AT"
+    ],
+    [
+      "be-grounding",
+      "loc-below-grade",
+      "INSTALLED AT"
+    ],
+    [
+      "be-sprink-main",
+      "loc-fire-smoke",
+      "SERVES"
+    ],
+    [
+      "be-sprink-head",
+      "loc-room-space",
+      "SERVES"
+    ],
+    [
+      "be-standpipe",
+      "loc-core-shaft",
+      "ROUTED THROUGH"
+    ],
+    [
+      "be-fire-pump",
+      "loc-equip-location",
+      "LOCATED AT"
+    ],
+    [
+      "be-fa",
+      "loc-fire-smoke",
+      "SERVES"
+    ],
+    [
+      "be-data",
+      "loc-room-space",
+      "SERVES"
+    ],
+    [
+      "be-security",
+      "loc-building",
+      "SERVES"
+    ],
+    [
+      "be-av",
+      "loc-functional-area",
+      "INSTALLED IN"
+    ],
+    [
+      "be-bas",
+      "loc-cx-zone",
+      "MONITORS"
+    ],
+    [
+      "be-specialty-sys",
+      "loc-functional-area",
+      "SERVES"
+    ],
+    [
+      "be-studs",
+      "loc-room-space",
+      "FRAMES"
+    ],
+    [
+      "be-drywall",
+      "loc-wall-surface",
+      "APPLIED AT"
+    ],
+    [
+      "be-int-doors",
+      "loc-room-space",
+      "ACCESSED FROM"
+    ],
+    [
+      "be-act",
+      "loc-room-space",
+      "INSTALLED IN"
+    ],
+    [
+      "be-dw-ceil",
+      "loc-room-space",
+      "INSTALLED IN"
+    ],
+    [
+      "be-paint",
+      "loc-wall-surface",
+      "APPLIED AT"
+    ],
+    [
+      "be-wallcover",
+      "loc-wall-surface",
+      "APPLIED AT"
+    ],
+    [
+      "be-tile",
+      "loc-wet-area",
+      "INSTALLED IN"
+    ],
+    [
+      "be-carpet",
+      "loc-room-space",
+      "INSTALLED IN"
+    ],
+    [
+      "be-spec-floor",
+      "loc-functional-area",
+      "INSTALLED IN"
+    ],
+    [
+      "be-casework",
+      "loc-functional-area",
+      "INSTALLED IN"
+    ],
+    [
+      "be-countertop",
+      "loc-wet-area",
+      "INSTALLED IN"
+    ],
+    [
+      "be-toilet-acc",
+      "loc-wet-area",
+      "INSTALLED IN"
+    ],
+    [
+      "be-signage",
+      "loc-zone-wing",
+      "INSTALLED IN"
+    ],
+    [
+      "be-elev-car",
+      "loc-core-shaft",
+      "SPANS"
+    ],
+    [
+      "be-elev-mach",
+      "loc-equip-location",
+      "LOCATED AT"
+    ],
+    [
+      "be-paving",
+      "loc-exterior-zone",
+      "INSTALLED AT"
+    ],
+    [
+      "be-sidewalks",
+      "loc-exterior-zone",
+      "INSTALLED AT"
+    ],
+    [
+      "be-landscape",
+      "loc-exterior-zone",
+      "INSTALLED AT"
+    ],
+    [
+      "be-site-light",
+      "loc-exterior-zone",
+      "INSTALLED AT"
+    ],
+    [
+      "be-fencing",
+      "loc-project-site",
+      "ENCLOSES"
+    ]
+  ],
+  "verbGlossary": {
+    "ACCESSED FROM": "{source} provides entry or egress to {target}; doors, elevators, and openings that people pass through",
+    "APPLIED AT": "{source} is adhered, coated, or layered onto a surface or {target}; membranes, waterproofing, insulation, paint, drywall",
+    "ATTACHED TO": "{source} is mechanically fastened to a surface; cladding panels and masonry veneer secured to the wall plane",
+    "BALANCED WITHIN": "{source} airflow or hydronic flow is tested and adjusted to meet design targets within a commissioning {target}",
+    "BEARS ON": "{source} transfers structural load into the ground at a below-grade {target}",
+    "DRAINS": "{source} collects and removes water from {target}",
+    "ENCLOSES": "{source} forms a boundary that contains or separates {target} from its surroundings; walls, curtain walls, fencing",
+    "FRAMES": "{source} provides the structural skeleton that defines the shape of a room or partition at {target}",
+    "INSTALLED AT": "{source} is permanently placed at {target}; slabs at floor level, site improvements at exterior zones",
+    "INSTALLED IN": "{source} is fitted within an enclosed {target}; fixtures, ceilings, flooring, and devices inside rooms or wet areas",
+    "LOCATED AT": "{source} occupies a fixed position at a specific point; columns at {target} lines, equipment on pads",
+    "LOCATED IN": "{source} is situated within a vertical enclosure; {target}s in shafts, equipment in dedicated rooms",
+    "MONITORS": "{source} observes and reports conditions across {target} zone; building automation sensing temperature and status",
+    "OPERATES AT": "{source} runs at {target} to maintain conditions; dewatering pumps working at below-grade levels",
+    "PENETRATES": "{source} passes through a boundary or surface at an opening; pipes, ducts, and conduit through fire-rated or structural assemblies",
+    "PERFORMED AT": "{target} work activity is executed at a project-level location; excavation, backfill, and grading operations",
+    "PROTECTS": "{source} safeguards {target} from environmental damage; erosion control at exterior zones",
+    "ROUTED THROUGH": "{source} follows a path through {target}; piping in shafts, ductwork in plenums, utilities in rights-of-way",
+    "ROUTED TO": "{source} terminates at a destination {target}; gas piping delivered to equipment locations",
+    "SERVES": "{source} provides utility, conditioning, or coverage to {target}; HVAC serving zones, sprinklers protecting compartments, lighting illuminating spaces",
+    "SPANS": "{source} extends continuously across or between multiple {target}s; columns spanning floors, beams spanning bays, elevator cars traversing levels"
+  }
+}

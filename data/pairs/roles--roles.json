@@ -1,0 +1,299 @@
+{
+  "source": "roles",
+  "target": "roles",
+  "edges": [
+    [
+      "rl-project-executiv",
+      "rl-project-manager",
+      "OVERSEES"
+    ],
+    [
+      "rl-project-manager",
+      "rl-project-executiv",
+      "ESCALATES TO"
+    ],
+    [
+      "rl-project-manager",
+      "rl-assistant-projec",
+      "DELEGATES TO"
+    ],
+    [
+      "rl-assistant-projec",
+      "rl-project-manager",
+      "REPORTS TO"
+    ],
+    [
+      "rl-project-manager",
+      "rl-super",
+      "PARTNERS WITH"
+    ],
+    [
+      "rl-super",
+      "rl-project-manager",
+      "ADVISES"
+    ],
+    [
+      "rl-super",
+      "rl-assistant-super",
+      "DIRECTS"
+    ],
+    [
+      "rl-assistant-super",
+      "rl-super",
+      "REPORTS TO"
+    ],
+    [
+      "rl-super",
+      "rl-foreman-gen",
+      "COORDINATES"
+    ],
+    [
+      "rl-foreman-gen",
+      "rl-super",
+      "ESCALATES TO"
+    ],
+    [
+      "rl-foreman-gen",
+      "rl-journeyman-craft",
+      "ASSIGNS WORK TO"
+    ],
+    [
+      "rl-journeyman-craft",
+      "rl-foreman-gen",
+      "REPORTS TO"
+    ],
+    [
+      "rl-journeyman-craft",
+      "rl-apprentice",
+      "MENTORS"
+    ],
+    [
+      "rl-apprentice",
+      "rl-journeyman-craft",
+      "ASSISTS"
+    ],
+    [
+      "rl-project-manager",
+      "rl-project-engineer",
+      "SUPERVISES"
+    ],
+    [
+      "rl-project-engineer",
+      "rl-project-manager",
+      "REPORTS TO"
+    ],
+    [
+      "rl-project-engineer",
+      "rl-field-engineer",
+      "MENTORS"
+    ],
+    [
+      "rl-field-engineer",
+      "rl-project-engineer",
+      "SUPPORTS"
+    ],
+    [
+      "rl-project-engineer",
+      "rl-super",
+      "BRIDGES TO"
+    ],
+    [
+      "rl-safety-manager",
+      "rl-safety-officer",
+      "DIRECTS"
+    ],
+    [
+      "rl-safety-officer",
+      "rl-safety-manager",
+      "REPORTS TO"
+    ],
+    [
+      "rl-safety-manager",
+      "rl-super",
+      "AUDITS"
+    ],
+    [
+      "rl-safety-manager",
+      "rl-foreman-gen",
+      "TRAINS"
+    ],
+    [
+      "rl-safety-officer",
+      "rl-foreman-gen",
+      "INSPECTS"
+    ],
+    [
+      "rl-quality-manager",
+      "rl-super",
+      "HOLDS ACCOUNTABLE"
+    ],
+    [
+      "rl-quality-manager",
+      "rl-foreman-gen",
+      "INSPECTS"
+    ],
+    [
+      "rl-owner-s",
+      "rl-project-executiv",
+      "RETAINS"
+    ],
+    [
+      "rl-owner-s",
+      "rl-project-manager",
+      "AUTHORIZES"
+    ],
+    [
+      "rl-owner-s",
+      "rl-design-manager",
+      "APPROVES FOR"
+    ],
+    [
+      "rl-project-executiv",
+      "rl-preconstruction",
+      "OVERSEES"
+    ],
+    [
+      "rl-preconstruction",
+      "rl-estimator-chief",
+      "DIRECTS"
+    ],
+    [
+      "rl-preconstruction",
+      "rl-project-manager",
+      "TRANSITIONS TO"
+    ],
+    [
+      "rl-estimator-chief",
+      "rl-cost-engineer",
+      "HANDS OFF TO"
+    ],
+    [
+      "rl-project-manager",
+      "rl-scheduler-projec",
+      "COMMISSIONS"
+    ],
+    [
+      "rl-scheduler-projec",
+      "rl-project-manager",
+      "ADVISES"
+    ],
+    [
+      "rl-project-manager",
+      "rl-cost-engineer",
+      "RELIES ON"
+    ],
+    [
+      "rl-cost-engineer",
+      "rl-accountant-finan",
+      "RECONCILES WITH"
+    ],
+    [
+      "rl-project-manager",
+      "rl-procure-manager",
+      "AUTHORIZES"
+    ],
+    [
+      "rl-procure-manager",
+      "rl-contract-adminis",
+      "HANDS OFF TO"
+    ],
+    [
+      "rl-contract-adminis",
+      "rl-project-manager",
+      "REPORTS TO"
+    ],
+    [
+      "rl-project-manager",
+      "rl-doc-controller",
+      "DELEGATES TO"
+    ],
+    [
+      "rl-doc-controller",
+      "rl-assistant-projec",
+      "COORDINATES WITH"
+    ],
+    [
+      "rl-bim-manager-vdc",
+      "rl-design-manager",
+      "COORDINATES WITH"
+    ],
+    [
+      "rl-bim-manager-vdc",
+      "rl-super",
+      "SUPPORTS"
+    ],
+    [
+      "rl-tech-manager",
+      "rl-bim-manager-vdc",
+      "ENABLES"
+    ],
+    [
+      "rl-cx-agent-cxa",
+      "rl-quality-manager",
+      "VALIDATES FOR"
+    ],
+    [
+      "rl-cx-agent-cxa",
+      "rl-tab-technician",
+      "DIRECTS"
+    ],
+    [
+      "rl-tab-technician",
+      "rl-cx-agent-cxa",
+      "REPORTS TO"
+    ],
+    [
+      "rl-office-manager",
+      "rl-project-manager",
+      "SUPPORTS"
+    ],
+    [
+      "rl-pm-workload",
+      "rl-staffing-ratio",
+      "FEEDS"
+    ],
+    [
+      "rl-super-span",
+      "rl-staffing-ratio",
+      "FEEDS"
+    ],
+    [
+      "rl-safety-staffing",
+      "rl-role-coverage",
+      "CONTRIBUTES TO"
+    ]
+  ],
+  "verbGlossary": {
+    "OVERSEES": "{source} of a subordinate {target} work, reviewing output and making resource or escalation decisions",
+    "ESCALATES TO": "{source}issues, budget overruns, or schedule risks to a higher-authority {target} for decision or intervention",
+    "DELEGATES TO": "Assigns specific scope areas, tasks, or administrative responsibilities to a subordinate {target} while retaining accountability",
+    "REPORTS TO": "Provides regular status updates, field data, and issue flags to a supervisory {target} in the management chain",
+    "PARTNERS WITH": "Works as a co-equal peer on project execution, with one {target} leading office functions and the other leading field operations",
+    "ADVISES": "Provides expert analysis, recommendations, or field intelligence to a decision-making {target} without holding final authority",
+    "DIRECTS": "Issues day-to-day work instructions, sequences tasks, and assigns resources for a subordinate {target} to execute",
+    "COORDINATES": "{source}plans of multiple trade crews or subordinate {target}s to prevent conflicts and maintain production flow",
+    "ASSIGNS WORK TO": "{source}scheduled activities into specific daily tasks and distributes them to individual craft workers or crews",
+    "MENTORS": "Provides on-the-job training, skill development, and career guidance to a less experienced {target} in the field or office",
+    "ASSISTS": "Performs supporting tasks under the direct supervision of a more experienced {target} as part of formal trade training",
+    "SUPERVISES": "{source}of a technical or administrative {target}, reviewing deliverables and providing direction",
+    "SUPPORTS": "Provides technical assistance, data, or administrative services that enable another {target} to perform their primary function",
+    "BRIDGES TO": "{source}link between office-based management and field operations, translating between both contexts",
+    "AUDITS": "{source}reviews of another {target} safety or quality compliance, documenting findings and requiring corrective action",
+    "TRAINS": "Delivers formal or toolbox-talk safety and quality training to field personnel to maintain regulatory compliance and awareness",
+    "INSPECTS": "Performs field inspections of installed work or site conditions under another {target} area of responsibility",
+    "HOLDS ACCOUNTABLE": "Requires a field {target} to correct non-conforming work or unsafe conditions before proceeding with the next phase",
+    "RETAINS": "{source} and contracts with {target} or firm to perform services on the owner's behalf for the duration of the project",
+    "AUTHORIZES": "{source} for {target} to proceed with procurement, scope changes, expenditures, or other controlled actions",
+    "APPROVES FOR": "{source} and signs off on design decisions, value engineering proposals, or scope changes on behalf of the owner",
+    "TRANSITIONS TO": "{source}project leadership, institutional knowledge, and open-item logs from one phase-specific {target} to the next",
+    "HANDS OFF TO": "{source}defined scope of work or data package to a downstream {target} at a phase boundary",
+    "COMMISSIONS": "{source} {target} to produce a specific deliverable such as a baseline schedule, cost forecast, or analysis",
+    "RELIES ON": "Depends on another {target} specialized output (cost reports, schedule analysis, safety metrics) as input for decision-making",
+    "RECONCILES WITH": "Cross-checks financial data between two {target}s to ensure cost tracking, invoicing, and reporting are aligned and accurate",
+    "COORDINATES WITH": "{source} with a peer {target} across functional boundaries to align deliverables, data, or processes",
+    "ENABLES": "Provides the technology infrastructure, tools, or platform access that another {target} requires to perform their function",
+    "VALIDATES FOR": "{source}verifies that work completed by another {target} meets design intent, specifications, or performance criteria",
+    "FEEDS": "{source} to a higher-level staffing or coverage metric",
+    "CONTRIBUTES TO": "Provides a component measurement that rolls up into a broader project-level coverage or staffing indicator"
+  }
+}

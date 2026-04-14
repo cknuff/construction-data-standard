@@ -1,0 +1,148 @@
+{
+  "source": "permits-regulatory",
+  "target": "standards-classifications",
+  "edges": [
+    [
+      "pr-building-permit",
+      "sc-international-bu",
+      "GOVERNED BY"
+    ],
+    [
+      "pr-demolition-permi",
+      "sc-international-bu",
+      "GOVERNED BY"
+    ],
+    [
+      "pr-renovation-alter",
+      "sc-international-bu",
+      "GOVERNED BY"
+    ],
+    [
+      "pr-building-departm",
+      "sc-international-bu",
+      "REVIEWED AGAINST"
+    ],
+    [
+      "pr-ahj-insp",
+      "sc-international-bu",
+      "ENFORCES"
+    ],
+    [
+      "pr-cert-occupancy",
+      "sc-international-bu",
+      "ISSUED PER"
+    ],
+    [
+      "pr-fire-marshal",
+      "sc-nfpa-stds",
+      "REVIEWED AGAINST"
+    ],
+    [
+      "pr-special-insp",
+      "sc-nfpa-stds",
+      "TESTED PER"
+    ],
+    [
+      "pr-building-permit",
+      "sc-ada-accessibilit",
+      "CONDITIONED BY"
+    ],
+    [
+      "pr-health-departmen",
+      "sc-ada-accessibilit",
+      "ENFORCES"
+    ],
+    [
+      "pr-building-permit",
+      "sc-energy-code-stds",
+      "CONDITIONED BY"
+    ],
+    [
+      "pr-enviro-permit",
+      "sc-leed-certificati",
+      "SUPPORTS"
+    ],
+    [
+      "pr-enviro-permit",
+      "sc-resilience-net",
+      "SUPPORTS"
+    ],
+    [
+      "pr-osha-notificatio",
+      "sc-osha-hazard",
+      "FILED UNDER"
+    ],
+    [
+      "pr-site-safety-plan",
+      "sc-osha-hazard",
+      "ADDRESSES"
+    ],
+    [
+      "pr-osha-notificatio",
+      "sc-osha-recordkeepi",
+      "LOGGED PER"
+    ],
+    [
+      "pr-trade-permit",
+      "sc-masterformat",
+      "CLASSIFIED UNDER"
+    ],
+    [
+      "pr-special-insp",
+      "sc-specification-se",
+      "SCOPED BY"
+    ],
+    [
+      "pr-stormwater-permi",
+      "sc-leed-certificati",
+      "SUPPORTS"
+    ],
+    [
+      "pr-labor-comp",
+      "sc-osha-recordkeepi",
+      "DOCUMENTED PER"
+    ],
+    [
+      "pr-zoning-appr",
+      "sc-omniclass",
+      "CLASSIFIED UNDER"
+    ],
+    [
+      "pr-insp-pass-rate",
+      "sc-international-bu",
+      "BENCHMARKED TO"
+    ],
+    [
+      "pr-insp-pass-rate",
+      "sc-safety-class",
+      "SEGMENTED BY"
+    ],
+    [
+      "pr-comp-doc",
+      "sc-specification-se-2",
+      "BENCHMARKED TO"
+    ],
+    [
+      "pr-permit-cycle",
+      "sc-masterformat-map",
+      "SEGMENTED BY"
+    ]
+  ],
+  "verbGlossary": {
+    "GOVERNED BY": "{source} or approval is required and regulated by {target} or standard (e.g., building permit governed by IBC chapter requirements for the occupancy type)",
+    "REVIEWED AGAINST": "Plan review or regulatory review evaluates submitted documents for compliance with {target} (e.g., building department plan review checked against IBC structural provisions, fire marshal review checked against NFPA fire protection standards)",
+    "ENFORCES": "{source} or approval authority verifies and enforces {target} requirements on the jobsite (e.g., AHJ inspection enforcing IBC egress requirements, health department enforcing ADA accessibility provisions)",
+    "ISSUED PER": "{source} or approval is formally granted upon demonstrated compliance with {target} requirements (e.g., certificate of occupancy issued per IBC Section 111 after final inspection)",
+    "CONDITIONED BY": "{source} approval includes conditions or stipulations imposed by {target} (e.g., building permit conditioned by energy code insulation and HVAC efficiency requirements, ADA accessible route requirements attached as permit conditions)",
+    "SUPPORTS": "{source}provides documentation that contributes toward meeting the target sustainability certification (e.g., stormwater permit SWPPP documentation supporting LEED water management credits)",
+    "FILED UNDER": "{source} notification is submitted and categorized using {target} hazard taxonomy (e.g., OSHA notification filed under the applicable OSHA hazard category for the jobsite condition)",
+    "ADDRESSES": "{source}plan identifies and mitigates hazards defined by {target} classification (e.g., site safety plan addressing OSHA fall protection and excavation hazard categories)",
+    "LOGGED PER": "Record is documented following {target} recordkeeping requirements (e.g., OSHA notification logged per OSHA 300 log format and reporting thresholds)",
+    "CLASSIFIED UNDER": "{source} or approval is categorized using {target} taxonomy (e.g., trade permit classified under MasterFormat division for the relevant trade scope, zoning approval classified under OmniClass facility type)",
+    "SCOPED BY": "{source}inspection scope is defined by {target} testing and verification requirements (e.g., structural steel special inspection scoped by specification section 05 12 00 requirements)",
+    "TESTED PER": "{source}inspection or third-party test follows {target} prescribed testing protocol (e.g., fire suppression system tested per NFPA 25 inspection and testing requirements)",
+    "DOCUMENTED PER": "{source}record is captured in the format required by {target} (e.g., labor compliance documentation formatted per OSHA recordkeeping requirements)",
+    "BENCHMARKED TO": "{source} or inspection metric is compared against {target} published baseline or industry threshold (e.g., inspection pass rate benchmarked to IBC-mandated inspection categories)",
+    "SEGMENTED BY": "{source} metric is broken down by {target} for comparative analysis (e.g., permit cycle time segmented by MasterFormat mapping to identify slow-clearing trades, inspection pass rate segmented by safety classification category)"
+  }
+}

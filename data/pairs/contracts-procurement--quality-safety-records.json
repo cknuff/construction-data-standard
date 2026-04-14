@@ -1,0 +1,226 @@
+{
+  "source": "contracts-procurement",
+  "target": "quality-safety-records",
+  "edges": [
+    [
+      "cp-prequalification",
+      "qsr-total-recordable",
+      "SCREENS BY"
+    ],
+    [
+      "cp-prequalification",
+      "qsr-dart-rate",
+      "SCREENS BY"
+    ],
+    [
+      "cp-bid-evaluation",
+      "qsr-total-recordable",
+      "WEIGHS"
+    ],
+    [
+      "cp-bid-evaluation",
+      "qsr-insp-pass-rate",
+      "WEIGHS"
+    ],
+    [
+      "cp-bid-evaluation",
+      "qsr-corrective-actio-2",
+      "WEIGHS"
+    ],
+    [
+      "cp-subcontract",
+      "qsr-safety-observati",
+      "OBLIGATES"
+    ],
+    [
+      "cp-subcontract",
+      "qsr-non-conformance",
+      "TRIGGERS"
+    ],
+    [
+      "cp-subcontract",
+      "qsr-punch-item",
+      "ASSIGNS TO"
+    ],
+    [
+      "cp-subcontract",
+      "qsr-action-plan",
+      "OBLIGATES"
+    ],
+    [
+      "cp-purchase-order",
+      "qsr-mat-test-report",
+      "REQUIRES"
+    ],
+    [
+      "cp-purchase-order",
+      "qsr-quality-observat",
+      "TRIGGERS"
+    ],
+    [
+      "cp-prime-contract",
+      "qsr-scheduled-insp",
+      "MANDATES"
+    ],
+    [
+      "cp-prime-contract",
+      "qsr-third-party",
+      "MANDATES"
+    ],
+    [
+      "cp-prime-contract",
+      "qsr-incident-record",
+      "REQUIRES"
+    ],
+    [
+      "cp-prime-contract",
+      "qsr-system-perf-test",
+      "MANDATES"
+    ],
+    [
+      "cp-scope-work",
+      "qsr-insp",
+      "SPECIFIES"
+    ],
+    [
+      "cp-scope-work",
+      "qsr-insp-item",
+      "SPECIFIES"
+    ],
+    [
+      "cp-scope-work",
+      "qsr-mat-test-report",
+      "SPECIFIES"
+    ],
+    [
+      "cp-gen-cond",
+      "qsr-safety-violation",
+      "GOVERNS"
+    ],
+    [
+      "cp-gen-cond",
+      "qsr-corrective-actio",
+      "PRESCRIBES"
+    ],
+    [
+      "cp-gen-cond",
+      "qsr-incident",
+      "GOVERNS"
+    ],
+    [
+      "cp-liquidated-damag",
+      "qsr-deficiency-notic",
+      "TRIGGERED BY"
+    ],
+    [
+      "cp-liquidated-damag",
+      "qsr-punch-item-2",
+      "TRIGGERED BY"
+    ],
+    [
+      "cp-warranty",
+      "qsr-punch-item",
+      "COVERS"
+    ],
+    [
+      "cp-warranty",
+      "qsr-deficiency-notic",
+      "COVERS"
+    ],
+    [
+      "cp-warranty",
+      "qsr-non-conformance",
+      "COVERS"
+    ],
+    [
+      "cp-substantial-comp",
+      "qsr-punch-item-3",
+      "GATED BY"
+    ],
+    [
+      "cp-substantial-comp",
+      "qsr-insp-pass-rate",
+      "GATED BY"
+    ],
+    [
+      "cp-substantial-comp",
+      "qsr-deficiency-rate",
+      "GATED BY"
+    ],
+    [
+      "cp-final-completion",
+      "qsr-punch-item-2",
+      "GATED BY"
+    ],
+    [
+      "cp-final-completion",
+      "qsr-corrective-actio-2",
+      "GATED BY"
+    ],
+    [
+      "cp-closeout-doc",
+      "qsr-mat-test-report",
+      "PACKAGES"
+    ],
+    [
+      "cp-closeout-doc",
+      "qsr-system-perf-test",
+      "PACKAGES"
+    ],
+    [
+      "cp-insurance-cert",
+      "qsr-incident-record",
+      "INVOKED BY"
+    ],
+    [
+      "cp-builders-risk",
+      "qsr-incident",
+      "INVOKED BY"
+    ],
+    [
+      "cp-perf-bond",
+      "qsr-non-conformance",
+      "EXPOSED BY"
+    ],
+    [
+      "cp-chg-order-rate",
+      "qsr-rework-cost",
+      "CORRELATES WITH"
+    ],
+    [
+      "cp-chg-order-rate",
+      "qsr-observation-dens",
+      "CORRELATES WITH"
+    ],
+    [
+      "cp-sub-retention",
+      "qsr-hazard-recurrenc",
+      "PENALIZES FOR"
+    ],
+    [
+      "cp-sub-retention",
+      "qsr-deficiency-rate",
+      "PENALIZES FOR"
+    ]
+  ],
+  "verbGlossary": {
+    "SCREENS BY": "Prequalification evaluation filters bidders using {target} or quality metric as a pass/fail gate (e.g., subcontractor disqualified if TRIR exceeds owner threshold)",
+    "WEIGHS": "{source} scores or ranks proposals by factoring in {target}/safety metric (e.g., bid leveling sheet includes inspection pass rate as a weighted scoring criterion)",
+    "OBLIGATES": "{source} instrument imposes a contractual duty on the counterparty to participate in {target}/safety process (e.g., subcontract requires subcontractor to respond to safety observations within 24 hours)",
+    "TRIGGERS": "{source} instrument or procurement event initiates creation of {target}/safety record when a deviation is discovered (e.g., purchase order non-conforming delivery triggers a quality observation)",
+    "ASSIGNS TO": "{source} instrument designates the responsible party for resolving {target}/safety item (e.g., subcontract assigns punch item remediation to the trade contractor who installed the work)",
+    "REQUIRES": "{source} instrument or term makes {target}/safety deliverable a contractual prerequisite (e.g., purchase order requires material test reports before material acceptance)",
+    "MANDATES": "{source} or owner requirement compels execution of {target} or test at defined milestones (e.g., prime contract mandates third-party structural steel inspections per IBC 1705)",
+    "SPECIFIES": "{source} or contract exhibit defines the acceptance criteria, frequency, or protocol for {target}/safety activity (e.g., scope of work specifies inspection items for concrete placement)",
+    "GOVERNS": "{source} or contract terms establish the procedural rules and notification requirements for {target}/incident process (e.g., general conditions govern incident reporting timelines and escalation paths)",
+    "PRESCRIBES": "{source} terms define the required corrective response when {target}/safety event occurs (e.g., general conditions prescribe corrective action procedures for safety violations)",
+    "TRIGGERED BY": "{source} remedy or financial consequence is activated when {target}/safety deficiency remains unresolved (e.g., liquidated damages triggered by unresolved punch items past the contractual deadline)",
+    "COVERS": "{source} provision obligates the contractor to remedy {target} at no additional cost during the warranty period (e.g., warranty covers punch items discovered within 12 months of substantial completion)",
+    "GATED BY": "{source} milestone cannot be certified until {target}/safety metric meets the required threshold (e.g., substantial completion gated by punch item density falling below contractual limit)",
+    "PACKAGES": "{source}document assembles {target} or quality record into the final deliverable set required for project turnover (e.g., closeout package includes all material test reports and commissioning records)",
+    "INVOKED BY": "{source}is activated when {target} failure creates a claim exposure (e.g., builders risk policy invoked by a fire incident on the jobsite)",
+    "EXPOSED BY": "Bond or surety obligation faces potential claim when {target} failure indicates contractor default risk (e.g., performance bond exposed by persistent non-conformance reports suggesting inability to complete work)",
+    "CORRELATES WITH": "{source}/procurement metric trends in tandem with {target}/safety metric, indicating a shared root cause (e.g., rising change order rate correlates with increasing rework cost percentage)",
+    "PENALIZES FOR": "{source} or contract retention is withheld or increased based on the contractor's standing on {target}/safety metric (e.g., subcontractor retention rate adjusted when hazard recurrence rate exceeds acceptable threshold)"
+  }
+}

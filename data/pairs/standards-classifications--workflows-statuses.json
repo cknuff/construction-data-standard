@@ -1,0 +1,152 @@
+{
+  "source": "standards-classifications",
+  "target": "workflows-statuses",
+  "edges": [
+    [
+      "sc-specification-se",
+      "ws-submit-approve",
+      "GOVERNS"
+    ],
+    [
+      "sc-specification-se",
+      "ws-revise-resubmit",
+      "TRIGGERS"
+    ],
+    [
+      "sc-specification-se",
+      "ws-approved-as",
+      "DISPOSITIONS TO"
+    ],
+    [
+      "sc-masterformat",
+      "ws-inspect-disposit",
+      "SCOPES"
+    ],
+    [
+      "sc-masterformat",
+      "ws-workflow-step",
+      "STRUCTURES"
+    ],
+    [
+      "sc-std-cost-code",
+      "ws-budget-stage",
+      "VALIDATES DURING"
+    ],
+    [
+      "sc-wbs-code",
+      "ws-sequential-appr",
+      "ROUTES THROUGH"
+    ],
+    [
+      "sc-wbs-code",
+      "ws-approved",
+      "LOCKED UPON"
+    ],
+    [
+      "sc-budget-code",
+      "ws-budget-stage",
+      "ESTABLISHED DURING"
+    ],
+    [
+      "sc-osha-hazard",
+      "ws-deficient",
+      "CITES"
+    ],
+    [
+      "sc-osha-hazard",
+      "ws-escalation",
+      "TRIGGERS"
+    ],
+    [
+      "sc-osha-recordkeepi",
+      "ws-closed",
+      "REQUIRED BEFORE"
+    ],
+    [
+      "sc-international-bu",
+      "ws-ready-review",
+      "SCHEDULES"
+    ],
+    [
+      "sc-international-bu",
+      "ws-conforming",
+      "CERTIFIES TO"
+    ],
+    [
+      "sc-nfpa-stds",
+      "ws-inspect-disposit",
+      "GOVERNS"
+    ],
+    [
+      "sc-aia-contract",
+      "ws-appr-chain",
+      "PRESCRIBES"
+    ],
+    [
+      "sc-aia-contract",
+      "ws-e-signature-req",
+      "MANDATES"
+    ],
+    [
+      "sc-dlvy-method",
+      "ws-parallel-review",
+      "DETERMINES"
+    ],
+    [
+      "sc-leed-certificati",
+      "ws-under-review",
+      "SUBMITS TO"
+    ],
+    [
+      "sc-energy-code-stds",
+      "ws-conforming",
+      "CERTIFIES TO"
+    ],
+    [
+      "sc-aace-cost",
+      "ws-multi-stage",
+      "STRUCTURES"
+    ],
+    [
+      "sc-safety-class",
+      "ws-overdue-rate",
+      "SEGMENTS"
+    ],
+    [
+      "sc-masterformat-map",
+      "ws-first-pass-appr",
+      "SEGMENTS"
+    ],
+    [
+      "sc-wbs-adoption",
+      "ws-average-appr",
+      "CORRELATES WITH"
+    ],
+    [
+      "sc-certification-ad",
+      "ws-workflow-complet",
+      "CORRELATES WITH"
+    ]
+  ],
+  "verbGlossary": {
+    "GOVERNS": "{source} defines the rules and acceptance criteria that {target} pattern or disposition must follow (e.g., specification section governs submittal review cycle, NFPA governs inspection disposition criteria)",
+    "TRIGGERS": "{source} requirement causes {target} status transition when a condition is met or violated (e.g., specification non-compliance triggers revise-and-resubmit, OSHA hazard finding triggers escalation)",
+    "DISPOSITIONS TO": "{source}'s acceptance criteria determine the resulting disposition {target} of a reviewed item (e.g., specification section compliance results in approved-as-noted disposition)",
+    "SCOPES": "{source}'s classification divisions define what is included in an inspection or review {target} (e.g., MasterFormat divisions scope which trades are inspected in each pass)",
+    "STRUCTURES": "{source} provides the organizational framework that defines {target}s or financial review stages (e.g., MasterFormat structures inspection workflow steps by trade, AACE structures multi-stage cost review)",
+    "VALIDATES DURING": "{source}'s code assignments are verified for correctness and completeness during a financial {target} stage (e.g., cost code accuracy validated during budget stage before approval)",
+    "ROUTES THROUGH": "{source}'s breakdown structure determines {target} routing path for financial documents (e.g., WBS hierarchy routes budget items through sequential approval by level)",
+    "LOCKED UPON": "{source}'s assigned classification codes become immutable once {target} reaches an approved status (e.g., WBS code assignment locked upon budget approval to prevent reclassification)",
+    "ESTABLISHED DURING": "{source}'s code structure is set up and mapped to project line items during a financial {target} stage (e.g., budget codes established during budget stage as part of project setup)",
+    "CITES": "{source}'s hazard or violation category is formally referenced when a field {target} of deficient is recorded (e.g., OSHA fall protection hazard cited on a deficient inspection finding)",
+    "REQUIRED BEFORE": "{source}'s recordkeeping obligations must be satisfied before {target} can reach its terminal status (e.g., OSHA 300 log entries required before incident record can be closed)",
+    "SCHEDULES": "{source}mandates that an inspection be placed in ready-for-review {target} at specific construction milestones (e.g., IBC requires structural inspection readied before concrete pour)",
+    "CERTIFIES TO": "{source}'s pass criteria are the basis for a conforming field disposition (e.g., IBC requirements met certifies to conforming {target}, energy code commissioning test certifies to conforming)",
+    "PRESCRIBES": "{source}defines the required {target} chain structure for document and change management workflows (e.g., AIA contract documents prescribe the architect-owner-contractor approval chain)",
+    "MANDATES": "{source} contractually requires a specific {target} mechanism such as electronic signature (e.g., AIA contract provisions mandate e-signature for executed agreements)",
+    "DETERMINES": "Delivery method classification determines which {target} pattern applies to a project's review processes (e.g., design-build delivery method determines parallel review instead of sequential)",
+    "SUBMITS TO": "{source}requires documentation to enter a formal review {target} for third-party evaluation (e.g., LEED credit documentation submitted to under-review for GBCI assessment)",
+    "SEGMENTS": "{source} measure's classification is used to break down {target} performance metric for comparative analysis (e.g., safety classification completeness segments overdue rate by hazard type, MasterFormat coverage segments first-pass approval rate by division)",
+    "CORRELATES WITH": "{source} adoption metric trends in relation to {target} performance measure (e.g., higher WBS adoption rate correlates with faster average approval cycle time, certification adoption correlates with workflow completion rate)"
+  }
+}

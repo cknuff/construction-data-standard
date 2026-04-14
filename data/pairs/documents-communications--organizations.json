@@ -1,0 +1,514 @@
+{
+  "source": "documents-communications",
+  "target": "organizations",
+  "edges": [
+    [
+      "doc-drawing-set",
+      "org-architect-record",
+      "AUTHORED BY"
+    ],
+    [
+      "doc-drawing-set",
+      "org-struct-engineer",
+      "AUTHORED BY"
+    ],
+    [
+      "doc-drawing-set",
+      "org-mep-engineer",
+      "AUTHORED BY"
+    ],
+    [
+      "doc-drawing-set",
+      "org-civil-engineer",
+      "AUTHORED BY"
+    ],
+    [
+      "doc-drawing-set",
+      "org-gen-contr-gc",
+      "DISTRIBUTED BY"
+    ],
+    [
+      "doc-drawing-set",
+      "org-fire-prot",
+      "AUTHORED BY"
+    ],
+    [
+      "doc-drawing-set",
+      "org-landscape-archit",
+      "AUTHORED BY"
+    ],
+    [
+      "doc-drawing-set",
+      "org-geotechnical-eng",
+      "AUTHORED BY"
+    ],
+    [
+      "doc-drawing-set",
+      "org-lighting-designe",
+      "AUTHORED BY"
+    ],
+    [
+      "doc-drawing-set",
+      "org-design-builder",
+      "AUTHORED BY"
+    ],
+    [
+      "doc-drawing-sheet",
+      "org-architect-record",
+      "ISSUED BY"
+    ],
+    [
+      "doc-drawing-revision",
+      "org-architect-record",
+      "ISSUED BY"
+    ],
+    [
+      "doc-drawing-revision",
+      "org-sub-trade",
+      "RECEIVED BY"
+    ],
+    [
+      "doc-specification-se",
+      "org-specifications-w",
+      "AUTHORED BY"
+    ],
+    [
+      "doc-specification-se",
+      "org-code-consultant",
+      "REVIEWED BY"
+    ],
+    [
+      "doc-addendum",
+      "org-architect-record",
+      "ISSUED BY"
+    ],
+    [
+      "doc-bulletin-archite",
+      "org-architect-record",
+      "ISSUED BY"
+    ],
+    [
+      "doc-req-info-rfi",
+      "org-sub-trade",
+      "INITIATED BY"
+    ],
+    [
+      "doc-req-info-rfi",
+      "org-gen-contr-gc",
+      "SUBMITTED BY"
+    ],
+    [
+      "doc-req-info-rfi",
+      "org-architect-record",
+      "ASSIGNED TO"
+    ],
+    [
+      "doc-req-info-rfi",
+      "org-mep-engineer",
+      "ASSIGNED TO"
+    ],
+    [
+      "doc-req-info-rfi",
+      "org-design-builder",
+      "ASSIGNED TO"
+    ],
+    [
+      "doc-req-info-rfi",
+      "org-acoustics-consul",
+      "ASSIGNED TO"
+    ],
+    [
+      "doc-rfi-response",
+      "org-architect-record",
+      "RESPONDED BY"
+    ],
+    [
+      "doc-rfi-response",
+      "org-gen-contr-gc",
+      "FORWARDED BY"
+    ],
+    [
+      "doc-req-proposal-rfp",
+      "org-gen-contr-gc",
+      "ISSUED BY"
+    ],
+    [
+      "doc-req-proposal-rfp",
+      "org-sub-trade",
+      "RECEIVED BY"
+    ],
+    [
+      "doc-submittal",
+      "org-sub-trade",
+      "SUBMITTED BY"
+    ],
+    [
+      "doc-submittal",
+      "org-fabricator",
+      "PREPARED BY"
+    ],
+    [
+      "doc-submittal",
+      "org-architect-record",
+      "REVIEWS"
+    ],
+    [
+      "doc-submittal",
+      "org-sustainability-l",
+      "REVIEWED BY"
+    ],
+    [
+      "doc-submittal",
+      "org-building-envelop",
+      "REVIEWED BY"
+    ],
+    [
+      "doc-submittal-respon",
+      "org-architect-record",
+      "REVIEWED BY"
+    ],
+    [
+      "doc-shop-drawing",
+      "org-fabricator",
+      "PREPARED BY"
+    ],
+    [
+      "doc-shop-drawing",
+      "org-struct-engineer",
+      "APPROVES"
+    ],
+    [
+      "doc-product-data",
+      "org-mat-supplier",
+      "PREPARED BY"
+    ],
+    [
+      "doc-sample-submittal",
+      "org-architect-record",
+      "APPROVES"
+    ],
+    [
+      "doc-correspondence",
+      "org-gen-contr-gc",
+      "AUTHORED BY"
+    ],
+    [
+      "doc-correspondence",
+      "org-private-develope",
+      "AUTHORED BY"
+    ],
+    [
+      "doc-correspondence",
+      "org-const-lender",
+      "RECEIVED BY"
+    ],
+    [
+      "doc-transmittal",
+      "org-gen-contr-gc",
+      "ISSUED BY"
+    ],
+    [
+      "doc-notice-delay",
+      "org-sub-trade",
+      "SUBMITTED BY"
+    ],
+    [
+      "doc-notice-delay",
+      "org-private-develope",
+      "NOTIFIED BY"
+    ],
+    [
+      "doc-chg-directive",
+      "org-private-develope",
+      "ISSUED BY"
+    ],
+    [
+      "doc-chg-directive",
+      "org-public-governmen",
+      "ISSUED BY"
+    ],
+    [
+      "doc-meeting",
+      "org-gen-contr-gc",
+      "CONVENED BY"
+    ],
+    [
+      "doc-meeting",
+      "org-architect-record",
+      "ATTENDS"
+    ],
+    [
+      "doc-meeting",
+      "org-institutional-ow",
+      "ATTENDS"
+    ],
+    [
+      "doc-meeting",
+      "org-program-manager",
+      "CONVENED BY"
+    ],
+    [
+      "doc-meeting",
+      "org-const-manager",
+      "CONVENED BY"
+    ],
+    [
+      "doc-meeting-minutes",
+      "org-gen-contr-gc",
+      "RECORDED BY"
+    ],
+    [
+      "doc-meeting-minutes",
+      "org-const-manager-at",
+      "RECORDED BY"
+    ],
+    [
+      "doc-daily-report",
+      "org-gen-contr-gc",
+      "FILED BY"
+    ],
+    [
+      "doc-daily-report",
+      "org-self-performing",
+      "FILED BY"
+    ],
+    [
+      "doc-daily-report",
+      "org-sub-trade",
+      "REPORTED IN"
+    ],
+    [
+      "doc-daily-log-note",
+      "org-sub-trade",
+      "REFERENCES"
+    ],
+    [
+      "doc-site-instruction",
+      "org-gen-contr-gc",
+      "ISSUED BY"
+    ],
+    [
+      "doc-phone-call-log",
+      "org-gen-contr-gc",
+      "LOGGED BY"
+    ],
+    [
+      "doc-plan-revision",
+      "org-architect-record",
+      "ISSUED BY"
+    ],
+    [
+      "doc-action-plan",
+      "org-const-manager-at",
+      "CREATED BY"
+    ],
+    [
+      "doc-action-plan-line",
+      "org-sub-trade",
+      "ASSIGNED TO"
+    ],
+    [
+      "doc-project-task",
+      "org-sub-trade",
+      "ASSIGNED TO"
+    ],
+    [
+      "doc-photo",
+      "org-gen-contr-gc",
+      "CAPTURED BY"
+    ],
+    [
+      "doc-photo",
+      "org-special-insp",
+      "CAPTURED BY"
+    ],
+    [
+      "doc-photo",
+      "org-mat-testing-lab",
+      "CAPTURED BY"
+    ],
+    [
+      "doc-video",
+      "org-gen-contr-gc",
+      "CAPTURED BY"
+    ],
+    [
+      "doc-permit-applicati",
+      "org-gen-contr-gc",
+      "SUBMITTED BY"
+    ],
+    [
+      "doc-permit-applicati",
+      "org-building-departm",
+      "REVIEWED BY"
+    ],
+    [
+      "doc-permit-applicati",
+      "org-fire-marshal",
+      "REVIEWED BY"
+    ],
+    [
+      "doc-permit-applicati",
+      "org-zoning-planning",
+      "REVIEWED BY"
+    ],
+    [
+      "doc-permit-applicati",
+      "org-health-departmen",
+      "REVIEWED BY"
+    ],
+    [
+      "doc-cert-insurance",
+      "org-insurance-broker",
+      "ISSUED BY"
+    ],
+    [
+      "doc-cert-insurance",
+      "org-surety-bonding",
+      "ISSUED BY"
+    ],
+    [
+      "doc-cert-insurance",
+      "org-gen-contr-gc",
+      "VERIFIED BY"
+    ],
+    [
+      "doc-lien-waiver",
+      "org-sub-trade",
+      "SIGNED BY"
+    ],
+    [
+      "doc-lien-waiver",
+      "org-mat-supplier",
+      "SIGNED BY"
+    ],
+    [
+      "doc-safety-plan-site",
+      "org-gen-contr-gc",
+      "AUTHORED BY"
+    ],
+    [
+      "doc-safety-plan-site",
+      "org-osha-safety",
+      "ENFORCES"
+    ],
+    [
+      "doc-safety-plan-site",
+      "org-sub-trade",
+      "ACKNOWLEDGED BY"
+    ],
+    [
+      "doc-swppp-enviro",
+      "org-enviro-epa",
+      "ENFORCES"
+    ],
+    [
+      "doc-swppp-enviro",
+      "org-enviro-monitorin",
+      "MONITORS"
+    ],
+    [
+      "doc-punch-list-as",
+      "org-architect-record",
+      "COMPILED BY"
+    ],
+    [
+      "doc-as-built-docs",
+      "org-gen-contr-gc",
+      "COMPILED BY"
+    ],
+    [
+      "doc-o-m-manual",
+      "org-cx-agent-cxa",
+      "VERIFIED BY"
+    ],
+    [
+      "doc-o-m-manual",
+      "org-mat-supplier",
+      "PROVIDED BY"
+    ],
+    [
+      "doc-warranty-docs",
+      "org-sub-trade",
+      "PROVIDED BY"
+    ],
+    [
+      "doc-form-proforma",
+      "org-gen-contr-gc",
+      "CREATED BY"
+    ],
+    [
+      "doc-daily-log",
+      "org-gen-contr-gc",
+      "CREATED BY"
+    ],
+    [
+      "doc-rfi-response-2",
+      "org-architect-record",
+      "MEASURED FOR"
+    ],
+    [
+      "doc-rfi-volume",
+      "org-gen-contr-gc",
+      "MEASURED FOR"
+    ],
+    [
+      "doc-submittal-cycle",
+      "org-sub-trade",
+      "MEASURED FOR"
+    ],
+    [
+      "doc-submittal-reject",
+      "org-fabricator",
+      "MEASURED FOR"
+    ],
+    [
+      "doc-drawing-revision-2",
+      "org-architect-record",
+      "MEASURED FOR"
+    ],
+    [
+      "doc-daily-log-2",
+      "org-gen-contr-gc",
+      "MEASURED FOR"
+    ],
+    [
+      "doc-correspondence-r",
+      "org-gen-contr-gc",
+      "MEASURED FOR"
+    ]
+  ],
+  "verbGlossary": {
+    "ACKNOWLEDGED BY": "{source} has formally acknowledged receipt and compliance obligations for {target}",
+    "APPROVES": "{target} reviews and grants formal approval or rejection on {source}",
+    "ASSIGNED TO": "{source} is the designated responsible party who must act on or resolve {target}",
+    "ATTENDS": "{source} participates in the meeting as a required or invited {target}",
+    "AUTHORED BY": "{source} created or produced {target} as its originator",
+    "CAPTURED BY": "{source} took the photo or video as field documentation",
+    "COMPILED BY": "{target} assembles {source} from contributions of multiple parties",
+    "CONVENED BY": "{source} scheduled and chairs the meeting",
+    "CREATED BY": "{source} established the template, form, or plan structure",
+    "DISTRIBUTED BY": "{source} transmits {target} to all relevant parties on the distribution list",
+    "ENFORCES": "Regulatory authority holds jurisdiction to enforce compliance with {target} requirements",
+    "FILED BY": "{source} completes and submits the daily field record as the responsible site {target}",
+    "FORWARDED BY": "{source} routes {target} from one party to another in the communication chain",
+    "INITIATED BY": "{source} originated the request that was then formally submitted through proper channels",
+    "ISSUED BY": "{source} formally releases {target} with authority to the receiving parties",
+    "LOGGED BY": "{source} recorded the communication event in the project record",
+    "MEASURED FOR": "{target}measure tracks performance or compliance metrics attributable to this {source}",
+    "MONITORS": "{target} performs ongoing oversight or surveillance related to {source} requirements",
+    "NOTIFIED BY": "{source} receives formal written notice of a condition or claim via {target}",
+    "PREPARED BY": "{source} produced the technical content of {target} for submission by another party",
+    "PROVIDED BY": "{source} furnishes {target} as a deliverable obligation under their contract or scope",
+    "RECEIVED BY": "{source} is a designated recipient of {target} for information or action",
+    "RECORDED BY": "{source} documented the proceedings and action items from the meeting",
+    "REFERENCES": "{source} contains references to work performed by or conditions related to {target}",
+    "REPORTED IN": "{source}'s activities or workforce are documented within the field report",
+    "RESPONDED BY": "{source} provided the official response or answer to the request",
+    "REVIEWED BY": "{source} examined {target} and provided comments, approval, or rejection",
+    "REVIEWS": "{source} examines {target} for conformance before forwarding in the approval chain",
+    "SIGNED BY": "{source} executed {target} with legal signature acknowledging its terms",
+    "SUBMITTED BY": "{source} formally delivered {target} to the receiving party through project channels",
+    "VERIFIED BY": "{source} confirmed the accuracy, completeness, or compliance status of {target}"
+  }
+}

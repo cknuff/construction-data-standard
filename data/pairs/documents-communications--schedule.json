@@ -1,0 +1,367 @@
+{
+  "source": "documents-communications",
+  "target": "schedule",
+  "edges": [
+    [
+      "doc-drawing-set",
+      "sch-baseline-schedul",
+      "ISSUED FOR"
+    ],
+    [
+      "doc-drawing-set",
+      "sch-detail-activity",
+      "GOVERNS"
+    ],
+    [
+      "doc-drawing-sheet",
+      "sch-detail-activity",
+      "DEPICTS SCOPE OF"
+    ],
+    [
+      "doc-drawing-revision",
+      "sch-schedule-chg",
+      "TRIGGERS"
+    ],
+    [
+      "doc-drawing-revision",
+      "sch-time-impact",
+      "ASSESSED THROUGH"
+    ],
+    [
+      "doc-specification-se",
+      "sch-detail-activity",
+      "SPECIFIES WORK IN"
+    ],
+    [
+      "doc-specification-se",
+      "sch-lag-lead-time",
+      "PRESCRIBES"
+    ],
+    [
+      "doc-addendum",
+      "sch-baseline-schedul",
+      "AMENDS"
+    ],
+    [
+      "doc-addendum",
+      "sch-milestone",
+      "RESETS"
+    ],
+    [
+      "doc-bulletin-archite",
+      "sch-schedule-update",
+      "INCORPORATED INTO"
+    ],
+    [
+      "doc-req-info-rfi",
+      "sch-float-slack",
+      "CONSUMES"
+    ],
+    [
+      "doc-req-info-rfi",
+      "sch-critical-path",
+      "STALLS"
+    ],
+    [
+      "doc-req-info-rfi",
+      "sch-detail-activity",
+      "BLOCKS"
+    ],
+    [
+      "doc-rfi-response",
+      "sch-detail-activity",
+      "RELEASES"
+    ],
+    [
+      "doc-rfi-response",
+      "sch-lag-lead-time",
+      "SHORTENS"
+    ],
+    [
+      "doc-req-proposal-rfp",
+      "sch-look-ahead",
+      "SCOPED WITHIN"
+    ],
+    [
+      "doc-submittal",
+      "sch-detail-activity",
+      "GATES"
+    ],
+    [
+      "doc-submittal",
+      "sch-lag-lead-time",
+      "REQUIRES LEAD TIME IN"
+    ],
+    [
+      "doc-submittal-respon",
+      "sch-milestone",
+      "CLEARS"
+    ],
+    [
+      "doc-submittal-respon",
+      "sch-schedule-update",
+      "ADVANCES"
+    ],
+    [
+      "doc-shop-drawing",
+      "sch-detail-activity",
+      "PRECEDES FABRICATION OF"
+    ],
+    [
+      "doc-product-data",
+      "sch-lag-lead-time",
+      "VALIDATES PROCUREMENT IN"
+    ],
+    [
+      "doc-sample-submittal",
+      "sch-milestone",
+      "APPROVED BEFORE"
+    ],
+    [
+      "doc-correspondence",
+      "sch-schedule-constra",
+      "IMPOSES"
+    ],
+    [
+      "doc-transmittal",
+      "sch-data-date",
+      "LOGGED AT"
+    ],
+    [
+      "doc-notice-delay",
+      "sch-delay-class",
+      "CATEGORIZES"
+    ],
+    [
+      "doc-notice-delay",
+      "sch-time-extension",
+      "SUBSTANTIATES"
+    ],
+    [
+      "doc-chg-directive",
+      "sch-acceleration",
+      "DIRECTS"
+    ],
+    [
+      "doc-chg-directive",
+      "sch-recovery-schedul",
+      "INITIATES"
+    ],
+    [
+      "doc-meeting",
+      "sch-look-ahead",
+      "REVIEWS"
+    ],
+    [
+      "doc-meeting-minutes",
+      "sch-schedule-update",
+      "DOCUMENTS DECISIONS IN"
+    ],
+    [
+      "doc-daily-report",
+      "sch-duration-progres",
+      "REPORTS PROGRESS ON"
+    ],
+    [
+      "doc-daily-report",
+      "sch-data-date",
+      "RECORDED AS OF"
+    ],
+    [
+      "doc-daily-log-note",
+      "sch-delay-class",
+      "NARRATES"
+    ],
+    [
+      "doc-daily-log-note",
+      "sch-detail-activity",
+      "ANNOTATES"
+    ],
+    [
+      "doc-site-instruction",
+      "sch-detail-activity",
+      "REDIRECTS"
+    ],
+    [
+      "doc-site-instruction",
+      "sch-schedule-chg",
+      "NECESSITATES"
+    ],
+    [
+      "doc-phone-call-log",
+      "sch-schedule-constra",
+      "CONFIRMS"
+    ],
+    [
+      "doc-plan-revision",
+      "sch-schedule-update",
+      "PROMPTS"
+    ],
+    [
+      "doc-action-plan",
+      "sch-recovery-schedul",
+      "STRUCTURES"
+    ],
+    [
+      "doc-action-plan-line",
+      "sch-detail-activity",
+      "ASSIGNED TO"
+    ],
+    [
+      "doc-project-task",
+      "sch-duration-progres",
+      "TRACKED AGAINST"
+    ],
+    [
+      "doc-photo",
+      "sch-duration-progres",
+      "VERIFIES PROGRESS IN"
+    ],
+    [
+      "doc-video",
+      "sch-milestone",
+      "EVIDENCES COMPLETION OF"
+    ],
+    [
+      "doc-permit-applicati",
+      "sch-milestone",
+      "CONSTRAINS START OF"
+    ],
+    [
+      "doc-permit-applicati",
+      "sch-schedule-constra",
+      "IMPOSES HOLD ON"
+    ],
+    [
+      "doc-safety-plan-site",
+      "sch-detail-activity",
+      "REGULATES"
+    ],
+    [
+      "doc-swppp-enviro",
+      "sch-work-calendar",
+      "RESTRICTS WORK DAYS IN"
+    ],
+    [
+      "doc-punch-list-as",
+      "sch-milestone",
+      "CLOSES OUT"
+    ],
+    [
+      "doc-as-built-docs",
+      "sch-as-built",
+      "RECONCILED WITH"
+    ],
+    [
+      "doc-o-m-manual",
+      "sch-milestone",
+      "DELIVERED AT"
+    ],
+    [
+      "doc-warranty-docs",
+      "sch-as-built",
+      "ARCHIVED ALONGSIDE"
+    ],
+    [
+      "doc-rfi-response-2",
+      "sch-float-slack",
+      "ERODES"
+    ],
+    [
+      "doc-rfi-volume",
+      "sch-critical-path",
+      "CORRELATES WITH RISK ON"
+    ],
+    [
+      "doc-submittal-cycle",
+      "sch-lag-lead-time",
+      "CALIBRATES"
+    ],
+    [
+      "doc-submittal-reject",
+      "sch-schedule-chg",
+      "FORCES REVISION IN"
+    ],
+    [
+      "doc-drawing-revision-2",
+      "sch-schedule-perf",
+      "DEGRADES"
+    ],
+    [
+      "doc-daily-log-2",
+      "sch-schedule-health",
+      "INDICATES"
+    ],
+    [
+      "doc-correspondence-r",
+      "sch-float-erosion",
+      "SIGNALS"
+    ],
+    [
+      "doc-drawing-revision",
+      "sch-detail-activity",
+      "UPDATES SCOPE OF"
+    ]
+  ],
+  "verbGlossary": {
+    "ISSUED FOR": "{source} formally released to coincide with an approved {target}, establishing the design basis for scheduled work",
+    "GOVERNS": "{source} defines the scope and technical requirements that {target} must execute",
+    "DEPICTS SCOPE OF": "{source} visually represents the physical work scope contained in a specific {target}",
+    "TRIGGERS": "{source} or document change initiates a tracked {target} change requiring re-sequencing or duration adjustment",
+    "ASSESSED THROUGH": "{source} {target} impact evaluated through a formal time impact analysis to quantify delay or acceleration",
+    "SPECIFIES WORK IN": "{source} defines the materials, methods, and quality standards for work performed in {target}",
+    "PRESCRIBES": "{source} dictates required lead times for procurement, curing, testing, or other sequenced work",
+    "AMENDS": "{source}documents, potentially altering {target} assumptions",
+    "RESETS": "Addendum changes shift a contractual milestone date established in the original {target}",
+    "INCORPORATED INTO": "Architect's bulletin or supplemental instruction folded into the next {target} with revised scope or sequencing",
+    "CONSUMES": "Outstanding RFI uses up available {target} while the team awaits a design clarification needed to proceed",
+    "STALLS": "Unresolved RFI halts progress on a critical-path {target}, threatening the project completion date",
+    "BLOCKS": "Open RFI prevents {target} from starting or continuing until the design question is resolved",
+    "RELEASES": "{source} removes the design hold, allowing the blocked {target} to proceed",
+    "SHORTENS": "Timely RFI response reduces the lag originally assumed in {target} logic for design clarification",
+    "SCOPED WITHIN": "{source}issued for work packages that fall within the look-ahead {target} planning window",
+    "GATES": "{source} approval required before {target} can begin, serving as a mandatory predecessor",
+    "REQUIRES LEAD TIME IN": "{source} needs to be submitted far enough in advance to respect the review and fabrication lag in {target}",
+    "CLEARS": "{source} response satisfies the gating requirement for {target}d milestone to proceed",
+    "ADVANCES": "{source} approval earlier than planned allows the next {target} to pull activities forward",
+    "PRECEDES FABRICATION OF": "{source} must be in hand before the fabrication activity on {target} can begin",
+    "VALIDATES PROCUREMENT IN": "{source} submittal confirms material specifications, allowing the procurement lead time in {target} to finalize",
+    "APPROVED BEFORE": "{source} submittal must receive approval prior to {target} that gates the related installation work",
+    "IMPOSES": "{source} establishes a contractual constraint that {target} must respect",
+    "LOGGED AT": "{source} receipt recorded at the schedule data date to establish {target} delivery timeline",
+    "CATEGORIZES": "{source} of delay formally classifies the delay event (excusable, compensable, concurrent) per {target} delay taxonomy",
+    "SUBSTANTIATES": "{source} of delay provides the contractual documentation required to support a time extension request",
+    "DIRECTS": "Change directive orders accelerated work or re-sequencing, compelling the contractor to compress {target}",
+    "INITIATES": "{source}triggers preparation of a recovery {target} to regain lost time or accommodate new scope",
+    "REVIEWS": "{source} convened specifically to review the look-ahead {target} and confirm near-term activity sequencing",
+    "DOCUMENTS DECISIONS IN": "{source} record {target}-related decisions, commitments, and action items from a schedule update discussion",
+    "REPORTS PROGRESS ON": "{source} captures actual work completed, crew counts, and weather conditions that affect {target} duration and progress",
+    "RECORDED AS OF": "{source} time-stamped to {target} data date for accurate period-by-period progress tracking",
+    "NARRATES": "{source} note provides a written account of delay circumstances that supports formal delay classification",
+    "ANNOTATES": "{source} note adds field-level context or commentary to a specific {target} progress record",
+    "REDIRECTS": "{source} changes the sequence or method of work for {target} based on field conditions",
+    "NECESSITATES": "{source} introduces a field change that requires a tracked {target} modification",
+    "CONFIRMS": "{source}log documents a verbal agreement about {target}, creating an auditable record",
+    "PROMPTS": "Plan revision notice triggers {target} cycle to incorporate the revised design information",
+    "STRUCTURES": "{source} organizes the recovery {target}s into a sequenced, accountable corrective-action framework",
+    "ASSIGNED TO": "{source} line item linked to a specific {target}, creating an accountable task with a due date",
+    "TRACKED AGAINST": "Project {target} progress measured against the scheduled duration and percent complete for the related activity",
+    "VERIFIES PROGRESS IN": "{source}provides visual evidence of work-in-place to corroborate reported {target} progress",
+    "EVIDENCES COMPLETION OF": "{source}documentation proves a milestone deliverable is substantially complete for {target} credit",
+    "CONSTRAINS START OF": "{source}required before a milestone-gated {target} (excavation, occupancy) can begin",
+    "IMPOSES HOLD ON": "{source}creates a hard {target} that prevents downstream work from proceeding",
+    "REGULATES": "{source}plan dictates work procedures and sequencing requirements that constrain how {target} activities are performed",
+    "RESTRICTS WORK DAYS IN": "{source}document (SWPPP) limits available work days on the calendar due to seasonal or weather restrictions",
+    "CLOSES OUT": "{source}document must be completed and signed off before the substantial completion {target} is achieved",
+    "RECONCILED WITH": "{source}documentation compared against the as-built {target} to confirm that the record accurately reflects what was constructed and when",
+    "DELIVERED AT": "O&M manual handed over at the contractual milestone for owner occupancy or final completion",
+    "ARCHIVED ALONGSIDE": "{source}documentation filed together with the as-built {target} to create a complete project closeout record",
+    "ERODES": "Slow RFI response times progressively eat into available {target}, increasing schedule risk over time",
+    "CORRELATES WITH RISK ON": "High RFI volume per {target} indicates design uncertainty that elevates risk on the critical path",
+    "CALIBRATES": "{source} cycle time data used to set realistic lead-time assumptions in {target} logic",
+    "FORCES REVISION IN": "{source}submittal rejection rate compels {target} changes as resubmittal cycles extend procurement timelines",
+    "DEGRADES": "Frequent drawing revisions reduce {target} performance by introducing rework and re-sequencing",
+    "INDICATES": "{source} completion rate serves as a leading indicator of {target} health and field discipline",
+    "SIGNALS": "{source}are an early warning signal of {target} erosion and impending schedule risk"
+  }
+}

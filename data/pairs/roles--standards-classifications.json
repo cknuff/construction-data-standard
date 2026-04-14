@@ -1,0 +1,156 @@
+{
+  "source": "roles",
+  "target": "standards-classifications",
+  "edges": [
+    [
+      "rl-safety-manager",
+      "sc-osha-hazard",
+      "ADMINISTERS"
+    ],
+    [
+      "rl-safety-officer",
+      "sc-osha-recordkeepi",
+      "LOGS PER"
+    ],
+    [
+      "rl-safety-manager",
+      "sc-ansi-injury",
+      "CLASSIFIES UNDER"
+    ],
+    [
+      "rl-quality-manager",
+      "sc-specification-se",
+      "INSPECTS AGAINST"
+    ],
+    [
+      "rl-quality-manager",
+      "sc-masterformat",
+      "ORGANIZES BY"
+    ],
+    [
+      "rl-project-manager",
+      "sc-std-cost-code",
+      "ASSIGNS"
+    ],
+    [
+      "rl-project-manager",
+      "sc-wbs-code",
+      "STRUCTURES BY"
+    ],
+    [
+      "rl-cost-engineer",
+      "sc-budget-code",
+      "ALLOCATES TO"
+    ],
+    [
+      "rl-cost-engineer",
+      "sc-aace-cost",
+      "BENCHMARKS TO"
+    ],
+    [
+      "rl-estimator-chief",
+      "sc-masterformat",
+      "ESTIMATES BY"
+    ],
+    [
+      "rl-estimator-chief",
+      "sc-uniformat",
+      "QUANTIFIES BY"
+    ],
+    [
+      "rl-super",
+      "sc-osha-hazard",
+      "ENFORCES"
+    ],
+    [
+      "rl-super",
+      "sc-nfpa-stds",
+      "ENFORCES"
+    ],
+    [
+      "rl-field-engineer",
+      "sc-specification-se",
+      "VERIFIES AGAINST"
+    ],
+    [
+      "rl-bim-manager-vdc",
+      "sc-ifc-class",
+      "MODELS UNDER"
+    ],
+    [
+      "rl-bim-manager-vdc",
+      "sc-omniclass",
+      "TAGS TO"
+    ],
+    [
+      "rl-contract-adminis",
+      "sc-aia-contract",
+      "ADMINISTERS"
+    ],
+    [
+      "rl-procure-manager",
+      "sc-dlvy-method",
+      "SELECTS"
+    ],
+    [
+      "rl-cx-agent-cxa",
+      "sc-leed-certificati",
+      "COMMISSIONS FOR"
+    ],
+    [
+      "rl-cx-agent-cxa",
+      "sc-energy-code-stds",
+      "TESTS PER"
+    ],
+    [
+      "rl-tab-technician",
+      "sc-nfpa-stds",
+      "BALANCES PER"
+    ],
+    [
+      "rl-design-manager",
+      "sc-international-bu",
+      "DESIGNS TO"
+    ],
+    [
+      "rl-scheduler-projec",
+      "sc-wbs-code",
+      "SCHEDULES BY"
+    ],
+    [
+      "rl-doc-controller",
+      "sc-specification-se",
+      "CONTROLS PER"
+    ],
+    [
+      "rl-safety-staffing",
+      "sc-safety-class",
+      "SEGMENTED BY"
+    ]
+  ],
+  "verbGlossary": {
+    "ADMINISTERS": "{source} is responsible for managing and maintaining compliance with {target} on the project (e.g., safety manager administers OSHA hazard program, contract administrator manages AIA contract provisions)",
+    "LOGS PER": "{source} records project events using {target} required documentation format (e.g., safety officer logs incidents per OSHA 300-series recordkeeping rules)",
+    "CLASSIFIES UNDER": "{source} assigns records to categories defined by {target} taxonomy (e.g., safety manager classifies injury reports under ANSI injury types)",
+    "INSPECTS AGAINST": "{source} conducts field inspections using {target} acceptance criteria as the pass/fail benchmark (e.g., QC inspector inspects installations against specification section tolerances)",
+    "ORGANIZES BY": "{source} structures inspection checklists, punch lists, or quality plans using {target} divisions (e.g., quality manager organizes QC program by MasterFormat division)",
+    "ASSIGNS": "{source} applies a classification code from {target} to project line items or records (e.g., project manager assigns standard cost codes to budget lines and change orders)",
+    "STRUCTURES BY": "{source} builds the project breakdown hierarchy using {target} system (e.g., project manager structures cost and schedule by WBS codes)",
+    "ALLOCATES TO": "{source} distributes project costs or budgets into {target} line structure (e.g., cost engineer allocates contingency funds to budget code lines)",
+    "BENCHMARKS TO": "{source} compares project performance metrics against {target} published industry norms (e.g., cost engineer benchmarks project cost performance to AACE standards)",
+    "ESTIMATES BY": "{source} develops cost estimates organized according to {target} work breakdown (e.g., estimator builds takeoff and pricing by MasterFormat divisions)",
+    "QUANTIFIES BY": "{source} measures building elements using {target} assembly-level structure (e.g., estimator quantifies systems and assemblies by UniFormat categories)",
+    "ENFORCES": "{source} ensures field crews comply with {target} requirements on the jobsite (e.g., superintendent enforces OSHA hazard controls and NFPA fire safety during active construction)",
+    "VERIFIES AGAINST": "{source} confirms installed work meets {target} requirements through field observation or testing (e.g., field engineer verifies concrete placement against specification section requirements)",
+    "MODELS UNDER": "{source} authors or coordinates digital models classified according to {target} element taxonomy (e.g., BIM manager models building components under IFC classification)",
+    "TAGS TO": "{source} applies {target} codes to digital model objects or coordination records for downstream filtering (e.g., BIM manager tags model elements to OmniClass table entries)",
+    "SELECTS": "{source} chooses the applicable category from {target} that governs project execution strategy (e.g., procurement manager selects delivery method classification for subcontract packages)",
+    "COMMISSIONS FOR": "{source} performs functional testing and verification specifically to satisfy the target certification program's requirements (e.g., CxA commissions mechanical systems for LEED energy credits)",
+    "TESTS PER": "{source} executes test procedures prescribed by {target} (e.g., CxA tests building envelope per energy code standard protocols)",
+    "BALANCES PER": "{source} adjusts and certifies system performance using {target} prescribed procedures and tolerances (e.g., TAB technician balances HVAC airflow per NFPA ventilation standards)",
+    "DESIGNS TO": "{source} develops project design documents that comply with {target} code's prescriptive or performance requirements (e.g., design manager designs structural systems to IBC requirements)",
+    "SCHEDULES BY": "{source} builds and maintains the project schedule organized according to {target} work breakdown structure (e.g., scheduler builds activity network by WBS code hierarchy)",
+    "CONTROLS PER": "{source} manages document revisions, distributions, and approvals following {target} documentation requirements (e.g., document controller maintains submittal logs per specification section requirements)",
+    "SEGMENTED BY": "{source} measure is broken down by {target} for comparative analysis (e.g., safety staffing ratio segmented by safety classification completeness across projects)"
+  }
+}

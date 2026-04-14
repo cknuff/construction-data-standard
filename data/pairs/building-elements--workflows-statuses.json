@@ -1,0 +1,278 @@
+{
+  "source": "building-elements",
+  "target": "workflows-statuses",
+  "edges": [
+    [
+      "be-excav",
+      "ws-open",
+      "BREAKS GROUND AT"
+    ],
+    [
+      "be-excav",
+      "ws-inspect-disposit",
+      "INSPECTED BEFORE BACKFILL VIA"
+    ],
+    [
+      "be-dewater",
+      "ws-progress",
+      "PUMPS CONTINUOUSLY DURING"
+    ],
+    [
+      "be-erosion",
+      "ws-conforming",
+      "PASSES STORMWATER REVIEW AT"
+    ],
+    [
+      "be-deep-fdn",
+      "ws-submitted",
+      "SUBMITS PILE DRIVING LOGS AT"
+    ],
+    [
+      "be-deep-fdn",
+      "ws-under-review",
+      "AWAITS LOAD TEST RESULTS DURING"
+    ],
+    [
+      "be-shallow-fdn",
+      "ws-ready-review",
+      "STAGED FOR FOOTING INSPECTION AT"
+    ],
+    [
+      "be-sog",
+      "ws-deficient",
+      "FAILS FLATNESS TOLERANCE AT"
+    ],
+    [
+      "be-bg-wp",
+      "ws-approved",
+      "PROCEEDS TO BACKFILL UPON"
+    ],
+    [
+      "be-fdn-walls",
+      "ws-hold",
+      "STOPS FOR CURE TIME AT"
+    ],
+    [
+      "be-water-main",
+      "ws-closed",
+      "CLEARS PRESSURE TEST AT"
+    ],
+    [
+      "be-sanitary",
+      "ws-sequential-appr",
+      "PASSES CAMERA INSPECTION VIA"
+    ],
+    [
+      "be-storm",
+      "ws-workflow-step",
+      "ADVANCES THROUGH UTILITY TIE-IN AT"
+    ],
+    [
+      "be-columns",
+      "ws-approved",
+      "POURS CONCRETE UPON"
+    ],
+    [
+      "be-beams",
+      "ws-submit-approve",
+      "RELEASES STEEL FABRICATION VIA"
+    ],
+    [
+      "be-slabs",
+      "ws-ready-review",
+      "CALLS FOR DECK INSPECTION AT"
+    ],
+    [
+      "be-connections",
+      "ws-parallel-review",
+      "COORDINATES EMBED PLACEMENT VIA"
+    ],
+    [
+      "be-roof-struct",
+      "ws-approved",
+      "TOPS OUT UPON"
+    ],
+    [
+      "be-curtainwall",
+      "ws-appr-chain",
+      "ROUTES SHOP DRAWINGS THROUGH"
+    ],
+    [
+      "be-curtainwall",
+      "ws-revise-resubmit",
+      "RETURNS MOCKUP PANEL TO"
+    ],
+    [
+      "be-windows",
+      "ws-approved-as",
+      "ACCEPTS SUBSTITUTION AT"
+    ],
+    [
+      "be-panels",
+      "ws-due-date",
+      "TARGETS DELIVERY WINDOW BY"
+    ],
+    [
+      "be-amb",
+      "ws-inspect-disposit",
+      "VERIFIED BEFORE CLADDING VIA"
+    ],
+    [
+      "be-roof-mem",
+      "ws-conforming",
+      "PASSES FLOOD TEST AT"
+    ],
+    [
+      "be-flashing",
+      "ws-deficient",
+      "FLAGGED FOR IMPROPER LAP AT"
+    ],
+    [
+      "be-skylights",
+      "ws-overdue",
+      "DELAYS ENCLOSURE MILESTONE AT"
+    ],
+    [
+      "be-ductwork",
+      "ws-review-respond",
+      "RESOLVES COORDINATION CLASH VIA"
+    ],
+    [
+      "be-ahu",
+      "ws-pending",
+      "QUEUED FOR STARTUP COMMISSIONING AT"
+    ],
+    [
+      "be-hvac-ctrl",
+      "ws-workflow-complet",
+      "MEASURES POINT-TO-POINT CHECKOUT BY"
+    ],
+    [
+      "be-tab",
+      "ws-closed",
+      "COMPLETES BALANCING REPORT AT"
+    ],
+    [
+      "be-sprink-main",
+      "ws-sequential-appr",
+      "ROUTES HYDRAULIC CALCULATIONS THROUGH"
+    ],
+    [
+      "be-sprink-head",
+      "ws-not-applicable",
+      "EXEMPTS UNOCCUPIED ZONES AT"
+    ],
+    [
+      "be-fa",
+      "ws-create-close",
+      "LOGS ACCEPTANCE TEST VIA"
+    ],
+    [
+      "be-power-dist",
+      "ws-e-signature-req",
+      "ENERGIZES SWITCHGEAR VIA"
+    ],
+    [
+      "be-conduit",
+      "ws-ball-court",
+      "ASSIGNS SLEEVE LAYOUT OWNER VIA"
+    ],
+    [
+      "be-lighting",
+      "ws-first-pass-appr",
+      "MEASURES FIXTURE APPROVAL RATE BY"
+    ],
+    [
+      "be-drywall",
+      "ws-ready-review",
+      "CALLS FOR ABOVE-CEILING INSPECTION AT"
+    ],
+    [
+      "be-paint",
+      "ws-progress",
+      "COATS SEQUENTIALLY DURING"
+    ],
+    [
+      "be-tile",
+      "ws-rejected",
+      "FAILS LIPPAGE STANDARD AT"
+    ],
+    [
+      "be-casework",
+      "ws-response-time",
+      "TRACKS SHOP DRAWING TURNAROUND BY"
+    ],
+    [
+      "be-elev-car",
+      "ws-multi-stage",
+      "ADVANCES THROUGH ACCEPTANCE TESTING VIA"
+    ],
+    [
+      "be-elev-mach",
+      "ws-escalation",
+      "TRIGGERS REINSPECTION NOTICE AT"
+    ],
+    [
+      "be-paving",
+      "ws-overdue-rate",
+      "MONITORS WEATHER DELAY BACKLOG BY"
+    ],
+    [
+      "be-landscape",
+      "ws-closed",
+      "ACHIEVES SUBSTANTIAL COMPLETION AT"
+    ],
+    [
+      "be-bas",
+      "ws-status-dwell",
+      "MEASURES INTEGRATION TESTING LAG BY"
+    ]
+  ],
+  "verbGlossary": {
+    "BREAKS GROUND AT": "{source} begins physical site work when the project reaches this open {target}, marking the start of construction activity.",
+    "INSPECTED BEFORE BACKFILL VIA": "{source} undergoes a mandatory inspection using {target} before being covered by subsequent work, ensuring hidden conditions are documented.",
+    "PUMPS CONTINUOUSLY DURING": "{source} operates without interruption while the project remains in this active {target}, maintaining dry working conditions.",
+    "PASSES STORMWATER REVIEW AT": "{source} satisfies regulatory compliance requirements and achieves this conforming {target} from the authority having jurisdiction.",
+    "SUBMITS PILE DRIVING LOGS AT": "{source} formally delivers installation records to the engineer of record when entering this submittal {target}.",
+    "AWAITS LOAD TEST RESULTS DURING": "{source} cannot proceed until geotechnical load test data is evaluated during this review {target}.",
+    "STAGED FOR FOOTING INSPECTION AT": "{source} is exposed and accessible, signaling readiness for the inspector to verify dimensions, rebar placement, and bearing conditions.",
+    "FAILS FLATNESS TOLERANCE AT": "{source} does not meet floor flatness (FF) or floor levelness (FL) specifications and receives this deficiency {target}.",
+    "PROCEEDS TO BACKFILL UPON": "{source} permits backfill operations to begin only after receiving {target}, protecting the membrane from premature loading.",
+    "STOPS FOR CURE TIME AT": "{source} pauses in this hold {target} while achieving required compressive strength before form stripping or loading.",
+    "CLEARS PRESSURE TEST AT": "{source} passes hydrostatic or air pressure testing and {target} closes, certifying the run is leak-free.",
+    "PASSES CAMERA INSPECTION VIA": "{source} undergoes CCTV camera inspection through this sequential {target} to verify slope, joints, and absence of debris.",
+    "ADVANCES THROUGH UTILITY TIE-IN AT": "{source} progresses through {target} when the connection to the municipal system is physically made and witnessed.",
+    "POURS CONCRETE UPON": "{source} receives its concrete placement only after formwork and reinforcement receive {target} from the structural engineer.",
+    "RELEASES STEEL FABRICATION VIA": "{source} shop drawings are approved through {target} pattern, authorizing the fabricator to begin production.",
+    "CALLS FOR DECK INSPECTION AT": "{source} notifies the inspector that formwork, rebar, and embeds are ready for verification before the concrete pour.",
+    "COORDINATES EMBED PLACEMENT VIA": "{source} is reviewed simultaneously by structural and MEP disciplines through this parallel review pattern to confirm no conflicts.",
+    "TOPS OUT UPON": "{source} structure achieves its final steel or concrete placement when {target} is granted, marking a major construction milestone.",
+    "ROUTES SHOP DRAWINGS THROUGH": "{source} fabrication drawings pass through this multi-party {target} chain including architect, structural engineer, and envelope consultant.",
+    "RETURNS MOCKUP PANEL TO": "{source} mockup fails performance testing (air, water, structural) and is returned to {target} for design revision and resubmission.",
+    "ACCEPTS SUBSTITUTION AT": "{source} is approved with noted deviations from the specification, permitting an alternate manufacturer or product to be installed.",
+    "TARGETS DELIVERY WINDOW BY": "{source} is tied to this due date, aligning factory shipment with the erection schedule on site.",
+    "VERIFIED BEFORE CLADDING VIA": "{source}is inspected through {target} before exterior cladding is installed, since the membrane will be permanently concealed.",
+    "PASSES FLOOD TEST AT": "{source} achieves this conforming {target} after standing water is held on the surface for 48 hours with no leaks detected.",
+    "FLAGGED FOR IMPROPER LAP AT": "{source} fails inspection because overlaps do not meet minimum requirements, receiving this deficient {target} requiring corrective work.",
+    "DELAYS ENCLOSURE MILESTONE AT": "{source} has missed its procurement or installation deadline, pushing the building enclosure milestone into this overdue {target}.",
+    "RESOLVES COORDINATION CLASH VIA": "{source} participates in this review-and-respond {target} to resolve spatial conflicts identified in the coordination model with other MEP trades.",
+    "QUEUED FOR STARTUP COMMISSIONING AT": "{source} equipment is installed and awaiting the commissioning agent to perform startup testing at this {target}.",
+    "MEASURES POINT-TO-POINT CHECKOUT BY": "{source} tracks completion of individual control point verification using {target} completion rate metric.",
+    "COMPLETES BALANCING REPORT AT": "{source}testing, adjusting, and balancing work finishes its final report and {target} reaches this closed status, certifying airflows and water flows meet design.",
+    "ROUTES HYDRAULIC CALCULATIONS THROUGH": "{source} main's hydraulic calculations pass through sequential review by the fire protection engineer and authority having jurisdiction.",
+    "EXEMPTS UNOCCUPIED ZONES AT": "{source} is marked as not applicable in areas that do not require coverage per code, such as certain utility rooms.",
+    "LOGS ACCEPTANCE TEST VIA": "{source} records its final acceptance test results through this create-and-close {target}, documenting every device and circuit.",
+    "ENERGIZES SWITCHGEAR VIA": "{source}receives authorization to be energized through {target}, requiring the responsible electrician's formal sign-off.",
+    "ASSIGNS SLEEVE LAYOUT OWNER VIA": "{source} sleeve and penetration coordination is routed to a responsible party through {target}.",
+    "MEASURES FIXTURE APPROVAL RATE BY": "{source} submittal success rate is tracked using this first-pass {target} metric to gauge specification compliance across fixtures.",
+    "CALLS FOR ABOVE-CEILING INSPECTION AT": "{source}als readiness for inspection of all MEP rough-ins above the ceiling plane before the ceiling is closed.",
+    "COATS SEQUENTIALLY DURING": "{source} applies primer, intermediate, and finish coats in sequence while the work remains in this active progress {target}.",
+    "FAILS LIPPAGE STANDARD AT": "{source} does not meet allowable height variation between adjacent tiles and receives this rejection requiring re-installation.",
+    "TRACKS SHOP DRAWING TURNAROUND BY": "{source} monitors how quickly the architect reviews and returns shop drawings using this response time metric.",
+    "ADVANCES THROUGH ACCEPTANCE TESTING VIA": "{source} car progresses through this multi-stage financial review pattern encompassing safety tests, load tests, and final code inspection.",
+    "TRIGGERS REINSPECTION NOTICE AT": "{source} machinery fails initial inspection and this escalation {target} notifies all parties that a reinspection is required.",
+    "MONITORS WEATHER DELAY BACKLOG BY": "{source} tracks the cumulative impact of weather-related schedule delays using this overdue rate metric.",
+    "ACHIEVES SUBSTANTIAL COMPLETION AT": "{source} installation marks the final scope item and the project {target} reaches this closed status.",
+    "MEASURES INTEGRATION TESTING LAG BY": "{source} tracks how long individual control sequences remain in testing {target} using this dwell time metric."
+  }
+}

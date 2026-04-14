@@ -1,0 +1,154 @@
+{
+  "source": "organizations",
+  "target": "standards-classifications",
+  "edges": [
+    [
+      "org-architect-record",
+      "sc-specification-se",
+      "AUTHORS"
+    ],
+    [
+      "org-specifications-w",
+      "sc-masterformat",
+      "DRAFTS PER"
+    ],
+    [
+      "org-struct-engineer",
+      "sc-international-bu",
+      "DESIGNS TO"
+    ],
+    [
+      "org-mep-engineer",
+      "sc-uniformat",
+      "CLASSIFIES BY"
+    ],
+    [
+      "org-fire-prot",
+      "sc-nfpa-stds",
+      "CERTIFIES UNDER"
+    ],
+    [
+      "org-code-consultant",
+      "sc-international-bu",
+      "INTERPRETS"
+    ],
+    [
+      "org-sustainability-l",
+      "sc-leed-certificati",
+      "ADMINISTERS"
+    ],
+    [
+      "org-building-envelop",
+      "sc-energy-code-stds",
+      "VERIFIES AGAINST"
+    ],
+    [
+      "org-gen-contr-gc",
+      "sc-wbs-code",
+      "STRUCTURES BY"
+    ],
+    [
+      "org-gen-contr-gc",
+      "sc-budget-code",
+      "BUDGETS UNDER"
+    ],
+    [
+      "org-sub-trade",
+      "sc-std-cost-code",
+      "INVOICES AGAINST"
+    ],
+    [
+      "org-sub-trade",
+      "sc-masterformat",
+      "SCOPED UNDER"
+    ],
+    [
+      "org-building-departm",
+      "sc-international-bu",
+      "ENFORCES"
+    ],
+    [
+      "org-fire-marshal",
+      "sc-nfpa-stds",
+      "ENFORCES"
+    ],
+    [
+      "org-osha-safety",
+      "sc-osha-hazard",
+      "ENFORCES"
+    ],
+    [
+      "org-osha-safety",
+      "sc-osha-recordkeepi",
+      "MANDATES"
+    ],
+    [
+      "org-mat-testing-lab",
+      "sc-specification-se",
+      "TESTS PER"
+    ],
+    [
+      "org-cx-agent-cxa",
+      "sc-leed-certificati",
+      "COMMISSIONS FOR"
+    ],
+    [
+      "org-design-builder",
+      "sc-aia-contract",
+      "EXECUTES UNDER"
+    ],
+    [
+      "org-const-manager-at",
+      "sc-dlvy-method",
+      "OPERATES UNDER"
+    ],
+    [
+      "org-fabricator",
+      "sc-ifc-class",
+      "FABRICATES PER"
+    ],
+    [
+      "org-sub-safety",
+      "sc-safety-class",
+      "SEGMENTED BY"
+    ],
+    [
+      "org-chg-order",
+      "sc-masterformat-map",
+      "SEGMENTED BY"
+    ],
+    [
+      "org-trade-coverage",
+      "sc-wbs-adoption",
+      "BENCHMARKED TO"
+    ],
+    [
+      "org-vendor-insurance",
+      "sc-certification-ad",
+      "BENCHMARKED TO"
+    ]
+  ],
+  "verbGlossary": {
+    "AUTHORS": "{source} produces or is the author of record for {target} documents (e.g., architect authors specification sections that govern construction quality)",
+    "DRAFTS PER": "{source} writes project documents structured according to {target} system (e.g., specifications writer drafts sections organized by MasterFormat divisions)",
+    "DESIGNS TO": "{source}'s engineering deliverables must satisfy {target} structural or performance requirements (e.g., structural engineer designs to IBC load and seismic provisions)",
+    "CLASSIFIES BY": "{source} tags or categorizes its deliverables using {target} taxonomy (e.g., MEP engineer classifies systems by UniFormat element groups)",
+    "CERTIFIES UNDER": "{source} stamps or certifies that its design or installation meets {target} requirements (e.g., fire protection engineer certifies suppression system design under NFPA standards)",
+    "INTERPRETS": "{source} provides expert interpretation of {target} for project-specific application (e.g., code consultant interprets IBC occupancy and egress requirements for permit review)",
+    "ADMINISTERS": "{source} manages the project's compliance program and documentation for the target certification (e.g., LEED consultant administers credit tracking and submittal packages for LEED certification)",
+    "VERIFIES AGAINST": "{source} performs analysis or testing to confirm assemblies meet {target} performance thresholds (e.g., building envelope consultant verifies wall assemblies against energy code U-value requirements)",
+    "STRUCTURES BY": "{source} establishes the project's cost or schedule breakdown using {target} hierarchy (e.g., GC structures project budget and schedule using WBS codes)",
+    "BUDGETS UNDER": "{source} allocates project funds according to {target} classification structure (e.g., GC sets up budget line items organized under the company's budget code structure)",
+    "INVOICES AGAINST": "{source} submits pay applications or cost charges referencing {target} code (e.g., subcontractor invoices labor and material against assigned standard cost codes)",
+    "SCOPED UNDER": "{source}'s contract scope is defined by {target} divisions or sections (e.g., drywall subcontractor is scoped under MasterFormat Division 09)",
+    "ENFORCES": "{source}inspects, cites violations, and ensures compliance with {target} or standard (e.g., building department enforces IBC provisions during plan review and field inspection)",
+    "MANDATES": "{source}requires organizations to follow {target} reporting and documentation rules (e.g., OSHA mandates injury and illness recordkeeping per OSHA 300 log requirements)",
+    "TESTS PER": "{source} performs material or system tests following {target} acceptance criteria and methods (e.g., materials testing lab tests concrete cylinders per specification section requirements)",
+    "COMMISSIONS FOR": "{source} performs functional performance testing to satisfy the target certification's commissioning prerequisites (e.g., CxA commissions HVAC systems for LEED Energy & Atmosphere credits)",
+    "EXECUTES UNDER": "{source} enters into and performs work governed by {target} standard's terms and conditions (e.g., design-builder executes project delivery under AIA contract documents)",
+    "OPERATES UNDER": "{source}'s project role and risk allocation is defined by {target} (e.g., CM at Risk operates under a GMP delivery method classification)",
+    "FABRICATES PER": "{source} manufactures components tagged and dimensioned according to {target} object schema (e.g., steel fabricator produces members tagged per IFC structural element classes)",
+    "SEGMENTED BY": "{source}-level metric is broken down by {target} for comparative analysis (e.g., subcontractor safety rate segmented by safety classification categories)",
+    "BENCHMARKED TO": "{source}-level metric is compared against {target} adoption or completeness threshold (e.g., trade coverage rate benchmarked to WBS adoption rate across portfolio)"
+  }
+}

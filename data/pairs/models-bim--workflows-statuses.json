@@ -1,0 +1,133 @@
+{
+  "source": "models-bim",
+  "target": "workflows-statuses",
+  "edges": [
+    [
+      "bim-coord-issue",
+      "ws-open",
+      "INITIATED AS"
+    ],
+    [
+      "bim-coord-issue",
+      "ws-progress",
+      "ADVANCED TO"
+    ],
+    [
+      "bim-coord-issue",
+      "ws-closed",
+      "RESOLVED TO"
+    ],
+    [
+      "bim-coord-issue",
+      "ws-ball-court",
+      "ROUTED VIA"
+    ],
+    [
+      "bim-coord-issue",
+      "ws-due-date",
+      "BOUNDED BY"
+    ],
+    [
+      "bim-coord-issue",
+      "ws-overdue",
+      "ESCALATED TO"
+    ],
+    [
+      "bim-clash-detection",
+      "ws-review-respond",
+      "PROCESSED THROUGH"
+    ],
+    [
+      "bim-model-based",
+      "ws-submitted",
+      "ISSUED AS"
+    ],
+    [
+      "bim-model-based",
+      "ws-under-review",
+      "CIRCULATED FOR"
+    ],
+    [
+      "bim-model-based",
+      "ws-approved",
+      "RELEASED AT"
+    ],
+    [
+      "bim-model-based",
+      "ws-revise-resubmit",
+      "RETURNED FOR"
+    ],
+    [
+      "bim-model-based",
+      "ws-sequential-appr",
+      "ROUTED THROUGH"
+    ],
+    [
+      "bim-3d-building-info",
+      "ws-draft",
+      "STARTED AS"
+    ],
+    [
+      "bim-3d-building-info",
+      "ws-submit-approve",
+      "PUBLISHED THROUGH"
+    ],
+    [
+      "bim-drawing-revision",
+      "ws-resubmission-rat",
+      "DRIVES"
+    ],
+    [
+      "bim-as-built-model",
+      "ws-approved",
+      "ACCEPTED AT"
+    ],
+    [
+      "bim-coord-issue-3",
+      "ws-ball-court-aging",
+      "CORRELATES WITH"
+    ],
+    [
+      "bim-bim-coord",
+      "ws-response-time",
+      "TRACKED BY"
+    ],
+    [
+      "bim-360-photo",
+      "ws-inspect-disposit",
+      "SUPPORTS"
+    ],
+    [
+      "bim-const-photo",
+      "ws-inspect-disposit",
+      "SUPPORTS"
+    ],
+    [
+      "bim-digital-twin",
+      "ws-closed",
+      "ACTIVATED AFTER"
+    ]
+  ],
+  "verbGlossary": {
+    "INITIATED AS": "{source} created with an initial open {target}",
+    "ADVANCED TO": "Issue moves to in-progress {target} when a responsible party begins resolution",
+    "RESOLVED TO": "Issue marked closed after the coordination conflict is fully resolved",
+    "ROUTED VIA": "Issue routed to the responsible party using {target}",
+    "BOUNDED BY": "Issue resolution constrained by an assigned due date",
+    "ESCALATED TO": "{source}issue past its due date escalated to overdue {target}",
+    "PROCESSED THROUGH": "{source} results processed through a review-and-respond {target}",
+    "ISSUED AS": "{source}-based drawing issued with submitted {target} for review",
+    "CIRCULATED FOR": "{source}reviewers and enters under-review {target}",
+    "RELEASED AT": "{source}released for construction use upon reaching approved {target}",
+    "RETURNED FOR": "Drawing returned to the originator for revision and resubmission",
+    "ROUTED THROUGH": "Drawing passes through a sequential {target} chain before release",
+    "STARTED AS": "{source} begins its lifecycle in draft {target} during early design",
+    "PUBLISHED THROUGH": "{source} published for team use through a submit-and-approve {target}",
+    "DRIVES": "Drawing revision frequency drives the overall resubmission rate metric",
+    "ACCEPTED AT": "As-built model accepted by the owner at approved {target} during closeout",
+    "CORRELATES WITH": "{source} resolution time correlates with {target} aging metric",
+    "TRACKED BY": "{source} coordination meeting action items tracked by response time metric",
+    "SUPPORTS": "{source}capture photos support the inspect-and-{target} with visual evidence",
+    "ACTIVATED AFTER": "{source}activated for operations after the project reaches closed {target}"
+  }
+}

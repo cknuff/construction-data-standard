@@ -1,0 +1,308 @@
+{
+  "source": "field-operations",
+  "target": "workflows-statuses",
+  "edges": [
+    [
+      "fo-daily-log-header",
+      "ws-open",
+      "OPENS AT"
+    ],
+    [
+      "fo-daily-log-header",
+      "ws-closed",
+      "CLOSES OUT AT"
+    ],
+    [
+      "fo-daily-log-header",
+      "ws-create-close",
+      "FOLLOWS"
+    ],
+    [
+      "fo-daily-log-note",
+      "ws-draft",
+      "COMPOSED IN"
+    ],
+    [
+      "fo-daily-log-note",
+      "ws-dist-list",
+      "CIRCULATED VIA"
+    ],
+    [
+      "fo-manpower-log",
+      "ws-submitted",
+      "REPORTED AT"
+    ],
+    [
+      "fo-timecard-entry",
+      "ws-pending",
+      "AWAITS"
+    ],
+    [
+      "fo-timecard-entry",
+      "ws-approved",
+      "CERTIFIED UPON"
+    ],
+    [
+      "fo-timecard-entry",
+      "ws-sequential-appr",
+      "ROUTES THROUGH"
+    ],
+    [
+      "fo-equip-log-entry",
+      "ws-open",
+      "LOGGED AT"
+    ],
+    [
+      "fo-equip-timecard",
+      "ws-approved",
+      "RELEASED UPON"
+    ],
+    [
+      "fo-dlvy-log-entry",
+      "ws-conforming",
+      "ACCEPTED AT"
+    ],
+    [
+      "fo-dlvy-log-entry",
+      "ws-deficient",
+      "REJECTED AT"
+    ],
+    [
+      "fo-mat-shipment",
+      "ws-progress",
+      "TRACKED DURING"
+    ],
+    [
+      "fo-mat-shipment",
+      "ws-overdue",
+      "ESCALATES TO"
+    ],
+    [
+      "fo-mat-receipt",
+      "ws-inspect-disposit",
+      "INSPECTED VIA"
+    ],
+    [
+      "fo-mat-receipt",
+      "ws-conforming",
+      "PASSES AT"
+    ],
+    [
+      "fo-delay-log-entry",
+      "ws-open",
+      "INITIATED AT"
+    ],
+    [
+      "fo-delay-log-entry",
+      "ws-under-review",
+      "EVALUATED DURING"
+    ],
+    [
+      "fo-delay-log-entry",
+      "ws-approved",
+      "SUBSTANTIATED UPON"
+    ],
+    [
+      "fo-safety-violation",
+      "ws-progress",
+      "REMEDIATED DURING"
+    ],
+    [
+      "fo-safety-violation",
+      "ws-closed",
+      "ABATED AT"
+    ],
+    [
+      "fo-safety-violation",
+      "ws-escalation",
+      "ELEVATES TO"
+    ],
+    [
+      "fo-accident-log",
+      "ws-under-review",
+      "INVESTIGATED DURING"
+    ],
+    [
+      "fo-accident-log",
+      "ws-closed",
+      "ADJUDICATED AT"
+    ],
+    [
+      "fo-daily-log-insp",
+      "ws-inspect-disposit",
+      "GOVERNED BY"
+    ],
+    [
+      "fo-daily-log-insp",
+      "ws-deficient",
+      "FLAGGED AT"
+    ],
+    [
+      "fo-daily-log-insp",
+      "ws-ready-review",
+      "QUEUED AT"
+    ],
+    [
+      "fo-t-m-ticket",
+      "ws-draft",
+      "ORIGINATES IN"
+    ],
+    [
+      "fo-t-m-ticket",
+      "ws-approved",
+      "EXECUTED UPON"
+    ],
+    [
+      "fo-t-m-ticket",
+      "ws-e-signature-req",
+      "COUNTERSIGNED VIA"
+    ],
+    [
+      "fo-quantity-log",
+      "ws-review-respond",
+      "VALIDATED VIA"
+    ],
+    [
+      "fo-workforce-req",
+      "ws-pending",
+      "REQUESTED AT"
+    ],
+    [
+      "fo-workforce-req",
+      "ws-approved",
+      "DISPATCHED UPON"
+    ],
+    [
+      "fo-workforce-req",
+      "ws-appr-chain",
+      "ROUTED THROUGH"
+    ],
+    [
+      "fo-assignment",
+      "ws-open",
+      "MOBILIZED AT"
+    ],
+    [
+      "fo-assignment",
+      "ws-closed",
+      "DEMOBILIZED AT"
+    ],
+    [
+      "fo-waste-log-entry",
+      "ws-submitted",
+      "MANIFESTED AT"
+    ],
+    [
+      "fo-daily-report",
+      "ws-dist-list",
+      "DISTRIBUTED VIA"
+    ],
+    [
+      "fo-daily-report",
+      "ws-due-date",
+      "BOUND BY"
+    ],
+    [
+      "fo-scheduled-work",
+      "ws-progress",
+      "ADVANCED DURING"
+    ],
+    [
+      "fo-scheduled-work-2",
+      "ws-mapped-status",
+      "SYNCED VIA"
+    ],
+    [
+      "fo-plan-revision",
+      "ws-approved-as",
+      "INCORPORATED AT"
+    ],
+    [
+      "fo-visitor-log",
+      "ws-open",
+      "CHECKED IN AT"
+    ],
+    [
+      "fo-visitor-log",
+      "ws-closed",
+      "CHECKED OUT AT"
+    ],
+    [
+      "fo-daily-log-2",
+      "ws-workflow-complet",
+      "MEASURED BY"
+    ],
+    [
+      "fo-delay-frequency",
+      "ws-status-dwell",
+      "CORRELATED WITH"
+    ],
+    [
+      "fo-plan-percent",
+      "ws-first-pass-appr",
+      "COMPARED AGAINST"
+    ],
+    [
+      "fo-weather-delay",
+      "ws-escalation-rate",
+      "INDEXED BY"
+    ],
+    [
+      "fo-waste-diversion",
+      "ws-workflow-complet",
+      "TRACKED BY"
+    ]
+  ],
+  "verbGlossary": {
+    "OPENS AT": "{source}log record is created and enters this active {target}, beginning its daily tracking lifecycle.",
+    "CLOSES OUT AT": "{source}log is finalized and locked for the day at this terminal {target}, preventing further edits.",
+    "FOLLOWS": "{source}record adheres to this standard {target} pattern from creation through completion.",
+    "COMPOSED IN": "{source}is drafted and edited in this preliminary {target} before formal submission.",
+    "CIRCULATED VIA": "{source}is sent to project stakeholders through this distribution {target}.",
+    "REPORTED AT": "{source} is formally logged and reported at this submission {target}.",
+    "AWAITS": "{source} is queued and waiting for action at {target}; no progress until someone acts.",
+    "CERTIFIED UPON": "{source}cost record is formally certified as accurate and payable at {target}.",
+    "ROUTES THROUGH": "{source}record passes through {target} chain or workflow pattern as part of its processing.",
+    "LOGGED AT": "{source}is entered into the system at this initial tracking {target}.",
+    "RELEASED UPON": "{source} is cleared for processing when {target} is reached.",
+    "ACCEPTED AT": "{source}delivered material or inspected item meets specifications and is dispositioned at this conforming {target}.",
+    "REJECTED AT": "{source}delivered material or inspected item fails to meet specifications and is dispositioned at this deficient {target}.",
+    "TRACKED DURING": "{source}is monitored while it remains in this active {target}.",
+    "ESCALATES TO": "{source}record automatically transitions to {target} when deadlines or thresholds are breached.",
+    "INSPECTED VIA": "The material or field item undergoes quality verification through this inspect-and-{target}.",
+    "PASSES AT": "{source}inspected item meets acceptance criteria and is dispositioned at this conforming {target}.",
+    "INITIATED AT": "{source}is first recorded and opened at {target}, starting the tracking clock.",
+    "EVALUATED DURING": "{source}is assessed for legitimacy and impact while held at this review {target}.",
+    "SUBSTANTIATED UPON": "{source}is validated as legitimate when {target} is reached.",
+    "REMEDIATED DURING": "{source}is underway to address the violation while the record remains in this active {target}.",
+    "ABATED AT": "{source}is corrected and the violation record is closed at this terminal {target}.",
+    "ELEVATES TO": "{source} is escalated through this formal escalation {target} when severity or recurrence warrants it.",
+    "INVESTIGATED DURING": "{source}is under formal investigation while the record remains at this review {target}.",
+    "ADJUDICATED AT": "{source}is concluded and findings are finalized at this closed {target}.",
+    "GOVERNED BY": "{source}inspection follows the rules and transitions defined by {target} pattern.",
+    "FLAGGED AT": "{source}inspection item is marked as non-conforming and dispositioned at this deficient {target}.",
+    "QUEUED AT": "{source}inspection item is staged and waiting for a reviewer at this ready-for-review {target}.",
+    "ORIGINATES IN": "{source} is first created in {target}, typically as an editable draft before any review begins.",
+    "EXECUTED UPON": "The T&M ticket or field authorization becomes a binding commitment when {target} is reached.",
+    "COUNTERSIGNED VIA": "The field ticket obtains the owner or GC representative counter-signature through this e-signature {target}.",
+    "VALIDATED VIA": "{source}measurement undergoes verification through this review-and-respond {target} pattern.",
+    "REQUESTED AT": "{source} is formally submitted and enters this {target} awaiting fulfillment.",
+    "DISPATCHED UPON": "{source} is mobilized and assigned to the project when {target} is reached.",
+    "ROUTED THROUGH": "The field request passes through {target} chain for multi-level authorization before fulfillment.",
+    "MOBILIZED AT": "{source}assignment is activated and enters this open {target} on the project.",
+    "DEMOBILIZED AT": "{source}assignment is completed and the record is closed at this terminal {target}.",
+    "MANIFESTED AT": "{source}waste hauling record is formally documented with manifest details at this submission {target}.",
+    "DISTRIBUTED VIA": "{source} is sent to project stakeholders through this distribution list {target}.",
+    "BOUND BY": "{source} is constrained by this due date, requiring timely submission.",
+    "ADVANCED DURING": "{source}scheduled work progresses and is updated while in this active {target}.",
+    "SYNCED VIA": "{source}scheduled work task link is synchronized with the project schedule through this mapped {target} mechanism.",
+    "INCORPORATED AT": "{source}plan revision is accepted with noted conditions and integrated into the project documents at {target}.",
+    "CHECKED IN AT": "{source}is logged as arriving on the jobsite and the record enters this open {target}.",
+    "CHECKED OUT AT": "The visitor departs the jobsite and the log entry is closed at this terminal {target}.",
+    "MEASURED BY": "{source}is quantified using {target} performance measure.",
+    "CORRELATED WITH": "{source}is analyzed in conjunction with {target} measure to identify patterns.",
+    "COMPARED AGAINST": "{source}is evaluated relative to {target} approval rate for performance insight.",
+    "INDEXED BY": "{source}is normalized and tracked using {target} escalation measure.",
+    "TRACKED BY": "{source}is monitored over time using {target} KPI."
+  }
+}

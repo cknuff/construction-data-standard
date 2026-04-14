@@ -1,0 +1,203 @@
+{
+  "domain": "risk",
+  "name": "Risk",
+  "color": "#f44336",
+  "categories": [
+    {
+      "name": "Risk Framework",
+      "color": "#d6522c",
+      "nodes": [
+        {
+          "id": "rk-risk",
+          "name": "Risk",
+          "desc": "An identified potential event or condition that could affect project objectives — the fundamental unit of risk management. Defined by source (what causes it), trigger (what signals it), consequence (what it affects), and owner (who manages it). Risks exist along a spectrum from known-known (identified and quantified) to unknown-unknown (emergent). In construction, most risks are known but unmanaged — the gap is process, not knowledge."
+        },
+        {
+          "id": "rk-risk-register",
+          "name": "Risk Register",
+          "desc": "A project-level inventory of all identified risks — the master document that tracks risk identification, assessment, response, and status throughout the project lifecycle. Maintained from preconstruction through closeout. Typically a spreadsheet with columns for description, category, likelihood, impact, score, owner, response, status, and trigger."
+        },
+        {
+          "id": "rk-risk-category",
+          "name": "Risk Category",
+          "desc": "A classification that groups risks by their source or nature — the organizing principle for a risk register. Categories are typically defined at the company or program level and applied consistently across projects."
+        },
+        {
+          "id": "rk-risk-trigger",
+          "name": "Risk Trigger",
+          "desc": "An observable condition or event that signals a risk is materializing — the early warning system. Triggers convert abstract risks into actionable alerts. In construction, triggers are often embedded in daily operations data: an RFI surge signals design risk, a submittal delay signals supply chain risk, recurring safety observations signal hazard risk."
+        },
+        {
+          "id": "rk-risk-owner",
+          "name": "Risk Owner",
+          "desc": "The person or party responsible for monitoring a risk and executing the response plan — accountability for risk management. In construction, risk ownership follows contractual responsibility: the GC owns means-and-methods risk, the architect owns design risk, the owner owns market/financing risk, subcontractors own trade-specific execution risk."
+        }
+      ]
+    },
+    {
+      "name": "Risk Assessment",
+      "color": "#e74a31",
+      "nodes": [
+        {
+          "id": "rk-likelihood-asses",
+          "name": "Likelihood Assessment",
+          "desc": "The evaluation of probability that a risk event will occur — qualitative (High/Medium/Low) or quantitative (percentage, frequency). In construction, likelihood is often estimated from historical data: how often has this happened on similar projects? OSHA incident rates, change order frequency, weather patterns, and subcontractor performance history all inform likelihood."
+        },
+        {
+          "id": "rk-impact-assessmen",
+          "name": "Impact Assessment",
+          "desc": "The evaluation of consequence severity if a risk materializes — measured across one or more dimensions: cost, schedule, quality, safety, reputation. Impact is the 'so what' of risk — a likely event with negligible impact is low priority, while an unlikely event with catastrophic impact (structural failure, fatality) demands active management regardless of probability."
+        },
+        {
+          "id": "rk-risk-score",
+          "name": "Risk Score",
+          "desc": "The combined measure of likelihood × impact that determines risk priority — the basis for triage and resource allocation. Typically displayed as a number (1–25 on a 5×5 matrix) or color (red/amber/green). In construction, risk scores drive which risks get contingency, which get mitigation plans, and which are accepted and monitored."
+        },
+        {
+          "id": "rk-risk-matrix",
+          "name": "Risk Matrix",
+          "desc": "A visual grid that plots risks by likelihood (y-axis) and impact (x-axis) — the standard tool for risk prioritization. Typically 3×3 or 5×5 with color-coded zones (green = accept, amber = mitigate, red = escalate). The matrix is a communication tool — it makes risk priorities visible to the project team and stakeholders."
+        }
+      ]
+    },
+    {
+      "name": "Risk Response",
+      "color": "#f84137",
+      "nodes": [
+        {
+          "id": "rk-risk-response",
+          "name": "Risk Response Type",
+          "desc": "The strategic approach to managing an identified risk — the four fundamental options. Each risk in the register should have an assigned response type that determines the nature of the mitigation plan."
+        },
+        {
+          "id": "rk-mitigation-actio",
+          "name": "Mitigation Action",
+          "desc": "A specific planned action to reduce the likelihood or impact of an identified risk — the operational response. Mitigation actions have owners, due dates, status, and cost. Examples: early procurement for supply chain risk, additional shoring for geotechnical risk, design review for coordination risk, safety training for hazard risk."
+        },
+        {
+          "id": "rk-contingency-rese",
+          "name": "Contingency Reserve",
+          "desc": "A budget allocation held in reserve for identified risks — financial buffer against cost uncertainty. Contingency is typically 3-10% of project cost depending on project complexity and phase (higher in early phases, drawn down as risks are resolved or materialized). Distinct from allowances (placeholder for undefined scope) and management reserve (for unknown-unknowns)."
+        },
+        {
+          "id": "rk-schedule-buffer",
+          "name": "Schedule Buffer",
+          "desc": "Time reserves built into the project schedule to absorb schedule risk — the temporal equivalent of contingency reserve. Buffers may be explicit (milestone buffers between phases) or implicit (float in non-critical paths). Critical Chain Project Management (CCPM) formalizes buffer management."
+        },
+        {
+          "id": "rk-residual-risk",
+          "name": "Residual Risk",
+          "desc": "The remaining risk exposure after mitigation actions are applied — the risk that persists despite response efforts. Residual risk may be accepted, monitored, or require additional response. It is the actual exposure the project carries, not the initial identified exposure."
+        }
+      ]
+    },
+    {
+      "name": "Risk Categories",
+      "color": "#ff393d",
+      "nodes": [
+        {
+          "id": "rk-design-risk",
+          "name": "Design Risk",
+          "desc": "Risk arising from incomplete, conflicting, or evolving design — the most common source of change orders in construction. Design risk manifests as RFIs (clarification needed), design changes (revisions), coordination conflicts (clashes between disciplines), and scope growth (owner-driven additions). Design risk is highest in design-bid-build delivery and lowest in design-build."
+        },
+        {
+          "id": "rk-const-execution",
+          "name": "Construction Execution Risk",
+          "desc": "Risk from means and methods, productivity, sequencing, and trade coordination — the risk of building it wrong or slow. Includes rework (built incorrectly, must redo), productivity loss (slower than planned), sequencing errors (wrong order), and coordination failures (trades interfering with each other). Owned primarily by the GC and subcontractors."
+        },
+        {
+          "id": "rk-financial-risk",
+          "name": "Financial Risk",
+          "desc": "Risk of cost overruns, cash flow problems, payment disputes, or contractor default — the money risks. Includes budget variance (actual > plan), cash flow gaps (invoices outpacing payments), subcontractor financial health (inability to complete), and owner funding risk (delayed payments or financing failures)."
+        },
+        {
+          "id": "rk-schedule-risk",
+          "name": "Schedule Risk",
+          "desc": "Risk of delays and timeline overruns from any cause — weather, permits, material delivery, labor shortages, design changes, differing site conditions. Schedule risk compounds: a 2-week delay to one trade can cascade into months of impact through downstream dependencies. Critical path analysis identifies which risks have the most schedule exposure."
+        },
+        {
+          "id": "rk-safety-risk",
+          "name": "Safety Risk",
+          "desc": "Risk of injuries, fatalities, and safety incidents — the most regulated and consequential risk category. Safety risk is measured by incident rates (TRIR, DART, EMR), managed through hazard identification and mitigation, and regulated by OSHA. In construction, the 'Fatal Four' (falls, struck-by, electrocution, caught-in/between) account for most fatalities."
+        },
+        {
+          "id": "rk-enviro-risk",
+          "name": "Environmental Risk",
+          "desc": "Risk from contamination, hazardous materials, spills, weather events, and environmental compliance — both site-condition risk (what's already there) and operational risk (what the project creates). Includes asbestos/lead discovery, soil contamination, stormwater violations, and environmental incidents."
+        },
+        {
+          "id": "rk-reg-permit-risk",
+          "name": "Regulatory and Permit Risk",
+          "desc": "Risk from permitting delays, code changes, inspection failures, and regulatory enforcement — the risk that authorities block or delay work. Includes building permit delays, failed AHJ inspections, zoning issues, utility connection delays, and code interpretation disputes."
+        },
+        {
+          "id": "rk-supply-chain",
+          "name": "Supply Chain Risk",
+          "desc": "Risk from material shortages, delivery delays, price escalation, and sole-source dependencies — the risk that what you need isn't available when you need it. Amplified by global supply chain disruptions, long-lead procurement, and just-in-time delivery practices common in construction."
+        },
+        {
+          "id": "rk-geotechnical-ris",
+          "name": "Geotechnical Risk",
+          "desc": "Risk from unforeseen subsurface conditions — the most unpredictable risk in construction. Includes unexpected soil conditions, groundwater, contamination, underground utilities, and rock. Geotechnical risk is highest on renovation, infrastructure, and greenfield sites without adequate investigation. Differing site conditions claims are among the most litigated in construction."
+        },
+        {
+          "id": "rk-labor-risk",
+          "name": "Labor Risk",
+          "desc": "Risk from workforce availability, productivity variance, jurisdictional disputes, and labor relations — the people risk. Includes skilled labor shortages, productivity below plan, trade jurisdictional conflicts, union actions, and key-person dependency. Labor risk is structural in construction due to the aging workforce and project-based employment model."
+        },
+        {
+          "id": "rk-coord-risk",
+          "name": "Coordination Risk",
+          "desc": "Risk from trade interference, design conflicts, and inadequate planning — the risk that parallel workstreams collide. Includes spatial conflicts (two trades in the same space), temporal conflicts (wrong sequence), and information conflicts (outdated drawings). BIM coordination and pull planning are the primary mitigation tools."
+        }
+      ]
+    },
+    {
+      "name": "Risk Transfer & Allocation",
+      "color": "#de4e2e",
+      "nodes": [
+        {
+          "id": "rk-insurance-requir",
+          "name": "Insurance Requirement",
+          "desc": "The contractual obligation for project participants to carry specific insurance coverages — the financial backstop for risk transfer. Standard requirements include General Liability, Workers' Compensation, Umbrella/Excess, Builders Risk, Professional Liability (for designers), and Pollution coverage. Insurance compliance is tracked at both company and project levels."
+        },
+        {
+          "id": "rk-surety-bond",
+          "name": "Surety Bond",
+          "desc": "A three-party guarantee that a contractor will fulfill contractual obligations — bid bonds (guarantee bid price), performance bonds (guarantee completion), and payment bonds (guarantee subcontractor/supplier payment). Required on all federal projects (Miller Act) and most public projects. Less common on private work."
+        },
+        {
+          "id": "rk-risk-allocation",
+          "name": "Risk Allocation",
+          "desc": "The contractual assignment of specific risks to parties — who bears the consequence when a risk materializes. Risk allocation is defined in contract terms and varies by delivery method. Design-bid-build allocates design risk to the owner/architect; design-build shifts it to the contractor. Differing site conditions, force majeure, and schedule liquidated damages are common allocation provisions."
+        }
+      ]
+    },
+    {
+      "name": "Standard Measures",
+      "color": "#ef4634",
+      "nodes": [
+        {
+          "id": "rk-risk-exposure",
+          "name": "Risk Exposure Value",
+          "desc": "Total financial exposure from identified risks — sum of (likelihood × cost impact) across all risks in the register. Provides a single number representing the project's aggregate risk in dollar terms. Used to justify contingency levels and prioritize mitigation spending."
+        },
+        {
+          "id": "rk-incident-rate",
+          "name": "Incident Rate (TRIR)",
+          "desc": "Total Recordable Incident Rate — the standard OSHA safety metric. Formula: (number of recordable incidents × 200,000) / total hours worked. Measures overall safety risk realization. DART rate (Days Away, Restricted, or Transferred) is the severity-weighted variant."
+        },
+        {
+          "id": "rk-risk-mitigation",
+          "name": "Risk Mitigation Completion Rate",
+          "desc": "Percentage of planned mitigation actions completed on time — measures the effectiveness of risk response execution. Formula: completed actions / total planned actions. Tracks whether the team is actually doing what they planned to manage risk."
+        },
+        {
+          "id": "rk-schedule-float",
+          "name": "Schedule Float Erosion",
+          "desc": "Rate at which total float is consumed across the project schedule — a leading indicator of schedule risk. Formula: (baseline total float - current total float) / baseline total float. Rapid float erosion signals that the schedule is tightening and risk of delay is increasing."
+        }
+      ]
+    }
+  ]
+}

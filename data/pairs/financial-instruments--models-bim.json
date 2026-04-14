@@ -1,0 +1,161 @@
+{
+  "source": "financial-instruments",
+  "target": "models-bim",
+  "edges": [
+    [
+      "fi-budget-line-item",
+      "bim-5d-model-cost",
+      "PRICED FROM"
+    ],
+    [
+      "fi-chg-event-line",
+      "bim-5d-model-cost",
+      "RECONCILED AGAINST"
+    ],
+    [
+      "fi-cost-forecast",
+      "bim-5d-model-cost",
+      "PROJECTED FROM"
+    ],
+    [
+      "fi-direct-cost",
+      "bim-5d-model-cost",
+      "POSTED TO"
+    ],
+    [
+      "fi-budget-line-item",
+      "bim-quantity-takeoff",
+      "ESTIMATED FROM"
+    ],
+    [
+      "fi-commit-line-item",
+      "bim-quantity-takeoff",
+      "SCOPED BY"
+    ],
+    [
+      "fi-chg-event-ce",
+      "bim-quantity-takeoff",
+      "QUANTIFIED BY"
+    ],
+    [
+      "fi-schedule-values",
+      "bim-quantity-takeoff",
+      "DERIVED FROM"
+    ],
+    [
+      "fi-chg-event-ce",
+      "bim-coord-issue",
+      "TRIGGERED BY"
+    ],
+    [
+      "fi-chg-event-line",
+      "bim-coord-issue",
+      "ATTRIBUTED TO"
+    ],
+    [
+      "fi-budget-mod",
+      "bim-coord-issue",
+      "JUSTIFIED BY"
+    ],
+    [
+      "fi-chg-event-ce",
+      "bim-clash-detection",
+      "ORIGINATED FROM"
+    ],
+    [
+      "fi-cost-growth",
+      "bim-clash-resolution",
+      "REDUCED BY"
+    ],
+    [
+      "fi-budget-line-item",
+      "bim-model-element",
+      "LINKED TO"
+    ],
+    [
+      "fi-wbs-code",
+      "bim-model-element",
+      "MAPPED TO ELEMENT"
+    ],
+    [
+      "fi-direct-cost-line",
+      "bim-model-element",
+      "CHARGED AGAINST"
+    ],
+    [
+      "fi-owner-invoice",
+      "bim-as-built-model",
+      "VERIFIED AGAINST"
+    ],
+    [
+      "fi-retainage",
+      "bim-as-built-model",
+      "RELEASED UPON"
+    ],
+    [
+      "fi-cash-flow",
+      "bim-4d-model",
+      "SYNCHRONIZED WITH"
+    ],
+    [
+      "fi-cost-perf-index",
+      "bim-4d-model",
+      "PHASED BY"
+    ],
+    [
+      "fi-chg-order-rate",
+      "bim-coord-issue-2",
+      "CORRELATED WITH"
+    ],
+    [
+      "fi-contingency-burn",
+      "bim-drawing-revision",
+      "DRIVEN BY"
+    ],
+    [
+      "fi-budget-variance",
+      "bim-bim-coord-2",
+      "IMPROVED BY"
+    ],
+    [
+      "bim-quantity-takeoff",
+      "fi-cost-code",
+      "PRICES BY"
+    ],
+    [
+      "fi-estimate",
+      "bim-quantity-takeoff",
+      "DERIVED FROM"
+    ],
+    [
+      "bim-quantity-takeoff",
+      "fi-estimate",
+      "FEEDS"
+    ]
+  ],
+  "verbGlossary": {
+    "PRICED FROM": "{source} line item derives its unit cost or lump-sum value from {target}-based cost estimate (e.g., budget line priced from 5D cost model quantities)",
+    "RECONCILED AGAINST": "{source} is compared to {target}'s current cost baseline to validate scope and cost alignment",
+    "PROJECTED FROM": "Forecast or estimate at completion is calculated using {target}-linked cost and quantity data as the projection basis",
+    "POSTED TO": "{source}cost transaction is recorded against {target} to maintain real-time cost visibility",
+    "ESTIMATED FROM": "{source} or cost figure is derived from {target} quantity takeoff measurements (e.g., concrete volume, steel tonnage)",
+    "SCOPED BY": "{source} scope is defined using quantity takeoff values extracted from {target}",
+    "QUANTIFIED BY": "{source} scope is measured using updated {target} quantities to validate the change amount",
+    "DERIVED FROM": "{source} breakdown is generated from {target}-based quantity takeoff line items",
+    "TRIGGERED BY": "{source} is initiated because a coordination issue identified in {target} requires scope or cost adjustment",
+    "ATTRIBUTED TO": "{source} cost is traced back to a specific {target} as its root cause",
+    "JUSTIFIED BY": "{source} is supported by {target} that documents why additional funds are required",
+    "ORIGINATED FROM": "{source} traces its origin to a clash detected during {target} coordination review",
+    "REDUCED BY": "Cost growth metric improves as clash resolution rate increases, reducing rework-driven cost overruns",
+    "LINKED TO": "{source} is associated with a specific {target} element for element-level cost tracking",
+    "MAPPED TO ELEMENT": "{source} is assigned to {target} element so cost breakdowns align with the building information model structure",
+    "CHARGED AGAINST": "{source} expense is allocated to a specific {target} element for granular cost attribution",
+    "VERIFIED AGAINST": "Owner pay application quantities and values are validated by comparing to the as-built {target} installed conditions",
+    "RELEASED UPON": "{source} is released when the as-built {target} confirms the work is complete and documented",
+    "SYNCHRONIZED WITH": "{source} is time-phased using {target} construction sequence and schedule",
+    "PHASED BY": "{source} is calculated by phase using {target} schedule-linked work breakdown",
+    "CORRELATED WITH": "{source} rate is analyzed relative to {target} density to identify design quality impacts on cost",
+    "DRIVEN BY": "{source} burn rate increases as drawing revision frequency rises, consuming budget reserves",
+    "IMPROVED BY": "{source} variance performance improves with higher BIM coordination adoption, reducing unforeseen changes"
+  }
+}

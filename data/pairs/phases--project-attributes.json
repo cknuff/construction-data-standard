@@ -1,0 +1,228 @@
+{
+  "source": "phases",
+  "target": "project-attributes",
+  "edges": [
+    [
+      "ph-program",
+      "pa-project-type",
+      "SCOPED BY"
+    ],
+    [
+      "ph-program",
+      "pa-owner-type",
+      "INITIATED BY"
+    ],
+    [
+      "ph-program",
+      "pa-program-type",
+      "SHAPED BY"
+    ],
+    [
+      "ph-design",
+      "pa-bim-requirement",
+      "GOVERNED BY"
+    ],
+    [
+      "ph-design",
+      "pa-leed-certificati",
+      "REQUIRED BY"
+    ],
+    [
+      "ph-design",
+      "pa-net-zero-target",
+      "CONSTRAINED BY"
+    ],
+    [
+      "ph-estimating",
+      "pa-total-value-band",
+      "CALIBRATED TO"
+    ],
+    [
+      "ph-estimating",
+      "pa-cost-per-sf",
+      "BENCHMARKED BY"
+    ],
+    [
+      "ph-estimating",
+      "pa-region",
+      "ADJUSTED FOR"
+    ],
+    [
+      "ph-permit",
+      "pa-occupancy-group",
+      "DETERMINED BY"
+    ],
+    [
+      "ph-permit",
+      "pa-building-code",
+      "GOVERNED BY"
+    ],
+    [
+      "ph-precon-plan",
+      "pa-dlvy-method",
+      "STRUCTURED BY"
+    ],
+    [
+      "ph-precon-plan",
+      "pa-preconstruction",
+      "BOUNDED BY"
+    ],
+    [
+      "ph-bidding",
+      "pa-bid-type",
+      "STRUCTURED BY"
+    ],
+    [
+      "ph-bidding",
+      "pa-prevailing-wage",
+      "GOVERNED BY"
+    ],
+    [
+      "ph-submittals",
+      "pa-specialty-system",
+      "DRIVEN BY"
+    ],
+    [
+      "ph-fabrication",
+      "pa-struct-system",
+      "DETERMINED BY"
+    ],
+    [
+      "ph-delivery",
+      "pa-modular-prefab",
+      "ACCELERATED BY"
+    ],
+    [
+      "ph-site-setup",
+      "pa-site-constraints",
+      "CONSTRAINED BY"
+    ],
+    [
+      "ph-safety-orient",
+      "pa-occupied-during",
+      "INTENSIFIED BY"
+    ],
+    [
+      "ph-demo",
+      "pa-new-vs-existing",
+      "TRIGGERED BY"
+    ],
+    [
+      "ph-earthwork",
+      "pa-site-constraints",
+      "CONSTRAINED BY"
+    ],
+    [
+      "ph-foundations",
+      "pa-foundation-type",
+      "DETERMINED BY"
+    ],
+    [
+      "ph-foundations",
+      "pa-seismic-design",
+      "GOVERNED BY"
+    ],
+    [
+      "ph-steel",
+      "pa-struct-system",
+      "DETERMINED BY"
+    ],
+    [
+      "ph-conc-frame",
+      "pa-struct-system",
+      "DETERMINED BY"
+    ],
+    [
+      "ph-steel",
+      "pa-building-height",
+      "SCALED BY"
+    ],
+    [
+      "ph-roofing",
+      "pa-climate-zone",
+      "SPECIFIED BY"
+    ],
+    [
+      "ph-barrier",
+      "pa-climate-zone",
+      "SPECIFIED BY"
+    ],
+    [
+      "ph-curtainwall",
+      "pa-building-height",
+      "SCALED BY"
+    ],
+    [
+      "ph-prefunc",
+      "pa-leed-certificati",
+      "REQUIRED BY"
+    ],
+    [
+      "ph-integrated",
+      "pa-specialty-system",
+      "SCOPED BY"
+    ],
+    [
+      "ph-tab",
+      "pa-energy-code",
+      "REQUIRED BY"
+    ],
+    [
+      "ph-perf-ver",
+      "pa-well-certificati",
+      "REQUIRED BY"
+    ],
+    [
+      "ph-punch",
+      "pa-gross-building",
+      "SCALED BY"
+    ],
+    [
+      "ph-punch",
+      "pa-project-type",
+      "SEGMENTED BY"
+    ],
+    [
+      "ph-final-insp",
+      "pa-occupancy-group",
+      "DETERMINED BY"
+    ],
+    [
+      "ph-contract-close",
+      "pa-dlvy-method",
+      "STRUCTURED BY"
+    ],
+    [
+      "ph-warranty",
+      "pa-contract-type",
+      "GOVERNED BY"
+    ],
+    [
+      "ph-seasonal-cx",
+      "pa-climate-zone",
+      "SCHEDULED BY"
+    ]
+  ],
+  "verbGlossary": {
+    "SCOPED BY": "{source} scope and complexity is defined by {target} attribute (e.g., design development scope varies by project type)",
+    "GOVERNED BY": "{source} requirements and procedures are dictated by {target} attribute's regulatory or contractual standards",
+    "CALIBRATED TO": "{source} effort and detail level is calibrated to match {target} value band or cost expectations",
+    "BENCHMARKED BY": "{source} cost or duration is compared to {target} normalized metric for industry comparison",
+    "DETERMINED BY": "{source} inclusion or exclusion is determined by {target} attribute (e.g., demolition determined by new vs. existing)",
+    "STRUCTURED BY": "{source} workflow and sequence is organized according to the target delivery method or procurement approach",
+    "TRIGGERED BY": "{source} is activated because {target} attribute applies (e.g., demolition triggered by existing building renovation)",
+    "CONSTRAINED BY": "{source} execution is limited or complicated by {target} attribute's conditions",
+    "SPECIFIED BY": "{source} material and performance requirements are defined by {target} or environmental attribute",
+    "REQUIRED BY": "{source} is mandated by {target} requirement as a prerequisite for compliance",
+    "SCALED BY": "{source} duration or effort scales proportionally with {target} size attribute",
+    "SEGMENTED BY": "{source} metric is broken down by {target} attribute to identify type-specific performance patterns",
+    "SCHEDULED BY": "{source} timing is determined by {target} seasonal conditions for optimal performance verification",
+    "INITIATED BY": "{source} kickoff and direction is initiated by {target} requirements and priorities",
+    "SHAPED BY": "{source} structure and deliverables are shaped by {target} specific needs (e.g., capital vs. tenant improvement)",
+    "ADJUSTED FOR": "{source} estimates are adjusted for {target} labor and material cost differences",
+    "BOUNDED BY": "{source} duration is constrained within the time envelope set by {target}",
+    "DRIVEN BY": "{source} workload and complexity is driven by the number and type of {target} or scope elements",
+    "ACCELERATED BY": "{source} timeline is shortened by {target} off the critical path",
+    "INTENSIFIED BY": "{source} safety protocols are heightened because of {target} condition attribute"
+  }
+}

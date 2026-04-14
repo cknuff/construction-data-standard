@@ -1,0 +1,302 @@
+{
+  "source": "locations",
+  "target": "phases",
+  "edges": [
+    [
+      "loc-project-site",
+      "ph-program",
+      "SURVEYED DURING"
+    ],
+    [
+      "loc-project-site",
+      "ph-site-setup",
+      "MOBILIZED DURING"
+    ],
+    [
+      "loc-project-site",
+      "ph-demo",
+      "CLEARED DURING"
+    ],
+    [
+      "loc-project-site",
+      "ph-safety-orient",
+      "WALKED DURING"
+    ],
+    [
+      "loc-project-site",
+      "ph-contract-close",
+      "DEMOBILIZED DURING"
+    ],
+    [
+      "loc-building",
+      "ph-design",
+      "LAID OUT DURING"
+    ],
+    [
+      "loc-building",
+      "ph-steel",
+      "ERECTED DURING"
+    ],
+    [
+      "loc-building",
+      "ph-final-insp",
+      "INSPECTED DURING"
+    ],
+    [
+      "loc-building",
+      "ph-transition",
+      "TURNED OVER DURING"
+    ],
+    [
+      "loc-exterior-zone",
+      "ph-earthwork",
+      "GRADED DURING"
+    ],
+    [
+      "loc-laydown-staging",
+      "ph-delivery",
+      "RECEIVES MATERIAL DURING"
+    ],
+    [
+      "loc-laydown-staging",
+      "ph-site-setup",
+      "ESTABLISHED DURING"
+    ],
+    [
+      "loc-right-way",
+      "ph-permit",
+      "PERMITTED DURING"
+    ],
+    [
+      "loc-right-way",
+      "ph-site-util",
+      "EXCAVATED DURING"
+    ],
+    [
+      "loc-temp-facility",
+      "ph-site-setup",
+      "ERECTED DURING"
+    ],
+    [
+      "loc-temp-facility",
+      "ph-contract-close",
+      "DEMOBILIZED DURING"
+    ],
+    [
+      "loc-floor-level",
+      "ph-elev-conc",
+      "POURED DURING"
+    ],
+    [
+      "loc-floor-level",
+      "ph-framing",
+      "FRAMED DURING"
+    ],
+    [
+      "loc-floor-level",
+      "ph-punch",
+      "WALKED DURING"
+    ],
+    [
+      "loc-below-grade",
+      "ph-foundations",
+      "EXCAVATED DURING"
+    ],
+    [
+      "loc-below-grade",
+      "ph-slab",
+      "PLACED DURING"
+    ],
+    [
+      "loc-roof-level",
+      "ph-roofing",
+      "ENCLOSED DURING"
+    ],
+    [
+      "loc-zone-wing",
+      "ph-drywall",
+      "CLOSED IN DURING"
+    ],
+    [
+      "loc-zone-wing",
+      "ph-paint",
+      "FINISHED DURING"
+    ],
+    [
+      "loc-core-shaft",
+      "ph-plumb-ri",
+      "ROUGHED IN DURING"
+    ],
+    [
+      "loc-ceiling-plenum",
+      "ph-abv-ceil",
+      "COORDINATED DURING"
+    ],
+    [
+      "loc-room-space",
+      "ph-flooring",
+      "FINISHED DURING"
+    ],
+    [
+      "loc-room-space",
+      "ph-asbuilt",
+      "DOCUMENTED DURING"
+    ],
+    [
+      "loc-functional-area",
+      "ph-program",
+      "DEFINED DURING"
+    ],
+    [
+      "loc-functional-area",
+      "ph-training",
+      "DEMONSTRATED DURING"
+    ],
+    [
+      "loc-wet-area",
+      "ph-plumb-fix",
+      "FIXTURED DURING"
+    ],
+    [
+      "loc-wet-area",
+      "ph-barrier",
+      "WATERPROOFED DURING"
+    ],
+    [
+      "loc-wall-surface",
+      "ph-drywall",
+      "BOARDED DURING"
+    ],
+    [
+      "loc-wall-surface",
+      "ph-paint",
+      "COATED DURING"
+    ],
+    [
+      "loc-equip-location",
+      "ph-startup",
+      "ENERGIZED DURING"
+    ],
+    [
+      "loc-penetration-open",
+      "ph-fp-ri",
+      "FIRESTOPPED DURING"
+    ],
+    [
+      "loc-fire-smoke",
+      "ph-final-insp",
+      "CERTIFIED DURING"
+    ],
+    [
+      "loc-work-zone-phase",
+      "ph-precon-plan",
+      "SEQUENCED DURING"
+    ],
+    [
+      "loc-cx-zone",
+      "ph-prefunc",
+      "TESTED DURING"
+    ],
+    [
+      "loc-cx-zone",
+      "ph-integrated",
+      "COMMISSIONED DURING"
+    ],
+    [
+      "loc-cx-zone",
+      "ph-seasonal-cx",
+      "RETESTED DURING"
+    ],
+    [
+      "loc-grid-line",
+      "ph-foundations",
+      "LAID OUT DURING"
+    ],
+    [
+      "loc-location-depth",
+      "ph-precon-plan",
+      "CALIBRATED DURING"
+    ],
+    [
+      "loc-floor-completion",
+      "ph-punch",
+      "TRIGGERS RELEASE OF"
+    ],
+    [
+      "loc-defect-density",
+      "ph-final-insp",
+      "EVALUATED DURING"
+    ],
+    [
+      "loc-punch-items-per",
+      "ph-punch",
+      "TALLIED DURING"
+    ],
+    [
+      "loc-safety-incident",
+      "ph-safety-orient",
+      "BENCHMARKED DURING"
+    ],
+    [
+      "loc-firestopping-def",
+      "ph-final-insp",
+      "VERIFIED DURING"
+    ],
+    [
+      "loc-location-coverag",
+      "ph-asbuilt",
+      "VALIDATED DURING"
+    ],
+    [
+      "loc-building",
+      "ph-warranty",
+      "WARRANTED DURING"
+    ]
+  ],
+  "verbGlossary": {
+    "SURVEYED DURING": "{source} is physically surveyed and assessed for existing conditions during {target}",
+    "MOBILIZED DURING": "{source} is activated with crews, trailers, and equipment moving on-site during {target}",
+    "CLEARED DURING": "Existing structures and vegetation at {target} are demolished or removed during this phase",
+    "WALKED DURING": "{source} is physically toured for orientation, punch list identification, or safety walkthrough during {target}",
+    "DEMOBILIZED DURING": "Temporary facilities, equipment, and site controls are removed from the project site during {target}",
+    "LAID OUT DURING": "{source}of {target} are established or designed during this phase",
+    "ERECTED DURING": "Structural elements or temporary facilities at {target} are assembled and raised into place during this phase",
+    "INSPECTED DURING": "{source} undergoes formal code or quality inspection during {target}",
+    "TURNED OVER DURING": "{source} is formally handed from contractor to owner during {target}",
+    "GRADED DURING": "{source}area is cut, filled, and shaped to design elevations during {target}",
+    "RECEIVES MATERIAL DURING": "{source}area accepts and stores delivered materials and equipment during {target}",
+    "ESTABLISHED DURING": "{source}area is laid out, graveled, and made operational during {target}",
+    "PERMITTED DURING": "{source}area has permits and approvals secured during {target}",
+    "EXCAVATED DURING": "{source} is dug out for utility trenches, foundations, or below-grade construction during {target}",
+    "POURED DURING": "{source}is placed and finished at the floor or slab location during {target}",
+    "FRAMED DURING": "{source}is erected at the floor level to define interior partitions during {target}",
+    "PLACED DURING": "Concrete, rebar, or formwork is set into position at {target} during this phase",
+    "ENCLOSED DURING": "{source} is sealed from weather by roofing, glazing, or cladding installation during {target}",
+    "CLOSED IN DURING": "{source} or wing reaches drywall completion, closing interior walls for follow-on trades during {target}",
+    "FINISHED DURING": "Final surface treatments such as paint, flooring, or trim are applied to {target} during this phase",
+    "ROUGHED IN DURING": "Pipes, conduit, and ductwork are run through the core or shaft during {target} before walls close",
+    "COORDINATED DURING": "Multiple trades coordinate routing and clearances at {target} during this phase",
+    "DOCUMENTED DURING": "{source}of {target} are recorded in drawings and BIM during this phase",
+    "DEFINED DURING": "{source}area program requirements including use, adjacency, and capacity are established during {target}",
+    "DEMONSTRATED DURING": "{source} systems in the functional area are shown and explained to the owner during {target}",
+    "FIXTURED DURING": "Plumbing fixtures such as sinks, toilets, and showers are set and connected in the wet area during {target}",
+    "WATERPROOFED DURING": "{source}are applied to the wet area during {target}",
+    "BOARDED DURING": "{source}is hung on the wall surface during {target}",
+    "COATED DURING": "Paint, primer, or specialty coating is applied to the wall surface during {target}",
+    "ENERGIZED DURING": "Equipment at {target} is powered up and placed into service during this phase",
+    "FIRESTOPPED DURING": "{source}fire-rated assemblies are sealed with fire-rated material during {target}",
+    "CERTIFIED DURING": "Fire and smoke compartment is formally certified as meeting code-required ratings during {target}",
+    "SEQUENCED DURING": "{source}is planned and mapped to the construction sequence during {target}",
+    "TESTED DURING": "Systems in the commissioning zone undergo functional or pre-functional testing during {target}",
+    "COMMISSIONED DURING": "{source}are tested together for integrated performance during {target}",
+    "RETESTED DURING": "{source}are retested under seasonal load conditions during {target}",
+    "CALIBRATED DURING": "{source} breakdown depth is calibrated against project complexity and tracking needs during {target}",
+    "TRIGGERS RELEASE OF": "{source} completion metric triggers the release of the next closeout {target} activity",
+    "EVALUATED DURING": "Defect density at {target} is calculated and assessed against thresholds during this phase",
+    "TALLIED DURING": "{source}are counted and tracked for resolution during {target}",
+    "BENCHMARKED DURING": "{source} is compared against project and industry benchmarks during {target}",
+    "VERIFIED DURING": "{source}-based compliance metric is checked and confirmed to meet requirements during {target}",
+    "VALIDATED DURING": "{source} coverage completeness is confirmed against design documentation during {target}",
+    "WARRANTED DURING": "{source} location is covered under warranty obligations for defect correction during {target}"
+  }
+}

@@ -1,0 +1,421 @@
+{
+  "source": "financial-instruments",
+  "target": "quality-safety-records",
+  "edges": [
+    [
+      "qsr-observation",
+      "fi-chg-event-ce",
+      "TRIGGERS"
+    ],
+    [
+      "qsr-quality-observat",
+      "fi-chg-event-ce",
+      "TRIGGERS"
+    ],
+    [
+      "qsr-coord-issue",
+      "fi-chg-event-ce",
+      "TRIGGERS"
+    ],
+    [
+      "qsr-coord-issue-2",
+      "fi-chg-event-ce",
+      "TRIGGERS"
+    ],
+    [
+      "qsr-non-conformance",
+      "fi-chg-event-ce",
+      "TRIGGERS"
+    ],
+    [
+      "qsr-deficiency-notic",
+      "fi-chg-event-ce",
+      "TRIGGERS"
+    ],
+    [
+      "qsr-enviro-cx",
+      "fi-chg-event-ce",
+      "TRIGGERS"
+    ],
+    [
+      "fi-chg-event-ce",
+      "qsr-observation",
+      "ORIGINATED FROM"
+    ],
+    [
+      "fi-chg-event-ce",
+      "qsr-coord-issue-2",
+      "ORIGINATED FROM"
+    ],
+    [
+      "fi-chg-event-line",
+      "qsr-punch-item-issue",
+      "COSTS"
+    ],
+    [
+      "fi-commit-chg-order",
+      "qsr-punch-item",
+      "BACKCHARGED FOR"
+    ],
+    [
+      "fi-commit-chg-order",
+      "qsr-non-conformance",
+      "BACKCHARGED FOR"
+    ],
+    [
+      "fi-cco-line-item",
+      "qsr-punch-item-issue",
+      "BACKCHARGED FOR"
+    ],
+    [
+      "fi-direct-cost",
+      "qsr-punch-item",
+      "REMEDIATION COST OF"
+    ],
+    [
+      "fi-direct-cost",
+      "qsr-incident",
+      "REMEDIATION COST OF"
+    ],
+    [
+      "fi-direct-cost-line",
+      "qsr-corrective-actio",
+      "REMEDIATION COST OF"
+    ],
+    [
+      "fi-budget-line-item",
+      "qsr-rework-cost",
+      "MEASURED BY"
+    ],
+    [
+      "fi-budget-mod",
+      "qsr-punch-item",
+      "REALLOCATED FOR"
+    ],
+    [
+      "fi-budget-mod",
+      "qsr-incident",
+      "REALLOCATED FOR"
+    ],
+    [
+      "fi-contingency",
+      "qsr-punch-item",
+      "DRAWN DOWN BY"
+    ],
+    [
+      "fi-contingency",
+      "qsr-incident",
+      "DRAWN DOWN BY"
+    ],
+    [
+      "fi-contingency",
+      "qsr-safety-violation",
+      "DRAWN DOWN BY"
+    ],
+    [
+      "fi-allowance",
+      "qsr-corrective-actio",
+      "FUNDED BY"
+    ],
+    [
+      "fi-cost-code",
+      "qsr-punch-item-issue",
+      "CLASSIFIES COST OF"
+    ],
+    [
+      "fi-wbs-code",
+      "qsr-rework-cost",
+      "CLASSIFIES COST OF"
+    ],
+    [
+      "fi-retainage",
+      "qsr-punch-item",
+      "WITHHELD UNTIL"
+    ],
+    [
+      "fi-retainage",
+      "qsr-punch-item-2",
+      "RELEASED UPON"
+    ],
+    [
+      "fi-payment",
+      "qsr-punch-item-2",
+      "RELEASED UPON"
+    ],
+    [
+      "fi-payment",
+      "qsr-insp-pass-rate",
+      "GATED BY"
+    ],
+    [
+      "fi-sub-invoice",
+      "qsr-deficiency-notic",
+      "DISPUTED BY"
+    ],
+    [
+      "fi-owner-invoice",
+      "qsr-punch-item",
+      "HELD FOR"
+    ],
+    [
+      "fi-lien-waiver",
+      "qsr-punch-item-2",
+      "CONDITIONED ON"
+    ],
+    [
+      "qsr-insp",
+      "fi-schedule-values",
+      "VALIDATES WORK IN"
+    ],
+    [
+      "qsr-insp-item",
+      "fi-sub-invoice",
+      "GATES PAYMENT ON"
+    ],
+    [
+      "qsr-third-party",
+      "fi-sub-invoice",
+      "GATES PAYMENT ON"
+    ],
+    [
+      "qsr-scheduled-insp",
+      "fi-owner-invoice",
+      "GATES BILLING ON"
+    ],
+    [
+      "qsr-incident",
+      "fi-direct-cost",
+      "INCURS"
+    ],
+    [
+      "qsr-incident",
+      "fi-budget-mod",
+      "FORCES"
+    ],
+    [
+      "qsr-incident-record",
+      "fi-direct-cost-line",
+      "INCURS"
+    ],
+    [
+      "qsr-safety-violation",
+      "fi-direct-cost",
+      "INCURS"
+    ],
+    [
+      "qsr-safety-violation",
+      "fi-commit-chg-order",
+      "CLAIMED AGAINST"
+    ],
+    [
+      "qsr-corrective-actio",
+      "fi-direct-cost",
+      "FUNDED BY"
+    ],
+    [
+      "qsr-action-plan",
+      "fi-budget-mod",
+      "FUNDED BY"
+    ],
+    [
+      "qsr-action-plan-line",
+      "fi-direct-cost-line",
+      "CHARGED TO"
+    ],
+    [
+      "qsr-mat-test-report",
+      "fi-commit-chg-order",
+      "REJECTED VIA"
+    ],
+    [
+      "qsr-system-perf-test",
+      "fi-owner-chg-order",
+      "CLAIMED AGAINST"
+    ],
+    [
+      "fi-owner-chg-order",
+      "qsr-non-conformance",
+      "CLAIMED FOR"
+    ],
+    [
+      "fi-owner-chg-order",
+      "qsr-coord-issue-2",
+      "CLAIMED FOR"
+    ],
+    [
+      "fi-project-budget",
+      "qsr-rework-cost",
+      "ERODED BY"
+    ],
+    [
+      "fi-budget-variance",
+      "qsr-deficiency-rate",
+      "DRIVEN BY"
+    ],
+    [
+      "fi-cost-growth",
+      "qsr-rework-cost",
+      "DRIVEN BY"
+    ],
+    [
+      "fi-cost-growth",
+      "qsr-observation-dens",
+      "PREDICTED BY"
+    ],
+    [
+      "fi-cost-perf-index",
+      "qsr-rework-cost",
+      "DEGRADED BY"
+    ],
+    [
+      "fi-chg-order-rate",
+      "qsr-observation-dens",
+      "CORRELATED WITH"
+    ],
+    [
+      "fi-estimate-at",
+      "qsr-rework-cost",
+      "INFLATED BY"
+    ],
+    [
+      "fi-cash-flow",
+      "qsr-incident",
+      "DISRUPTED BY"
+    ],
+    [
+      "fi-committed-cost",
+      "qsr-punch-item-3",
+      "INCREASED BY"
+    ],
+    [
+      "fi-cost-forecast",
+      "qsr-deficiency-rate",
+      "ADJUSTED FOR"
+    ],
+    [
+      "fi-invoice-processi",
+      "qsr-deficiency-notic",
+      "DELAYED BY"
+    ],
+    [
+      "fi-contingency-burn",
+      "qsr-rework-cost",
+      "ACCELERATED BY"
+    ],
+    [
+      "qsr-observation-reso",
+      "fi-direct-cost",
+      "DELAYS"
+    ],
+    [
+      "qsr-corrective-actio-2",
+      "fi-retainage",
+      "GATES RELEASE OF"
+    ],
+    [
+      "qsr-total-recordable",
+      "fi-project-budget",
+      "ESCALATES"
+    ],
+    [
+      "qsr-dart-rate",
+      "fi-direct-cost",
+      "ESCALATES"
+    ],
+    [
+      "qsr-insp-pass-rate",
+      "fi-retainage",
+      "GATES RELEASE OF"
+    ],
+    [
+      "fi-commit-subcontra",
+      "qsr-punch-item",
+      "RESPONSIBLE FOR"
+    ],
+    [
+      "fi-commit-subcontra",
+      "qsr-safety-observati",
+      "RESPONSIBLE FOR"
+    ],
+    [
+      "fi-commit-purchase",
+      "qsr-mat-test-report",
+      "VERIFIED BY"
+    ],
+    [
+      "fi-pot-chg-order",
+      "qsr-non-conformance",
+      "PRICED FROM"
+    ],
+    [
+      "qsr-punch-item",
+      "fi-commit-subcontra",
+      "CHARGED BACK TO"
+    ],
+    [
+      "fi-profit",
+      "qsr-rework-cost",
+      "ERODED BY"
+    ],
+    [
+      "fi-margin-pct",
+      "qsr-rework-cost",
+      "DEGRADED BY"
+    ],
+    [
+      "fi-margin-fade",
+      "qsr-rework-cost",
+      "ACCELERATED BY"
+    ],
+    [
+      "fi-chg-event-ce",
+      "qsr-rework-cost",
+      "CONTRIBUTES TO"
+    ]
+  ],
+  "verbGlossary": {
+    "TRIGGERS": "A quality/{target} causes creation of a financial change event or cost record",
+    "ORIGINATED FROM": "{source} traces its origin back to a field quality or coordination {target}",
+    "COSTS": "{source} carries the dollar cost attributable to {target}",
+    "BACKCHARGED FOR": "{source} charges a subcontractor for rework caused by quality/safety deficiencies",
+    "REMEDIATION COST OF": "{source} entry represents the actual dollars spent to remediate a field {target} or incident",
+    "MEASURED BY": "{source} rework exposure is quantified by a quality/safety metric",
+    "REALLOCATED FOR": "{source} transfers funds to cover costs arising from a quality or safety issue",
+    "DRAWN DOWN BY": "{source} reserve is consumed to pay for costs arising from a quality/{target}",
+    "ACCELERATED BY": "{source}rate increases faster due to quality/{target} rates",
+    "FUNDED BY": "{source}is paid for through a specific financial instrument",
+    "CLASSIFIES COST OF": "{source} or WBS code categorizes the financial impact of a quality issue by trade or work type",
+    "WITHHELD UNTIL": "{source} are held back pending resolution of outstanding punch items",
+    "RELEASED UPON": "{source}are released when {target}s pass or punch items are resolved",
+    "GATED BY": "{source} is blocked until a quality metric threshold is met",
+    "DISPUTED BY": "{source}is contested due to an open {target} or non-conformance notice",
+    "HELD FOR": "An owner invoice withholds amounts pending punch list completion",
+    "CONDITIONED ON": "{source}is contingent on satisfactory resolution of {target}s",
+    "VALIDATES WORK IN": "An inspection confirms that work billed on a schedule of values line is acceptably complete",
+    "GATES PAYMENT ON": "An inspection item or third-party inspection must pass before payment is released on an invoice",
+    "GATES BILLING ON": "A scheduled inspection must pass before an owner pay application can be submitted",
+    "INCURS": "{target} or violation directly generates financial costs",
+    "FORCES": "{source}requires a budget modification to cover unplanned costs",
+    "CLAIMED AGAINST": "{target} or test failure results in a financial claim against a responsible party",
+    "CLAIMED FOR": "{source}of costs caused by {target} or design coordination issues",
+    "REJECTED VIA": "{source}test report triggers a commitment change order to replace non-compliant materials",
+    "CHARGED TO": "{source}plan task's cost is recorded against a specific direct cost line item",
+    "ERODED BY": "{source}project budget margin is reduced by cumulative rework costs",
+    "DRIVEN BY": "{source}is caused by underlying quality/{target} rates",
+    "PREDICTED BY": "{source}is forecast based on a leading quality indicator like {target} density",
+    "DEGRADED BY": "{source} worsens due to rework and {target} costs",
+    "CORRELATED WITH": "{source}rate metric shows statistical association with a quality/safety frequency metric",
+    "INFLATED BY": "An estimate at completion increases due to accumulated rework cost",
+    "DISRUPTED BY": "{source}projection is disrupted by unplanned {target} or rework expenditures",
+    "INCREASED BY": "{source}cost grows due to {target}s requiring additional change orders",
+    "ADJUSTED FOR": "{source} is revised to account for observed quality/safety trends",
+    "DELAYED BY": "{source} processing time increases due to open {target} notices blocking approval",
+    "DELAYS": "Slow observation resolution delays the financial closeout of associated cost items",
+    "GATES RELEASE OF": "{source}must be satisfied before held funds are released",
+    "ESCALATES": "{source}rate metric drives up overall project financial exposure",
+    "RESPONSIBLE FOR": "{source}identifies the vendor financially accountable for field findings",
+    "VERIFIED BY": "{source}are validated through material test reports before acceptance",
+    "PRICED FROM": "{source}cost estimate derives from {target} or non-conformance finding",
+    "CHARGED BACK TO": "{source}cost is charged back to the responsible subcontractor's commitment"
+  }
+}

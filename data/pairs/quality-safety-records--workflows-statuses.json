@@ -1,0 +1,368 @@
+{
+  "source": "quality-safety-records",
+  "target": "workflows-statuses",
+  "edges": [
+    [
+      "qsr-observation",
+      "ws-open",
+      "INITIATED AT"
+    ],
+    [
+      "qsr-observation",
+      "ws-ball-court",
+      "ASSIGNED VIA"
+    ],
+    [
+      "qsr-observation",
+      "ws-review-respond",
+      "FOLLOWS"
+    ],
+    [
+      "qsr-safety-observati",
+      "ws-escalation",
+      "ESCALATED VIA"
+    ],
+    [
+      "qsr-safety-observati",
+      "ws-overdue",
+      "FLAGGED WHEN"
+    ],
+    [
+      "qsr-quality-observat",
+      "ws-under-review",
+      "HELD DURING"
+    ],
+    [
+      "qsr-quality-observat",
+      "ws-approved-as",
+      "ACCEPTED WITH"
+    ],
+    [
+      "qsr-enviro-cx",
+      "ws-pending",
+      "AWAITS"
+    ],
+    [
+      "qsr-enviro-cx",
+      "ws-sequential-appr",
+      "ROUTES THROUGH"
+    ],
+    [
+      "qsr-insp",
+      "ws-inspect-disposit",
+      "GOVERNED BY"
+    ],
+    [
+      "qsr-insp",
+      "ws-ready-review",
+      "QUEUED AT"
+    ],
+    [
+      "qsr-insp-item",
+      "ws-conforming",
+      "PASSES TO"
+    ],
+    [
+      "qsr-insp-item",
+      "ws-deficient",
+      "FAILS TO"
+    ],
+    [
+      "qsr-insp-item",
+      "ws-not-applicable",
+      "EXCLUDED TO"
+    ],
+    [
+      "qsr-insp-item",
+      "ws-workflow-respons",
+      "DISPOSITIONED VIA"
+    ],
+    [
+      "qsr-scheduled-insp",
+      "ws-due-date",
+      "BOUND BY"
+    ],
+    [
+      "qsr-scheduled-insp",
+      "ws-overdue",
+      "LAPSES TO"
+    ],
+    [
+      "qsr-third-party",
+      "ws-approved",
+      "CERTIFIED UPON"
+    ],
+    [
+      "qsr-third-party",
+      "ws-rejected",
+      "CONDEMNED AT"
+    ],
+    [
+      "qsr-punch-item",
+      "ws-open",
+      "CREATED AT"
+    ],
+    [
+      "qsr-punch-item",
+      "ws-progress",
+      "REMEDIATED DURING"
+    ],
+    [
+      "qsr-punch-item",
+      "ws-closed",
+      "SIGNED OFF AT"
+    ],
+    [
+      "qsr-punch-item",
+      "ws-create-close",
+      "STRUCTURED BY"
+    ],
+    [
+      "qsr-punch-item-issue",
+      "ws-status-dwell",
+      "AGED BY"
+    ],
+    [
+      "qsr-punch-item-2",
+      "ws-ready-review",
+      "REINSPECTED AT"
+    ],
+    [
+      "qsr-punch-item-2",
+      "ws-approved",
+      "VERIFIED UPON"
+    ],
+    [
+      "qsr-incident",
+      "ws-open",
+      "LOGGED AT"
+    ],
+    [
+      "qsr-incident",
+      "ws-progress",
+      "INVESTIGATED DURING"
+    ],
+    [
+      "qsr-incident",
+      "ws-closed",
+      "FINALIZED AT"
+    ],
+    [
+      "qsr-incident",
+      "ws-escalation",
+      "ELEVATED VIA"
+    ],
+    [
+      "qsr-incident-record",
+      "ws-draft",
+      "ORIGINATES IN"
+    ],
+    [
+      "qsr-incident-record",
+      "ws-submitted",
+      "SUBMITTED AT"
+    ],
+    [
+      "qsr-incident-witness",
+      "ws-pending",
+      "COLLECTED AT"
+    ],
+    [
+      "qsr-corrective-actio",
+      "ws-open",
+      "ISSUED AT"
+    ],
+    [
+      "qsr-corrective-actio",
+      "ws-closed",
+      "CLOSED UPON"
+    ],
+    [
+      "qsr-corrective-actio",
+      "ws-overdue",
+      "EXPIRES TO"
+    ],
+    [
+      "qsr-corrective-actio",
+      "ws-delegation",
+      "DELEGATED VIA"
+    ],
+    [
+      "qsr-safety-violation",
+      "ws-open",
+      "CITED AT"
+    ],
+    [
+      "qsr-safety-violation",
+      "ws-dist-list",
+      "NOTIFIED VIA"
+    ],
+    [
+      "qsr-non-conformance",
+      "ws-draft",
+      "DRAFTED IN"
+    ],
+    [
+      "qsr-non-conformance",
+      "ws-revise-resubmit",
+      "RETURNED FOR"
+    ],
+    [
+      "qsr-non-conformance",
+      "ws-approved",
+      "DISPOSITIONED UPON"
+    ],
+    [
+      "qsr-deficiency-notic",
+      "ws-open",
+      "SERVED AT"
+    ],
+    [
+      "qsr-deficiency-notic",
+      "ws-response-time",
+      "MEASURED AGAINST"
+    ],
+    [
+      "qsr-coord-issue",
+      "ws-progress",
+      "COORDINATED DURING"
+    ],
+    [
+      "qsr-coord-issue",
+      "ws-parallel-review",
+      "DISTRIBUTED VIA"
+    ],
+    [
+      "qsr-coord-issue-2",
+      "ws-revise-resubmit",
+      "REDESIGNED VIA"
+    ],
+    [
+      "qsr-coord-issue-2",
+      "ws-chg-event",
+      "TRIGGERS"
+    ],
+    [
+      "qsr-mat-test-report",
+      "ws-submitted",
+      "FURNISHED AT"
+    ],
+    [
+      "qsr-mat-test-report",
+      "ws-rejected",
+      "FAILED AT"
+    ],
+    [
+      "qsr-system-perf-test",
+      "ws-conforming",
+      "VALIDATED TO"
+    ],
+    [
+      "qsr-system-perf-test",
+      "ws-submit-approve",
+      "PROCESSED VIA"
+    ],
+    [
+      "qsr-action-plan",
+      "ws-approved",
+      "AUTHORIZED UPON"
+    ],
+    [
+      "qsr-action-plan",
+      "ws-appr-chain",
+      "SANCTIONED VIA"
+    ],
+    [
+      "qsr-action-plan-line",
+      "ws-progress",
+      "TRACKED DURING"
+    ],
+    [
+      "qsr-action-plan-line",
+      "ws-ball-court",
+      "OWNED VIA"
+    ],
+    [
+      "qsr-punch-item-3",
+      "ws-workflow-complet",
+      "BENCHMARKED AGAINST"
+    ],
+    [
+      "qsr-rework-cost",
+      "ws-cost-stage",
+      "COMPUTED AT"
+    ],
+    [
+      "qsr-insp-pass-rate",
+      "ws-inspect-disposit",
+      "DERIVED FROM"
+    ],
+    [
+      "qsr-corrective-actio-2",
+      "ws-ball-court-aging",
+      "MEASURED BY"
+    ]
+  ],
+  "verbGlossary": {
+    "INITIATED AT": "{source}record is first created and enters {target} at this open status, beginning the resolution lifecycle.",
+    "ASSIGNED VIA": "{source} is routed to a responsible party through {target}.",
+    "FOLLOWS": "{source} adheres to this standard {target} pattern from creation through completion.",
+    "ESCALATED VIA": "{source} is automatically elevated to higher authority through this escalation {target} when severity warrants it.",
+    "FLAGGED WHEN": "{source} is marked with a warning indicator when it enters this overdue {target} without resolution.",
+    "HELD DURING": "{source} remains at this review {target} while subject matter experts evaluate the finding.",
+    "ACCEPTED WITH": "{source} is approved with conditions or annotations noted, acknowledging minor deviations from spec.",
+    "AWAITS": "{source} is queued and waiting for the next action at this {target}; no progress until someone acts.",
+    "ROUTES THROUGH": "{source} passes through this multi-step {target} pattern as part of its lifecycle processing.",
+    "GOVERNED BY": "{source} lifecycle is controlled by this inspect-and-{target} pattern that defines its state transitions.",
+    "QUEUED AT": "{source} is staged and ready for a reviewer or inspector to pick up at {target}.",
+    "PASSES TO": "{source} receives a conforming {target}, indicating it meets the specified requirements.",
+    "FAILS TO": "{source} receives a deficient {target}, flagging it for corrective action before re-inspection.",
+    "EXCLUDED TO": "{source} is marked as not applicable to this scope, removing it from pass/fail tallies.",
+    "DISPOSITIONED VIA": "{source} conformance {target} is formally recorded through this workflow response mechanism.",
+    "BOUND BY": "{source}scheduled inspection is tied to a contractual or regulatory due date that cannot be missed.",
+    "LAPSES TO": "{source}scheduled inspection transitions to overdue {target} when it is not performed by its required date.",
+    "CERTIFIED UPON": "{source}inspection result is formally accepted and certified when it reaches approved {target}.",
+    "CONDEMNED AT": "{source}inspection result is rejected, meaning the tested element fails to meet code or specification requirements.",
+    "CREATED AT": "{source} is first logged at this open {target} during a walkthrough or final inspection.",
+    "REMEDIATED DURING": "{source} is being actively corrected by the responsible subcontractor while in this in-progress {target}.",
+    "SIGNED OFF AT": "{source} is formally accepted and closed after the project manager or owner verifies the fix.",
+    "STRUCTURED BY": "{source} lifecycle is organized according to this create-and-close {target} pattern for simple resolution tracking.",
+    "AGED BY": "{source} issue category's average time-to-close is measured using {target} dwell time metric.",
+    "REINSPECTED AT": "{source} resolution is staged for verification walkthrough at this ready-for-review {target}.",
+    "VERIFIED UPON": "{source} fix is confirmed acceptable and the item is formally approved for closeout.",
+    "LOGGED AT": "{source} is first recorded in the system at this open {target} immediately after the event occurs on site.",
+    "INVESTIGATED DURING": "{source} undergoes root cause analysis and documentation while in this in-progress {target}.",
+    "FINALIZED AT": "{source} record is closed after all investigations, corrective actions, and reporting are complete.",
+    "ELEVATED VIA": "{source} is automatically escalated to safety leadership through this escalation {target} based on severity.",
+    "ORIGINATES IN": "{source} is first created in this draft {target} as an editable document before formal submission.",
+    "SUBMITTED AT": "{source} is formally submitted into the review queue at {target} for evaluation.",
+    "COLLECTED AT": "{source}is gathered and held at {target} until the investigation team processes it.",
+    "ISSUED AT": "{source} is formally created and assigned at this open {target} with a defined remediation scope.",
+    "CLOSED UPON": "{source} is verified complete and the record is closed, removing it from the active queue.",
+    "EXPIRES TO": "{source} transitions to overdue {target} when the responsible party misses the completion deadline.",
+    "DELEGATED VIA": "{source} responsibility is formally transferred to another party through this delegation {target}.",
+    "CITED AT": "{source} is formally issued and documented at this open {target}, beginning the enforcement workflow.",
+    "NOTIFIED VIA": "{source} {target}s notifications to all affected parties through this distribution list mechanism.",
+    "DRAFTED IN": "{source} report is initially composed in this draft {target} before engineering review.",
+    "RETURNED FOR": "{source} report is sent back for additional information or revised corrective action proposals.",
+    "DISPOSITIONED UPON": "{source} receives its formal engineering disposition (use-as-is, repair, reject, rework) at {target}.",
+    "SERVED AT": "{source} notice is formally delivered to the responsible party at this open {target}, starting the cure period.",
+    "MEASURED AGAINST": "{source} notice's urgency is evaluated against this response time requirement to ensure timely correction.",
+    "COORDINATED DURING": "{source}issue is being actively worked between trades while in this in-progress {target}.",
+    "DISTRIBUTED VIA": "{source}issue is sent to multiple discipline leads simultaneously through this parallel review pattern.",
+    "REDESIGNED VIA": "{source}issue {target}s a revise-and-resubmit cycle for the affected drawing or specification.",
+    "TRIGGERS": "{source}issue initiates a change event lifecycle when the resolution requires a scope or cost change.",
+    "FURNISHED AT": "{source}test report is delivered to the project team at this submitted {target} for review against specifications.",
+    "FAILED AT": "{source}test report shows results outside specification limits and is rejected, requiring re-testing or material replacement.",
+    "VALIDATED TO": "{source}performance test confirms the installation meets the commissioning specification at this conforming {target}.",
+    "PROCESSED VIA": "{source}performance test follows this submit-and-approve {target} pattern for formal acceptance.",
+    "AUTHORIZED UPON": "{source}plan receives formal management {target}, committing resources and timeline to the corrective effort.",
+    "SANCTIONED VIA": "{source} is approved through this multi-level {target} chain involving safety and operations leadership.",
+    "TRACKED DURING": "{source}plan task is monitored for progress while in this active {target}.",
+    "OWNED VIA": "{source} is assigned to a specific responsible party through {target} ownership mechanism.",
+    "BENCHMARKED AGAINST": "{source} density metric is compared against {target} completion rate to assess closeout efficiency.",
+    "COMPUTED AT": "{source}cost percentage is calculated at this financial {target} stage as actual rework costs are recognized against the budget.",
+    "DERIVED FROM": "{source} pass rate metric is calculated from the outcomes produced by this inspect-and-{target} pattern.",
+    "MEASURED BY": "{source} closure rate is quantified using {target} aging metric to identify bottlenecks in resolution."
+  }
+}

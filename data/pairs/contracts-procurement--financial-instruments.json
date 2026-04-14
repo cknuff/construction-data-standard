@@ -1,0 +1,530 @@
+{
+  "source": "contracts-procurement",
+  "target": "financial-instruments",
+  "edges": [
+    [
+      "fi-project-budget",
+      "cp-prime-contract",
+      "FUNDS"
+    ],
+    [
+      "fi-project-budget",
+      "cp-bid-package",
+      "BUDGETS FOR"
+    ],
+    [
+      "fi-budget-line-item",
+      "cp-subcontract",
+      "ALLOCATES TO"
+    ],
+    [
+      "fi-budget-line-item",
+      "cp-scope-work",
+      "BUDGETS FOR"
+    ],
+    [
+      "fi-cost-code",
+      "cp-bid-package",
+      "CLASSIFIES"
+    ],
+    [
+      "fi-cost-code",
+      "cp-subcontract",
+      "CODED ON"
+    ],
+    [
+      "fi-wbs-code",
+      "cp-subcontract",
+      "TRACKS AGAINST"
+    ],
+    [
+      "fi-budget-code",
+      "cp-bid-package",
+      "GROUPS"
+    ],
+    [
+      "fi-commit-subcontra",
+      "cp-subcontract",
+      "COMMITTED UNDER"
+    ],
+    [
+      "fi-commit-subcontra",
+      "cp-scope-work",
+      "PRICED FROM"
+    ],
+    [
+      "fi-commit-subcontra",
+      "cp-master-service",
+      "RELEASED UNDER"
+    ],
+    [
+      "fi-commit-purchase",
+      "cp-purchase-order",
+      "COMMITTED UNDER"
+    ],
+    [
+      "fi-commit-line-item",
+      "cp-subcontract",
+      "BILLED UNDER"
+    ],
+    [
+      "cp-proposal-bid",
+      "fi-budget-line-item",
+      "COMPARED TO"
+    ],
+    [
+      "cp-proposal-bid",
+      "fi-commit-subcontra",
+      "AWARDED AS"
+    ],
+    [
+      "cp-bid-evaluation",
+      "fi-budget-line-item",
+      "LEVELED AGAINST"
+    ],
+    [
+      "cp-bid-package",
+      "fi-commit-subcontra",
+      "PROCURES"
+    ],
+    [
+      "cp-award-notice",
+      "fi-commit-subcontra",
+      "EXECUTES"
+    ],
+    [
+      "cp-subcontract",
+      "fi-commit-chg-order",
+      "MODIFIED BY"
+    ],
+    [
+      "cp-subcontract",
+      "fi-sub-invoice",
+      "INVOICED AGAINST"
+    ],
+    [
+      "cp-subcontract",
+      "fi-retainage",
+      "RETAINED FROM"
+    ],
+    [
+      "cp-subcontract",
+      "fi-payment",
+      "PAID UNDER"
+    ],
+    [
+      "cp-subcontract",
+      "fi-lien-waiver",
+      "WAIVED UNDER"
+    ],
+    [
+      "cp-subcontract",
+      "fi-schedule-values",
+      "SCHEDULED ON"
+    ],
+    [
+      "cp-purchase-order",
+      "fi-payment",
+      "PAID UNDER"
+    ],
+    [
+      "cp-prime-contract",
+      "fi-owner-invoice",
+      "BILLED UNDER"
+    ],
+    [
+      "cp-prime-contract",
+      "fi-owner-chg-order",
+      "MODIFIED BY"
+    ],
+    [
+      "cp-prime-contract",
+      "fi-retainage",
+      "RETAINED FROM"
+    ],
+    [
+      "cp-prime-contract",
+      "fi-schedule-values",
+      "SCHEDULED ON"
+    ],
+    [
+      "cp-prime-contract",
+      "fi-cash-flow",
+      "FORECASTED ON"
+    ],
+    [
+      "fi-chg-event-ce",
+      "cp-subcontract",
+      "CHARGED TO"
+    ],
+    [
+      "fi-chg-event-ce",
+      "cp-prime-contract",
+      "BILLED BACK TO"
+    ],
+    [
+      "fi-chg-event-ce",
+      "cp-scope-work",
+      "EXCEEDS"
+    ],
+    [
+      "fi-pot-chg-order",
+      "cp-subcontract",
+      "PROPOSED UNDER"
+    ],
+    [
+      "fi-commit-chg-order",
+      "cp-subcontract",
+      "AMENDS"
+    ],
+    [
+      "fi-cco-line-item",
+      "cp-scope-work",
+      "ADJUSTS SCOPE OF"
+    ],
+    [
+      "fi-owner-chg-order",
+      "cp-prime-contract",
+      "AMENDS"
+    ],
+    [
+      "fi-budget-mod",
+      "cp-allowance",
+      "DRAWS FROM"
+    ],
+    [
+      "fi-direct-cost",
+      "cp-subcontract",
+      "BACKCHARGED TO"
+    ],
+    [
+      "fi-retainage",
+      "cp-retainage-terms",
+      "GOVERNED BY"
+    ],
+    [
+      "fi-retainage",
+      "cp-substantial-comp",
+      "RELEASED AT"
+    ],
+    [
+      "fi-retainage",
+      "cp-final-completion",
+      "RELEASED AT"
+    ],
+    [
+      "fi-payment",
+      "cp-subcontract",
+      "DISBURSED UNDER"
+    ],
+    [
+      "fi-payment",
+      "cp-prime-contract",
+      "RECEIVED UNDER"
+    ],
+    [
+      "fi-lien-waiver",
+      "cp-subcontract",
+      "CLEARS LIEN ON"
+    ],
+    [
+      "fi-lien-waiver",
+      "cp-payment-bond",
+      "SATISFIES"
+    ],
+    [
+      "fi-schedule-values",
+      "cp-prime-contract",
+      "STRUCTURED FOR"
+    ],
+    [
+      "fi-allowance",
+      "cp-allowance",
+      "FUNDED BY"
+    ],
+    [
+      "fi-contingency",
+      "cp-gen-cond",
+      "RESERVED UNDER"
+    ],
+    [
+      "cp-retainage-terms",
+      "fi-retainage",
+      "GOVERNS"
+    ],
+    [
+      "cp-liquidated-damag",
+      "fi-payment",
+      "DEDUCTED FROM"
+    ],
+    [
+      "cp-gen-cond",
+      "fi-budget-line-item",
+      "BUDGETED AS"
+    ],
+    [
+      "cp-gen-cond",
+      "fi-contingency",
+      "RESERVES"
+    ],
+    [
+      "cp-allowance",
+      "fi-allowance",
+      "ESTABLISHES"
+    ],
+    [
+      "cp-allowance",
+      "fi-budget-mod",
+      "RECONCILED VIA"
+    ],
+    [
+      "cp-bid-bond",
+      "fi-commit-subcontra",
+      "SECURES BID FOR"
+    ],
+    [
+      "cp-perf-bond",
+      "fi-commit-subcontra",
+      "GUARANTEES"
+    ],
+    [
+      "cp-payment-bond",
+      "fi-payment",
+      "SECURES"
+    ],
+    [
+      "cp-insurance-cert",
+      "fi-commit-subcontra",
+      "INSURES"
+    ],
+    [
+      "cp-builders-risk",
+      "fi-project-budget",
+      "COVERS"
+    ],
+    [
+      "cp-substantial-comp",
+      "fi-retainage",
+      "TRIGGERS RELEASE OF"
+    ],
+    [
+      "cp-substantial-comp",
+      "fi-owner-invoice",
+      "TRIGGERS FINAL"
+    ],
+    [
+      "cp-final-completion",
+      "fi-payment",
+      "CLOSES OUT"
+    ],
+    [
+      "cp-warranty",
+      "fi-retainage",
+      "SECURED BY"
+    ],
+    [
+      "cp-warranty",
+      "fi-direct-cost",
+      "CHARGED AS"
+    ],
+    [
+      "cp-prevailing-wage",
+      "fi-commit-line-item",
+      "RATES"
+    ],
+    [
+      "cp-diversity-dbe",
+      "fi-commit-subcontra",
+      "QUALIFIES"
+    ],
+    [
+      "cp-closeout-doc",
+      "fi-retainage",
+      "REQUIRED FOR RELEASE OF"
+    ],
+    [
+      "fi-cost-forecast",
+      "cp-prime-contract",
+      "PROJECTS COST OF"
+    ],
+    [
+      "fi-cash-flow",
+      "cp-subcontract",
+      "FORECASTS PAYMENTS TO"
+    ],
+    [
+      "fi-committed-cost",
+      "cp-subcontract",
+      "TRACKED UNDER"
+    ],
+    [
+      "fi-chg-order-rate",
+      "cp-subcontract",
+      "BENCHMARKS"
+    ],
+    [
+      "cp-chg-order-rate",
+      "fi-commit-chg-order",
+      "MEASURES"
+    ],
+    [
+      "cp-bid-coverage",
+      "fi-budget-line-item",
+      "SCORED AGAINST"
+    ],
+    [
+      "cp-insurance-comp",
+      "fi-commit-subcontra",
+      "VALIDATES"
+    ],
+    [
+      "cp-sub-retention",
+      "fi-committed-cost",
+      "REFLECTS"
+    ],
+    [
+      "cp-req-proposal",
+      "fi-budget-line-item",
+      "SCOPED TO"
+    ],
+    [
+      "cp-req-qualificatio",
+      "fi-project-budget",
+      "SCREENS FOR"
+    ],
+    [
+      "cp-prequalification",
+      "fi-commit-subcontra",
+      "QUALIFIES FOR"
+    ],
+    [
+      "cp-master-service",
+      "fi-commit-subcontra",
+      "GOVERNS TERMS OF"
+    ],
+    [
+      "fi-markup-pct",
+      "cp-prime-contract",
+      "NEGOTIATED IN"
+    ],
+    [
+      "fi-backlog",
+      "cp-prime-contract",
+      "SOURCED FROM"
+    ],
+    [
+      "fi-win-rate",
+      "cp-proposal-bid",
+      "CALCULATED FROM"
+    ],
+    [
+      "fi-bonding-capacity",
+      "cp-perf-bond",
+      "MEASURED AGAINST"
+    ],
+    [
+      "fi-precon-hit-rate",
+      "cp-proposal-bid",
+      "MEASURED FROM"
+    ],
+    [
+      "cp-prequalification",
+      "fi-bonding-capacity",
+      "SCREENS AGAINST"
+    ],
+    [
+      "cp-scope-work",
+      "fi-cost-code",
+      "DEFINES WORK FOR"
+    ],
+    [
+      "cp-proposal-bid",
+      "fi-estimate",
+      "PRICED BY"
+    ],
+    [
+      "cp-scope-work",
+      "fi-estimate",
+      "QUANTIFIED IN"
+    ]
+  ],
+  "verbGlossary": {
+    "ADJUSTS SCOPE OF": "{source} line item modifies the defined scope of work on {target}",
+    "ALLOCATES TO": "{target} sets aside dollars for a specific contract instrument",
+    "AMENDS": "{target} formally modifies the terms or value of an existing contract",
+    "AWARDED AS": "A winning bid or proposal becomes {target} (subcontract or PO)",
+    "BACKCHARGED TO": "{target} is charged back to a subcontractor for deficient or corrective work",
+    "BENCHMARKS": "{source} rate metric benchmarks performance against {target}",
+    "BILLED BACK TO": "{target} cost is billed back to the owner via the prime contract",
+    "BILLED UNDER": "{target} line item is billed under a specific contract",
+    "BUDGETED AS": "{source} terms are represented as {target}s",
+    "BUDGETS FOR": "{target} or budget line item establishes funding for a scope package or bid",
+    "CHARGED AS": "{source} repair work generates {target}s charged to the project",
+    "CHARGED TO": "{target} allocates cost impact to a specific subcontract",
+    "CLASSIFIES": "{target} classifies the type of work in a bid package",
+    "CLEARS LIEN ON": "{source}releases mechanic's lien rights on a subcontract",
+    "CLOSES OUT": "{source}triggers the last payment disbursement on {target}",
+    "CODED ON": "A cost code is assigned to {target} for cost tracking purposes",
+    "COMMITTED UNDER": "{source}is created under {target} instrument",
+    "COMPARED TO": "{source}is compared to the corresponding {target}s",
+    "COVERS": "{source} insurance provides property coverage for the project {target} value",
+    "DEDUCTED FROM": "{source} are deducted from {target}",
+    "DISBURSED UNDER": "{source}is disbursed per the terms of {target}",
+    "DRAWS FROM": "{target} draws funds from a contractual allowance",
+    "ESTABLISHES": "{source}establishes the financial allowance amount",
+    "EXCEEDS": "{target} represents cost that exceeds the original scope of work",
+    "EXECUTES": "{source} or notice to proceed executes {target}",
+    "FORECASTED ON": "{source}projection is forecasted on {target} for draw planning",
+    "FORECASTS PAYMENTS TO": "{source}projection forecasts {target} amounts to a subcontract",
+    "FUNDED BY": "{source}is funded by the contractual allowance provision",
+    "FUNDS": "{source}project {target} provides funding authority for the prime contract",
+    "GOVERNED BY": "{target} amounts are governed by the contractual retainage terms",
+    "GOVERNS": "{source} terms in {target} govern the financial retainage calculation",
+    "GOVERNS TERMS OF": "{source} governs the commercial terms of {target}s issued under it",
+    "GROUPS": "{target} groups bid packages for executive-level cost reporting",
+    "GUARANTEES": "{source} guarantees contractor completion of {target}",
+    "INSURES": "{source}provides liability coverage for {target}",
+    "INVOICED AGAINST": "{target} is submitted against a specific contract for work completed",
+    "LEVELED AGAINST": "{source} levels competing bids against {target} estimates",
+    "MEASURES": "A procurement {target} rate metric measures change order volume",
+    "MODIFIED BY": "{source}is modified by an approved {target}",
+    "PAID UNDER": "{target} is made to a subcontractor or supplier under their contract",
+    "PRICED FROM": "{target} is priced from the contractor's scope of work breakdown",
+    "PROCURES": "{source} initiates procurement that results in {target}",
+    "PROJECTS COST OF": "A cost forecast projects the final cost of {target}",
+    "PROPOSED UNDER": "A potential {target} is proposed under an existing subcontract",
+    "QUALIFIES": "A DBE certification qualifies a subcontractor {target} for diversity goals",
+    "QUALIFIES FOR": "{source} is eligible for {target}",
+    "RATES": "{source} certifications set the labor rates on {target} line items",
+    "RECEIVED UNDER": "{target} from the owner is received under the prime contract",
+    "RECONCILED VIA": "{source}is reconciled vi{target}s at closeout",
+    "REFLECTS": "{source}or retention rate reflects the ratio of committed cost retained across contracts",
+    "RELEASED AT": "{target} is released at substantial or final completion milestones",
+    "RELEASED UNDER": "{target} is released under a master service agreement as a task order",
+    "REQUIRED FOR RELEASE OF": "{source} are required before {target} can be released",
+    "RESERVED UNDER": "{source}is reserved under the general conditions of {target}",
+    "RESERVES": "{source} terms establish {target} reserve amounts",
+    "RETAINED FROM": "{source} is retained from {target} per the agreed withholding percentage",
+    "SATISFIES": "A lien waiver satisfies {target} bond surety requirements",
+    "SCHEDULED ON": "A schedule of values is structured on {target} for progress billing",
+    "SCOPED TO": "{source}is scoped to specific {target}s",
+    "SCORED AGAINST": "{source} is scored against {target}s to identify gaps",
+    "SCREENS FOR": "A request for qualification screens contractors against project {target} thresholds",
+    "SECURED BY": "{source} obligation is financially secured by withheld {target}",
+    "SECURES": "{target} bond secures payment obligations to subcontractors and suppliers",
+    "SECURES BID FOR": "{source} secures the bidder's {target} to honor their proposal price",
+    "STRUCTURED FOR": "A schedule of values is structured for {target} to enable progress billing",
+    "TRACKED UNDER": "{source}cost vs. {target} is tracked under a specific contract",
+    "TRACKS AGAINST": "{source}tracks costs against {target} for detailed cost reporting",
+    "TRIGGERS FINAL": "{source} triggers the final owner {target} / pay application",
+    "TRIGGERS RELEASE OF": "{source} triggers release of {target} per contract terms",
+    "VALIDATES": "{source}rate validates that {target}s have current coverage",
+    "WAIVED UNDER": "{source}is executed under a subcontract with each {target} cycle",
+    "NEGOTIATED IN": "{source} fee or markup percentage is established within the terms of {target}",
+    "SOURCED FROM": "{source} unearned contract value originates from signed {target}s in the portfolio",
+    "CALCULATED FROM": "{source} rate is derived from the ratio of won to total {target}s submitted",
+    "MEASURED AGAINST": "{source} utilization is evaluated relative to the aggregate {target} capacity outstanding",
+    "MEASURED FROM": "{source} accuracy rate is calculated from the variance between preconstruction estimates and final {target} pricing",
+    "SCREENS AGAINST": "{source} process evaluates contractor eligibility relative to {target} thresholds"
+  }
+}

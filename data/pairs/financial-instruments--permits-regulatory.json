@@ -1,0 +1,185 @@
+{
+  "source": "financial-instruments",
+  "target": "permits-regulatory",
+  "edges": [
+    [
+      "fi-project-budget",
+      "pr-building-permit",
+      "FUNDS APPLICATION FOR"
+    ],
+    [
+      "fi-project-budget",
+      "pr-permit-cycle",
+      "CONSTRAINED BY"
+    ],
+    [
+      "fi-budget-line-item",
+      "pr-building-permit",
+      "ALLOCATES FEE FOR"
+    ],
+    [
+      "fi-budget-line-item",
+      "pr-enviro-permit",
+      "ALLOCATES FEE FOR"
+    ],
+    [
+      "fi-budget-line-item",
+      "pr-special-insp",
+      "ALLOCATES FEE FOR"
+    ],
+    [
+      "fi-cost-code",
+      "pr-trade-permit",
+      "CODED TO"
+    ],
+    [
+      "fi-allowance",
+      "pr-permit-applicati",
+      "RESERVED FOR"
+    ],
+    [
+      "fi-contingency",
+      "pr-reg-hold",
+      "BUFFERS AGAINST"
+    ],
+    [
+      "fi-contingency",
+      "pr-variance-special",
+      "RESERVED FOR"
+    ],
+    [
+      "fi-chg-event-ce",
+      "pr-ahj-insp",
+      "TRIGGERED BY"
+    ],
+    [
+      "fi-chg-event-ce",
+      "pr-building-departm",
+      "TRIGGERED BY"
+    ],
+    [
+      "fi-chg-event-ce",
+      "pr-fire-marshal",
+      "TRIGGERED BY"
+    ],
+    [
+      "fi-commit-chg-order",
+      "pr-ahj-insp",
+      "ISSUED AFTER"
+    ],
+    [
+      "fi-owner-chg-order",
+      "pr-zoning-appr",
+      "TRIGGERED BY"
+    ],
+    [
+      "fi-budget-mod",
+      "pr-reg-hold",
+      "RESPONDS TO"
+    ],
+    [
+      "fi-budget-mod",
+      "pr-enviro-permit",
+      "ADJUSTS FOR"
+    ],
+    [
+      "fi-direct-cost",
+      "pr-special-insp",
+      "PAYS FOR"
+    ],
+    [
+      "fi-direct-cost",
+      "pr-third-party",
+      "PAYS FOR"
+    ],
+    [
+      "fi-direct-cost",
+      "pr-stormwater-permi",
+      "PAYS FOR"
+    ],
+    [
+      "fi-payment",
+      "pr-cert-completion",
+      "CONDITIONED ON"
+    ],
+    [
+      "fi-retainage",
+      "pr-cert-occupancy",
+      "RELEASED AT"
+    ],
+    [
+      "fi-retainage",
+      "pr-cert-completion",
+      "RELEASED AT"
+    ],
+    [
+      "fi-retainage",
+      "pr-open-permit",
+      "HELD PENDING"
+    ],
+    [
+      "fi-lien-waiver",
+      "pr-cert-completion",
+      "REQUIRED BEFORE"
+    ],
+    [
+      "fi-sub-invoice",
+      "pr-ahj-insp",
+      "VERIFIED AGAINST"
+    ],
+    [
+      "fi-cost-forecast",
+      "pr-permit-cycle",
+      "ADJUSTED FOR"
+    ],
+    [
+      "fi-cash-flow",
+      "pr-reg-hold",
+      "DELAYED BY"
+    ],
+    [
+      "fi-owner-invoice",
+      "pr-temp-cert",
+      "BILLED AT"
+    ],
+    [
+      "fi-budget-variance",
+      "pr-reg-hold",
+      "ESCALATED BY"
+    ],
+    [
+      "fi-contingency-burn",
+      "pr-open-permit",
+      "ACCELERATED BY"
+    ],
+    [
+      "fi-committed-cost",
+      "pr-building-permit",
+      "RELEASED AFTER"
+    ]
+  ],
+  "verbGlossary": {
+    "ACCELERATED BY": "{source} burn rate increases due to unresolved {target} or regulatory items that extend project duration (e.g., contingency burn rate accelerated by aging open permits).",
+    "ADJUSTED FOR": "{source} forecast is revised to account for {target} timeline or regulatory outcome (e.g., cost forecast adjusted for permit cycle time delays).",
+    "ADJUSTS FOR": "{source} reallocates funds in response to a {target} change (e.g., budget modification adjusts for new environmental permit conditions).",
+    "ALLOCATES FEE FOR": "{source} sets aside dollars to cover {target} fee, inspection fee, or regulatory compliance cost (e.g., budget line item allocates fee for special inspection).",
+    "BILLED AT": "{source} is submitted upon issuance of a regulatory {target} (e.g., owner invoice billed at temporary certificate of occupancy for partial occupancy billing).",
+    "BUFFERS AGAINST": "{source} reserve provides a monetary cushion against cost impact from a regulatory delay or hold (e.g., contingency buffers against regulatory hold duration costs).",
+    "CODED TO": "{source} is assigned to categorize {target}-related expenses for tracking (e.g., cost code coded to trade permit for plumbing or electrical permit fees).",
+    "CONDITIONED ON": "{source} release requires a completed regulatory {target} as a prerequisite (e.g., final payment conditioned on certificate of completion confirming all work meets code).",
+    "CONSTRAINED BY": "{source} plan or budget is limited by the duration or outcome of {target} process (e.g., project budget constrained by permit cycle time that delays mobilization).",
+    "DELAYED BY": "{source}is pushed back due to a regulatory hold or {target} delay (e.g., cash flow projection delayed by regulatory hold on site work).",
+    "ESCALATED BY": "{source} variance increases as a direct result of regulatory holds adding unanticipated cost (e.g., budget variance escalated by regulatory hold causing extended general conditions).",
+    "FUNDS APPLICATION FOR": "{source} provides the funding authority for {target} fees and associated costs (e.g., project budget funds application for building permit).",
+    "HELD PENDING": "{source} is withheld until an open {target} or regulatory item is resolved (e.g., retainage held pending closure of open permits at project end).",
+    "ISSUED AFTER": "{source} change instrument is issued after {target} identifies required corrective work (e.g., commitment change order issued after AHJ inspection finds code violation).",
+    "PAYS FOR": "{source} transaction covers the expense of {target} or testing service (e.g., direct cost pays for third-party testing required by code).",
+    "RELEASED AFTER": "{source}cost is authorized for disbursement after {target} is obtained (e.g., committed cost released after building permit allows subcontractor mobilization).",
+    "RELEASED AT": "{source} is released upon issuance of a regulatory {target} that confirms project completion or occupancy readiness (e.g., retainage released at certificate of occupancy).",
+    "REQUIRED BEFORE": "{source} document must be obtained before a regulatory {target} can be issued (e.g., lien waiver required before certificate of completion is granted).",
+    "RESERVED FOR": "{source} allowance or contingency is earmarked to cover anticipated {target} or regulatory costs (e.g., allowance reserved for permit application fees across jurisdictions).",
+    "RESPONDS TO": "{source} is made as a direct reaction to a regulatory hold or {target} condition (e.g., budget modification responds to regulatory hold by reallocating schedule contingency).",
+    "TRIGGERED BY": "{source} change event is caused by a regulatory review finding, inspection result, or zoning decision (e.g., change event triggered by {target} review requiring additional suppression).",
+    "VERIFIED AGAINST": "{source}are verified against {target} results to confirm work completion (e.g., sub invoice verified against AHJ inspection approval before payment)."
+  }
+}

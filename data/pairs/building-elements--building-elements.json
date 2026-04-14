@@ -1,0 +1,320 @@
+{
+  "source": "building-elements",
+  "target": "building-elements",
+  "edges": [
+    [
+      "be-excav",
+      "be-backfill",
+      "PRECEDES"
+    ],
+    [
+      "be-excav",
+      "be-dewater",
+      "REQUIRES"
+    ],
+    [
+      "be-erosion",
+      "be-excav",
+      "PROTECTS"
+    ],
+    [
+      "be-backfill",
+      "be-shallow-fdn",
+      "SUPPORTS"
+    ],
+    [
+      "be-deep-fdn",
+      "be-grade-beams",
+      "SUPPORTS"
+    ],
+    [
+      "be-deep-fdn",
+      "be-columns",
+      "SUPPORTS"
+    ],
+    [
+      "be-shallow-fdn",
+      "be-fdn-walls",
+      "SUPPORTS"
+    ],
+    [
+      "be-grade-beams",
+      "be-fdn-walls",
+      "TIES"
+    ],
+    [
+      "be-bg-wp",
+      "be-fdn-walls",
+      "SEALS"
+    ],
+    [
+      "be-columns",
+      "be-beams",
+      "SUPPORTS"
+    ],
+    [
+      "be-columns",
+      "be-slabs",
+      "SUPPORTS"
+    ],
+    [
+      "be-beams",
+      "be-roof-struct",
+      "SUPPORTS"
+    ],
+    [
+      "be-connections",
+      "be-beams",
+      "JOINS"
+    ],
+    [
+      "be-slabs",
+      "be-studs",
+      "SUPPORTS"
+    ],
+    [
+      "be-roof-struct",
+      "be-roof-insul",
+      "SUPPORTS"
+    ],
+    [
+      "be-roof-insul",
+      "be-roof-mem",
+      "UNDERLAYS"
+    ],
+    [
+      "be-roof-mem",
+      "be-flashing",
+      "TERMINATES AT"
+    ],
+    [
+      "be-roof-drain",
+      "be-int-storm",
+      "DRAINS INTO"
+    ],
+    [
+      "be-flashing",
+      "be-skylights",
+      "SEALS"
+    ],
+    [
+      "be-amb",
+      "be-ext-insul",
+      "UNDERLAYS"
+    ],
+    [
+      "be-ext-insul",
+      "be-masonry-v",
+      "UNDERLAYS"
+    ],
+    [
+      "be-ext-insul",
+      "be-panels",
+      "UNDERLAYS"
+    ],
+    [
+      "be-curtainwall",
+      "be-connections",
+      "ANCHORS TO"
+    ],
+    [
+      "be-panels",
+      "be-connections",
+      "ANCHORS TO"
+    ],
+    [
+      "be-studs",
+      "be-drywall",
+      "FRAMES"
+    ],
+    [
+      "be-drywall",
+      "be-paint",
+      "RECEIVES"
+    ],
+    [
+      "be-drywall",
+      "be-tile",
+      "RECEIVES"
+    ],
+    [
+      "be-casework",
+      "be-countertop",
+      "RECEIVES"
+    ],
+    [
+      "be-dom-water",
+      "be-plumb-fix",
+      "FEEDS"
+    ],
+    [
+      "be-waste-vent",
+      "be-plumb-fix",
+      "DRAINS"
+    ],
+    [
+      "be-dom-water",
+      "be-water-htr",
+      "FEEDS"
+    ],
+    [
+      "be-pipe-insul",
+      "be-dom-water",
+      "WRAPS"
+    ],
+    [
+      "be-duct-insul",
+      "be-ductwork",
+      "WRAPS"
+    ],
+    [
+      "be-ahu",
+      "be-ductwork",
+      "FEEDS"
+    ],
+    [
+      "be-hvac-pipe",
+      "be-cooling",
+      "FEEDS"
+    ],
+    [
+      "be-hvac-ctrl",
+      "be-ahu",
+      "CONTROLS"
+    ],
+    [
+      "be-bas",
+      "be-hvac-ctrl",
+      "CONTROLS"
+    ],
+    [
+      "be-bas",
+      "be-lighting",
+      "CONTROLS"
+    ],
+    [
+      "be-tab",
+      "be-ductwork",
+      "BALANCES"
+    ],
+    [
+      "be-tab",
+      "be-hvac-pipe",
+      "BALANCES"
+    ],
+    [
+      "be-sprink-main",
+      "be-sprink-head",
+      "FEEDS"
+    ],
+    [
+      "be-fire-pump",
+      "be-sprink-main",
+      "PRESSURIZES"
+    ],
+    [
+      "be-standpipe",
+      "be-water-main",
+      "CONNECTS TO"
+    ],
+    [
+      "be-power-dist",
+      "be-branch",
+      "FEEDS"
+    ],
+    [
+      "be-conduit",
+      "be-branch",
+      "ROUTES"
+    ],
+    [
+      "be-branch",
+      "be-lighting",
+      "POWERS"
+    ],
+    [
+      "be-emerg-pwr",
+      "be-fa",
+      "POWERS"
+    ],
+    [
+      "be-grounding",
+      "be-power-dist",
+      "BONDS"
+    ],
+    [
+      "be-elev-mach",
+      "be-elev-car",
+      "DRIVES"
+    ],
+    [
+      "be-water-main",
+      "be-dom-water",
+      "FEEDS"
+    ],
+    [
+      "be-sanitary",
+      "be-waste-vent",
+      "DRAINS"
+    ],
+    [
+      "be-gas-svc",
+      "be-gas-pipe",
+      "FEEDS"
+    ],
+    [
+      "be-site-elec",
+      "be-power-dist",
+      "FEEDS"
+    ],
+    [
+      "be-act",
+      "be-sprink-head",
+      "COORDINATES WITH"
+    ],
+    [
+      "be-act",
+      "be-lighting",
+      "COORDINATES WITH"
+    ],
+    [
+      "be-security",
+      "be-int-doors",
+      "SECURES"
+    ],
+    [
+      "be-paving",
+      "be-sidewalks",
+      "ABUTS"
+    ]
+  ],
+  "verbGlossary": {
+    "ABUTS": "One site improvement {target} meets or adjoins another at a common edge or transition strip",
+    "ANCHORS TO": "An enclosure {target} is mechanically fastened to a structural embed or connection point for gravity and lateral load transfer",
+    "BALANCES": "{source} adjusts airflow or water flow rates within a distribution {target} to match design specifications",
+    "BONDS": "Grounding {target} provides an electrical bonding path to a distribution element for fault protection and code compliance",
+    "CONNECTS TO": "One utility or distribution {target} ties into another at a junction point, coupling, or termination",
+    "CONTROLS": "{source}controls {target} sends signals to regulate the operation of mechanical or electrical equipment",
+    "COORDINATES WITH": "Two {target}s that occupy the same ceiling plane and must be spatially coordinated during layout to avoid conflicts",
+    "DRAINS": "A waste or drainage {target} carries fluid away from a fixture or collection point by gravity",
+    "DRAINS INTO": "An upper drainage {target} discharges into a lower drainage element through a vertical conductor connection",
+    "DRIVES": "{source} machinery provides the motive force that moves the elevator car through the hoistway",
+    "FEEDS": "An upstream distribution {target} delivers a fluid, gas, or medium to a downstream element or piece of equipment",
+    "FRAMES": "{source}provides the structural skeleton that a board or {target} element is fastened to",
+    "JOINS": "A connection {target} (bolts, welds, embed plates) structurally ties two primary structural members together",
+    "POWERS": "An electrical distribution {target} supplies electrical energy to operate equipment, devices, or fixtures",
+    "PRECEDES": "{source}must be substantially complete before the next earthwork activity can begin in the same area",
+    "PRESSURIZES": "{source} {target} boosts system pressure in a distribution main to meet flow and pressure requirements",
+    "PROTECTS": "{source}control {target} safeguards an adjacent work area from soil loss, water intrusion, or sediment runoff",
+    "RECEIVES": "{target} element (drywall, casework) accepts a finish material (paint, tile, countertop) applied to its surface",
+    "REQUIRES": "One earthwork {target} necessitates the operation of another element when site conditions (e.g., high water table) are present",
+    "ROUTES": "{source} {target} provides the physical pathway through which wiring or cabling is pulled",
+    "SEALS": "A waterproofing, flashing, or membrane {target} creates a watertight seal at a joint, penetration, or termination",
+    "SECURES": "{source}control or security {target} monitors and restricts passage through a door or entry point",
+    "SUPPORTS": "{source} bears the gravity and lateral loads of {target} above it in the load path",
+    "TERMINATES AT": "{source} {target} ends at a flashing or edge condition that provides a weathertight transition",
+    "TIES": "{source} or {target} connects two foundation elements together to distribute loads and resist differential settlement",
+    "UNDERLAYS": "A barrier, insulation, or {target} layer is installed behind or beneath an outer finish element as part of a layered wall or roof assembly",
+    "WRAPS": "{source} {target} is applied around the exterior of piping or ductwork for thermal or acoustic performance"
+  }
+}

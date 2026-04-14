@@ -1,0 +1,137 @@
+{
+  "source": "project-attributes",
+  "target": "standards-classifications",
+  "edges": [
+    [
+      "pa-building-code",
+      "sc-international-bu",
+      "GOVERNED BY"
+    ],
+    [
+      "pa-fire-sprinkler",
+      "sc-nfpa-stds",
+      "GOVERNED BY"
+    ],
+    [
+      "pa-accessibility-st",
+      "sc-ada-accessibilit",
+      "GOVERNED BY"
+    ],
+    [
+      "pa-energy-code",
+      "sc-energy-code-stds",
+      "GOVERNED BY"
+    ],
+    [
+      "pa-leed-certificati",
+      "sc-leed-certificati",
+      "CERTIFIED UNDER"
+    ],
+    [
+      "pa-well-certificati",
+      "sc-well-building",
+      "CERTIFIED UNDER"
+    ],
+    [
+      "pa-resilience-requi",
+      "sc-resilience-net",
+      "CERTIFIED UNDER"
+    ],
+    [
+      "pa-net-zero-target",
+      "sc-resilience-net",
+      "CERTIFIED UNDER"
+    ],
+    [
+      "pa-dlvy-method",
+      "sc-dlvy-method",
+      "CLASSIFIED BY"
+    ],
+    [
+      "pa-contract-type",
+      "sc-aia-contract",
+      "CLASSIFIED BY"
+    ],
+    [
+      "pa-project-type",
+      "sc-omniclass",
+      "CLASSIFIED BY"
+    ],
+    [
+      "pa-struct-system",
+      "sc-uniformat",
+      "CLASSIFIED BY"
+    ],
+    [
+      "pa-foundation-type",
+      "sc-uniformat",
+      "CLASSIFIED BY"
+    ],
+    [
+      "pa-occupancy-group",
+      "sc-international-bu",
+      "DEFINED BY"
+    ],
+    [
+      "pa-const-type",
+      "sc-international-bu",
+      "DEFINED BY"
+    ],
+    [
+      "pa-cost-per-sf",
+      "sc-aace-cost",
+      "BENCHMARKED TO"
+    ],
+    [
+      "pa-chg-order-rate",
+      "sc-aace-cost",
+      "BENCHMARKED TO"
+    ],
+    [
+      "pa-cost-growth",
+      "sc-aace-cost",
+      "BENCHMARKED TO"
+    ],
+    [
+      "pa-safety-incident",
+      "sc-osha-recordkeepi",
+      "REPORTED UNDER"
+    ],
+    [
+      "pa-safety-incident",
+      "sc-osha-hazard",
+      "CATEGORIZED BY"
+    ],
+    [
+      "pa-safety-incident",
+      "sc-ansi-injury",
+      "CATEGORIZED BY"
+    ],
+    [
+      "pa-project-type",
+      "sc-masterformat",
+      "SCOPED BY"
+    ],
+    [
+      "pa-work-type",
+      "sc-specification-se",
+      "SCOPED BY"
+    ],
+    [
+      "pa-sector",
+      "sc-wbs-code",
+      "STRUCTURES"
+    ]
+  ],
+  "verbGlossary": {
+    "GOVERNED BY": "{source} is regulated by the requirements of {target} or standard (e.g., building code edition governed by IBC, fire sprinkler governed by NFPA standards)",
+    "CERTIFIED UNDER": "{source} sustainability attribute is validated through the target certification program (e.g., LEED certification certified under LEED program, net zero target certified under resilience and net zero standards)",
+    "CLASSIFIED BY": "{source} is categorized using {target} system's taxonomy (e.g., delivery method classified by delivery method classification, structural system classified by UniFormat)",
+    "DEFINED BY": "{source} building attribute's allowable values are defined by {target} code (e.g., occupancy group defined by IBC occupancy classifications, construction type defined by IBC Type I-V)",
+    "BENCHMARKED TO": "{source} performance metric is compared against {target} published norms (e.g., cost per SF and cost growth benchmarked to AACE cost engineering standards)",
+    "REPORTED UNDER": "{source} safety metric is formally recorded using {target}keeping classification framework",
+    "CATEGORIZED BY": "{source} safety metric incidents are classified using the target hazard or injury taxonomy (e.g., safety incidents categorized by OSHA hazard categories and ANSI injury {target}s)",
+    "SCOPED BY": "{source} identity attribute determines which sections of {target} system apply (e.g., project type scopes applicable MasterFormat divisions)",
+    "STRUCTURES": "{source} sector attribute determines the organization of {target} breakdown or code structure (e.g., sector structures the WBS code hierarchy for infrastructure vs. vertical construction)"
+  }
+}

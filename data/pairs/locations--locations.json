@@ -1,0 +1,263 @@
+{
+  "source": "locations",
+  "target": "locations",
+  "edges": [
+    [
+      "loc-project-site",
+      "loc-building",
+      "CONTAINS"
+    ],
+    [
+      "loc-project-site",
+      "loc-exterior-zone",
+      "CONTAINS"
+    ],
+    [
+      "loc-project-site",
+      "loc-laydown-staging",
+      "CONTAINS"
+    ],
+    [
+      "loc-project-site",
+      "loc-right-way",
+      "BORDERS"
+    ],
+    [
+      "loc-project-site",
+      "loc-temp-facility",
+      "CONTAINS"
+    ],
+    [
+      "loc-building",
+      "loc-floor-level",
+      "DIVIDES INTO"
+    ],
+    [
+      "loc-building",
+      "loc-below-grade",
+      "DIVIDES INTO"
+    ],
+    [
+      "loc-building",
+      "loc-roof-level",
+      "DIVIDES INTO"
+    ],
+    [
+      "loc-building",
+      "loc-core-shaft",
+      "PENETRATED BY"
+    ],
+    [
+      "loc-floor-level",
+      "loc-zone-wing",
+      "SUBDIVIDES INTO"
+    ],
+    [
+      "loc-floor-level",
+      "loc-room-space",
+      "SUBDIVIDES INTO"
+    ],
+    [
+      "loc-floor-level",
+      "loc-ceiling-plenum",
+      "BOUNDED BY"
+    ],
+    [
+      "loc-below-grade",
+      "loc-zone-wing",
+      "SUBDIVIDES INTO"
+    ],
+    [
+      "loc-below-grade",
+      "loc-room-space",
+      "SUBDIVIDES INTO"
+    ],
+    [
+      "loc-below-grade",
+      "loc-floor-level",
+      "STACKS BELOW"
+    ],
+    [
+      "loc-roof-level",
+      "loc-functional-area",
+      "SUBDIVIDES INTO"
+    ],
+    [
+      "loc-zone-wing",
+      "loc-room-space",
+      "SUBDIVIDES INTO"
+    ],
+    [
+      "loc-room-space",
+      "loc-wall-surface",
+      "BOUNDED BY"
+    ],
+    [
+      "loc-room-space",
+      "loc-equip-location",
+      "HOUSES"
+    ],
+    [
+      "loc-room-space",
+      "loc-penetration-open",
+      "PIERCED BY"
+    ],
+    [
+      "loc-functional-area",
+      "loc-equip-location",
+      "HOUSES"
+    ],
+    [
+      "loc-wet-area",
+      "loc-penetration-open",
+      "PIERCED BY"
+    ],
+    [
+      "loc-core-shaft",
+      "loc-penetration-open",
+      "PIERCED BY"
+    ],
+    [
+      "loc-core-shaft",
+      "loc-floor-level",
+      "SPANS THROUGH"
+    ],
+    [
+      "loc-ceiling-plenum",
+      "loc-penetration-open",
+      "PIERCED BY"
+    ],
+    [
+      "loc-fire-smoke",
+      "loc-room-space",
+      "ENCLOSES"
+    ],
+    [
+      "loc-fire-smoke",
+      "loc-penetration-open",
+      "REGULATED AT"
+    ],
+    [
+      "loc-work-zone-phase",
+      "loc-floor-level",
+      "OVERLAYS"
+    ],
+    [
+      "loc-work-zone-phase",
+      "loc-zone-wing",
+      "OVERLAYS"
+    ],
+    [
+      "loc-cx-zone",
+      "loc-floor-level",
+      "GROUPS"
+    ],
+    [
+      "loc-cx-zone",
+      "loc-functional-area",
+      "GROUPS"
+    ],
+    [
+      "loc-cx-zone",
+      "loc-equip-location",
+      "GROUPS"
+    ],
+    [
+      "loc-grid-line",
+      "loc-floor-level",
+      "REFERENCES"
+    ],
+    [
+      "loc-grid-line",
+      "loc-building",
+      "REFERENCES"
+    ],
+    [
+      "loc-grid-line",
+      "loc-equip-location",
+      "LOCATES"
+    ],
+    [
+      "loc-exterior-zone",
+      "loc-building",
+      "SURROUNDS"
+    ],
+    [
+      "loc-laydown-staging",
+      "loc-building",
+      "SERVES"
+    ],
+    [
+      "loc-defect-density",
+      "loc-floor-level",
+      "MEASURED AT"
+    ],
+    [
+      "loc-defect-density",
+      "loc-room-space",
+      "MEASURED AT"
+    ],
+    [
+      "loc-punch-items-per",
+      "loc-room-space",
+      "COUNTED IN"
+    ],
+    [
+      "loc-floor-completion",
+      "loc-floor-level",
+      "TRACKED ON"
+    ],
+    [
+      "loc-location-coverag",
+      "loc-building",
+      "ASSESSED ACROSS"
+    ],
+    [
+      "loc-safety-incident",
+      "loc-work-zone-phase",
+      "MAPPED TO"
+    ],
+    [
+      "loc-firestopping-def",
+      "loc-penetration-open",
+      "INSPECTED AT"
+    ],
+    [
+      "loc-firestopping-def",
+      "loc-core-shaft",
+      "INSPECTED AT"
+    ],
+    [
+      "loc-location-depth",
+      "loc-project-site",
+      "BENCHMARKED FROM"
+    ]
+  ],
+  "verbGlossary": {
+    "CONTAINS": "A parent {target} fully encloses a child location within its geographic or structural boundary; every record attached to the child also belongs to the parent",
+    "BORDERS": "{target} sits at or beyond the property line of the project site, requiring easement or permit access rather than direct containment",
+    "DIVIDES INTO": "{target} or structure is vertically segmented into discrete levels (floors, below-grade, roof) that form the primary vertical organizing hierarchy",
+    "SUBDIVIDES INTO": "{target} is horizontally partitioned into smaller named areas for work organization, scope separation, or occupancy definition",
+    "STACKS BELOW": "A below-grade {target} sits directly beneath an above-grade floor level, sharing structural slab and requiring coordination of waterproofing, MEP risers, and vertical access",
+    "BOUNDED BY": "{target} is physically defined or enclosed by a surface, plenum, or assembly that forms one of its boundaries (walls, ceiling plane, deck above)",
+    "PENETRATED BY": "A vertical element such as a core, {target}, or opening passes through a horizontal location, creating fire-rated separations that must be maintained at every floor",
+    "HOUSES": "{target}, functional area, or space contains a specific piece of installed equipment identified by a unique asset tag for commissioning and operations tracking",
+    "PIERCED BY": "A rated assembly or enclosure has a penetration or opening through it that requires firestopping, sealing, or inspection for code compliance",
+    "SPANS THROUGH": "A vertical element (core, {target}, stair) extends continuously through multiple floor levels, requiring coordinated work sequencing and fire-rated separation at each level",
+    "ENCLOSES": "A regulatory compartment boundary (fire or smoke) wraps around one or more {target}s or spaces, defining where rated construction and life-safety devices are required",
+    "REGULATED AT": "{source}inspection, firestopping, or device requirements at each penetration or opening that crosses it",
+    "OVERLAYS": "A temporary work {target} or phase area is superimposed on a permanent location (floor, zone) to define where active construction, safety restrictions, or ICRA barriers apply at a given time",
+    "GROUPS": "A commissioning {target} aggregates multiple floors, spaces, or equipment locations into a single functional testing boundary organized by mechanical system rather than physical hierarchy",
+    "REFERENCES": "Structural {target} line intersections provide the universal coordinate system used to locate elements, columns, and equipment positions at any floor level within the building",
+    "LOCATES": "{target} line intersection pinpoints the exact plan position of a major equipment piece, column, or building element for survey layout and field verification",
+    "SURROUNDS": "{target} wraps around the outside of a building, organized by facade orientation or function, where enclosure, site work, and landscaping occur",
+    "SERVES": "A laydown or {target} provides material storage and equipment staging that supports construction activities at an adjacent building or structure",
+    "MEASURED AT": "{source}is calculated at {target} level (floor, room) to identify where problems concentrate",
+    "COUNTED IN": "{source}tallies individual deficiency items within {target}-level location for closeout tracking and cross-project benchmarking",
+    "TRACKED ON": "{source}rate metric monitors the percentage of items closed at {target} over time to measure vertical closeout progress",
+    "ASSESSED ACROSS": "A coverage metric evaluates inspection thoroughness across all {target}s within a building to identify uninspected areas",
+    "MAPPED TO": "{source}is geographically associated with a specific work {target} or phase area to identify high-risk areas on site",
+    "INSPECTED AT": "A firestopping deficiency rate is measured at individual penetrations or {target}s where rated assembly integrity must be verified",
+    "BENCHMARKED FROM": "{target} depth utilization is measured starting from the project site root, counting how many hierarchy levels down a company attaches field records"
+  }
+}

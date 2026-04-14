@@ -1,0 +1,167 @@
+{
+  "source": "locations",
+  "target": "workflows-statuses",
+  "edges": [
+    [
+      "loc-project-site",
+      "ws-open",
+      "LOGS AT"
+    ],
+    [
+      "loc-project-site",
+      "ws-closed",
+      "DEMOBILIZES AT"
+    ],
+    [
+      "loc-building",
+      "ws-progress",
+      "ACTIVATES DURING"
+    ],
+    [
+      "loc-building",
+      "ws-inspect-disposit",
+      "INSPECTED VIA"
+    ],
+    [
+      "loc-floor-level",
+      "ws-conforming",
+      "PASSES AT"
+    ],
+    [
+      "loc-floor-level",
+      "ws-deficient",
+      "FLAGGED AT"
+    ],
+    [
+      "loc-floor-level",
+      "ws-ready-review",
+      "STAGED FOR"
+    ],
+    [
+      "loc-below-grade",
+      "ws-hold",
+      "SUSPENDED AT"
+    ],
+    [
+      "loc-zone-wing",
+      "ws-progress",
+      "RELEASED INTO"
+    ],
+    [
+      "loc-zone-wing",
+      "ws-ball-court",
+      "ASSIGNED VIA"
+    ],
+    [
+      "loc-room-space",
+      "ws-deficient",
+      "FLAGGED AT"
+    ],
+    [
+      "loc-room-space",
+      "ws-closed",
+      "SIGNED OFF AT"
+    ],
+    [
+      "loc-wet-area",
+      "ws-inspect-disposit",
+      "INSPECTED VIA"
+    ],
+    [
+      "loc-fire-smoke",
+      "ws-conforming",
+      "PASSES AT"
+    ],
+    [
+      "loc-fire-smoke",
+      "ws-deficient",
+      "FLAGGED AT"
+    ],
+    [
+      "loc-work-zone-phase",
+      "ws-open",
+      "LOGS AT"
+    ],
+    [
+      "loc-work-zone-phase",
+      "ws-overdue",
+      "ESCALATES TO"
+    ],
+    [
+      "loc-cx-zone",
+      "ws-sequential-appr",
+      "ROUTES THROUGH"
+    ],
+    [
+      "loc-cx-zone",
+      "ws-approved",
+      "ACCEPTED AT"
+    ],
+    [
+      "loc-penetration-open",
+      "ws-revise-resubmit",
+      "RETURNED TO"
+    ],
+    [
+      "loc-equip-location",
+      "ws-submit-approve",
+      "FOLLOWS"
+    ],
+    [
+      "loc-laydown-staging",
+      "ws-due-date",
+      "BOUND BY"
+    ],
+    [
+      "loc-defect-density",
+      "ws-status-dwell",
+      "MEASURED BY"
+    ],
+    [
+      "loc-punch-items-per",
+      "ws-overdue-rate",
+      "TRACKED BY"
+    ],
+    [
+      "loc-floor-completion",
+      "ws-workflow-complet",
+      "TRACKED BY"
+    ],
+    [
+      "loc-safety-incident",
+      "ws-escalation-rate",
+      "MEASURED BY"
+    ],
+    [
+      "loc-firestopping-def",
+      "ws-first-pass-appr",
+      "MEASURED BY"
+    ],
+    [
+      "loc-location-coverag",
+      "ws-ball-court-aging",
+      "TRACKED BY"
+    ]
+  ],
+  "verbGlossary": {
+    "LOGS AT": "{source}-based item (observation, punch item, daily log) is first recorded at {target}, initiating tracking for that location.",
+    "DEMOBILIZES AT": "{source} reaches this terminal {target} when all work and inspections are complete, clearing the site for closeout.",
+    "ACTIVATES DURING": "{source} becomes an active work area when its associated tasks or inspections enter this in-progress {target}.",
+    "INSPECTED VIA": "{source} undergoes field inspection through this inspect-and-{target} pattern, producing conforming or deficient results.",
+    "PASSES AT": "{source} or its inspected elements satisfy requirements and receive this conforming disposition {target}.",
+    "FLAGGED AT": "{source} is marked with a deficiency or quality issue at this disposition {target}, requiring corrective action before closeout.",
+    "STAGED FOR": "{source} completed work is queued at {target}, awaiting superintendent or inspector walkthrough.",
+    "SUSPENDED AT": "Work at {target} is paused at this hold status due to unforeseen conditions such as groundwater, contamination, or structural concerns.",
+    "RELEASED INTO": "{source} zone is cleared for trade crews to begin work when the preceding phase reaches this in-progress {target}.",
+    "ASSIGNED VIA": "Responsibility for {target}'s open items is routed to a specific party through this ball-in-court assignment mechanism.",
+    "SIGNED OFF AT": "{source} punch list or inspection items are formally accepted and {target} reaches this closed status.",
+    "ESCALATES TO": "{source} unresolved items automatically transition to this overdue {target} when deadlines are missed.",
+    "ROUTES THROUGH": "{source} commissioning or acceptance package passes through this sequential {target} before sign-off.",
+    "ACCEPTED AT": "{source} zone is formally accepted by the owner or commissioning agent when {target} is reached.",
+    "RETURNED TO": "{source} inspection submission is sent back to this revise-and-resubmit {target} after failing field review.",
+    "FOLLOWS": "{source} equipment or system startup adheres to this submit-and-approve {target} pattern.",
+    "BOUND BY": "{source} scheduled activity is constrained by this due-date {target} component tied to trade sequencing.",
+    "MEASURED BY": "{source}-based metric is quantified using {target} performance measure.",
+    "TRACKED BY": "{source}-based metric is monitored over time using {target} KPI."
+  }
+}

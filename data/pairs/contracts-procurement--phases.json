@@ -1,0 +1,217 @@
+{
+  "source": "contracts-procurement",
+  "target": "phases",
+  "edges": [
+    [
+      "cp-prequalification",
+      "ph-precon-plan",
+      "CONDUCTED DURING"
+    ],
+    [
+      "cp-req-proposal",
+      "ph-bidding",
+      "ISSUED DURING"
+    ],
+    [
+      "cp-bid-package",
+      "ph-estimating",
+      "SCOPED DURING"
+    ],
+    [
+      "cp-bid-package",
+      "ph-bidding",
+      "RELEASED DURING"
+    ],
+    [
+      "cp-proposal-bid",
+      "ph-bidding",
+      "SUBMITTED DURING"
+    ],
+    [
+      "cp-bid-evaluation",
+      "ph-bidding",
+      "EVALUATED DURING"
+    ],
+    [
+      "cp-bid-bond",
+      "ph-bidding",
+      "POSTED DURING"
+    ],
+    [
+      "cp-award-notice",
+      "ph-bidding",
+      "AWARDED DURING"
+    ],
+    [
+      "cp-prime-contract",
+      "ph-precon-plan",
+      "EXECUTED DURING"
+    ],
+    [
+      "cp-prime-contract",
+      "ph-contract-close",
+      "CLOSED AT"
+    ],
+    [
+      "cp-subcontract",
+      "ph-fabrication",
+      "PROCURED FOR"
+    ],
+    [
+      "cp-purchase-order",
+      "ph-delivery",
+      "FULFILLED DURING"
+    ],
+    [
+      "cp-master-service",
+      "ph-precon-plan",
+      "NEGOTIATED DURING"
+    ],
+    [
+      "cp-scope-work",
+      "ph-design",
+      "DEFINED DURING"
+    ],
+    [
+      "cp-scope-work",
+      "ph-submittals",
+      "REFINED DURING"
+    ],
+    [
+      "cp-gen-cond",
+      "ph-site-setup",
+      "ENFORCED FROM"
+    ],
+    [
+      "cp-retainage-terms",
+      "ph-punch",
+      "LEVERAGED DURING"
+    ],
+    [
+      "cp-liquidated-damag",
+      "ph-contract-close",
+      "ENFORCED THROUGH"
+    ],
+    [
+      "cp-allowance",
+      "ph-estimating",
+      "BUDGETED DURING"
+    ],
+    [
+      "cp-allowance",
+      "ph-contract-close",
+      "RECONCILED AT"
+    ],
+    [
+      "cp-perf-bond",
+      "ph-bidding",
+      "FURNISHED DURING"
+    ],
+    [
+      "cp-payment-bond",
+      "ph-contract-close",
+      "RELEASED AT"
+    ],
+    [
+      "cp-insurance-cert",
+      "ph-safety-orient",
+      "VERIFIED DURING"
+    ],
+    [
+      "cp-builders-risk",
+      "ph-site-setup",
+      "BOUND FROM"
+    ],
+    [
+      "cp-warranty",
+      "ph-warranty",
+      "WARRANTED THROUGH"
+    ],
+    [
+      "cp-warranty",
+      "ph-seasonal-cx",
+      "COVERED DURING"
+    ],
+    [
+      "cp-substantial-comp",
+      "ph-punch",
+      "CERTIFIED AFTER"
+    ],
+    [
+      "cp-substantial-comp",
+      "ph-transition",
+      "ENABLES"
+    ],
+    [
+      "cp-final-completion",
+      "ph-contract-close",
+      "ACHIEVED DURING"
+    ],
+    [
+      "cp-closeout-doc",
+      "ph-asbuilt",
+      "COMPILED DURING"
+    ],
+    [
+      "cp-prevailing-wage",
+      "ph-bidding",
+      "STIPULATED DURING"
+    ],
+    [
+      "cp-diversity-dbe",
+      "ph-contract-close",
+      "REPORTED AT"
+    ],
+    [
+      "cp-bid-coverage",
+      "ph-bidding",
+      "MEASURED DURING"
+    ],
+    [
+      "cp-award-cycle-time",
+      "ph-bidding",
+      "MEASURED DURING"
+    ],
+    [
+      "cp-chg-order-rate",
+      "ph-contract-close",
+      "MEASURED AT"
+    ]
+  ],
+  "verbGlossary": {
+    "ACHIEVED DURING": "{source} milestone formally reached within {target} (e.g., final completion achieved during contract closeout).",
+    "AWARDED DURING": "{source} or notice to proceed formally granted to a contractor or supplier within {target} (e.g., award notice awarded during bidding & buyout).",
+    "BOUND FROM": "{source}coverage becomes effective at the start of {target} and remains in force through construction (e.g., builders risk bound from site setup).",
+    "BUDGETED DURING": "{source} allowance or provisional sum established in the budget during {target} (e.g., allowance budgeted during estimating & budgeting).",
+    "CERTIFIED AFTER": "{source} milestone formally certified upon satisfactory completion of {target} (e.g., substantial completion certified after punch list).",
+    "CLOSED AT": "{source} instrument formally concluded and all obligations discharged at {target} (e.g., prime contract closed at contract closeout).",
+    "COMPILED DURING": "{source}deliverables assembled and organized during {target} (e.g., closeout documents compiled during as-built documentation).",
+    "CONDUCTED DURING": "{source} qualification or screening process carried out within {target} (e.g., prequalification conducted during preconstruction planning).",
+    "COVERED DURING": "{source} or surety obligation provides protection throughout {target} (e.g., warranty covers defects discovered during seasonal commissioning).",
+    "DEFINED DURING": "{source} or contract requirements authored and finalized within {target} (e.g., scope of work defined during design development).",
+    "ENABLES": "{source} milestone unlocks {target} to begin (e.g., substantial completion enables facility transition).",
+    "ENFORCED FROM": "{source} terms become actively enforceable starting at {target} (e.g., general conditions enforced from site setup onward).",
+    "ENFORCED THROUGH": "{source} provision remains enforceable throughout and up to {target} (e.g., liquidated damages enforced through contract closeout).",
+    "EVALUATED DURING": "{source}formally reviewed and scored within {target} (e.g., bid evaluation performed during bidding & buyout).",
+    "EXECUTED DURING": "{source} instrument formally signed and made binding within {target} (e.g., prime contract executed during preconstruction planning).",
+    "FULFILLED DURING": "{source} deliveries received and accepted within {target} (e.g., purchase order fulfilled during material ordering & delivery).",
+    "FURNISHED DURING": "{source}provided by the contractor within {target} (e.g., performance bond furnished during bidding & buyout).",
+    "ISSUED DURING": "{source} document formally released to the market within {target} (e.g., RFP issued during bidding & buyout).",
+    "LEVERAGED DURING": "{source} provision used as leverage to compel performance within {target} (e.g., retainage terms leveraged during punch list to ensure defect correction).",
+    "MEASURED AT": "{source} calculated at the conclusion of {target} (e.g., change order rate measured at contract closeout).",
+    "MEASURED DURING": "{source} tracked and reported within {target} (e.g., bid coverage measured during bidding & buyout).",
+    "NEGOTIATED DURING": "{source} terms discussed and agreed upon within {target} (e.g., master service agreement negotiated during preconstruction planning).",
+    "POSTED DURING": "Bid security deposited as a condition of participation within {target} (e.g., bid bond posted during bidding & buyout).",
+    "PROCURED FOR": "{source} or purchase order executed in advance to secure materials or services needed for {target} (e.g., subcontract procured for fabrication & long-lead items).",
+    "RECONCILED AT": "{source} allowance or provisional sum reconciled against actual expenditures at {target} (e.g., allowance reconciled at contract closeout).",
+    "REFINED DURING": "{source}requirements clarified and adjusted based on submittals and shop drawing review within {target} (e.g., scope of work refined during submittals & shop drawings).",
+    "RELEASED AT": "{source}formally discharged at {target} (e.g., payment bond released at contract closeout).",
+    "RELEASED DURING": "{source} package or solicitation distributed to bidders within {target} (e.g., bid package released during bidding & buyout).",
+    "REPORTED AT": "{source}formally documented at {target} (e.g., diversity/DBE participation reported at contract closeout).",
+    "SCOPED DURING": "{source} or scope of work developed and defined within {target} (e.g., bid package scoped during estimating & budgeting).",
+    "STIPULATED DURING": "{source} labor or compliance requirement established as a bid condition within {target} (e.g., prevailing wage stipulated during bidding & buyout).",
+    "SUBMITTED DURING": "Bid, proposal, or closeout deliverable formally delivered within {target} (e.g., proposal/bid submitted during bidding & buyout).",
+    "VERIFIED DURING": "{source}documentation checked within {target} (e.g., insurance certificate verified during safety orientation).",
+    "WARRANTED THROUGH": "{source} or surety obligation extends through the duration of {target} (e.g., warranty warranted through warranty period)."
+  }
+}

@@ -1,0 +1,368 @@
+{
+  "source": "building-elements",
+  "target": "roles",
+  "edges": [
+    [
+      "be-excav",
+      "rl-super",
+      "SUPERVISED BY"
+    ],
+    [
+      "be-backfill",
+      "rl-quality-manager",
+      "TESTED BY"
+    ],
+    [
+      "be-erosion",
+      "rl-safety-officer",
+      "ENFORCED BY"
+    ],
+    [
+      "be-deep-fdn",
+      "rl-foreman-gen",
+      "DRIVEN BY"
+    ],
+    [
+      "be-shallow-fdn",
+      "rl-journeyman-craft",
+      "FORMED BY"
+    ],
+    [
+      "be-fdn-walls",
+      "rl-quality-manager",
+      "INSPECTED BY"
+    ],
+    [
+      "be-grade-beams",
+      "rl-field-engineer",
+      "LAID OUT BY"
+    ],
+    [
+      "be-sog",
+      "rl-foreman-gen",
+      "PLACED BY"
+    ],
+    [
+      "be-water-main",
+      "rl-assistant-super",
+      "COORDINATED BY"
+    ],
+    [
+      "be-storm",
+      "rl-project-engineer",
+      "SIZED BY"
+    ],
+    [
+      "be-site-elec",
+      "rl-safety-manager",
+      "LOCKED OUT BY"
+    ],
+    [
+      "be-columns",
+      "rl-bim-manager-vdc",
+      "MODELED BY"
+    ],
+    [
+      "be-beams",
+      "rl-estimator-chief",
+      "ESTIMATED BY"
+    ],
+    [
+      "be-slabs",
+      "rl-super",
+      "SEQUENCED BY"
+    ],
+    [
+      "be-roof-struct",
+      "rl-safety-manager",
+      "FALL-PROTECTED BY"
+    ],
+    [
+      "be-connections",
+      "rl-quality-manager",
+      "TORQUE-CHECKED BY"
+    ],
+    [
+      "be-stairs",
+      "rl-design-manager",
+      "DESIGNED BY"
+    ],
+    [
+      "be-curtainwall",
+      "rl-bim-manager-vdc",
+      "CLASH-DETECTED BY"
+    ],
+    [
+      "be-windows",
+      "rl-procure-manager",
+      "PROCURED BY"
+    ],
+    [
+      "be-ext-doors",
+      "rl-scheduler-projec",
+      "SCHEDULED BY"
+    ],
+    [
+      "be-masonry-v",
+      "rl-journeyman-craft",
+      "LAID BY"
+    ],
+    [
+      "be-panels",
+      "rl-foreman-gen",
+      "RIGGED BY"
+    ],
+    [
+      "be-roof-mem",
+      "rl-quality-manager",
+      "FLOOD-TESTED BY"
+    ],
+    [
+      "be-skylights",
+      "rl-design-manager",
+      "SPECIFIED BY"
+    ],
+    [
+      "be-ductwork",
+      "rl-bim-manager-vdc",
+      "ROUTED BY"
+    ],
+    [
+      "be-hvac-pipe",
+      "rl-foreman-gen",
+      "HUNG BY"
+    ],
+    [
+      "be-ahu",
+      "rl-cx-agent-cxa",
+      "COMMISSIONED BY"
+    ],
+    [
+      "be-tab",
+      "rl-tab-technician",
+      "BALANCED BY"
+    ],
+    [
+      "be-dom-water",
+      "rl-safety-officer",
+      "PRESSURE-TESTED BY"
+    ],
+    [
+      "be-waste-vent",
+      "rl-assistant-super",
+      "SLEEVED BY"
+    ],
+    [
+      "be-gas-pipe",
+      "rl-safety-manager",
+      "PERMIT-PULLED BY"
+    ],
+    [
+      "be-plumb-fix",
+      "rl-apprentice",
+      "TRIMMED OUT BY"
+    ],
+    [
+      "be-water-htr",
+      "rl-preconstruction",
+      "VALUE-ENGINEERED BY"
+    ],
+    [
+      "be-power-dist",
+      "rl-project-executiv",
+      "APPROVED BY"
+    ],
+    [
+      "be-branch",
+      "rl-journeyman-craft",
+      "PULLED BY"
+    ],
+    [
+      "be-conduit",
+      "rl-bim-manager-vdc",
+      "PENETRATION-COORDINATED BY"
+    ],
+    [
+      "be-lighting",
+      "rl-owner-s",
+      "SELECTED BY"
+    ],
+    [
+      "be-emerg-pwr",
+      "rl-cx-agent-cxa",
+      "LOAD-TESTED BY"
+    ],
+    [
+      "be-sprink-main",
+      "rl-contract-adminis",
+      "CONTRACTED BY"
+    ],
+    [
+      "be-fire-pump",
+      "rl-cx-agent-cxa",
+      "FLOW-TESTED BY"
+    ],
+    [
+      "be-fa",
+      "rl-tech-manager",
+      "PROGRAMMED BY"
+    ],
+    [
+      "be-data",
+      "rl-tech-manager",
+      "CERTIFIED BY"
+    ],
+    [
+      "be-security",
+      "rl-owner-s",
+      "SCOPED BY"
+    ],
+    [
+      "be-bas",
+      "rl-cx-agent-cxa",
+      "INTEGRATED BY"
+    ],
+    [
+      "be-studs",
+      "rl-field-engineer",
+      "STAKED OUT BY"
+    ],
+    [
+      "be-drywall",
+      "rl-assistant-super",
+      "PUNCHED BY"
+    ],
+    [
+      "be-int-doors",
+      "rl-doc-controller",
+      "HARDWARE-SCHEDULED BY"
+    ],
+    [
+      "be-paint",
+      "rl-owner-s",
+      "COLOR-APPROVED BY"
+    ],
+    [
+      "be-tile",
+      "rl-design-manager",
+      "PATTERNED BY"
+    ],
+    [
+      "be-casework",
+      "rl-procure-manager",
+      "SHOP-DRAWN BY"
+    ],
+    [
+      "be-elev-mach",
+      "rl-cx-agent-cxa",
+      "ACCEPTANCE-TESTED BY"
+    ],
+    [
+      "be-paving",
+      "rl-super",
+      "STAGED BY"
+    ],
+    [
+      "be-landscape",
+      "rl-project-manager",
+      "CLOSE-OUT MANAGED BY"
+    ],
+    [
+      "be-site-light",
+      "rl-assistant-projec",
+      "PUNCH-LISTED BY"
+    ],
+    [
+      "be-fencing",
+      "rl-safety-officer",
+      "BARRICADED BY"
+    ],
+    [
+      "be-cooling",
+      "rl-estimator-chief",
+      "LOAD-CALCULATED BY"
+    ],
+    [
+      "be-roof-drain",
+      "rl-project-engineer",
+      "CAPACITY-CHECKED BY"
+    ],
+    [
+      "be-heating",
+      "rl-preconstruction",
+      "BUDGETED BY"
+    ],
+    [
+      "be-gas-svc",
+      "rl-contract-adminis",
+      "UTILITY-COORDINATED BY"
+    ],
+    [
+      "be-spec-floor",
+      "rl-owner-s",
+      "FINISH-SELECTED BY"
+    ]
+  ],
+  "verbGlossary": {
+    "ACCEPTANCE-TESTED BY": "{source} performs formal acceptance tests on installed equipment to confirm it meets contract performance specifications before owner turnover.",
+    "APPROVED BY": "{source} grants formal authorization for {target}'s design, procurement, or installation to proceed.",
+    "BALANCED BY": "{source} performs testing, adjusting, and balancing of air and water systems to achieve design flow rates and temperatures.",
+    "BARRICADED BY": "{source} establishes temporary fencing and perimeter protection to secure the site and maintain public safety during construction.",
+    "BUDGETED BY": "{target} establishes the cost baseline for {source} during preconstruction, allocating funds within the project budget.",
+    "CAPACITY-CHECKED BY": "{target} verifies that {source}'s installed capacity meets engineering calculations and code requirements.",
+    "CERTIFIED BY": "{source} performs final certification testing on installed systems and issues compliance documentation for occupancy or handover.",
+    "CLASH-DETECTED BY": "{source} runs 3D model interference checks to identify spatial conflicts between {target} and adjacent building systems before installation.",
+    "CLOSE-OUT MANAGED BY": "{source} oversees the final installation, warranty documentation, and owner acceptance of {target} during project closeout.",
+    "COLOR-APPROVED BY": "{source} reviews and approves final color selections, samples, and mockups for finish elements before full-scale application.",
+    "COMMISSIONED BY": "{source} performs functional performance testing of mechanical or electrical equipment to verify it operates per design intent.",
+    "CONTRACTED BY": "{target} executes the subcontract agreement and administers the commercial terms for {source}'s installation scope.",
+    "COORDINATED BY": "{source} aligns {target}'s installation with adjacent trades to prevent spatial conflicts and maintain construction sequence.",
+    "DESIGNED BY": "{source} develops the engineering design, calculations, and detail drawings for {target}.",
+    "DRIVEN BY": "{source} oversees pile driving or drilling operations for deep foundation elements, managing equipment and verifying bearing capacity.",
+    "ENFORCED BY": "{source} ensures {target}'s installation and maintenance complies with environmental or safety regulations through field monitoring.",
+    "ESTIMATED BY": "{target} performs quantity takeoffs and cost estimates for {source} during bidding or preconstruction.",
+    "FALL-PROTECTED BY": "{source} develops and enforces fall protection plans specific to elevated structural work, including tie-off points and guardrail systems.",
+    "FINISH-SELECTED BY": "{source} selects the specific material, color, and pattern for a specialty finish element based on design intent and project standards.",
+    "FLOOD-TESTED BY": "{source} conducts ponding or flood tests on completed membrane assemblies to verify watertightness before cover-up.",
+    "FLOW-TESTED BY": "{source} performs hydraulic flow tests on fire protection equipment to verify it meets NFPA flow and pressure requirements.",
+    "FORMED BY": "{source} constructs and sets formwork for cast-in-place concrete elements, establishing geometry and dimensions.",
+    "HARDWARE-SCHEDULED BY": "{source} maintains the hardware schedule that specifies locksets, hinges, closers, and accessories for each door in the project.",
+    "HUNG BY": "{source} installs overhead piping using hangers, supports, and seismic bracing per engineering specifications.",
+    "INSPECTED BY": "{target} performs quality control inspections on {source} at critical hold points during construction.",
+    "INTEGRATED BY": "{target} connects {source} into the building-wide automation system and verifies interoperability with other connected systems.",
+    "LAID BY": "{source} physically sets masonry units with mortar, maintaining coursing, alignment, and joint dimensions per drawings.",
+    "LAID OUT BY": "{source} transfers design dimensions to the field using survey instruments, establishing {target}'s position on site.",
+    "LOAD-CALCULATED BY": "{source} performs engineering load calculations to size equipment and verify it meets peak demand requirements.",
+    "LOAD-TESTED BY": "{source} conducts full-load performance tests on emergency power systems to verify they can sustain critical building loads during an outage.",
+    "LOCKED OUT BY": "{source} implements lockout/tagout procedures on energized electrical systems to protect workers during installation and maintenance.",
+    "MODELED BY": "{target} creates and maintains the 3D BIM model of {source}, including geometry, properties, and coordination data.",
+    "PATTERNED BY": "{source} develops tile layout patterns, grout joint lines, and cut plans to achieve the design intent for floor and wall tile installations.",
+    "PENETRATION-COORDINATED BY": "{source} coordinates all pipe and duct penetrations through structural elements in the 3D model to prevent conflicts during installation.",
+    "PERMIT-PULLED BY": "{source} obtains required permits and coordinates utility company inspections for regulated building systems.",
+    "PLACED BY": "{source} oversees concrete placement operations including delivery coordination, pour sequencing, and finishing for slab elements.",
+    "PRESSURE-TESTED BY": "{source} performs hydrostatic or pneumatic pressure tests on piping systems to verify joint integrity before concealment.",
+    "PROCURED BY": "{target} manages the procurement process for {source} including bidding, vendor selection, purchase orders, and delivery tracking.",
+    "PROGRAMMED BY": "{source} configures the control logic, addressing, and notification sequences for electronic building systems.",
+    "PULLED BY": "{source} installs electrical conductors through conduit and raceway systems to complete branch circuit wiring.",
+    "PUNCH-LISTED BY": "{source} identifies deficiencies and incomplete work on {target} during pre-final and final inspections, documenting items for correction.",
+    "PUNCHED BY": "{source} walks the completed element and identifies deficiencies requiring correction before the area is released for subsequent work.",
+    "RIGGED BY": "{source} plans and executes the crane lifts and rigging operations needed to set heavy precast or prefabricated elements.",
+    "ROUTED BY": "{source} determines the optimal 3D routing path for ductwork through the building, resolving conflicts with structure and other trades in the model.",
+    "SCHEDULED BY": "{source} assigns installation dates and durations for {target} within the project master schedule, establishing sequence and float.",
+    "SCOPED BY": "{source} defines the functional requirements and coverage areas for {target} based on owner operational and security needs.",
+    "SELECTED BY": "{source} chooses specific products, fixtures, or finishes for {target} based on design criteria and owner preferences.",
+    "SEQUENCED BY": "{source} determines the pour sequence and construction phasing for {target} across multiple floors or zones.",
+    "SHOP-DRAWN BY": "{source} manages the shop drawing process for fabricated elements, coordinating between manufacturer details and field dimensions.",
+    "SIZED BY": "{target} performs hydraulic or engineering calculations to determine the required diameter, capacity, or rating of {source}.",
+    "SLEEVED BY": "{source} installs pipe sleeves and penetration preparations through structural elements before concrete placement.",
+    "SPECIFIED BY": "{source} writes the technical specification section for {target}, defining materials, performance criteria, and installation standards.",
+    "STAGED BY": "{source} plans the material staging, traffic control, and phasing for large-area exterior work to maintain site access.",
+    "STAKED OUT BY": "{source} transfers wall layout lines from drawings to the floor slab using laser instruments, establishing framing locations.",
+    "SUPERVISED BY": "{target} directs the day-to-day field work for {source}'s installation, managing crews, equipment, and sequence.",
+    "TESTED BY": "{target} performs material testing (compaction, soil bearing, concrete strength) to verify {source} meets specification requirements.",
+    "TORQUE-CHECKED BY": "{source} verifies structural bolt tension using calibrated wrenches or tension indicators to confirm connections meet design loads.",
+    "TRIMMED OUT BY": "{source} installs the visible finish components of a plumbing or electrical system after wall and ceiling finishes are complete.",
+    "UTILITY-COORDINATED BY": "{source} manages the interface between the project and the utility provider, scheduling connections, inspections, and meter installations.",
+    "VALUE-ENGINEERED BY": "{target} evaluates alternative products or systems for {source} to reduce cost while maintaining performance during preconstruction."
+  }
+}

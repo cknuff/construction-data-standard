@@ -1,0 +1,488 @@
+{
+  "source": "building-elements",
+  "target": "schedule",
+  "edges": [
+    [
+      "be-excav",
+      "sch-detail-activity",
+      "SCHEDULED AS"
+    ],
+    [
+      "be-deep-fdn",
+      "sch-detail-activity",
+      "BROKEN INTO"
+    ],
+    [
+      "be-columns",
+      "sch-detail-activity",
+      "DETAILED IN"
+    ],
+    [
+      "be-slabs",
+      "sch-summary-activity",
+      "ROLLED UP INTO"
+    ],
+    [
+      "be-sog",
+      "sch-milestone",
+      "TRIGGERS"
+    ],
+    [
+      "be-roof-mem",
+      "sch-milestone",
+      "MARKS COMPLETION OF"
+    ],
+    [
+      "be-elev-car",
+      "sch-milestone",
+      "CERTIFIED AT"
+    ],
+    [
+      "be-beams",
+      "sch-activity-identif",
+      "CODED IN"
+    ],
+    [
+      "be-sprink-main",
+      "sch-activity-identif",
+      "IDENTIFIED WITHIN"
+    ],
+    [
+      "be-connections",
+      "sch-duration-progres",
+      "PROGRESS TRACKED BY"
+    ],
+    [
+      "be-drywall",
+      "sch-duration-progres",
+      "MEASURED BY"
+    ],
+    [
+      "be-dom-water",
+      "sch-activity-codes",
+      "TAGGED BY"
+    ],
+    [
+      "be-conduit",
+      "sch-activity-codes",
+      "CLASSIFIED UNDER"
+    ],
+    [
+      "be-fdn-walls",
+      "sch-relationship-typ",
+      "SEQUENCED BY"
+    ],
+    [
+      "be-bg-wp",
+      "sch-relationship-typ",
+      "LINKED THROUGH"
+    ],
+    [
+      "be-amb",
+      "sch-relationship-typ",
+      "PREDECESSOR OF"
+    ],
+    [
+      "be-ext-insul",
+      "sch-lag-lead-time",
+      "LAGGED BEFORE"
+    ],
+    [
+      "be-masonry-v",
+      "sch-lag-lead-time",
+      "CURE TIME IN"
+    ],
+    [
+      "be-paint",
+      "sch-lag-lead-time",
+      "DRY TIME IN"
+    ],
+    [
+      "be-grade-beams",
+      "sch-dependency-class",
+      "CONSTRAINED BY"
+    ],
+    [
+      "be-hvac-pipe",
+      "sch-dependency-class",
+      "DEPENDS ON"
+    ],
+    [
+      "be-windows",
+      "sch-open-ends",
+      "FLAGGED AS OPEN IN"
+    ],
+    [
+      "be-ext-doors",
+      "sch-logic-density",
+      "VALIDATED IN"
+    ],
+    [
+      "be-backfill",
+      "sch-work-calendar",
+      "WEATHER DEPENDENT IN"
+    ],
+    [
+      "be-power-dist",
+      "sch-work-calendar",
+      "SCHEDULED PER"
+    ],
+    [
+      "be-dewater",
+      "sch-schedule-constra",
+      "DATE CONSTRAINED BY"
+    ],
+    [
+      "be-site-elec",
+      "sch-schedule-constra",
+      "UTILITY CONSTRAINED BY"
+    ],
+    [
+      "be-cooling",
+      "sch-calculated-dates",
+      "FORECASTED BY"
+    ],
+    [
+      "be-waste-vent",
+      "sch-data-date",
+      "STATUSED THROUGH"
+    ],
+    [
+      "be-lighting",
+      "sch-baseline-dates",
+      "BASELINED IN"
+    ],
+    [
+      "be-curtainwall",
+      "sch-float-slack",
+      "BUFFERED BY"
+    ],
+    [
+      "be-beams",
+      "sch-critical-path",
+      "DRIVES"
+    ],
+    [
+      "be-deep-fdn",
+      "sch-critical-path",
+      "CRITICAL TO"
+    ],
+    [
+      "be-hvac-ctrl",
+      "sch-path-analysis",
+      "NEAR CRITICAL IN"
+    ],
+    [
+      "be-fa",
+      "sch-path-analysis",
+      "ANALYZED WITHIN"
+    ],
+    [
+      "be-plumb-fix",
+      "sch-earned-schedule",
+      "EARNED VALUE IN"
+    ],
+    [
+      "be-roof-insul",
+      "sch-baseline-schedul",
+      "ORIGINAL DURATION IN"
+    ],
+    [
+      "be-tile",
+      "sch-schedule-update",
+      "UPDATED IN"
+    ],
+    [
+      "be-carpet",
+      "sch-schedule-update",
+      "REFORECASTED IN"
+    ],
+    [
+      "be-act",
+      "sch-look-ahead",
+      "PLANNED IN LOOKAHEAD OF"
+    ],
+    [
+      "be-casework",
+      "sch-look-ahead",
+      "STAGED IN"
+    ],
+    [
+      "be-stairs",
+      "sch-recovery-schedul",
+      "RECOVERED IN"
+    ],
+    [
+      "be-elev-mach",
+      "sch-recovery-schedul",
+      "CRASH SCHEDULED IN"
+    ],
+    [
+      "be-paving",
+      "sch-as-built",
+      "RECORDED IN"
+    ],
+    [
+      "be-landscape",
+      "sch-as-built",
+      "ACTUAL DATES IN"
+    ],
+    [
+      "be-columns",
+      "sch-labor-loading",
+      "CREW LOADED ON"
+    ],
+    [
+      "be-excav",
+      "sch-equip-loading",
+      "EQUIPMENT LOADED ON"
+    ],
+    [
+      "be-curtainwall",
+      "sch-cost-loading",
+      "CASH FLOW TIED TO"
+    ],
+    [
+      "be-sprink-head",
+      "sch-resource-levelin",
+      "LEVELED ACROSS"
+    ],
+    [
+      "be-branch",
+      "sch-resource-levelin",
+      "SMOOTHED WITHIN"
+    ],
+    [
+      "be-erosion",
+      "sch-delay-class",
+      "WEATHER DELAYED IN"
+    ],
+    [
+      "be-panels",
+      "sch-time-impact",
+      "IMPACT ANALYZED ON"
+    ],
+    [
+      "be-gas-svc",
+      "sch-time-impact",
+      "UTILITY DELAY ON"
+    ],
+    [
+      "be-fdn-walls",
+      "sch-retrospective-de",
+      "FORENSICALLY ANALYZED IN"
+    ],
+    [
+      "be-water-main",
+      "sch-time-extension",
+      "EXTENSION CLAIMED ON"
+    ],
+    [
+      "be-misc-metals",
+      "sch-acceleration",
+      "ACCELERATED IN"
+    ],
+    [
+      "be-flashing",
+      "sch-acceleration",
+      "OVERTIME APPLIED TO"
+    ],
+    [
+      "be-standpipe",
+      "sch-dcma-14-point",
+      "ASSESSED IN"
+    ],
+    [
+      "be-grounding",
+      "sch-specification-co",
+      "SPEC COMPLIANT IN"
+    ],
+    [
+      "be-sanitary",
+      "sch-critical-path-2",
+      "CPLI MEASURED ON"
+    ],
+    [
+      "be-dw-ceil",
+      "sch-schedule-levels",
+      "TIERED ACROSS"
+    ],
+    [
+      "be-data",
+      "sch-cpm-tool",
+      "IMPORTED INTO"
+    ],
+    [
+      "be-duct-insul",
+      "sch-schedule-field",
+      "LINKED TO DAILY LOG IN"
+    ],
+    [
+      "be-pipe-insul",
+      "sch-schedule-field",
+      "FIELD TRACKED IN"
+    ],
+    [
+      "be-heating",
+      "sch-schedule-chg",
+      "CHANGE TRACKED ON"
+    ],
+    [
+      "be-countertop",
+      "sch-last-planner",
+      "COMMITTED IN"
+    ],
+    [
+      "be-toilet-acc",
+      "sch-last-planner",
+      "WEEKLY PLANNED IN"
+    ],
+    [
+      "be-spec-floor",
+      "sch-takt-time",
+      "ZONE PACED IN"
+    ],
+    [
+      "be-storm",
+      "sch-linear-schedulin",
+      "LINEARLY SCHEDULED IN"
+    ],
+    [
+      "be-fencing",
+      "sch-linear-schedulin",
+      "STATION SEQUENCED IN"
+    ],
+    [
+      "be-roof-struct",
+      "sch-4d-5d-bim",
+      "4D SIMULATED IN"
+    ],
+    [
+      "be-slabs",
+      "sch-4d-5d-bim",
+      "VISUALLY SEQUENCED IN"
+    ],
+    [
+      "be-emerg-pwr",
+      "sch-schedule-perf",
+      "PERFORMANCE INDEXED ON"
+    ],
+    [
+      "be-shallow-fdn",
+      "sch-baseline-executi",
+      "BEI TRACKED ON"
+    ],
+    [
+      "be-gas-pipe",
+      "sch-float-erosion",
+      "FLOAT ERODING ON"
+    ],
+    [
+      "be-bas",
+      "sch-milestone-adhere",
+      "ADHERENCE RATED ON"
+    ],
+    [
+      "be-sidewalks",
+      "sch-critical-activit",
+      "CRITICAL RATIO ON"
+    ],
+    [
+      "be-site-light",
+      "sch-percent-plan",
+      "PPC SCORED ON"
+    ],
+    [
+      "be-specialty-sys",
+      "sch-out-sequence",
+      "OUT OF SEQUENCE ON"
+    ],
+    [
+      "be-skylights",
+      "sch-schedule-health",
+      "HEALTH SCORED ON"
+    ]
+  ],
+  "verbGlossary": {
+    "SCHEDULED AS": "{source} is represented as one or more detail activities in {target}",
+    "BROKEN INTO": "{source} is decomposed into multiple detail activities to capture its installation sequence",
+    "DETAILED IN": "{source} has specific start, finish, and duration defined at {target} level",
+    "ROLLED UP INTO": "{source}d under a summary {target} or WBS node for reporting",
+    "TRIGGERS": "{source}of {target} creates a milestone event that enables downstream work to begin",
+    "MARKS COMPLETION OF": "{source}'s final acceptance is the defining event for a contractual or phase {target}",
+    "CERTIFIED AT": "{source} must pass regulatory certification at a defined {target} before occupancy or use",
+    "CODED IN": "{source} is assigned a unique activity ID within {target}'s identification system",
+    "IDENTIFIED WITHIN": "{source}'s schedule activities carry identification codes that tie back to {target} scope",
+    "PROGRESS TRACKED BY": "{source}'s percent complete and remaining duration are monitored through duration and progress tracking",
+    "MEASURED BY": "{source}'s installed quantity or completion status is measured against its planned duration",
+    "TAGGED BY": "{source}'s activities are assigned {target} codes for filtering, sorting, and reporting",
+    "CLASSIFIED UNDER": "{source} is categorized by {target} codes that identify its trade, area, or system",
+    "SEQUENCED BY": "{source}'s position in the construction sequence is defined by relationship types (FS, SS, FF, SF)",
+    "LINKED THROUGH": "{source} is connected to predecessor and successor elements vi{target} logic relationships",
+    "PREDECESSOR OF": "{source} must be substantially complete before dependent enclosure or finish work can start",
+    "LAGGED BEFORE": "A mandatory wait period (lag) is inserted after {target} before the next trade can proceed",
+    "CURE TIME IN": "{source} requires a curing or setting period represented as lag time in {target}",
+    "DRY TIME IN": "{source} needs a drying interval captured as lag time before subsequent finishes can be applied",
+    "CONSTRAINED BY": "{source}'s start or finish is restricted by a mandatory, discretionary, or external dependency",
+    "DEPENDS ON": "{source} cannot begin until a prerequisite element or condition is satisfied per {target} logic",
+    "FLAGGED AS OPEN IN": "{source} has a missing successor or predecessor, creating an open-end logic gap in {target}",
+    "VALIDATED IN": "{source}'s {target} logic is checked against logic density requirements to ensure adequate ties",
+    "WEATHER DEPENDENT IN": "{source}'s {target} is governed by a seasonal or weather-sensitive work calendar",
+    "SCHEDULED PER": "{source}'s work dates follow the assigned work calendar including shift patterns and holidays",
+    "DATE CONSTRAINED BY": "{source} has a hard start or finish date imposed by {target}",
+    "UTILITY CONSTRAINED BY": "{source}'s start is held by an external utility connection or approval constraint date",
+    "FORECASTED BY": "{source}'s projected start and finish are computed from calculated early and late dates",
+    "STATUSED THROUGH": "{source}'s progress has been recorded through the current data date in {target} update",
+    "BASELINED IN": "{source}'s planned start and finish are locked in the approved {target} dates for variance tracking",
+    "BUFFERED BY": "{source} has {target} or slack that absorbs delays without affecting the project completion date",
+    "DRIVES": "{source}'s activities sit on {target} and directly control project completion timing",
+    "CRITICAL TO": "{source} is on {target} with zero float, making any delay a project-level delay",
+    "NEAR CRITICAL IN": "{source}'s {target} is low enough that it appears in near-critical path analysis as a risk",
+    "ANALYZED WITHIN": "{source}'s {target} paths are examined through longest path or near-critical analysis methods",
+    "EARNED VALUE IN": "{source}'s physical progress is converted to earned {target} metrics for objective measurement",
+    "ORIGINAL DURATION IN": "{source}'s first-approved duration is captured in {target} for future comparison",
+    "UPDATED IN": "{source}'s actual start, actual finish, or remaining duration is revised in {target} cycle",
+    "REFORECASTED IN": "{source}'s projected dates are recalculated in {target} update based on current progress",
+    "PLANNED IN LOOKAHEAD OF": "{source}'s near-term installation is detailed in the rolling look-ahead {target}",
+    "STAGED IN": "{source}'s material delivery and crew mobilization are coordinated in the look-ahead {target}",
+    "RECOVERED IN": "{source}'s delayed activities are re-sequenced or compressed in a recovery {target} to regain time",
+    "CRASH SCHEDULED IN": "{source}'s duration is aggressively compressed in the recovery {target} using added resources",
+    "RECORDED IN": "{source}'s actual installation dates and durations are documented in the as-built {target} record",
+    "ACTUAL DATES IN": "{source}'s real start and finish dates are captured in the as-built {target} for closeout",
+    "CREW LOADED ON": "{source}are assigned to {target}'s activities for resource planning",
+    "EQUIPMENT LOADED ON": "{source}plant resources are assigned to {target}'s schedule activities",
+    "CASH FLOW TIED TO": "{source}'s payment draws and cost forecasts are linked to its {target} dates",
+    "LEVELED ACROSS": "{source}'s activities are shifted within float to resolve resource over-allocation across {target}",
+    "SMOOTHED WITHIN": "{source}'s resource demand is evened out through {target} timing adjustments during leveling",
+    "WEATHER DELAYED IN": "{source}'s work was halted by weather and the delay is categorized as excusable in {target}",
+    "IMPACT ANALYZED ON": "{source}quantifies how a change or delay to {target} shifts the project completion",
+    "UTILITY DELAY ON": "A delay to {target} caused by external utility availability is analyzed for schedule impact",
+    "FORENSICALLY ANALYZED IN": "{source}'s actual vs planned performance is reconstructed in a retrospective delay analysis",
+    "EXTENSION CLAIMED ON": "{source}is filed citing delays to {target}'s installation",
+    "ACCELERATED IN": "{source}'s remaining work is compressed through added crews, overtime, or re-sequencing",
+    "OVERTIME APPLIED TO": "{source}are applied to {target}'s activities to recover lost schedule time",
+    "ASSESSED IN": "{source}'s {target} activities are evaluated as part of the DCMA 14-point quality assessment",
+    "SPEC COMPLIANT IN": "{source}'s {target} detail meets the specification requirements for granularity and logic",
+    "CPLI MEASURED ON": "{source}is calculated including {target}'s contribution to the critical path",
+    "TIERED ACROSS": "{source} appears at multiple {target} levels from summary (L1) down to detail (L4)",
+    "IMPORTED INTO": "{source}'s {target} data is brought into the CPM tool (P6, MS Project) from external sources",
+    "LINKED TO DAILY LOG IN": "{source}'s {target} activities are connected to daily field reports for plan-vs-actual tracking",
+    "FIELD TRACKED IN": "{source}'s installation progress is monitored through {target}-to-field linkage with daily logs",
+    "CHANGE TRACKED ON": "Date shifts, duration changes, or logic edits affecting {target} are captured in change tracking",
+    "COMMITTED IN": "The installing trade commits to completing {target}'s work in the Last Planner weekly plan",
+    "WEEKLY PLANNED IN": "{source}'s installation is planned at a weekly granularity through the Last Planner System",
+    "ZONE PACED IN": "{source} is installed at a fixed production rate per zone following takt time planning",
+    "LINEARLY SCHEDULED IN": "{source}'s repetitive installation along a route is planned using linear scheduling methods",
+    "STATION SEQUENCED IN": "{source} is {target}d by station or chainage in a linear scheduling model",
+    "4D SIMULATED IN": "{source}'s installation sequence is animated in a 4D BIM model to visualize constructability",
+    "VISUALLY SEQUENCED IN": "{source}'s placement is simulated in 4D/5D BIM to validate {target} logic and spatial conflicts",
+    "PERFORMANCE INDEXED ON": "{source}'s {target} progress is measured as a ratio against baseline to produce a performance index",
+    "BEI TRACKED ON": "{source}tracks how closely {target}'s actual dates match the baseline plan",
+    "FLOAT ERODING ON": "{source}'s available {target} is declining across successive schedule updates, signaling emerging risk",
+    "ADHERENCE RATED ON": "{source}'s {target} hit rate is calculated as a percentage of on-time completions",
+    "CRITICAL RATIO ON": "{source}'s activities are evaluated against the critical {target} ratio to gauge schedule risk concentration",
+    "PPC SCORED ON": "{source}'s weekly {target} completions are measured as Percent Plan Complete in lean tracking",
+    "OUT OF SEQUENCE ON": "{source}'s activities are progressing outside the planned logic sequence, creating {target} anomalies",
+    "HEALTH SCORED ON": "{source}'s {target} activities contribute to the overall schedule health score assessment"
+  }
+}

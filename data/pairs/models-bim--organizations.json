@@ -1,0 +1,146 @@
+{
+  "source": "models-bim",
+  "target": "organizations",
+  "edges": [
+    [
+      "bim-3d-building-info",
+      "org-architect-record",
+      "AUTHORED BY"
+    ],
+    [
+      "bim-3d-building-info",
+      "org-struct-engineer",
+      "AUTHORED BY"
+    ],
+    [
+      "bim-3d-building-info",
+      "org-mep-engineer",
+      "AUTHORED BY"
+    ],
+    [
+      "bim-federated-model",
+      "org-gen-contr-gc",
+      "ASSEMBLED BY"
+    ],
+    [
+      "bim-federated-model",
+      "org-design-builder",
+      "ASSEMBLED BY"
+    ],
+    [
+      "bim-5d-model-cost",
+      "org-gen-contr-gc",
+      "ESTIMATED BY"
+    ],
+    [
+      "bim-5d-model-cost",
+      "org-fabricator",
+      "PRICED FROM"
+    ],
+    [
+      "bim-4d-model",
+      "org-gen-contr-gc",
+      "SCHEDULED BY"
+    ],
+    [
+      "bim-4d-model",
+      "org-const-manager-at",
+      "SCHEDULED BY"
+    ],
+    [
+      "bim-clash-detection",
+      "org-sub-trade",
+      "FLAGGED FOR"
+    ],
+    [
+      "bim-clash-detection",
+      "org-mep-engineer",
+      "FLAGGED FOR"
+    ],
+    [
+      "bim-coord-issue",
+      "org-sub-trade",
+      "ASSIGNED TO"
+    ],
+    [
+      "bim-bim-coord",
+      "org-gen-contr-gc",
+      "FACILITATED BY"
+    ],
+    [
+      "bim-bim-coord",
+      "org-sub-trade",
+      "ATTENDED BY"
+    ],
+    [
+      "bim-as-built-model",
+      "org-gen-contr-gc",
+      "DELIVERED BY"
+    ],
+    [
+      "bim-as-built-model",
+      "org-institutional-ow",
+      "DELIVERED TO"
+    ],
+    [
+      "bim-quantity-takeoff",
+      "org-fabricator",
+      "EXTRACTED BY"
+    ],
+    [
+      "bim-model-based",
+      "org-fabricator",
+      "FABRICATED BY"
+    ],
+    [
+      "bim-model-based",
+      "org-struct-engineer",
+      "DETAILED BY"
+    ],
+    [
+      "bim-point-cloud",
+      "org-special-insp",
+      "SURVEYED BY"
+    ],
+    [
+      "bim-drone-capture",
+      "org-gen-contr-gc",
+      "COMMISSIONED BY"
+    ],
+    [
+      "bim-digital-twin",
+      "org-cx-agent-cxa",
+      "COMMISSIONED BY"
+    ],
+    [
+      "bim-digital-twin",
+      "org-private-develope",
+      "OPERATED BY"
+    ],
+    [
+      "bim-const-photo",
+      "org-self-performing",
+      "CAPTURED BY"
+    ]
+  ],
+  "verbGlossary": {
+    "AUTHORED BY": "{target} creates and maintains {source} as its design originator",
+    "ASSEMBLED BY": "{source} merges discipline models into a single federated coordination model",
+    "ESTIMATED BY": "{source} links cost data to model elements for 5D cost estimation",
+    "PRICED FROM": "{source} uses model quantities to generate pricing for fabrication scope",
+    "SCHEDULED BY": "{source} links schedule activities to model elements for 4D simulation",
+    "FLAGGED FOR": "{source} result routed to {target} for resolution",
+    "ASSIGNED TO": "{source} assigned to a specific trade {target} to resolve",
+    "FACILITATED BY": "{source} leads and runs BIM coordination meetings",
+    "ATTENDED BY": "{source} participates in BIM coordination meetings to resolve conflicts",
+    "DELIVERED BY": "{source} produces the final as-built model at project closeout",
+    "DELIVERED TO": "As-built model handed over to the owner {target} for facility operations",
+    "EXTRACTED BY": "{source} extracts material quantities from {target} for fabrication planning",
+    "FABRICATED BY": "{source} uses model-based shop drawings to manufacture building components",
+    "DETAILED BY": "{target} produces detailed connection and assembly drawings from {source}",
+    "SURVEYED BY": "{source} performs laser scanning to produce point cloud data for verification",
+    "COMMISSIONED BY": "{source} procures or initiates a reality capture or digital twin effort",
+    "OPERATED BY": "{source} uses the digital twin for ongoing facility management and monitoring",
+    "CAPTURED BY": "{source} takes construction photos documenting field conditions"
+  }
+}

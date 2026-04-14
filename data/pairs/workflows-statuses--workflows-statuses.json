@@ -1,0 +1,241 @@
+{
+  "source": "workflows-statuses",
+  "target": "workflows-statuses",
+  "edges": [
+    [
+      "ws-draft",
+      "ws-submitted",
+      "TRANSITIONS TO"
+    ],
+    [
+      "ws-pending",
+      "ws-under-review",
+      "ADVANCES TO"
+    ],
+    [
+      "ws-under-review",
+      "ws-approved",
+      "RESOLVES AS"
+    ],
+    [
+      "ws-under-review",
+      "ws-approved-as",
+      "RESOLVES AS"
+    ],
+    [
+      "ws-rejected",
+      "ws-revise-resubmit",
+      "INITIATES"
+    ],
+    [
+      "ws-revise-resubmit",
+      "ws-submitted",
+      "CYCLES BACK TO"
+    ],
+    [
+      "ws-open",
+      "ws-progress",
+      "TRANSITIONS TO"
+    ],
+    [
+      "ws-progress",
+      "ws-closed",
+      "TRANSITIONS TO"
+    ],
+    [
+      "ws-progress",
+      "ws-void",
+      "CANCELS INTO"
+    ],
+    [
+      "ws-progress",
+      "ws-hold",
+      "PAUSES INTO"
+    ],
+    [
+      "ws-due-date",
+      "ws-overdue",
+      "TRIGGERS WHEN EXCEEDED"
+    ],
+    [
+      "ws-overdue",
+      "ws-escalation",
+      "TRIGGERS"
+    ],
+    [
+      "ws-escalation",
+      "ws-delegation",
+      "MAY INVOKE"
+    ],
+    [
+      "ws-delegation",
+      "ws-ball-court",
+      "REASSIGNS"
+    ],
+    [
+      "ws-appr-chain",
+      "ws-workflow-step",
+      "COMPOSED OF"
+    ],
+    [
+      "ws-workflow-step",
+      "ws-workflow-respons",
+      "PRODUCES"
+    ],
+    [
+      "ws-dist-list",
+      "ws-workflow-respons",
+      "NOTIFIED BY"
+    ],
+    [
+      "ws-sequential-appr",
+      "ws-appr-chain",
+      "STRUCTURES"
+    ],
+    [
+      "ws-parallel-review",
+      "ws-appr-chain",
+      "STRUCTURES"
+    ],
+    [
+      "ws-submit-approve",
+      "ws-pending",
+      "TRANSITIONS TO"
+    ],
+    [
+      "ws-review-respond",
+      "ws-response-time",
+      "CONSTRAINED BY"
+    ],
+    [
+      "ws-inspect-disposit",
+      "ws-ready-review",
+      "BEGINS WITH"
+    ],
+    [
+      "ws-ready-review",
+      "ws-conforming",
+      "RESOLVES AS"
+    ],
+    [
+      "ws-ready-review",
+      "ws-not-applicable",
+      "EXCLUDES VIA"
+    ],
+    [
+      "ws-deficient",
+      "ws-open",
+      "REOPENS AS"
+    ],
+    [
+      "ws-create-close",
+      "ws-closed",
+      "TERMINATES AT"
+    ],
+    [
+      "ws-chg-event",
+      "ws-multi-stage",
+      "GOVERNED BY"
+    ],
+    [
+      "ws-multi-stage",
+      "ws-budget-stage",
+      "DECOMPOSES INTO"
+    ],
+    [
+      "ws-budget-stage",
+      "ws-cost-stage",
+      "PRECEDES"
+    ],
+    [
+      "ws-cost-stage",
+      "ws-revenue-stage",
+      "PRECEDES"
+    ],
+    [
+      "ws-mapped-status",
+      "ws-chg-event",
+      "NORMALIZES"
+    ],
+    [
+      "ws-e-signature-req",
+      "ws-submitted",
+      "OVERLAYS"
+    ],
+    [
+      "ws-e-signature-ball",
+      "ws-ball-court",
+      "MIRRORS"
+    ],
+    [
+      "ws-average-appr",
+      "ws-appr-chain",
+      "MEASURES EFFICIENCY OF"
+    ],
+    [
+      "ws-overdue-rate",
+      "ws-overdue",
+      "QUANTIFIES"
+    ],
+    [
+      "ws-first-pass-appr",
+      "ws-workflow-complet",
+      "COMPLEMENTS"
+    ],
+    [
+      "ws-resubmission-rat",
+      "ws-revise-resubmit",
+      "MEASURES RATE OF"
+    ],
+    [
+      "ws-ball-court-aging",
+      "ws-ball-court",
+      "MEASURES DWELL OF"
+    ],
+    [
+      "ws-status-dwell",
+      "ws-workflow-step",
+      "MEASURES DURATION OF"
+    ],
+    [
+      "ws-escalation-rate",
+      "ws-escalation",
+      "MEASURES FREQUENCY OF"
+    ]
+  ],
+  "verbGlossary": {
+    "TRANSITIONS TO": "{target} moves to the next state in the lifecycle sequence when the required action or condition is met; represents the standard forward progression through a workflow",
+    "ADVANCES TO": "A pending or waiting state progresses to an active evaluation state when the responsible party begins their review; represents the start of deliberate action on a queued item",
+    "RESOLVES AS": "A review or evaluation state resolves into a terminal decision or disposition; represents the outcome of deliberation by the responsible party",
+    "INITIATES": "{source}initiates a corrective {target} that sends the record back for revision; represents the start of a rework cycle within the approval process",
+    "CYCLES BACK TO": "A revision or rework state returns the record to a previous submission point for another pass through the review {target}; represents the loop in iterative approval",
+    "CANCELS INTO": "{source} is cancelled and moved to a void state when the work is abandoned or invalidated; represents permanent {target} termination without completion",
+    "PAUSES INTO": "{source} is suspended into a hold state when an external dependency or decision blocks further progress; represents a temporary {target} stall",
+    "TRIGGERS WHEN EXCEEDED": "A date-based threshold {target}s a computed status when the current date passes the deadline without the expected state transition; represents an automatic escalation condition",
+    "TRIGGERS": "One {target} event or condition directly causes another workflow action to fire; represents a cause-and-effect chain within the process",
+    "MAY INVOKE": "{source}may optionally invoke a delegation or reassignment when the original responsible party remains unresponsive; represents a conditional fallback {target}",
+    "REASSIGNS": "A delegation action transfers responsibility and updates {target} to a new party; represents a change of accountability within the workflow",
+    "COMPOSED OF": "A multi-step {target} chain is composed of individual workflow steps arranged in sequence or parallel; represents the structural decomposition of a review process",
+    "PRODUCES": "{target} produces a formal response record when the assigned party takes action; represents the output of a review decision at a single stage",
+    "NOTIFIED BY": "{source}receives notifications when {target} response is recorded; represents the information broadcast that keeps stakeholders informed without requiring their action",
+    "STRUCTURES": "{target} pattern defines the structural arrangement of an approval chain; represents how reviewers are organized sequentially or in parallel within the process",
+    "CONSTRAINED BY": "{target} pattern is constrained by a time-bound requirement that governs how quickly the responsible party must respond; represents the contractual pacing control on review cycles",
+    "BEGINS WITH": "{target} pattern starts with a specific status as its entry point; represents the initial state that kicks off the pattern's lifecycle",
+    "TERMINATES AT": "{target} pattern ends at a specific terminal status; represents the final state that closes out the pattern's lifecycle",
+    "REOPENS AS": "A deficient or failed disposition reopens the record as an active item requiring corrective action; represents the rework {target} from field inspection findings",
+    "EXCLUDES VIA": "{source}determines a record or checklist item is irrelevant and removes it from the active {target} via a not-applicable disposition; represents scope exclusion during field review",
+    "DECOMPOSES INTO": "A multi-stage financial {target} decomposes into independent approval stages that each track their own status; represents the parallel financial review structure",
+    "GOVERNED BY": "{source}is governed by the multi-stage financial review pattern that defines its progression; represents the pattern that controls the composite {target}",
+    "PRECEDES": "One financial {target} stage must reach approval before the next stage can proceed; represents the sequencing of budget, cost, and revenue decisions",
+    "NORMALIZES": "A mapped {target} translates domain-specific status values into a common vocabulary for cross-record comparison; represents the standardization layer across different workflow types",
+    "OVERLAYS": "{target} request runs as a parallel workflow that overlays the standard approval process; represents an independent but synchronized signing track",
+    "MIRRORS": "The e-signature {target} mirrors the construction ball-in-court concept within the digital signing workflow; represents the parallel accountability tracking for document execution",
+    "MEASURES EFFICIENCY OF": "{source}measure calculates the time efficiency of {target} chain by averaging cycle times across submissions; represents a workflow performance benchmark",
+    "QUANTIFIES": "{source}measure quantifies the frequency or magnitude of a specific {target} condition; represents a count-based metric for process monitoring",
+    "COMPLEMENTS": "{source}measures are mathematical complements that together account for the full outcome space; one measures success rate while the other measures the corresponding completion benchmark",
+    "MEASURES RATE OF": "{source}measure calculates the percentage of records reaching a specific outcome; represents a ratio metric for {target} quality assessment",
+    "MEASURES DWELL OF": "{source}measure calculates how long responsibility sits with the current party before action; represents an accountability metric for {target} responsiveness",
+    "MEASURES DURATION OF": "{source}measure calculates the average time spent in each {target}; represents a bottleneck identification metric across process stages",
+    "MEASURES FREQUENCY OF": "{source}measure calculates how often a specific {target} event occurs relative to total actionable items; represents an exception rate metric for process friction"
+  }
+}

@@ -1,0 +1,155 @@
+{
+  "source": "permits-regulatory",
+  "target": "risk",
+  "edges": [
+    [
+      "pr-building-permit",
+      "rk-reg-permit-risk",
+      "GOVERNS"
+    ],
+    [
+      "pr-building-permit",
+      "rk-risk-trigger",
+      "TRIGGERS WHEN DELAYED"
+    ],
+    [
+      "pr-demolition-permi",
+      "rk-enviro-risk",
+      "GATES"
+    ],
+    [
+      "pr-enviro-permit",
+      "rk-enviro-risk",
+      "MITIGATES"
+    ],
+    [
+      "pr-stormwater-permi",
+      "rk-enviro-risk",
+      "CONTROLS"
+    ],
+    [
+      "pr-zoning-appr",
+      "rk-schedule-risk",
+      "CONSTRAINS"
+    ],
+    [
+      "pr-variance-special",
+      "rk-likelihood-asses",
+      "ELEVATES"
+    ],
+    [
+      "pr-building-departm",
+      "rk-design-risk",
+      "SCREENS FOR"
+    ],
+    [
+      "pr-fire-marshal",
+      "rk-safety-risk",
+      "SCREENS FOR"
+    ],
+    [
+      "pr-ahj-insp",
+      "rk-const-execution",
+      "VERIFIES"
+    ],
+    [
+      "pr-ahj-insp",
+      "rk-risk-trigger",
+      "TRIGGERS WHEN FAILED"
+    ],
+    [
+      "pr-special-insp",
+      "rk-geotechnical-ris",
+      "VERIFIES"
+    ],
+    [
+      "pr-third-party",
+      "rk-residual-risk",
+      "REDUCES"
+    ],
+    [
+      "pr-cert-occupancy",
+      "rk-reg-permit-risk",
+      "RESOLVES"
+    ],
+    [
+      "pr-cert-occupancy",
+      "rk-risk-register",
+      "CLOSES ITEMS IN"
+    ],
+    [
+      "pr-temp-cert",
+      "rk-residual-risk",
+      "DEFERS"
+    ],
+    [
+      "pr-osha-notificatio",
+      "rk-safety-risk",
+      "DOCUMENTS"
+    ],
+    [
+      "pr-osha-notificatio",
+      "rk-incident-rate",
+      "FEEDS"
+    ],
+    [
+      "pr-site-safety-plan",
+      "rk-mitigation-actio",
+      "CODIFIES"
+    ],
+    [
+      "pr-labor-comp",
+      "rk-labor-risk",
+      "MITIGATES"
+    ],
+    [
+      "pr-permit-status",
+      "rk-schedule-risk",
+      "SIGNALS"
+    ],
+    [
+      "pr-reg-hold",
+      "rk-schedule-float",
+      "ERODES"
+    ],
+    [
+      "pr-insp-pass-rate",
+      "rk-risk-score",
+      "INFORMS"
+    ],
+    [
+      "pr-permit-cycle",
+      "rk-schedule-buffer",
+      "CONSUMES"
+    ],
+    [
+      "pr-comp-doc",
+      "rk-risk-mitigation",
+      "DRIVES"
+    ]
+  ],
+  "verbGlossary": {
+    "CLOSES ITEMS IN": "{source} milestone formally retires open entries in {target} tracking structure upon regulatory acceptance (e.g., certificate of occupancy closes items in risk register)",
+    "CODIFIES": "{source} document formalizes {target} countermeasures into an enforceable plan of record (e.g., site safety plan codifies mitigation actions into field protocols)",
+    "CONSTRAINS": "{source} dependency restricts the project schedule by blocking downstream work until regulatory approval is obtained (e.g., zoning approval constrains schedule {target} by delaying site mobilization)",
+    "CONSUMES": "{source} processing duration eats into available project time reserves (e.g., permit cycle time consumes schedule buffer days)",
+    "CONTROLS": "{source} permit establishes enforceable controls that limit {target} to an environmental or site risk (e.g., stormwater permit controls environmental risk through mandated BMPs)",
+    "DEFERS": "Temporary regulatory approval postpones full {target} resolution to a later date, leaving residual exposure (e.g., temporary certificate of occupancy defers residual risk until final punch-out)",
+    "DOCUMENTS": "{source} filing creates an official record of {target} event for compliance and tracking purposes (e.g., OSHA notification documents safety risk incidents on the jobsite)",
+    "DRIVES": "Compliance metric motivates or compels progress on {target} reduction activities (e.g., compliance document completeness drives risk mitigation completion rate)",
+    "ELEVATES": "{source} exception raises the assessed probability that {target} will materialize on the project (e.g., variance / special exception elevates likelihood assessment for regulatory challenges)",
+    "ERODES": "{source} delay progressively diminishes available schedule flexibility on critical and near-critical paths (e.g., regulatory hold duration erodes schedule float)",
+    "FEEDS": "{source} data provides quantitative input to {target} metric calculation (e.g., OSHA notification feeds incident rate TRIR)",
+    "GATES": "{source} acts as a mandatory prerequisite that blocks activity start until the associated {target} is formally addressed (e.g., demolition permit gates environmental risk by requiring abatement verification)",
+    "GOVERNS": "{source} establishes the regulatory authority and conditions that define the boundaries of {target} category (e.g., building permit governs regulatory and permit risk for the project)",
+    "INFORMS": "Inspection or permit metric provides evidence-based input to {target} severity evaluation (e.g., inspection pass rate informs risk score for construction quality)",
+    "MITIGATES": "{source} or compliance action reduces the probability or impact of {target} (e.g., environmental permit mitigates environmental risk through mandated controls)",
+    "REDUCES": "Independent verification lowers the residual {target} remaining after primary controls are applied (e.g., third-party testing reduces residual risk through independent validation)",
+    "RESOLVES": "{source} milestone formally eliminates an open {target} by confirming all conditions have been satisfied (e.g., certificate of occupancy resolves regulatory and permit risk)",
+    "SCREENS FOR": "Plan review process examines submissions to identify and flag potential {target}s before construction begins (e.g., building department plan review screens for design risk in submitted drawings)",
+    "SIGNALS": "{source} or inspection metric serves as an early warning indicator that {target} is emerging or worsening (e.g., permit status signals schedule risk when approvals stall)",
+    "TRIGGERS WHEN DELAYED": "{source} delay activates {target} trigger event that may cascade into schedule or cost impacts (e.g., building permit triggers risk when delayed past planned mobilization date)",
+    "TRIGGERS WHEN FAILED": "{source} activates {target} trigger requiring corrective action before work can proceed (e.g., AHJ inspection triggers risk when failed, halting work until re-inspection)",
+    "VERIFIES": "{source} confirms that construction execution meets code requirements, validating {target} controls are effective (e.g., special inspection verifies geotechnical risk controls through structural testing)"
+  }
+}

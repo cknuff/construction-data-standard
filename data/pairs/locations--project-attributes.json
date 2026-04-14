@@ -1,0 +1,153 @@
+{
+  "source": "locations",
+  "target": "project-attributes",
+  "edges": [
+    [
+      "loc-project-site",
+      "pa-address",
+      "GEOCODED TO"
+    ],
+    [
+      "loc-project-site",
+      "pa-site-area",
+      "BOUNDED BY"
+    ],
+    [
+      "loc-project-site",
+      "pa-climate-zone",
+      "SITED WITHIN"
+    ],
+    [
+      "loc-project-site",
+      "pa-seismic-design",
+      "SITED WITHIN"
+    ],
+    [
+      "loc-project-site",
+      "pa-region",
+      "SITED WITHIN"
+    ],
+    [
+      "loc-building",
+      "pa-gross-building",
+      "MEASURED AS"
+    ],
+    [
+      "loc-building",
+      "pa-building-height",
+      "MEASURED AS"
+    ],
+    [
+      "loc-building",
+      "pa-const-type",
+      "CLASSIFIED BY"
+    ],
+    [
+      "loc-floor-level",
+      "pa-number-stories",
+      "COUNTED TOWARD"
+    ],
+    [
+      "loc-below-grade",
+      "pa-number-stories-2",
+      "COUNTED TOWARD"
+    ],
+    [
+      "loc-roof-level",
+      "pa-building-height",
+      "DEFINES"
+    ],
+    [
+      "loc-room-space",
+      "pa-number-units",
+      "COUNTED TOWARD"
+    ],
+    [
+      "loc-room-space",
+      "pa-occupancy-group",
+      "CLASSIFIED BY"
+    ],
+    [
+      "loc-functional-area",
+      "pa-project-type",
+      "SEGMENTED BY"
+    ],
+    [
+      "loc-laydown-staging",
+      "pa-site-constraints",
+      "CONSTRAINED BY"
+    ],
+    [
+      "loc-exterior-zone",
+      "pa-site-area",
+      "BOUNDED BY"
+    ],
+    [
+      "loc-work-zone-phase",
+      "pa-phased-const",
+      "SEQUENCED BY"
+    ],
+    [
+      "loc-fire-smoke",
+      "pa-fire-sprinkler",
+      "GOVERNED BY"
+    ],
+    [
+      "loc-fire-smoke",
+      "pa-occupancy-group",
+      "GOVERNED BY"
+    ],
+    [
+      "loc-cx-zone",
+      "pa-leed-certificati",
+      "CONFIGURED FOR"
+    ],
+    [
+      "loc-grid-line",
+      "pa-struct-system",
+      "ALIGNED WITH"
+    ],
+    [
+      "loc-wet-area",
+      "pa-accessibility-st",
+      "GOVERNED BY"
+    ],
+    [
+      "loc-floor-completion",
+      "pa-percent-complete",
+      "ROLLED INTO"
+    ],
+    [
+      "loc-punch-items-per",
+      "pa-punch-item",
+      "AGGREGATED INTO"
+    ],
+    [
+      "loc-defect-density",
+      "pa-project-type",
+      "SEGMENTED BY"
+    ],
+    [
+      "loc-safety-incident",
+      "pa-safety-incident",
+      "AGGREGATED INTO"
+    ]
+  ],
+  "verbGlossary": {
+    "GEOCODED TO": "{source}is mapped to the target project address attribute (e.g., project site geocoded to {target} address)",
+    "BOUNDED BY": "{source}'s physical extent is defined by {target} area attribute (e.g., project site bounded by site area)",
+    "SITED WITHIN": "{source} location falls within {target} attribute (e.g., project site sited within the climate zone or seismic design category)",
+    "MEASURED AS": "{source} dimension contributes to {target} building attribute measurement (e.g., building measured as gross building area)",
+    "COUNTED TOWARD": "{source} instances are tallied to produce {target} count attribute (e.g., floor levels counted toward number of stories above grade)",
+    "CLASSIFIED BY": "{source}'s use or construction classification is determined by {target} attribute (e.g., room classified by occupancy group)",
+    "DEFINES": "{source} establishes the upper boundary that determines {target} dimension attribute (e.g., roof level defines building height)",
+    "CONSTRAINED BY": "{source} layout is restricted by {target} site constraint attribute",
+    "SEQUENCED BY": "{source} work zone is organized according to {target}d construction attribute",
+    "GOVERNED BY": "{source} compartment or space design is determined by {target} attribute",
+    "CONFIGURED FOR": "{source} commissioning zone is set up to satisfy {target}",
+    "ALIGNED WITH": "{source} grid reference aligns with {target} column and bay layout",
+    "ROLLED INTO": "{source}-level completion metric aggregates into {target}-level completion attribute",
+    "AGGREGATED INTO": "{source}-level quality or safety metric sums into {target}-level density attribute",
+    "SEGMENTED BY": "{source}-level metric is broken down by {target} attribute for cross-project comparison"
+  }
+}

@@ -1,0 +1,224 @@
+{
+  "source": "project-attributes",
+  "target": "quality-safety-records",
+  "edges": [
+    [
+      "pa-project-type",
+      "qsr-observation-dens",
+      "SEGMENTS"
+    ],
+    [
+      "pa-project-type",
+      "qsr-total-recordable",
+      "SEGMENTS"
+    ],
+    [
+      "pa-project-type",
+      "qsr-punch-item-issue",
+      "SEGMENTS"
+    ],
+    [
+      "pa-project-type",
+      "qsr-deficiency-rate",
+      "SEGMENTS"
+    ],
+    [
+      "pa-total-value-band",
+      "qsr-rework-cost",
+      "SEGMENTS"
+    ],
+    [
+      "pa-total-value-band",
+      "qsr-observation-dens",
+      "SEGMENTS"
+    ],
+    [
+      "pa-total-value-band",
+      "qsr-corrective-actio-2",
+      "SEGMENTS"
+    ],
+    [
+      "pa-number-stories",
+      "qsr-safety-observati",
+      "ELEVATES RISK FOR"
+    ],
+    [
+      "pa-building-height",
+      "qsr-incident",
+      "ELEVATES RISK FOR"
+    ],
+    [
+      "pa-occupied-during",
+      "qsr-safety-observati",
+      "ELEVATES RISK FOR"
+    ],
+    [
+      "pa-fast-track",
+      "qsr-coord-issue",
+      "ELEVATES RISK FOR"
+    ],
+    [
+      "pa-fast-track",
+      "qsr-non-conformance",
+      "ELEVATES RISK FOR"
+    ],
+    [
+      "pa-site-constraints",
+      "qsr-safety-violation",
+      "ELEVATES RISK FOR"
+    ],
+    [
+      "pa-new-vs-existing",
+      "qsr-non-conformance",
+      "SEGMENTS"
+    ],
+    [
+      "pa-new-vs-existing",
+      "qsr-hazard-recurrenc",
+      "SEGMENTS"
+    ],
+    [
+      "pa-climate-zone",
+      "qsr-enviro-cx",
+      "SCOPES"
+    ],
+    [
+      "pa-climate-zone",
+      "qsr-mat-test-report",
+      "SCOPES"
+    ],
+    [
+      "pa-fire-sprinkler",
+      "qsr-insp",
+      "MANDATES"
+    ],
+    [
+      "pa-fire-sprinkler",
+      "qsr-third-party",
+      "MANDATES"
+    ],
+    [
+      "pa-leed-certificati",
+      "qsr-enviro-cx",
+      "MANDATES"
+    ],
+    [
+      "pa-leed-certificati",
+      "qsr-system-perf-test",
+      "MANDATES"
+    ],
+    [
+      "pa-energy-code",
+      "qsr-system-perf-test",
+      "MANDATES"
+    ],
+    [
+      "pa-struct-system",
+      "qsr-mat-test-report",
+      "DETERMINES"
+    ],
+    [
+      "pa-foundation-type",
+      "qsr-third-party",
+      "DETERMINES"
+    ],
+    [
+      "pa-safety-incident",
+      "qsr-incident-record",
+      "BENCHMARKED AGAINST"
+    ],
+    [
+      "pa-punch-item",
+      "qsr-punch-item-3",
+      "BENCHMARKED AGAINST"
+    ],
+    [
+      "pa-rfi-density",
+      "qsr-coord-issue",
+      "BENCHMARKED AGAINST"
+    ],
+    [
+      "pa-peak-workforce",
+      "qsr-hazard-recurrenc",
+      "CORRELATED WITH"
+    ],
+    [
+      "pa-number-subcontra",
+      "qsr-deficiency-rate",
+      "CORRELATED WITH"
+    ],
+    [
+      "pa-gross-building",
+      "qsr-punch-item-3",
+      "CORRELATED WITH"
+    ],
+    [
+      "pa-dlvy-method",
+      "qsr-observation-reso",
+      "SEGMENTS"
+    ],
+    [
+      "pa-specialty-system",
+      "qsr-scheduled-insp",
+      "SCOPES"
+    ],
+    [
+      "pa-modular-prefab",
+      "qsr-quality-observat",
+      "SHIFTS FOCUS OF"
+    ],
+    [
+      "pa-self-performed",
+      "qsr-insp-pass-rate",
+      "CORRELATED WITH"
+    ],
+    [
+      "pa-occupancy-group",
+      "qsr-action-plan",
+      "SCOPES"
+    ],
+    [
+      "pa-percent-complete",
+      "qsr-punch-item",
+      "TRIGGERS"
+    ],
+    [
+      "pa-state-province",
+      "qsr-near-miss-ratio",
+      "SEGMENTS"
+    ],
+    [
+      "pa-risk-reduction",
+      "qsr-observation",
+      "MEASURED BY"
+    ],
+    [
+      "pa-risk-reduction",
+      "qsr-safety-observati",
+      "MEASURED BY"
+    ],
+    [
+      "pa-risk-reduction",
+      "qsr-insp",
+      "MEASURED BY"
+    ],
+    [
+      "pa-risk-reduction",
+      "qsr-punch-item",
+      "INDICATED BY"
+    ]
+  ],
+  "verbGlossary": {
+    "SEGMENTS": "{source} subdivides {target}/safety metric for comparative analysis (e.g., project type segments observation density to compare hospitals vs. offices)",
+    "ELEVATES RISK FOR": "{source} increases the likelihood or severity of {target} or quality finding (e.g., occupied-during-construction elevates risk for safety observations)",
+    "SCOPES": "{source} defines the required scope of {target}, test, or inspection program (e.g., climate zone scopes environmental commissioning observations)",
+    "MANDATES": "{source} requires the existence of {target} or observation program (e.g., fire sprinkler requirement mandates inspections, LEED certification mandates commissioning observations)",
+    "DETERMINES": "{source} dictates which specific target test reports or special inspections are required (e.g., structural system determines material test reports)",
+    "BENCHMARKED AGAINST": "{source}-level performance attribute provides the baseline for comparison with {target}/safety metric (e.g., safety incident rate benchmarked against incident records)",
+    "CORRELATED WITH": "{source} shows statistical relationship to {target} or quality metric (e.g., peak workforce correlated with hazard recurrence rate)",
+    "SHIFTS FOCUS OF": "{source} attribute redirects quality emphasis toward {target} type (e.g., modular/prefab shifts focus to factory QC quality observations)",
+    "TRIGGERS": "{source} progress attribute activates {target} activity at a specific threshold (e.g., percent complete triggers punch item generation at substantial completion)",
+    "MEASURED BY": "{source} outcome is quantified by the volume and trends in {target} records -- more proactive {target} activity indicates better {source}",
+    "INDICATED BY": "{source} outcome level is reflected in {target} volume -- high {target} counts in late phases indicate {source} was insufficient earlier"
+  }
+}

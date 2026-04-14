@@ -1,0 +1,288 @@
+{
+  "source": "phases",
+  "target": "risk",
+  "edges": [
+    [
+      "ph-program",
+      "rk-risk-register",
+      "ESTABLISHES"
+    ],
+    [
+      "ph-program",
+      "rk-geotechnical-ris",
+      "IDENTIFIES"
+    ],
+    [
+      "ph-program",
+      "rk-enviro-risk",
+      "SCREENS FOR"
+    ],
+    [
+      "ph-design",
+      "rk-design-risk",
+      "INTRODUCES"
+    ],
+    [
+      "ph-design",
+      "rk-coord-risk",
+      "CREATES"
+    ],
+    [
+      "ph-design",
+      "rk-chg-order-rate",
+      "DRIVES"
+    ],
+    [
+      "ph-estimating",
+      "rk-contingency-rese",
+      "SIZES"
+    ],
+    [
+      "ph-estimating",
+      "rk-financial-risk",
+      "QUANTIFIES"
+    ],
+    [
+      "ph-estimating",
+      "rk-risk-exposure",
+      "ESTABLISHES"
+    ],
+    [
+      "ph-permit",
+      "rk-reg-permit-risk",
+      "RESOLVES"
+    ],
+    [
+      "ph-permit",
+      "rk-schedule-risk",
+      "EXPOSES TO"
+    ],
+    [
+      "ph-precon-plan",
+      "rk-risk-matrix",
+      "POPULATES"
+    ],
+    [
+      "ph-precon-plan",
+      "rk-mitigation-actio",
+      "DEFINES"
+    ],
+    [
+      "ph-bidding",
+      "rk-risk-allocation",
+      "APPORTIONS"
+    ],
+    [
+      "ph-bidding",
+      "rk-labor-risk",
+      "PRICES"
+    ],
+    [
+      "ph-submittals",
+      "rk-design-risk",
+      "CATCHES"
+    ],
+    [
+      "ph-submittals",
+      "rk-supply-chain",
+      "EXPOSES TO"
+    ],
+    [
+      "ph-fabrication",
+      "rk-supply-chain",
+      "TESTS"
+    ],
+    [
+      "ph-fabrication",
+      "rk-schedule-risk",
+      "INTRODUCES"
+    ],
+    [
+      "ph-delivery",
+      "rk-supply-chain",
+      "MATERIALIZES"
+    ],
+    [
+      "ph-delivery",
+      "rk-schedule-buffer",
+      "CONSUMES"
+    ],
+    [
+      "ph-site-setup",
+      "rk-safety-risk",
+      "INTRODUCES"
+    ],
+    [
+      "ph-safety-orient",
+      "rk-safety-risk",
+      "MITIGATES"
+    ],
+    [
+      "ph-safety-orient",
+      "rk-incident-rate",
+      "REDUCES"
+    ],
+    [
+      "ph-demo",
+      "rk-enviro-risk",
+      "ACTIVATES"
+    ],
+    [
+      "ph-earthwork",
+      "rk-geotechnical-ris",
+      "ENCOUNTERS"
+    ],
+    [
+      "ph-earthwork",
+      "rk-risk-trigger",
+      "ACTIVATES"
+    ],
+    [
+      "ph-foundations",
+      "rk-geotechnical-ris",
+      "MATERIALIZES"
+    ],
+    [
+      "ph-foundations",
+      "rk-schedule-risk",
+      "EXPOSES TO"
+    ],
+    [
+      "ph-steel",
+      "rk-safety-risk",
+      "HEIGHTENS"
+    ],
+    [
+      "ph-steel",
+      "rk-const-execution",
+      "EXPOSES TO"
+    ],
+    [
+      "ph-abv-ceil",
+      "rk-coord-risk",
+      "CONCENTRATES"
+    ],
+    [
+      "ph-abv-ceil",
+      "rk-schedule-risk",
+      "COMPRESSES"
+    ],
+    [
+      "ph-hvac-dist",
+      "rk-coord-risk",
+      "EXPOSES TO"
+    ],
+    [
+      "ph-roofing",
+      "rk-schedule-risk",
+      "CONSTRAINS"
+    ],
+    [
+      "ph-curtainwall",
+      "rk-supply-chain",
+      "EXPOSES TO"
+    ],
+    [
+      "ph-punch",
+      "rk-residual-risk",
+      "SURFACES"
+    ],
+    [
+      "ph-punch",
+      "rk-const-execution",
+      "REVEALS"
+    ],
+    [
+      "ph-final-insp",
+      "rk-reg-permit-risk",
+      "CLOSES"
+    ],
+    [
+      "ph-final-insp",
+      "rk-risk-mitigation",
+      "VALIDATES"
+    ],
+    [
+      "ph-startup",
+      "rk-const-execution",
+      "TESTS"
+    ],
+    [
+      "ph-tab",
+      "rk-residual-risk",
+      "DETECTS"
+    ],
+    [
+      "ph-integrated",
+      "rk-coord-risk",
+      "REVEALS"
+    ],
+    [
+      "ph-perf-ver",
+      "rk-risk-score",
+      "UPDATES"
+    ],
+    [
+      "ph-contract-close",
+      "rk-risk-allocation",
+      "FINALIZES"
+    ],
+    [
+      "ph-contract-close",
+      "rk-contingency-burn",
+      "RECONCILES"
+    ],
+    [
+      "ph-warranty",
+      "rk-residual-risk",
+      "COVERS"
+    ],
+    [
+      "ph-warranty",
+      "rk-insurance-requir",
+      "ACTIVATES"
+    ],
+    [
+      "ph-seasonal-cx",
+      "rk-residual-risk",
+      "DETECTS"
+    ]
+  ],
+  "verbGlossary": {
+    "ACTIVATES": "{source} activity triggers a dormant risk or sets {target} mechanism into an active state (e.g., demolition activates environmental risk when hazardous materials are disturbed)",
+    "APPORTIONS": "{source} activity distributes {target} among parties through contractual or commercial means (e.g., bidding apportions risk allocation across subcontractors via scope assignments)",
+    "CATCHES": "{source} activity intercepts and identifies {target} before it propagates to field construction (e.g., submittal review catches design risk by flagging conflicts before fabrication)",
+    "CLOSES": "{source} activity formally resolves or retires {target} item from the active register (e.g., final inspections close regulatory and permit risk by obtaining certificate of occupancy)",
+    "COMPRESSES": "{source} activity reduces available schedule slack, intensifying time-related {target} (e.g., above-ceiling coordination compresses schedule risk when multiple trades stack into the same window)",
+    "CONCENTRATES": "{source} activity brings multiple {target}s into the same physical or temporal zone, amplifying their combined effect (e.g., above-ceiling coordination concentrates coordination risk among MEP trades)",
+    "CONSTRAINS": "{source} activity creates a hard dependency that limits flexibility and locks in downstream {target} (e.g., roofing constrains schedule risk because interior finishes cannot proceed until the building is watertight)",
+    "CONSUMES": "{source} activity uses up schedule or budget buffer that was reserved against {target} (e.g., material delivery delays consume schedule buffer)",
+    "COVERS": "{source} activity provides ongoing protection against {target} through a defined period or mechanism (e.g., warranty period covers residual risk of latent defects)",
+    "CREATES": "{source} activity generates a new {target} that did not previously exist on the project (e.g., design development creates coordination risk when multiple disciplines produce overlapping drawings)",
+    "DEFINES": "{source} activity specifies the content or parameters of {target} management element (e.g., preconstruction planning defines mitigation actions for each identified risk)",
+    "DETECTS": "{source} activity uncovers an existing {target} condition that was previously hidden (e.g., testing adjusting and balancing detects residual risk in mechanical systems that were not performing to spec)",
+    "DRIVES": "{source} activity is the primary cause behind {target} metric increasing over the project lifecycle (e.g., design development drives change order rate through scope revisions and RFI-generated changes)",
+    "ENCOUNTERS": "{source} activity runs directly into {target} condition in the field (e.g., earthwork encounters geotechnical risk when soil conditions differ from borings)",
+    "ESTABLISHES": "{source} activity creates the initial baseline or structure for a risk management element (e.g., programming establishes {target} register for the project)",
+    "EXPOSES TO": "{source} activity creates vulnerability to a specific {target} by the nature of the work involved (e.g., steel erection exposes the project to construction execution risk from crane operations and high-elevation work)",
+    "FINALIZES": "{source} activity locks in the final state of {target} element, closing out adjustments (e.g., contract closeout finalizes risk allocation by settling all remaining claims and retention)",
+    "HEIGHTENS": "{source} activity increases the severity or probability of an already-{target} (e.g., structural steel erection heightens safety risk due to elevated work and heavy lifts)",
+    "IDENTIFIES": "{source} activity discovers or catalogs {target} for the first time (e.g., programming identifies geotechnical risk from initial site assessment and soil reports)",
+    "INTRODUCES": "{source} activity brings a new {target} into the project that must be managed going forward (e.g., fabrication introduces schedule risk through long-lead item dependencies)",
+    "MATERIALIZES": "{source} activity is the point where a previously theoretical {target} becomes a real-world condition (e.g., material delivery materializes supply chain risk when shipments arrive late or damaged)",
+    "MITIGATES": "{source} activity directly reduces the probability or impact of {target} (e.g., safety orientation mitigates safety risk by training workers on site-specific hazards)",
+    "POPULATES": "{source} activity fills a risk assessment framework with project-specific data (e.g., preconstruction planning populates {target} matrix with likelihood and impact scores)",
+    "PRICES": "{source} activity assigns a monetary value to {target} through competitive or estimating processes (e.g., bidding prices labor risk as subcontractors factor labor availability into their bids)",
+    "QUANTIFIES": "{source} activity determines the dollar magnitude of {target} or exposure (e.g., estimating quantifies financial risk by calculating budget against known cost uncertainties)",
+    "RECONCILES": "{source} activity compares actual {target} outcomes against planned reserves and settles the difference (e.g., contract closeout reconciles contingency burn rate against actual risk events)",
+    "REDUCES": "{source} activity lowers a measurable {target} through proactive intervention (e.g., safety orientation reduces incident rate through hazard awareness training)",
+    "RESOLVES": "{source} activity eliminates or settles {target} by completing the required actions (e.g., permitting resolves regulatory risk by obtaining required approvals)",
+    "REVEALS": "{source} activity makes a hidden {target} visible through testing, inspection, or operational activity (e.g., integrated systems testing reveals coordination risk when systems fail to interoperate)",
+    "SCREENS FOR": "{source} activity evaluates the project for the presence of {target} category without yet quantifying it (e.g., programming screens for environmental risk through site history and contamination assessments)",
+    "SIZES": "{source} activity determines the magnitude of {target} reserve or buffer (e.g., estimating sizes contingency reserve based on project risk profile and historical overrun rates)",
+    "SURFACES": "{source} activity brings a latent defect or {target} condition to attention through systematic review (e.g., punch list surfaces residual risk by documenting incomplete or deficient work items)",
+    "TESTS": "{source} activity validates whether {target} condition exists or whether a mitigation is working (e.g., systems startup tests construction execution risk by running equipment under operating conditions)",
+    "UPDATES": "{source} activity provides new information that changes the assessment of {target} (e.g., performance verification updates risk score based on actual system performance data)",
+    "VALIDATES": "{source} activity confirms that {target} mitigation or response has been successfully implemented (e.g., final inspections validate risk mitigation completion rate by verifying all corrective actions are closed)"
+  }
+}

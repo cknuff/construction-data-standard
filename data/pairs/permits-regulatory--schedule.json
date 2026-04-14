@@ -1,0 +1,234 @@
+{
+  "source": "permits-regulatory",
+  "target": "schedule",
+  "edges": [
+    [
+      "pr-building-permit",
+      "sch-milestone",
+      "GATES"
+    ],
+    [
+      "pr-building-permit",
+      "sch-detail-activity",
+      "ENABLES"
+    ],
+    [
+      "pr-building-permit",
+      "sch-baseline-schedul",
+      "REQUIRED BEFORE"
+    ],
+    [
+      "pr-demolition-permi",
+      "sch-schedule-constra",
+      "IMPOSES"
+    ],
+    [
+      "pr-renovation-alter",
+      "sch-schedule-constra",
+      "IMPOSES"
+    ],
+    [
+      "pr-temp-structures",
+      "sch-detail-activity",
+      "REQUIRED BEFORE"
+    ],
+    [
+      "pr-trade-permit",
+      "sch-look-ahead",
+      "SEQUENCED INTO"
+    ],
+    [
+      "pr-enviro-permit",
+      "sch-schedule-constra",
+      "IMPOSES"
+    ],
+    [
+      "pr-enviro-permit",
+      "sch-work-calendar",
+      "RESTRICTS"
+    ],
+    [
+      "pr-stormwater-permi",
+      "sch-schedule-constra",
+      "IMPOSES"
+    ],
+    [
+      "pr-street-right-way",
+      "sch-detail-activity",
+      "REQUIRED BEFORE"
+    ],
+    [
+      "pr-utility-connecti",
+      "sch-milestone",
+      "GATES"
+    ],
+    [
+      "pr-zoning-appr",
+      "sch-baseline-schedul",
+      "REQUIRED BEFORE"
+    ],
+    [
+      "pr-variance-special",
+      "sch-calculated-dates",
+      "SHIFTS"
+    ],
+    [
+      "pr-building-departm",
+      "sch-lag-lead-time",
+      "DRIVES"
+    ],
+    [
+      "pr-fire-marshal",
+      "sch-detail-activity",
+      "HOLDS"
+    ],
+    [
+      "pr-health-departmen",
+      "sch-milestone",
+      "GATES"
+    ],
+    [
+      "pr-ahj-insp",
+      "sch-look-ahead",
+      "SEQUENCED INTO"
+    ],
+    [
+      "pr-ahj-insp",
+      "sch-critical-path",
+      "LANDS ON"
+    ],
+    [
+      "pr-special-insp",
+      "sch-schedule-update",
+      "RECORDED IN"
+    ],
+    [
+      "pr-third-party",
+      "sch-milestone",
+      "VALIDATES"
+    ],
+    [
+      "pr-cert-occupancy",
+      "sch-milestone",
+      "CLOSES OUT"
+    ],
+    [
+      "pr-cert-occupancy",
+      "sch-as-built",
+      "FINALIZES"
+    ],
+    [
+      "pr-temp-cert",
+      "sch-milestone",
+      "ENABLES"
+    ],
+    [
+      "pr-cert-completion",
+      "sch-milestone",
+      "CLOSES OUT"
+    ],
+    [
+      "pr-letter-comp",
+      "sch-schedule-constra",
+      "RELEASES"
+    ],
+    [
+      "pr-osha-notificatio",
+      "sch-baseline-schedul",
+      "REQUIRED BEFORE"
+    ],
+    [
+      "pr-site-safety-plan",
+      "sch-detail-activity",
+      "GOVERNS"
+    ],
+    [
+      "pr-labor-comp",
+      "sch-labor-loading",
+      "CONSTRAINS"
+    ],
+    [
+      "pr-permit-applicati",
+      "sch-detail-activity",
+      "SCHEDULED AS"
+    ],
+    [
+      "pr-permit-status",
+      "sch-schedule-update",
+      "REPORTED IN"
+    ],
+    [
+      "pr-insp-scheduling",
+      "sch-look-ahead",
+      "COORDINATED WITH"
+    ],
+    [
+      "pr-permit-cycle",
+      "sch-float-slack",
+      "ERODES"
+    ],
+    [
+      "pr-reg-hold",
+      "sch-delay-class",
+      "CATEGORIZED AS"
+    ],
+    [
+      "pr-reg-hold",
+      "sch-time-impact",
+      "TRIGGERS"
+    ],
+    [
+      "pr-reg-hold",
+      "sch-time-extension",
+      "JUSTIFIES"
+    ],
+    [
+      "pr-open-permit",
+      "sch-milestone",
+      "BLOCKS"
+    ],
+    [
+      "pr-insp-pass-rate",
+      "sch-schedule-perf",
+      "INFLUENCES"
+    ],
+    [
+      "pr-comp-doc",
+      "sch-as-built",
+      "REQUIRED BEFORE"
+    ],
+    [
+      "pr-permit-renewal",
+      "sch-work-calendar",
+      "RESTRICTS"
+    ]
+  ],
+  "verbGlossary": {
+    "BLOCKS": "Unresolved permit or open regulatory item prevents {target} element from being achieved (e.g., open permits block project completion milestone).",
+    "CATEGORIZED AS": "{source} event is formally classified within {target} analysis framework (e.g., regulatory hold is categorized as an excusable delay).",
+    "CLOSES OUT": "{source} certificate marks the final achievement of {target} element (e.g., certificate of occupancy closes out the substantial completion milestone).",
+    "CONSTRAINS": "{source} limits the scope or capacity of {target} element (e.g., labor compliance constrains crew size in labor loading).",
+    "COORDINATED WITH": "Inspection or regulatory scheduling must align with {target} element to avoid conflicts (e.g., inspection scheduling coordinated with look-ahead schedule).",
+    "DRIVES": "{source} processing duration determines the length of {target} element (e.g., plan review turnaround drives lag time between design and construction activities).",
+    "ENABLES": "{source} issuance or approval unlocks {target} element to proceed (e.g., building permit enables detail activities to start).",
+    "ERODES": "{source} processing time consumes available buffer in {target} element (e.g., long permit cycle times erode float on near-critical activities).",
+    "FINALIZES": "{source} certificate confirms {target} record is complete and locked (e.g., certificate of completion finalizes the as-built schedule).",
+    "GATES": "{source} or regulatory approval is a hard prerequisite that must be obtained before {target} element can be reached (e.g., building permit gates the construction-start milestone).",
+    "GOVERNS": "{source} plan has ongoing authority over how {target} element is executed (e.g., site safety plan governs daily work activities).",
+    "HOLDS": "{source} review or inspection pauses {target} element until clearance is granted (e.g., fire marshal review holds work activities pending approval).",
+    "IMPOSES": "{source} creates a formal constraint on {target} element (e.g., environmental permit imposes a seasonal work window as a schedule constraint).",
+    "INFLUENCES": "{source} metric indirectly affects {target} performance indicator (e.g., inspection pass rate influences schedule performance index through rework avoidance).",
+    "JUSTIFIES": "{source} hold provides documented basis for {target} claim (e.g., regulatory hold justifies a time extension request).",
+    "LANDS ON": "{source} activity falls on {target} analysis path due to its zero-float dependency (e.g., AHJ inspection lands on the critical path).",
+    "RECORDED IN": "{source} result is documented as part of the target schedule lifecycle event (e.g., special inspection outcome recorded in {target} update narrative).",
+    "RELEASES": "{source} document lifts a constraint previously imposed on {target} element (e.g., letter of compliance releases a regulatory hold constraint).",
+    "REPORTED IN": "{source} tracking status is communicated through the target schedule lifecycle document (e.g., permit status reported in {target} update).",
+    "REQUIRED BEFORE": "{source} or regulatory action must be obtained before {target} element can legally begin or be established (e.g., building permit required before baseline schedule is set).",
+    "RESTRICTS": "{source} condition limits the available working time in {target} element (e.g., environmental permit restricts work calendar to exclude nesting seasons).",
+    "SCHEDULED AS": "{source} process is formally represented as {target} element (e.g., permit application scheduled as a detail activity with defined duration).",
+    "SEQUENCED INTO": "{source} or review is inserted into {target} at the required point (e.g., trade permits sequenced into the look-ahead schedule before rough-in activities).",
+    "SHIFTS": "{source} review outcome moves {target} dates forward or backward (e.g., variance approval shifts calculated dates on design activities).",
+    "TRIGGERS": "{source} event initiates {target} analysis or recovery action (e.g., regulatory hold triggers a time impact analysis).",
+    "VALIDATES": "{source}testing confirms {target} element has been properly achieved (e.g., third-party testing validates a commissioning milestone)."
+  }
+}

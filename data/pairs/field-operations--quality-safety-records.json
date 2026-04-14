@@ -1,0 +1,338 @@
+{
+  "source": "field-operations",
+  "target": "quality-safety-records",
+  "edges": [
+    [
+      "fo-safety-violation",
+      "qsr-safety-violation",
+      "REPORTS"
+    ],
+    [
+      "fo-safety-violation",
+      "qsr-corrective-actio",
+      "TRIGGERS"
+    ],
+    [
+      "fo-safety-violation",
+      "qsr-hazard-recurrenc",
+      "CONTRIBUTES TO"
+    ],
+    [
+      "fo-accident-log",
+      "qsr-incident",
+      "REPORTS"
+    ],
+    [
+      "fo-accident-log",
+      "qsr-incident-record",
+      "DOCUMENTS"
+    ],
+    [
+      "fo-accident-log",
+      "qsr-incident-witness",
+      "COLLECTS"
+    ],
+    [
+      "fo-accident-log",
+      "qsr-corrective-actio",
+      "TRIGGERS"
+    ],
+    [
+      "fo-accident-log",
+      "qsr-total-recordable",
+      "CONTRIBUTES TO"
+    ],
+    [
+      "fo-accident-log",
+      "qsr-dart-rate",
+      "CONTRIBUTES TO"
+    ],
+    [
+      "fo-daily-log-note",
+      "qsr-safety-observati",
+      "DISCOVERS"
+    ],
+    [
+      "fo-daily-log-note",
+      "qsr-quality-observat",
+      "DISCOVERS"
+    ],
+    [
+      "fo-daily-log-note",
+      "qsr-non-conformance",
+      "IDENTIFIES"
+    ],
+    [
+      "fo-daily-log-note",
+      "qsr-coord-issue",
+      "IDENTIFIES"
+    ],
+    [
+      "fo-daily-log-insp",
+      "qsr-insp",
+      "RECORDS"
+    ],
+    [
+      "fo-daily-log-insp",
+      "qsr-insp-item",
+      "RECORDS"
+    ],
+    [
+      "fo-daily-log-insp",
+      "qsr-deficiency-notic",
+      "TRIGGERS"
+    ],
+    [
+      "fo-daily-log-insp",
+      "qsr-insp-pass-rate",
+      "CONTRIBUTES TO"
+    ],
+    [
+      "fo-daily-log-header",
+      "qsr-observation",
+      "LOGGED DURING"
+    ],
+    [
+      "fo-daily-report",
+      "qsr-observation",
+      "DISTRIBUTES"
+    ],
+    [
+      "fo-daily-report",
+      "qsr-punch-item",
+      "DISTRIBUTES"
+    ],
+    [
+      "fo-daily-report",
+      "qsr-incident",
+      "DISTRIBUTES"
+    ],
+    [
+      "fo-manpower-log",
+      "qsr-safety-observati",
+      "EXPOSES"
+    ],
+    [
+      "fo-manpower-log",
+      "qsr-total-recordable",
+      "NORMALIZES"
+    ],
+    [
+      "fo-crew-crew",
+      "qsr-safety-violation",
+      "RECEIVES"
+    ],
+    [
+      "fo-crew-crew",
+      "qsr-corrective-actio",
+      "ASSIGNED TO"
+    ],
+    [
+      "fo-const-report",
+      "qsr-quality-observat",
+      "DOCUMENTS"
+    ],
+    [
+      "fo-const-report",
+      "qsr-punch-item",
+      "DOCUMENTS"
+    ],
+    [
+      "fo-dlvy-log-entry",
+      "qsr-mat-test-report",
+      "TRIGGERS"
+    ],
+    [
+      "fo-dlvy-log-entry",
+      "qsr-non-conformance",
+      "DISCOVERS"
+    ],
+    [
+      "fo-mat-receipt",
+      "qsr-mat-test-report",
+      "REQUIRES"
+    ],
+    [
+      "fo-mat-receipt",
+      "qsr-quality-observat",
+      "TRIGGERS"
+    ],
+    [
+      "fo-equip-log-entry",
+      "qsr-safety-observati",
+      "TRIGGERS"
+    ],
+    [
+      "fo-equip-master",
+      "qsr-scheduled-insp",
+      "REQUIRES"
+    ],
+    [
+      "fo-weather-log",
+      "qsr-safety-observati",
+      "TRIGGERS"
+    ],
+    [
+      "fo-weather-log",
+      "qsr-enviro-cx",
+      "DOCUMENTS"
+    ],
+    [
+      "fo-delay-log-entry",
+      "qsr-non-conformance",
+      "CAUSED BY"
+    ],
+    [
+      "fo-delay-log-entry",
+      "qsr-coord-issue",
+      "CAUSED BY"
+    ],
+    [
+      "fo-delay-log-entry",
+      "qsr-safety-violation",
+      "CAUSED BY"
+    ],
+    [
+      "fo-productivity-log",
+      "qsr-deficiency-rate",
+      "CORRELATES WITH"
+    ],
+    [
+      "fo-quantity-log",
+      "qsr-insp",
+      "VERIFIED BY"
+    ],
+    [
+      "fo-visitor-log",
+      "qsr-third-party",
+      "RECORDS"
+    ],
+    [
+      "fo-waste-log-entry",
+      "qsr-enviro-cx",
+      "TRACKED BY"
+    ],
+    [
+      "fo-dumpster-log",
+      "qsr-enviro-cx",
+      "TRACKED BY"
+    ],
+    [
+      "fo-scheduled-work",
+      "qsr-scheduled-insp",
+      "TRIGGERS"
+    ],
+    [
+      "fo-scheduled-work",
+      "qsr-observation",
+      "INSPECTED DURING"
+    ],
+    [
+      "fo-t-m-ticket",
+      "qsr-punch-item-2",
+      "CORRECTS"
+    ],
+    [
+      "fo-t-m-ticket",
+      "qsr-rework-cost",
+      "CONTRIBUTES TO"
+    ],
+    [
+      "fo-t-m-labor-entry",
+      "qsr-punch-item-2",
+      "CORRECTS"
+    ],
+    [
+      "fo-t-m-mat-entry",
+      "qsr-punch-item-2",
+      "CORRECTS"
+    ],
+    [
+      "fo-average-daily",
+      "qsr-total-recordable",
+      "NORMALIZES"
+    ],
+    [
+      "fo-peak-daily",
+      "qsr-near-miss-ratio",
+      "NORMALIZES"
+    ],
+    [
+      "fo-employee-record",
+      "qsr-incident-record",
+      "REFERENCED BY"
+    ],
+    [
+      "fo-employee-record",
+      "qsr-safety-violation",
+      "RECEIVES"
+    ],
+    [
+      "fo-phone-call-log",
+      "qsr-coord-issue",
+      "REPORTS"
+    ],
+    [
+      "fo-plan-revision",
+      "qsr-coord-issue-2",
+      "TRIGGERS"
+    ],
+    [
+      "fo-assignment",
+      "qsr-action-plan-line",
+      "FULFILLS"
+    ],
+    [
+      "fo-workforce-req",
+      "qsr-action-plan",
+      "RESPONDS TO"
+    ],
+    [
+      "fo-timecard-entry",
+      "qsr-rework-cost",
+      "CONTRIBUTES TO"
+    ],
+    [
+      "fo-mat-shipment",
+      "qsr-mat-test-report",
+      "REQUIRES"
+    ],
+    [
+      "fo-scheduled-work-2",
+      "qsr-scheduled-insp",
+      "LINKS TO"
+    ],
+    [
+      "fo-daily-log-note",
+      "qsr-observation",
+      "DOCUMENTS FINDING AS"
+    ]
+  ],
+  "verbGlossary": {
+    "ASSIGNED TO": "{source} crew or person designated to execute a corrective or remediation task",
+    "CAUSED BY": "{source}record traces its root cause back to a quality, safety, or coordination failure",
+    "COLLECTS": "{source} gathers witness statements or supporting evidence for an {target} record",
+    "CONTRIBUTES TO": "{source} activity data feeds into the calculation of a quality or safety metric",
+    "CORRECTS": "T&M labor, material, or equipment work performed specifically to resolve a punch item or deficiency",
+    "CORRELATES WITH": "Statistical relationship between a field operations measure and a quality/safety outcome",
+    "DISCOVERS": "{source} note or delivery {target} uncovers a quality defect or non-conformance in real time",
+    "DISTRIBUTES": "{source} packages and sends quality/{target}s to stakeholders",
+    "DOCUMENTS": "{source} formally captures the details of an {target}, incident, or deficiency",
+    "EXPOSES": "{source}level reveals conditions that lead to {target}",
+    "FULFILLS": "{source}assignment executes a task specified in {target} plan",
+    "IDENTIFIES": "{source} narrative flags a potential {target} or coordination issue for formal follow-up",
+    "INSPECTED DURING": "Scheduled work activity is the context in which a quality or {target} occurs",
+    "LINKS TO": "{source} is cross-referenced to a scheduled {target} for sequencing",
+    "LOGGED DURING": "{source}is captured within {target} reporting window",
+    "NORMALIZES": "{source}provides the denominator for {target} or near-miss rate calculations",
+    "RECEIVES": "{source}is issued {target} or formal notice",
+    "RECORDS": "{source} creates the official record of an {target} visit or third-party reviewer presence",
+    "REFERENCED BY": "{source}record is cited within an {target} or violation record for identification",
+    "REPORTS": "{source} entry formally raises {target}, incident, or coordination issue into the QSR system",
+    "REQUIRES": "{source}delivery or shipment must have an accompanying test report or {target} before acceptance",
+    "RESPONDS TO": "{source} is initiated in reaction to an action plan requirement for additional resources",
+    "TRACKED BY": "Waste or environmental field data is monitored through formal environmental observations",
+    "TRIGGERS": "{source} event initiates a downstream quality or {target} (inspection, corrective action, test report)",
+    "VERIFIED BY": "{source}is confirmed through {target} or observation"
+  }
+}

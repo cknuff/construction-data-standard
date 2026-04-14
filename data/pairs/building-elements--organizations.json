@@ -1,0 +1,424 @@
+{
+  "source": "building-elements",
+  "target": "organizations",
+  "edges": [
+    [
+      "be-excav",
+      "org-sub-trade",
+      "EXCAVATED BY"
+    ],
+    [
+      "be-excav",
+      "org-geotechnical-eng",
+      "SOIL CONDITIONS ASSESSED BY"
+    ],
+    [
+      "be-backfill",
+      "org-mat-testing-lab",
+      "COMPACTION TESTED BY"
+    ],
+    [
+      "be-dewater",
+      "org-enviro-epa",
+      "DISCHARGE PERMITTED BY"
+    ],
+    [
+      "be-erosion",
+      "org-enviro-monitorin",
+      "EROSION MONITORED BY"
+    ],
+    [
+      "be-deep-fdn",
+      "org-struct-engineer",
+      "STRUCTURALLY DESIGNED BY"
+    ],
+    [
+      "be-deep-fdn",
+      "org-special-insp",
+      "PILE DRIVING INSPECTED BY"
+    ],
+    [
+      "be-shallow-fdn",
+      "org-self-performing",
+      "SELF-PERFORMED BY"
+    ],
+    [
+      "be-fdn-walls",
+      "org-gen-contr-gc",
+      "CONCRETE PLACED BY"
+    ],
+    [
+      "be-water-main",
+      "org-water-sewer",
+      "TAP CONNECTION APPROVED BY"
+    ],
+    [
+      "be-sanitary",
+      "org-health-departmen",
+      "SANITARY CAPACITY APPROVED BY"
+    ],
+    [
+      "be-storm",
+      "org-civil-engineer",
+      "DRAINAGE ENGINEERED BY"
+    ],
+    [
+      "be-gas-svc",
+      "org-gas-utility",
+      "GAS SERVICE CONNECTED BY"
+    ],
+    [
+      "be-site-elec",
+      "org-electric-utility",
+      "POWER SERVICE CONNECTED BY"
+    ],
+    [
+      "be-columns",
+      "org-fabricator",
+      "STEEL FABRICATED BY"
+    ],
+    [
+      "be-beams",
+      "org-struct-engineer",
+      "LOAD PATHS DESIGNED BY"
+    ],
+    [
+      "be-slabs",
+      "org-special-insp",
+      "REBAR PLACEMENT INSPECTED BY"
+    ],
+    [
+      "be-roof-struct",
+      "org-design-builder",
+      "ENGINEERED AND BUILT BY"
+    ],
+    [
+      "be-misc-metals",
+      "org-fabricator",
+      "SHOP FABRICATED BY"
+    ],
+    [
+      "be-curtainwall",
+      "org-building-envelop",
+      "PERFORMANCE TESTED BY"
+    ],
+    [
+      "be-windows",
+      "org-mat-supplier",
+      "GLAZING SUPPLIED BY"
+    ],
+    [
+      "be-panels",
+      "org-fabricator",
+      "PRECAST MANUFACTURED BY"
+    ],
+    [
+      "be-ext-insul",
+      "org-sustainability-l",
+      "THERMAL VALUE CALCULATED BY"
+    ],
+    [
+      "be-roof-mem",
+      "org-sub-trade",
+      "MEMBRANE APPLIED BY"
+    ],
+    [
+      "be-flashing",
+      "org-architect-record",
+      "DETAIL DESIGNED BY"
+    ],
+    [
+      "be-roof-drain",
+      "org-mep-engineer",
+      "DRAINAGE SIZED BY"
+    ],
+    [
+      "be-skylights",
+      "org-building-departm",
+      "EGRESS COMPLIANCE REVIEWED BY"
+    ],
+    [
+      "be-ductwork",
+      "org-sub-trade",
+      "SHEET METAL INSTALLED BY"
+    ],
+    [
+      "be-hvac-pipe",
+      "org-mep-engineer",
+      "PIPING SYSTEM DESIGNED BY"
+    ],
+    [
+      "be-ahu",
+      "org-mat-supplier",
+      "AIR HANDLERS SUPPLIED BY"
+    ],
+    [
+      "be-cooling",
+      "org-cx-agent-cxa",
+      "COOLING PERFORMANCE COMMISSIONED BY"
+    ],
+    [
+      "be-tab",
+      "org-cx-agent-cxa",
+      "AIR BALANCE VERIFIED BY"
+    ],
+    [
+      "be-dom-water",
+      "org-mep-engineer",
+      "DOMESTIC WATER DESIGNED BY"
+    ],
+    [
+      "be-plumb-fix",
+      "org-private-develope",
+      "FIXTURE SELECTIONS APPROVED BY"
+    ],
+    [
+      "be-pipe-insul",
+      "org-fire-marshal",
+      "FLAME SPREAD RATING VERIFIED BY"
+    ],
+    [
+      "be-power-dist",
+      "org-electric-utility",
+      "UTILITY METERING COORDINATED BY"
+    ],
+    [
+      "be-lighting",
+      "org-lighting-designe",
+      "LIGHTING LAYOUT DESIGNED BY"
+    ],
+    [
+      "be-emerg-pwr",
+      "org-fire-marshal",
+      "EMERGENCY BACKUP CERTIFIED BY"
+    ],
+    [
+      "be-sprink-main",
+      "org-fire-prot",
+      "HYDRAULICALLY CALCULATED BY"
+    ],
+    [
+      "be-sprink-head",
+      "org-fire-marshal",
+      "COVERAGE PATTERN APPROVED BY"
+    ],
+    [
+      "be-fire-pump",
+      "org-insurance-broker",
+      "LOSS PREVENTION RATED BY"
+    ],
+    [
+      "be-fa",
+      "org-fire-marshal",
+      "ALARM ACCEPTANCE TESTED BY"
+    ],
+    [
+      "be-data",
+      "org-telecom-internet",
+      "SERVICE ENTRANCE PROVIDED BY"
+    ],
+    [
+      "be-security",
+      "org-institutional-ow",
+      "SECURITY REQUIREMENTS SET BY"
+    ],
+    [
+      "be-bas",
+      "org-cx-agent-cxa",
+      "INTEGRATION COMMISSIONED BY"
+    ],
+    [
+      "be-av",
+      "org-acoustics-consul",
+      "ACOUSTICS PERFORMANCE SPECIFIED BY"
+    ],
+    [
+      "be-int-doors",
+      "org-architect-record",
+      "DOOR SCHEDULE SPECIFIED BY"
+    ],
+    [
+      "be-paint",
+      "org-private-develope",
+      "COLOR PALETTE SELECTED BY"
+    ],
+    [
+      "be-casework",
+      "org-fabricator",
+      "MILLWORK FABRICATED BY"
+    ],
+    [
+      "be-signage",
+      "org-public-governmen",
+      "ADA SIGNAGE REQUIRED BY"
+    ],
+    [
+      "be-toilet-acc",
+      "org-code-consultant",
+      "ADA COMPLIANCE REVIEWED BY"
+    ],
+    [
+      "be-elev-car",
+      "org-building-departm",
+      "ELEVATOR PERMIT ISSUED BY"
+    ],
+    [
+      "be-elev-mach",
+      "org-sub-trade",
+      "ELEVATOR EQUIPMENT INSTALLED BY"
+    ],
+    [
+      "be-landscape",
+      "org-landscape-archit",
+      "PLANTING PLAN DESIGNED BY"
+    ],
+    [
+      "be-sidewalks",
+      "org-zoning-planning",
+      "SETBACK COMPLIANCE REVIEWED BY"
+    ],
+    [
+      "be-fencing",
+      "org-osha-safety",
+      "PERIMETER SAFETY ENFORCED BY"
+    ],
+    [
+      "be-paving",
+      "org-const-manager",
+      "SITE WORK COORDINATED BY"
+    ],
+    [
+      "be-site-light",
+      "org-const-lender",
+      "DRAW RELEASE INSPECTED BY"
+    ],
+    [
+      "be-duct-insul",
+      "org-specifications-w",
+      "INSULATION SPEC WRITTEN BY"
+    ],
+    [
+      "be-roof-insul",
+      "org-sustainability-l",
+      "R-VALUE COMPLIANCE VERIFIED BY"
+    ],
+    [
+      "be-specialty-sys",
+      "org-program-manager",
+      "SPECIALTY SCOPE COORDINATED BY"
+    ],
+    [
+      "be-sog",
+      "org-equip-rental",
+      "EQUIPMENT FURNISHED BY"
+    ],
+    [
+      "be-conduit",
+      "org-self-performing",
+      "RACEWAY ROUTED BY"
+    ],
+    [
+      "be-ext-doors",
+      "org-surety-bonding",
+      "WARRANTY BOND SECURED BY"
+    ],
+    [
+      "be-spec-floor",
+      "org-const-manager-at",
+      "FLOORING SCOPE MANAGED BY"
+    ],
+    [
+      "be-ductwork",
+      "org-trade-coverage",
+      "MEASURED FOR"
+    ],
+    [
+      "be-curtainwall",
+      "org-vendor-insurance",
+      "MEASURED FOR"
+    ],
+    [
+      "be-columns",
+      "org-sub-safety",
+      "MEASURED FOR"
+    ],
+    [
+      "be-slabs",
+      "org-chg-order",
+      "MEASURED FOR"
+    ],
+    [
+      "be-sprink-main",
+      "org-sub-count-per",
+      "MEASURED FOR"
+    ]
+  ],
+  "verbGlossary": {
+    "ACOUSTICS PERFORMANCE SPECIFIED BY": "{target} defines acoustic absorption and sound isolation requirements for the installed system",
+    "ADA COMPLIANCE REVIEWED BY": "{target}verifies that {source} meets Americans with Disabilities Act accessibility standards",
+    "ADA SIGNAGE REQUIRED BY": "Government {target} mandates compliant wayfinding and identification signage per accessibility codes",
+    "AIR BALANCE VERIFIED BY": "{source}measures and certifies that airflow rates match design specifications across all zones",
+    "AIR HANDLERS SUPPLIED BY": "{target} delivers factory-assembled air handling units to the jobsite per approved submittals",
+    "ALARM ACCEPTANCE TESTED BY": "{target} witnesses and approves the fire alarm system functional test before occupancy",
+    "COLOR PALETTE SELECTED BY": "{target} or developer approves the paint color scheme and finish selections for interior surfaces",
+    "COMPACTION TESTED BY": "Testing lab performs in-place density tests on fill material to verify it meets compaction specifications",
+    "CONCRETE PLACED BY": "{target} or trade crew pours, vibrates, and finishes concrete for the structural element",
+    "COOLING PERFORMANCE COMMISSIONED BY": "{source}tests refrigeration equipment performance against design conditions and documents results",
+    "COVERAGE PATTERN APPROVED BY": "{target} reviews sprinkler head layout to ensure adequate spray coverage per NFPA spacing requirements",
+    "DETAIL DESIGNED BY": "Architect develops the construction detail drawing that governs how {target} is assembled at transitions",
+    "DISCHARGE PERMITTED BY": "{source}issues the permit allowing pumped groundwater to be discharged during dewatering",
+    "DOMESTIC WATER DESIGNED BY": "{target} sizes piping, calculates pressure, and specifies materials for the potable water system",
+    "DOOR SCHEDULE SPECIFIED BY": "{target} defines the door type, size, fire rating, hardware, and frame for each opening in the schedule",
+    "DRAINAGE ENGINEERED BY": "Civil {target} designs the stormwater collection, conveyance, and detention system",
+    "DRAINAGE SIZED BY": "{target} calculates required roof drain capacities and pipe sizes based on rainfall intensity",
+    "DRAW RELEASE INSPECTED BY": "{source}inspects installed building elements before authorizing the next draw disbursement",
+    "EGRESS COMPLIANCE REVIEWED BY": "{target}verifies that {source} meets egress, light, and ventilation code requirements",
+    "ELEVATOR EQUIPMENT INSTALLED BY": "Specialty {target} installs elevator motors, controllers, and guide rail systems",
+    "ELEVATOR PERMIT ISSUED BY": "{target} issues the installation permit and schedules required inspections for vertical conveyance",
+    "EMERGENCY BACKUP CERTIFIED BY": "{target} certifies that the emergency power system meets code requirements for life safety loads",
+    "ENGINEERED AND BUILT BY": "Design-build entity both designs and constructs {target} under a single contract",
+    "EQUIPMENT FURNISHED BY": "{target}provides heavy equipment needed to execute {source}'s installation scope",
+    "EROSION MONITORED BY": "{source}monitoring {target} inspects sediment controls and documents site compliance during construction",
+    "EXCAVATED BY": "{target}performs the earth removal, trenching, or mass excavation work for {source}",
+    "FIXTURE SELECTIONS APPROVED BY": "{target} or developer reviews and approves the specific fixture models and finishes for the project",
+    "FLAME SPREAD RATING VERIFIED BY": "Fire marshal con{target}s that the insulation material flame and smoke ratings meet code limits",
+    "FLOORING SCOPE MANAGED BY": "Construction manager coordinates procurement, scheduling, and quality for the specialty flooring trade",
+    "GAS SERVICE CONNECTED BY": "Gas utility installs the meter and connects the building gas service to the distribution main",
+    "GLAZING SUPPLIED BY": "Material {target} delivers insulated glass units and window assemblies to the jobsite",
+    "HYDRAULICALLY CALCULATED BY": "Fire protection {target} performs hydraulic calculations to size sprinkler mains and verify water supply adequacy",
+    "INSULATION SPEC WRITTEN BY": "Specifications writer develops the detailed product and performance specification section for insulation materials",
+    "INTEGRATION COMMISSIONED BY": "{source}tests and verifies that the building automation system integrates all connected subsystems",
+    "LIGHTING LAYOUT DESIGNED BY": "{source} placement, circuiting, and control zoning plan",
+    "LOAD PATHS DESIGNED BY": "{target} designs member sizes and connections to transfer gravity and lateral loads through the structure",
+    "LOSS PREVENTION RATED BY": "{source}carrier evaluates fire protection adequacy and adjusts property insurance premiums based on installed systems",
+    "MEASURED FOR": "{source}measure tracks performance or compliance metrics attributable to this building element scope",
+    "MEMBRANE APPLIED BY": "{target} installs the roof membrane system including adhesion, seaming, and termination details",
+    "MILLWORK FABRICATED BY": "{target} builds custom casework and millwork in a shop per approved shop drawings",
+    "PERFORMANCE TESTED BY": "Envelope {target} conducts field performance testing such as water infiltration and air leakage tests on the assembly",
+    "PERIMETER SAFETY ENFORCED BY": "{source}that temporary fencing and barriers meet fall protection and public safety requirements during construction",
+    "PILE DRIVING INSPECTED BY": "{source} installation depth, blow counts, and alignment during driving operations",
+    "PIPING SYSTEM DESIGNED BY": "{target} designs pipe routing, sizing, material selection, and supports for the hydronic distribution system",
+    "PLANTING PLAN DESIGNED BY": "{source} {target} designs the planting palette, spacing, irrigation, and grading for landscaped areas",
+    "POWER SERVICE CONNECTED BY": "{source}s and makes the permanent electrical service connection to the building",
+    "PRECAST MANUFACTURED BY": "{target} casts, cures, and finishes precast concrete or metal panels at an off-site manufacturing facility",
+    "R-VALUE COMPLIANCE VERIFIED BY": "Sustainability consultant con{target}s that the installed roof insulation meets energy code R-value requirements",
+    "RACEWAY ROUTED BY": "Self-performing {target} division lays out and installs conduit and cable tray pathways through the structure",
+    "REBAR PLACEMENT INSPECTED BY": "{source} size, spacing, cover, and tie-wire before concrete is placed",
+    "SANITARY CAPACITY APPROVED BY": "{source}reviews and approves that the sanitary sewer connection meets capacity and code requirements",
+    "SECURITY REQUIREMENTS SET BY": "Institutional {target} defines the access control, surveillance, and intrusion detection requirements for the facility",
+    "SELF-PERFORMED BY": "GC's own forces execute {target} scope rather than subcontracting it to a trade contractor",
+    "SERVICE ENTRANCE PROVIDED BY": "{source}, cabling, and demarcation equipment at the building service entrance",
+    "SETBACK COMPLIANCE REVIEWED BY": "Zoning {target} verifies that hardscape improvements fall within permitted setback and lot coverage limits",
+    "SHEET METAL INSTALLED BY": "{target} fabricates and installs ductwork, fittings, and connections per mechanical drawings",
+    "SHOP FABRICATED BY": "{target} manufactures miscellaneous metal items such as handrails, ladders, and supports in a controlled shop environment",
+    "SITE WORK COORDINATED BY": "Construction manager agency coordinates scheduling and sequencing of site improvement trades",
+    "SOIL CONDITIONS ASSESSED BY": "Geotechnical {target} evaluates subsurface conditions and provides bearing capacity and excavation recommendations",
+    "SPECIALTY SCOPE COORDINATED BY": "{source} procurement, submittals, and installation sequencing across multiple trades",
+    "STEEL FABRICATED BY": "{target} cuts, welds, and assembles structural steel members per approved shop drawings and detailing",
+    "STRUCTURALLY DESIGNED BY": "Structural engineer designs {target}'s size, reinforcement, and capacity per applicable structural codes",
+    "TAP CONNECTION APPROVED BY": "Water/sewer {target} reviews and approves the tap size and connection point to the municipal water main",
+    "THERMAL VALUE CALCULATED BY": "Sustainability {target} performs thermal modeling to verify the insulation assembly meets energy code requirements",
+    "UTILITY METERING COORDINATED BY": "Electric utility coordinates metering equipment, CT cabinet placement, and service entrance configuration",
+    "WARRANTY BOND SECURED BY": "{target}issues a warranty bond guaranteeing {source}'s performance for a specified period"
+  }
+}

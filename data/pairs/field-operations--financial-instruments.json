@@ -1,0 +1,328 @@
+{
+  "source": "field-operations",
+  "target": "financial-instruments",
+  "edges": [
+    [
+      "fo-timecard-entry",
+      "fi-direct-cost",
+      "POSTS LABOR COST TO"
+    ],
+    [
+      "fo-timecard-entry",
+      "fi-cost-code",
+      "CHARGES HOURS AGAINST"
+    ],
+    [
+      "fo-timecard-entry",
+      "fi-budget-line-item",
+      "BURNS BUDGET ON"
+    ],
+    [
+      "fo-manpower-log",
+      "fi-cost-forecast",
+      "FEEDS LABOR FORECAST INTO"
+    ],
+    [
+      "fo-manpower-log",
+      "fi-budget-variance",
+      "DRIVES LABOR VARIANCE ON"
+    ],
+    [
+      "fo-equip-log-entry",
+      "fi-direct-cost",
+      "ACCRUES RENTAL COST TO"
+    ],
+    [
+      "fo-equip-timecard",
+      "fi-direct-cost-line",
+      "GENERATES EQUIPMENT CHARGE ON"
+    ],
+    [
+      "fo-equip-timecard",
+      "fi-cost-code",
+      "BILLS EQUIPMENT TIME TO"
+    ],
+    [
+      "fo-equip-master",
+      "fi-commit-purchase",
+      "TIES ASSET TO"
+    ],
+    [
+      "fo-equip-utilizatio",
+      "fi-cost-perf-index",
+      "INFORMS EFFICIENCY OF"
+    ],
+    [
+      "fo-dlvy-log-entry",
+      "fi-commit-purchase",
+      "CONFIRMS RECEIPT AGAINST"
+    ],
+    [
+      "fo-mat-shipment",
+      "fi-commit-line-item",
+      "FULFILLS QUANTITY ON"
+    ],
+    [
+      "fo-mat-receipt",
+      "fi-sub-invoice",
+      "SUBSTANTIATES BILLING ON"
+    ],
+    [
+      "fo-mat-receipt",
+      "fi-commit-purchase",
+      "VERIFIES DELIVERY FOR"
+    ],
+    [
+      "fo-delay-log-entry",
+      "fi-chg-event-ce",
+      "SUBSTANTIATES DELAY CLAIM ON"
+    ],
+    [
+      "fo-delay-log-entry",
+      "fi-contingency",
+      "DRAWS DOWN"
+    ],
+    [
+      "fo-delay-log-entry",
+      "fi-cost-growth",
+      "CONTRIBUTES TO"
+    ],
+    [
+      "fo-delay-frequency",
+      "fi-cost-forecast",
+      "ADJUSTS TIMELINE COST IN"
+    ],
+    [
+      "fo-weather-log",
+      "fi-chg-event-ce",
+      "DOCUMENTS FORCE MAJEURE FOR"
+    ],
+    [
+      "fo-weather-delay",
+      "fi-budget-variance",
+      "EXPLAINS OVERRUN ON"
+    ],
+    [
+      "fo-weather-delay",
+      "fi-contingency-burn",
+      "ACCELERATES"
+    ],
+    [
+      "fo-daily-log-note",
+      "fi-chg-event-ce",
+      "CORROBORATES SCOPE CHANGE IN"
+    ],
+    [
+      "fo-daily-log-note",
+      "fi-direct-cost",
+      "JUSTIFIES EXPENSE ON"
+    ],
+    [
+      "fo-daily-log-header",
+      "fi-project-budget",
+      "PROVIDES DAILY SNAPSHOT FOR"
+    ],
+    [
+      "fo-productivity-log",
+      "fi-budget-line-item",
+      "MEASURES EARNED VALUE ON"
+    ],
+    [
+      "fo-productivity-log",
+      "fi-cost-perf-index",
+      "CALCULATES PRODUCTIVITY RATIO FOR"
+    ],
+    [
+      "fo-quantity-log",
+      "fi-schedule-values",
+      "SUPPORTS PERCENT COMPLETE ON"
+    ],
+    [
+      "fo-quantity-log",
+      "fi-owner-invoice",
+      "BACKS PAY APPLICATION WITH"
+    ],
+    [
+      "fo-actual-productio",
+      "fi-budget-variance",
+      "REVEALS PRODUCTION GAP IN"
+    ],
+    [
+      "fo-budgeted-product",
+      "fi-budget-line-item",
+      "BENCHMARKS PLANNED OUTPUT AGAINST"
+    ],
+    [
+      "fo-field-productivi",
+      "fi-estimate-at",
+      "RECALIBRATES COMPLETION ESTIMATE IN"
+    ],
+    [
+      "fo-safety-violation",
+      "fi-direct-cost",
+      "TRIGGERS PENALTY COST ON"
+    ],
+    [
+      "fo-safety-violation",
+      "fi-budget-mod",
+      "FORCES BUDGET REALLOCATION VIA"
+    ],
+    [
+      "fo-accident-log",
+      "fi-chg-event-ce",
+      "INITIATES INCIDENT COST THROUGH"
+    ],
+    [
+      "fo-accident-log",
+      "fi-contingency",
+      "DEPLETES SAFETY RESERVE IN"
+    ],
+    [
+      "fo-t-m-ticket",
+      "fi-chg-event-ce",
+      "CAPTURES EXTRA WORK COST IN"
+    ],
+    [
+      "fo-t-m-ticket",
+      "fi-direct-cost",
+      "RECORDS FORCE ACCOUNT EXPENSE AS"
+    ],
+    [
+      "fo-t-m-labor-entry",
+      "fi-chg-event-line",
+      "ITEMIZES LABOR ON"
+    ],
+    [
+      "fo-t-m-equip-entry",
+      "fi-chg-event-line",
+      "ITEMIZES EQUIPMENT ON"
+    ],
+    [
+      "fo-t-m-mat-entry",
+      "fi-chg-event-line",
+      "ITEMIZES MATERIAL ON"
+    ],
+    [
+      "fo-t-m-mat-entry",
+      "fi-direct-cost-line",
+      "POSTS MATERIAL EXPENSE TO"
+    ],
+    [
+      "fo-waste-log-entry",
+      "fi-direct-cost",
+      "LOGS DISPOSAL COST ON"
+    ],
+    [
+      "fo-dumpster-log",
+      "fi-commit-purchase",
+      "TRACKS HAUL-OFF AGAINST"
+    ],
+    [
+      "fo-waste-diversion",
+      "fi-budget-line-item",
+      "OFFSETS DISPOSAL BUDGET ON"
+    ],
+    [
+      "fo-const-report",
+      "fi-cash-flow",
+      "FEEDS PROGRESS INTO"
+    ],
+    [
+      "fo-crew-crew",
+      "fi-committed-cost",
+      "LOADS LABOR COMMITMENT ONTO"
+    ],
+    [
+      "fo-scheduled-work",
+      "fi-budget-line-item",
+      "LINKS PLANNED ACTIVITY TO"
+    ],
+    [
+      "fo-plan-percent",
+      "fi-cost-forecast",
+      "REFINES SPEND CURVE IN"
+    ],
+    [
+      "fo-plan-revision",
+      "fi-budget-mod",
+      "TRIGGERS SCOPE ADJUSTMENT IN"
+    ],
+    [
+      "fo-workforce-req",
+      "fi-cash-flow",
+      "FORECASTS STAFFING SPEND IN"
+    ],
+    [
+      "fo-actual-productio",
+      "fi-schedule-values",
+      "SUBSTANTIATES BILLING ON"
+    ],
+    [
+      "fi-pm-workload",
+      "fo-daily-log-header",
+      "DEGRADES QUALITY OF"
+    ],
+    [
+      "fo-actual-productio",
+      "fi-budget-line-item",
+      "MEASURES EARNED VALUE ON"
+    ],
+    [
+      "fo-delay-log-entry",
+      "fi-commit-chg-order",
+      "SUBSTANTIATES"
+    ]
+  ],
+  "verbGlossary": {
+    "POSTS LABOR COST TO": "{source} hours are converted to dollars and posted as {target} transaction",
+    "CHARGES HOURS AGAINST": "{source}are allocated to a specific {target} for tracking",
+    "BURNS BUDGET ON": "Recorded field hours consume allocated {target} dollars on a line item",
+    "FEEDS LABOR FORECAST INTO": "{source}is used to project future labor costs in a forecast",
+    "DRIVES LABOR VARIANCE ON": "{source}counts create variance when compared to the planned labor {target}",
+    "ACCRUES RENTAL COST TO": "{source}logged in the field accrues daily or hourly rental charges as {target}",
+    "GENERATES EQUIPMENT CHARGE ON": "{source}create individual charge {target}s for each piece of equipment",
+    "BILLS EQUIPMENT TIME TO": "{source}are charged against the appropriate {target}",
+    "TIES ASSET TO": "{source}record is linked to the purchase order or rental agreement that governs it",
+    "INFORMS EFFICIENCY OF": "{source} rates factor into the cost performance index calculation",
+    "CONFIRMS RECEIPT AGAINST": "{source} entry confirms that materials arrived per the purchase order terms",
+    "FULFILLS QUANTITY ON": "A material shipment satisfies ordered quantities on a specific {target} line item",
+    "SUBSTANTIATES BILLING ON": "{source}documentation supports a subcontractor {target} for delivered goods",
+    "VERIFIES DELIVERY FOR": "{source}record confirms fulfillment against a purchase order {target}",
+    "SUBSTANTIATES DELAY CLAIM ON": "{source} entry provides contemporaneous documentation supporting {target} delay claim",
+    "DRAWS DOWN": "A documented delay event consumes funds from the project {target} reserve",
+    "CONTRIBUTES TO": "A delay event adds to the overall cost growth percentage on the project",
+    "ADJUSTS TIMELINE COST IN": "Delay frequency metrics cause {target} to be revised for extended general conditions",
+    "DOCUMENTS FORCE MAJEURE FOR": "{source} entries provide evidence of force majeure conditions referenced in {target}",
+    "EXPLAINS OVERRUN ON": "{source} rates provide causal explanation for {target} variance on affected line items",
+    "ACCELERATES": "{source}rate at which {target} funds are consumed",
+    "CORROBORATES SCOPE CHANGE IN": "{source} narrative entries serve as contemporaneous evidence supporting a scope {target}",
+    "JUSTIFIES EXPENSE ON": "{source}s provide field context that justifies {target} charge",
+    "PROVIDES DAILY SNAPSHOT FOR": "{source} gives a point-in-time field status summary linked to overall {target} health",
+    "MEASURES EARNED VALUE ON": "Productivity entries quantify work-in-place used to calculate earned value on {target} line",
+    "CALCULATES PRODUCTIVITY RATIO FOR": "{source} productivity data provides the actual output rate used in cost performance index computation",
+    "SUPPORTS PERCENT COMPLETE ON": "{source}validate the percent complete claimed on {target} line items",
+    "BACKS PAY APPLICATION WITH": "{source} entries provide the installed-quantity proof behind an owner pay application",
+    "REVEALS PRODUCTION GAP IN": "Actual production quantities expose shortfalls against {target}ed production plan",
+    "BENCHMARKS PLANNED OUTPUT AGAINST": "{target}ed production quantities set the baseline against which budget line items are evaluated",
+    "RECALIBRATES COMPLETION ESTIMATE IN": "{source} productivity trends cause {target} at completion to be adjusted up or down",
+    "TRIGGERS PENALTY COST ON": "{source} results in fines or corrective action costs recorded as {target}s",
+    "FORCES BUDGET REALLOCATION VIA": "{source} necessitates {target} to fund remediation or penalties",
+    "INITIATES INCIDENT COST THROUGH": "{source}creates {target} to track associated medical, legal, and remediation costs",
+    "DEPLETES SAFETY RESERVE IN": "{source}costs draw down {target} set aside for safety-related incidents",
+    "CAPTURES EXTRA WORK COST IN": "{source} documents the cost of out-of-scope work and feeds it into {target}",
+    "RECORDS FORCE ACCOUNT EXPENSE AS": "{source} is booked as {target} entry",
+    "ITEMIZES LABOR ON": "Individual T&M labor entries become {target}s on a change event for pricing approval",
+    "ITEMIZES EQUIPMENT ON": "Individual T&M equipment entries become {target}s on a change event for pricing approval",
+    "ITEMIZES MATERIAL ON": "Individual T&M material entries become {target}s on a change event for pricing approval",
+    "POSTS MATERIAL EXPENSE TO": "T&M material costs are recorded as {target}s against the appropriate code",
+    "LOGS DISPOSAL COST ON": "Waste removal events are recorded as {target} entries for environmental compliance",
+    "TRACKS HAUL-OFF AGAINST": "{source}are tracked against the waste hauling purchase order",
+    "OFFSETS DISPOSAL BUDGET ON": "{source}waste diversion reduces landfill charges and offsets the disposal {target}",
+    "FEEDS PROGRESS INTO": "{source} entries provide progress data that informs cash flow projection timing",
+    "LOADS LABOR COMMITMENT ONTO": "Assigning a crew to a scope area locks in committed labor cost against {target}",
+    "LINKS PLANNED ACTIVITY TO": "A scheduled work entry connects a planned field activity to its corresponding {target}",
+    "REFINES SPEND CURVE IN": "Plan percent complete updates refine the projected cost-over-time curve in the forecast",
+    "TRIGGERS SCOPE ADJUSTMENT IN": "{source}of a plan revision initiates {target} to account for changed scope",
+    "FORECASTS STAFFING SPEND IN": "A workforce request signals upcoming labor spend that must be reflected in cash flow projections"
+  }
+}

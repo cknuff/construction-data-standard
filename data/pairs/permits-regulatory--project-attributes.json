@@ -1,0 +1,225 @@
+{
+  "source": "permits-regulatory",
+  "target": "project-attributes",
+  "edges": [
+    [
+      "pr-building-permit",
+      "pa-const-type",
+      "ISSUED FOR"
+    ],
+    [
+      "pr-building-permit",
+      "pa-occupancy-group",
+      "ISSUED FOR"
+    ],
+    [
+      "pr-building-permit",
+      "pa-project-type",
+      "SEGMENTED BY"
+    ],
+    [
+      "pr-demolition-permi",
+      "pa-new-vs-existing",
+      "TRIGGERED BY"
+    ],
+    [
+      "pr-renovation-alter",
+      "pa-new-vs-existing",
+      "TRIGGERED BY"
+    ],
+    [
+      "pr-renovation-alter",
+      "pa-occupied-during",
+      "CONDITIONED BY"
+    ],
+    [
+      "pr-temp-structures",
+      "pa-site-constraints",
+      "REQUIRED BY"
+    ],
+    [
+      "pr-trade-permit",
+      "pa-specialty-system",
+      "REQUIRED FOR"
+    ],
+    [
+      "pr-building-departm",
+      "pa-building-code",
+      "REVIEWED AGAINST"
+    ],
+    [
+      "pr-building-departm",
+      "pa-accessibility-st",
+      "REVIEWED AGAINST"
+    ],
+    [
+      "pr-fire-marshal",
+      "pa-fire-sprinkler",
+      "INSPECTS FOR"
+    ],
+    [
+      "pr-fire-marshal",
+      "pa-building-height",
+      "TRIGGERED BY"
+    ],
+    [
+      "pr-health-departmen",
+      "pa-project-type",
+      "REQUIRED FOR"
+    ],
+    [
+      "pr-zoning-appr",
+      "pa-number-stories",
+      "RESTRICTS"
+    ],
+    [
+      "pr-zoning-appr",
+      "pa-building-height",
+      "RESTRICTS"
+    ],
+    [
+      "pr-zoning-appr",
+      "pa-site-area",
+      "RESTRICTS"
+    ],
+    [
+      "pr-variance-special",
+      "pa-number-stories",
+      "SOUGHT FOR"
+    ],
+    [
+      "pr-enviro-permit",
+      "pa-site-constraints",
+      "CONDITIONED BY"
+    ],
+    [
+      "pr-stormwater-permi",
+      "pa-site-area",
+      "SCALED TO"
+    ],
+    [
+      "pr-street-right-way",
+      "pa-site-constraints",
+      "REQUIRED BY"
+    ],
+    [
+      "pr-utility-connecti",
+      "pa-address",
+      "SITED AT"
+    ],
+    [
+      "pr-ahj-insp",
+      "pa-accessibility-st",
+      "VERIFIED AGAINST"
+    ],
+    [
+      "pr-ahj-insp",
+      "pa-const-type",
+      "SCOPED BY"
+    ],
+    [
+      "pr-special-insp",
+      "pa-struct-system",
+      "REQUIRED FOR"
+    ],
+    [
+      "pr-special-insp",
+      "pa-seismic-design",
+      "TRIGGERED BY"
+    ],
+    [
+      "pr-third-party",
+      "pa-energy-code",
+      "VERIFIED AGAINST"
+    ],
+    [
+      "pr-cert-occupancy",
+      "pa-actual-completio",
+      "TRIGGERS"
+    ],
+    [
+      "pr-temp-cert",
+      "pa-phased-const",
+      "ISSUED FOR"
+    ],
+    [
+      "pr-cert-completion",
+      "pa-project-status",
+      "ADVANCES"
+    ],
+    [
+      "pr-osha-notificatio",
+      "pa-peak-workforce",
+      "TRIGGERED BY"
+    ],
+    [
+      "pr-site-safety-plan",
+      "pa-number-stories",
+      "SCOPED BY"
+    ],
+    [
+      "pr-site-safety-plan",
+      "pa-project-type",
+      "TAILORED TO"
+    ],
+    [
+      "pr-labor-comp",
+      "pa-prevailing-wage",
+      "REQUIRED BY"
+    ],
+    [
+      "pr-permit-cycle",
+      "pa-preconstruction",
+      "MEASURED WITHIN"
+    ],
+    [
+      "pr-insp-pass-rate",
+      "pa-project-status",
+      "INFLUENCES"
+    ],
+    [
+      "pr-insp-pass-rate",
+      "pa-project-type",
+      "SEGMENTED BY"
+    ],
+    [
+      "pr-reg-hold",
+      "pa-schedule-growth",
+      "CONTRIBUTES TO"
+    ],
+    [
+      "pr-open-permit",
+      "pa-project-status",
+      "BLOCKS"
+    ],
+    [
+      "pr-permit-renewal",
+      "pa-actual-duration",
+      "SCALED BY"
+    ]
+  ],
+  "verbGlossary": {
+    "ISSUED FOR": "{source} is granted based on {target} building or scope attribute classification (e.g., building permit issued for the specified construction type)",
+    "SEGMENTED BY": "{source} metric or record is broken down by {target} attribute for comparative analysis",
+    "TRIGGERED BY": "{source} is activated because {target} attribute meets a threshold or condition (e.g., demolition permit triggered by existing building scope)",
+    "CONDITIONED BY": "{source} includes conditions dictated by {target} attribute's constraints (e.g., renovation permit conditioned by occupied-during-construction status)",
+    "REQUIRED BY": "{source} or compliance document is mandated because {target} attribute triggers a regulatory obligation",
+    "REQUIRED FOR": "{source} is needed because {target} includes the target system or type attribute",
+    "REVIEWED AGAINST": "{source} plan review evaluates project documents against {target} or standard attribute",
+    "INSPECTS FOR": "{source} conducts field inspection to verify compliance with {target} attribute",
+    "RESTRICTS": "{source}limits on {target} building dimension attribute",
+    "SOUGHT FOR": "{source}is filed because the proposed project exceeds {target} zoning limit",
+    "SCALED TO": "{source} requirements increase proportionally with {target} area attribute",
+    "SITED AT": "{source}connection permit is location-specific to {target} address attribute",
+    "VERIFIED AGAINST": "{source} confirms compliance with {target} accessibility, structural, or energy code attribute",
+    "SCOPED BY": "Inspection or safety plan complexity is determined by {target} attribute's classification or dimensions",
+    "TRIGGERS": "{source} issuance marks the milestone that sets {target} completion date or status attribute",
+    "ADVANCES": "{source} moves {target} status attribute toward final closeout",
+    "TAILORED TO": "{source}plan content is customized based on {target} type's specific hazard and compliance profile",
+    "MEASURED WITHIN": "{source} processing time metric falls within {target} preconstruction duration",
+    "INFLUENCES": "{source} outcome affects {target} status attribute's trajectory",
+    "CONTRIBUTES TO": "{source} hold duration adds to {target} schedule growth metric",
+    "BLOCKS": "Open permit prevents {target} status attribute from advancing to the next milestone",
+    "SCALED BY": "{source} renewal frequency increases with {target} actual duration attribute's length"
+  }
+}

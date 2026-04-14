@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Construction Execution — UCDM Domain Relationships</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #0a0e1a; color: #e0e4ef; min-height: 100vh; overflow-x: hidden;
+  }
+  header { text-align: center; padding: 24px 24px 6px; position: sticky; top: 0; z-index: 10; background: #0a0e1a; }
+  header h1 {
+    font-size: 24px; font-weight: 700; letter-spacing: -0.5px;
+    background: linear-gradient(135deg, #ffb74d, #66bb6a, #ce93d8);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  }
+  header p { color: #6b7394; font-size: 13px; margin-top: 3px; }
+  .legend { display: flex; justify-content: center; gap: 28px; padding: 6px 24px 2px; flex-wrap: wrap; position: sticky; top: 56px; z-index: 10; background: #0a0e1a; }
+  .legend-item { display: flex; align-items: center; gap: 6px; font-size: 12px; color: #8892b0; }
+  .legend-swatch { width: 12px; height: 12px; border-radius: 3px; }
+  .legend-swatch.phases { background: #ffb74d; }
+  .legend-swatch.resources { background: #ce93d8; }
+  .legend-swatch.elements { background: #66bb6a; }
+  .hint { text-align: center; font-size: 11px; color: #4a5070; padding: 0 0 10px; position: sticky; top: 80px; z-index: 10; background: #0a0e1a; }
+
+  .container { position: relative; max-width: 1600px; margin: 0 auto; padding: 0 20px 48px; }
+  svg.connections {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    pointer-events: none; z-index: 1;
+  }
+  svg.connections path {
+    fill: none; stroke-width: 1; opacity: 0;
+    transition: opacity 0.25s ease, stroke-width 0.25s ease;
+  }
+  svg.connections path.visible { opacity: 0.5; stroke-width: 1.6; }
+  svg.connections path.dimmed { opacity: 0.02; }
+  svg.connections text {
+    font-size: 8px; font-weight: 600; letter-spacing: 0.2px;
+    opacity: 0; transition: opacity 0.25s ease; pointer-events: none;
+  }
+  svg.connections text.visible { opacity: 0.8; }
+
+  .columns {
+    display: grid; grid-template-columns: 1fr 1.3fr 1fr; gap: 16px;
+    position: relative; z-index: 2; align-items: start;
+  }
+  .domain-column { display: flex; flex-direction: column; gap: 1px; }
+  .domain-hdr {
+    text-align: center; padding: 6px 6px; border-radius: 7px;
+    font-weight: 600; font-size: 12px; letter-spacing: 0.3px; text-transform: uppercase;
+    margin-bottom: 1px; position: sticky; top: 96px; z-index: 5;
+  }
+  .domain-hdr span { display: block; font-size: 8px; font-weight: 400; letter-spacing: 0; text-transform: none; opacity: 0.7; margin-top: 1px; }
+  .domain-hdr.phases { background: rgba(255,183,77,0.15); color: #ffb74d; border: 1px solid rgba(255,183,77,0.25); }
+  .domain-hdr.resources { background: rgba(171,71,188,0.15); color: #ce93d8; border: 1px solid rgba(171,71,188,0.25); }
+  .domain-hdr.elements { background: rgba(102,187,106,0.15); color: #66bb6a; border: 1px solid rgba(102,187,106,0.25); }
+
+  .cat-label {
+    font-size: 7px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.8px; color: #3e4560; padding: 6px 6px 1px;
+  }
+  .el-card {
+    padding: 3px 6px; border-radius: 5px; cursor: pointer;
+    transition: all 0.2s ease; border: 1px solid transparent;
+  }
+  .el-card .el-name { font-size: 10px; font-weight: 500; line-height: 1.3; }
+
+  .el-card.phases { background: rgba(255,183,77,0.03); border-color: rgba(255,183,77,0.05); }
+  .el-card.phases .el-name { color: #ffb74d; }
+  .el-card.phases:hover, .el-card.phases.active { background: rgba(255,183,77,0.13); border-color: rgba(255,183,77,0.35); box-shadow: 0 0 12px rgba(255,183,77,0.08); }
+
+  .el-card.resources { background: rgba(171,71,188,0.03); border-color: rgba(171,71,188,0.05); }
+  .el-card.resources .el-name { color: #ce93d8; }
+  .el-card.resources:hover, .el-card.resources.active { background: rgba(171,71,188,0.13); border-color: rgba(171,71,188,0.35); box-shadow: 0 0 12px rgba(171,71,188,0.08); }
+
+  .el-card.elements { background: rgba(102,187,106,0.03); border-color: rgba(102,187,106,0.05); }
+  .el-card.elements .el-name { color: #66bb6a; }
+  .el-card.elements:hover, .el-card.elements.active { background: rgba(102,187,106,0.13); border-color: rgba(102,187,106,0.35); box-shadow: 0 0 12px rgba(102,187,106,0.08); }
+
+  .el-card.dimmed { opacity: 0.08; }
+  .el-card.connected { border-color: rgba(255,255,255,0.20) !important; background: rgba(255,255,255,0.04) !important; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Construction Execution</h1>
+  <p>Phases + Building Elements + Resources — When it happens, what gets built, and what it takes</p>
+</header>
+<div class="legend">
+  <div class="legend-item"><div class="legend-swatch phases"></div>Phases (56)</div>
+  <div class="legend-item"><div class="legend-swatch elements"></div>Building Elements (86)</div>
+  <div class="legend-item"><div class="legend-swatch resources"></div>Resources (61)</div>
+</div>
+<div class="hint">Hover any element to see its cross-domain relationships</div>
+
+<div class="container">
+  <svg class="connections" id="svg-layer"></svg>
+  <div class="columns">
+
+    <!-- ===================== LEFT: PHASES (56) ===================== -->
+    <div class="domain-column">
+      <div class="domain-hdr phases">Phases<span>When it happens</span></div>
+
+      <div class="cat-label">Preconstruction</div>
+      <div class="el-card phases" data-id="ph-program"><div class="el-name">Programming & Feasibility</div></div>
+      <div class="el-card phases" data-id="ph-design"><div class="el-name">Design Development</div></div>
+      <div class="el-card phases" data-id="ph-estimating"><div class="el-name">Estimating & Budgeting</div></div>
+      <div class="el-card phases" data-id="ph-permit"><div class="el-name">Permitting & Approvals</div></div>
+      <div class="el-card phases" data-id="ph-precon-plan"><div class="el-name">Preconstruction Planning</div></div>
+
+      <div class="cat-label">Procurement</div>
+      <div class="el-card phases" data-id="ph-bidding"><div class="el-name">Bidding & Buyout</div></div>
+      <div class="el-card phases" data-id="ph-submittals"><div class="el-name">Submittals & Shop Drawings</div></div>
+      <div class="el-card phases" data-id="ph-fabrication"><div class="el-name">Fabrication & Long-Lead</div></div>
+      <div class="el-card phases" data-id="ph-delivery"><div class="el-name">Material Ordering & Delivery</div></div>
+
+      <div class="cat-label">Construction — Early</div>
+      <div class="el-card phases" data-id="ph-site-setup"><div class="el-name">Site Setup</div></div>
+      <div class="el-card phases" data-id="ph-safety-orient"><div class="el-name">Safety & Environmental Orientation</div></div>
+      <div class="el-card phases" data-id="ph-demo"><div class="el-name">Demolition & Site Clearing</div></div>
+      <div class="el-card phases" data-id="ph-earthwork"><div class="el-name">Earthwork</div></div>
+      <div class="el-card phases" data-id="ph-site-util"><div class="el-name">Site Utilities</div></div>
+      <div class="el-card phases" data-id="ph-foundations"><div class="el-name">Foundations</div></div>
+      <div class="el-card phases" data-id="ph-slab"><div class="el-name">Slab on Grade</div></div>
+
+      <div class="cat-label">Construction — Structure</div>
+      <div class="el-card phases" data-id="ph-steel"><div class="el-name">Structural Steel Erection</div></div>
+      <div class="el-card phases" data-id="ph-elev-conc"><div class="el-name">Elevated Concrete</div></div>
+      <div class="el-card phases" data-id="ph-conc-frame"><div class="el-name">Concrete Frame</div></div>
+      <div class="el-card phases" data-id="ph-stairs"><div class="el-name">Stairs & Misc Metals</div></div>
+      <div class="el-card phases" data-id="ph-curtainwall"><div class="el-name">Curtain Wall & Glazing</div></div>
+      <div class="el-card phases" data-id="ph-masonry"><div class="el-name">Masonry & Cladding</div></div>
+      <div class="el-card phases" data-id="ph-barrier"><div class="el-name">Air & Moisture Barrier</div></div>
+      <div class="el-card phases" data-id="ph-roofing"><div class="el-name">Roofing</div></div>
+
+      <div class="cat-label">Construction — Fit-Out</div>
+      <div class="el-card phases" data-id="ph-abv-ceil"><div class="el-name">Above-Ceiling Coordination</div></div>
+      <div class="el-card phases" data-id="ph-hvac-dist"><div class="el-name">HVAC Distribution</div></div>
+      <div class="el-card phases" data-id="ph-plumb-ri"><div class="el-name">Plumbing Rough-In</div></div>
+      <div class="el-card phases" data-id="ph-elec-ri"><div class="el-name">Electrical Rough-In</div></div>
+      <div class="el-card phases" data-id="ph-fp-ri"><div class="el-name">Fire Protection</div></div>
+      <div class="el-card phases" data-id="ph-lv-ri"><div class="el-name">Low Voltage Rough-In</div></div>
+      <div class="el-card phases" data-id="ph-framing"><div class="el-name">Metal Stud Framing</div></div>
+      <div class="el-card phases" data-id="ph-drywall"><div class="el-name">Drywall</div></div>
+      <div class="el-card phases" data-id="ph-ceil-grid"><div class="el-name">Ceiling Grid</div></div>
+      <div class="el-card phases" data-id="ph-paint"><div class="el-name">Paint & Wall Coatings</div></div>
+      <div class="el-card phases" data-id="ph-flooring"><div class="el-name">Flooring</div></div>
+      <div class="el-card phases" data-id="ph-ceilings"><div class="el-name">Ceilings</div></div>
+      <div class="el-card phases" data-id="ph-doors"><div class="el-name">Doors & Hardware</div></div>
+      <div class="el-card phases" data-id="ph-casework"><div class="el-name">Casework & Millwork</div></div>
+      <div class="el-card phases" data-id="ph-hvac-trim"><div class="el-name">HVAC Trim & Controls</div></div>
+      <div class="el-card phases" data-id="ph-plumb-fix"><div class="el-name">Plumbing Fixtures</div></div>
+      <div class="el-card phases" data-id="ph-elec-dev"><div class="el-name">Electrical Devices & Lighting</div></div>
+      <div class="el-card phases" data-id="ph-fa-dev"><div class="el-name">Fire Alarm & Detection Devices</div></div>
+      <div class="el-card phases" data-id="ph-lv-dev"><div class="el-name">Low Voltage Devices</div></div>
+
+      <div class="cat-label">Commissioning & Closeout</div>
+      <div class="el-card phases" data-id="ph-prefunc"><div class="el-name">Pre-Functional Testing</div></div>
+      <div class="el-card phases" data-id="ph-startup"><div class="el-name">Systems Startup</div></div>
+      <div class="el-card phases" data-id="ph-tab"><div class="el-name">Testing Adjusting & Balancing</div></div>
+      <div class="el-card phases" data-id="ph-integrated"><div class="el-name">Integrated Systems Testing</div></div>
+      <div class="el-card phases" data-id="ph-perf-ver"><div class="el-name">Performance Verification</div></div>
+      <div class="el-card phases" data-id="ph-punch"><div class="el-name">Punch List</div></div>
+      <div class="el-card phases" data-id="ph-final-insp"><div class="el-name">Final Inspections & Approvals</div></div>
+      <div class="el-card phases" data-id="ph-asbuilt"><div class="el-name">As-Built Documentation</div></div>
+      <div class="el-card phases" data-id="ph-training"><div class="el-name">Owner Training</div></div>
+      <div class="el-card phases" data-id="ph-contract-close"><div class="el-name">Contract Closeout</div></div>
+
+      <div class="cat-label">Post-Construction</div>
+      <div class="el-card phases" data-id="ph-warranty"><div class="el-name">Warranty Period</div></div>
+      <div class="el-card phases" data-id="ph-seasonal-cx"><div class="el-name">Seasonal Commissioning</div></div>
+      <div class="el-card phases" data-id="ph-transition"><div class="el-name">Facility Transition</div></div>
+    </div>
+
+    <!-- ===================== CENTER: BUILDING ELEMENTS (86) ===================== -->
+    <div class="domain-column">
+      <div class="domain-hdr elements">Building Elements<span>What gets built</span></div>
+
+      <div class="cat-label">Site & Earthwork</div>
+      <div class="el-card elements" data-id="be-excav"><div class="el-name">Excavation & Shoring</div></div>
+      <div class="el-card elements" data-id="be-backfill"><div class="el-name">Backfill & Grading</div></div>
+      <div class="el-card elements" data-id="be-dewater"><div class="el-name">Dewatering</div></div>
+      <div class="el-card elements" data-id="be-erosion"><div class="el-name">Erosion & Sediment Control</div></div>
+
+      <div class="cat-label">Foundations</div>
+      <div class="el-card elements" data-id="be-deep-fdn"><div class="el-name">Deep Foundations</div></div>
+      <div class="el-card elements" data-id="be-shallow-fdn"><div class="el-name">Shallow Foundations</div></div>
+      <div class="el-card elements" data-id="be-fdn-walls"><div class="el-name">Foundation Walls</div></div>
+      <div class="el-card elements" data-id="be-grade-beams"><div class="el-name">Grade Beams</div></div>
+      <div class="el-card elements" data-id="be-sog"><div class="el-name">Slab on Grade</div></div>
+      <div class="el-card elements" data-id="be-bg-wp"><div class="el-name">Below-Grade Waterproofing</div></div>
+
+      <div class="cat-label">Site Utilities</div>
+      <div class="el-card elements" data-id="be-water-main"><div class="el-name">Water Main / Service</div></div>
+      <div class="el-card elements" data-id="be-sanitary"><div class="el-name">Sanitary Sewer</div></div>
+      <div class="el-card elements" data-id="be-storm"><div class="el-name">Storm Drainage</div></div>
+      <div class="el-card elements" data-id="be-gas-svc"><div class="el-name">Gas Service</div></div>
+      <div class="el-card elements" data-id="be-site-elec"><div class="el-name">Site Electrical & Telecom</div></div>
+
+      <div class="cat-label">Structural Frame</div>
+      <div class="el-card elements" data-id="be-columns"><div class="el-name">Columns</div></div>
+      <div class="el-card elements" data-id="be-beams"><div class="el-name">Beams & Girders</div></div>
+      <div class="el-card elements" data-id="be-slabs"><div class="el-name">Floor Slabs & Metal Deck</div></div>
+      <div class="el-card elements" data-id="be-roof-struct"><div class="el-name">Roof Structure</div></div>
+      <div class="el-card elements" data-id="be-connections"><div class="el-name">Connections & Embeds</div></div>
+      <div class="el-card elements" data-id="be-stairs"><div class="el-name">Stairs & Ramps</div></div>
+      <div class="el-card elements" data-id="be-misc-metals"><div class="el-name">Miscellaneous Metals</div></div>
+
+      <div class="cat-label">Exterior Enclosure</div>
+      <div class="el-card elements" data-id="be-curtainwall"><div class="el-name">Curtain Wall</div></div>
+      <div class="el-card elements" data-id="be-windows"><div class="el-name">Windows</div></div>
+      <div class="el-card elements" data-id="be-ext-doors"><div class="el-name">Exterior Doors & Entrances</div></div>
+      <div class="el-card elements" data-id="be-masonry-v"><div class="el-name">Masonry Veneer / Backup</div></div>
+      <div class="el-card elements" data-id="be-panels"><div class="el-name">Precast / Metal Panels</div></div>
+      <div class="el-card elements" data-id="be-amb"><div class="el-name">Air & Moisture Barrier</div></div>
+      <div class="el-card elements" data-id="be-ext-insul"><div class="el-name">Exterior Insulation</div></div>
+
+      <div class="cat-label">Roofing</div>
+      <div class="el-card elements" data-id="be-roof-mem"><div class="el-name">Roof Membrane</div></div>
+      <div class="el-card elements" data-id="be-roof-insul"><div class="el-name">Roof Insulation & Cover Board</div></div>
+      <div class="el-card elements" data-id="be-flashing"><div class="el-name">Flashing & Sheet Metal</div></div>
+      <div class="el-card elements" data-id="be-roof-drain"><div class="el-name">Roof Drainage</div></div>
+      <div class="el-card elements" data-id="be-skylights"><div class="el-name">Skylights & Roof Hatches</div></div>
+
+      <div class="cat-label">HVAC</div>
+      <div class="el-card elements" data-id="be-ductwork"><div class="el-name">Ductwork</div></div>
+      <div class="el-card elements" data-id="be-hvac-pipe"><div class="el-name">HVAC Piping</div></div>
+      <div class="el-card elements" data-id="be-ahu"><div class="el-name">Air Handling Equipment</div></div>
+      <div class="el-card elements" data-id="be-heating"><div class="el-name">Heating Equipment</div></div>
+      <div class="el-card elements" data-id="be-cooling"><div class="el-name">Cooling Equipment</div></div>
+      <div class="el-card elements" data-id="be-duct-insul"><div class="el-name">Duct Insulation</div></div>
+      <div class="el-card elements" data-id="be-hvac-ctrl"><div class="el-name">HVAC Controls & Thermostats</div></div>
+      <div class="el-card elements" data-id="be-tab"><div class="el-name">Testing Adjusting & Balancing</div></div>
+
+      <div class="cat-label">Plumbing</div>
+      <div class="el-card elements" data-id="be-dom-water"><div class="el-name">Domestic Water Supply</div></div>
+      <div class="el-card elements" data-id="be-waste-vent"><div class="el-name">Sanitary Waste & Vent</div></div>
+      <div class="el-card elements" data-id="be-int-storm"><div class="el-name">Interior Storm Drainage</div></div>
+      <div class="el-card elements" data-id="be-gas-pipe"><div class="el-name">Gas Piping (Interior)</div></div>
+      <div class="el-card elements" data-id="be-plumb-fix"><div class="el-name">Plumbing Fixtures</div></div>
+      <div class="el-card elements" data-id="be-water-htr"><div class="el-name">Water Heaters</div></div>
+      <div class="el-card elements" data-id="be-pipe-insul"><div class="el-name">Pipe Insulation</div></div>
+
+      <div class="cat-label">Electrical</div>
+      <div class="el-card elements" data-id="be-power-dist"><div class="el-name">Power Distribution</div></div>
+      <div class="el-card elements" data-id="be-branch"><div class="el-name">Branch Wiring & Devices</div></div>
+      <div class="el-card elements" data-id="be-conduit"><div class="el-name">Conduit & Raceways</div></div>
+      <div class="el-card elements" data-id="be-lighting"><div class="el-name">Lighting Fixtures & Controls</div></div>
+      <div class="el-card elements" data-id="be-emerg-pwr"><div class="el-name">Emergency / Standby Power</div></div>
+      <div class="el-card elements" data-id="be-grounding"><div class="el-name">Grounding & Lightning</div></div>
+
+      <div class="cat-label">Fire Protection</div>
+      <div class="el-card elements" data-id="be-sprink-main"><div class="el-name">Sprinkler Mains & Branches</div></div>
+      <div class="el-card elements" data-id="be-sprink-head"><div class="el-name">Sprinkler Heads</div></div>
+      <div class="el-card elements" data-id="be-standpipe"><div class="el-name">Standpipes & Hose</div></div>
+      <div class="el-card elements" data-id="be-fire-pump"><div class="el-name">Fire Pump</div></div>
+      <div class="el-card elements" data-id="be-fa"><div class="el-name">Fire Alarm & Detection</div></div>
+
+      <div class="cat-label">Low Voltage & Technology</div>
+      <div class="el-card elements" data-id="be-data"><div class="el-name">Data / Telecom Cabling</div></div>
+      <div class="el-card elements" data-id="be-security"><div class="el-name">Security Systems</div></div>
+      <div class="el-card elements" data-id="be-av"><div class="el-name">Audio / Visual Systems</div></div>
+      <div class="el-card elements" data-id="be-bas"><div class="el-name">Building Automation Wiring</div></div>
+      <div class="el-card elements" data-id="be-specialty-sys"><div class="el-name">Specialty Systems</div></div>
+
+      <div class="cat-label">Interior Construction</div>
+      <div class="el-card elements" data-id="be-studs"><div class="el-name">Metal Stud Framing</div></div>
+      <div class="el-card elements" data-id="be-drywall"><div class="el-name">Drywall / Gypsum Board</div></div>
+      <div class="el-card elements" data-id="be-int-doors"><div class="el-name">Interior Doors & Hardware</div></div>
+      <div class="el-card elements" data-id="be-act"><div class="el-name">Acoustic Ceilings</div></div>
+      <div class="el-card elements" data-id="be-dw-ceil"><div class="el-name">Drywall Ceilings & Soffits</div></div>
+      <div class="el-card elements" data-id="be-paint"><div class="el-name">Paint & Wall Coatings</div></div>
+      <div class="el-card elements" data-id="be-wallcover"><div class="el-name">Wallcovering</div></div>
+      <div class="el-card elements" data-id="be-tile"><div class="el-name">Floor Tile & Stone</div></div>
+      <div class="el-card elements" data-id="be-carpet"><div class="el-name">Carpet & Resilient Flooring</div></div>
+      <div class="el-card elements" data-id="be-spec-floor"><div class="el-name">Specialty Flooring</div></div>
+      <div class="el-card elements" data-id="be-casework"><div class="el-name">Casework & Millwork</div></div>
+      <div class="el-card elements" data-id="be-countertop"><div class="el-name">Countertops</div></div>
+      <div class="el-card elements" data-id="be-toilet-acc"><div class="el-name">Toilet Accessories & Specialties</div></div>
+      <div class="el-card elements" data-id="be-signage"><div class="el-name">Signage & Wayfinding</div></div>
+
+      <div class="cat-label">Conveying Systems</div>
+      <div class="el-card elements" data-id="be-elev-car"><div class="el-name">Elevator Car & Hoistway</div></div>
+      <div class="el-card elements" data-id="be-elev-mach"><div class="el-name">Elevator Machinery & Controls</div></div>
+
+      <div class="cat-label">Site Improvements</div>
+      <div class="el-card elements" data-id="be-paving"><div class="el-name">Paving</div></div>
+      <div class="el-card elements" data-id="be-sidewalks"><div class="el-name">Sidewalks & Curbs</div></div>
+      <div class="el-card elements" data-id="be-landscape"><div class="el-name">Landscaping & Irrigation</div></div>
+      <div class="el-card elements" data-id="be-site-light"><div class="el-name">Site Lighting</div></div>
+      <div class="el-card elements" data-id="be-fencing"><div class="el-name">Fencing & Gates</div></div>
+    </div>
+
+    <!-- ===================== RIGHT: RESOURCES (61) ===================== -->
+    <div class="domain-column">
+      <div class="domain-hdr resources">Resources<span>What it takes</span></div>
+
+      <div class="cat-label">General Labor</div>
+      <div class="el-card resources" data-id="res-laborer"><div class="el-name">General Laborer</div></div>
+      <div class="el-card resources" data-id="res-carpenter"><div class="el-name">Carpenter</div></div>
+      <div class="el-card resources" data-id="res-concrete"><div class="el-name">Concrete Worker</div></div>
+
+      <div class="cat-label">Structural Trades</div>
+      <div class="el-card resources" data-id="res-ironworker"><div class="el-name">Ironworker / Steel Erector</div></div>
+      <div class="el-card resources" data-id="res-mason"><div class="el-name">Mason</div></div>
+
+      <div class="cat-label">Building Envelope</div>
+      <div class="el-card resources" data-id="res-roofer"><div class="el-name">Roofer</div></div>
+      <div class="el-card resources" data-id="res-glazier"><div class="el-name">Glazier</div></div>
+      <div class="el-card resources" data-id="res-waterproofer"><div class="el-name">Waterproofer</div></div>
+
+      <div class="cat-label">Interior Finishes</div>
+      <div class="el-card resources" data-id="res-drywall"><div class="el-name">Drywall Hanger / Finisher</div></div>
+      <div class="el-card resources" data-id="res-painter"><div class="el-name">Painter</div></div>
+      <div class="el-card resources" data-id="res-floor"><div class="el-name">Floor Installer</div></div>
+      <div class="el-card resources" data-id="res-ceiling"><div class="el-name">Ceiling Installer</div></div>
+      <div class="el-card resources" data-id="res-insulator"><div class="el-name">Insulation Installer</div></div>
+      <div class="el-card resources" data-id="res-fireproofer"><div class="el-name">Fireproofer</div></div>
+
+      <div class="cat-label">MEP Trades</div>
+      <div class="el-card resources" data-id="res-plumber"><div class="el-name">Plumber / Pipefitter</div></div>
+      <div class="el-card resources" data-id="res-sheetmetal"><div class="el-name">HVAC / Sheet Metal</div></div>
+      <div class="el-card resources" data-id="res-electrician"><div class="el-name">Electrician</div></div>
+      <div class="el-card resources" data-id="res-sprinkler"><div class="el-name">Sprinkler Fitter</div></div>
+      <div class="el-card resources" data-id="res-elevator"><div class="el-name">Elevator Mechanic</div></div>
+      <div class="el-card resources" data-id="res-lowvolt"><div class="el-name">Low Voltage Technician</div></div>
+
+      <div class="cat-label">Site & Support</div>
+      <div class="el-card resources" data-id="res-operator"><div class="el-name">Equipment Operator</div></div>
+      <div class="el-card resources" data-id="res-surveyor"><div class="el-name">Surveyor / Layout Tech</div></div>
+      <div class="el-card resources" data-id="res-safety"><div class="el-name">Safety Professional</div></div>
+      <div class="el-card resources" data-id="res-qc"><div class="el-name">Quality Control Inspector</div></div>
+      <div class="el-card resources" data-id="res-cxa"><div class="el-name">Commissioning Agent</div></div>
+
+      <div class="cat-label">Cranes</div>
+      <div class="el-card resources" data-id="res-crane"><div class="el-name">Crane</div></div>
+
+      <div class="cat-label">Earthmoving</div>
+      <div class="el-card resources" data-id="res-earthmover"><div class="el-name">Earthmoving Equipment</div></div>
+
+      <div class="cat-label">Concrete Equipment</div>
+      <div class="el-card resources" data-id="res-conc-equip"><div class="el-name">Concrete Equipment</div></div>
+
+      <div class="cat-label">Other Equipment</div>
+      <div class="el-card resources" data-id="res-mat-handle"><div class="el-name">Material Handling</div></div>
+      <div class="el-card resources" data-id="res-access"><div class="el-name">Access Equipment</div></div>
+      <div class="el-card resources" data-id="res-compaction"><div class="el-name">Compaction Equipment</div></div>
+      <div class="el-card resources" data-id="res-piling"><div class="el-name">Piling / Foundation Equip</div></div>
+      <div class="el-card resources" data-id="res-hauling"><div class="el-name">Hauling Equipment</div></div>
+      <div class="el-card resources" data-id="res-temp-util"><div class="el-name">Temporary Utilities</div></div>
+      <div class="el-card resources" data-id="res-welding"><div class="el-name">Welding / Fabrication Equip</div></div>
+      <div class="el-card resources" data-id="res-survey-inst"><div class="el-name">Survey / Layout Instruments</div></div>
+
+      <div class="cat-label">Materials — Structure</div>
+      <div class="el-card resources" data-id="mat-concrete"><div class="el-name">Concrete</div></div>
+      <div class="el-card resources" data-id="mat-rebar"><div class="el-name">Rebar & Reinforcing</div></div>
+      <div class="el-card resources" data-id="mat-steel"><div class="el-name">Structural Steel & Metals</div></div>
+      <div class="el-card resources" data-id="mat-lumber"><div class="el-name">Lumber & Wood</div></div>
+      <div class="el-card resources" data-id="mat-masonry"><div class="el-name">Masonry</div></div>
+
+      <div class="cat-label">Materials — Envelope</div>
+      <div class="el-card resources" data-id="mat-roofing"><div class="el-name">Roofing</div></div>
+      <div class="el-card resources" data-id="mat-waterproof"><div class="el-name">Waterproofing & Sealants</div></div>
+      <div class="el-card resources" data-id="mat-thermal"><div class="el-name">Thermal & Fire Protection</div></div>
+      <div class="el-card resources" data-id="mat-glass"><div class="el-name">Glass & Glazing</div></div>
+
+      <div class="cat-label">Materials — Interiors</div>
+      <div class="el-card resources" data-id="mat-doors"><div class="el-name">Doors Frames & Hardware</div></div>
+      <div class="el-card resources" data-id="mat-framing"><div class="el-name">Interior Framing & Gypsum</div></div>
+      <div class="el-card resources" data-id="mat-ceiling"><div class="el-name">Ceiling Materials</div></div>
+      <div class="el-card resources" data-id="mat-flooring"><div class="el-name">Flooring</div></div>
+      <div class="el-card resources" data-id="mat-paint"><div class="el-name">Paint & Coatings</div></div>
+      <div class="el-card resources" data-id="mat-specialties"><div class="el-name">Specialties</div></div>
+      <div class="el-card resources" data-id="mat-casework"><div class="el-name">Casework & Millwork</div></div>
+
+      <div class="cat-label">Materials — MEP</div>
+      <div class="el-card resources" data-id="mat-plumbing"><div class="el-name">Plumbing Materials</div></div>
+      <div class="el-card resources" data-id="mat-hvac-dist"><div class="el-name">HVAC Distribution</div></div>
+      <div class="el-card resources" data-id="mat-hvac-equip"><div class="el-name">HVAC Equipment & Controls</div></div>
+      <div class="el-card resources" data-id="mat-elec"><div class="el-name">Electrical & Wiring</div></div>
+      <div class="el-card resources" data-id="mat-lighting"><div class="el-name">Lighting</div></div>
+      <div class="el-card resources" data-id="mat-fp"><div class="el-name">Fire Protection Systems</div></div>
+      <div class="el-card resources" data-id="mat-lv"><div class="el-name">Low Voltage Systems</div></div>
+      <div class="el-card resources" data-id="mat-site"><div class="el-name">Site & Utility Materials</div></div>
+      <div class="el-card resources" data-id="mat-elevator"><div class="el-name">Elevator & Conveying</div></div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+const typeColors = {
+  'built': '#ffb74d', 'erected': '#ffb74d', 'installed': '#ffb74d',
+  'enclosed': '#ffb74d', 'applied': '#ffb74d', 'tested': '#80cbc4',
+  'installs': '#ce93d8', 'erects': '#ce93d8', 'places': '#ce93d8',
+  'forms': '#ce93d8', 'operates': '#ce93d8', 'applies': '#ce93d8',
+  'hangs': '#ce93d8', 'lays': '#ce93d8', 'pulls': '#ce93d8',
+  'fits': '#ce93d8', 'sets': '#ce93d8', 'wraps': '#ce93d8',
+  'built-into': '#66bb6a', 'material': '#66bb6a',
+  'lifts': '#ef9a9a', 'excavates': '#ef9a9a', 'pumps': '#ef9a9a',
+  'reaches': '#ef9a9a', 'drives': '#ef9a9a', 'compacts': '#ef9a9a',
+  'hauls': '#ef9a9a', 'welds': '#ef9a9a', 'handles': '#ef9a9a',
+  'active': '#ab47bc', 'peaks': '#e1bee7', 'mobilized': '#ab47bc',
+  'supports': '#7e57c2', 'inspects': '#80cbc4', 'surveys': '#90a4ae',
+};
+
+const R = [
+  // ========================================
+  // BUILDING ELEMENTS ↔ PHASES
+  // ========================================
+  // Site & Earthwork
+  ["be-excav","ph-earthwork","built","BUILT DURING"],
+  ["be-backfill","ph-earthwork","built","BUILT DURING"],
+  ["be-dewater","ph-earthwork","built","BUILT DURING"],
+  ["be-erosion","ph-site-setup","built","BUILT DURING"],
+  ["be-erosion","ph-earthwork","built","MAINTAINED"],
+  // Foundations
+  ["be-deep-fdn","ph-foundations","built","BUILT DURING"],
+  ["be-shallow-fdn","ph-foundations","built","BUILT DURING"],
+  ["be-fdn-walls","ph-foundations","built","BUILT DURING"],
+  ["be-grade-beams","ph-foundations","built","BUILT DURING"],
+  ["be-sog","ph-slab","built","BUILT DURING"],
+  ["be-bg-wp","ph-foundations","built","APPLIED DURING"],
+  // Site Utilities
+  ["be-water-main","ph-site-util","built","BUILT DURING"],
+  ["be-sanitary","ph-site-util","built","BUILT DURING"],
+  ["be-storm","ph-site-util","built","BUILT DURING"],
+  ["be-gas-svc","ph-site-util","built","BUILT DURING"],
+  ["be-site-elec","ph-site-util","built","BUILT DURING"],
+  // Structural Frame
+  ["be-columns","ph-steel","erected","ERECTED DURING"],
+  ["be-beams","ph-steel","erected","ERECTED DURING"],
+  ["be-slabs","ph-steel","erected","ERECTED DURING"],
+  ["be-slabs","ph-elev-conc","built","POURED DURING"],
+  ["be-roof-struct","ph-steel","erected","ERECTED DURING"],
+  ["be-connections","ph-steel","erected","ERECTED DURING"],
+  ["be-stairs","ph-stairs","erected","ERECTED DURING"],
+  ["be-misc-metals","ph-stairs","erected","ERECTED DURING"],
+  // Exterior Enclosure
+  ["be-curtainwall","ph-curtainwall","enclosed","ENCLOSED DURING"],
+  ["be-windows","ph-curtainwall","enclosed","ENCLOSED DURING"],
+  ["be-ext-doors","ph-curtainwall","enclosed","ENCLOSED DURING"],
+  ["be-masonry-v","ph-masonry","enclosed","ENCLOSED DURING"],
+  ["be-panels","ph-curtainwall","enclosed","ENCLOSED DURING"],
+  ["be-amb","ph-barrier","enclosed","APPLIED DURING"],
+  ["be-ext-insul","ph-barrier","enclosed","APPLIED DURING"],
+  // Roofing
+  ["be-roof-mem","ph-roofing","enclosed","ENCLOSED DURING"],
+  ["be-roof-insul","ph-roofing","enclosed","ENCLOSED DURING"],
+  ["be-flashing","ph-roofing","enclosed","ENCLOSED DURING"],
+  ["be-roof-drain","ph-roofing","enclosed","ENCLOSED DURING"],
+  ["be-skylights","ph-roofing","enclosed","ENCLOSED DURING"],
+  // HVAC
+  ["be-ductwork","ph-hvac-dist","installed","INSTALLED DURING"],
+  ["be-hvac-pipe","ph-hvac-dist","installed","INSTALLED DURING"],
+  ["be-ahu","ph-hvac-dist","installed","SET DURING"],
+  ["be-heating","ph-hvac-dist","installed","SET DURING"],
+  ["be-cooling","ph-hvac-dist","installed","SET DURING"],
+  ["be-duct-insul","ph-hvac-dist","installed","INSTALLED DURING"],
+  ["be-hvac-ctrl","ph-hvac-trim","installed","INSTALLED DURING"],
+  ["be-tab","ph-tab","tested","TESTED DURING"],
+  // Plumbing
+  ["be-dom-water","ph-plumb-ri","installed","INSTALLED DURING"],
+  ["be-waste-vent","ph-plumb-ri","installed","INSTALLED DURING"],
+  ["be-int-storm","ph-plumb-ri","installed","INSTALLED DURING"],
+  ["be-gas-pipe","ph-plumb-ri","installed","INSTALLED DURING"],
+  ["be-plumb-fix","ph-plumb-fix","installed","INSTALLED DURING"],
+  ["be-water-htr","ph-plumb-ri","installed","SET DURING"],
+  ["be-pipe-insul","ph-plumb-ri","installed","INSTALLED DURING"],
+  // Electrical
+  ["be-power-dist","ph-elec-ri","installed","INSTALLED DURING"],
+  ["be-branch","ph-elec-ri","installed","INSTALLED DURING"],
+  ["be-conduit","ph-elec-ri","installed","INSTALLED DURING"],
+  ["be-lighting","ph-elec-dev","installed","INSTALLED DURING"],
+  ["be-emerg-pwr","ph-elec-ri","installed","INSTALLED DURING"],
+  ["be-grounding","ph-elec-ri","installed","INSTALLED DURING"],
+  // Fire Protection
+  ["be-sprink-main","ph-fp-ri","installed","INSTALLED DURING"],
+  ["be-sprink-head","ph-fp-ri","installed","INSTALLED DURING"],
+  ["be-standpipe","ph-fp-ri","installed","INSTALLED DURING"],
+  ["be-fire-pump","ph-fp-ri","installed","SET DURING"],
+  ["be-fa","ph-fa-dev","installed","INSTALLED DURING"],
+  // Low Voltage
+  ["be-data","ph-lv-ri","installed","INSTALLED DURING"],
+  ["be-security","ph-lv-ri","installed","INSTALLED DURING"],
+  ["be-av","ph-lv-dev","installed","INSTALLED DURING"],
+  ["be-bas","ph-lv-ri","installed","INSTALLED DURING"],
+  ["be-specialty-sys","ph-lv-ri","installed","INSTALLED DURING"],
+  // Interior Construction
+  ["be-studs","ph-framing","installed","INSTALLED DURING"],
+  ["be-drywall","ph-drywall","installed","INSTALLED DURING"],
+  ["be-int-doors","ph-doors","installed","INSTALLED DURING"],
+  ["be-act","ph-ceilings","installed","INSTALLED DURING"],
+  ["be-dw-ceil","ph-drywall","installed","INSTALLED DURING"],
+  ["be-paint","ph-paint","applied","APPLIED DURING"],
+  ["be-wallcover","ph-paint","applied","APPLIED DURING"],
+  ["be-tile","ph-flooring","installed","INSTALLED DURING"],
+  ["be-carpet","ph-flooring","installed","INSTALLED DURING"],
+  ["be-spec-floor","ph-flooring","installed","INSTALLED DURING"],
+  ["be-casework","ph-casework","installed","INSTALLED DURING"],
+  ["be-countertop","ph-casework","installed","INSTALLED DURING"],
+  ["be-toilet-acc","ph-doors","installed","INSTALLED DURING"],
+  ["be-signage","ph-doors","installed","INSTALLED DURING"],
+  // Conveying
+  ["be-elev-car","ph-doors","installed","INSTALLED DURING"],
+  ["be-elev-mach","ph-elec-ri","installed","SET DURING"],
+  // Site Improvements
+  ["be-paving","ph-punch","built","BUILT DURING"],
+  ["be-sidewalks","ph-punch","built","BUILT DURING"],
+  ["be-landscape","ph-punch","built","BUILT DURING"],
+  ["be-site-light","ph-punch","built","BUILT DURING"],
+  ["be-fencing","ph-site-setup","built","BUILT DURING"],
+  // Commissioning links
+  ["be-ahu","ph-startup","tested","STARTED DURING"],
+  ["be-heating","ph-startup","tested","STARTED DURING"],
+  ["be-cooling","ph-startup","tested","STARTED DURING"],
+  ["be-power-dist","ph-startup","tested","ENERGIZED DURING"],
+  ["be-emerg-pwr","ph-startup","tested","TESTED DURING"],
+  ["be-fire-pump","ph-startup","tested","TESTED DURING"],
+  ["be-fa","ph-prefunc","tested","TESTED DURING"],
+  ["be-sprink-main","ph-prefunc","tested","TESTED DURING"],
+  ["be-elev-car","ph-prefunc","tested","TESTED DURING"],
+  ["be-hvac-ctrl","ph-integrated","tested","TESTED DURING"],
+  ["be-bas","ph-integrated","tested","TESTED DURING"],
+  ["be-security","ph-integrated","tested","TESTED DURING"],
+
+  // ========================================
+  // RESOURCES (TRADES) ↔ BUILDING ELEMENTS
+  // ========================================
+  // General Laborer
+  ["res-laborer","be-excav","installs","SUPPORTS"],
+  ["res-laborer","be-backfill","installs","SUPPORTS"],
+  ["res-laborer","be-erosion","installs","INSTALLS"],
+  ["res-laborer","be-sog","installs","SUPPORTS"],
+  // Carpenter
+  ["res-carpenter","be-shallow-fdn","forms","FORMS"],
+  ["res-carpenter","be-fdn-walls","forms","FORMS"],
+  ["res-carpenter","be-grade-beams","forms","FORMS"],
+  ["res-carpenter","be-sog","forms","FORMS"],
+  ["res-carpenter","be-int-doors","installs","INSTALLS"],
+  ["res-carpenter","be-casework","installs","INSTALLS"],
+  ["res-carpenter","be-countertop","installs","INSTALLS"],
+  // Concrete Worker
+  ["res-concrete","be-deep-fdn","places","PLACES"],
+  ["res-concrete","be-shallow-fdn","places","PLACES"],
+  ["res-concrete","be-fdn-walls","places","PLACES"],
+  ["res-concrete","be-grade-beams","places","PLACES"],
+  ["res-concrete","be-sog","places","PLACES"],
+  ["res-concrete","be-slabs","places","PLACES"],
+  ["res-concrete","be-sidewalks","places","PLACES"],
+  ["res-concrete","be-paving","places","PLACES"],
+  // Ironworker
+  ["res-ironworker","be-columns","erects","ERECTS"],
+  ["res-ironworker","be-beams","erects","ERECTS"],
+  ["res-ironworker","be-slabs","erects","ERECTS"],
+  ["res-ironworker","be-roof-struct","erects","ERECTS"],
+  ["res-ironworker","be-connections","erects","ERECTS"],
+  ["res-ironworker","be-stairs","erects","ERECTS"],
+  ["res-ironworker","be-misc-metals","erects","ERECTS"],
+  // Mason
+  ["res-mason","be-masonry-v","installs","LAYS"],
+  ["res-mason","be-fdn-walls","installs","LAYS"],
+  // Roofer
+  ["res-roofer","be-roof-mem","installs","INSTALLS"],
+  ["res-roofer","be-roof-insul","installs","INSTALLS"],
+  ["res-roofer","be-flashing","installs","INSTALLS"],
+  ["res-roofer","be-roof-drain","installs","INSTALLS"],
+  ["res-roofer","be-skylights","installs","INSTALLS"],
+  // Glazier
+  ["res-glazier","be-curtainwall","installs","INSTALLS"],
+  ["res-glazier","be-windows","installs","INSTALLS"],
+  ["res-glazier","be-ext-doors","installs","INSTALLS"],
+  ["res-glazier","be-panels","installs","INSTALLS"],
+  // Waterproofer
+  ["res-waterproofer","be-bg-wp","applies","APPLIES"],
+  ["res-waterproofer","be-amb","applies","APPLIES"],
+  ["res-waterproofer","be-ext-insul","applies","APPLIES"],
+  // Drywall
+  ["res-drywall","be-studs","installs","FRAMES"],
+  ["res-drywall","be-drywall","hangs","HANGS"],
+  ["res-drywall","be-dw-ceil","hangs","HANGS"],
+  // Painter
+  ["res-painter","be-paint","applies","APPLIES"],
+  ["res-painter","be-wallcover","applies","APPLIES"],
+  // Floor Installer
+  ["res-floor","be-tile","lays","LAYS"],
+  ["res-floor","be-carpet","lays","LAYS"],
+  ["res-floor","be-spec-floor","lays","LAYS"],
+  // Ceiling Installer
+  ["res-ceiling","be-act","installs","INSTALLS"],
+  // Insulation Installer
+  ["res-insulator","be-duct-insul","installs","WRAPS"],
+  ["res-insulator","be-pipe-insul","installs","WRAPS"],
+  ["res-insulator","be-ext-insul","installs","INSTALLS"],
+  ["res-insulator","be-roof-insul","installs","INSTALLS"],
+  // Fireproofer
+  ["res-fireproofer","be-columns","applies","FIREPROOFS"],
+  ["res-fireproofer","be-beams","applies","FIREPROOFS"],
+  ["res-fireproofer","be-slabs","applies","FIREPROOFS"],
+  // Plumber
+  ["res-plumber","be-dom-water","installs","INSTALLS"],
+  ["res-plumber","be-waste-vent","installs","INSTALLS"],
+  ["res-plumber","be-int-storm","installs","INSTALLS"],
+  ["res-plumber","be-gas-pipe","installs","INSTALLS"],
+  ["res-plumber","be-plumb-fix","installs","INSTALLS"],
+  ["res-plumber","be-water-htr","installs","INSTALLS"],
+  ["res-plumber","be-water-main","installs","INSTALLS"],
+  ["res-plumber","be-sanitary","installs","INSTALLS"],
+  // HVAC / Sheet Metal
+  ["res-sheetmetal","be-ductwork","installs","INSTALLS"],
+  ["res-sheetmetal","be-hvac-pipe","installs","INSTALLS"],
+  ["res-sheetmetal","be-ahu","sets","SETS"],
+  ["res-sheetmetal","be-heating","sets","SETS"],
+  ["res-sheetmetal","be-cooling","sets","SETS"],
+  ["res-sheetmetal","be-hvac-ctrl","installs","INSTALLS"],
+  // Electrician
+  ["res-electrician","be-power-dist","installs","INSTALLS"],
+  ["res-electrician","be-branch","installs","INSTALLS"],
+  ["res-electrician","be-conduit","installs","INSTALLS"],
+  ["res-electrician","be-lighting","installs","INSTALLS"],
+  ["res-electrician","be-emerg-pwr","installs","INSTALLS"],
+  ["res-electrician","be-grounding","installs","INSTALLS"],
+  ["res-electrician","be-site-elec","installs","INSTALLS"],
+  // Sprinkler Fitter
+  ["res-sprinkler","be-sprink-main","fits","INSTALLS"],
+  ["res-sprinkler","be-sprink-head","fits","INSTALLS"],
+  ["res-sprinkler","be-standpipe","fits","INSTALLS"],
+  ["res-sprinkler","be-fire-pump","fits","INSTALLS"],
+  // Elevator Mechanic
+  ["res-elevator","be-elev-car","installs","INSTALLS"],
+  ["res-elevator","be-elev-mach","installs","INSTALLS"],
+  // Low Voltage Technician
+  ["res-lowvolt","be-data","pulls","PULLS"],
+  ["res-lowvolt","be-security","installs","INSTALLS"],
+  ["res-lowvolt","be-av","installs","INSTALLS"],
+  ["res-lowvolt","be-bas","installs","INSTALLS"],
+  ["res-lowvolt","be-specialty-sys","installs","INSTALLS"],
+  ["res-lowvolt","be-fa","installs","INSTALLS"],
+  // Equipment Operator
+  ["res-operator","be-excav","operates","OPERATES"],
+  ["res-operator","be-backfill","operates","OPERATES"],
+  ["res-operator","be-dewater","operates","OPERATES"],
+  ["res-operator","be-paving","operates","OPERATES"],
+
+  // ========================================
+  // RESOURCES (EQUIPMENT) ↔ BUILDING ELEMENTS
+  // ========================================
+  ["res-crane","be-columns","lifts","LIFTS"],
+  ["res-crane","be-beams","lifts","LIFTS"],
+  ["res-crane","be-slabs","lifts","LIFTS"],
+  ["res-crane","be-roof-struct","lifts","LIFTS"],
+  ["res-crane","be-curtainwall","lifts","LIFTS"],
+  ["res-crane","be-panels","lifts","LIFTS"],
+  ["res-crane","be-ahu","lifts","LIFTS"],
+  ["res-crane","be-cooling","lifts","LIFTS"],
+  ["res-earthmover","be-excav","excavates","EXCAVATES"],
+  ["res-earthmover","be-backfill","excavates","GRADES"],
+  ["res-earthmover","be-dewater","excavates","EXCAVATES"],
+  ["res-conc-equip","be-shallow-fdn","pumps","PLACES"],
+  ["res-conc-equip","be-fdn-walls","pumps","PLACES"],
+  ["res-conc-equip","be-sog","pumps","PLACES"],
+  ["res-conc-equip","be-slabs","pumps","PUMPS"],
+  ["res-access","be-curtainwall","reaches","ACCESS"],
+  ["res-access","be-paint","reaches","ACCESS"],
+  ["res-access","be-act","reaches","ACCESS"],
+  ["res-access","be-ductwork","reaches","ACCESS"],
+  ["res-compaction","be-backfill","compacts","COMPACTS"],
+  ["res-compaction","be-sog","compacts","COMPACTS"],
+  ["res-piling","be-deep-fdn","drives","DRIVES"],
+  ["res-hauling","be-excav","hauls","HAULS"],
+  ["res-hauling","be-backfill","hauls","HAULS"],
+  ["res-welding","be-connections","welds","WELDS"],
+  ["res-welding","be-misc-metals","welds","WELDS"],
+  ["res-mat-handle","be-ductwork","handles","DISTRIBUTES"],
+  ["res-mat-handle","be-drywall","handles","DISTRIBUTES"],
+  ["res-mat-handle","be-studs","handles","DISTRIBUTES"],
+
+  // ========================================
+  // RESOURCES (MATERIALS) ↔ BUILDING ELEMENTS
+  // ========================================
+  ["mat-concrete","be-shallow-fdn","material","PLACED IN"],
+  ["mat-concrete","be-deep-fdn","material","PLACED IN"],
+  ["mat-concrete","be-fdn-walls","material","PLACED IN"],
+  ["mat-concrete","be-grade-beams","material","PLACED IN"],
+  ["mat-concrete","be-sog","material","PLACED IN"],
+  ["mat-concrete","be-slabs","material","PLACED IN"],
+  ["mat-concrete","be-sidewalks","material","PLACED IN"],
+  ["mat-rebar","be-shallow-fdn","material","EMBEDDED IN"],
+  ["mat-rebar","be-deep-fdn","material","EMBEDDED IN"],
+  ["mat-rebar","be-fdn-walls","material","EMBEDDED IN"],
+  ["mat-rebar","be-grade-beams","material","EMBEDDED IN"],
+  ["mat-rebar","be-sog","material","EMBEDDED IN"],
+  ["mat-rebar","be-slabs","material","EMBEDDED IN"],
+  ["mat-steel","be-columns","material","ERECTED AS"],
+  ["mat-steel","be-beams","material","ERECTED AS"],
+  ["mat-steel","be-slabs","material","DECKED AS"],
+  ["mat-steel","be-roof-struct","material","ERECTED AS"],
+  ["mat-steel","be-connections","material","BOLTED IN"],
+  ["mat-steel","be-stairs","material","ERECTED AS"],
+  ["mat-steel","be-misc-metals","material","FABRICATED AS"],
+  ["mat-lumber","be-shallow-fdn","material","FORMS"],
+  ["mat-lumber","be-casework","material","BUILT INTO"],
+  ["mat-masonry","be-masonry-v","material","LAID AS"],
+  ["mat-masonry","be-fdn-walls","material","LAID AS"],
+  ["mat-roofing","be-roof-mem","material","APPLIED AS"],
+  ["mat-roofing","be-roof-insul","material","APPLIED AS"],
+  ["mat-roofing","be-flashing","material","FORMED AS"],
+  ["mat-waterproof","be-bg-wp","material","APPLIED AS"],
+  ["mat-waterproof","be-amb","material","APPLIED AS"],
+  ["mat-thermal","be-ext-insul","material","INSTALLED AS"],
+  ["mat-thermal","be-duct-insul","material","WRAPPED AS"],
+  ["mat-thermal","be-pipe-insul","material","WRAPPED AS"],
+  ["mat-glass","be-curtainwall","material","GLAZED INTO"],
+  ["mat-glass","be-windows","material","GLAZED INTO"],
+  ["mat-glass","be-skylights","material","GLAZED INTO"],
+  ["mat-doors","be-int-doors","material","INSTALLED AS"],
+  ["mat-doors","be-ext-doors","material","INSTALLED AS"],
+  ["mat-framing","be-studs","material","FRAMED AS"],
+  ["mat-framing","be-drywall","material","HUNG AS"],
+  ["mat-framing","be-dw-ceil","material","HUNG AS"],
+  ["mat-ceiling","be-act","material","INSTALLED AS"],
+  ["mat-flooring","be-tile","material","LAID AS"],
+  ["mat-flooring","be-carpet","material","LAID AS"],
+  ["mat-flooring","be-spec-floor","material","LAID AS"],
+  ["mat-paint","be-paint","material","APPLIED AS"],
+  ["mat-casework","be-casework","material","BUILT AS"],
+  ["mat-casework","be-countertop","material","BUILT AS"],
+  ["mat-specialties","be-toilet-acc","material","INSTALLED AS"],
+  ["mat-specialties","be-signage","material","INSTALLED AS"],
+  ["mat-plumbing","be-dom-water","material","PIPED AS"],
+  ["mat-plumbing","be-waste-vent","material","PIPED AS"],
+  ["mat-plumbing","be-plumb-fix","material","INSTALLED AS"],
+  ["mat-plumbing","be-water-htr","material","INSTALLED AS"],
+  ["mat-hvac-dist","be-ductwork","material","ROUTED AS"],
+  ["mat-hvac-dist","be-hvac-pipe","material","PIPED AS"],
+  ["mat-hvac-equip","be-ahu","material","SET AS"],
+  ["mat-hvac-equip","be-heating","material","SET AS"],
+  ["mat-hvac-equip","be-cooling","material","SET AS"],
+  ["mat-hvac-equip","be-hvac-ctrl","material","INSTALLED AS"],
+  ["mat-elec","be-power-dist","material","INSTALLED AS"],
+  ["mat-elec","be-branch","material","PULLED AS"],
+  ["mat-elec","be-conduit","material","INSTALLED AS"],
+  ["mat-elec","be-grounding","material","INSTALLED AS"],
+  ["mat-lighting","be-lighting","material","INSTALLED AS"],
+  ["mat-fp","be-sprink-main","material","PIPED AS"],
+  ["mat-fp","be-sprink-head","material","INSTALLED AS"],
+  ["mat-fp","be-standpipe","material","PIPED AS"],
+  ["mat-fp","be-fire-pump","material","SET AS"],
+  ["mat-fp","be-fa","material","INSTALLED AS"],
+  ["mat-lv","be-data","material","PULLED AS"],
+  ["mat-lv","be-security","material","INSTALLED AS"],
+  ["mat-lv","be-av","material","INSTALLED AS"],
+  ["mat-lv","be-bas","material","INSTALLED AS"],
+  ["mat-site","be-water-main","material","PIPED AS"],
+  ["mat-site","be-sanitary","material","PIPED AS"],
+  ["mat-site","be-storm","material","PIPED AS"],
+  ["mat-site","be-gas-svc","material","PIPED AS"],
+  ["mat-site","be-paving","material","PLACED AS"],
+  ["mat-elevator","be-elev-car","material","INSTALLED AS"],
+  ["mat-elevator","be-elev-mach","material","INSTALLED AS"],
+
+  // ========================================
+  // RESOURCES (TRADES) ↔ PHASES
+  // ========================================
+  // General Laborer
+  ["res-laborer","ph-site-setup","active","ACTIVE"],
+  ["res-laborer","ph-demo","active","ACTIVE"],
+  ["res-laborer","ph-earthwork","active","ACTIVE"],
+  ["res-laborer","ph-foundations","active","ACTIVE"],
+  ["res-laborer","ph-slab","active","ACTIVE"],
+  ["res-laborer","ph-steel","active","ACTIVE"],
+  ["res-laborer","ph-framing","active","ACTIVE"],
+  ["res-laborer","ph-finishes","active","ACTIVE"],
+  ["res-laborer","ph-punch","active","ACTIVE"],
+  // Carpenter
+  ["res-carpenter","ph-foundations","active","FORMWORK"],
+  ["res-carpenter","ph-slab","active","FORMWORK"],
+  ["res-carpenter","ph-elev-conc","active","FORMWORK"],
+  ["res-carpenter","ph-doors","active","FINISH"],
+  ["res-carpenter","ph-casework","active","FINISH"],
+  ["res-carpenter","ph-punch","active","CORRECTS"],
+  // Concrete Worker
+  ["res-concrete","ph-foundations","peaks","PEAKS"],
+  ["res-concrete","ph-slab","peaks","PEAKS"],
+  ["res-concrete","ph-elev-conc","peaks","PEAKS"],
+  ["res-concrete","ph-conc-frame","peaks","PEAKS"],
+  // Ironworker
+  ["res-ironworker","ph-steel","peaks","PEAKS"],
+  ["res-ironworker","ph-stairs","active","ACTIVE"],
+  // Mason
+  ["res-mason","ph-masonry","peaks","PEAKS"],
+  ["res-mason","ph-foundations","active","ACTIVE"],
+  // Roofer
+  ["res-roofer","ph-roofing","peaks","PEAKS"],
+  // Glazier
+  ["res-glazier","ph-curtainwall","peaks","PEAKS"],
+  // Waterproofer
+  ["res-waterproofer","ph-foundations","active","ACTIVE"],
+  ["res-waterproofer","ph-barrier","peaks","PEAKS"],
+  // Drywall
+  ["res-drywall","ph-framing","peaks","PEAKS"],
+  ["res-drywall","ph-drywall","peaks","PEAKS"],
+  // Painter
+  ["res-painter","ph-paint","peaks","PEAKS"],
+  ["res-painter","ph-punch","active","TOUCH-UP"],
+  // Floor Installer
+  ["res-floor","ph-flooring","peaks","PEAKS"],
+  // Ceiling Installer
+  ["res-ceiling","ph-ceil-grid","active","ACTIVE"],
+  ["res-ceiling","ph-ceilings","peaks","PEAKS"],
+  // Insulation Installer
+  ["res-insulator","ph-hvac-dist","active","ACTIVE"],
+  ["res-insulator","ph-plumb-ri","active","ACTIVE"],
+  ["res-insulator","ph-barrier","active","ACTIVE"],
+  // Fireproofer
+  ["res-fireproofer","ph-steel","active","FOLLOWS"],
+  // Plumber
+  ["res-plumber","ph-site-util","active","UNDERGROUND"],
+  ["res-plumber","ph-foundations","active","UNDERGROUND"],
+  ["res-plumber","ph-plumb-ri","peaks","PEAKS"],
+  ["res-plumber","ph-plumb-fix","active","TRIM"],
+  // HVAC / Sheet Metal
+  ["res-sheetmetal","ph-hvac-dist","peaks","PEAKS"],
+  ["res-sheetmetal","ph-hvac-trim","active","TRIM"],
+  ["res-sheetmetal","ph-startup","active","STARTUP"],
+  // Electrician
+  ["res-electrician","ph-site-util","active","UNDERGROUND"],
+  ["res-electrician","ph-elec-ri","peaks","PEAKS"],
+  ["res-electrician","ph-elec-dev","active","TRIM"],
+  ["res-electrician","ph-startup","active","STARTUP"],
+  // Sprinkler Fitter
+  ["res-sprinkler","ph-fp-ri","peaks","PEAKS"],
+  ["res-sprinkler","ph-fa-dev","active","ACTIVE"],
+  ["res-sprinkler","ph-prefunc","active","TESTING"],
+  // Elevator Mechanic
+  ["res-elevator","ph-steel","active","HOISTWAY"],
+  ["res-elevator","ph-doors","active","CAB INSTALL"],
+  ["res-elevator","ph-prefunc","active","TESTING"],
+  // Low Voltage Technician
+  ["res-lowvolt","ph-lv-ri","peaks","PEAKS"],
+  ["res-lowvolt","ph-lv-dev","active","TRIM"],
+  ["res-lowvolt","ph-fa-dev","active","ACTIVE"],
+  ["res-lowvolt","ph-integrated","active","TESTING"],
+  // Equipment Operator
+  ["res-operator","ph-demo","active","ACTIVE"],
+  ["res-operator","ph-earthwork","peaks","PEAKS"],
+  ["res-operator","ph-site-util","active","ACTIVE"],
+  ["res-operator","ph-foundations","active","ACTIVE"],
+  // Surveyor
+  ["res-surveyor","ph-site-setup","surveys","LAYOUT"],
+  ["res-surveyor","ph-earthwork","surveys","LAYOUT"],
+  ["res-surveyor","ph-foundations","surveys","LAYOUT"],
+  ["res-surveyor","ph-steel","surveys","LAYOUT"],
+  // Safety Professional
+  ["res-safety","ph-safety-orient","active","LEADS"],
+  ["res-safety","ph-earthwork","inspects","MONITORS"],
+  ["res-safety","ph-steel","inspects","MONITORS"],
+  ["res-safety","ph-roofing","inspects","MONITORS"],
+  ["res-safety","ph-punch","inspects","MONITORS"],
+  // QC Inspector
+  ["res-qc","ph-foundations","inspects","INSPECTS"],
+  ["res-qc","ph-steel","inspects","INSPECTS"],
+  ["res-qc","ph-barrier","inspects","INSPECTS"],
+  ["res-qc","ph-drywall","inspects","INSPECTS"],
+  ["res-qc","ph-paint","inspects","INSPECTS"],
+  // Commissioning Agent
+  ["res-cxa","ph-prefunc","inspects","LEADS"],
+  ["res-cxa","ph-startup","inspects","WITNESSES"],
+  ["res-cxa","ph-tab","inspects","WITNESSES"],
+  ["res-cxa","ph-integrated","inspects","LEADS"],
+  ["res-cxa","ph-perf-ver","inspects","LEADS"],
+  ["res-cxa","ph-seasonal-cx","inspects","RETURNS"],
+
+  // ========================================
+  // RESOURCES (EQUIPMENT) ↔ PHASES
+  // ========================================
+  ["res-crane","ph-steel","mobilized","MOBILIZED"],
+  ["res-crane","ph-curtainwall","mobilized","MOBILIZED"],
+  ["res-crane","ph-hvac-dist","mobilized","SETS UNITS"],
+  ["res-earthmover","ph-demo","mobilized","MOBILIZED"],
+  ["res-earthmover","ph-earthwork","mobilized","MOBILIZED"],
+  ["res-earthmover","ph-site-util","mobilized","MOBILIZED"],
+  ["res-conc-equip","ph-foundations","mobilized","MOBILIZED"],
+  ["res-conc-equip","ph-slab","mobilized","MOBILIZED"],
+  ["res-conc-equip","ph-elev-conc","mobilized","MOBILIZED"],
+  ["res-access","ph-curtainwall","mobilized","MOBILIZED"],
+  ["res-access","ph-paint","mobilized","MOBILIZED"],
+  ["res-access","ph-ceilings","mobilized","MOBILIZED"],
+  ["res-access","ph-punch","mobilized","MOBILIZED"],
+  ["res-compaction","ph-earthwork","mobilized","MOBILIZED"],
+  ["res-compaction","ph-site-util","mobilized","MOBILIZED"],
+  ["res-piling","ph-foundations","mobilized","MOBILIZED"],
+  ["res-hauling","ph-demo","mobilized","MOBILIZED"],
+  ["res-hauling","ph-earthwork","mobilized","MOBILIZED"],
+  ["res-welding","ph-steel","mobilized","MOBILIZED"],
+  ["res-welding","ph-stairs","mobilized","MOBILIZED"],
+  ["res-temp-util","ph-site-setup","mobilized","MOBILIZED"],
+  ["res-mat-handle","ph-framing","mobilized","MOBILIZED"],
+  ["res-mat-handle","ph-hvac-dist","mobilized","MOBILIZED"],
+  ["res-survey-inst","ph-site-setup","mobilized","MOBILIZED"],
+  ["res-survey-inst","ph-earthwork","mobilized","MOBILIZED"],
+  ["res-survey-inst","ph-foundations","mobilized","MOBILIZED"],
+  ["res-survey-inst","ph-steel","mobilized","MOBILIZED"],
+
+  // ========================================
+  // RESOURCES (MATERIALS) ↔ PHASES
+  // ========================================
+  ["mat-concrete","ph-foundations","active","DELIVERED"],
+  ["mat-concrete","ph-slab","active","DELIVERED"],
+  ["mat-concrete","ph-elev-conc","active","DELIVERED"],
+  ["mat-rebar","ph-foundations","active","DELIVERED"],
+  ["mat-rebar","ph-elev-conc","active","DELIVERED"],
+  ["mat-steel","ph-fabrication","active","FABRICATED"],
+  ["mat-steel","ph-steel","active","DELIVERED"],
+  ["mat-lumber","ph-foundations","active","DELIVERED"],
+  ["mat-masonry","ph-masonry","active","DELIVERED"],
+  ["mat-roofing","ph-roofing","active","DELIVERED"],
+  ["mat-waterproof","ph-foundations","active","DELIVERED"],
+  ["mat-waterproof","ph-barrier","active","DELIVERED"],
+  ["mat-thermal","ph-hvac-dist","active","DELIVERED"],
+  ["mat-glass","ph-fabrication","active","FABRICATED"],
+  ["mat-glass","ph-curtainwall","active","DELIVERED"],
+  ["mat-doors","ph-fabrication","active","FABRICATED"],
+  ["mat-doors","ph-doors","active","DELIVERED"],
+  ["mat-framing","ph-framing","active","DELIVERED"],
+  ["mat-ceiling","ph-ceilings","active","DELIVERED"],
+  ["mat-flooring","ph-flooring","active","DELIVERED"],
+  ["mat-paint","ph-paint","active","DELIVERED"],
+  ["mat-casework","ph-fabrication","active","FABRICATED"],
+  ["mat-casework","ph-casework","active","DELIVERED"],
+  ["mat-plumbing","ph-plumb-ri","active","DELIVERED"],
+  ["mat-hvac-dist","ph-hvac-dist","active","DELIVERED"],
+  ["mat-hvac-equip","ph-fabrication","active","LONG LEAD"],
+  ["mat-hvac-equip","ph-hvac-dist","active","DELIVERED"],
+  ["mat-elec","ph-elec-ri","active","DELIVERED"],
+  ["mat-lighting","ph-elec-dev","active","DELIVERED"],
+  ["mat-fp","ph-fp-ri","active","DELIVERED"],
+  ["mat-lv","ph-lv-ri","active","DELIVERED"],
+  ["mat-site","ph-site-util","active","DELIVERED"],
+  ["mat-elevator","ph-fabrication","active","LONG LEAD"],
+  ["mat-elevator","ph-steel","active","DELIVERED"],
+];
+
+// ===== RENDERING =====
+const svg = document.getElementById('svg-layer');
+const allCards = document.querySelectorAll('.el-card');
+const pathMap = {};
+
+function getCardCenter(el) {
+  const r = el.getBoundingClientRect();
+  const sr = svg.getBoundingClientRect();
+  return {
+    x: r.left + r.width / 2 - sr.left,
+    y: r.top + r.height / 2 - sr.top,
+    left: r.left - sr.left,
+    right: r.right - sr.left,
+    top: r.top - sr.top,
+    bottom: r.bottom - sr.top,
+  };
+}
+
+function buildPaths() {
+  svg.innerHTML = '';
+  const container = document.querySelector('.container');
+  svg.style.height = container.offsetHeight + 'px';
+  Object.keys(pathMap).forEach(k => delete pathMap[k]);
+
+  R.forEach((rel, i) => {
+    const [srcId, tgtId, type, label] = rel;
+    const srcEl = document.querySelector(`[data-id="${srcId}"]`);
+    const tgtEl = document.querySelector(`[data-id="${tgtId}"]`);
+    if (!srcEl || !tgtEl) return;
+
+    const s = getCardCenter(srcEl);
+    const t = getCardCenter(tgtEl);
+
+    let sx, sy, tx, ty;
+    if (s.x < t.x) { sx = s.right; tx = t.left; } else { sx = s.left; tx = t.right; }
+    sy = s.y; ty = t.y;
+    const cp1x = sx + (tx - sx) * 0.38, cp1y = sy;
+    const cp2x = sx + (tx - sx) * 0.62, cp2y = ty;
+
+    const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+    path.setAttribute('d', `M ${sx} ${sy} C ${cp1x} ${cp1y}, ${cp2x} ${cp2y}, ${tx} ${ty}`);
+    path.setAttribute('stroke', typeColors[type] || '#888');
+    svg.appendChild(path);
+
+    const mx = (sx + tx) / 2, my = (sy + ty) / 2;
+    const text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+    text.setAttribute('x', mx);
+    text.setAttribute('y', my - 3);
+    text.setAttribute('fill', typeColors[type] || '#888');
+    text.setAttribute('text-anchor', 'middle');
+    text.textContent = label;
+    svg.appendChild(text);
+
+    if (!pathMap[srcId]) pathMap[srcId] = [];
+    if (!pathMap[tgtId]) pathMap[tgtId] = [];
+    pathMap[srcId].push({ path, text, partnerId: tgtId });
+    pathMap[tgtId].push({ path, text, partnerId: srcId });
+  });
+}
+
+function handleHover(e) {
+  const card = e.currentTarget;
+  const id = card.dataset.id;
+  const connections = pathMap[id] || [];
+  const connectedIds = new Set(connections.map(c => c.partnerId));
+  connectedIds.add(id);
+
+  allCards.forEach(c => {
+    if (connectedIds.has(c.dataset.id)) {
+      c.classList.add('connected'); c.classList.remove('dimmed');
+    } else {
+      c.classList.add('dimmed'); c.classList.remove('connected');
+    }
+  });
+  card.classList.add('active');
+  card.classList.remove('connected', 'dimmed');
+
+  svg.querySelectorAll('path').forEach(p => p.classList.add('dimmed'));
+  svg.querySelectorAll('text').forEach(t => t.classList.remove('visible'));
+  connections.forEach(c => {
+    c.path.classList.add('visible');
+    c.path.classList.remove('dimmed');
+    c.text.classList.add('visible');
+  });
+}
+
+function handleLeave() {
+  allCards.forEach(c => c.classList.remove('dimmed', 'connected', 'active'));
+  svg.querySelectorAll('path').forEach(p => p.classList.remove('visible', 'dimmed'));
+  svg.querySelectorAll('text').forEach(t => t.classList.remove('visible'));
+}
+
+allCards.forEach(card => {
+  card.addEventListener('mouseenter', handleHover);
+  card.addEventListener('mouseleave', handleLeave);
+});
+
+buildPaths();
+window.addEventListener('resize', buildPaths);
+</script>
+</body>
+</html>

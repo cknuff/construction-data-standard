@@ -1,0 +1,585 @@
+{
+  "source": "documents-communications",
+  "target": "financial-instruments",
+  "edges": [
+    [
+      "doc-req-info-rfi",
+      "fi-chg-event-ce",
+      "TRIGGERS"
+    ],
+    [
+      "doc-rfi-response",
+      "fi-chg-event-ce",
+      "AUTHORIZES"
+    ],
+    [
+      "doc-req-info-rfi",
+      "fi-chg-event-line",
+      "SCOPES"
+    ],
+    [
+      "doc-req-info-rfi",
+      "fi-chg-order-rate",
+      "DRIVES"
+    ],
+    [
+      "doc-req-proposal-rfp",
+      "fi-chg-event-ce",
+      "PRICES"
+    ],
+    [
+      "doc-req-proposal-rfp",
+      "fi-pot-chg-order",
+      "INITIATES"
+    ],
+    [
+      "fi-chg-event-ce",
+      "doc-req-info-rfi",
+      "ORIGINATED FROM"
+    ],
+    [
+      "fi-chg-event-ce",
+      "doc-daily-log-note",
+      "ORIGINATED FROM"
+    ],
+    [
+      "fi-chg-event-ce",
+      "doc-correspondence",
+      "DOCUMENTED IN"
+    ],
+    [
+      "fi-chg-event-ce",
+      "doc-photo",
+      "EVIDENCED BY"
+    ],
+    [
+      "fi-chg-event-line",
+      "doc-drawing-sheet",
+      "REFERENCES"
+    ],
+    [
+      "fi-chg-event-line",
+      "doc-specification-se",
+      "REFERENCES"
+    ],
+    [
+      "fi-pot-chg-order",
+      "doc-req-proposal-rfp",
+      "PRICED VIA"
+    ],
+    [
+      "fi-pot-chg-order",
+      "doc-correspondence",
+      "NEGOTIATED IN"
+    ],
+    [
+      "fi-commit-chg-order",
+      "doc-correspondence",
+      "DOCUMENTED IN"
+    ],
+    [
+      "fi-commit-chg-order",
+      "doc-transmittal",
+      "TRANSMITTED VIA"
+    ],
+    [
+      "fi-commit-chg-order",
+      "doc-meeting-minutes",
+      "APPROVED AT"
+    ],
+    [
+      "fi-cco-line-item",
+      "doc-drawing-revision",
+      "REFERENCES"
+    ],
+    [
+      "fi-owner-chg-order",
+      "doc-correspondence",
+      "DOCUMENTED IN"
+    ],
+    [
+      "fi-owner-chg-order",
+      "doc-meeting-minutes",
+      "APPROVED AT"
+    ],
+    [
+      "fi-owner-chg-order",
+      "doc-bulletin-archite",
+      "INITIATED BY"
+    ],
+    [
+      "doc-chg-directive",
+      "fi-chg-event-ce",
+      "FORCES"
+    ],
+    [
+      "doc-chg-directive",
+      "fi-owner-chg-order",
+      "FORMALIZES INTO"
+    ],
+    [
+      "doc-chg-directive",
+      "fi-budget-mod",
+      "TRIGGERS"
+    ],
+    [
+      "doc-chg-directive",
+      "fi-commit-chg-order",
+      "TRIGGERS"
+    ],
+    [
+      "doc-addendum",
+      "fi-project-budget",
+      "REVISES"
+    ],
+    [
+      "doc-addendum",
+      "fi-budget-line-item",
+      "ADJUSTS"
+    ],
+    [
+      "doc-addendum",
+      "fi-commit-subcontra",
+      "MODIFIES SCOPE OF"
+    ],
+    [
+      "doc-bulletin-archite",
+      "fi-chg-event-ce",
+      "TRIGGERS"
+    ],
+    [
+      "doc-drawing-revision",
+      "fi-chg-event-ce",
+      "TRIGGERS"
+    ],
+    [
+      "doc-drawing-revision",
+      "fi-cost-growth",
+      "DRIVES"
+    ],
+    [
+      "doc-drawing-sheet",
+      "fi-budget-line-item",
+      "DEPICTS SCOPE OF"
+    ],
+    [
+      "doc-drawing-set",
+      "fi-schedule-values",
+      "DEFINES SCOPE OF"
+    ],
+    [
+      "doc-specification-se",
+      "fi-budget-line-item",
+      "SPECIFIES SCOPE OF"
+    ],
+    [
+      "doc-specification-se",
+      "fi-commit-line-item",
+      "GOVERNS"
+    ],
+    [
+      "doc-submittal",
+      "fi-commit-purchase",
+      "PRECEDES RELEASE OF"
+    ],
+    [
+      "doc-submittal",
+      "fi-commit-line-item",
+      "VALIDATES MATERIAL FOR"
+    ],
+    [
+      "doc-submittal-respon",
+      "fi-commit-purchase",
+      "RELEASES"
+    ],
+    [
+      "doc-shop-drawing",
+      "fi-commit-subcontra",
+      "DETAILS FABRICATION FOR"
+    ],
+    [
+      "doc-product-data",
+      "fi-commit-purchase",
+      "CONFIRMS PRODUCT FOR"
+    ],
+    [
+      "doc-sample-submittal",
+      "fi-allowance",
+      "SELECTS AGAINST"
+    ],
+    [
+      "fi-sub-invoice",
+      "doc-transmittal",
+      "TRANSMITTED VIA"
+    ],
+    [
+      "fi-sub-invoice",
+      "doc-correspondence",
+      "DISPUTED IN"
+    ],
+    [
+      "fi-sub-invoice",
+      "doc-daily-report",
+      "VERIFIED AGAINST"
+    ],
+    [
+      "fi-owner-invoice",
+      "doc-transmittal",
+      "TRANSMITTED VIA"
+    ],
+    [
+      "fi-owner-invoice",
+      "doc-correspondence",
+      "CERTIFIED IN"
+    ],
+    [
+      "fi-invoice-processi",
+      "doc-correspondence-r",
+      "CORRELATES WITH"
+    ],
+    [
+      "fi-payment",
+      "doc-correspondence",
+      "ACKNOWLEDGED IN"
+    ],
+    [
+      "fi-payment",
+      "doc-lien-waiver",
+      "CONDITIONED ON"
+    ],
+    [
+      "fi-lien-waiver",
+      "doc-lien-waiver",
+      "DOCUMENTED AS"
+    ],
+    [
+      "fi-retainage",
+      "doc-punch-list-as",
+      "RELEASED UPON COMPLETION OF"
+    ],
+    [
+      "fi-direct-cost",
+      "doc-daily-report",
+      "RECORDED IN"
+    ],
+    [
+      "fi-direct-cost",
+      "doc-photo",
+      "EVIDENCED BY"
+    ],
+    [
+      "fi-direct-cost-line",
+      "doc-specification-se",
+      "REFERENCES"
+    ],
+    [
+      "fi-budget-variance",
+      "doc-meeting-minutes",
+      "REPORTED AT"
+    ],
+    [
+      "fi-budget-mod",
+      "doc-correspondence",
+      "DOCUMENTED IN"
+    ],
+    [
+      "fi-budget-mod",
+      "doc-meeting-minutes",
+      "APPROVED AT"
+    ],
+    [
+      "fi-cost-forecast",
+      "doc-meeting-minutes",
+      "PRESENTED AT"
+    ],
+    [
+      "fi-cash-flow",
+      "doc-meeting-minutes",
+      "PRESENTED AT"
+    ],
+    [
+      "fi-cash-flow-2",
+      "doc-correspondence",
+      "FLAGGED IN"
+    ],
+    [
+      "fi-commit-subcontra",
+      "doc-transmittal",
+      "EXECUTED VIA"
+    ],
+    [
+      "fi-commit-subcontra",
+      "doc-drawing-set",
+      "SCOPED BY"
+    ],
+    [
+      "fi-commit-subcontra",
+      "doc-specification-se",
+      "GOVERNED BY"
+    ],
+    [
+      "fi-commit-subcontra",
+      "doc-cert-insurance",
+      "CONDITIONED ON"
+    ],
+    [
+      "fi-commit-purchase",
+      "doc-transmittal",
+      "ISSUED VIA"
+    ],
+    [
+      "fi-commit-purchase",
+      "doc-product-data",
+      "SPECIFIED BY"
+    ],
+    [
+      "fi-schedule-values",
+      "doc-drawing-set",
+      "DERIVED FROM"
+    ],
+    [
+      "fi-allowance",
+      "doc-specification-se",
+      "DEFINED IN"
+    ],
+    [
+      "fi-contingency-burn",
+      "doc-meeting-minutes",
+      "REPORTED AT"
+    ],
+    [
+      "doc-notice-delay",
+      "fi-budget-mod",
+      "JUSTIFIES"
+    ],
+    [
+      "doc-notice-delay",
+      "fi-chg-event-ce",
+      "TRIGGERS"
+    ],
+    [
+      "doc-notice-delay",
+      "fi-owner-chg-order",
+      "SUPPORTS CLAIM FOR"
+    ],
+    [
+      "doc-daily-report",
+      "fi-direct-cost",
+      "SUBSTANTIATES"
+    ],
+    [
+      "doc-daily-log-note",
+      "fi-chg-event-ce",
+      "SUBSTANTIATES"
+    ],
+    [
+      "doc-site-instruction",
+      "fi-chg-event-ce",
+      "TRIGGERS"
+    ],
+    [
+      "doc-site-instruction",
+      "fi-direct-cost",
+      "AUTHORIZES"
+    ],
+    [
+      "doc-plan-revision",
+      "fi-budget-mod",
+      "TRIGGERS"
+    ],
+    [
+      "doc-plan-revision",
+      "fi-commit-chg-order",
+      "TRIGGERS"
+    ],
+    [
+      "doc-meeting",
+      "fi-chg-event-ce",
+      "REVIEWS"
+    ],
+    [
+      "doc-meeting-minutes",
+      "fi-chg-event-ce",
+      "RECORDS DISPOSITION OF"
+    ],
+    [
+      "doc-action-plan",
+      "fi-budget-mod",
+      "FUNDS REMEDIATION VIA"
+    ],
+    [
+      "doc-action-plan-line",
+      "fi-direct-cost",
+      "INCURS"
+    ],
+    [
+      "doc-project-task",
+      "fi-chg-event-ce",
+      "TRACKS RESOLUTION OF"
+    ],
+    [
+      "doc-photo",
+      "fi-chg-event-ce",
+      "EVIDENCES"
+    ],
+    [
+      "doc-video",
+      "fi-chg-event-ce",
+      "EVIDENCES"
+    ],
+    [
+      "doc-as-built-docs",
+      "fi-retainage",
+      "REQUIRED FOR RELEASE OF"
+    ],
+    [
+      "doc-o-m-manual",
+      "fi-retainage",
+      "REQUIRED FOR RELEASE OF"
+    ],
+    [
+      "doc-warranty-docs",
+      "fi-retainage",
+      "REQUIRED FOR RELEASE OF"
+    ],
+    [
+      "doc-punch-list-as",
+      "fi-retainage",
+      "GATES RELEASE OF"
+    ],
+    [
+      "doc-permit-applicati",
+      "fi-project-budget",
+      "ENABLES SPEND ON"
+    ],
+    [
+      "doc-cert-insurance",
+      "fi-commit-subcontra",
+      "REQUIRED BEFORE EXECUTION OF"
+    ],
+    [
+      "doc-safety-plan-site",
+      "fi-direct-cost",
+      "GOVERNS FIELD SPEND IN"
+    ],
+    [
+      "doc-swppp-enviro",
+      "fi-direct-cost",
+      "MANDATES COMPLIANCE COST IN"
+    ],
+    [
+      "doc-form-proforma",
+      "fi-sub-invoice",
+      "STANDARDIZES"
+    ],
+    [
+      "doc-form-proforma",
+      "fi-owner-invoice",
+      "STANDARDIZES"
+    ],
+    [
+      "doc-rfi-volume",
+      "fi-chg-order-rate",
+      "PREDICTS"
+    ],
+    [
+      "doc-submittal-cycle",
+      "fi-cash-flow",
+      "DELAYS"
+    ],
+    [
+      "doc-submittal-reject",
+      "fi-cost-growth",
+      "DRIVES"
+    ],
+    [
+      "doc-drawing-revision-2",
+      "fi-cost-growth",
+      "CORRELATES WITH"
+    ],
+    [
+      "fi-profit",
+      "doc-meeting-minutes",
+      "REPORTED AT"
+    ],
+    [
+      "fi-margin-fade",
+      "doc-meeting-minutes",
+      "REPORTED AT"
+    ],
+    [
+      "fi-commit-chg-order",
+      "doc-drawing-revision",
+      "REQUIRES UPDATE OF"
+    ]
+  ],
+  "verbGlossary": {
+    "TRIGGERS": "{source} event initiates the creation of {target} or cost action.",
+    "AUTHORIZES": "{source} response grants approval to proceed with a financial change.",
+    "SCOPES": "{source} defines the work boundaries that determine {target} cost allocation.",
+    "DRIVES": "{source} activity or metric directly increases a financial measure over time.",
+    "PRICES": "{source}cost pricing that feeds into a financial change instrument.",
+    "INITIATES": "{source} formally starts the creation of a financial workflow item.",
+    "ORIGINATED FROM": "A financial instrument traces its origin back to a specific document record.",
+    "DOCUMENTED IN": "{source}is formally recorded within a correspondence or document.",
+    "EVIDENCED BY": "{source} or visual record provides proof supporting a financial claim or cost.",
+    "REFERENCES": "{target} cites a specific drawing or specification as its basis of cost.",
+    "PRICED VIA": "A potential {target} obtains its dollar amount through a pricing request document.",
+    "NEGOTIATED IN": "{source}is discussed and settled through written correspondence.",
+    "TRANSMITTED VIA": "{source}document is formally sent to another party through a transmittal.",
+    "APPROVED AT": "{source}receives formal approval during a documented meeting.",
+    "INITIATED BY": "A financial change originates from an architect's supplemental instruction or bulletin.",
+    "FORCES": "A change directive compels immediate financial action regardless of price agreement.",
+    "FORMALIZES INTO": "{source}document is converted into a formal {target}.",
+    "REVISES": "{source}project {target} established in the original contract.",
+    "ADJUSTS": "{source} changes the dollar amount allocated to a specific {target}.",
+    "MODIFIES SCOPE OF": "{source} alters the contractual scope of work covered by {target}.",
+    "DEPICTS SCOPE OF": "{source} visually defines the work included in {target}.",
+    "DEFINES SCOPE OF": "{source} establishes the full work scope from which {target} is built.",
+    "SPECIFIES SCOPE OF": "{source} defines the quality and material requirements that determine {target} line cost.",
+    "GOVERNS": "{source} contractually controls the requirements {target} line item must satisfy.",
+    "PRECEDES RELEASE OF": "{source} must be approved before a purchase order can be released for procurement.",
+    "VALIDATES MATERIAL FOR": "{source} confirms that a proposed material meets the requirements of {target} line item.",
+    "RELEASES": "{source} response authorizes a purchase order for material procurement.",
+    "DETAILS FABRICATION FOR": "{source} provides the fabrication-level detail required to execute a subcontract {target}.",
+    "CONFIRMS PRODUCT FOR": "{source} submittal verifies that a specific product meets purchase order requirements.",
+    "SELECTS AGAINST": "{source} submittal is chosen from an allowance allocation for a specified material or finish.",
+    "DISPUTED IN": "{target} amount is challenged through written correspondence.",
+    "VERIFIED AGAINST": "A subcontractor {target} is cross-checked against daily reports to confirm work performed.",
+    "CERTIFIED IN": "{source}is formally certified as accurate in project correspondence.",
+    "CORRELATES WITH": "{source} metric shows a statistical relationship with a financial measure.",
+    "ACKNOWLEDGED IN": "{target} receipt is formally confirmed through written project correspondence.",
+    "CONDITIONED ON": "{source}requires a specific compliance document before it can proceed.",
+    "DOCUMENTED AS": "{source}is recorded as a formal compliance document in the project record.",
+    "RELEASED UPON COMPLETION OF": "{source}are released only after the referenced closeout document is completed.",
+    "RECORDED IN": "{target} entry is captured within the daily report as a field expenditure.",
+    "SUBSTANTIATES": "{source}document provides supporting evidence for a financial cost or change claim.",
+    "FLAGGED IN": "{source}is raised as a concern in project correspondence.",
+    "SCOPED BY": "{target} derives its work boundaries from a drawing or document.",
+    "REPORTED AT": "{source}is formally presented and discussed during a project meeting.",
+    "PRESENTED AT": "A forecast or projection is delivered to stakeholders at a documented meeting.",
+    "EXECUTED VIA": "{target} is formally signed and distributed through a transmittal.",
+    "GOVERNED BY": "{target} contractual requirements are controlled by a specification section.",
+    "REQUIRED BEFORE EXECUTION OF": "{source}document must be on file before {target} can be formally executed.",
+    "ISSUED VIA": "{source}is formally issued and delivered through a transmittal.",
+    "SPECIFIED BY": "{source}requirements are defined by a product data submittal.",
+    "DERIVED FROM": "{target} is calculated based on the scope shown in drawings or specifications.",
+    "DEFINED IN": "{source}is established within a specification section's requirements.",
+    "JUSTIFIES": "{source} of delay provides the contractual basis for {target} or cost adjustment.",
+    "SUPPORTS CLAIM FOR": "{source} document provides the evidentiary basis for an owner {target} claim.",
+    "RECORDS DISPOSITION OF": "{source} capture the formal decision made on {target}.",
+    "REVIEWS": "{source} evaluates and discusses {target} pending decision.",
+    "FUNDS REMEDIATION VIA": "{source} secures funding through {target} to pay for corrective work.",
+    "INCURS": "{source} task generates {target} when remediation work is performed.",
+    "TRACKS RESOLUTION OF": "A project task monitors the progress of resolving {target}.",
+    "EVIDENCES": "{source} or video provides visual documentation supporting a financial change claim.",
+    "REQUIRED FOR RELEASE OF": "{source}document must be delivered before retained funds can be disbursed.",
+    "GATES RELEASE OF": "{source}document must be fully resolved before {target} can be released to the contractor.",
+    "ENABLES SPEND ON": "{source}authorizes construction spending to begin on the project {target}.",
+    "GOVERNS FIELD SPEND IN": "{source}plan establishes requirements that determine allowable {target}s in the field.",
+    "MANDATES COMPLIANCE COST IN": "{source}document requires specific expenditures tracked as {target}s.",
+    "STANDARDIZES": "{source}defines the required format for submitting {target}s and pay applications.",
+    "PREDICTS": "{source} volume metric serves as a leading indicator of a downstream financial rate.",
+    "DELAYS": "{source}submittal cycle times push back procurement and {target} schedules."
+  }
+}

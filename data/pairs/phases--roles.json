@@ -1,0 +1,427 @@
+{
+  "source": "phases",
+  "target": "roles",
+  "edges": [
+    [
+      "ph-program",
+      "rl-owner-s",
+      "INITIATED BY"
+    ],
+    [
+      "ph-design",
+      "rl-design-manager",
+      "LED BY"
+    ],
+    [
+      "ph-design",
+      "rl-bim-manager-vdc",
+      "MODELED BY"
+    ],
+    [
+      "ph-estimating",
+      "rl-estimator-chief",
+      "QUANTIFIED BY"
+    ],
+    [
+      "ph-estimating",
+      "rl-cost-engineer",
+      "CROSS-CHECKED BY"
+    ],
+    [
+      "ph-permit",
+      "rl-project-engineer",
+      "FILED BY"
+    ],
+    [
+      "ph-precon-plan",
+      "rl-preconstruction",
+      "ORCHESTRATED BY"
+    ],
+    [
+      "ph-precon-plan",
+      "rl-scheduler-projec",
+      "BASELINED BY"
+    ],
+    [
+      "ph-bidding",
+      "rl-procure-manager",
+      "SOLICITED BY"
+    ],
+    [
+      "ph-bidding",
+      "rl-contract-adminis",
+      "AWARDED BY"
+    ],
+    [
+      "ph-submittals",
+      "rl-project-engineer",
+      "TRACKED BY"
+    ],
+    [
+      "ph-submittals",
+      "rl-design-manager",
+      "REVIEWED BY"
+    ],
+    [
+      "ph-fabrication",
+      "rl-procure-manager",
+      "EXPEDITED BY"
+    ],
+    [
+      "ph-delivery",
+      "rl-field-engineer",
+      "RECEIVED BY"
+    ],
+    [
+      "ph-site-setup",
+      "rl-super",
+      "DIRECTED BY"
+    ],
+    [
+      "ph-safety-orient",
+      "rl-safety-manager",
+      "CONDUCTED BY"
+    ],
+    [
+      "ph-demo",
+      "rl-safety-officer",
+      "MONITORED BY"
+    ],
+    [
+      "ph-earthwork",
+      "rl-field-engineer",
+      "SURVEYED BY"
+    ],
+    [
+      "ph-earthwork",
+      "rl-foreman-gen",
+      "GRADED BY"
+    ],
+    [
+      "ph-site-util",
+      "rl-project-engineer",
+      "LAID OUT BY"
+    ],
+    [
+      "ph-foundations",
+      "rl-quality-manager",
+      "INSPECTED BY"
+    ],
+    [
+      "ph-slab",
+      "rl-foreman-gen",
+      "PLACED BY"
+    ],
+    [
+      "ph-steel",
+      "rl-super",
+      "SEQUENCED BY"
+    ],
+    [
+      "ph-steel",
+      "rl-safety-manager",
+      "CERTIFIED BY"
+    ],
+    [
+      "ph-elev-conc",
+      "rl-field-engineer",
+      "VERIFIED BY"
+    ],
+    [
+      "ph-conc-frame",
+      "rl-foreman-gen",
+      "FORMED BY"
+    ],
+    [
+      "ph-stairs",
+      "rl-assistant-super",
+      "INSTALLED BY"
+    ],
+    [
+      "ph-curtainwall",
+      "rl-design-manager",
+      "DETAILED BY"
+    ],
+    [
+      "ph-masonry",
+      "rl-quality-manager",
+      "TESTED BY"
+    ],
+    [
+      "ph-barrier",
+      "rl-quality-manager",
+      "WITNESSED BY"
+    ],
+    [
+      "ph-roofing",
+      "rl-super",
+      "SCHEDULED BY"
+    ],
+    [
+      "ph-abv-ceil",
+      "rl-bim-manager-vdc",
+      "CLASH-CHECKED BY"
+    ],
+    [
+      "ph-hvac-dist",
+      "rl-foreman-gen",
+      "HUNG BY"
+    ],
+    [
+      "ph-plumb-ri",
+      "rl-assistant-super",
+      "ROUGHED IN BY"
+    ],
+    [
+      "ph-elec-ri",
+      "rl-field-engineer",
+      "ROUTED BY"
+    ],
+    [
+      "ph-fp-ri",
+      "rl-safety-officer",
+      "COMPLIANCE-CHECKED BY"
+    ],
+    [
+      "ph-lv-ri",
+      "rl-tech-manager",
+      "SPECIFIED BY"
+    ],
+    [
+      "ph-framing",
+      "rl-journeyman-craft",
+      "BUILT BY"
+    ],
+    [
+      "ph-drywall",
+      "rl-apprentice",
+      "ASSISTED BY"
+    ],
+    [
+      "ph-ceil-grid",
+      "rl-foreman-gen",
+      "LEVELED BY"
+    ],
+    [
+      "ph-paint",
+      "rl-quality-manager",
+      "PUNCH-LISTED BY"
+    ],
+    [
+      "ph-flooring",
+      "rl-assistant-super",
+      "PROTECTED BY"
+    ],
+    [
+      "ph-ceilings",
+      "rl-journeyman-craft",
+      "SET BY"
+    ],
+    [
+      "ph-doors",
+      "rl-doc-controller",
+      "CATALOGED BY"
+    ],
+    [
+      "ph-casework",
+      "rl-design-manager",
+      "SELECTED BY"
+    ],
+    [
+      "ph-hvac-trim",
+      "rl-cx-agent-cxa",
+      "COMMISSIONED BY"
+    ],
+    [
+      "ph-plumb-fix",
+      "rl-foreman-gen",
+      "TRIMMED OUT BY"
+    ],
+    [
+      "ph-elec-dev",
+      "rl-field-engineer",
+      "ENERGIZED BY"
+    ],
+    [
+      "ph-fa-dev",
+      "rl-safety-manager",
+      "ACCEPTANCE-TESTED BY"
+    ],
+    [
+      "ph-lv-dev",
+      "rl-tech-manager",
+      "PROGRAMMED BY"
+    ],
+    [
+      "ph-prefunc",
+      "rl-cx-agent-cxa",
+      "CHECKLISTED BY"
+    ],
+    [
+      "ph-startup",
+      "rl-cx-agent-cxa",
+      "WITNESSED STARTUP BY"
+    ],
+    [
+      "ph-tab",
+      "rl-tab-technician",
+      "BALANCED BY"
+    ],
+    [
+      "ph-integrated",
+      "rl-tech-manager",
+      "INTEGRATED BY"
+    ],
+    [
+      "ph-perf-ver",
+      "rl-owner-s",
+      "BENCHMARKED BY"
+    ],
+    [
+      "ph-punch",
+      "rl-project-manager",
+      "MANAGED BY"
+    ],
+    [
+      "ph-punch",
+      "rl-assistant-projec",
+      "WALKED BY"
+    ],
+    [
+      "ph-final-insp",
+      "rl-quality-manager",
+      "SIGNED OFF BY"
+    ],
+    [
+      "ph-asbuilt",
+      "rl-doc-controller",
+      "COMPILED BY"
+    ],
+    [
+      "ph-asbuilt",
+      "rl-bim-manager-vdc",
+      "MODELED AS-BUILT BY"
+    ],
+    [
+      "ph-training",
+      "rl-owner-s",
+      "ATTENDED BY"
+    ],
+    [
+      "ph-contract-close",
+      "rl-contract-adminis",
+      "RECONCILED BY"
+    ],
+    [
+      "ph-contract-close",
+      "rl-accountant-finan",
+      "AUDITED BY"
+    ],
+    [
+      "ph-warranty",
+      "rl-contract-adminis",
+      "ADMINISTERED BY"
+    ],
+    [
+      "ph-warranty",
+      "rl-office-manager",
+      "TICKETED BY"
+    ],
+    [
+      "ph-seasonal-cx",
+      "rl-tab-technician",
+      "REBALANCED BY"
+    ],
+    [
+      "ph-transition",
+      "rl-owner-s",
+      "OCCUPIED BY"
+    ],
+    [
+      "ph-transition",
+      "rl-project-executiv",
+      "HANDED OVER BY"
+    ],
+    [
+      "ph-punch",
+      "rl-pm-workload",
+      "CORRELATES WITH"
+    ],
+    [
+      "ph-steel",
+      "rl-safety-staffing",
+      "CORRELATES WITH"
+    ]
+  ],
+  "verbGlossary": {
+    "INITIATED BY": "{target} launches {source} by defining project requirements, scope, and success criteria on behalf of the client.",
+    "LED BY": "{target} holds primary accountability for {source}'s deliverables, schedule, and quality outcomes.",
+    "MODELED BY": "{target} creates or maintains the 3D/BIM model that represents the design intent for {source}.",
+    "QUANTIFIED BY": "{target} produces the detailed cost takeoff and budget estimate that defines {source}'s financial baseline.",
+    "FILED BY": "{target} prepares and submits the permit applications, regulatory forms, or approval packages required by {source}.",
+    "ORCHESTRATED BY": "{source} sequences and integrates multiple workstreams, subcontractors, and deliverables within {target}.",
+    "BASELINED BY": "{source} establishes the approved schedule, cost, or scope baseline against which phase progress is measured.",
+    "SOLICITED BY": "{source} issues bid invitations, manages the bid process, and collects proposals from subcontractors and suppliers.",
+    "AWARDED BY": "{target} executes the subcontract or purchase order that commits the project to a trade partner for {source} scope.",
+    "TRACKED BY": "{target} monitors submittal status, approval cycles, and revision history to keep {source} on schedule.",
+    "REVIEWED BY": "{target} evaluates {source} deliverable for conformance with design intent, specifications, or contract requirements.",
+    "EXPEDITED BY": "{source} accelerates fabrication, delivery, or approval timelines to prevent {target} from falling behind schedule.",
+    "CROSS-CHECKED BY": "{source} independently verifies {target}'s cost estimates, quantities, or budget assumptions against historical data and market pricing.",
+    "RECEIVED BY": "{source} physically accepts and verifies delivered materials at the jobsite against packing slips and specifications.",
+    "DIRECTED BY": "{source} makes real-time field decisions on work sequence, crew deployment, and resource allocation during {target}.",
+    "CONDUCTED BY": "{source} leads the orientation session, training class, or safety briefing that {target} requires.",
+    "MONITORED BY": "{source} observes {target}'s field conditions for safety hazards, environmental compliance, or quality deviations.",
+    "SURVEYED BY": "{target} performs the field layout, grade checks, or elevation surveys required to execute {source}.",
+    "GRADED BY": "{target} operates equipment or directs earthwork crews to achieve the specified grades and elevations for {source}.",
+    "LAID OUT BY": "{target} establishes control points, utility routing, and spatial references that guide {source}'s field installation.",
+    "INSPECTED BY": "{source} examines {target}'s completed work against acceptance criteria before it is covered or concealed.",
+    "PLACED BY": "{source} oversees or performs the concrete placement, reinforcement positioning, or material installation during {target}.",
+    "SEQUENCED BY": "{source} determines the erection order, crane picks, and connection sequence that govern how {target} proceeds in the field.",
+    "CERTIFIED BY": "{target} verifies that {source}'s safety systems, equipment, and personnel meet regulatory certification requirements.",
+    "VERIFIED BY": "{source} confirms that {target}'s field conditions (elevations, dimensions, embedments) match the approved drawings.",
+    "FORMED BY": "{source} builds and strips the formwork that shapes the concrete elements constructed during {target}.",
+    "INSTALLED BY": "{source} physically mounts, connects, or assembles the components that comprise {target}'s deliverable.",
+    "DETAILED BY": "{target} produces the shop drawings, profiles, and layout dimensions that guide fabrication and installation for {source}.",
+    "TESTED BY": "{target} performs physical tests (mortar, compression, adhesion) to verify {source}'s materials meet specification.",
+    "WITNESSED BY": "{source} observes a critical test, pour, or installation as an independent third party to confirm compliance.",
+    "SCHEDULED BY": "{target} sets the start date, duration, and sequencing of {source}'s activities within the master schedule.",
+    "CLASH-CHECKED BY": "{source} runs clash detection on the coordinated BIM model to resolve conflicts before {target}'s field installation begins.",
+    "HUNG BY": "{target} installs the ductwork, piping, or conduit supports from overhead structure during {source}.",
+    "ROUGHED IN BY": "{target} installs the concealed piping, wiring, or ductwork within walls and ceilings before {source} proceeds to finishes.",
+    "ROUTED BY": "{source} determines the pathway for conduit, cable tray, or wiring runs through the building during {target}.",
+    "COMPLIANCE-CHECKED BY": "{target} verifies {source}'s installation meets code requirements, fire ratings, and life-safety standards.",
+    "SPECIFIED BY": "{source} defines the equipment models, cable types, and system architecture for {target}'s low-voltage infrastructure.",
+    "BUILT BY": "{target} constructs the framing, partition, or structural element that is the primary deliverable of {source}.",
+    "ASSISTED BY": "{target} provides labor support under supervision to accelerate {source}'s installation work.",
+    "LEVELED BY": "{source} uses laser or string-line methods to ensure {target}'s ceiling grid, framing, or floor is installed to tolerance.",
+    "PUNCH-LISTED BY": "{source} walks the completed phase area and documents deficiencies requiring correction before final acceptance.",
+    "PROTECTED BY": "{target} installs temporary coverings or restricts access to preserve {source}'s finished surfaces from damage.",
+    "SET BY": "{target} mounts, aligns, and secures the ceiling tiles, trim, or finish components that complete {source}'s installation.",
+    "CATALOGED BY": "{source} indexes the hardware sets, finish schedules, or keying matrices that {target} requires for installation.",
+    "SELECTED BY": "{source} approves material samples, finish colors, and product selections that define {target}'s aesthetic outcome.",
+    "COMMISSIONED BY": "{target} verifies {source}'s mechanical or electrical system operates per design intent through functional performance testing.",
+    "TRIMMED OUT BY": "{target} installs the final fixtures, valves, and exposed components that complete {source}'s plumbing or mechanical system.",
+    "ENERGIZED BY": "{target} performs the switching, circuit testing, and load verification required to bring {source}'s electrical systems online.",
+    "ACCEPTANCE-TESTED BY": "{target} conducts the formal acceptance test that demonstrates {source}'s fire-alarm or life-safety system meets code.",
+    "PROGRAMMED BY": "{target} configures the software, firmware, or control sequences that make {source}'s technology systems operational.",
+    "CHECKLISTED BY": "{source} develops and executes the pre-functional checklists that confirm {target}'s equipment is ready for startup.",
+    "WITNESSED STARTUP BY": "{source} observes the initial system startup to document baseline operating conditions and confirm proper commissioning.",
+    "BALANCED BY": "{target} measures and adjusts airflow, water flow, or sound levels to bring {source}'s systems into design specification.",
+    "INTEGRATED BY": "{target} tests cross-system interactions (BAS, fire alarm, lighting controls) to verify {source}'s systems work together.",
+    "BENCHMARKED BY": "{target} measures {source}'s system performance against design criteria and documents results for owner acceptance.",
+    "MANAGED BY": "{target} coordinates the resolution of all outstanding items, tracks completion status, and drives {source} to closure.",
+    "WALKED BY": "{source} physically inspects each area during {target} to identify incomplete or non-conforming work items.",
+    "SIGNED OFF BY": "{target} provides the final quality approval that confirms {source}'s work meets specification and is ready for occupancy.",
+    "COMPILED BY": "{target} assembles the as-built drawings, O&M manuals, and warranty documents into {source}'s closeout deliverable package.",
+    "MODELED AS-BUILT BY": "{source} updates the BIM model to reflect field conditions, capturing deviations from design that occurred during {target}.",
+    "ATTENDED BY": "{source} participates in {target}'s owner-training sessions to learn building system operations and maintenance procedures.",
+    "RECONCILED BY": "{source} resolves outstanding contract balances, change orders, and retention to close out {target}'s financial accounts.",
+    "AUDITED BY": "{target} reviews {source}'s financial records, pay applications, and cost documentation for accuracy and completeness.",
+    "ADMINISTERED BY": "{source} manages warranty claims, tracks expiration dates, and coordinates callbacks during the post-construction phase.",
+    "TICKETED BY": "{source} creates and routes warranty service requests through the project's tracking system during the post-construction phase.",
+    "REBALANCED BY": "{source} readjusts airflow or hydronic balancing during seasonal commissioning to optimize year-round system performance.",
+    "OCCUPIED BY": "{source} takes beneficial occupancy of the facility, marking the transition from construction to operations.",
+    "HANDED OVER BY": "{source} formally transfers project control, keys, and documentation from the construction team to the owner.",
+    "CORRELATES WITH": "{target}measure from {source}s domain shows a statistical relationship with phase duration, cost, or quality outcomes across the portfolio."
+  }
+}

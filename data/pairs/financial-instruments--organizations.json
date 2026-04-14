@@ -1,0 +1,547 @@
+{
+  "source": "financial-instruments",
+  "target": "organizations",
+  "edges": [
+    [
+      "fi-project-budget",
+      "org-private-develope",
+      "FUNDED BY"
+    ],
+    [
+      "fi-project-budget",
+      "org-institutional-ow",
+      "FUNDED BY"
+    ],
+    [
+      "fi-project-budget",
+      "org-gen-contr-gc",
+      "MANAGED BY"
+    ],
+    [
+      "fi-project-budget",
+      "org-const-lender",
+      "FINANCED BY"
+    ],
+    [
+      "fi-project-budget",
+      "org-program-manager",
+      "OVERSEEN BY"
+    ],
+    [
+      "fi-budget-line-item",
+      "org-gen-contr-gc",
+      "ALLOCATED BY"
+    ],
+    [
+      "fi-budget-line-item",
+      "org-sub-trade",
+      "ASSIGNED TO"
+    ],
+    [
+      "fi-cost-code",
+      "org-gen-contr-gc",
+      "DEFINED BY"
+    ],
+    [
+      "fi-cost-code",
+      "org-sub-trade",
+      "CHARGED TO"
+    ],
+    [
+      "fi-wbs-code",
+      "org-gen-contr-gc",
+      "STRUCTURED BY"
+    ],
+    [
+      "fi-budget-code",
+      "org-program-manager",
+      "REPORTED TO"
+    ],
+    [
+      "fi-commit-subcontra",
+      "org-sub-trade",
+      "CONTRACTED TO"
+    ],
+    [
+      "fi-commit-subcontra",
+      "org-gen-contr-gc",
+      "ISSUED BY"
+    ],
+    [
+      "fi-commit-subcontra",
+      "org-design-builder",
+      "ISSUED BY"
+    ],
+    [
+      "fi-commit-subcontra",
+      "org-surety-bonding",
+      "BONDED BY"
+    ],
+    [
+      "fi-commit-subcontra",
+      "org-insurance-broker",
+      "INSURED BY"
+    ],
+    [
+      "fi-commit-purchase",
+      "org-mat-supplier",
+      "AWARDED TO"
+    ],
+    [
+      "fi-commit-purchase",
+      "org-fabricator",
+      "AWARDED TO"
+    ],
+    [
+      "fi-commit-purchase",
+      "org-equip-rental",
+      "AWARDED TO"
+    ],
+    [
+      "fi-commit-line-item",
+      "org-sub-trade",
+      "SCOPED TO"
+    ],
+    [
+      "fi-commit-line-item",
+      "org-mat-supplier",
+      "PRICED BY"
+    ],
+    [
+      "fi-chg-event-ce",
+      "org-gen-contr-gc",
+      "INITIATED BY"
+    ],
+    [
+      "fi-chg-event-ce",
+      "org-architect-record",
+      "CAUSED BY"
+    ],
+    [
+      "fi-chg-event-ce",
+      "org-mep-engineer",
+      "CAUSED BY"
+    ],
+    [
+      "fi-chg-event-ce",
+      "org-struct-engineer",
+      "CAUSED BY"
+    ],
+    [
+      "fi-chg-event-ce",
+      "org-geotechnical-eng",
+      "CAUSED BY"
+    ],
+    [
+      "fi-chg-event-ce",
+      "org-public-governmen",
+      "DIRECTED BY"
+    ],
+    [
+      "fi-chg-event-ce",
+      "org-building-departm",
+      "TRIGGERED BY"
+    ],
+    [
+      "fi-chg-event-ce",
+      "org-sub-trade",
+      "PRICED BY"
+    ],
+    [
+      "fi-chg-event-line",
+      "org-sub-trade",
+      "QUOTED BY"
+    ],
+    [
+      "fi-pot-chg-order",
+      "org-sub-trade",
+      "SUBMITTED BY"
+    ],
+    [
+      "fi-commit-chg-order",
+      "org-sub-trade",
+      "AWARDED TO"
+    ],
+    [
+      "fi-commit-chg-order",
+      "org-gen-contr-gc",
+      "APPROVED BY"
+    ],
+    [
+      "fi-commit-chg-order",
+      "org-const-manager-at",
+      "APPROVED BY"
+    ],
+    [
+      "fi-cco-line-item",
+      "org-sub-trade",
+      "PERFORMED BY"
+    ],
+    [
+      "fi-owner-chg-order",
+      "org-private-develope",
+      "APPROVED BY"
+    ],
+    [
+      "fi-owner-chg-order",
+      "org-gen-contr-gc",
+      "SUBMITTED BY"
+    ],
+    [
+      "fi-owner-chg-order",
+      "org-const-manager",
+      "REVIEWED BY"
+    ],
+    [
+      "fi-budget-mod",
+      "org-gen-contr-gc",
+      "EXECUTED BY"
+    ],
+    [
+      "fi-budget-mod",
+      "org-const-manager-at",
+      "AUTHORIZED BY"
+    ],
+    [
+      "fi-direct-cost",
+      "org-gen-contr-gc",
+      "INCURRED BY"
+    ],
+    [
+      "fi-direct-cost",
+      "org-self-performing",
+      "INCURRED BY"
+    ],
+    [
+      "fi-direct-cost",
+      "org-mat-testing-lab",
+      "BILLED BY"
+    ],
+    [
+      "fi-direct-cost",
+      "org-enviro-monitorin",
+      "BILLED BY"
+    ],
+    [
+      "fi-direct-cost",
+      "org-osha-safety",
+      "LEVIED BY"
+    ],
+    [
+      "fi-direct-cost-line",
+      "org-mat-supplier",
+      "INVOICED BY"
+    ],
+    [
+      "fi-direct-cost-line",
+      "org-equip-rental",
+      "INVOICED BY"
+    ],
+    [
+      "fi-owner-invoice",
+      "org-gen-contr-gc",
+      "SUBMITTED BY"
+    ],
+    [
+      "fi-owner-invoice",
+      "org-private-develope",
+      "PAID BY"
+    ],
+    [
+      "fi-owner-invoice",
+      "org-const-lender",
+      "DRAW AGAINST"
+    ],
+    [
+      "fi-owner-invoice",
+      "org-architect-record",
+      "CERTIFIED BY"
+    ],
+    [
+      "fi-sub-invoice",
+      "org-sub-trade",
+      "SUBMITTED BY"
+    ],
+    [
+      "fi-sub-invoice",
+      "org-gen-contr-gc",
+      "REVIEWED BY"
+    ],
+    [
+      "fi-retainage",
+      "org-sub-trade",
+      "WITHHELD FROM"
+    ],
+    [
+      "fi-retainage",
+      "org-gen-contr-gc",
+      "HELD BY"
+    ],
+    [
+      "fi-retainage",
+      "org-private-develope",
+      "RELEASED BY"
+    ],
+    [
+      "fi-payment",
+      "org-gen-contr-gc",
+      "DISBURSED BY"
+    ],
+    [
+      "fi-payment",
+      "org-sub-trade",
+      "PAID TO"
+    ],
+    [
+      "fi-payment",
+      "org-mat-supplier",
+      "PAID TO"
+    ],
+    [
+      "fi-payment",
+      "org-fabricator",
+      "PAID TO"
+    ],
+    [
+      "fi-lien-waiver",
+      "org-sub-trade",
+      "SIGNED BY"
+    ],
+    [
+      "fi-lien-waiver",
+      "org-gen-contr-gc",
+      "COLLECTED BY"
+    ],
+    [
+      "fi-schedule-values",
+      "org-gen-contr-gc",
+      "PREPARED BY"
+    ],
+    [
+      "fi-schedule-values",
+      "org-sub-trade",
+      "BROKEN DOWN BY"
+    ],
+    [
+      "fi-allowance",
+      "org-private-develope",
+      "ESTABLISHED BY"
+    ],
+    [
+      "fi-allowance",
+      "org-architect-record",
+      "SPECIFIED BY"
+    ],
+    [
+      "fi-contingency",
+      "org-gen-contr-gc",
+      "MANAGED BY"
+    ],
+    [
+      "fi-contingency",
+      "org-const-manager-at",
+      "MONITORED BY"
+    ],
+    [
+      "fi-cost-forecast",
+      "org-gen-contr-gc",
+      "PREPARED BY"
+    ],
+    [
+      "fi-cost-forecast",
+      "org-const-lender",
+      "REPORTED TO"
+    ],
+    [
+      "fi-cash-flow",
+      "org-gen-contr-gc",
+      "PROJECTED BY"
+    ],
+    [
+      "fi-budget-variance",
+      "org-sub-trade",
+      "ATTRIBUTED TO"
+    ],
+    [
+      "fi-cost-growth",
+      "org-architect-record",
+      "ATTRIBUTED TO"
+    ],
+    [
+      "fi-chg-order-rate",
+      "org-sub-trade",
+      "ATTRIBUTED TO"
+    ],
+    [
+      "fi-cost-perf-index",
+      "org-gen-contr-gc",
+      "CALCULATED BY"
+    ],
+    [
+      "fi-committed-cost",
+      "org-sub-trade",
+      "COMMITTED TO"
+    ],
+    [
+      "fi-contingency-burn",
+      "org-gen-contr-gc",
+      "TRACKED BY"
+    ],
+    [
+      "fi-invoice-processi",
+      "org-gen-contr-gc",
+      "MEASURED BY"
+    ],
+    [
+      "fi-cash-flow-2",
+      "org-const-lender",
+      "MONITORED BY"
+    ],
+    [
+      "fi-estimate-at",
+      "org-program-manager",
+      "REPORTED TO"
+    ],
+    [
+      "fi-profit",
+      "org-gen-contr-gc",
+      "RETAINED BY"
+    ],
+    [
+      "fi-profit",
+      "org-program-manager",
+      "REPORTED TO"
+    ],
+    [
+      "fi-margin-pct",
+      "org-gen-contr-gc",
+      "CALCULATED BY"
+    ],
+    [
+      "fi-margin-fade",
+      "org-gen-contr-gc",
+      "TRACKED BY"
+    ],
+    [
+      "fi-markup-pct",
+      "org-gen-contr-gc",
+      "SET BY"
+    ],
+    [
+      "fi-markup-pct",
+      "org-private-develope",
+      "NEGOTIATED WITH"
+    ],
+    [
+      "fi-backlog",
+      "org-gen-contr-gc",
+      "TRACKED BY"
+    ],
+    [
+      "fi-win-rate",
+      "org-gen-contr-gc",
+      "MEASURED BY"
+    ],
+    [
+      "fi-revenue-concentration",
+      "org-private-develope",
+      "MEASURED ACROSS"
+    ],
+    [
+      "fi-repeat-client",
+      "org-private-develope",
+      "MEASURED ACROSS"
+    ],
+    [
+      "fi-overhead-rate",
+      "org-gen-contr-gc",
+      "INCURRED BY"
+    ],
+    [
+      "fi-dso",
+      "org-private-develope",
+      "MEASURED AGAINST"
+    ],
+    [
+      "fi-dso",
+      "org-const-lender",
+      "MONITORED BY"
+    ],
+    [
+      "fi-bonding-capacity",
+      "org-surety-bonding",
+      "UNDERWRITTEN BY"
+    ],
+    [
+      "fi-pm-workload",
+      "org-gen-contr-gc",
+      "MANAGED BY"
+    ],
+    [
+      "fi-precon-hit-rate",
+      "org-gen-contr-gc",
+      "MEASURED BY"
+    ]
+  ],
+  "verbGlossary": {
+    "FUNDED BY": "Owner or lender {target} that provides the capital backing a budget or payment",
+    "MANAGED BY": "{source} responsible for day-to-day administration and control of {target}",
+    "FINANCED BY": "Lender providing construction loan or credit facility against the project budget",
+    "OVERSEEN BY": "{source} providing program-level governance over budget or forecast",
+    "ALLOCATED BY": "{source} that distributes budget dollars across line items and cost codes",
+    "ASSIGNED TO": "{source} whose scope of work a budget line item is earmarked for",
+    "DEFINED BY": "{source} that establishes the cost code structure for the project",
+    "CHARGED TO": "{source} whose work activity causes costs to post against a cost code",
+    "STRUCTURED BY": "{source} that defines the WBS hierarchy for the project",
+    "REPORTED TO": "{source} that receives financial reports, forecasts, or variance summaries",
+    "CONTRACTED TO": "{source} awarded a commitment (subcontract or service agreement) for defined scope",
+    "ISSUED BY": "{source} that creates and sends a commitment or purchase order to {target}",
+    "BONDED BY": "Surety {target} that provides a performance or payment bond securing a commitment",
+    "INSURED BY": "{source}carrier that provides liability or builders risk coverage for a commitment",
+    "AWARDED TO": "{source} selected to fulfill a purchase order, change order, or bid scope",
+    "SCOPED TO": "{source} whose trade scope is defined by a specific commitment line item",
+    "PRICED BY": "{source} that provides cost pricing on a commitment line item or change event",
+    "INITIATED BY": "{source} that creates a change event to document a scope or cost change",
+    "CAUSED BY": "Design or engineering {target} whose design decision or error originated the change event",
+    "DIRECTED BY": "Owner {target} that directs a scope change via owner directive",
+    "TRIGGERED BY": "Regulatory {target} whose requirement or code interpretation triggered a change event",
+    "QUOTED BY": "{source} that provides a line-item price quote on a proposed change",
+    "REVIEWED BY": "{source} that evaluates {target} for accuracy or approval",
+    "SUBMITTED BY": "{source} that formally submits an invoice, pay application, or change order request",
+    "APPROVED BY": "{source} with {target} to approve a change order or budget modification",
+    "AUTHORIZED BY": "{source} that grants formal authorization to proceed with a financial action",
+    "PERFORMED BY": "{source} that executes the work described in a CCO line item",
+    "EXECUTED BY": "{source} that carries out a budget modification or transfer",
+    "INCURRED BY": "{source} that bears a direct cost on its own account (not through a commitment)",
+    "BILLED BY": "{source} that sends a bill or invoice for testing, monitoring, or other services",
+    "INVOICED BY": "{source} that issues a formal invoice for a direct cost line item",
+    "PAID BY": "Owner or lender {target} that makes payment on a pay application or invoice",
+    "DRAW AGAINST": "Lender {target} against whose construction loan an owner invoice is drawn",
+    "CERTIFIED BY": "{target} or CM that certifies a pay application or schedule of values for payment",
+    "WITHHELD FROM": "{source} from whose payment a retainage percentage is held back",
+    "HELD BY": "{source} that holds retainage funds in trust until release conditions are met",
+    "RELEASED BY": "Owner {target} that authorizes release of retainage upon substantial completion",
+    "DISBURSED BY": "{source} that distributes payment funds to downstream parties",
+    "PAID TO": "{source} that receives payment for completed work, materials, or utility services",
+    "SIGNED BY": "{source} that executes a lien waiver to release lien rights upon payment",
+    "COLLECTED BY": "{target} that gathers lien waivers from all subcontractors and suppliers each pay period",
+    "PREPARED BY": "{source} that creates a schedule of values, forecast, or cost projection",
+    "BROKEN DOWN BY": "{source} that itemizes its contract value into schedule of values line items",
+    "ESTABLISHED BY": "{target} that sets allowance amounts in the contract for undefined scope items",
+    "SPECIFIED BY": "{source}that defines allowance scope in contract documents",
+    "MONITORED BY": "{source} that tracks and reviews {target} without direct control",
+    "PROJECTED BY": "{source} that creates cash flow projections for draw scheduling",
+    "ATTRIBUTED TO": "{source} whose actions or scope are the source of a variance or cost growth",
+    "CALCULATED BY": "{source} that computes earned value or forecast performance metrics",
+    "COMMITTED TO": "{source} to which cost dollars are contractually committed via subcontracts or POs",
+    "TRACKED BY": "{source} that monitors a financial metric over time for trend analysis",
+    "MEASURED BY": "{source} that calculates and reports a financial performance metric",
+    "LEVIED BY": "Regulatory {target} that imposes fines or penalties recorded as direct costs",
+    "RETAINED BY": "{source} profit dollars that remain with {target} after all project costs are paid",
+    "SET BY": "{source} establishes the markup percentage or fee structure applied by {target}",
+    "NEGOTIATED WITH": "{source} fee or markup is commercially negotiated with {target} during contract formation",
+    "MEASURED ACROSS": "{source} metric is calculated across the portfolio of projects with {target}",
+    "MEASURED AGAINST": "{source} collection metric is measured against {target}'s payment behavior",
+    "UNDERWRITTEN BY": "{source} capacity is assessed and guaranteed by {target} surety company"
+  }
+}

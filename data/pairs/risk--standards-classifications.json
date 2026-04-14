@@ -1,0 +1,148 @@
+{
+  "source": "risk",
+  "target": "standards-classifications",
+  "edges": [
+    [
+      "rk-safety-risk",
+      "sc-osha-hazard",
+      "CLASSIFIED UNDER"
+    ],
+    [
+      "rk-risk-category",
+      "sc-osha-hazard",
+      "MAPPED TO"
+    ],
+    [
+      "rk-incident-rate",
+      "sc-osha-recordkeepi",
+      "REPORTED PER"
+    ],
+    [
+      "rk-safety-risk",
+      "sc-osha-recordkeepi",
+      "LOGGED PER"
+    ],
+    [
+      "rk-mitigation-actio",
+      "sc-osha-hazard",
+      "REMEDIATES UNDER"
+    ],
+    [
+      "rk-risk",
+      "sc-ansi-injury",
+      "CODED BY"
+    ],
+    [
+      "rk-enviro-risk",
+      "sc-leed-certificati",
+      "ASSESSED AGAINST"
+    ],
+    [
+      "rk-enviro-risk",
+      "sc-energy-code-stds",
+      "GOVERNED BY"
+    ],
+    [
+      "rk-enviro-risk",
+      "sc-resilience-net",
+      "ASSESSED AGAINST"
+    ],
+    [
+      "rk-reg-permit-risk",
+      "sc-international-bu",
+      "GOVERNED BY"
+    ],
+    [
+      "rk-reg-permit-risk",
+      "sc-nfpa-stds",
+      "GOVERNED BY"
+    ],
+    [
+      "rk-design-risk",
+      "sc-specification-se",
+      "SCOPED BY"
+    ],
+    [
+      "rk-const-execution",
+      "sc-masterformat",
+      "CLASSIFIED UNDER"
+    ],
+    [
+      "rk-coord-risk",
+      "sc-omniclass",
+      "CLASSIFIED UNDER"
+    ],
+    [
+      "rk-financial-risk",
+      "sc-wbs-code",
+      "TRACKED BY"
+    ],
+    [
+      "rk-contingency-rese",
+      "sc-budget-code",
+      "ALLOCATED AGAINST"
+    ],
+    [
+      "rk-risk-exposure",
+      "sc-aace-cost",
+      "BENCHMARKED TO"
+    ],
+    [
+      "rk-contingency-burn",
+      "sc-aace-cost",
+      "BENCHMARKED TO"
+    ],
+    [
+      "rk-chg-order-rate",
+      "sc-std-cost-code",
+      "SEGMENTED BY"
+    ],
+    [
+      "rk-risk-allocation",
+      "sc-aia-contract",
+      "STIPULATED PER"
+    ],
+    [
+      "rk-insurance-requir",
+      "sc-dlvy-method",
+      "VARIES BY"
+    ],
+    [
+      "rk-surety-bond",
+      "sc-aia-contract",
+      "STIPULATED PER"
+    ],
+    [
+      "rk-risk-score",
+      "sc-safety-class",
+      "SEGMENTED BY"
+    ],
+    [
+      "rk-risk-mitigation",
+      "sc-masterformat-map",
+      "SEGMENTED BY"
+    ],
+    [
+      "rk-schedule-float",
+      "sc-wbs-adoption",
+      "BENCHMARKED TO"
+    ]
+  ],
+  "verbGlossary": {
+    "CLASSIFIED UNDER": "{source} item is categorized using {target} taxonomy (e.g., safety risk classified under OSHA hazard categories, execution risk classified under MasterFormat divisions)",
+    "MAPPED TO": "{source} category is cross-referenced to {target} classification scheme for consistent reporting (e.g., risk categories mapped to OSHA hazard types)",
+    "REPORTED PER": "{source} metric is calculated and submitted following {target} reporting methodology (e.g., TRIR reported per OSHA 300-series recordkeeping rules)",
+    "LOGGED PER": "{source} is documented following {target} recordkeeping format (e.g., safety risk incident logged per OSHA recordkeeping requirements)",
+    "REMEDIATES UNDER": "{source} addresses a finding classified under {target} (e.g., mitigation action remediating an OSHA fall-protection hazard)",
+    "CODED BY": "{source} record is assigned a classification code from {target} (e.g., risk event coded by ANSI injury classification for severity tracking)",
+    "ASSESSED AGAINST": "{source} is evaluated relative to {target} compliance thresholds (e.g., environmental risk assessed against LEED prerequisite criteria)",
+    "GOVERNED BY": "{source} area is regulated by {target} or standard, requiring specific controls (e.g., permit risk governed by IBC occupancy requirements, fire risk governed by NFPA standards)",
+    "SCOPED BY": "{source} is bounded by {target} scope of work (e.g., design risk scoped by structural specification tolerances)",
+    "TRACKED BY": "{source} cost or exposure is monitored over time using {target} breakdown structure (e.g., financial risk tracked by WBS code across project phases)",
+    "ALLOCATED AGAINST": "Reserve or contingency funds are assigned to {target} structure's line items (e.g., contingency reserve allocated against budget codes for cost-loaded risk items)",
+    "BENCHMARKED TO": "{source} metric is compared against {target} published industry baselines (e.g., risk exposure benchmarked to AACE recommended practice norms, contingency burn benchmarked to AACE class estimates)",
+    "SEGMENTED BY": "{source} metric is broken down by {target} for comparative analysis (e.g., change order rate segmented by standard cost code to pinpoint high-risk trades)",
+    "STIPULATED PER": "{source} transfer or allocation clause is defined following {target} document's provisions (e.g., risk allocation stipulated per AIA A201 general conditions, surety bond stipulated per AIA bonding requirements)",
+    "VARIES BY": "{source} requirement changes based on {target} category (e.g., insurance requirements vary by delivery method -- design-build vs. CM-at-risk carry different liability profiles)"
+  }
+}

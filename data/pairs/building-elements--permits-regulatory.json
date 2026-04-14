@@ -1,0 +1,308 @@
+{
+  "source": "building-elements",
+  "target": "permits-regulatory",
+  "edges": [
+    [
+      "be-excav",
+      "pr-building-permit",
+      "AUTHORIZED BY"
+    ],
+    [
+      "be-excav",
+      "pr-osha-notificatio",
+      "TRIGGERS"
+    ],
+    [
+      "be-erosion",
+      "pr-stormwater-permi",
+      "SATISFIES"
+    ],
+    [
+      "be-dewater",
+      "pr-enviro-permit",
+      "DISCHARGE GOVERNED BY"
+    ],
+    [
+      "be-backfill",
+      "pr-ahj-insp",
+      "CONCEALS BEFORE"
+    ],
+    [
+      "be-deep-fdn",
+      "pr-special-insp",
+      "OBSERVED DURING PLACEMENT BY"
+    ],
+    [
+      "be-shallow-fdn",
+      "pr-ahj-insp",
+      "FOOTING INSPECTED BY"
+    ],
+    [
+      "be-fdn-walls",
+      "pr-building-departm",
+      "STRUCTURAL REVIEWED BY"
+    ],
+    [
+      "be-water-main",
+      "pr-utility-connecti",
+      "TAP APPROVED BY"
+    ],
+    [
+      "be-sanitary",
+      "pr-health-departmen",
+      "FLOW TESTED FOR"
+    ],
+    [
+      "be-storm",
+      "pr-stormwater-permi",
+      "CAPACITY SIZED PER"
+    ],
+    [
+      "be-gas-svc",
+      "pr-trade-permit",
+      "PRESSURE TESTED UNDER"
+    ],
+    [
+      "be-site-elec",
+      "pr-utility-connecti",
+      "SERVICE RELEASED BY"
+    ],
+    [
+      "be-columns",
+      "pr-special-insp",
+      "POUR WITNESSED BY"
+    ],
+    [
+      "be-beams",
+      "pr-special-insp",
+      "WELD CERTIFIED BY"
+    ],
+    [
+      "be-stairs",
+      "pr-building-departm",
+      "EGRESS REVIEWED BY"
+    ],
+    [
+      "be-curtainwall",
+      "pr-building-departm",
+      "ENVELOPE REVIEWED BY"
+    ],
+    [
+      "be-windows",
+      "pr-third-party",
+      "IMPACT RATED BY"
+    ],
+    [
+      "be-ext-doors",
+      "pr-fire-marshal",
+      "RATED ASSEMBLY APPROVED BY"
+    ],
+    [
+      "be-masonry-v",
+      "pr-special-insp",
+      "MORTAR SAMPLED BY"
+    ],
+    [
+      "be-panels",
+      "pr-insp-scheduling",
+      "LIFT COORDINATED WITH"
+    ],
+    [
+      "be-roof-mem",
+      "pr-third-party",
+      "FLOOD TESTED BY"
+    ],
+    [
+      "be-roof-insul",
+      "pr-building-departm",
+      "R-VALUE CONFIRMED BY"
+    ],
+    [
+      "be-ductwork",
+      "pr-trade-permit",
+      "INSTALLED UNDER"
+    ],
+    [
+      "be-ahu",
+      "pr-insp-scheduling",
+      "STARTUP SCHEDULED WITH"
+    ],
+    [
+      "be-tab",
+      "pr-cert-occupancy",
+      "BALANCED PRIOR TO"
+    ],
+    [
+      "be-dom-water",
+      "pr-trade-permit",
+      "BACKFLOW TESTED UNDER"
+    ],
+    [
+      "be-waste-vent",
+      "pr-ahj-insp",
+      "STACK TESTED FOR"
+    ],
+    [
+      "be-plumb-fix",
+      "pr-health-departmen",
+      "FIXTURE COUNT APPROVED BY"
+    ],
+    [
+      "be-gas-pipe",
+      "pr-trade-permit",
+      "LEAK TESTED UNDER"
+    ],
+    [
+      "be-power-dist",
+      "pr-trade-permit",
+      "PANEL SCHEDULE FILED WITH"
+    ],
+    [
+      "be-conduit",
+      "pr-ahj-insp",
+      "ROUGH-IN INSPECTED BY"
+    ],
+    [
+      "be-lighting",
+      "pr-cert-occupancy",
+      "ILLUMINATION REQUIRED FOR"
+    ],
+    [
+      "be-emerg-pwr",
+      "pr-fire-marshal",
+      "TRANSFER TESTED FOR"
+    ],
+    [
+      "be-sprink-main",
+      "pr-fire-marshal",
+      "HYDRO TESTED FOR"
+    ],
+    [
+      "be-sprink-head",
+      "pr-fire-marshal",
+      "COVERAGE MAPPED FOR"
+    ],
+    [
+      "be-fire-pump",
+      "pr-fire-marshal",
+      "ACCEPTANCE TESTED FOR"
+    ],
+    [
+      "be-fa",
+      "pr-cert-occupancy",
+      "MONITORING ACTIVE BEFORE"
+    ],
+    [
+      "be-elev-car",
+      "pr-ahj-insp",
+      "LOAD TESTED BY"
+    ],
+    [
+      "be-drywall",
+      "pr-ahj-insp",
+      "HUNG AFTER SIGN-OFF FROM"
+    ],
+    [
+      "be-int-doors",
+      "pr-fire-marshal",
+      "SMOKE RATING LABELED FOR"
+    ],
+    [
+      "be-signage",
+      "pr-zoning-appr",
+      "DIMENSIONS COMPLIANT WITH"
+    ],
+    [
+      "be-paving",
+      "pr-street-right-way",
+      "APRON CUT APPROVED BY"
+    ],
+    [
+      "be-landscape",
+      "pr-cert-completion",
+      "INSTALLED PRIOR TO"
+    ],
+    [
+      "be-site-light",
+      "pr-cert-occupancy",
+      "PHOTOMETRIC VERIFIED FOR"
+    ],
+    [
+      "be-fencing",
+      "pr-zoning-appr",
+      "HEIGHT LIMITED BY"
+    ],
+    [
+      "be-bas",
+      "pr-third-party",
+      "COMMISSIONING CERTIFIED BY"
+    ],
+    [
+      "be-cooling",
+      "pr-enviro-permit",
+      "REFRIGERANT REGISTERED UNDER"
+    ],
+    [
+      "be-standpipe",
+      "pr-fire-marshal",
+      "RISER TESTED FOR"
+    ],
+    [
+      "be-hvac-ctrl",
+      "pr-third-party",
+      "SEQUENCE VERIFIED BY"
+    ]
+  ],
+  "verbGlossary": {
+    "ACCEPTANCE TESTED FOR": "{source} must complete a full-load acceptance test witnessed by {target} to confirm design flow and pressure.",
+    "APRON CUT APPROVED BY": "Cutting into the public right-of-way for the paving element's driveway apron requires approval from {target} authority.",
+    "AUTHORIZED BY": "{source} work scope is legally permitted to proceed only after {target} is granted (e.g., excavation authorized by building permit).",
+    "BACKFLOW TESTED UNDER": "{source}'s backflow prevention device must pass a certification test required by {target} permit authority.",
+    "BALANCED PRIOR TO": "{source} element must be tested, adjusted, and balanced before {target} can be issued, confirming design airflow and temperatures.",
+    "CAPACITY SIZED PER": "{source}'s sizing and capacity calculations must conform to requirements established in {target} (e.g., storm drainage sized per stormwater permit).",
+    "COMMISSIONING CERTIFIED BY": "{source} must complete a functional performance test certified by {target}.",
+    "CONCEALS BEFORE": "{source} covers or buries prior work that must receive {target} sign-off before it can be hidden (e.g., backfill conceals utilities before AHJ inspection).",
+    "COVERAGE MAPPED FOR": "{source} head layout and coverage must be verified against NFPA spacing requirements by {target}.",
+    "DIMENSIONS COMPLIANT WITH": "{source}'s size, height, and placement must conform to dimensional limits established by {target} approval.",
+    "DISCHARGE GOVERNED BY": "{source}produced by {target}'s installation process falls under the target permit's effluent or discharge limits.",
+    "EGRESS REVIEWED BY": "{source}'s dimensions, rise/run, handrail details, and egress capacity are checked against building code by {target}.",
+    "ENVELOPE REVIEWED BY": "{source} thermal, moisture, and structural performance is evaluated by {target}.",
+    "FIXTURE COUNT APPROVED BY": "{source}of plumbing fixtures must meet minimum code ratios reviewed by {target}.",
+    "FLOOD TESTED BY": "{source} undergoes a standing water or electronic leak detection test witnessed by the target third-party tester.",
+    "FLOW TESTED FOR": "{source} must demonstrate adequate flow capacity through a pressure or flow test required by {target}.",
+    "FOOTING INSPECTED BY": "{source}'s excavation, reinforcement, and formwork must pass {target} before concrete placement.",
+    "HEIGHT LIMITED BY": "{source}'s maximum allowable height is restricted by dimensional standards in {target} approval.",
+    "HUNG AFTER SIGN-OFF FROM": "{source} installation may proceed only after {target} authority signs off on all concealed rough-in work behind the wall plane.",
+    "HYDRO TESTED FOR": "{source} main must pass a hydrostatic pressure test witnessed by {target} is charged.",
+    "ILLUMINATION REQUIRED FOR": "{source}levels in {target}'s coverage area must be demonstrated before the target occupancy certificate is granted.",
+    "IMPACT RATED BY": "{source} must demonstrate impact resistance through testing performed or accepted by the target third-party testing lab (e.g., hurricane-zone window testing).",
+    "INSTALLED PRIOR TO": "{source} must be fully installed and established before {target} of completion can be issued.",
+    "INSTALLED UNDER": "{source} is installed pursuant to and in compliance with {target}-specific permit (e.g., ductwork installed under mechanical permit).",
+    "LEAK TESTED UNDER": "{source}'s piping joints must pass a leak test at prescribed pressure, as required by {target} permit.",
+    "LIFT COORDINATED WITH": "{source}s requires scheduling coordination with {target} authority to allow for in-progress observation.",
+    "LOAD TESTED BY": "{source} must pass a full-load and safety test administered by {target} authority before public use.",
+    "MONITORING ACTIVE BEFORE": "{source} must be connected to a monitoring service and confirmed operational before {target} is issued.",
+    "MORTAR SAMPLED BY": "{source} mortar and grout specimens are collected and tested by {target} compressive strength.",
+    "OBSERVED DURING PLACEMENT BY": "{source}inspector must witness {target}'s installation in real time as required by code (e.g., deep foundation pile driving observed by special inspection).",
+    "PANEL SCHEDULE FILED WITH": "{source}'s circuit directory and load calculations are submitted to and reviewed by {target} permit authority.",
+    "PHOTOMETRIC VERIFIED FOR": "{source}'s light output and distribution pattern must meet minimum site lighting levels required for {target}.",
+    "POUR WITNESSED BY": "{source} placement for the structural element must be directly observed by the target special inspector to verify reinforcement, mix, and procedures.",
+    "PRESSURE TESTED UNDER": "{source} must pass a pressure test at a threshold specified by {target} permit before it can be put into service.",
+    "R-VALUE CONFIRMED BY": "{source}'s installed thermal resistance value is checked against energy code minimums by {target} authority.",
+    "RATED ASSEMBLY APPROVED BY": "{source}'s fire-resistance rating and listed assembly details must be reviewed and accepted by {target}.",
+    "REFRIGERANT REGISTERED UNDER": "{source} refrigerant type and charge quantity must be registered with {target} authority per EPA regulations.",
+    "RISER TESTED FOR": "{source} riser must pass a hydrostatic pressure and flow test witnessed by {target} to confirm code-compliant water delivery to each floor.",
+    "ROUGH-IN INSPECTED BY": "{source}'s concealed installation is inspected by {target} before it is covered by finishes.",
+    "SATISFIES": "{source} fulfills a specific condition or control measure required by {target} (e.g., erosion control satisfies stormwater permit BMP requirements).",
+    "SEQUENCE VERIFIED BY": "{source}'s control sequences and programming are verified against design intent by the target third-party commissioning agent.",
+    "SERVICE RELEASED BY": "{source}provider, coordinated through the target permit process, must release or energize {target}'s service connection.",
+    "SMOKE RATING LABELED FOR": "{source} smoke and fire rating label must be verified as code-compliant by {target}.",
+    "STACK TESTED FOR": "{source}'s drain, waste, and vent piping must pass a water or air pressure test administered by {target} authority.",
+    "STARTUP SCHEDULED WITH": "{source}'s operational startup and test run must be scheduled with {target} authority so they can witness performance.",
+    "STRUCTURAL REVIEWED BY": "{source}'s engineering design and calculations are reviewed by {target} compliance before construction.",
+    "TAP APPROVED BY": "Connection of {target} to a public utility main requires approval from the target permit authority before the physical tap is made.",
+    "TRANSFER TESTED FOR": "{source} automatic transfer switch must demonstrate successful changeover in a test witnessed by {target}.",
+    "TRIGGERS": "Installing or beginning work on {target} initiates a required regulatory filing or notification (e.g., deep excavation triggers OSHA notification).",
+    "WELD CERTIFIED BY": "Structural welds on {target} must be inspected and certified by the target special inspection authority, often via ultrasonic or radiographic testing."
+  }
+}

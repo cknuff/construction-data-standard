@@ -1,0 +1,1073 @@
+{
+  "documents-communications--financial-instruments": {
+    "source": "Financial Instruments",
+    "target": "Documents & Communications",
+    "relationships": "ORIGINATED_FROM, REFERENCES",
+    "strength": "Dense",
+    "notes": "RFIs generate 307K origin-linked CEs. Strongest document-to-financial bridge."
+  },
+  "financial-instruments--quality-safety-records": {
+    "source": "Financial Instruments",
+    "target": "Quality & Safety Records",
+    "relationships": "ORIGINATED_FROM, COSTS_AGAINST",
+    "strength": "Moderate",
+    "notes": "Observations are leading indicators (28-day lead on CEs). 20,238 observation-originated CEs across 727 cos."
+  },
+  "building-elements--financial-instruments": {
+    "source": "Financial Instruments",
+    "target": "Building Elements",
+    "relationships": "MAPS_TO, CLASSIFIED_AS, COSTS_AGAINST",
+    "strength": "Dense",
+    "notes": "MasterFormat cost codes are the primary financial-to-physical mapping. wbs_code_id on line items enables element-level cost attribution."
+  },
+  "financial-instruments--organizations": {
+    "source": "Financial Instruments",
+    "target": "Organizations",
+    "relationships": "CONTRACTED_TO, COMMITTED_TO",
+    "strength": "Dense",
+    "notes": "Every commitment links to a vendor. Vendor performance measured via CO rate, invoice timing, and quality records."
+  },
+  "financial-instruments--schedule": {
+    "source": "Schedule",
+    "target": "Financial Instruments",
+    "relationships": "COSTS_AGAINST, BUDGETED_FOR",
+    "strength": "Moderate",
+    "notes": "Cost-loaded schedules map activities to budget lines for earned value. Billing tied to schedule milestones."
+  },
+  "financial-instruments--standards-classifications": {
+    "source": "Financial Instruments",
+    "target": "Standards & Classifications",
+    "relationships": "MAPS_TO, CLASSIFIED_AS",
+    "strength": "Dense",
+    "notes": "MasterFormat is the Rosetta Stone for cross-company cost normalization. change_reason is the primary CE/CCO categorization."
+  },
+  "field-operations--financial-instruments": {
+    "source": "Financial Instruments",
+    "target": "Field Operations",
+    "relationships": "TRIGGERED_BY, COSTS_AGAINST",
+    "strength": "Moderate",
+    "notes": "Daily log delays trigger cost events. T&M entries become direct costs. Manpower hours feed cost tracking."
+  },
+  "contracts-procurement--financial-instruments": {
+    "source": "Financial Instruments",
+    "target": "Contracts & Procurement",
+    "relationships": "COMMITTED_TO, BUDGETED_FOR",
+    "strength": "Dense",
+    "notes": "Financial Instruments tracks money flow; Contracts & Procurement tracks commercial process. Subcontract/PO instruments shared."
+  },
+  "financial-instruments--phases": {
+    "source": "Financial Instruments",
+    "target": "Phases",
+    "relationships": "PRECEDES, DEPENDS_ON",
+    "strength": "Moderate",
+    "notes": "Contingency burned during construction. Retainage released at substantial/final completion. Billing follows phase milestones."
+  },
+  "financial-instruments--risk": {
+    "source": "Financial Instruments",
+    "target": "Risk",
+    "relationships": "IMPACTS, MITIGATED_BY, EXPOSES_TO",
+    "strength": "Moderate",
+    "notes": "Contingency burn rate is a leading financial risk indicator. Change order rate decomposed by change_reason reveals risk sources."
+  },
+  "financial-instruments--locations": {
+    "source": "Financial Instruments",
+    "target": "Locations",
+    "relationships": "LOCATED_AT, COSTS_AGAINST",
+    "strength": "Sparse",
+    "notes": "WBS codes can segment cost by location. Not all companies use location-based WBS."
+  },
+  "financial-instruments--roles": {
+    "source": "Financial Instruments",
+    "target": "Roles",
+    "relationships": "MANAGED_BY, APPROVED_AS",
+    "strength": "Moderate",
+    "notes": "Financial workflows require specific role approvals. Cost engineer, PM, and accounting roles drive financial process."
+  },
+  "documents-communications--quality-safety-records": {
+    "source": "Quality & Safety Records",
+    "target": "Documents & Communications",
+    "relationships": "REFERENCES, ATTACHED_TO, LINKED_TO",
+    "strength": "Dense",
+    "notes": "Photos attached to observations/punch items. Coordination issues link to RFIs (4,967 linked). Inspections reference spec sections."
+  },
+  "building-elements--quality-safety-records": {
+    "source": "Quality & Safety Records",
+    "target": "Building Elements",
+    "relationships": "MAPS_TO, LOCATED_AT",
+    "strength": "Moderate",
+    "notes": "Keyword clustering on observation.name and punch_item.name maps to building systems. 12,556 unique cos in dual-signal model."
+  },
+  "organizations--quality-safety-records": {
+    "source": "Quality & Safety Records",
+    "target": "Organizations",
+    "relationships": "ASSIGNED_TO, PERFORMED_BY, INSPECTED_BY",
+    "strength": "Dense",
+    "notes": "Vendor assignment on observations and punch items enables trade-level quality attribution."
+  },
+  "field-operations--quality-safety-records": {
+    "source": "Quality & Safety Records",
+    "target": "Field Operations",
+    "relationships": "DOCUMENTS, TRIGGERED_BY",
+    "strength": "Moderate",
+    "notes": "Daily log entries feed formal quality/safety records. Safety violations and accidents link conceptually to incidents."
+  },
+  "quality-safety-records--standards-classifications": {
+    "source": "Quality & Safety Records",
+    "target": "Standards & Classifications",
+    "relationships": "COMPLIES_WITH, VIOLATES, CLASSIFIED_AS",
+    "strength": "Dense",
+    "notes": "OSHA hazard categories are structured on safety observations. Inspections verify code compliance."
+  },
+  "locations--quality-safety-records": {
+    "source": "Quality & Safety Records",
+    "target": "Locations",
+    "relationships": "LOCATED_AT",
+    "strength": "Moderate",
+    "notes": "Location tracking on observations, punch items, and inspections enables spatial quality analysis."
+  },
+  "quality-safety-records--roles": {
+    "source": "Quality & Safety Records",
+    "target": "Roles",
+    "relationships": "ASSIGNED_TO, INSPECTED_BY, MANAGED_BY",
+    "strength": "Moderate",
+    "notes": "Safety managers drive safety observations. QC inspectors conduct inspections. PMs manage punch list closure."
+  },
+  "phases--quality-safety-records": {
+    "source": "Quality & Safety Records",
+    "target": "Phases",
+    "relationships": "PRECEDES, DEPENDS_ON",
+    "strength": "Moderate",
+    "notes": "Observations peak during construction. Punch items concentrate in closeout. Inspections gate phase transitions."
+  },
+  "quality-safety-records--risk": {
+    "source": "Quality & Safety Records",
+    "target": "Risk",
+    "relationships": "EXPOSES_TO, LEADS, IMPACTS",
+    "strength": "Dense",
+    "notes": "Quality/safety records are primary risk signals. Validated in insights #1, #4, #11."
+  },
+  "models-bim--quality-safety-records": {
+    "source": "Quality & Safety Records",
+    "target": "Models & BIM",
+    "relationships": "LINKED_TO, ORIGINATED_FROM",
+    "strength": "Sparse",
+    "notes": "Coordination issues originate from BIM clash detection. Observations can reference model elements but linkage is weak."
+  },
+  "contracts-procurement--quality-safety-records": {
+    "source": "Quality & Safety Records",
+    "target": "Contracts & Procurement",
+    "relationships": "VIOLATES, COSTS_AGAINST",
+    "strength": "Sparse",
+    "notes": "Deficiency notices invoke contractual cure provisions. NCRs trace to spec sections. Backcharges deduct from subcontracts."
+  },
+  "building-elements--documents-communications": {
+    "source": "Documents & Communications",
+    "target": "Building Elements",
+    "relationships": "REFERENCES, GOVERNS, SPECIFIES",
+    "strength": "Dense",
+    "notes": "RFI predicted_topic (176 topics) maps directly to building systems. Spec sections organized by MasterFormat. Drawings organized by discipline."
+  },
+  "documents-communications--organizations": {
+    "source": "Documents & Communications",
+    "target": "Organizations",
+    "relationships": "ASSIGNED_TO, RESPONDS_TO, DESIGNED_BY",
+    "strength": "Dense",
+    "notes": "RFIs assigned to design team. Submittals routed through approval chains. Correspondence tracks inter-party communication."
+  },
+  "documents-communications--schedule": {
+    "source": "Documents & Communications",
+    "target": "Schedule",
+    "relationships": "REFERENCES, IMPACTS, PRECEDES",
+    "strength": "Moderate",
+    "notes": "Overdue RFIs and submittals delay schedule activities. Drawing revisions may trigger schedule changes."
+  },
+  "documents-communications--field-operations": {
+    "source": "Documents & Communications",
+    "target": "Field Operations",
+    "relationships": "DOCUMENTS, ATTACHED_TO",
+    "strength": "Dense",
+    "notes": "Daily logs document field activity. Photos attach to nearly all field records. Plan revisions track drawing distribution."
+  },
+  "documents-communications--standards-classifications": {
+    "source": "Documents & Communications",
+    "target": "Standards & Classifications",
+    "relationships": "REFERENCES, GOVERNS",
+    "strength": "Moderate",
+    "notes": "Spec sections reference MasterFormat and ASTM standards. Drawings follow NCS conventions."
+  },
+  "documents-communications--phases": {
+    "source": "Documents & Communications",
+    "target": "Phases",
+    "relationships": "PRECEDES, DEPENDS_ON",
+    "strength": "Moderate",
+    "notes": "Document types are phase-gated: addenda in preconstruction, shop drawings in procurement, as-builts in closeout."
+  },
+  "documents-communications--locations": {
+    "source": "Documents & Communications",
+    "target": "Locations",
+    "relationships": "REFERENCES, LOCATED_AT",
+    "strength": "Sparse",
+    "notes": "Drawings reference locations by sheet content. Photos can be geotagged to locations."
+  },
+  "documents-communications--roles": {
+    "source": "Documents & Communications",
+    "target": "Roles",
+    "relationships": "ASSIGNED_TO, MANAGED_BY",
+    "strength": "Moderate",
+    "notes": "Ball-in-court tracking identifies responsible role. Document controller manages distribution."
+  },
+  "documents-communications--permits-regulatory": {
+    "source": "Permits & Regulatory",
+    "target": "Documents & Communications",
+    "relationships": "DOCUMENTS, REFERENCES",
+    "strength": "Moderate",
+    "notes": "Permit applications reference design documents. Safety and environmental plans are compliance documents."
+  },
+  "contracts-procurement--documents-communications": {
+    "source": "Documents & Communications",
+    "target": "Contracts & Procurement",
+    "relationships": "REFERENCES, GOVERNS",
+    "strength": "Dense",
+    "notes": "Design documents are part of the contract. Bid packages reference drawings and specs."
+  },
+  "documents-communications--models-bim": {
+    "source": "Documents & Communications",
+    "target": "Models & BIM",
+    "relationships": "REPRESENTS, REFERENCES",
+    "strength": "Moderate",
+    "notes": "Drawing sheets generated from BIM models. Coordination issues link to RFIs for resolution."
+  },
+  "documents-communications--risk": {
+    "source": "Documents & Communications",
+    "target": "Risk",
+    "relationships": "IMPACTS, TRIGGERED_BY",
+    "strength": "Moderate",
+    "notes": "Late documents are leading risk indicators. Post-IFC revisions signal design instability."
+  },
+  "building-elements--standards-classifications": {
+    "source": "Building Elements",
+    "target": "Standards & Classifications",
+    "relationships": "CLASSIFIED_AS, MAPS_TO",
+    "strength": "Dense",
+    "notes": "Building elements classified by industry standards. MasterFormat and UniFormat are the primary schemes."
+  },
+  "organizations--standards-classifications": {
+    "source": "Standards & Classifications",
+    "target": "Organizations",
+    "relationships": "COMPLIES_WITH, CLASSIFIED_AS",
+    "strength": "Moderate",
+    "notes": "Organizations comply with standards from regulatory authorities. Classification by role type."
+  },
+  "permits-regulatory--standards-classifications": {
+    "source": "Standards & Classifications",
+    "target": "Permits & Regulatory",
+    "relationships": "GOVERNS, COMPLIES_WITH",
+    "strength": "Dense",
+    "notes": "Building codes govern permit requirements. Fire codes govern fire marshal review. OSHA governs safety compliance."
+  },
+  "resources--standards-classifications": {
+    "source": "Standards & Classifications",
+    "target": "Resources",
+    "relationships": "SPECIFIES, CLASSIFIED_AS",
+    "strength": "Moderate",
+    "notes": "Specifications define material and installation requirements. MasterFormat divisions align with trade scopes."
+  },
+  "models-bim--standards-classifications": {
+    "source": "Standards & Classifications",
+    "target": "Models & BIM",
+    "relationships": "MAPS_TO, CLASSIFIED_AS",
+    "strength": "Moderate",
+    "notes": "IFC standards classify BIM entities. LOD specification defines model element maturity."
+  },
+  "contracts-procurement--standards-classifications": {
+    "source": "Standards & Classifications",
+    "target": "Contracts & Procurement",
+    "relationships": "GOVERNS, REFERENCES",
+    "strength": "Moderate",
+    "notes": "AIA standards govern contract forms. Spec sections define procurement scope."
+  },
+  "organizations--roles": {
+    "source": "Organizations",
+    "target": "Roles",
+    "relationships": "PLAYS_ROLE, BELONGS_TO",
+    "strength": "Dense",
+    "notes": "Organizations employ people who play specific roles on projects. Same company, different roles across projects."
+  },
+  "building-elements--organizations": {
+    "source": "Organizations",
+    "target": "Building Elements",
+    "relationships": "PERFORMED_BY, CONTRACTED_TO",
+    "strength": "Moderate",
+    "notes": "Subcontractors are contracted for specific building system scopes. Vendor\u2192commitment\u2192cost code\u2192system chain."
+  },
+  "contracts-procurement--organizations": {
+    "source": "Organizations",
+    "target": "Contracts & Procurement",
+    "relationships": "CONTRACTED_TO, BONDED_BY",
+    "strength": "Dense",
+    "notes": "Organizations are the parties to contracts. Surety and insurance companies provide financial backing."
+  },
+  "locations--organizations": {
+    "source": "Organizations",
+    "target": "Locations",
+    "relationships": "LOCATED_AT, ALLOCATED_TO",
+    "strength": "Sparse",
+    "notes": "Organizations are allocated to work zones on site. Less structured in Procore."
+  },
+  "organizations--permits-regulatory": {
+    "source": "Permits & Regulatory",
+    "target": "Organizations",
+    "relationships": "ISSUED_BY, COMPLIES_WITH",
+    "strength": "Moderate",
+    "notes": "Regulatory authorities issue permits. Contractors and vendors comply."
+  },
+  "roles--schedule": {
+    "source": "Roles",
+    "target": "Schedule",
+    "relationships": "MANAGED_BY, ALLOCATED_TO",
+    "strength": "Moderate",
+    "notes": "Roles drive schedule management. Scheduler maintains CPM, superintendent coordinates field work."
+  },
+  "field-operations--roles": {
+    "source": "Roles",
+    "target": "Field Operations",
+    "relationships": "PERFORMED_BY, MANAGED_BY",
+    "strength": "Dense",
+    "notes": "Field operations are role-driven. Superintendent owns the daily log. Safety manager owns safety program."
+  },
+  "building-elements--locations": {
+    "source": "Building Elements",
+    "target": "Locations",
+    "relationships": "LOCATED_AT, ADJACENT_TO",
+    "strength": "Dense",
+    "notes": "Building elements exist at specific locations. Spatial decomposition mirrors system hierarchy."
+  },
+  "field-operations--locations": {
+    "source": "Field Operations",
+    "target": "Locations",
+    "relationships": "LOCATED_AT",
+    "strength": "Sparse",
+    "notes": "Field operations happen at specific locations. Less structured than expected in current data."
+  },
+  "locations--schedule": {
+    "source": "Locations",
+    "target": "Schedule",
+    "relationships": "LOCATED_AT, DEPENDS_ON",
+    "strength": "Moderate",
+    "notes": "Schedule activities linked to locations enable 4D visualization. Vertical construction progresses floor by floor."
+  },
+  "locations--models-bim": {
+    "source": "Models & BIM",
+    "target": "Locations",
+    "relationships": "REPRESENTS, CONTAINS",
+    "strength": "Moderate",
+    "notes": "BIM models inherently contain spatial information. Model space maps to physical locations."
+  },
+  "phases--schedule": {
+    "source": "Schedule",
+    "target": "Phases",
+    "relationships": "CONTAINS, PRECEDES",
+    "strength": "Dense",
+    "notes": "Schedule activities organized by phase. Milestones mark phase transitions."
+  },
+  "phases--workflows-statuses": {
+    "source": "Phases",
+    "target": "Workflows & Statuses",
+    "relationships": "PRECEDES, DEPENDS_ON",
+    "strength": "Dense",
+    "notes": "Workflow patterns are phase-specific. Financial approval chains differ from field workflows."
+  },
+  "building-elements--phases": {
+    "source": "Phases",
+    "target": "Building Elements",
+    "relationships": "PRECEDES, CONCURRENT_WITH",
+    "strength": "Dense",
+    "notes": "Each construction phase activates specific building systems. Phase\u00d7System matrix defines this."
+  },
+  "phases--resources": {
+    "source": "Phases",
+    "target": "Resources",
+    "relationships": "REQUIRES, ALLOCATED_TO",
+    "strength": "Dense",
+    "notes": "Resource requirements vary by phase. System-resource matrix crossed with phase-system matrix."
+  },
+  "contracts-procurement--phases": {
+    "source": "Phases",
+    "target": "Contracts & Procurement",
+    "relationships": "PRECEDES, DEPENDS_ON",
+    "strength": "Moderate",
+    "notes": "Procurement activities are phase-gated. Contract milestones align with phase transitions."
+  },
+  "permits-regulatory--phases": {
+    "source": "Permits & Regulatory",
+    "target": "Phases",
+    "relationships": "ENABLES, DEPENDS_ON",
+    "strength": "Dense",
+    "notes": "Permits gate construction phases. No construction without permits."
+  },
+  "documents-communications--workflows-statuses": {
+    "source": "Workflows & Statuses",
+    "target": "Documents & Communications",
+    "relationships": "RESOLVES_TO, APPROVED_AS",
+    "strength": "Dense",
+    "notes": "Workflows drive document processing. RFI lifecycle, submittal approval, invoice processing all follow defined workflows."
+  },
+  "financial-instruments--workflows-statuses": {
+    "source": "Workflows & Statuses",
+    "target": "Financial Instruments",
+    "relationships": "APPROVED_AS, RESOLVES_TO",
+    "strength": "Dense",
+    "notes": "Financial instruments follow approval workflows. CE/CCO/Invoice/Budget Mod all have structured status progressions."
+  },
+  "quality-safety-records--workflows-statuses": {
+    "source": "Workflows & Statuses",
+    "target": "Quality & Safety Records",
+    "relationships": "RESOLVES_TO, APPROVED_AS",
+    "strength": "Dense",
+    "notes": "Quality/safety records follow resolution workflows. Open\u2192In Progress\u2192Ready for Review\u2192Closed."
+  },
+  "risk--schedule": {
+    "source": "Risk",
+    "target": "Schedule",
+    "relationships": "IMPACTS, TRIGGERED_BY",
+    "strength": "Dense",
+    "notes": "Schedule risk is one of the highest-impact risk categories. Float erosion is a leading indicator."
+  },
+  "contracts-procurement--risk": {
+    "source": "Risk",
+    "target": "Contracts & Procurement",
+    "relationships": "MITIGATED_BY, EXPOSES_TO",
+    "strength": "Moderate",
+    "notes": "Contracts allocate risk between parties. Bonds and insurance transfer risk to third parties."
+  },
+  "resources--risk": {
+    "source": "Risk",
+    "target": "Resources",
+    "relationships": "EXPOSES_TO, TRIGGERED_BY",
+    "strength": "Moderate",
+    "notes": "Resource constraints create risk exposure. Material shortages validated as structured signal (84K delay records)."
+  },
+  "permits-regulatory--risk": {
+    "source": "Risk",
+    "target": "Permits & Regulatory",
+    "relationships": "TRIGGERED_BY, IMPACTS",
+    "strength": "Moderate",
+    "notes": "Permit and regulatory issues trigger risk events. Non-compliance carries financial penalties."
+  },
+  "building-elements--models-bim": {
+    "source": "Building Elements",
+    "target": "Models & BIM",
+    "relationships": "REPRESENTED_BY, CLASHES_WITH",
+    "strength": "Dense",
+    "notes": "Every physical building element has a digital BIM representation. Clashes detected between systems."
+  },
+  "models-bim--schedule": {
+    "source": "Models & BIM",
+    "target": "Schedule",
+    "relationships": "LINKED_TO, REPRESENTS",
+    "strength": "Moderate",
+    "notes": "4D models link BIM to schedule for visualization. 5D adds cost dimension."
+  },
+  "models-bim--resources": {
+    "source": "Models & BIM",
+    "target": "Resources",
+    "relationships": "SPECIFIES, CONSUMES",
+    "strength": "Moderate",
+    "notes": "BIM enables quantity takeoff for material procurement. Model-based estimating."
+  },
+  "contracts-procurement--resources": {
+    "source": "Contracts & Procurement",
+    "target": "Resources",
+    "relationships": "SPECIFIES, COMMITTED_TO",
+    "strength": "Moderate",
+    "notes": "Contracts commit specific trade and material resources. POs procure materials."
+  },
+  "contracts-procurement--permits-regulatory": {
+    "source": "Contracts & Procurement",
+    "target": "Permits & Regulatory",
+    "relationships": "COMPLIES_WITH, DEPENDS_ON",
+    "strength": "Sparse",
+    "notes": "Contract compliance requirements include prevailing wage, bonding, and diversity goals."
+  },
+  "field-operations--schedule": {
+    "source": "Schedule",
+    "target": "Field Operations",
+    "relationships": "LINKED_TO, DOCUMENTS",
+    "strength": "Dense",
+    "notes": "Procore's native schedule-to-field linkage via schedule_task_id. No P6 equivalent."
+  },
+  "building-elements--field-operations": {
+    "source": "Field Operations",
+    "target": "Building Elements",
+    "relationships": "MAPS_TO, LOCATED_AT",
+    "strength": "Moderate",
+    "notes": "Trade names on manpower logs map to building systems. Equipment usage indicates active systems."
+  },
+  "field-operations--resources": {
+    "source": "Field Operations",
+    "target": "Resources",
+    "relationships": "DOCUMENTS, CONSUMES",
+    "strength": "Dense",
+    "notes": "Field operations document actual resource consumption. Manpower, equipment, and delivery logs track trades, equipment, and materials."
+  },
+  "field-operations--organizations": {
+    "source": "Field Operations",
+    "target": "Organizations",
+    "relationships": "PERFORMED_BY, MANAGED_BY",
+    "strength": "Moderate",
+    "notes": "Vendors appear on daily log entries via vendor_name/vendor_id. GC compiles daily logs."
+  },
+  "field-operations--phases": {
+    "source": "Field Operations",
+    "target": "Phases",
+    "relationships": "DOCUMENTS",
+    "strength": "Moderate",
+    "notes": "Daily logs track progress within each construction phase."
+  },
+  "field-operations--permits-regulatory": {
+    "source": "Field Operations",
+    "target": "Permits & Regulatory",
+    "relationships": "DOCUMENTS, COMPLIES_WITH",
+    "strength": "Sparse",
+    "notes": "Safety violation logs and environmental logs support regulatory compliance documentation."
+  },
+  "building-elements--resources": {
+    "source": "Building Elements",
+    "target": "Resources",
+    "relationships": "REQUIRES, COMPOSED_OF",
+    "strength": "Dense",
+    "notes": "System-resource matrix defines which trades, equipment, and materials each building system requires."
+  },
+  "locations--resources": {
+    "source": "Resources",
+    "target": "Locations",
+    "relationships": "ALLOCATED_TO, LOCATED_AT",
+    "strength": "Sparse",
+    "notes": "Resources allocated to specific locations during construction."
+  },
+  "financial-instruments--project-attributes": {
+    "source": "Project Attributes",
+    "target": "Financial Instruments",
+    "relationships": "SEGMENTED_BY, BENCHMARKED_AGAINST",
+    "strength": "Dense",
+    "notes": "Project attributes are the primary segmentation dimensions for financial benchmarking."
+  },
+  "project-attributes--quality-safety-records": {
+    "source": "Project Attributes",
+    "target": "Quality & Safety Records",
+    "relationships": "SEGMENTED_BY, BENCHMARKED_AGAINST",
+    "strength": "Dense",
+    "notes": "7 project types validated for quality/safety benchmarking with 99+ cos each."
+  },
+  "project-attributes--schedule": {
+    "source": "Project Attributes",
+    "target": "Schedule",
+    "relationships": "SEGMENTED_BY, BENCHMARKED_AGAINST",
+    "strength": "Moderate",
+    "notes": "Project attributes drive schedule benchmarking dimensions."
+  },
+  "building-elements--project-attributes": {
+    "source": "Project Attributes",
+    "target": "Building Elements",
+    "relationships": "CLASSIFIED_AS, CONTAINS",
+    "strength": "Moderate",
+    "notes": "Project type determines which building systems are relevant. Building attributes define scope."
+  },
+  "organizations--project-attributes": {
+    "source": "Project Attributes",
+    "target": "Organizations",
+    "relationships": "CLASSIFIED_AS, MANAGED_BY",
+    "strength": "Moderate",
+    "notes": "Project attributes classify the organizational structure. Owner type, GC, and sub count."
+  },
+  "project-attributes--risk": {
+    "source": "Project Attributes",
+    "target": "Risk",
+    "relationships": "EXPOSES_TO, SEGMENTED_BY",
+    "strength": "Moderate",
+    "notes": "Project attributes define inherent risk profiles. Complexity, delivery method, and constraints drive risk."
+  },
+  "locations--project-attributes": {
+    "source": "Project Attributes",
+    "target": "Locations",
+    "relationships": "LOCATED_AT",
+    "strength": "Moderate",
+    "notes": "Project attributes include geographic and environmental classification."
+  },
+  "project-attributes--resources": {
+    "source": "Project Attributes",
+    "target": "Resources",
+    "relationships": "REQUIRES",
+    "strength": "Sparse",
+    "notes": "Project scale attributes indicate resource requirements."
+  },
+  "building-elements--schedule": {
+    "source": "Schedule",
+    "target": "Building Elements",
+    "relationships": "PRECEDES, CONCURRENT_WITH",
+    "strength": "Dense",
+    "notes": "Schedule sequences building system installation. Vertical progression floor-by-floor."
+  },
+  "resources--schedule": {
+    "source": "Schedule",
+    "target": "Resources",
+    "relationships": "REQUIRES, ALLOCATED_TO",
+    "strength": "Moderate",
+    "notes": "Resource-loaded schedules assign trades, equipment, and materials to activities."
+  },
+  "permits-regulatory--quality-safety-records": {
+    "source": "Permits & Regulatory",
+    "target": "Quality & Safety Records",
+    "relationships": "COMPLIES_WITH, INSPECTED_BY",
+    "strength": "Dense",
+    "notes": "Regulatory inspections verify code compliance. OSHA governs safety requirements."
+  },
+  "building-elements--contracts-procurement": {
+    "source": "Building Elements",
+    "target": "Contracts & Procurement",
+    "relationships": "PROCURED VIA, BUNDLED INTO, SOLICITED THROUGH",
+    "strength": "Dense",
+    "notes": "Building element obtained through a specific contract instrument such as a subcontract or purchase order. Building element grouped with related scope items into a single bid package for competitive pricing."
+  },
+  "building-elements--permits-regulatory": {
+    "source": "Building Elements",
+    "target": "Permits & Regulatory",
+    "relationships": "AUTHORIZED BY, TRIGGERS, SATISFIES",
+    "strength": "Dense",
+    "notes": "The building element work scope is legally permitted to proceed only after the target regulatory approval is granted (e. Installing or beginning work on the building element initiates a required regulatory filing or notification (e."
+  },
+  "building-elements--risk": {
+    "source": "Building Elements",
+    "target": "Risk",
+    "relationships": "ENCOUNTERS, POSES, AGGRAVATES",
+    "strength": "Dense",
+    "notes": "Building element directly contacts or disturbs a subsurface condition, surfacing a geotechnical risk (e. Building element introduces a hazard to workers during installation or construction (e."
+  },
+  "building-elements--roles": {
+    "source": "Building Elements",
+    "target": "Roles",
+    "relationships": "SUPERVISED BY, TESTED BY, ENFORCED BY",
+    "strength": "Dense",
+    "notes": "Role directs the day-to-day field work for the element's installation, managing crews, equipment, and sequence. Role performs material testing (compaction, soil bearing, concrete strength) to verify the element meets specification requirements."
+  },
+  "building-elements--workflows-statuses": {
+    "source": "Building Elements",
+    "target": "Workflows & Statuses",
+    "relationships": "BREAKS GROUND AT, INSPECTED BEFORE BACKFILL VIA, PUMPS CONTINUOUSLY DURING",
+    "strength": "Moderate",
+    "notes": "The earthwork element begins physical site work when the project reaches this open status, marking the start of construction activity. The element undergoes a mandatory inspection using this disposition workflow before being covered by subsequent work, ensuring hidden conditions are documented."
+  },
+  "contracts-procurement--field-operations": {
+    "source": "Contracts & Procurement",
+    "target": "Field Operations",
+    "relationships": "SCREENS AGAINST, VERIFIES CAPACITY VIA, SCOPED AROUND",
+    "strength": "Dense",
+    "notes": "Prequalification evaluation considers a subcontractor's past safety violation history before allowing them to bid. Prequalification confirms a bidder can field the required workforce by reviewing historical manpower records."
+  },
+  "contracts-procurement--locations": {
+    "source": "Contracts & Procurement",
+    "target": "Locations",
+    "relationships": "COVERS, BOUNDED BY, DELINEATED BY",
+    "strength": "Sparse",
+    "notes": "Contract instrument (warranty, insurance) provides coverage for a specific location or functional area. Scope of work is geographically limited to a defined zone, wing, or exterior area of the project."
+  },
+  "contracts-procurement--models-bim": {
+    "source": "Contracts & Procurement",
+    "target": "Models & BIM",
+    "relationships": "REFERENCED FROM, QUANTIFIED BY, PRICED FROM",
+    "strength": "Sparse",
+    "notes": "Contract instrument references the 3D building information model as part of the contract documents. Bid package quantities are derived from model-based quantity takeoffs rather than manual measurement."
+  },
+  "contracts-procurement--project-attributes": {
+    "source": "Contracts & Procurement",
+    "target": "Project Attributes",
+    "relationships": "STRUCTURED BY, GOVERNED BY, SEGMENTED BY",
+    "strength": "Moderate",
+    "notes": "Contract instrument or procurement record is organized according to the target delivery, contract, or bid type attribute. Contract instrument must comply with the target project labor, regulatory, or contractual attribute."
+  },
+  "contracts-procurement--roles": {
+    "source": "Contracts & Procurement",
+    "target": "Roles",
+    "relationships": "ASSEMBLED BY, EVALUATED BY, NEGOTIATED BY",
+    "strength": "Dense",
+    "notes": "Role compiles multiple documents, drawings, specifications, and exhibits into a complete package for issuance or closeout. Role scores and ranks submissions against defined criteria, producing a recommendation for contract award or vendor selection."
+  },
+  "contracts-procurement--schedule": {
+    "source": "Contracts & Procurement",
+    "target": "Schedule",
+    "relationships": "GATES, SCREENED BEFORE, SCOPED AROUND",
+    "strength": "Dense",
+    "notes": "Prequalification approval acts as a prerequisite gate before a procurement milestone can proceed. Vendor prequalification completed in advance of the look-ahead window when their scope begins."
+  },
+  "contracts-procurement--workflows-statuses": {
+    "source": "Contracts & Procurement",
+    "target": "Workflows & Statuses",
+    "relationships": "EXECUTED UPON, ROUTES THROUGH, FOLLOWS",
+    "strength": "Moderate",
+    "notes": "The instrument becomes a binding contractual commitment when this approval status is reached. The instrument passes through this workflow pattern or approval chain as part of its lifecycle processing."
+  },
+  "documents-communications--project-attributes": {
+    "source": "Documents & Communications",
+    "target": "Project Attributes",
+    "relationships": "SEGMENTED BY, BENCHMARKED BY, DRIVEN BY",
+    "strength": "Moderate",
+    "notes": "Document metric or record is broken down by the target project attribute for comparative analysis across project types, sizes, or methods. Document performance metric is compared across projects grouped by the target attribute to establish norms and identify outliers."
+  },
+  "documents-communications--resources": {
+    "source": "Documents & Communications",
+    "target": "Resources",
+    "relationships": "SPECIFIES, SUBMITS FOR APPROVAL, DETAILS FABRICATION OF",
+    "strength": "Dense",
+    "notes": "Document defines required properties, standards, and acceptance criteria for the material or product. Submittal package presents the proposed material or product to the design team for conformance review."
+  },
+  "field-operations--models-bim": {
+    "source": "Field Operations",
+    "target": "Models & BIM",
+    "relationships": "DOCUMENTED WITH, ILLUSTRATED BY, EVIDENCED BY",
+    "strength": "Sparse",
+    "notes": "Field note or log entry is supplemented by a construction photo providing visual evidence of the recorded condition. Daily log header is accompanied by construction photos that visually represent the day's site conditions."
+  },
+  "field-operations--project-attributes": {
+    "source": "Field Operations",
+    "target": "Project Attributes",
+    "relationships": "SEGMENTED BY, DRIVEN BY, BENCHMARKED BY",
+    "strength": "Moderate",
+    "notes": "Field operations record or metric is broken down by the target project attribute for comparative analysis across project types or categories. Field metric is primarily caused or determined by the target project attribute (e."
+  },
+  "field-operations--risk": {
+    "source": "Field Operations",
+    "target": "Risk",
+    "relationships": "SIGNALS, EVIDENCES, ESCALATES",
+    "strength": "Moderate",
+    "notes": "Field metric serves as an early warning indicator that a risk is emerging before it fully materializes (e. Field data provides observable proof that a risk condition exists or is materializing (e."
+  },
+  "field-operations--standards-classifications": {
+    "source": "Field Operations",
+    "target": "Standards & Classifications",
+    "relationships": "CODED BY, SEGMENTED BY, BENCHMARKED TO",
+    "strength": "Moderate",
+    "notes": "Record is assigned a classification code from the target standard (e. Field operations metric is broken down by the target classification for comparative analysis (e."
+  },
+  "field-operations--workflows-statuses": {
+    "source": "Field Operations",
+    "target": "Workflows & Statuses",
+    "relationships": "OPENS AT, CLOSES OUT AT, FOLLOWS",
+    "strength": "Dense",
+    "notes": "The field log record is created and enters this active status, beginning its daily tracking lifecycle. The field log is finalized and locked for the day at this terminal status, preventing further edits."
+  },
+  "financial-instruments--models-bim": {
+    "source": "Financial Instruments",
+    "target": "Models & BIM",
+    "relationships": "PRICED FROM, RECONCILED AGAINST, PROJECTED FROM",
+    "strength": "Sparse",
+    "notes": "Financial line item derives its unit cost or lump-sum value from a model-based cost estimate (e. Change event amount is compared to the model's current cost baseline to validate scope and cost alignment."
+  },
+  "financial-instruments--permits-regulatory": {
+    "source": "Financial Instruments",
+    "target": "Permits & Regulatory",
+    "relationships": "TRIGGERED BY, ALLOCATES FEE FOR, PAYS FOR",
+    "strength": "Moderate",
+    "notes": "Financial change event is caused by a regulatory review finding, inspection result, or zoning decision (e. Budget line item sets aside dollars to cover a permit fee, inspection fee, or regulatory compliance cost (e."
+  },
+  "financial-instruments--resources": {
+    "source": "Financial Instruments",
+    "target": "Resources",
+    "relationships": "RESERVES CAPACITY FOR, EARMARKS SPEND FOR, PROVISIONS HEADCOUNT FOR",
+    "strength": "Dense",
+    "notes": "Budget sets aside funding to guarantee availability of a high-demand resource like a tower crane. Budget designates a dollar amount specifically for procurement of a material category."
+  },
+  "locations--permits-regulatory": {
+    "source": "Locations",
+    "target": "Permits & Regulatory",
+    "relationships": "INSPECTED AT, REGULATED BY, SCOPED BY",
+    "strength": "Moderate",
+    "notes": "Regulatory inspector conducts a code inspection at the specific location (e. Ongoing regulatory authority controls activity at the location (e."
+  },
+  "locations--phases": {
+    "source": "Locations",
+    "target": "Phases",
+    "relationships": "WALKED DURING, DEMOBILIZED DURING, LAID OUT DURING",
+    "strength": "Dense",
+    "notes": "Location is physically toured for orientation, punch list identification, or safety walkthrough during this phase. Temporary facilities, equipment, and site controls are removed from the project site during this phase."
+  },
+  "locations--risk": {
+    "source": "Locations",
+    "target": "Risk",
+    "relationships": "CONCENTRATES, EXPOSES TO, SUBJECT TO",
+    "strength": "Moderate",
+    "notes": "Location type creates a physical density of risk due to work congestion, trade overlap, or hazard proximity (e. Location characteristics create vulnerability to a risk category due to site conditions or physical properties (e."
+  },
+  "locations--roles": {
+    "source": "Locations",
+    "target": "Roles",
+    "relationships": "CORRELATES WITH, CONTROLS, SECURES",
+    "strength": "Moderate",
+    "notes": "Standard location measure has a statistical relationship with a role staffing metric across the portfolio. Role governs access, activity sequencing, and safety compliance across the entire project site on a daily basis."
+  },
+  "locations--standards-classifications": {
+    "source": "Locations",
+    "target": "Standards & Classifications",
+    "relationships": "SEGMENTED BY, GOVERNED BY, SURVEYED FOR",
+    "strength": "Sparse",
+    "notes": "Location-based metric is broken down by the target classification for comparative analysis (e. Location boundary or compartment is defined and regulated by the target code or standard (e."
+  },
+  "locations--workflows-statuses": {
+    "source": "Locations",
+    "target": "Workflows & Statuses",
+    "relationships": "FLAGGED AT, MEASURED BY, TRACKED BY",
+    "strength": "Moderate",
+    "notes": "The location is marked with a deficiency or quality issue at this disposition status, requiring corrective action before closeout. The location-based metric is quantified using this workflow performance measure."
+  },
+  "models-bim--organizations": {
+    "source": "Models & BIM",
+    "target": "Organizations",
+    "relationships": "AUTHORED BY, ASSEMBLED BY, SCHEDULED BY",
+    "strength": "Sparse",
+    "notes": "Organization creates and maintains the BIM model as its design originator. Organization merges discipline models into a single federated coordination model."
+  },
+  "models-bim--permits-regulatory": {
+    "source": "Models & BIM",
+    "target": "Permits & Regulatory",
+    "relationships": "ATTACHED TO, VERIFIED FOR, REVIEWED DURING",
+    "strength": "Sparse",
+    "notes": "Model-based drawings included as required permit submission documents. As-built model confirms installed conditions meet certificate issuance requirements."
+  },
+  "models-bim--phases": {
+    "source": "Models & BIM",
+    "target": "Phases",
+    "relationships": "COORDINATES, SEQUENCES, QUANTIFIES",
+    "strength": "Dense",
+    "notes": "Federated model used to spatially align multiple trade scopes during the target phase. 4D model assigns construction sequence and timing to work in the target phase."
+  },
+  "models-bim--project-attributes": {
+    "source": "Models & BIM",
+    "target": "Project Attributes",
+    "relationships": "SEGMENTED BY, FULFILLS, SCALED BY",
+    "strength": "Moderate",
+    "notes": "BIM record or metric is broken down by the target project attribute for cross-project comparative analysis. BIM deliverable satisfies the target project BIM requirement attribute."
+  },
+  "models-bim--risk": {
+    "source": "Models & BIM",
+    "target": "Risk",
+    "relationships": "FEEDS, MONITORS, IDENTIFIES",
+    "strength": "Sparse",
+    "notes": "Model metric provides input data for calculating risk scores or populating the risk register. Drone capture monitors site conditions for safety or environmental risk indicators."
+  },
+  "models-bim--roles": {
+    "source": "Models & BIM",
+    "target": "Roles",
+    "relationships": "MANAGED BY, OVERSEEN BY, ASSEMBLED BY",
+    "strength": "Sparse",
+    "notes": "Role is responsible for maintaining model standards, content, and updates. Role provides design oversight and approval of model content."
+  },
+  "models-bim--workflows-statuses": {
+    "source": "Models & BIM",
+    "target": "Workflows & Statuses",
+    "relationships": "SUPPORTS, INITIATED AS, ADVANCED TO",
+    "strength": "Sparse",
+    "notes": "Reality capture photos support the inspect-and-disposition workflow with visual evidence. Coordination issue created with an initial open status."
+  },
+  "organizations--phases": {
+    "source": "Organizations",
+    "target": "Phases",
+    "relationships": "COMMISSIONS, FUNDS THROUGH, GRANTS APPROVALS DURING",
+    "strength": "Dense",
+    "notes": "Owner formally initiates a project by engaging designers and consultants for programming and feasibility analysis. Institutional owner provides capital and financial authorization that sustains work through a construction phase."
+  },
+  "organizations--resources": {
+    "source": "Organizations",
+    "target": "Resources",
+    "relationships": "MOBILIZES, FURNISHES, MANS",
+    "strength": "Dense",
+    "notes": "Organization arranges transport, setup, and commissioning of heavy equipment or crews to the project site. Subcontractor provides skilled trade labor as part of its contractual scope of work on the project."
+  },
+  "organizations--risk": {
+    "source": "Organizations",
+    "target": "Risk",
+    "relationships": "INTRODUCES, BEARS, ENFORCES AGAINST",
+    "strength": "Moderate",
+    "notes": "Organization's scope of work or involvement creates the conditions for a risk to emerge (e. Organization contractually accepts financial or performance liability for a risk category (e."
+  },
+  "organizations--schedule": {
+    "source": "Organizations",
+    "target": "Schedule",
+    "relationships": "DEVELOPS, OWNS, ISSUES",
+    "strength": "Dense",
+    "notes": "Organization creates the baseline CPM schedule, establishes activity logic, and sets the planned construction sequence. Organization is contractually responsible for maintaining and defending the critical path through all schedule updates."
+  },
+  "organizations--workflows-statuses": {
+    "source": "Organizations",
+    "target": "Workflows & Statuses",
+    "relationships": "MEASURED BY, MANDATES, ADMINISTERS",
+    "strength": "Dense",
+    "notes": "The organization's or metric's performance is quantified using this workflow measure. The organization requires this workflow pattern as a contractual or regulatory condition on the project."
+  },
+  "permits-regulatory--project-attributes": {
+    "source": "Permits & Regulatory",
+    "target": "Project Attributes",
+    "relationships": "TRIGGERED BY, ISSUED FOR, REQUIRED BY",
+    "strength": "Moderate",
+    "notes": "Regulatory requirement is activated because the target project attribute meets a threshold or condition (e. Permit is granted based on the target project building or scope attribute classification (e."
+  },
+  "permits-regulatory--resources": {
+    "source": "Permits & Regulatory",
+    "target": "Resources",
+    "relationships": "LICENSES, CERTIFIES WAGES OF, AUTHORIZES",
+    "strength": "Moderate",
+    "notes": "Trade-specific permit requires the target trade worker to hold a valid license or journeyman card before performing permitted work on the project. Labor compliance filing or prevailing-wage requirement mandates verified payroll records for the target trade, confirming correct wage rates and benefits."
+  },
+  "permits-regulatory--roles": {
+    "source": "Permits & Regulatory",
+    "target": "Roles",
+    "relationships": "COORDINATED BY, PULLED BY, OBTAINED BY",
+    "strength": "Moderate",
+    "notes": "Role aligns regulatory inspection timing, permit sequencing, or agency submittals with the construction schedule and field readiness. Role physically obtains a construction permit from the issuing jurisdiction, often requiring in-person pickup or portal download after approval."
+  },
+  "permits-regulatory--schedule": {
+    "source": "Permits & Regulatory",
+    "target": "Schedule",
+    "relationships": "REQUIRED BEFORE, IMPOSES, GATES",
+    "strength": "Moderate",
+    "notes": "Permit or regulatory action must be obtained before the target schedule element can legally begin or be established (e. Regulatory requirement creates a formal constraint on the target schedule element (e."
+  },
+  "permits-regulatory--workflows-statuses": {
+    "source": "Permits & Regulatory",
+    "target": "Workflows & Statuses",
+    "relationships": "FOLLOWS, AWAITS, ISSUED UPON",
+    "strength": "Moderate",
+    "notes": "The permit or inspection adheres to this standard workflow pattern from submission through final disposition. The permit is queued and waiting for jurisdictional action at this status; no construction activity may proceed until someone acts."
+  },
+  "phases--project-attributes": {
+    "source": "Phases",
+    "target": "Project Attributes",
+    "relationships": "DETERMINED BY, GOVERNED BY, REQUIRED BY",
+    "strength": "Moderate",
+    "notes": "Phase inclusion or exclusion is determined by the target project attribute (e. Phase requirements and procedures are dictated by the target project attribute's regulatory or contractual standards."
+  },
+  "phases--risk": {
+    "source": "Phases",
+    "target": "Risk",
+    "relationships": "EXPOSES TO, INTRODUCES, ACTIVATES",
+    "strength": "Moderate",
+    "notes": "Phase activity creates vulnerability to a specific risk category by the nature of the work involved (e. Phase activity brings a new risk into the project that must be managed going forward (e."
+  },
+  "phases--roles": {
+    "source": "Phases",
+    "target": "Roles",
+    "relationships": "CORRELATES WITH, INITIATED BY, LED BY",
+    "strength": "Dense",
+    "notes": "Standard measure from the roles domain shows a statistical relationship with phase duration, cost, or quality outcomes across the portfolio. Role launches the phase by defining project requirements, scope, and success criteria on behalf of the client."
+  },
+  "phases--standards-classifications": {
+    "source": "Phases",
+    "target": "Standards & Classifications",
+    "relationships": "BENCHMARKED TO, INSPECTED PER, TESTED PER",
+    "strength": "Dense",
+    "notes": "Phase cost or performance metric is compared to the target standard's published industry baselines (e. Phase work is inspected following the acceptance criteria and procedures in the target code (e."
+  },
+  "project-attributes--roles": {
+    "source": "Project Attributes",
+    "target": "Roles",
+    "relationships": "ACTIVATES, INTENSIFIES, SCALES",
+    "strength": "Moderate",
+    "notes": "Project delivery or scope attribute creates the need for the target role (e. Project condition attribute increases the staffing level for the target role beyond baseline (e."
+  },
+  "project-attributes--standards-classifications": {
+    "source": "Project Attributes",
+    "target": "Standards & Classifications",
+    "relationships": "CLASSIFIED BY, GOVERNED BY, CERTIFIED UNDER",
+    "strength": "Sparse",
+    "notes": "Project attribute is categorized using the target classification system's taxonomy (e. Project attribute is regulated by the requirements of the target code or standard (e."
+  },
+  "project-attributes--workflows-statuses": {
+    "source": "Project Attributes",
+    "target": "Workflows & Statuses",
+    "relationships": "CONFIGURES, TRACKED AS, SEGMENTS",
+    "strength": "Moderate",
+    "notes": "Project delivery, contract, or owner attribute determines the structure of the target workflow pattern or approval chain (e. Project status attribute is represented by the target universal lifecycle status (e."
+  },
+  "quality-safety-records--resources": {
+    "source": "Quality & Safety Records",
+    "target": "Resources",
+    "relationships": "REPORTED BY, CITED AGAINST, CONDUCTED BY",
+    "strength": "Dense",
+    "notes": "Safety observation is documented and submitted by the target safety professional during a jobsite walkthrough. Formal safety violation is issued naming the target trade or worker as the responsible party for the infraction."
+  },
+  "quality-safety-records--schedule": {
+    "source": "Quality & Safety Records",
+    "target": "Schedule",
+    "relationships": "LOGGED AGAINST, TRIGGERS RESCHEDULE OF, HALTS WORK ON",
+    "strength": "Dense",
+    "notes": "Observation recorded in reference to the specific schedule activity where the issue was found on site. Observation finding causes a tracked schedule change requiring activity re-sequencing or re-duration."
+  },
+  "resources--roles": {
+    "source": "Resources",
+    "target": "Roles",
+    "relationships": "INSPECTED_BY, DISPATCHED_BY, REPORTS_TO",
+    "strength": "Moderate",
+    "notes": "Resource undergoes a formal examination by the role to verify compliance with safety regulations, project specifications, or quality standards before use on site. Resource is assigned to a specific work area or task by the role, who allocates equipment or labor based on the day's production schedule."
+  },
+  "resources--workflows-statuses": {
+    "source": "Resources",
+    "target": "Workflows & Statuses",
+    "relationships": "REQUESTS INSPECTION AT, AWAITS CLEARANCE AT, MOBILIZED UPON",
+    "strength": "Moderate",
+    "notes": "The trade worker notifies QC that their installed work is complete and ready for review at this status. The resource is staged on site but cannot begin work until this pending approval status is resolved by the responsible party."
+  },
+  "risk--roles": {
+    "source": "Risk",
+    "target": "Roles",
+    "relationships": "REVIEWED BY, MONITORED BY, CALCULATED BY",
+    "strength": "Moderate",
+    "notes": "Role examines the risk register or risk metric at set intervals to validate accuracy and confirm response actions are on track. Role tracks a risk indicator or residual risk over time, reviewing trends at regular intervals and flagging deviations."
+  },
+  "risk--standards-classifications": {
+    "source": "Risk",
+    "target": "Standards & Classifications",
+    "relationships": "CLASSIFIED UNDER, GOVERNED BY, BENCHMARKED TO",
+    "strength": "Moderate",
+    "notes": "Risk item is categorized using the target standard's taxonomy (e. Risk area is regulated by the target code or standard, requiring specific controls (e."
+  },
+  "risk--workflows-statuses": {
+    "source": "Risk",
+    "target": "Workflows & Statuses",
+    "relationships": "EVALUATED DURING, LOGGED AT, TRACKED THROUGH",
+    "strength": "Moderate",
+    "notes": "The likelihood or impact assessment is performed and scored while the risk is held at this review status. The risk item is formally recorded and entered into the system at this lifecycle status, creating the initial tracking record."
+  },
+  "roles--standards-classifications": {
+    "source": "Roles",
+    "target": "Standards & Classifications",
+    "relationships": "ADMINISTERS, ENFORCES, LOGS PER",
+    "strength": "Moderate",
+    "notes": "Role is responsible for managing and maintaining compliance with the target standard on the project (e. Role ensures field crews comply with the target standard's requirements on the jobsite (e."
+  },
+  "roles--workflows-statuses": {
+    "source": "Roles",
+    "target": "Workflows & Statuses",
+    "relationships": "CORRELATES WITH, RECONCILES, COORDINATES",
+    "strength": "Moderate",
+    "notes": "This staffing measure has a statistically observable relationship with this workflow performance metric. The role compares actual figures against budgeted or expected values during this financial workflow stage."
+  },
+  "schedule--standards-classifications": {
+    "source": "Schedule",
+    "target": "Standards & Classifications",
+    "relationships": "SEGMENTED BY, BENCHMARKED TO, GOVERNED BY",
+    "strength": "Moderate",
+    "notes": "Schedule metric or analysis is broken down by the target classification for comparative insight (e. Schedule metric is compared against the target standard's published thresholds or industry norms (e."
+  },
+  "schedule--workflows-statuses": {
+    "source": "Schedule",
+    "target": "Workflows & Statuses",
+    "relationships": "ACCEPTED UPON, ROUTES THROUGH, SUBMITTED AT",
+    "strength": "Moderate",
+    "notes": "The schedule submission is formally accepted and becomes the governing project timeline when this approval status is reached. The schedule artifact passes through this approval chain or workflow pattern as part of its review lifecycle."
+  },
+  "standards-classifications--workflows-statuses": {
+    "source": "Standards & Classifications",
+    "target": "Workflows & Statuses",
+    "relationships": "GOVERNS, TRIGGERS, STRUCTURES",
+    "strength": "Moderate",
+    "notes": "Standard defines the rules and acceptance criteria that a workflow pattern or disposition must follow (e. Standard requirement causes a workflow status transition when a condition is met or violated (e."
+  }
+}

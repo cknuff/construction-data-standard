@@ -1,0 +1,292 @@
+{
+  "source": "resources",
+  "target": "schedule",
+  "edges": [
+    [
+      "res-laborer",
+      "sch-detail-activity",
+      "ASSIGNED TO"
+    ],
+    [
+      "res-laborer",
+      "sch-labor-loading",
+      "LOADED ON"
+    ],
+    [
+      "res-laborer",
+      "sch-resource-levelin",
+      "LEVELED ACROSS"
+    ],
+    [
+      "res-carpenter",
+      "sch-look-ahead",
+      "COMMITTED IN"
+    ],
+    [
+      "res-ironworker",
+      "sch-detail-activity",
+      "SCHEDULED FOR"
+    ],
+    [
+      "res-ironworker",
+      "sch-critical-path",
+      "DRIVES"
+    ],
+    [
+      "res-concrete",
+      "sch-work-calendar",
+      "GOVERNED BY"
+    ],
+    [
+      "res-glazier",
+      "sch-lag-lead-time",
+      "LEAD TIME FOR"
+    ],
+    [
+      "res-drywall",
+      "sch-takt-time",
+      "PACED BY"
+    ],
+    [
+      "res-plumber",
+      "sch-relationship-typ",
+      "SEQUENCED BY"
+    ],
+    [
+      "res-electrician",
+      "sch-relationship-typ",
+      "SEQUENCED BY"
+    ],
+    [
+      "res-elevator",
+      "sch-milestone",
+      "CONSTRAINED BY"
+    ],
+    [
+      "res-operator",
+      "sch-equip-loading",
+      "PAIRED WITH"
+    ],
+    [
+      "res-safety",
+      "sch-look-ahead",
+      "REVIEWS"
+    ],
+    [
+      "res-qc",
+      "sch-milestone",
+      "GATES"
+    ],
+    [
+      "res-cxa",
+      "sch-milestone",
+      "GATES"
+    ],
+    [
+      "res-crane",
+      "sch-equip-loading",
+      "LOADED ON"
+    ],
+    [
+      "res-crane",
+      "sch-critical-path",
+      "CONSTRAINS"
+    ],
+    [
+      "res-crane",
+      "sch-schedule-constra",
+      "CONSTRAINED BY"
+    ],
+    [
+      "res-crane",
+      "sch-resource-levelin",
+      "LEVELED ACROSS"
+    ],
+    [
+      "res-earthmover",
+      "sch-duration-progres",
+      "DETERMINES"
+    ],
+    [
+      "res-piling",
+      "sch-schedule-constra",
+      "CONSTRAINED BY"
+    ],
+    [
+      "mat-concrete",
+      "sch-detail-activity",
+      "DELIVERED FOR"
+    ],
+    [
+      "mat-concrete",
+      "sch-work-calendar",
+      "GOVERNED BY"
+    ],
+    [
+      "mat-steel",
+      "sch-lag-lead-time",
+      "LEAD TIME FOR"
+    ],
+    [
+      "mat-steel",
+      "sch-critical-path",
+      "DRIVES"
+    ],
+    [
+      "mat-hvac-equip",
+      "sch-lag-lead-time",
+      "LEAD TIME FOR"
+    ],
+    [
+      "mat-hvac-equip",
+      "sch-critical-path",
+      "DRIVES"
+    ],
+    [
+      "mat-elevator",
+      "sch-lag-lead-time",
+      "LEAD TIME FOR"
+    ],
+    [
+      "sch-labor-loading",
+      "res-ironworker",
+      "RESOURCE-LOADS"
+    ],
+    [
+      "sch-labor-loading",
+      "res-electrician",
+      "RESOURCE-LOADS"
+    ],
+    [
+      "sch-equip-loading",
+      "res-crane",
+      "RESOURCE-LOADS"
+    ],
+    [
+      "sch-resource-levelin",
+      "res-crane",
+      "SMOOTHS DEMAND FOR"
+    ],
+    [
+      "sch-acceleration",
+      "res-ironworker",
+      "ADDS SHIFTS OF"
+    ],
+    [
+      "sch-acceleration",
+      "res-crane",
+      "EXTENDS HOURS OF"
+    ],
+    [
+      "sch-recovery-schedul",
+      "res-laborer",
+      "MOBILIZES ADDITIONAL"
+    ],
+    [
+      "sch-recovery-schedul",
+      "res-crane",
+      "MOBILIZES ADDITIONAL"
+    ],
+    [
+      "sch-look-ahead",
+      "res-electrician",
+      "SCHEDULES"
+    ],
+    [
+      "sch-takt-time",
+      "res-drywall",
+      "PACES"
+    ],
+    [
+      "sch-last-planner",
+      "res-plumber",
+      "COMMITS"
+    ],
+    [
+      "sch-last-planner",
+      "res-electrician",
+      "COMMITS"
+    ],
+    [
+      "sch-delay-class",
+      "mat-steel",
+      "CATEGORIZES DELAY OF"
+    ],
+    [
+      "sch-time-impact",
+      "res-crane",
+      "ANALYZES IMPACT OF"
+    ],
+    [
+      "sch-time-extension",
+      "mat-elevator",
+      "EXTENDS DUE TO"
+    ],
+    [
+      "sch-cost-loading",
+      "mat-steel",
+      "COST-LOADS"
+    ],
+    [
+      "sch-4d-5d-bim",
+      "res-crane",
+      "SIMULATES"
+    ],
+    [
+      "sch-work-calendar",
+      "mat-concrete",
+      "GOVERNS"
+    ],
+    [
+      "sch-critical-path",
+      "mat-steel",
+      "DRIVEN BY"
+    ],
+    [
+      "sch-linear-schedulin",
+      "res-earthmover",
+      "SEQUENCES"
+    ],
+    [
+      "sch-dcma-14-point",
+      "res-crane",
+      "ASSESSES LOADING OF"
+    ]
+  ],
+  "verbGlossary": {
+    "ADDS SHIFTS OF": "{source} acceleration adds overtime shifts or second-shift crews of {target} to compress activity durations",
+    "ANALYZES IMPACT OF": "{source}quantifies {target} effect of a resource delay (equipment breakdown or material late delivery)",
+    "ASSIGNED TO": "{source}is assigned to {target} as a required crew member for execution",
+    "ASSESSES LOADING OF": "{source}checks whether resource loading on activities meets {target} quality thresholds",
+    "CATEGORIZES DELAY OF": "{source}identifies a resource or material shortage as the cause of {target} delay event",
+    "COMMITTED IN": "{source} foreman commits their crew to specific activities in the look-ahead or Last Planner weekly work plan",
+    "COMMITS": "{source}Planner System secures reliable promises from trade foremen to complete specific activities in the upcoming week",
+    "CONSTRAINED BY": "{source}delivery window imposes {target} on when an activity can start",
+    "CONSTRAINS": "A limited or shared resource (e.g., tower crane) constrains which activities can proceed simultaneously on {target}",
+    "COST-LOADS": "Cost loading assigns the dollar value of a resource (labor rate, equipment rental, material cost) to {target} activities for cash flow projection",
+    "DELIVERED FOR": "{source}is delivered to site on {target}d date to support a specific construction activity",
+    "DETERMINES": "{source} capacity or haul cycle time determines the achievable production rate and thus {target} duration",
+    "DRIVEN BY": "{target} is driven by availability or lead time of a key resource that gates downstream activities",
+    "DRIVES": "{source}directly drives {target} because its delivery or availability sets the earliest possible start",
+    "EXTENDS DUE TO": "{source}is filed because {target} delivery delay pushed activities beyond contractual completion",
+    "EXTENDS HOURS OF": "{source} acceleration extends the daily operating hours of equipment to increase production and compress duration",
+    "GATES": "An inspection or commissioning resource must approve or witness a milestone before successor activities can proceed",
+    "GOVERNED BY": "A work calendar (weather days, pour windows, noise ordinances) governs when a weather-sensitive trade or material can be {target}d",
+    "GOVERNS": "{source}controls productive scheduling windows for trades and materials affected by weather or site conditions",
+    "LEAD TIME FOR": "{source}requires fabrication or procurement lead time that must precede {target} start",
+    "LEVELED ACROSS": "{source} leveling shifts non-critical activities so that a constrained resource (crane, labor crew, scaffolding) is not over-allocated across concurrent activities",
+    "LOADED ON": "{source} or equipment resource is loaded onto {target} at a specific quantity-per-day for each activity it supports",
+    "MOBILIZES ADDITIONAL": "A recovery {target} mobilizes additional crews or equipment beyond the original plan to regain lost time",
+    "PACED BY": "{source}is paced by a takt time cadence that moves crews through zones at a fixed production rate",
+    "PACES": "{source}planning paces {target} through sequential zones at a uniform cycle time to maintain continuous workflow",
+    "PAIRED WITH": "{source}is paired with {target} loading plan, ensuring operator availability matches machine scheduling",
+    "RESOURCE-LOADS": "{target} assigns resource quantities (headcount, equipment count) to activities to define the planned resource profile",
+    "REVIEWS": "{source} professional reviews the look-ahead {target} to verify safe work sequencing and required hold points",
+    "SCHEDULED FOR": "{source} crew is {target}d for specific activities in the CPM schedule with defined start and finish dates",
+    "SCHEDULES": "The look-ahead {target} confirms which trades are scheduled to work in the upcoming one-to-three-week window",
+    "SEQUENCED BY": "{source}activities are sequenced by {target} logic (FS, SS, FF relationships) relative to other trades' work",
+    "SEQUENCES": "Linear scheduling sequences equipment moves along a horizontal alignment (road, pipeline, tunnel) in production order",
+    "SIMULATES": "4D/5D BIM scheduling simulates the construction sequence showing resource deployment over time in a 3D model",
+    "SMOOTHS DEMAND FOR": "{source} leveling smooths peak demand for {target} or equipment type by shifting float-available activities to reduce over-allocation"
+  }
+}

@@ -1,0 +1,200 @@
+{
+  "source": "project-attributes",
+  "target": "risk",
+  "edges": [
+    [
+      "pa-project-type",
+      "rk-risk-category",
+      "PROFILES"
+    ],
+    [
+      "pa-project-type",
+      "rk-risk-matrix",
+      "CALIBRATES"
+    ],
+    [
+      "pa-project-subtype",
+      "rk-risk-category",
+      "PROFILES"
+    ],
+    [
+      "pa-total-value-band",
+      "rk-financial-risk",
+      "SCALES"
+    ],
+    [
+      "pa-total-value-band",
+      "rk-contingency-rese",
+      "SCALES"
+    ],
+    [
+      "pa-contract-value",
+      "rk-risk-exposure",
+      "SCALES"
+    ],
+    [
+      "pa-seismic-design",
+      "rk-geotechnical-ris",
+      "ELEVATES"
+    ],
+    [
+      "pa-climate-zone",
+      "rk-enviro-risk",
+      "ELEVATES"
+    ],
+    [
+      "pa-fast-track",
+      "rk-schedule-risk",
+      "ELEVATES"
+    ],
+    [
+      "pa-fast-track",
+      "rk-coord-risk",
+      "ELEVATES"
+    ],
+    [
+      "pa-occupied-during",
+      "rk-safety-risk",
+      "ELEVATES"
+    ],
+    [
+      "pa-site-constraints",
+      "rk-const-execution",
+      "ELEVATES"
+    ],
+    [
+      "pa-number-stories",
+      "rk-safety-risk",
+      "ELEVATES"
+    ],
+    [
+      "pa-number-subcontra",
+      "rk-coord-risk",
+      "SCALES"
+    ],
+    [
+      "pa-dlvy-method",
+      "rk-risk-allocation",
+      "DETERMINES"
+    ],
+    [
+      "pa-contract-type",
+      "rk-risk-allocation",
+      "DETERMINES"
+    ],
+    [
+      "pa-bonding-requirem",
+      "rk-surety-bond",
+      "TRIGGERS"
+    ],
+    [
+      "pa-contingency-budg",
+      "rk-contingency-rese",
+      "FUNDS"
+    ],
+    [
+      "pa-new-vs-existing",
+      "rk-design-risk",
+      "INFLUENCES"
+    ],
+    [
+      "pa-new-vs-existing",
+      "rk-geotechnical-ris",
+      "INFLUENCES"
+    ],
+    [
+      "pa-cost-growth",
+      "rk-contingency-burn",
+      "DRIVES"
+    ],
+    [
+      "pa-schedule-growth",
+      "rk-schedule-float",
+      "ERODES"
+    ],
+    [
+      "pa-earned-value-spi",
+      "rk-schedule-risk",
+      "SIGNALS"
+    ],
+    [
+      "pa-earned-value-cpi",
+      "rk-financial-risk",
+      "SIGNALS"
+    ],
+    [
+      "pa-chg-order-rate",
+      "rk-chg-order-rate",
+      "BENCHMARKED AGAINST"
+    ],
+    [
+      "pa-prevailing-wage",
+      "rk-labor-risk",
+      "ELEVATES"
+    ],
+    [
+      "pa-union-open-shop",
+      "rk-labor-risk",
+      "INFLUENCES"
+    ],
+    [
+      "pa-region",
+      "rk-supply-chain",
+      "INFLUENCES"
+    ],
+    [
+      "pa-modular-prefab",
+      "rk-supply-chain",
+      "ELEVATES"
+    ],
+    [
+      "pa-phased-const",
+      "rk-coord-risk",
+      "ELEVATES"
+    ],
+    [
+      "pa-building-code",
+      "rk-reg-permit-risk",
+      "CONSTRAINS"
+    ],
+    [
+      "pa-resilience-requi",
+      "rk-enviro-risk",
+      "MITIGATES"
+    ],
+    [
+      "pa-risk-reduction",
+      "rk-risk-register",
+      "TRACKED IN"
+    ],
+    [
+      "pa-risk-reduction",
+      "rk-risk-exposure",
+      "QUANTIFIED BY"
+    ],
+    [
+      "pa-risk-reduction",
+      "rk-risk-response",
+      "ACTIONED THROUGH"
+    ]
+  ],
+  "verbGlossary": {
+    "PROFILES": "{source} establishes a characteristic risk profile for {target} category (e.g., project type profiles the overall risk category distribution for hospitals vs. warehouses)",
+    "CALIBRATES": "{source} adjusts the thresholds within {target} scoring framework (e.g., project type calibrates risk matrix severity levels for healthcare vs. commercial)",
+    "SCALES": "{source} proportionally increases the magnitude of {target} or reserve (e.g., total value band scales financial risk exposure)",
+    "ELEVATES": "{source} raises the likelihood or severity of {target} category (e.g., seismic design category elevates geotechnical risk, fast-track elevates schedule risk)",
+    "DETERMINES": "{source} dictates how {target} allocation is structured between parties (e.g., delivery method determines risk allocation between owner and contractor)",
+    "TRIGGERS": "{source} bonding attribute activates the requirement for {target} (e.g., bonding requirement triggers surety bond procurement)",
+    "FUNDS": "{source} financial attribute provides monetary backing for {target} reserve (e.g., contingency budget funds the contingency reserve)",
+    "INFLUENCES": "{source} attribute affects the probability or nature of {target} category (e.g., new vs. existing construction influences design risk due to unknown conditions)",
+    "DRIVES": "{source} performance metric causes movement in {target} consumption rate (e.g., cost growth drives contingency burn rate)",
+    "ERODES": "{source} schedule variance metric reduces {target} buffer (e.g., schedule growth erodes schedule float)",
+    "SIGNALS": "{source} earned value metric provides an early warning indicator for {target} category (e.g., SPI below 1.0 signals schedule risk)",
+    "BENCHMARKED AGAINST": "{source}-level rate metric is compared to {target} metric for performance evaluation (e.g., project change order rate benchmarked against risk change order rate)",
+    "CONSTRAINS": "{source} code attribute imposes regulatory limits that shape {target} category (e.g., building code edition constrains regulatory and permit risk)",
+    "MITIGATES": "{source} resilience attribute reduces the exposure to {target} category (e.g., resilience requirements mitigate environmental risk through design standards)",
+    "TRACKED IN": "{source} outcome is documented and monitored through {target} -- the completeness and currency of {target} reflects the maturity of {source} practice",
+    "QUANTIFIED BY": "{source} outcome is measured in financial terms through {target} calculation -- this converts qualitative risk assessment into monetary impact",
+    "ACTIONED THROUGH": "{source} outcome is achieved by executing {target} strategies -- the type and effectiveness of {target} determines how much {source} is actually realized"
+  }
+}

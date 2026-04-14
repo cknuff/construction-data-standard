@@ -1,0 +1,489 @@
+{
+  "source": "building-elements",
+  "target": "financial-instruments",
+  "edges": [
+    [
+      "be-excav",
+      "fi-cost-code",
+      "COST CODED TO"
+    ],
+    [
+      "be-deep-fdn",
+      "fi-cost-code",
+      "COST CODED TO"
+    ],
+    [
+      "be-columns",
+      "fi-cost-code",
+      "COST CODED TO"
+    ],
+    [
+      "be-curtainwall",
+      "fi-cost-code",
+      "COST CODED TO"
+    ],
+    [
+      "be-ductwork",
+      "fi-cost-code",
+      "COST CODED TO"
+    ],
+    [
+      "be-power-dist",
+      "fi-cost-code",
+      "COST CODED TO"
+    ],
+    [
+      "be-columns",
+      "fi-budget-line-item",
+      "BUDGETED IN"
+    ],
+    [
+      "be-curtainwall",
+      "fi-budget-line-item",
+      "BUDGETED IN"
+    ],
+    [
+      "be-ductwork",
+      "fi-budget-line-item",
+      "BUDGETED IN"
+    ],
+    [
+      "be-columns",
+      "fi-commit-subcontra",
+      "COMMITTED AGAINST"
+    ],
+    [
+      "be-curtainwall",
+      "fi-commit-subcontra",
+      "COMMITTED AGAINST"
+    ],
+    [
+      "be-ductwork",
+      "fi-commit-subcontra",
+      "COMMITTED AGAINST"
+    ],
+    [
+      "be-drywall",
+      "fi-commit-subcontra",
+      "COMMITTED AGAINST"
+    ],
+    [
+      "be-ahu",
+      "fi-commit-purchase",
+      "PURCHASED VIA"
+    ],
+    [
+      "be-fire-pump",
+      "fi-commit-purchase",
+      "PURCHASED VIA"
+    ],
+    [
+      "be-elev-mach",
+      "fi-commit-purchase",
+      "PURCHASED VIA"
+    ],
+    [
+      "be-windows",
+      "fi-commit-purchase",
+      "PURCHASED VIA"
+    ],
+    [
+      "be-curtainwall",
+      "fi-chg-event-ce",
+      "CHANGE ORDERED"
+    ],
+    [
+      "be-deep-fdn",
+      "fi-chg-event-ce",
+      "CHANGE ORDERED"
+    ],
+    [
+      "be-ductwork",
+      "fi-chg-event-ce",
+      "CHANGE ORDERED"
+    ],
+    [
+      "be-curtainwall",
+      "fi-chg-event-line",
+      "PRICED IN"
+    ],
+    [
+      "be-deep-fdn",
+      "fi-chg-event-line",
+      "PRICED IN"
+    ],
+    [
+      "be-curtainwall",
+      "fi-commit-chg-order",
+      "BACK CHARGED"
+    ],
+    [
+      "be-drywall",
+      "fi-commit-chg-order",
+      "BACK CHARGED"
+    ],
+    [
+      "be-ductwork",
+      "fi-commit-chg-order",
+      "BACK CHARGED"
+    ],
+    [
+      "be-paint",
+      "fi-commit-chg-order",
+      "BACK CHARGED"
+    ],
+    [
+      "be-curtainwall",
+      "fi-owner-chg-order",
+      "BILLED TO OWNER VIA"
+    ],
+    [
+      "be-deep-fdn",
+      "fi-owner-chg-order",
+      "BILLED TO OWNER VIA"
+    ],
+    [
+      "be-columns",
+      "fi-sub-invoice",
+      "INVOICED FOR"
+    ],
+    [
+      "be-curtainwall",
+      "fi-sub-invoice",
+      "INVOICED FOR"
+    ],
+    [
+      "be-ductwork",
+      "fi-sub-invoice",
+      "INVOICED FOR"
+    ],
+    [
+      "be-columns",
+      "fi-owner-invoice",
+      "PAY APP DRAWN FOR"
+    ],
+    [
+      "be-curtainwall",
+      "fi-owner-invoice",
+      "PAY APP DRAWN FOR"
+    ],
+    [
+      "be-curtainwall",
+      "fi-retainage",
+      "RETAINAGE HELD ON"
+    ],
+    [
+      "be-elev-car",
+      "fi-retainage",
+      "RETAINAGE HELD ON"
+    ],
+    [
+      "be-excav",
+      "fi-direct-cost",
+      "DIRECT COSTED"
+    ],
+    [
+      "be-dewater",
+      "fi-direct-cost",
+      "DIRECT COSTED"
+    ],
+    [
+      "be-backfill",
+      "fi-direct-cost",
+      "DIRECT COSTED"
+    ],
+    [
+      "be-excav",
+      "fi-direct-cost-line",
+      "EXPENSED ON"
+    ],
+    [
+      "be-sog",
+      "fi-direct-cost-line",
+      "EXPENSED ON"
+    ],
+    [
+      "be-deep-fdn",
+      "fi-budget-mod",
+      "BUDGET MODIFIED FOR"
+    ],
+    [
+      "be-curtainwall",
+      "fi-budget-mod",
+      "BUDGET MODIFIED FOR"
+    ],
+    [
+      "be-columns",
+      "fi-wbs-code",
+      "WBS CODED TO"
+    ],
+    [
+      "be-curtainwall",
+      "fi-wbs-code",
+      "WBS CODED TO"
+    ],
+    [
+      "be-ductwork",
+      "fi-wbs-code",
+      "WBS CODED TO"
+    ],
+    [
+      "be-curtainwall",
+      "fi-schedule-values",
+      "SOV LINE ITEM FOR"
+    ],
+    [
+      "be-columns",
+      "fi-schedule-values",
+      "SOV LINE ITEM FOR"
+    ],
+    [
+      "be-elev-car",
+      "fi-schedule-values",
+      "SOV LINE ITEM FOR"
+    ],
+    [
+      "be-plumb-fix",
+      "fi-allowance",
+      "ALLOWANCE CARRIED FOR"
+    ],
+    [
+      "be-countertop",
+      "fi-allowance",
+      "ALLOWANCE CARRIED FOR"
+    ],
+    [
+      "be-lighting",
+      "fi-allowance",
+      "ALLOWANCE CARRIED FOR"
+    ],
+    [
+      "be-deep-fdn",
+      "fi-contingency",
+      "CONTINGENCY RESERVED FOR"
+    ],
+    [
+      "be-curtainwall",
+      "fi-contingency",
+      "CONTINGENCY RESERVED FOR"
+    ],
+    [
+      "be-columns",
+      "fi-cost-forecast",
+      "FORECASTED IN"
+    ],
+    [
+      "be-curtainwall",
+      "fi-cost-forecast",
+      "FORECASTED IN"
+    ],
+    [
+      "be-curtainwall",
+      "fi-budget-variance",
+      "VARIANCE MEASURED ON"
+    ],
+    [
+      "be-deep-fdn",
+      "fi-budget-variance",
+      "VARIANCE MEASURED ON"
+    ],
+    [
+      "be-curtainwall",
+      "fi-pot-chg-order",
+      "POTENTIAL CHANGE ON"
+    ],
+    [
+      "be-deep-fdn",
+      "fi-pot-chg-order",
+      "POTENTIAL CHANGE ON"
+    ],
+    [
+      "be-curtainwall",
+      "fi-commit-line-item",
+      "COMMITTED LINE ITEM FOR"
+    ],
+    [
+      "be-ductwork",
+      "fi-commit-line-item",
+      "COMMITTED LINE ITEM FOR"
+    ],
+    [
+      "be-curtainwall",
+      "fi-cco-line-item",
+      "CCO LINE PRICED FOR"
+    ],
+    [
+      "be-ductwork",
+      "fi-cco-line-item",
+      "CCO LINE PRICED FOR"
+    ],
+    [
+      "be-excav",
+      "fi-budget-code",
+      "BUDGET CODED TO"
+    ],
+    [
+      "be-curtainwall",
+      "fi-budget-code",
+      "BUDGET CODED TO"
+    ],
+    [
+      "be-curtainwall",
+      "fi-lien-waiver",
+      "LIEN WAIVED FOR"
+    ],
+    [
+      "be-roof-mem",
+      "fi-lien-waiver",
+      "LIEN WAIVED FOR"
+    ],
+    [
+      "be-columns",
+      "fi-payment",
+      "PAYMENT RELEASED FOR"
+    ],
+    [
+      "be-curtainwall",
+      "fi-payment",
+      "PAYMENT RELEASED FOR"
+    ],
+    [
+      "be-curtainwall",
+      "fi-cost-growth",
+      "COST GROWTH TRACKED ON"
+    ],
+    [
+      "be-deep-fdn",
+      "fi-cost-growth",
+      "COST GROWTH TRACKED ON"
+    ],
+    [
+      "be-curtainwall",
+      "fi-chg-order-rate",
+      "CHANGE RATE MEASURED ON"
+    ],
+    [
+      "be-ductwork",
+      "fi-chg-order-rate",
+      "CHANGE RATE MEASURED ON"
+    ],
+    [
+      "be-columns",
+      "fi-committed-cost",
+      "COMMITTED COST TRACKED ON"
+    ],
+    [
+      "be-curtainwall",
+      "fi-committed-cost",
+      "COMMITTED COST TRACKED ON"
+    ],
+    [
+      "be-columns",
+      "fi-cash-flow",
+      "CASH FLOW PROJECTED FOR"
+    ],
+    [
+      "be-curtainwall",
+      "fi-cash-flow",
+      "CASH FLOW PROJECTED FOR"
+    ],
+    [
+      "be-columns",
+      "fi-project-budget",
+      "FUNDED BY"
+    ],
+    [
+      "be-curtainwall",
+      "fi-project-budget",
+      "FUNDED BY"
+    ],
+    [
+      "be-deep-fdn",
+      "fi-contingency-burn",
+      "CONTINGENCY BURNED BY"
+    ],
+    [
+      "be-curtainwall",
+      "fi-contingency-burn",
+      "CONTINGENCY BURNED BY"
+    ],
+    [
+      "be-curtainwall",
+      "fi-cost-perf-index",
+      "CPI MEASURED ON"
+    ],
+    [
+      "be-columns",
+      "fi-cost-perf-index",
+      "CPI MEASURED ON"
+    ],
+    [
+      "be-curtainwall",
+      "fi-estimate-at",
+      "EAC VARIANCE TRACKED ON"
+    ],
+    [
+      "be-deep-fdn",
+      "fi-estimate-at",
+      "EAC VARIANCE TRACKED ON"
+    ],
+    [
+      "be-curtainwall",
+      "fi-cash-flow-2",
+      "CASH FLOW DEVIATION ON"
+    ],
+    [
+      "be-columns",
+      "fi-cash-flow-2",
+      "CASH FLOW DEVIATION ON"
+    ],
+    [
+      "be-elev-car",
+      "fi-invoice-processi",
+      "INVOICE LAG TRACKED ON"
+    ],
+    [
+      "be-curtainwall",
+      "fi-invoice-processi",
+      "INVOICE LAG TRACKED ON"
+    ]
+  ],
+  "verbGlossary": {
+    "COST CODED TO": "{source} assigned to a CSI or custom {target} for tracking labor, material, and equipment spend",
+    "BUDGETED IN": "{source} has a planned dollar allocation in {target} before work begins",
+    "COMMITTED AGAINST": "{source}covers installation of this element with committed dollars locked to it",
+    "PURCHASED VIA": "Equipment or material for this element procured through a purchase order {target}",
+    "CHANGE ORDERED": "{target} created to capture added, deleted, or modified scope for this element",
+    "PRICED IN": "{source} scope change broken into {target} with labor, material, and markup detail",
+    "BACK CHARGED": "Rework or deficiency on this element charged back to the responsible subcontractor via CCO",
+    "BILLED TO OWNER VIA": "{source} passed through to the owner via a prime contract {target}",
+    "INVOICED FOR": "{source}submits {target} request for completed work on this element",
+    "PAY APP DRAWN FOR": "{source} included in the GC pay application to the owner",
+    "RETAINAGE HELD ON": "{source}of earned value on this element withheld until substantial completion",
+    "DIRECT COSTED": "{source}cost recorded directly against this element without a subcontract",
+    "EXPENSED ON": "Individual expense transaction such as rental, material, or labor posted to this element's {target}",
+    "BUDGET MODIFIED FOR": "{target} reallocated to or from this element via a formal budget modification",
+    "WBS CODED TO": "{source} mapped to a work breakdown structure code linking scope, schedule, and cost",
+    "BUDGET CODED TO": "{source} tagged with {target} for roll-up reporting and variance analysis",
+    "SOV LINE ITEM FOR": "{source} appears as a line in {target} for progress billing",
+    "ALLOWANCE CARRIED FOR": "{source}carries an allowance for this element when final selection is pending",
+    "CONTINGENCY RESERVED FOR": "{target} dollars reserved to cover unknown risk on this element",
+    "FORECASTED IN": "Projected final cost for this element carried in {target} at completion",
+    "VARIANCE MEASURED ON": "{target} vs actual variance calculated for this element's cost code or WBS",
+    "COST GROWTH TRACKED ON": "{target} and scope creep growth percentage monitored on this element",
+    "CHANGE RATE MEASURED ON": "{source}of {target} dollars to original contract value measured for this element",
+    "LIEN WAIVED FOR": "{source}releases lien rights upon {target} for this element's work",
+    "PAYMENT RELEASED FOR": "GC releases {target} to subcontractor after invoice approval and retainage calculation for this element",
+    "COMMITTED COST TRACKED ON": "Total committed dollars including original plus approved changes monitored against {target} for this element",
+    "CASH FLOW PROJECTED FOR": "{source}forecasted based on this element's installation schedule",
+    "POTENTIAL CHANGE ON": "{source} identified and priced but not yet approved as {target} change order",
+    "COMMITTED LINE ITEM FOR": "Individual line within a subcontract or PO that covers this specific element's scope and price",
+    "CCO LINE PRICED FOR": "{target} change order broken into a line item detailing cost impact on this element",
+    "FUNDED BY": "{source}'s total installed cost allocated within the overall project {target} envelope",
+    "CONTINGENCY BURNED BY": "{source} changes consumed {target} dollars reducing the remaining reserve",
+    "CPI MEASURED ON": "Cost performance index calculated as earned value divided by actual cost tracked for this element's work",
+    "EAC VARIANCE TRACKED ON": "Difference between {target} and estimate at completion monitored for this element",
+    "CASH FLOW DEVIATION ON": "{source}projected cash flow variance measured for this element",
+    "INVOICE LAG TRACKED ON": "Days from {target} submission to payment measured for this element's subcontractor billing"
+  }
+}

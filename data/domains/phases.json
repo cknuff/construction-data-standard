@@ -1,0 +1,359 @@
+{
+  "domain": "phases",
+  "name": "Phases",
+  "color": "#ffb74d",
+  "categories": [
+    {
+      "name": "Preconstruction",
+      "color": "#ffb74d",
+      "nodes": [
+        {
+          "id": "ph-program",
+          "name": "Programming & Feasibility",
+          "desc": "Owner defines project requirements and validates viability — needs assessment, site analysis, zoning review, pro forma development, and environmental studies. Gate: program approval / authorization to proceed with design. Primarily owner and development team; contractor involved only in CM-at-Risk or design-build."
+        },
+        {
+          "id": "ph-design",
+          "name": "Design Development",
+          "desc": "Architects and engineers develop the design from concept through construction documents — schematic design (SD), design development (DD), construction documents (CD), code review, structural/MEP engineering, energy modeling, specifications. Gate: bid-ready construction documents issued."
+        },
+        {
+          "id": "ph-estimating",
+          "name": "Estimating & Budgeting",
+          "desc": "Develop cost estimates from conceptual through detailed GMP or hard bid — quantity takeoff, unit pricing, subcontractor pricing, risk contingency, value engineering. Multiple estimate rounds: conceptual (SD), detailed (DD), final (CD). Gate: budget or GMP established."
+        },
+        {
+          "id": "ph-permit",
+          "name": "Permitting & Approvals",
+          "desc": "Secure regulatory approvals required before construction — building permits, zoning variances, environmental permits, utility coordination, fire marshal review, DOT permits, stormwater permits. Gate: building permit issued / notice to proceed."
+        },
+        {
+          "id": "ph-precon-plan",
+          "name": "Preconstruction Planning",
+          "desc": "GC develops execution strategy before breaking ground — baseline schedule, logistics plan, phasing strategy, safety plan, quality plan, procurement strategy, staffing plan. CM-at-Risk does this during design; design-bid-build GCs do it after award. Gate: baseline schedule accepted."
+        }
+      ]
+    },
+    {
+      "name": "Procurement",
+      "color": "#ffb74d",
+      "nodes": [
+        {
+          "id": "ph-bidding",
+          "name": "Bidding & Buyout",
+          "desc": "Solicit bids from subcontractors and suppliers, level bids, negotiate scope, and award contracts — scope definition, bid solicitation, bid leveling, insurance/bonding verification, contract execution. Buyout typically 60-80% complete before mobilization. Gate: all major subcontracts and POs executed."
+        },
+        {
+          "id": "ph-submittals",
+          "name": "Submittals & Shop Drawings",
+          "desc": "Subcontractors prepare detailed fabrication and product documents for architect/engineer review — submittal preparation, review cycles, resubmittals, product substitution requests. Submittal log is a critical schedule driver. Gate: all critical-path submittals approved."
+        },
+        {
+          "id": "ph-fabrication",
+          "name": "Fabrication & Long-Lead",
+          "desc": "Materials fabricated off-site with delivery schedules established — structural steel (8-16 wks), curtain wall (12-24 wks), elevators (16-30 wks), switchgear (12-20 wks), precast, HVAC equipment, custom casework. Gate: long-lead materials delivered or delivery confirmed."
+        },
+        {
+          "id": "ph-delivery",
+          "name": "Material Ordering & Delivery",
+          "desc": "Standard materials ordered and delivery sequenced to match construction schedule — PO issuance, delivery scheduling, staging area planning, just-in-time coordination, material tracking. Material shortages and delivery delays are a top cause of schedule disruption. Gate: materials staged for installation start."
+        }
+      ]
+    },
+    {
+      "name": "Mobilization",
+      "color": "#ffb74d",
+      "nodes": [
+        {
+          "id": "ph-site-setup",
+          "name": "Site Setup",
+          "desc": "Establish temporary facilities and infrastructure to support construction — temporary fencing, construction entrance, trailer placement, temporary utilities (power, water, sanitation), site signage, erosion control, tree protection. First impression for owner and community. Gate: site ready for production work. Duration: 1-3%."
+        },
+        {
+          "id": "ph-safety-orient",
+          "name": "Safety & Environmental Orientation",
+          "desc": "Establish safety culture and environmental compliance from day one — site-specific safety orientation, toolbox talks, emergency action plan, hospital route, environmental awareness training, hazard communication. Every worker must complete orientation. Gate: all workers oriented and safety systems active."
+        }
+      ]
+    },
+    {
+      "name": "Sitework & Foundations",
+      "color": "#ffb74d",
+      "nodes": [
+        {
+          "id": "ph-demo",
+          "name": "Demolition & Site Clearing",
+          "desc": "Remove existing structures and vegetation to prepare for new construction — building demolition, selective demolition, clearing and grubbing, underground obstruction removal, hazmat abatement if required. Gate: site cleared and ready for earthwork. Duration: 2-5%."
+        },
+        {
+          "id": "ph-earthwork",
+          "name": "Earthwork",
+          "desc": "Excavate and prepare the ground for foundations — bulk excavation, rock removal, shoring/sheeting, dewatering, proof rolling, structural fill, compaction, fine grading. Differing site conditions are the #1 source of construction claims. Gate: subgrade approved for foundation work. Duration: 5-10%."
+        },
+        {
+          "id": "ph-site-util",
+          "name": "Site Utilities",
+          "desc": "Install underground infrastructure before building foundations cover access — sanitary sewer, storm drainage, domestic and fire water, gas service, electrical and telecom ductbank, grease interceptors. Must complete before foundation/slab work. Gate: utilities tested and backfilled. Duration: 3-6%."
+        },
+        {
+          "id": "ph-foundations",
+          "name": "Foundations",
+          "desc": "Construct below-grade structural support — pile driving or drilled shafts, spread footings, grade beams, foundation walls, waterproofing, backfill, underslab plumbing and electrical. Concrete testing (cylinders) is mandatory. Gate: foundations complete and ready for slab/structure. Duration: 5-10%."
+        },
+        {
+          "id": "ph-slab",
+          "name": "Slab on Grade",
+          "desc": "Ground-supported concrete floor slabs with vapor barriers and joint sealants. Includes reinforcement (rebar, WWF, fiber). Quality depends on subgrade prep and finishing. Trades: concrete workers."
+        }
+      ]
+    },
+    {
+      "name": "Structure",
+      "color": "#ffb74d",
+      "nodes": [
+        {
+          "id": "ph-steel",
+          "name": "Structural Steel Erection",
+          "desc": "Erect the steel frame including columns, beams, girders, metal deck, and shear studs — connection bolting/welding, plumbing and aligning. Tower crane operations dominate logistics. Fall protection is the primary safety concern. Gate: steel topped out (last piece set). Duration: 10-15%."
+        },
+        {
+          "id": "ph-elev-conc",
+          "name": "Elevated Concrete",
+          "desc": "Place concrete on metal deck or formwork for elevated floor slabs — deck prep, rebar/post-tensioning placement, embedded items, concrete pumping, finishing, curing, PT stressing. Follows deck erection floor-by-floor. Gate: floor slabs complete and cured for loading."
+        },
+        {
+          "id": "ph-conc-frame",
+          "name": "Concrete Frame",
+          "desc": "For concrete-framed buildings: form and pour columns, beams, and slabs floor-by-floor — formwork erection, rebar placement, embedded items, concrete placement, form stripping, shoring/reshoring, curing. Formwork cycle time drives schedule. Gate: concrete frame topped out. Duration: 10-15%."
+        },
+        {
+          "id": "ph-stairs",
+          "name": "Stairs & Misc Metals",
+          "desc": "Installation phase for metal stairs, railings, ladders, and miscellaneous steel items that follow primary structural steel erection."
+        }
+      ]
+    },
+    {
+      "name": "Building Enclosure",
+      "color": "#ffb74d",
+      "nodes": [
+        {
+          "id": "ph-curtainwall",
+          "name": "Curtain Wall & Glazing",
+          "desc": "Install exterior glass and aluminum systems to enclose the building — curtain wall units (unitized or stick-built), windows, storefronts, structural silicone, perimeter sealant. Long-lead fabrication means installation readiness is schedule-critical. Water testing is a major quality milestone. Gate: curtain wall substantially complete. Duration: 5-10%."
+        },
+        {
+          "id": "ph-masonry",
+          "name": "Masonry & Cladding",
+          "desc": "Install opaque exterior wall systems — brick veneer, precast panels, metal panels, backup wall, through-wall flashing, weep systems, control joints. Weather-sensitive: masonry can't be laid below 40°F without protection. Gate: opaque walls substantially complete. Duration: 5-10%."
+        },
+        {
+          "id": "ph-barrier",
+          "name": "Air & Moisture Barrier",
+          "desc": "Fluid-applied or sheet membrane air/vapor barriers on exterior sheathing. Performance-critical — failures here cause long-term moisture damage. Third-party inspection is common. Trades: specialty applicators."
+        },
+        {
+          "id": "ph-roofing",
+          "name": "Roofing",
+          "desc": "All roofing materials — membrane, metal, built-up, and accessories. Single-ply membrane (TPO, PVC, EPDM), built-up/modified bitumen (BUR, SBS, APP), metal roofing (standing seam, corrugated, architectural panels), insulation (polyiso, EPS, XPS, cover board), and accessories (fasteners, adhesive, walkway pads, snow guards, drains). Manufacturer warranty submittals are a key deliverable — warranty requirements drive material and installation specifications."
+        }
+      ]
+    },
+    {
+      "name": "MEP Rough-In",
+      "color": "#ffb74d",
+      "nodes": [
+        {
+          "id": "ph-abv-ceil",
+          "name": "Above-Ceiling Coordination",
+          "desc": "Resolve spatial conflicts between MEP systems before installation — 3D coordination / BIM clash detection, routing prioritization, trade coordination meetings, clearance verification. The difference between a smooth MEP install and chaos. Gate: coordination drawings approved. Duration: 1-2% (overlaps with installation)."
+        },
+        {
+          "id": "ph-hvac-dist",
+          "name": "HVAC Distribution",
+          "desc": "All HVAC ductwork, piping, and insulation. Ductwork: sheet metal duct (rectangular, round, oval), flexible duct, duct fittings and accessories (elbows, tees, dampers, turning vanes, access doors), and diffusers/grilles/registers (supply, return, exhaust terminals). Piping: hydronic piping (chilled/hot water, condenser water), refrigerant piping (copper lines, fittings), and mechanical insulation (fiberglass, elastomeric, mineral wool, jacketing). Largest volume of material in above-ceiling spaces."
+        },
+        {
+          "id": "ph-plumb-ri",
+          "name": "Plumbing Rough-In",
+          "desc": "Install supply and waste piping — domestic water distribution, sanitary waste and vent, gas piping, pipe insulation, fire stopping at penetrations. Testing is a critical hold point: pressure test for supply, DWV test for waste. Gate: plumbing rough-in complete and tested. Duration: 4-6%."
+        },
+        {
+          "id": "ph-elec-ri",
+          "name": "Electrical Rough-In",
+          "desc": "Install conduit, wire, and power distribution — main conduit and feeder installation, branch circuits, wire pulling, panel and switchgear installation, transformer setting, cable tray, grounding. Permanent power energization is a major milestone. Gate: switchgear energized. Duration: 4-6%."
+        },
+        {
+          "id": "ph-fp-ri",
+          "name": "Fire Protection",
+          "desc": "Install sprinkler mains, branches, standpipe risers, and fire pump — main and branch line installation, sprinkler head rough-in, seismic bracing, FDC installation. Sprinkler head layout drives ceiling coordination. Gate: system tested and tagged. Duration: 3-5%."
+        },
+        {
+          "id": "ph-lv-ri",
+          "name": "Low Voltage Rough-In",
+          "desc": "Install raceways and cabling for data, security, fire alarm, and AV — conduit and cable tray, backbone and horizontal cabling, fire alarm wiring, security wiring. Often the last trade into the ceiling space. Gate: cabling complete and tested. Duration: 2-4%."
+        }
+      ]
+    },
+    {
+      "name": "Interior Rough-In",
+      "color": "#ffb74d",
+      "nodes": [
+        {
+          "id": "ph-framing",
+          "name": "Metal Stud Framing",
+          "desc": "Interior metal stud partitions, soffits, and bulkhead framing with blocking. Layout accuracy drives downstream finish quality. Trades: drywall hangers."
+        },
+        {
+          "id": "ph-drywall",
+          "name": "Drywall",
+          "desc": "Hang and finish gypsum board — drywall hanging, taping and finishing, sanding, specialty boards (moisture/abuse/fire-rated), patching around MEP. Above-ceiling inspection must happen BEFORE drywall closes the ceiling. Gate: drywall complete — walls ready for finishes. Duration: 3-5%."
+        },
+        {
+          "id": "ph-ceil-grid",
+          "name": "Ceiling Grid",
+          "desc": "Install suspension system for acoustic ceilings — main tee and cross tee, hanger wire, seismic bracing, grid leveling, access panel framing. Grid installation signals all above-ceiling MEP work must be complete. Gate: grid installed — above-ceiling work must be complete. Duration: 1-2%."
+        }
+      ]
+    },
+    {
+      "name": "Finishes & Trim",
+      "color": "#ffb74d",
+      "nodes": [
+        {
+          "id": "ph-paint",
+          "name": "Paint & Wall Coatings",
+          "desc": "Interior painting, primer, specialty coatings, stain, and clear finishes. Paint/finish is the #1 punch item category universally — touch-ups and color inconsistency dominate closeout. Trades: painters."
+        },
+        {
+          "id": "ph-flooring",
+          "name": "Flooring",
+          "desc": "All flooring materials — tile, carpet, resilient, hardwood, stone, and resinous/specialty. Ceramic/porcelain tile (floor and wall tile, mosaics), carpet (broadloom, modular tile), resilient flooring (LVT, VCT, sheet vinyl, rubber, linoleum), hardwood (solid, engineered, prefinished), stone (marble, granite, terrazzo, slate), and resinous/specialty (epoxy, urethane, MMA, polished concrete, stained). Substrate moisture content must meet ASTM F2170 before resilient and wood installation."
+        },
+        {
+          "id": "ph-ceilings",
+          "name": "Ceilings",
+          "desc": "Install acoustic ceiling tile and specialty ceiling finishes — acoustic tile, specialty ceilings (wood, metal, drywall), ceiling access panels, edge trim. One of the last overhead activities. Gate: ceilings complete. Duration: 1-2%."
+        },
+        {
+          "id": "ph-doors",
+          "name": "Doors & Hardware",
+          "desc": "Install door slabs and finish hardware — door hanging, hinges, closers, locksets, pulls, keying, access control coordination, fire-rated door labeling. Top-3 punch item category on every project type. Gate: all doors hung and hardware operational. Duration: 2-3%."
+        },
+        {
+          "id": "ph-casework",
+          "name": "Casework & Millwork",
+          "desc": "Cabinets, countertops, shelving, built-in furniture, and wood trim (base/crown molding). High punch item rate — scratches, chips, alignment, and door adjustment. Trades: carpenters."
+        },
+        {
+          "id": "ph-hvac-trim",
+          "name": "HVAC Trim & Controls",
+          "desc": "Install visible HVAC devices and controls — diffusers, grilles, thermostats, VAV box controls, damper actuators, BAS device installation, final duct connections. Must be complete before TAB. Gate: HVAC devices complete — ready for commissioning. Duration: 1-2%."
+        },
+        {
+          "id": "ph-plumb-fix",
+          "name": "Plumbing Fixtures",
+          "desc": "Toilets, urinals, sinks, faucets, drinking fountains, and floor drains. High submittal activity (product approvals) and very high punch item rates — plumbing fixtures are a top punch category. Trades: plumbers."
+        },
+        {
+          "id": "ph-elec-dev",
+          "name": "Electrical Devices & Lighting",
+          "desc": "Install visible electrical devices and light fixtures — outlets, switches, cover plates, light fixtures, exit/emergency lighting, lighting controls, panel labeling. Major visual milestone. Gate: all devices and lighting operational. Duration: 2-3%."
+        },
+        {
+          "id": "ph-fa-dev",
+          "name": "Fire Alarm Devices",
+          "desc": "Installation of fire alarm notification appliances, pull stations, smoke detectors, and annunciators during the finishes and trim phase."
+        },
+        {
+          "id": "ph-lv-dev",
+          "name": "Low Voltage Devices",
+          "desc": "Install visible low voltage devices — data jacks, cameras, card readers, intercoms, paging, AV equipment. Cable labeling and testing required. Gate: devices complete and tested. Duration: 1-2%."
+        }
+      ]
+    },
+    {
+      "name": "Commissioning",
+      "color": "#ffb74d",
+      "nodes": [
+        {
+          "id": "ph-prefunc",
+          "name": "Pre-Functional Testing",
+          "desc": "Verify each system component is properly installed before energizing or flowing — equipment installation verification, valve/damper tag verification, motor rotation checks, control device calibration, breaker verification. Commissioning agent (CxA) typically leads. Gate: all systems verified ready for startup. Duration: 1-2%."
+        },
+        {
+          "id": "ph-startup",
+          "name": "Systems Startup",
+          "desc": "Energize and start up individual systems for the first time — electrical energization sequence, boiler/chiller startup, pump/fan startup, fire pump acceptance test, elevator acceptance test, generator load bank test. Manufacturers require authorized rep for startup (warranty condition). Gate: all major systems operational. Duration: 1-2%."
+        },
+        {
+          "id": "ph-tab",
+          "name": "Testing Adjusting & Balancing",
+          "desc": "Air and water system balancing and commissioning verification. Late-project activity — results validate design assumptions. Trades: TAB contractors, commissioning agents."
+        },
+        {
+          "id": "ph-integrated",
+          "name": "Integrated Systems Testing",
+          "desc": "Verify systems work together correctly under various operating conditions — sequence of operations verification, failure mode testing, emergency power transfer, fire alarm integration, smoke control testing, elevator recall, BAS trending. Most complex commissioning phase. Gate: all integrated tests passed. Duration: 1-2%."
+        },
+        {
+          "id": "ph-perf-ver",
+          "name": "Performance Verification",
+          "desc": "Confirm building performs to design intent under actual conditions — energy performance, thermal comfort, acoustics, lighting levels, indoor air quality, envelope performance. Some tests require seasonal conditions (heating vs. cooling season). Gate: performance verified and documented. Duration: 1-2%."
+        }
+      ]
+    },
+    {
+      "name": "Closeout",
+      "color": "#ffb74d",
+      "nodes": [
+        {
+          "id": "ph-punch",
+          "name": "Punch List",
+          "desc": "Identify and correct remaining deficiencies before owner acceptance — architect punchlist walk, owner punchlist walk, deficiency documentation, trade-by-trade correction, re-inspection, sign-off. Typical project: 500-5,000 punch items. Paint, doors/hardware, and MEP devices consistently top categories. Gate: punch list substantially complete. Duration: 2-4%."
+        },
+        {
+          "id": "ph-final-insp",
+          "name": "Final Inspections",
+          "desc": "Secure regulatory sign-offs required for occupancy — fire marshal inspection, building department final, elevator inspection, health department, certificate of occupancy (CO), temporary CO (TCO). Gate: certificate of occupancy issued. Duration: 1-2%."
+        },
+        {
+          "id": "ph-asbuilt",
+          "name": "As-Built Documentation",
+          "desc": "Compile record documents reflecting actual constructed conditions — as-built drawing markup, O&M manual compilation, warranty compilation, spare parts and attic stock delivery, equipment data sheets. Contractually required — final payment often withheld until complete. Gate: record documents delivered and accepted. Duration: 1-2%."
+        },
+        {
+          "id": "ph-training",
+          "name": "Owner Training",
+          "desc": "Train owner's facilities staff on building systems operation and maintenance — HVAC operations, BAS, fire alarm, elevator, security, electrical distribution, plumbing. Often rushed or skipped — leads to operational problems. Gate: training complete and signed off. Duration: <1%."
+        },
+        {
+          "id": "ph-contract-close",
+          "name": "Contract Closeout",
+          "desc": "Complete commercial and legal close of all contracts — final change order reconciliation, final pay application, retainage release, lien waiver collection, consent of surety, final accounting, contract close letter. Gate: all contracts formally closed. Duration: 1-3%."
+        }
+      ]
+    },
+    {
+      "name": "Post-Construction",
+      "color": "#ffb74d",
+      "nodes": [
+        {
+          "id": "ph-warranty",
+          "name": "Warranty Period",
+          "desc": "Contractor responsible for correcting defects discovered after substantial completion — warranty claim response, defect investigation, repair coordination, manufacturer warranty coordination, 11-month warranty walk. General warranty: 1 year; roofing: 10-20 years (manufacturer); structural: varies by jurisdiction. Gate: warranty expired."
+        },
+        {
+          "id": "ph-seasonal-cx",
+          "name": "Seasonal Commissioning",
+          "desc": "Verify HVAC performance across heating and cooling seasons not available during initial commissioning — heating season verification, cooling season verification, BAS setpoint optimization, energy monitoring review. Gate: all seasonal testing complete (typically 12 months post-occupancy)."
+        },
+        {
+          "id": "ph-transition",
+          "name": "Facility Transition",
+          "desc": "Transfer operational knowledge and responsibility from construction team to facilities team — maintenance schedule establishment, spare parts inventory, vendor contact transfer, BAS access transfer, service contract establishment. Gate: facility fully transitioned to operations."
+        }
+      ]
+    }
+  ]
+}

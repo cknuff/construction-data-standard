@@ -1,0 +1,129 @@
+{
+  "source": "contracts-procurement",
+  "target": "permits-regulatory",
+  "edges": [
+    [
+      "cp-subcontract",
+      "pr-trade-permit",
+      "CONDITIONED ON"
+    ],
+    [
+      "cp-subcontract",
+      "pr-building-permit",
+      "GOVERNED BY"
+    ],
+    [
+      "cp-award-notice",
+      "pr-building-permit",
+      "CONTINGENT ON"
+    ],
+    [
+      "cp-purchase-order",
+      "pr-utility-connecti",
+      "REQUIRED FOR"
+    ],
+    [
+      "cp-prime-contract",
+      "pr-zoning-appr",
+      "CONDITIONED ON"
+    ],
+    [
+      "cp-prime-contract",
+      "pr-building-permit",
+      "CONTINGENT ON"
+    ],
+    [
+      "cp-scope-work",
+      "pr-enviro-permit",
+      "CONSTRAINED BY"
+    ],
+    [
+      "cp-scope-work",
+      "pr-stormwater-permi",
+      "CONSTRAINED BY"
+    ],
+    [
+      "cp-insurance-cert",
+      "pr-osha-notificatio",
+      "REQUIRED BY"
+    ],
+    [
+      "cp-prevailing-wage",
+      "pr-labor-comp",
+      "VERIFIED THROUGH"
+    ],
+    [
+      "cp-substantial-comp",
+      "pr-cert-occupancy",
+      "PREREQUISITE FOR"
+    ],
+    [
+      "cp-final-completion",
+      "pr-cert-completion",
+      "PREREQUISITE FOR"
+    ],
+    [
+      "cp-closeout-doc",
+      "pr-letter-comp",
+      "SUBMITTED FOR"
+    ],
+    [
+      "cp-bid-package",
+      "pr-ahj-insp",
+      "ACCOUNTS FOR"
+    ],
+    [
+      "cp-gen-cond",
+      "pr-special-insp",
+      "OBLIGATES"
+    ],
+    [
+      "cp-warranty",
+      "pr-temp-cert",
+      "ACTIVATED UPON"
+    ],
+    [
+      "cp-diversity-dbe",
+      "pr-labor-comp",
+      "FILED WITH"
+    ],
+    [
+      "cp-perf-bond",
+      "pr-building-permit",
+      "SECURED FOR"
+    ],
+    [
+      "cp-bid-coverage",
+      "pr-permit-cycle",
+      "DELAYED BY"
+    ],
+    [
+      "cp-award-cycle-time",
+      "pr-reg-hold",
+      "EXTENDED BY"
+    ],
+    [
+      "pr-ahj-insp",
+      "cp-final-completion",
+      "PREREQUISITE FOR"
+    ]
+  ],
+  "verbGlossary": {
+    "CONDITIONED ON": "{source} or award is conditional upon {target} or approval being obtained before work can proceed",
+    "GOVERNED BY": "{source} scope and execution must comply with {target} approved plans and conditions",
+    "CONTINGENT ON": "{source} or notice to proceed cannot be issued until the required {target} is in hand",
+    "REQUIRED FOR": "{source} is issued specifically to procure materials or services needed to satisfy {target} requirement",
+    "CONSTRAINED BY": "{source} must operate within the limitations and conditions imposed by the environmental or stormwater {target}",
+    "REQUIRED BY": "Insurance {target} must be on file as mandated by OSHA notification and regulatory safety requirements",
+    "VERIFIED THROUGH": "{source} certification is validated through the labor compliance verification process",
+    "PREREQUISITE FOR": "{source} milestone (substantial or final completion) must be achieved before {target} can be issued",
+    "SUBMITTED FOR": "{source} is submitted to the authority having jurisdiction to obtain the compliance letter",
+    "ACCOUNTS FOR": "{source} includes scope and cost for required {target} inspections as part of the contractor's responsibility",
+    "OBLIGATES": "{source} contractually require the contractor to arrange and pay for special inspections",
+    "ACTIVATED UPON": "{source} period begins upon issuance of the temporary {target}, triggering coverage obligations",
+    "FILED WITH": "{source}documentation is filed alongside labor compliance records for regulatory reporting",
+    "SECURED FOR": "{source} is required as a condition of {target} to guarantee project completion",
+    "DELAYED BY": "{source} is negatively affected when {target} cycle times extend, creating procurement uncertainty",
+    "EXTENDED BY": "{source} cycle time increases when regulatory holds delay {target} issuance, pushing back contract execution"
+  }
+}

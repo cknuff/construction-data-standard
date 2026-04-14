@@ -1,0 +1,242 @@
+{
+  "source": "roles",
+  "target": "workflows-statuses",
+  "edges": [
+    [
+      "rl-project-manager",
+      "ws-appr-chain",
+      "ADMINISTERS"
+    ],
+    [
+      "rl-project-manager",
+      "ws-ball-court",
+      "ASSIGNS"
+    ],
+    [
+      "rl-project-manager",
+      "ws-overdue",
+      "MONITORS"
+    ],
+    [
+      "rl-project-executiv",
+      "ws-approved",
+      "AUTHORIZES"
+    ],
+    [
+      "rl-project-executiv",
+      "ws-escalation",
+      "RESOLVES"
+    ],
+    [
+      "rl-assistant-projec",
+      "ws-submitted",
+      "COMPILES"
+    ],
+    [
+      "rl-owner-s",
+      "ws-rejected",
+      "REJECTS"
+    ],
+    [
+      "rl-owner-s",
+      "ws-sequential-appr",
+      "ENFORCES"
+    ],
+    [
+      "rl-design-manager",
+      "ws-revise-resubmit",
+      "DIRECTS"
+    ],
+    [
+      "rl-design-manager",
+      "ws-under-review",
+      "CONDUCTS"
+    ],
+    [
+      "rl-super",
+      "ws-inspect-disposit",
+      "PERFORMS"
+    ],
+    [
+      "rl-super",
+      "ws-ready-review",
+      "STAGES"
+    ],
+    [
+      "rl-super",
+      "ws-progress",
+      "ADVANCES"
+    ],
+    [
+      "rl-field-engineer",
+      "ws-conforming",
+      "VERIFIES"
+    ],
+    [
+      "rl-field-engineer",
+      "ws-deficient",
+      "FLAGS"
+    ],
+    [
+      "rl-foreman-gen",
+      "ws-open",
+      "LOGS"
+    ],
+    [
+      "rl-foreman-gen",
+      "ws-create-close",
+      "EXECUTES"
+    ],
+    [
+      "rl-quality-manager",
+      "ws-deficient",
+      "DOCUMENTS"
+    ],
+    [
+      "rl-quality-manager",
+      "ws-conforming",
+      "CERTIFIES"
+    ],
+    [
+      "rl-safety-manager",
+      "ws-hold",
+      "IMPOSES"
+    ],
+    [
+      "rl-safety-manager",
+      "ws-escalation",
+      "TRIGGERS"
+    ],
+    [
+      "rl-safety-officer",
+      "ws-closed",
+      "CLOSES"
+    ],
+    [
+      "rl-contract-adminis",
+      "ws-e-signature-req",
+      "CIRCULATES"
+    ],
+    [
+      "rl-contract-adminis",
+      "ws-void",
+      "PROCESSES"
+    ],
+    [
+      "rl-doc-controller",
+      "ws-workflow-step",
+      "CONFIGURES"
+    ],
+    [
+      "rl-cost-engineer",
+      "ws-chg-event",
+      "EVALUATES"
+    ],
+    [
+      "rl-cost-engineer",
+      "ws-cost-stage",
+      "RECONCILES"
+    ],
+    [
+      "rl-scheduler-projec",
+      "ws-due-date",
+      "SETS"
+    ],
+    [
+      "rl-estimator-chief",
+      "ws-budget-stage",
+      "PRICES"
+    ],
+    [
+      "rl-preconstruction",
+      "ws-submit-approve",
+      "ESTABLISHES"
+    ],
+    [
+      "rl-procure-manager",
+      "ws-review-respond",
+      "COORDINATES"
+    ],
+    [
+      "rl-accountant-finan",
+      "ws-revenue-stage",
+      "RECONCILES"
+    ],
+    [
+      "rl-cx-agent-cxa",
+      "ws-not-applicable",
+      "DISPOSITIONS"
+    ],
+    [
+      "rl-tab-technician",
+      "ws-conforming",
+      "VALIDATES"
+    ],
+    [
+      "rl-bim-manager-vdc",
+      "ws-parallel-review",
+      "COORDINATES"
+    ],
+    [
+      "rl-pm-workload",
+      "ws-ball-court-aging",
+      "CORRELATES WITH"
+    ],
+    [
+      "rl-super-span",
+      "ws-overdue-rate",
+      "CORRELATES WITH"
+    ],
+    [
+      "rl-safety-staffing",
+      "ws-escalation-rate",
+      "CORRELATES WITH"
+    ],
+    [
+      "rl-role-coverage",
+      "ws-workflow-complet",
+      "CORRELATES WITH"
+    ],
+    [
+      "rl-staffing-ratio",
+      "ws-average-appr",
+      "CORRELATES WITH"
+    ]
+  ],
+  "verbGlossary": {
+    "ADMINISTERS": "{source}configures, maintains, and manages {target} component, ensuring it operates correctly across the project.",
+    "ASSIGNS": "{source} to act on an item by routing it through {target} mechanism.",
+    "MONITORS": "{source} in {target} to identify bottlenecks, delays, or items requiring intervention.",
+    "AUTHORIZES": "{source} to grant final {target}, moving the item to this binding status.",
+    "RESOLVES": "{source} to clear items stuck in this status, making decisions that unblock {target}.",
+    "COMPILES": "{source} and assembles the required documentation to move an item into this submission {target}.",
+    "REJECTS": "{source} by moving it to this rejection {target} when deliverables do not meet requirements.",
+    "ENFORCES": "{source} with {target} pattern, preventing shortcuts or unauthorized bypasses.",
+    "DIRECTS": "{source} on what corrections are needed when an item enters this revision {target}.",
+    "CONDUCTS": "{source} by {target}.",
+    "PERFORMS": "{source} with {target} pattern as part of daily jobsite operations.",
+    "STAGES": "{source} and moves it into {target}, signaling it is ready for the next participant.",
+    "ADVANCES": "{source} {target} by completing the prerequisite field work.",
+    "VERIFIES": "{source}confirms that work meets specification requirements, resulting in this disposition {target}.",
+    "FLAGS": "{source}identifies non-conforming work and marks it with this disposition {target} for corrective action.",
+    "LOGS": "{source} of field activity or document receipt, placing the item in this initial {target}.",
+    "EXECUTES": "{source} {target} pattern from item creation through field closeout.",
+    "DOCUMENTS": "{source} {target}, creating an audit trail.",
+    "CERTIFIES": "{source}formally attests that an item meets all requirements, granting this conformance or {target}.",
+    "IMPOSES": "{source} on work by moving items to {target} when safety or quality conditions are not met.",
+    "TRIGGERS": "{source}initiates this escalation {target} when field conditions require immediate management attention.",
+    "CLOSES": "{source} and moves the item to this terminal status, ending {target}.",
+    "CIRCULATES": "{source} through {target} to collect required endorsements.",
+    "PROCESSES": "{source} to move an item into this terminal {target}, such as voiding a canceled contract.",
+    "CONFIGURES": "{source} and defines the rules, sequences, and participants within {target} component.",
+    "EVALUATES": "{source}cost, schedule, and scope impact of items in this financial {target} lifecycle.",
+    "RECONCILES": "{source} against budgeted or expected values during this financial {target} stage.",
+    "SETS": "{source} {target} component.",
+    "PRICES": "{source} and assigns values to line items during this financial {target} stage.",
+    "ESTABLISHES": "{source} and sets up {target} pattern during preconstruction, creating the template for project execution.",
+    "COORDINATES": "{source} through this parallel or multi-party {target} pattern.",
+    "DISPOSITIONS": "{source} {target} to items that fall outside the scope of the current inspection.",
+    "VALIDATES": "{source}confirms measured performance meets design specifications, resulting in this conformance {target}.",
+    "CORRELATES WITH": "{source}measure has a statistically observable relationship with {target} performance metric."
+  }
+}

@@ -1,0 +1,747 @@
+{
+  "source": "phases",
+  "target": "resources",
+  "edges": [
+    [
+      "res-laborer",
+      "ph-site-setup",
+      "ACTIVE DURING"
+    ],
+    [
+      "res-laborer",
+      "ph-demo",
+      "ACTIVE DURING"
+    ],
+    [
+      "res-laborer",
+      "ph-earthwork",
+      "ACTIVE DURING"
+    ],
+    [
+      "res-laborer",
+      "ph-foundations",
+      "ACTIVE DURING"
+    ],
+    [
+      "res-laborer",
+      "ph-slab",
+      "ACTIVE DURING"
+    ],
+    [
+      "res-laborer",
+      "ph-steel",
+      "ACTIVE DURING"
+    ],
+    [
+      "res-laborer",
+      "ph-framing",
+      "ACTIVE DURING"
+    ],
+    [
+      "res-laborer",
+      "ph-punch",
+      "ACTIVE DURING"
+    ],
+    [
+      "res-carpenter",
+      "ph-foundations",
+      "BUILDS FORMWORK DURING"
+    ],
+    [
+      "res-carpenter",
+      "ph-slab",
+      "BUILDS FORMWORK DURING"
+    ],
+    [
+      "res-carpenter",
+      "ph-elev-conc",
+      "BUILDS FORMWORK DURING"
+    ],
+    [
+      "res-carpenter",
+      "ph-doors",
+      "DOES FINISH WORK IN"
+    ],
+    [
+      "res-carpenter",
+      "ph-casework",
+      "DOES FINISH WORK IN"
+    ],
+    [
+      "res-carpenter",
+      "ph-punch",
+      "CORRECTS DEFICIENCIES IN"
+    ],
+    [
+      "res-concrete",
+      "ph-foundations",
+      "PEAKS DURING"
+    ],
+    [
+      "res-concrete",
+      "ph-slab",
+      "PEAKS DURING"
+    ],
+    [
+      "res-concrete",
+      "ph-elev-conc",
+      "PEAKS DURING"
+    ],
+    [
+      "res-concrete",
+      "ph-conc-frame",
+      "PEAKS DURING"
+    ],
+    [
+      "res-ironworker",
+      "ph-steel",
+      "PEAKS DURING"
+    ],
+    [
+      "res-ironworker",
+      "ph-stairs",
+      "ACTIVE DURING"
+    ],
+    [
+      "res-mason",
+      "ph-masonry",
+      "PEAKS DURING"
+    ],
+    [
+      "res-mason",
+      "ph-foundations",
+      "ACTIVE DURING"
+    ],
+    [
+      "res-roofer",
+      "ph-roofing",
+      "PEAKS DURING"
+    ],
+    [
+      "res-glazier",
+      "ph-curtainwall",
+      "PEAKS DURING"
+    ],
+    [
+      "res-waterproofer",
+      "ph-foundations",
+      "ACTIVE DURING"
+    ],
+    [
+      "res-waterproofer",
+      "ph-barrier",
+      "PEAKS DURING"
+    ],
+    [
+      "res-drywall",
+      "ph-framing",
+      "PEAKS DURING"
+    ],
+    [
+      "res-drywall",
+      "ph-drywall",
+      "PEAKS DURING"
+    ],
+    [
+      "res-painter",
+      "ph-paint",
+      "PEAKS DURING"
+    ],
+    [
+      "res-painter",
+      "ph-punch",
+      "DOES TOUCH-UP IN"
+    ],
+    [
+      "res-floor",
+      "ph-flooring",
+      "PEAKS DURING"
+    ],
+    [
+      "res-ceiling",
+      "ph-ceil-grid",
+      "ACTIVE DURING"
+    ],
+    [
+      "res-ceiling",
+      "ph-ceilings",
+      "PEAKS DURING"
+    ],
+    [
+      "res-insulator",
+      "ph-hvac-dist",
+      "ACTIVE DURING"
+    ],
+    [
+      "res-insulator",
+      "ph-plumb-ri",
+      "ACTIVE DURING"
+    ],
+    [
+      "res-insulator",
+      "ph-barrier",
+      "ACTIVE DURING"
+    ],
+    [
+      "res-fireproofer",
+      "ph-steel",
+      "FOLLOWS STEEL ERECTION IN"
+    ],
+    [
+      "res-plumber",
+      "ph-site-util",
+      "RUNS UNDERGROUND IN"
+    ],
+    [
+      "res-plumber",
+      "ph-foundations",
+      "RUNS UNDERGROUND IN"
+    ],
+    [
+      "res-plumber",
+      "ph-plumb-ri",
+      "PEAKS DURING"
+    ],
+    [
+      "res-plumber",
+      "ph-plumb-fix",
+      "TRIMS OUT IN"
+    ],
+    [
+      "res-sheetmetal",
+      "ph-hvac-dist",
+      "PEAKS DURING"
+    ],
+    [
+      "res-sheetmetal",
+      "ph-hvac-trim",
+      "TRIMS OUT IN"
+    ],
+    [
+      "res-sheetmetal",
+      "ph-startup",
+      "SUPPORTS STARTUP IN"
+    ],
+    [
+      "res-electrician",
+      "ph-site-util",
+      "RUNS UNDERGROUND IN"
+    ],
+    [
+      "res-electrician",
+      "ph-elec-ri",
+      "PEAKS DURING"
+    ],
+    [
+      "res-electrician",
+      "ph-elec-dev",
+      "TRIMS OUT IN"
+    ],
+    [
+      "res-electrician",
+      "ph-startup",
+      "SUPPORTS STARTUP IN"
+    ],
+    [
+      "res-sprinkler",
+      "ph-fp-ri",
+      "PEAKS DURING"
+    ],
+    [
+      "res-sprinkler",
+      "ph-fa-dev",
+      "ACTIVE DURING"
+    ],
+    [
+      "res-sprinkler",
+      "ph-prefunc",
+      "PERFORMS TESTING IN"
+    ],
+    [
+      "res-elevator",
+      "ph-steel",
+      "INSTALLS HOISTWAY IN"
+    ],
+    [
+      "res-elevator",
+      "ph-doors",
+      "INSTALLS CAB IN"
+    ],
+    [
+      "res-elevator",
+      "ph-prefunc",
+      "PERFORMS TESTING IN"
+    ],
+    [
+      "res-lowvolt",
+      "ph-lv-ri",
+      "PEAKS DURING"
+    ],
+    [
+      "res-lowvolt",
+      "ph-lv-dev",
+      "TRIMS OUT IN"
+    ],
+    [
+      "res-lowvolt",
+      "ph-fa-dev",
+      "ACTIVE DURING"
+    ],
+    [
+      "res-lowvolt",
+      "ph-integrated",
+      "PERFORMS TESTING IN"
+    ],
+    [
+      "res-operator",
+      "ph-demo",
+      "ACTIVE DURING"
+    ],
+    [
+      "res-operator",
+      "ph-earthwork",
+      "PEAKS DURING"
+    ],
+    [
+      "res-operator",
+      "ph-site-util",
+      "ACTIVE DURING"
+    ],
+    [
+      "res-operator",
+      "ph-foundations",
+      "ACTIVE DURING"
+    ],
+    [
+      "res-surveyor",
+      "ph-site-setup",
+      "PROVIDES LAYOUT FOR"
+    ],
+    [
+      "res-surveyor",
+      "ph-earthwork",
+      "PROVIDES LAYOUT FOR"
+    ],
+    [
+      "res-surveyor",
+      "ph-foundations",
+      "PROVIDES LAYOUT FOR"
+    ],
+    [
+      "res-surveyor",
+      "ph-steel",
+      "PROVIDES LAYOUT FOR"
+    ],
+    [
+      "res-safety",
+      "ph-safety-orient",
+      "LEADS ACTIVITIES IN"
+    ],
+    [
+      "res-safety",
+      "ph-earthwork",
+      "MONITORS SAFETY IN"
+    ],
+    [
+      "res-safety",
+      "ph-steel",
+      "MONITORS SAFETY IN"
+    ],
+    [
+      "res-safety",
+      "ph-roofing",
+      "MONITORS SAFETY IN"
+    ],
+    [
+      "res-safety",
+      "ph-punch",
+      "MONITORS SAFETY IN"
+    ],
+    [
+      "res-qc",
+      "ph-foundations",
+      "INSPECTS WORK IN"
+    ],
+    [
+      "res-qc",
+      "ph-steel",
+      "INSPECTS WORK IN"
+    ],
+    [
+      "res-qc",
+      "ph-barrier",
+      "INSPECTS WORK IN"
+    ],
+    [
+      "res-qc",
+      "ph-drywall",
+      "INSPECTS WORK IN"
+    ],
+    [
+      "res-qc",
+      "ph-paint",
+      "INSPECTS WORK IN"
+    ],
+    [
+      "res-cxa",
+      "ph-prefunc",
+      "LEADS ACTIVITIES IN"
+    ],
+    [
+      "res-cxa",
+      "ph-startup",
+      "WITNESSES TESTING IN"
+    ],
+    [
+      "res-cxa",
+      "ph-tab",
+      "WITNESSES TESTING IN"
+    ],
+    [
+      "res-cxa",
+      "ph-integrated",
+      "LEADS ACTIVITIES IN"
+    ],
+    [
+      "res-cxa",
+      "ph-perf-ver",
+      "LEADS ACTIVITIES IN"
+    ],
+    [
+      "res-cxa",
+      "ph-seasonal-cx",
+      "RETURNS FOR"
+    ],
+    [
+      "res-crane",
+      "ph-steel",
+      "MOBILIZED FOR"
+    ],
+    [
+      "res-crane",
+      "ph-curtainwall",
+      "MOBILIZED FOR"
+    ],
+    [
+      "res-crane",
+      "ph-hvac-dist",
+      "SETS EQUIPMENT IN"
+    ],
+    [
+      "res-earthmover",
+      "ph-demo",
+      "MOBILIZED FOR"
+    ],
+    [
+      "res-earthmover",
+      "ph-earthwork",
+      "MOBILIZED FOR"
+    ],
+    [
+      "res-earthmover",
+      "ph-site-util",
+      "MOBILIZED FOR"
+    ],
+    [
+      "res-conc-equip",
+      "ph-foundations",
+      "MOBILIZED FOR"
+    ],
+    [
+      "res-conc-equip",
+      "ph-slab",
+      "MOBILIZED FOR"
+    ],
+    [
+      "res-conc-equip",
+      "ph-elev-conc",
+      "MOBILIZED FOR"
+    ],
+    [
+      "res-access",
+      "ph-curtainwall",
+      "MOBILIZED FOR"
+    ],
+    [
+      "res-access",
+      "ph-paint",
+      "MOBILIZED FOR"
+    ],
+    [
+      "res-access",
+      "ph-ceilings",
+      "MOBILIZED FOR"
+    ],
+    [
+      "res-access",
+      "ph-punch",
+      "MOBILIZED FOR"
+    ],
+    [
+      "res-compaction",
+      "ph-earthwork",
+      "MOBILIZED FOR"
+    ],
+    [
+      "res-compaction",
+      "ph-site-util",
+      "MOBILIZED FOR"
+    ],
+    [
+      "res-piling",
+      "ph-foundations",
+      "MOBILIZED FOR"
+    ],
+    [
+      "res-hauling",
+      "ph-demo",
+      "MOBILIZED FOR"
+    ],
+    [
+      "res-hauling",
+      "ph-earthwork",
+      "MOBILIZED FOR"
+    ],
+    [
+      "res-welding",
+      "ph-steel",
+      "MOBILIZED FOR"
+    ],
+    [
+      "res-welding",
+      "ph-stairs",
+      "MOBILIZED FOR"
+    ],
+    [
+      "res-temp-util",
+      "ph-site-setup",
+      "MOBILIZED FOR"
+    ],
+    [
+      "res-mat-handle",
+      "ph-framing",
+      "MOBILIZED FOR"
+    ],
+    [
+      "res-mat-handle",
+      "ph-hvac-dist",
+      "MOBILIZED FOR"
+    ],
+    [
+      "res-survey-inst",
+      "ph-site-setup",
+      "MOBILIZED FOR"
+    ],
+    [
+      "res-survey-inst",
+      "ph-earthwork",
+      "MOBILIZED FOR"
+    ],
+    [
+      "res-survey-inst",
+      "ph-foundations",
+      "MOBILIZED FOR"
+    ],
+    [
+      "res-survey-inst",
+      "ph-steel",
+      "MOBILIZED FOR"
+    ],
+    [
+      "mat-concrete",
+      "ph-foundations",
+      "DELIVERED FOR"
+    ],
+    [
+      "mat-concrete",
+      "ph-slab",
+      "DELIVERED FOR"
+    ],
+    [
+      "mat-concrete",
+      "ph-elev-conc",
+      "DELIVERED FOR"
+    ],
+    [
+      "mat-rebar",
+      "ph-foundations",
+      "DELIVERED FOR"
+    ],
+    [
+      "mat-rebar",
+      "ph-elev-conc",
+      "DELIVERED FOR"
+    ],
+    [
+      "mat-steel",
+      "ph-fabrication",
+      "FABRICATED BEFORE"
+    ],
+    [
+      "mat-steel",
+      "ph-steel",
+      "DELIVERED FOR"
+    ],
+    [
+      "mat-lumber",
+      "ph-foundations",
+      "DELIVERED FOR"
+    ],
+    [
+      "mat-masonry",
+      "ph-masonry",
+      "DELIVERED FOR"
+    ],
+    [
+      "mat-roofing",
+      "ph-roofing",
+      "DELIVERED FOR"
+    ],
+    [
+      "mat-waterproof",
+      "ph-foundations",
+      "DELIVERED FOR"
+    ],
+    [
+      "mat-waterproof",
+      "ph-barrier",
+      "DELIVERED FOR"
+    ],
+    [
+      "mat-thermal",
+      "ph-hvac-dist",
+      "DELIVERED FOR"
+    ],
+    [
+      "mat-glass",
+      "ph-fabrication",
+      "FABRICATED BEFORE"
+    ],
+    [
+      "mat-glass",
+      "ph-curtainwall",
+      "DELIVERED FOR"
+    ],
+    [
+      "mat-doors",
+      "ph-fabrication",
+      "FABRICATED BEFORE"
+    ],
+    [
+      "mat-doors",
+      "ph-doors",
+      "DELIVERED FOR"
+    ],
+    [
+      "mat-framing",
+      "ph-framing",
+      "DELIVERED FOR"
+    ],
+    [
+      "mat-ceiling",
+      "ph-ceilings",
+      "DELIVERED FOR"
+    ],
+    [
+      "mat-flooring",
+      "ph-flooring",
+      "DELIVERED FOR"
+    ],
+    [
+      "mat-paint",
+      "ph-paint",
+      "DELIVERED FOR"
+    ],
+    [
+      "mat-casework",
+      "ph-fabrication",
+      "FABRICATED BEFORE"
+    ],
+    [
+      "mat-casework",
+      "ph-casework",
+      "DELIVERED FOR"
+    ],
+    [
+      "mat-plumbing",
+      "ph-plumb-ri",
+      "DELIVERED FOR"
+    ],
+    [
+      "mat-hvac-dist",
+      "ph-hvac-dist",
+      "DELIVERED FOR"
+    ],
+    [
+      "mat-hvac-equip",
+      "ph-fabrication",
+      "ON LONG-LEAD PROCUREMENT BEFORE"
+    ],
+    [
+      "mat-hvac-equip",
+      "ph-hvac-dist",
+      "DELIVERED FOR"
+    ],
+    [
+      "mat-elec",
+      "ph-elec-ri",
+      "DELIVERED FOR"
+    ],
+    [
+      "mat-lighting",
+      "ph-elec-dev",
+      "DELIVERED FOR"
+    ],
+    [
+      "mat-fp",
+      "ph-fp-ri",
+      "DELIVERED FOR"
+    ],
+    [
+      "mat-lv",
+      "ph-lv-ri",
+      "DELIVERED FOR"
+    ],
+    [
+      "mat-site",
+      "ph-site-util",
+      "DELIVERED FOR"
+    ],
+    [
+      "mat-elevator",
+      "ph-fabrication",
+      "ON LONG-LEAD PROCUREMENT BEFORE"
+    ],
+    [
+      "mat-elevator",
+      "ph-steel",
+      "DELIVERED FOR"
+    ]
+  ],
+  "verbGlossary": {
+    "ACTIVE DURING": "{source} is present and working on site during {target}",
+    "PEAKS DURING": "{source} reaches maximum headcount or production rate during {target}",
+    "BUILDS FORMWORK DURING": "{target} constructs and strips concrete forms during {source}",
+    "DOES FINISH WORK IN": "{target} performs finish-phase installation (doors, trim, casework) during {source}",
+    "CORRECTS DEFICIENCIES IN": "{source} returns to fix punch list items during {target}",
+    "FOLLOWS STEEL ERECTION IN": "{target} applies SFRM immediately after steel erection in {source}",
+    "RUNS UNDERGROUND IN": "{target} installs below-slab rough-in (piping, conduit, ductbank) during {source}",
+    "TRIMS OUT IN": "{target} installs finish devices and fixtures during {source}",
+    "INSPECTS WORK IN": "{target} verifies installed work against specifications during {source}",
+    "PROVIDES LAYOUT FOR": "{target} establishes control points and building layout for {source}",
+    "LEADS ACTIVITIES IN": "{source} leads or directs the primary activities during {target}",
+    "MONITORS SAFETY IN": "{source} oversees hazard controls during {target}",
+    "INSTALLS HOISTWAY IN": "{target} installs rails, guides, and hoistway equipment during {source}",
+    "INSTALLS CAB IN": "{target} sets cab, doors, and interior finishes during {source}",
+    "SUPPORTS STARTUP IN": "{source} participates in equipment startup and initial operations during {target}",
+    "PERFORMS TESTING IN": "{target} executes functional performance testing during {source}",
+    "DOES TOUCH-UP IN": "{target} performs final touch-up and repair work during {source}",
+    "WITNESSES TESTING IN": "{source} observes and verifies testing during {target}",
+    "RETURNS FOR": "{source} returns to site for seasonal or deferred testing in {target}",
+    "MOBILIZED FOR": "{source} is brought to site and set up for use during {target}",
+    "SETS EQUIPMENT IN": "{target} sets major mechanical equipment on pads or rooftops during {source}",
+    "DELIVERED FOR": "{source} arrives on site for installation during {target}",
+    "FABRICATED BEFORE": "{source} is fabricated off-site in advance of {target}",
+    "ON LONG-LEAD PROCUREMENT BEFORE": "{source} requires early procurement due to extended fabrication lead time before {target}"
+  }
+}

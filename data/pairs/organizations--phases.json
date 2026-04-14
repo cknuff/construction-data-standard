@@ -1,0 +1,428 @@
+{
+  "source": "organizations",
+  "target": "phases",
+  "edges": [
+    [
+      "org-private-develope",
+      "ph-program",
+      "COMMISSIONS"
+    ],
+    [
+      "org-institutional-ow",
+      "ph-design",
+      "FUNDS THROUGH"
+    ],
+    [
+      "org-public-governmen",
+      "ph-permit",
+      "GRANTS APPROVALS DURING"
+    ],
+    [
+      "org-private-develope",
+      "ph-estimating",
+      "SETS BUDGET DURING"
+    ],
+    [
+      "org-institutional-ow",
+      "ph-training",
+      "RECEIVES TRAINING DURING"
+    ],
+    [
+      "org-public-governmen",
+      "ph-bidding",
+      "ADVERTISES DURING"
+    ],
+    [
+      "org-gen-contr-gc",
+      "ph-precon-plan",
+      "LEADS PRECONSTRUCTION DURING"
+    ],
+    [
+      "org-gen-contr-gc",
+      "ph-site-setup",
+      "MOBILIZES FOR"
+    ],
+    [
+      "org-gen-contr-gc",
+      "ph-punch",
+      "MANAGES COMPLETION DURING"
+    ],
+    [
+      "org-gen-contr-gc",
+      "ph-contract-close",
+      "FINALIZES PAPERWORK DURING"
+    ],
+    [
+      "org-const-manager-at",
+      "ph-estimating",
+      "VALIDATES COSTS DURING"
+    ],
+    [
+      "org-const-manager",
+      "ph-precon-plan",
+      "COORDINATES PLANNING DURING"
+    ],
+    [
+      "org-design-builder",
+      "ph-design",
+      "INTEGRATES DESIGN DURING"
+    ],
+    [
+      "org-design-builder",
+      "ph-fabrication",
+      "FAST-TRACKS DURING"
+    ],
+    [
+      "org-program-manager",
+      "ph-program",
+      "OVERSEES FEASIBILITY DURING"
+    ],
+    [
+      "org-program-manager",
+      "ph-transition",
+      "MANAGES HANDOFF DURING"
+    ],
+    [
+      "org-architect-record",
+      "ph-design",
+      "PRODUCES DOCUMENTS DURING"
+    ],
+    [
+      "org-architect-record",
+      "ph-submittals",
+      "REVIEWS SUBMITTALS DURING"
+    ],
+    [
+      "org-struct-engineer",
+      "ph-foundations",
+      "ENGINEERS DURING"
+    ],
+    [
+      "org-struct-engineer",
+      "ph-steel",
+      "DESIGNS CONNECTIONS FOR"
+    ],
+    [
+      "org-mep-engineer",
+      "ph-abv-ceil",
+      "RESOLVES CLASHES DURING"
+    ],
+    [
+      "org-mep-engineer",
+      "ph-hvac-dist",
+      "SPECIFIES SYSTEMS FOR"
+    ],
+    [
+      "org-civil-engineer",
+      "ph-earthwork",
+      "DESIGNS GRADING FOR"
+    ],
+    [
+      "org-fire-prot",
+      "ph-fp-ri",
+      "DESIGNS SUPPRESSION FOR"
+    ],
+    [
+      "org-geotechnical-eng",
+      "ph-foundations",
+      "PROVIDES RECOMMENDATIONS FOR"
+    ],
+    [
+      "org-landscape-archit",
+      "ph-program",
+      "CONTRIBUTES SITE DESIGN DURING"
+    ],
+    [
+      "org-specifications-w",
+      "ph-design",
+      "AUTHORS SPECIFICATIONS DURING"
+    ],
+    [
+      "org-lighting-designe",
+      "ph-elec-dev",
+      "SPECIFIES FIXTURES FOR"
+    ],
+    [
+      "org-acoustics-consul",
+      "ph-drywall",
+      "SPECIFIES ASSEMBLIES FOR"
+    ],
+    [
+      "org-building-envelop",
+      "ph-curtainwall",
+      "DETAILS PERFORMANCE FOR"
+    ],
+    [
+      "org-sustainability-l",
+      "ph-perf-ver",
+      "CERTIFIES PERFORMANCE DURING"
+    ],
+    [
+      "org-code-consultant",
+      "ph-permit",
+      "NAVIGATES APPROVALS DURING"
+    ],
+    [
+      "org-sub-trade",
+      "ph-framing",
+      "INSTALLS DURING"
+    ],
+    [
+      "org-sub-trade",
+      "ph-paint",
+      "APPLIES FINISHES DURING"
+    ],
+    [
+      "org-sub-trade",
+      "ph-punch",
+      "CORRECTS DEFICIENCIES DURING"
+    ],
+    [
+      "org-sub-trade",
+      "ph-warranty",
+      "RESPONDS TO CALLBACKS DURING"
+    ],
+    [
+      "org-self-performing",
+      "ph-demo",
+      "EXECUTES DEMOLITION DURING"
+    ],
+    [
+      "org-self-performing",
+      "ph-slab",
+      "POURS DURING"
+    ],
+    [
+      "org-mat-supplier",
+      "ph-delivery",
+      "SHIPS MATERIALS DURING"
+    ],
+    [
+      "org-mat-supplier",
+      "ph-doors",
+      "FURNISHES DOOR ASSEMBLIES FOR"
+    ],
+    [
+      "org-fabricator",
+      "ph-fabrication",
+      "FABRICATES ASSEMBLIES DURING"
+    ],
+    [
+      "org-fabricator",
+      "ph-submittals",
+      "PROVIDES SHOP DRAWINGS DURING"
+    ],
+    [
+      "org-equip-rental",
+      "ph-earthwork",
+      "SUPPLIES HEAVY EQUIPMENT FOR"
+    ],
+    [
+      "org-equip-rental",
+      "ph-steel",
+      "PROVIDES CRANES FOR"
+    ],
+    [
+      "org-special-insp",
+      "ph-masonry",
+      "INSPECTS MASONRY DURING"
+    ],
+    [
+      "org-mat-testing-lab",
+      "ph-slab",
+      "TESTS CONCRETE DURING"
+    ],
+    [
+      "org-mat-testing-lab",
+      "ph-earthwork",
+      "PERFORMS COMPACTION TESTING DURING"
+    ],
+    [
+      "org-cx-agent-cxa",
+      "ph-prefunc",
+      "CONDUCTS PRETESTING DURING"
+    ],
+    [
+      "org-cx-agent-cxa",
+      "ph-integrated",
+      "VERIFIES INTEGRATION DURING"
+    ],
+    [
+      "org-cx-agent-cxa",
+      "ph-seasonal-cx",
+      "RETURNS FOR SEASONAL TESTING DURING"
+    ],
+    [
+      "org-enviro-monitorin",
+      "ph-demo",
+      "MONITORS ABATEMENT DURING"
+    ],
+    [
+      "org-building-departm",
+      "ph-final-insp",
+      "ISSUES CERTIFICATE AFTER"
+    ],
+    [
+      "org-fire-marshal",
+      "ph-fp-ri",
+      "INSPECTS SUPPRESSION DURING"
+    ],
+    [
+      "org-health-departmen",
+      "ph-plumb-fix",
+      "INSPECTS FIXTURES DURING"
+    ],
+    [
+      "org-enviro-epa",
+      "ph-demo",
+      "REGULATES HAZMAT DURING"
+    ],
+    [
+      "org-osha-safety",
+      "ph-safety-orient",
+      "AUDITS COMPLIANCE DURING"
+    ],
+    [
+      "org-zoning-planning",
+      "ph-permit",
+      "REVIEWS ENTITLEMENTS DURING"
+    ],
+    [
+      "org-const-lender",
+      "ph-contract-close",
+      "RELEASES FINAL DRAW AFTER"
+    ],
+    [
+      "org-surety-bonding",
+      "ph-bidding",
+      "UNDERWRITES BOND FOR"
+    ],
+    [
+      "org-insurance-broker",
+      "ph-site-setup",
+      "BINDS COVERAGE FOR"
+    ],
+    [
+      "org-electric-utility",
+      "ph-startup",
+      "ENERGIZES PERMANENT SERVICE DURING"
+    ],
+    [
+      "org-gas-utility",
+      "ph-hvac-trim",
+      "ACTIVATES GAS SERVICE DURING"
+    ],
+    [
+      "org-water-sewer",
+      "ph-site-util",
+      "CONNECTS MAINS DURING"
+    ],
+    [
+      "org-telecom-internet",
+      "ph-lv-dev",
+      "PROVISIONS SERVICE FOR"
+    ],
+    [
+      "org-sub-count-per",
+      "ph-conc-frame",
+      "PEAKS DURING"
+    ],
+    [
+      "org-trade-coverage",
+      "ph-bidding",
+      "MEASURED DURING"
+    ],
+    [
+      "org-vendor-insurance",
+      "ph-site-setup",
+      "VERIFIED BEFORE"
+    ],
+    [
+      "org-sub-safety",
+      "ph-safety-orient",
+      "BASELINED DURING"
+    ],
+    [
+      "org-design-team",
+      "ph-submittals",
+      "TRACKED DURING"
+    ],
+    [
+      "org-chg-order",
+      "ph-contract-close",
+      "RECONCILED DURING"
+    ]
+  ],
+  "verbGlossary": {
+    "COMMISSIONS": "{source} formally initiates a project by engaging designers and consultants for programming and feasibility analysis",
+    "FUNDS THROUGH": "{source}provides capital and financial authorization that sustains work through {target}",
+    "GRANTS APPROVALS DURING": "{source}reviews applications and issues permits or entitlements required to proceed during {target}",
+    "SETS BUDGET DURING": "{source} establishes project budget parameters and cost targets during the estimating {target}",
+    "RECEIVES TRAINING DURING": "{source} receives instruction on building systems operation and maintenance during the owner training {target}",
+    "ADVERTISES DURING": "Public entity publishes solicitations and bid opportunities to the market during the bidding {target}",
+    "LEADS PRECONSTRUCTION DURING": "{source} drives schedule development, value engineering, and constructability reviews during preconstruction",
+    "MOBILIZES FOR": "{source} deploys personnel, equipment, and temporary facilities to the jobsite at the start of {target}",
+    "MANAGES COMPLETION DURING": "{source} coordinates punch list resolution, closeout documentation, and deficiency correction during a completion {target}",
+    "FINALIZES PAPERWORK DURING": "{source} assembles and submits all required contract closeout documentation including lien waivers and warranties",
+    "VALIDATES COSTS DURING": "{source}reviews estimates and cost proposals against market data during the estimating {target}",
+    "COORDINATES PLANNING DURING": "CM Agency facilitates coordination between owner, design team, and contractors during preconstruction planning",
+    "INTEGRATES DESIGN DURING": "Design-builder merges design development and construction planning into a unified delivery process",
+    "FAST-TRACKS DURING": "Design-builder overlaps fabrication procurement with ongoing design to compress the project schedule",
+    "OVERSEES FEASIBILITY DURING": "{source}evaluates project viability, site constraints, and delivery strategy during programming",
+    "MANAGES HANDOFF DURING": "{source}transition of the completed facility from construction team to owner operations",
+    "PRODUCES DOCUMENTS DURING": "{source} of record creates construction drawings and specifications during the design development {target}",
+    "REVIEWS SUBMITTALS DURING": "{source} reviews contractor submittals and shop drawings for conformance with design intent",
+    "ENGINEERS DURING": "Structural engineer designs foundation systems including footings, piles, and grade beams for the foundations {target}",
+    "DESIGNS CONNECTIONS FOR": "{source}connection designs and sequences for the structural steel erection {target}",
+    "RESOLVES CLASHES DURING": "{source}identifies and resolves spatial conflicts between mechanical, electrical, and plumbing systems above ceilings",
+    "SPECIFIES SYSTEMS FOR": "{source}defines equipment selections, duct sizing, and distribution layouts for HVAC installation",
+    "DESIGNS GRADING FOR": "{source} develops grading plans, cut-fill calculations, and drainage design for the earthwork {target}",
+    "DESIGNS SUPPRESSION FOR": "{source} designs sprinkler, standpipe, and suppression systems for the fire protection rough-in {target}",
+    "PROVIDES RECOMMENDATIONS FOR": "{source} delivers soil reports, bearing capacity data, and foundation type recommendations",
+    "CONTRIBUTES SITE DESIGN DURING": "Landscape architect develops site layout, hardscape, and planting plans during early programming",
+    "AUTHORS SPECIFICATIONS DURING": "{source}produces technical specification sections aligned with drawings during design development",
+    "SPECIFIES FIXTURES FOR": "Lighting designer selects luminaire types, circuiting layouts, and control sequences for electrical device installation",
+    "SPECIFIES ASSEMBLIES FOR": "{source}defines wall assembly STC ratings and isolation details for drywall and framing {target}s",
+    "DETAILS PERFORMANCE FOR": "Building envelope consultant specifies thermal, air, and moisture performance criteria for curtain wall systems",
+    "CERTIFIES PERFORMANCE DURING": "{source}verifies that installed systems meet LEED or green building performance targets",
+    "NAVIGATES APPROVALS DURING": "{source}plan review and approval process with the authority having jurisdiction",
+    "INSTALLS DURING": "{source} performs hands-on installation of their contracted scope during {target}",
+    "APPLIES FINISHES DURING": "{source} applies paint, wall coatings, or decorative finishes to prepared surfaces during the finishes {target}",
+    "CORRECTS DEFICIENCIES DURING": "{source} returns to site to repair or replace work items identified on the punch list",
+    "RESPONDS TO CALLBACKS DURING": "{source} addresses warranty claims and defective work reports during the warranty {target}",
+    "EXECUTES DEMOLITION DURING": "{source}carries out selective or full demolition with its own craft labor",
+    "POURS DURING": "Self-performing GC division places and finishes slab-on-grade concrete with its own craft workforce",
+    "SHIPS MATERIALS DURING": "{source} delivers specified construction materials to the jobsite during the ordering and delivery {target}",
+    "FURNISHES DOOR ASSEMBLIES FOR": "{source} delivers pre-hung door frames, hardware sets, and fire-rated assemblies for the doors and hardware {target}",
+    "FABRICATES ASSEMBLIES DURING": "{source} manufactures custom components such as structural steel, precast, or curtain wall units off-site",
+    "PROVIDES SHOP DRAWINGS DURING": "{source} produces detailed fabrication and erection drawings for architect review during the submittal {target}",
+    "SUPPLIES HEAVY EQUIPMENT FOR": "{source} provides excavators, loaders, and haul trucks for earthwork operations",
+    "PROVIDES CRANES FOR": "{source} furnishes tower cranes or mobile cranes required for structural steel erection",
+    "INSPECTS MASONRY DURING": "{source} verifies mortar joints, grout fills, and reinforcement placement in masonry construction",
+    "TESTS CONCRETE DURING": "{source}testing lab performs slump, air content, and compressive strength testing on placed concrete",
+    "PERFORMS COMPACTION TESTING DURING": "{source}testing lab conducts nuclear density or proof-roll testing to verify soil compaction during earthwork",
+    "CONDUCTS PRETESTING DURING": "{source} executes pre-functional checklists and point-to-point verification on MEP systems before startup",
+    "VERIFIES INTEGRATION DURING": "{source} tests cross-system interactions between HVAC, controls, fire alarm, and lighting during integrated testing",
+    "RETURNS FOR SEASONAL TESTING DURING": "{source} revisits the facility to test heating and cooling systems under actual seasonal load conditions",
+    "MONITORS ABATEMENT DURING": "{source}monitoring firm performs air sampling and clearance testing during hazardous material removal",
+    "ISSUES CERTIFICATE AFTER": "{source} issues the certificate of occupancy after satisfactory final inspection",
+    "INSPECTS SUPPRESSION DURING": "{source} inspects fire sprinkler and standpipe installation for code compliance during the rough-in {target}",
+    "INSPECTS FIXTURES DURING": "{source}inspects plumbing fixtures, backflow prevention, and sanitary connections for health code compliance",
+    "REGULATES HAZMAT DURING": "EPA or environmental agency oversees hazardous material handling, containment, and disposal during demolition",
+    "AUDITS COMPLIANCE DURING": "OSHA audits contractor safety programs, training records, and site conditions during safety orientation",
+    "REVIEWS ENTITLEMENTS DURING": "{source}reviews site plans, variances, and land-use entitlements during the permitting {target}",
+    "RELEASES FINAL DRAW AFTER": "Construction lender disburses the final loan draw after verifying project completion and lien waiver collection",
+    "UNDERWRITES BOND FOR": "{source} issues a bid bond guaranteeing the contractor will enter into the contract if awarded during bidding",
+    "BINDS COVERAGE FOR": "{source}activates builders risk and liability policies covering the project during site mobilization",
+    "ENERGIZES PERMANENT SERVICE DURING": "{source}connects and energizes the permanent electrical service for systems startup and testing",
+    "ACTIVATES GAS SERVICE DURING": "{source} installs the meter and activates natural gas service for HVAC equipment startup and trim-out",
+    "CONNECTS MAINS DURING": "{source}approves and connects building service lines to municipal mains during site utility work",
+    "PROVISIONS SERVICE FOR": "{source}provider installs fiber, cable, and network infrastructure for low voltage device activation",
+    "PEAKS DURING": "{source} count per project reaches its maximum headcount during a particular {target}",
+    "MEASURED DURING": "{source}coverage rate is calculated as the percentage of scopes with qualified bidders during buyout",
+    "VERIFIED BEFORE": "{source} insurance compliance is confirmed for all subcontractors before they are allowed to mobilize on site",
+    "BASELINED DURING": "{source} safety incident rate is established as a starting benchmark during safety orientation",
+    "TRACKED DURING": "{source}is monitored through submittal review turnaround times",
+    "RECONCILED DURING": "{source}rate by trade is tallied and resolved as part of contract closeout procedures"
+  }
+}

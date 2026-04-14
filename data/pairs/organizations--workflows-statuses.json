@@ -1,0 +1,300 @@
+{
+  "source": "organizations",
+  "target": "workflows-statuses",
+  "edges": [
+    [
+      "org-private-develope",
+      "ws-approved",
+      "AUTHORIZES"
+    ],
+    [
+      "org-private-develope",
+      "ws-sequential-appr",
+      "ESTABLISHES"
+    ],
+    [
+      "org-institutional-ow",
+      "ws-multi-stage",
+      "MANDATES"
+    ],
+    [
+      "org-institutional-ow",
+      "ws-appr-chain",
+      "CONFIGURES"
+    ],
+    [
+      "org-public-governmen",
+      "ws-sequential-appr",
+      "MANDATES"
+    ],
+    [
+      "org-public-governmen",
+      "ws-overdue-rate",
+      "AUDITS AGAINST"
+    ],
+    [
+      "org-gen-contr-gc",
+      "ws-ball-court",
+      "ASSIGNS"
+    ],
+    [
+      "org-gen-contr-gc",
+      "ws-submit-approve",
+      "ADMINISTERS"
+    ],
+    [
+      "org-gen-contr-gc",
+      "ws-escalation",
+      "TRIGGERS"
+    ],
+    [
+      "org-const-manager-at",
+      "ws-multi-stage",
+      "ADMINISTERS"
+    ],
+    [
+      "org-const-manager-at",
+      "ws-cost-stage",
+      "CONTROLS"
+    ],
+    [
+      "org-const-manager",
+      "ws-review-respond",
+      "MONITORS"
+    ],
+    [
+      "org-const-manager",
+      "ws-ball-court-aging",
+      "TRACKS"
+    ],
+    [
+      "org-design-builder",
+      "ws-parallel-review",
+      "COORDINATES"
+    ],
+    [
+      "org-design-builder",
+      "ws-draft",
+      "INITIATES"
+    ],
+    [
+      "org-program-manager",
+      "ws-workflow-complet",
+      "TRACKS"
+    ],
+    [
+      "org-program-manager",
+      "ws-escalation-rate",
+      "MONITORS"
+    ],
+    [
+      "org-architect-record",
+      "ws-approved-as",
+      "STAMPS"
+    ],
+    [
+      "org-architect-record",
+      "ws-revise-resubmit",
+      "RETURNS TO"
+    ],
+    [
+      "org-architect-record",
+      "ws-response-time",
+      "MEASURED BY"
+    ],
+    [
+      "org-struct-engineer",
+      "ws-approved",
+      "STAMPS"
+    ],
+    [
+      "org-struct-engineer",
+      "ws-rejected",
+      "ISSUES"
+    ],
+    [
+      "org-mep-engineer",
+      "ws-under-review",
+      "REVIEWS AT"
+    ],
+    [
+      "org-civil-engineer",
+      "ws-submitted",
+      "RECEIVES AT"
+    ],
+    [
+      "org-sub-trade",
+      "ws-submitted",
+      "SUBMITS AT"
+    ],
+    [
+      "org-sub-trade",
+      "ws-ball-court",
+      "HOLDS"
+    ],
+    [
+      "org-sub-trade",
+      "ws-overdue",
+      "FALLS TO"
+    ],
+    [
+      "org-self-performing",
+      "ws-inspect-disposit",
+      "UNDERGOES"
+    ],
+    [
+      "org-self-performing",
+      "ws-ready-review",
+      "STAGES AT"
+    ],
+    [
+      "org-mat-supplier",
+      "ws-hold",
+      "DELAYS AT"
+    ],
+    [
+      "org-mat-supplier",
+      "ws-due-date",
+      "COMMITTED TO"
+    ],
+    [
+      "org-fabricator",
+      "ws-progress",
+      "PRODUCES DURING"
+    ],
+    [
+      "org-fabricator",
+      "ws-submitted",
+      "DELIVERS AT"
+    ],
+    [
+      "org-special-insp",
+      "ws-inspect-disposit",
+      "PERFORMS"
+    ],
+    [
+      "org-special-insp",
+      "ws-conforming",
+      "CERTIFIES AS"
+    ],
+    [
+      "org-mat-testing-lab",
+      "ws-conforming",
+      "CERTIFIES AS"
+    ],
+    [
+      "org-cx-agent-cxa",
+      "ws-create-close",
+      "EXECUTES"
+    ],
+    [
+      "org-cx-agent-cxa",
+      "ws-workflow-step",
+      "ADVANCES THROUGH"
+    ],
+    [
+      "org-building-departm",
+      "ws-approved",
+      "GRANTS"
+    ],
+    [
+      "org-fire-marshal",
+      "ws-deficient",
+      "FLAGS AS"
+    ],
+    [
+      "org-osha-safety",
+      "ws-hold",
+      "ORDERS"
+    ],
+    [
+      "org-osha-safety",
+      "ws-closed",
+      "CLEARS AT"
+    ],
+    [
+      "org-const-lender",
+      "ws-revenue-stage",
+      "DISBURSES AT"
+    ],
+    [
+      "org-surety-bonding",
+      "ws-e-signature-req",
+      "BONDS VIA"
+    ],
+    [
+      "org-insurance-broker",
+      "ws-first-pass-appr",
+      "BENCHMARKS AGAINST"
+    ],
+    [
+      "org-design-team",
+      "ws-response-time",
+      "MEASURED BY"
+    ],
+    [
+      "org-sub-count-per",
+      "ws-dist-list",
+      "SIZED BY"
+    ],
+    [
+      "org-vendor-insurance",
+      "ws-overdue-rate",
+      "TRACKED BY"
+    ],
+    [
+      "org-sub-safety",
+      "ws-escalation-rate",
+      "CORRELATED WITH"
+    ],
+    [
+      "org-chg-order",
+      "ws-average-appr",
+      "MEASURED BY"
+    ]
+  ],
+  "verbGlossary": {
+    "AUTHORIZES": "{source} has final sign-off authority, granting {target} that allows work or payments to proceed.",
+    "ESTABLISHES": "{source}defines and sets up {target} pattern or approval chain for the project.",
+    "MANDATES": "{source}requires {target} pattern as a contractual or regulatory condition on the project.",
+    "CONFIGURES": "{source}sets the parameters, steps, and routing rules for {target} component.",
+    "AUDITS AGAINST": "{source} performance against {target} metric for compliance or governance purposes.",
+    "ASSIGNS": "{source} designates responsibility for an action item to a party vi{target}.",
+    "ADMINISTERS": "The organization manages and enforces {target} pattern or process on behalf of the project.",
+    "TRIGGERS": "{source}initiates this escalation or {target} event when conditions such as missed deadlines are met.",
+    "CONTROLS": "{source} has authority over this financial {target} stage, gating cost commitments or disbursements.",
+    "MONITORS": "{source}tracks {target} pattern or metric without direct approval authority.",
+    "TRACKS": "The organization uses {target} measure to monitor ongoing project performance over time.",
+    "COORDINATES": "The organization orchestrates this parallel or multi-party {target}, routing items to multiple reviewers simultaneously.",
+    "INITIATES": "{source}creates the first record in draft status, starting {target} lifecycle.",
+    "REVIEWS AT": "{source} performs technical or compliance review of submissions at {target}.",
+    "STAMPS": "{source} applies its professional seal or formal endorsement at {target}, certifying technical adequacy.",
+    "RETURNS TO": "{source}sends a submission back to this revision {target}, requiring corrections before re-review.",
+    "MEASURED BY": "{source}performance is quantified using {target} measure.",
+    "ISSUES": "{source} formally issues a rejection or deficiency notice at {target}.",
+    "RECEIVES AT": "{source} deliverables when they arrive at {target}.",
+    "SUBMITS AT": "{source} formally delivers its work product or documentation at this submission {target}.",
+    "HOLDS": "The organization currently owns the action item in {target} and is responsible for advancing it.",
+    "FALLS TO": "{source}have missed their deadlines and transitioned to this overdue {target}.",
+    "UNDERGOES": "{source}is subject to this inspection and {target}.",
+    "STAGES AT": "The organization prepares completed work at this ready-for-review {target} before formal inspection begins.",
+    "DELAYS AT": "{source}delivery issues cause items to stall at this on-hold {target}, blocking downstream work.",
+    "COMMITTED TO": "{source} is contractually bound to deliver by this due date {target} component.",
+    "PRODUCES DURING": "{source} fabricates or manufactures components while the item is in this in-progress {target}.",
+    "DELIVERS AT": "The organization ships or hands off completed materials when the item reaches this submission {target}.",
+    "PERFORMS": "{source} carries out the inspection or testing activity defined by {target} pattern.",
+    "CERTIFIES AS": "{source} formally attests that the inspected item meets requirements, marking it at this conforming {target}.",
+    "FLAGS AS": "{source}identifies a deficiency or non-conformance, marking the item at this deficient {target}.",
+    "EXECUTES": "{source} carries out the full create-and-close {target} cycle for commissioning or testing activities.",
+    "ADVANCES THROUGH": "The organization progresses work through individual steps in {target} sequence.",
+    "GRANTS": "{source} issues formal {target} or permit at this status, allowing construction to proceed.",
+    "ORDERS": "The regulatory authority directs a mandatory stop or hold at {target}, halting work until conditions are resolved.",
+    "CLEARS AT": "The regulatory authority lifts a hold or violation, allowing the item to reach this closed {target}.",
+    "DISBURSES AT": "{source}releases funds at this revenue or billing stage based on verified progress.",
+    "BONDS VIA": "{source} provides bonding certification through {target}.",
+    "BENCHMARKS AGAINST": "{source} performance against {target} metric as a risk or underwriting indicator.",
+    "SIZED BY": "{source}'s value is determined by the count or composition reflected in {target} component.",
+    "TRACKED BY": "{source} is monitored over time using {target} performance measure.",
+    "CORRELATED WITH": "{source} has a measurable relationship with {target} performance indicator."
+  }
+}

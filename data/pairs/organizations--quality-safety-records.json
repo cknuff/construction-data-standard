@@ -1,0 +1,467 @@
+{
+  "source": "organizations",
+  "target": "quality-safety-records",
+  "edges": [
+    [
+      "org-gen-contr-gc",
+      "qsr-safety-observati",
+      "INITIATES"
+    ],
+    [
+      "org-gen-contr-gc",
+      "qsr-quality-observat",
+      "INITIATES"
+    ],
+    [
+      "org-gen-contr-gc",
+      "qsr-insp",
+      "SCHEDULES"
+    ],
+    [
+      "org-gen-contr-gc",
+      "qsr-punch-item",
+      "MANAGES"
+    ],
+    [
+      "org-gen-contr-gc",
+      "qsr-incident",
+      "REPORTS"
+    ],
+    [
+      "org-gen-contr-gc",
+      "qsr-action-plan",
+      "DEVELOPS"
+    ],
+    [
+      "org-gen-contr-gc",
+      "qsr-corrective-actio",
+      "ASSIGNS"
+    ],
+    [
+      "org-gen-contr-gc",
+      "qsr-non-conformance",
+      "ISSUES"
+    ],
+    [
+      "org-gen-contr-gc",
+      "qsr-deficiency-notic",
+      "ISSUES"
+    ],
+    [
+      "org-const-manager-at",
+      "qsr-observation",
+      "INITIATES"
+    ],
+    [
+      "org-const-manager-at",
+      "qsr-insp",
+      "SCHEDULES"
+    ],
+    [
+      "org-const-manager",
+      "qsr-quality-observat",
+      "INITIATES"
+    ],
+    [
+      "org-design-builder",
+      "qsr-coord-issue-2",
+      "IDENTIFIES"
+    ],
+    [
+      "org-program-manager",
+      "qsr-action-plan",
+      "REVIEWS"
+    ],
+    [
+      "org-sub-trade",
+      "qsr-observation",
+      "RESPONSIBLE FOR"
+    ],
+    [
+      "org-sub-trade",
+      "qsr-safety-observati",
+      "CITED FOR"
+    ],
+    [
+      "org-sub-trade",
+      "qsr-quality-observat",
+      "CITED FOR"
+    ],
+    [
+      "org-sub-trade",
+      "qsr-punch-item",
+      "CORRECTS"
+    ],
+    [
+      "org-sub-trade",
+      "qsr-punch-item-issue",
+      "CORRECTS"
+    ],
+    [
+      "org-sub-trade",
+      "qsr-punch-item-2",
+      "COMPLETES"
+    ],
+    [
+      "org-sub-trade",
+      "qsr-insp-item",
+      "RESPONSIBLE FOR"
+    ],
+    [
+      "org-sub-trade",
+      "qsr-incident",
+      "INVOLVED IN"
+    ],
+    [
+      "org-sub-trade",
+      "qsr-incident-witness",
+      "PROVIDES"
+    ],
+    [
+      "org-sub-trade",
+      "qsr-corrective-actio",
+      "EXECUTES"
+    ],
+    [
+      "org-sub-trade",
+      "qsr-safety-violation",
+      "CITED FOR"
+    ],
+    [
+      "org-sub-trade",
+      "qsr-non-conformance",
+      "RESPONSIBLE FOR"
+    ],
+    [
+      "org-sub-trade",
+      "qsr-deficiency-notic",
+      "RECEIVES"
+    ],
+    [
+      "org-sub-trade",
+      "qsr-action-plan-line",
+      "EXECUTES"
+    ],
+    [
+      "org-sub-trade",
+      "qsr-coord-issue",
+      "RAISES"
+    ],
+    [
+      "org-self-performing",
+      "qsr-punch-item",
+      "CORRECTS"
+    ],
+    [
+      "org-self-performing",
+      "qsr-safety-violation",
+      "CITED FOR"
+    ],
+    [
+      "org-special-insp",
+      "qsr-third-party",
+      "CONDUCTS"
+    ],
+    [
+      "org-special-insp",
+      "qsr-insp-item",
+      "EVALUATES"
+    ],
+    [
+      "org-special-insp",
+      "qsr-mat-test-report",
+      "WITNESSES"
+    ],
+    [
+      "org-mat-testing-lab",
+      "qsr-mat-test-report",
+      "PERFORMS"
+    ],
+    [
+      "org-mat-testing-lab",
+      "qsr-insp-item",
+      "TESTS"
+    ],
+    [
+      "org-cx-agent-cxa",
+      "qsr-system-perf-test",
+      "CONDUCTS"
+    ],
+    [
+      "org-cx-agent-cxa",
+      "qsr-enviro-cx",
+      "INITIATES"
+    ],
+    [
+      "org-enviro-monitorin",
+      "qsr-enviro-cx",
+      "MONITORS"
+    ],
+    [
+      "org-enviro-monitorin",
+      "qsr-mat-test-report",
+      "PERFORMS"
+    ],
+    [
+      "org-building-departm",
+      "qsr-scheduled-insp",
+      "CONDUCTS"
+    ],
+    [
+      "org-building-departm",
+      "qsr-insp-item",
+      "EVALUATES"
+    ],
+    [
+      "org-fire-marshal",
+      "qsr-scheduled-insp",
+      "CONDUCTS"
+    ],
+    [
+      "org-fire-marshal",
+      "qsr-safety-violation",
+      "ISSUES"
+    ],
+    [
+      "org-fire-marshal",
+      "qsr-system-perf-test",
+      "WITNESSES"
+    ],
+    [
+      "org-health-departmen",
+      "qsr-safety-violation",
+      "ISSUES"
+    ],
+    [
+      "org-enviro-epa",
+      "qsr-enviro-cx",
+      "INSPECTS"
+    ],
+    [
+      "org-enviro-epa",
+      "qsr-safety-violation",
+      "ISSUES"
+    ],
+    [
+      "org-osha-safety",
+      "qsr-safety-observati",
+      "INSPECTS"
+    ],
+    [
+      "org-osha-safety",
+      "qsr-safety-violation",
+      "ISSUES"
+    ],
+    [
+      "org-osha-safety",
+      "qsr-incident",
+      "INVESTIGATES"
+    ],
+    [
+      "org-osha-safety",
+      "qsr-incident-record",
+      "REVIEWS"
+    ],
+    [
+      "org-osha-safety",
+      "qsr-corrective-actio",
+      "MANDATES"
+    ],
+    [
+      "org-architect-record",
+      "qsr-punch-item",
+      "INSPECTS"
+    ],
+    [
+      "org-architect-record",
+      "qsr-punch-item-issue",
+      "CATEGORIZES"
+    ],
+    [
+      "org-architect-record",
+      "qsr-coord-issue-2",
+      "IDENTIFIES"
+    ],
+    [
+      "org-struct-engineer",
+      "qsr-third-party",
+      "REVIEWS"
+    ],
+    [
+      "org-struct-engineer",
+      "qsr-coord-issue",
+      "IDENTIFIES"
+    ],
+    [
+      "org-mep-engineer",
+      "qsr-coord-issue",
+      "IDENTIFIES"
+    ],
+    [
+      "org-mep-engineer",
+      "qsr-system-perf-test",
+      "REVIEWS"
+    ],
+    [
+      "org-fire-prot",
+      "qsr-system-perf-test",
+      "REVIEWS"
+    ],
+    [
+      "org-geotechnical-eng",
+      "qsr-mat-test-report",
+      "REVIEWS"
+    ],
+    [
+      "org-building-envelop",
+      "qsr-quality-observat",
+      "INITIATES"
+    ],
+    [
+      "org-code-consultant",
+      "qsr-non-conformance",
+      "IDENTIFIES"
+    ],
+    [
+      "org-sustainability-l",
+      "qsr-enviro-cx",
+      "INITIATES"
+    ],
+    [
+      "org-private-develope",
+      "qsr-punch-item-2",
+      "ACCEPTS"
+    ],
+    [
+      "org-institutional-ow",
+      "qsr-punch-item-2",
+      "ACCEPTS"
+    ],
+    [
+      "org-institutional-ow",
+      "qsr-incident",
+      "NOTIFIED OF"
+    ],
+    [
+      "org-public-governmen",
+      "qsr-scheduled-insp",
+      "MANDATES"
+    ],
+    [
+      "org-fabricator",
+      "qsr-mat-test-report",
+      "PROVIDES"
+    ],
+    [
+      "org-fabricator",
+      "qsr-third-party",
+      "SUBMITS TO"
+    ],
+    [
+      "org-mat-supplier",
+      "qsr-mat-test-report",
+      "PROVIDES"
+    ],
+    [
+      "org-insurance-broker",
+      "qsr-incident",
+      "NOTIFIED OF"
+    ],
+    [
+      "org-surety-bonding",
+      "qsr-safety-violation",
+      "NOTIFIED OF"
+    ],
+    [
+      "org-sub-safety",
+      "qsr-total-recordable",
+      "BENCHMARKED AGAINST"
+    ],
+    [
+      "org-sub-safety",
+      "qsr-dart-rate",
+      "BENCHMARKED AGAINST"
+    ],
+    [
+      "org-sub-safety",
+      "qsr-hazard-recurrenc",
+      "BENCHMARKED AGAINST"
+    ],
+    [
+      "org-sub-safety",
+      "qsr-near-miss-ratio",
+      "BENCHMARKED AGAINST"
+    ],
+    [
+      "org-trade-coverage",
+      "qsr-observation-dens",
+      "CORRELATES WITH"
+    ],
+    [
+      "org-trade-coverage",
+      "qsr-deficiency-rate",
+      "CORRELATES WITH"
+    ],
+    [
+      "org-sub-count-per",
+      "qsr-punch-item-3",
+      "CORRELATES WITH"
+    ],
+    [
+      "org-design-team",
+      "qsr-observation-reso",
+      "MEASURED BY"
+    ],
+    [
+      "org-design-team",
+      "qsr-corrective-actio-2",
+      "MEASURED BY"
+    ],
+    [
+      "org-chg-order",
+      "qsr-rework-cost",
+      "CORRELATES WITH"
+    ],
+    [
+      "org-chg-order",
+      "qsr-insp-pass-rate",
+      "CORRELATES WITH"
+    ]
+  ],
+  "verbGlossary": {
+    "ACCEPTS": "{source} or client formally accepts completed {target} resolution or closeout deliverable",
+    "ASSIGNS": "{source} or CM delegates {target} to the responsible party for resolution",
+    "BENCHMARKED AGAINST": "{source}measure compared against an industry or portfolio safety metric",
+    "CATEGORIZES": "{source}classifies {target} by issue type during walk-through",
+    "CITED FOR": "{source} formally identified as the responsible party on a safety or {target}",
+    "COMPLETES": "{source} finishes {target} resolution and returns it for re-inspection",
+    "CONDUCTS": "{source} physically performs an {target}, test, or commissioning activity on site",
+    "CORRECTS": "{source} remediates {target}, punch item, or non-conforming work",
+    "CORRELATES WITH": "{source}measure statistically relates to a quality or safety metric",
+    "DEVELOPS": "{source} creates an action plan or corrective strategy in response to findings",
+    "EVALUATES": "{source} or authority reviews individual {target} checklist items for pass/fail status",
+    "EXECUTES": "{source} carries out the assigned {target} or action plan task",
+    "IDENTIFIES": "{source} discovers and documents a coordination issue, {target}, or design conflict",
+    "INITIATES": "{source} creates a new observation, finding, or {target} in the system",
+    "INSPECTS": "{source} performs a formal review of work in place against code, spec, or safety standards",
+    "INVESTIGATES": "Regulatory authority or safety team conducts a formal inquiry into an incident",
+    "INVOLVED IN": "{source} has personnel or work connected to a reported {target}",
+    "ISSUES": "{source} or responsible party formally issues {target}, deficiency notice, or NCR",
+    "MANAGES": "{source} oversees the full lifecycle of a quality or {target} from open to close",
+    "MANDATES": "{source}requires {target} or scheduled inspection by code or law",
+    "MEASURED BY": "{source}performance metric derived from quality or {target} data",
+    "MONITORS": "{source} performs ongoing surveillance of environmental or commissioning conditions",
+    "NOTIFIED OF": "{source} formally informed of an incident, violation, or significant {target}",
+    "PERFORMS": "Testing lab or monitoring firm executes the physical test and produces the report",
+    "PROVIDES": "{source} or fabricator furnishes test reports, mill certs, or witness statements as documentation",
+    "RAISES": "{source} flags a coordination or constructability issue for resolution",
+    "RECEIVES": "{source} receives a formal {target} notice requiring response or corrective action",
+    "REPORTS": "{source} creates and submits an {target} report to the appropriate authorities or owner",
+    "RESPONSIBLE FOR": "{source} identified as the accountable party for an {target}, deficiency, or NCR",
+    "REVIEWS": "{source} evaluates {target}, test report, or non-conformance for acceptance or disposition",
+    "SCHEDULES": "{source} or CM sets the date and scope for a planned {target} or third-party visit",
+    "SUBMITS TO": "{source} presents work or materials for third-party or special {target}",
+    "TESTS": "Testing lab performs physical tests on materials or assemblies against specification requirements",
+    "WITNESSES": "{source} is present during a test or {target} to verify procedures and results"
+  }
+}

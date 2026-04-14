@@ -1,0 +1,368 @@
+{
+  "source": "contracts-procurement",
+  "target": "field-operations",
+  "edges": [
+    [
+      "cp-prequalification",
+      "fo-safety-violation",
+      "SCREENS AGAINST"
+    ],
+    [
+      "cp-prequalification",
+      "fo-manpower-log",
+      "VERIFIES CAPACITY VIA"
+    ],
+    [
+      "cp-bid-package",
+      "fo-scheduled-work",
+      "SCOPED AROUND"
+    ],
+    [
+      "cp-bid-package",
+      "fo-budgeted-product",
+      "QUANTIFIED BY"
+    ],
+    [
+      "cp-req-proposal",
+      "fo-equip-master",
+      "SPECIFIES EQUIPMENT IN"
+    ],
+    [
+      "cp-req-proposal",
+      "fo-manpower-log",
+      "REQUESTS STAFFING PER"
+    ],
+    [
+      "cp-proposal-bid",
+      "fo-productivity-log",
+      "PRICED FROM"
+    ],
+    [
+      "cp-proposal-bid",
+      "fo-quantity-log",
+      "ESTIMATED AGAINST"
+    ],
+    [
+      "cp-bid-evaluation",
+      "fo-field-productivi",
+      "SCORED RELATIVE TO"
+    ],
+    [
+      "cp-award-notice",
+      "fo-daily-log-header",
+      "INITIATES"
+    ],
+    [
+      "cp-award-notice",
+      "fo-workforce-req",
+      "MOBILIZES"
+    ],
+    [
+      "cp-award-notice",
+      "fo-assignment",
+      "TRIGGERS"
+    ],
+    [
+      "cp-subcontract",
+      "fo-manpower-log",
+      "GOVERNS"
+    ],
+    [
+      "cp-subcontract",
+      "fo-timecard-entry",
+      "AUTHORIZES"
+    ],
+    [
+      "cp-subcontract",
+      "fo-daily-log-note",
+      "DOCUMENTED IN"
+    ],
+    [
+      "cp-subcontract",
+      "fo-scheduled-work",
+      "DIRECTS"
+    ],
+    [
+      "cp-subcontract",
+      "fo-crew-crew",
+      "CREWS PER"
+    ],
+    [
+      "cp-subcontract",
+      "fo-safety-violation",
+      "ENFORCES COMPLIANCE ON"
+    ],
+    [
+      "cp-purchase-order",
+      "fo-dlvy-log-entry",
+      "FULFILLED THROUGH"
+    ],
+    [
+      "cp-purchase-order",
+      "fo-mat-shipment",
+      "DISPATCHES"
+    ],
+    [
+      "cp-purchase-order",
+      "fo-mat-receipt",
+      "RECEIVED AGAINST"
+    ],
+    [
+      "cp-purchase-order",
+      "fo-delay-log-entry",
+      "DELAYED PER"
+    ],
+    [
+      "cp-prime-contract",
+      "fo-daily-report",
+      "REQUIRES"
+    ],
+    [
+      "cp-prime-contract",
+      "fo-daily-log-insp",
+      "MANDATES"
+    ],
+    [
+      "cp-prime-contract",
+      "fo-waste-diversion",
+      "STIPULATES TARGET FOR"
+    ],
+    [
+      "cp-master-service",
+      "fo-equip-log-entry",
+      "PROVISIONS"
+    ],
+    [
+      "cp-master-service",
+      "fo-equip-timecard",
+      "BILLED THROUGH"
+    ],
+    [
+      "cp-scope-work",
+      "fo-quantity-log",
+      "MEASURED BY"
+    ],
+    [
+      "cp-scope-work",
+      "fo-actual-productio",
+      "VERIFIED THROUGH"
+    ],
+    [
+      "cp-scope-work",
+      "fo-productivity-log",
+      "TRACKED AGAINST"
+    ],
+    [
+      "cp-gen-cond",
+      "fo-weather-log",
+      "PRESCRIBES RECORDING OF"
+    ],
+    [
+      "cp-gen-cond",
+      "fo-visitor-log",
+      "REQUIRES LOGGING IN"
+    ],
+    [
+      "cp-gen-cond",
+      "fo-daily-log-2",
+      "MANDATES COMPLIANCE WITH"
+    ],
+    [
+      "cp-retainage-terms",
+      "fo-field-productivi",
+      "RELEASED UPON"
+    ],
+    [
+      "cp-retainage-terms",
+      "fo-plan-percent",
+      "BENCHMARKED AGAINST"
+    ],
+    [
+      "cp-liquidated-damag",
+      "fo-delay-log-entry",
+      "ASSESSED FROM"
+    ],
+    [
+      "cp-liquidated-damag",
+      "fo-weather-delay",
+      "EXCUSED BY"
+    ],
+    [
+      "cp-liquidated-damag",
+      "fo-delay-frequency",
+      "CALCULATED FROM"
+    ],
+    [
+      "cp-allowance",
+      "fo-t-m-ticket",
+      "DRAWN DOWN VIA"
+    ],
+    [
+      "cp-allowance",
+      "fo-t-m-mat-entry",
+      "CONSUMED BY"
+    ],
+    [
+      "cp-perf-bond",
+      "fo-daily-log-header",
+      "COVERS WORK IN"
+    ],
+    [
+      "cp-perf-bond",
+      "fo-accident-log",
+      "INDEMNIFIES AGAINST"
+    ],
+    [
+      "cp-insurance-cert",
+      "fo-equip-master",
+      "COVERS"
+    ],
+    [
+      "cp-insurance-cert",
+      "fo-employee-record",
+      "INSURES"
+    ],
+    [
+      "cp-builders-risk",
+      "fo-mat-receipt",
+      "PROTECTS"
+    ],
+    [
+      "cp-warranty",
+      "fo-daily-log-insp",
+      "INSPECTED DURING"
+    ],
+    [
+      "cp-warranty",
+      "fo-const-report",
+      "DOCUMENTED THROUGH"
+    ],
+    [
+      "cp-substantial-comp",
+      "fo-daily-log-header",
+      "CERTIFIED FROM"
+    ],
+    [
+      "cp-substantial-comp",
+      "fo-plan-percent",
+      "CONFIRMED AT"
+    ],
+    [
+      "cp-final-completion",
+      "fo-daily-report",
+      "CLOSES"
+    ],
+    [
+      "cp-final-completion",
+      "fo-dumpster-log",
+      "CLEARS"
+    ],
+    [
+      "cp-prevailing-wage",
+      "fo-timecard-entry",
+      "APPLIED TO"
+    ],
+    [
+      "cp-prevailing-wage",
+      "fo-t-m-labor-entry",
+      "ENFORCED ON"
+    ],
+    [
+      "cp-diversity-dbe",
+      "fo-manpower-log",
+      "TRACKED ACROSS"
+    ],
+    [
+      "cp-closeout-doc",
+      "fo-daily-report",
+      "COMPILED FROM"
+    ],
+    [
+      "cp-closeout-doc",
+      "fo-plan-revision",
+      "ASSEMBLES"
+    ],
+    [
+      "cp-insurance-comp",
+      "fo-employee-record",
+      "VERIFIED AGAINST"
+    ],
+    [
+      "cp-chg-order-rate",
+      "fo-t-m-ticket",
+      "MONITORED VIA"
+    ],
+    [
+      "cp-chg-order-rate",
+      "fo-delay-frequency",
+      "CORRELATES WITH"
+    ],
+    [
+      "cp-sub-retention",
+      "fo-field-productivi",
+      "GAUGED FROM"
+    ]
+  ],
+  "verbGlossary": {
+    "SCREENS AGAINST": "Prequalification evaluation considers a subcontractor's past {target} history before allowing them to bid",
+    "VERIFIES CAPACITY VIA": "{source} required {target} by reviewing historical manpower records",
+    "SCOPED AROUND": "{source} work boundaries defined to align with scheduled work log entries for discrete scopes",
+    "QUANTIFIED BY": "{source} quantities derived from budgeted production targets that define expected output",
+    "SPECIFIES EQUIPMENT IN": "{source}required equipment that bidders must demonstrate access to",
+    "REQUESTS STAFFING PER": "{source} staffing requirements reference historical {target} levels needed for comparable work",
+    "PRICED FROM": "{source}prices built up from actual productivity rates observed on prior projects",
+    "ESTIMATED AGAINST": "Bid quantities estimated against field-measured {target}s from similar completed work",
+    "SCORED RELATIVE TO": "{source} scores proposers based on demonstrated field productivity on comparable projects",
+    "INITIATES": "{source} triggers the start of {target} documentation for the newly mobilized subcontractor",
+    "MOBILIZES": "{source} activates {target} requests to bring the subcontractor's labor force to the jobsite",
+    "TRIGGERS": "{source} creates field assignments that deploy the awarded contractor's personnel to specific tasks",
+    "GOVERNS": "{source} terms govern how many workers the subcontractor must maintain as recorded in {target}s",
+    "AUTHORIZES": "{source} establishes the billing rates and labor classifications that {target} entries must follow",
+    "DOCUMENTED IN": "{source} performance and daily progress noted in {target} entries by the superintendent",
+    "DIRECTS": "{source} scope of work directs which scheduled work items the subcontractor is responsible for executing",
+    "CREWS PER": "{source} staffing commitments sized to match {target} compositions required for each work activity",
+    "ENFORCES COMPLIANCE ON": "{source} safety clauses enforce compliance standards that {target} logs track against",
+    "FULFILLED THROUGH": "{source} delivery obligations fulfilled through receiving entries in {target}",
+    "DISPATCHES": "{source} triggers material shipments from the supplier to the jobsite",
+    "RECEIVED AGAINST": "{source}recorded in the field verified against the purchase order quantities and specifications",
+    "DELAYED PER": "{source} delivery failures documented as {target} entries when materials arrive late",
+    "REQUIRES": "{source} requires {target} to the owner documenting field progress",
+    "MANDATES": "{source} mandates {target} entries to verify work meets contract quality standards",
+    "STIPULATES TARGET FOR": "{source} sustainability clauses stipulate waste diversion rate targets the project must achieve",
+    "PROVISIONS": "{source} provisions the use of specific equipment types logged on the project",
+    "BILLED THROUGH": "{source}costs billed through equipment {target} entries that record hours of use",
+    "MEASURED BY": "{source} completion measured by field {target} entries that track installed quantities",
+    "VERIFIED THROUGH": "{source} deliverables verified through actual production quantities recorded in the field",
+    "TRACKED AGAINST": "{source} progress tracked against {target} entries comparing planned versus actual output",
+    "PRESCRIBES RECORDING OF": "{source} prescribe weather documentation requirements that {target} entries must satisfy",
+    "REQUIRES LOGGING IN": "{source} require all site visitors to be logged in {target} for security and liability",
+    "MANDATES COMPLIANCE WITH": "{source} mandate a minimum {target} completion rate to ensure consistent field documentation",
+    "RELEASED UPON": "{source} funds released upon demonstrated field productivity reaching contractual thresholds",
+    "BENCHMARKED AGAINST": "{source} release milestones benchmarked against plan percent complete to confirm sufficient progress",
+    "ASSESSED FROM": "{source}calculated from {target} entries that document days lost to contractor-caused delays",
+    "EXCUSED BY": "{source} defined weather allowance",
+    "CALCULATED FROM": "{source}calculated from the cumulative delay frequency over {target} period",
+    "DRAWN DOWN VIA": "{source} allowance dollars drawn down via approved {target}s for work performed under allowance scope",
+    "CONSUMED BY": "{source} funds consumed by {target} material entries for unforeseen material needs during construction",
+    "COVERS WORK IN": "{source} coverage extends to all work documented in daily logs during {target} period",
+    "INDEMNIFIES AGAINST": "{source} indemnifies the owner against losses from jobsite accidents caused by bonded contractor",
+    "COVERS": "{source} coverage for equipment deployed on the project",
+    "INSURES": "{source}provides workers' compensation coverage for employees recorded on the project",
+    "PROTECTS": "{source} policy protects materials received and stored on site against damage or theft",
+    "INSPECTED DURING": "{source} obligations verified through {target} entries during the warranty walkthrough period",
+    "DOCUMENTED THROUGH": "{source} claims and repairs documented through construction report entries during the warranty period",
+    "CERTIFIED FROM": "{source}certified from {target} records confirming the project is fit for intended use",
+    "CONFIRMED AT": "{source} required threshold",
+    "CLOSES": "{source}requirement for {target} on the project",
+    "CLEARS": "{source}requires clearing all dumpsters and waste from the site as documented in dumpster logs",
+    "APPLIED TO": "{source} rates applied to every {target} entry on public works projects for labor compliance",
+    "ENFORCED ON": "{source} requirements enforced on {target} labor entries to ensure proper classification and rates",
+    "TRACKED ACROSS": "{source}tracked across {target} entries to verify subcontractor workforce diversity",
+    "COMPILED FROM": "{source}document package compiled from {target}s that provide the complete field activity record",
+    "ASSEMBLES": "{source}plan revision receipts to document the final as-built design state",
+    "VERIFIED AGAINST": "{source}rate verified against employee records to confirm all on-site workers are covered",
+    "MONITORED VIA": "{source} rate monitored vi{target} volume as an early indicator of scope growth in the field",
+    "CORRELATES WITH": "{source} rate correlated with delay frequency to identify whether scope changes are driving field delays",
+    "GAUGED FROM": "{source}or retention rate gauged from field productivity records to assess ongoing trade performance"
+  }
+}

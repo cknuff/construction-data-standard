@@ -1,0 +1,217 @@
+{
+  "source": "resources",
+  "target": "workflows-statuses",
+  "edges": [
+    [
+      "res-crane",
+      "ws-pending",
+      "AWAITS CLEARANCE AT"
+    ],
+    [
+      "res-crane",
+      "ws-approved",
+      "MOBILIZED UPON"
+    ],
+    [
+      "res-crane",
+      "ws-inspect-disposit",
+      "CERTIFIED THROUGH"
+    ],
+    [
+      "res-earthmover",
+      "ws-progress",
+      "OPERATES DURING"
+    ],
+    [
+      "res-earthmover",
+      "ws-hold",
+      "IDLES DURING"
+    ],
+    [
+      "res-piling",
+      "ws-approved",
+      "DISPATCHED UPON"
+    ],
+    [
+      "res-piling",
+      "ws-inspect-disposit",
+      "LOAD-TESTED VIA"
+    ],
+    [
+      "res-access",
+      "ws-deficient",
+      "TAGGED AT"
+    ],
+    [
+      "res-access",
+      "ws-conforming",
+      "CLEARED AT"
+    ],
+    [
+      "res-safety",
+      "ws-inspect-disposit",
+      "CONDUCTS"
+    ],
+    [
+      "res-safety",
+      "ws-deficient",
+      "ISSUES FINDING AT"
+    ],
+    [
+      "res-safety",
+      "ws-escalation",
+      "TRIGGERS"
+    ],
+    [
+      "res-qc",
+      "ws-ready-review",
+      "INSPECTS AT"
+    ],
+    [
+      "res-qc",
+      "ws-conforming",
+      "SIGNS OFF AT"
+    ],
+    [
+      "res-qc",
+      "ws-deficient",
+      "REJECTS AT"
+    ],
+    [
+      "res-qc",
+      "ws-revise-resubmit",
+      "REQUIRES REWORK VIA"
+    ],
+    [
+      "res-cxa",
+      "ws-sequential-appr",
+      "VERIFIES THROUGH"
+    ],
+    [
+      "res-cxa",
+      "ws-closed",
+      "COMMISSIONS AT"
+    ],
+    [
+      "res-electrician",
+      "ws-ready-review",
+      "REQUESTS INSPECTION AT"
+    ],
+    [
+      "res-electrician",
+      "ws-revise-resubmit",
+      "CORRECTS DEFICIENCY VIA"
+    ],
+    [
+      "res-plumber",
+      "ws-ready-review",
+      "REQUESTS INSPECTION AT"
+    ],
+    [
+      "res-plumber",
+      "ws-conforming",
+      "PASSES INSPECTION AT"
+    ],
+    [
+      "res-sprinkler",
+      "ws-approved",
+      "CHARGED UPON"
+    ],
+    [
+      "res-sprinkler",
+      "ws-inspect-disposit",
+      "PRESSURE-TESTED VIA"
+    ],
+    [
+      "mat-concrete",
+      "ws-submitted",
+      "BATCHED UPON"
+    ],
+    [
+      "mat-concrete",
+      "ws-approved-as",
+      "ACCEPTED WITH CONDITIONS AT"
+    ],
+    [
+      "mat-steel",
+      "ws-submitted",
+      "SUBMITTED FOR APPROVAL AT"
+    ],
+    [
+      "mat-steel",
+      "ws-approved",
+      "FABRICATED UPON"
+    ],
+    [
+      "mat-steel",
+      "ws-rejected",
+      "RETURNED TO MILL AT"
+    ],
+    [
+      "res-surveyor",
+      "ws-progress",
+      "STAKES LAYOUT DURING"
+    ],
+    [
+      "res-operator",
+      "ws-overdue",
+      "DEMOBILIZED AT"
+    ],
+    [
+      "res-operator",
+      "ws-due-date",
+      "SCHEDULED BY"
+    ],
+    [
+      "mat-roofing",
+      "ws-under-review",
+      "HELD FOR SUBMITTAL DURING"
+    ],
+    [
+      "mat-hvac-equip",
+      "ws-overdue",
+      "BACK-ORDERED AT"
+    ],
+    [
+      "mat-hvac-equip",
+      "ws-approved",
+      "RELEASED FOR INSTALL UPON"
+    ]
+  ],
+  "verbGlossary": {
+    "AWAITS CLEARANCE AT": "{source}is staged on site but cannot begin work until this {target} is resolved by the responsible party.",
+    "MOBILIZED UPON": "{source} or crew is transported to the jobsite and made operational once {target} is reached.",
+    "CERTIFIED THROUGH": "{source} or load certification through this inspection and {target}.",
+    "OPERATES DURING": "{source} is actively running and performing work while the task holds this in-progress {target}.",
+    "IDLES DURING": "The equipment sits unused on site, accumulating standby costs, while work is paused at this hold {target}.",
+    "DISPATCHED UPON": "{source}is sent to the work area and begins operations once the required {target} is granted.",
+    "LOAD-TESTED VIA": "{source}test as part of this inspection and {target} before being put into service.",
+    "TAGGED AT": "{source} or scaffold is physically tagged as out-of-service when an inspection finds it at this deficient {target}.",
+    "CLEARED AT": "{source} or access platform passes inspection and is marked safe for use at this conforming {target}.",
+    "CONDUCTS": "{source} professional performs or leads this inspection and {target} as the responsible party.",
+    "ISSUES FINDING AT": "{source}inspector documents a non-conformance or hazard when the inspected item is dispositioned at this deficient {target}.",
+    "TRIGGERS": "{source}initiates this escalation {target}, alerting supervisors or safety managers.",
+    "INSPECTS AT": "{source}inspector examines installed work when it reaches this ready-for-review {target} in the inspection workflow.",
+    "SIGNS OFF AT": "{source}inspector formally approves the work by marking it conforming, allowing the next trade to proceed.",
+    "REJECTS AT": "{source}inspector fails the installed work at this deficient {target}, requiring the responsible trade to correct and re-present.",
+    "REQUIRES REWORK VIA": "{source}inspector's rejection routes the work back through this revise-and-resubmit cycle until it meets specification.",
+    "VERIFIES THROUGH": "{source} agent validates system performance by stepping through each stage of this sequential {target}.",
+    "COMMISSIONS AT": "{source} agent completes final system acceptance and the commissioning record reaches this closed {target}.",
+    "REQUESTS INSPECTION AT": "{source} worker notifies QC that their installed work is complete and ready for review at {target}.",
+    "CORRECTS DEFICIENCY VIA": "{source} worker fixes rejected work and resubmits it through this revise-and-resubmit cycle for re-inspection.",
+    "PASSES INSPECTION AT": "{source}installed work meets specification and is dispositioned at this conforming {target} by the inspector.",
+    "CHARGED UPON": "{source}is formally authorized for billing once {target} is reached on the associated change or task.",
+    "PRESSURE-TESTED VIA": "{source}fire protection system undergoes hydrostatic pressure testing as part of this inspection and {target}.",
+    "BATCHED UPON": "{source} or shop drawing package is submitted for review at {target} before production or delivery begins.",
+    "ACCEPTED WITH CONDITIONS AT": "{source}submitted material is approved with noted exceptions or required modifications at this approved-as-noted {target}.",
+    "SUBMITTED FOR APPROVAL AT": "The material's shop drawings, mill certs, or product data are formally submitted at {target} for engineer review.",
+    "FABRICATED UPON": "{source} is released for off-site fabrication or manufacturing once it achieves this approved {target}.",
+    "RETURNED TO MILL AT": "{source} is rejected and sent back to the fabricator or supplier at {target} for redesign or re-sourcing.",
+    "STAKES LAYOUT DURING": "{source} establishes control points and marks building lines on site while the layout task is in this active {target}.",
+    "DEMOBILIZED AT": "{source} or crew is removed from the project when the associated task has exceeded its deadline at this overdue {target}.",
+    "SCHEDULED BY": "{source}is governed by this due date {target} component.",
+    "HELD FOR SUBMITTAL DURING": "{source} or installed until its submittal clears this under-review {target} in the approval workflow.",
+    "BACK-ORDERED AT": "{source} delivery has missed its required date and the procurement item has escalated to this overdue {target}.",
+    "RELEASED FOR INSTALL UPON": "{source} is cleared from the staging area and authorized for field installation once it reaches this approved {target}."
+  }
+}

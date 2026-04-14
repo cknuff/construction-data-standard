@@ -1,0 +1,365 @@
+{
+  "source": "field-operations",
+  "target": "organizations",
+  "edges": [
+    [
+      "fo-daily-log-header",
+      "org-gen-contr-gc",
+      "OPENED BY"
+    ],
+    [
+      "fo-daily-log-header",
+      "org-const-manager-at",
+      "REVIEWED BY"
+    ],
+    [
+      "fo-daily-log-note",
+      "org-sub-trade",
+      "DOCUMENTS WORK OF"
+    ],
+    [
+      "fo-daily-log-note",
+      "org-gen-contr-gc",
+      "AUTHORED BY"
+    ],
+    [
+      "fo-phone-call-log",
+      "org-architect-record",
+      "PLACED TO"
+    ],
+    [
+      "fo-phone-call-log",
+      "org-gen-contr-gc",
+      "LOGGED BY"
+    ],
+    [
+      "fo-plan-revision",
+      "org-architect-record",
+      "ISSUED BY"
+    ],
+    [
+      "fo-plan-revision",
+      "org-sub-trade",
+      "ACKNOWLEDGED BY"
+    ],
+    [
+      "fo-manpower-log",
+      "org-sub-trade",
+      "REPORTS HEADCOUNT FOR"
+    ],
+    [
+      "fo-manpower-log",
+      "org-gen-contr-gc",
+      "TALLIED BY"
+    ],
+    [
+      "fo-const-report",
+      "org-gen-contr-gc",
+      "FILED BY"
+    ],
+    [
+      "fo-const-report",
+      "org-private-develope",
+      "SUBMITTED TO"
+    ],
+    [
+      "fo-const-report",
+      "org-const-lender",
+      "FURNISHED TO"
+    ],
+    [
+      "fo-timecard-entry",
+      "org-sub-trade",
+      "CLOCKED BY"
+    ],
+    [
+      "fo-employee-record",
+      "org-gen-contr-gc",
+      "EMPLOYED BY"
+    ],
+    [
+      "fo-employee-record",
+      "org-osha-safety",
+      "CERTIFIED THROUGH"
+    ],
+    [
+      "fo-crew-crew",
+      "org-sub-trade",
+      "STAFFED BY"
+    ],
+    [
+      "fo-crew-crew",
+      "org-gen-contr-gc",
+      "DISPATCHED BY"
+    ],
+    [
+      "fo-equip-log-entry",
+      "org-equip-rental",
+      "RENTED FROM"
+    ],
+    [
+      "fo-equip-log-entry",
+      "org-gen-contr-gc",
+      "TRACKED BY"
+    ],
+    [
+      "fo-equip-timecard",
+      "org-sub-trade",
+      "OPERATED BY"
+    ],
+    [
+      "fo-dlvy-log-entry",
+      "org-mat-supplier",
+      "SHIPPED BY"
+    ],
+    [
+      "fo-dlvy-log-entry",
+      "org-gen-contr-gc",
+      "RECEIVED BY"
+    ],
+    [
+      "fo-mat-shipment",
+      "org-fabricator",
+      "FABRICATED BY"
+    ],
+    [
+      "fo-mat-receipt",
+      "org-gen-contr-gc",
+      "INSPECTED BY"
+    ],
+    [
+      "fo-mat-receipt",
+      "org-mat-testing-lab",
+      "SAMPLED BY"
+    ],
+    [
+      "fo-weather-log",
+      "org-gen-contr-gc",
+      "RECORDED BY"
+    ],
+    [
+      "fo-delay-log-entry",
+      "org-sub-trade",
+      "CAUSED BY"
+    ],
+    [
+      "fo-delay-log-entry",
+      "org-gen-contr-gc",
+      "DOCUMENTED BY"
+    ],
+    [
+      "fo-delay-log-entry",
+      "org-private-develope",
+      "NOTIFIED OF"
+    ],
+    [
+      "fo-productivity-log",
+      "org-sub-trade",
+      "MEASURES OUTPUT OF"
+    ],
+    [
+      "fo-quantity-log",
+      "org-gen-contr-gc",
+      "VERIFIED BY"
+    ],
+    [
+      "fo-quantity-log",
+      "org-special-insp",
+      "SPOT-CHECKED BY"
+    ],
+    [
+      "fo-safety-violation",
+      "org-sub-trade",
+      "CITED AGAINST"
+    ],
+    [
+      "fo-safety-violation",
+      "org-osha-safety",
+      "REPORTABLE TO"
+    ],
+    [
+      "fo-accident-log",
+      "org-gen-contr-gc",
+      "INVESTIGATED BY"
+    ],
+    [
+      "fo-accident-log",
+      "org-insurance-broker",
+      "REPORTED TO"
+    ],
+    [
+      "fo-accident-log",
+      "org-osha-safety",
+      "FILED WITH"
+    ],
+    [
+      "fo-daily-log-insp",
+      "org-special-insp",
+      "PERFORMED BY"
+    ],
+    [
+      "fo-daily-log-insp",
+      "org-building-departm",
+      "WITNESSED BY"
+    ],
+    [
+      "fo-visitor-log",
+      "org-building-departm",
+      "REGISTERS VISIT BY"
+    ],
+    [
+      "fo-waste-log-entry",
+      "org-enviro-monitorin",
+      "MONITORED BY"
+    ],
+    [
+      "fo-waste-log-entry",
+      "org-enviro-epa",
+      "REGULATED BY"
+    ],
+    [
+      "fo-dumpster-log",
+      "org-gen-contr-gc",
+      "MANIFESTED BY"
+    ],
+    [
+      "fo-scheduled-work",
+      "org-sub-trade",
+      "ASSIGNED TO"
+    ],
+    [
+      "fo-scheduled-work",
+      "org-gen-contr-gc",
+      "COORDINATED BY"
+    ],
+    [
+      "fo-t-m-ticket",
+      "org-gen-contr-gc",
+      "INITIATED BY"
+    ],
+    [
+      "fo-t-m-ticket",
+      "org-private-develope",
+      "AUTHORIZED BY"
+    ],
+    [
+      "fo-t-m-labor-entry",
+      "org-sub-trade",
+      "BILLED BY"
+    ],
+    [
+      "fo-t-m-equip-entry",
+      "org-equip-rental",
+      "CHARGED BY"
+    ],
+    [
+      "fo-t-m-mat-entry",
+      "org-mat-supplier",
+      "INVOICED BY"
+    ],
+    [
+      "fo-assignment",
+      "org-sub-trade",
+      "MOBILIZES"
+    ],
+    [
+      "fo-workforce-req",
+      "org-gen-contr-gc",
+      "REQUESTED BY"
+    ],
+    [
+      "fo-workforce-req",
+      "org-sub-trade",
+      "FULFILLED BY"
+    ],
+    [
+      "fo-daily-report",
+      "org-gen-contr-gc",
+      "COMPILED BY"
+    ],
+    [
+      "fo-daily-log-2",
+      "org-gen-contr-gc",
+      "MEASURED FOR"
+    ],
+    [
+      "fo-peak-daily",
+      "org-sub-trade",
+      "MEASURED FOR"
+    ],
+    [
+      "fo-plan-percent",
+      "org-gen-contr-gc",
+      "MEASURED FOR"
+    ],
+    [
+      "fo-delay-frequency",
+      "org-sub-trade",
+      "MEASURED FOR"
+    ],
+    [
+      "fo-waste-diversion",
+      "org-sustainability-l",
+      "BENCHMARKED BY"
+    ]
+  ],
+  "verbGlossary": {
+    "ACKNOWLEDGED BY": "{source} has formally confirmed receipt and awareness of {target} or revision",
+    "ASSIGNED TO": "{source} is designated as {target} for executing the scheduled field work",
+    "AUTHORED BY": "{source} wrote or dictated the field note or log narrative as the on-site recorder",
+    "AUTHORIZED BY": "{source} granted formal approval for the time-and-material work to proceed",
+    "BENCHMARKED BY": "{source} provides the sustainability or compliance standard against which the metric is evaluated",
+    "BILLED BY": "{source} submits labor charges on the T&M ticket for work performed",
+    "CAUSED BY": "{source}'s work, decision, or condition is identified as the source of the logged delay",
+    "CERTIFIED THROUGH": "Employee holds safety or trade credentials validated through the regulatory {target}",
+    "CHARGED BY": "{source} bills equipment usage time and rates recorded on the T&M entry",
+    "CITED AGAINST": "{source} is formally written against {target}'s crew or work area",
+    "CLOCKED BY": "{source}'s workers recorded time entries against the project timecard system",
+    "COMPILED BY": "{source} assembles the daily report from multiple field log sections",
+    "COORDINATED BY": "{source} sequences and manages the scheduled work across multiple trades on site",
+    "DISPATCHED BY": "{source} directed the crew deployment to the jobsite",
+    "DOCUMENTED BY": "{source} formally recorded the delay event with narrative, duration, and impact in the project log",
+    "DOCUMENTS WORK OF": "{source} note describes activities, progress, or conditions related to {target}'s scope",
+    "EMPLOYED BY": "{source}record is held by {target} as the hiring entity",
+    "FABRICATED BY": "{source} manufactured or assembled the shipped materials off-site before delivery",
+    "FILED BY": "{source} completed and submitted the field report as the responsible site {target}",
+    "FILED WITH": "{source}is formally submitted to the regulatory {target} as a compliance obligation",
+    "FULFILLED BY": "{source} provides the requested workforce to satisfy the staffing need",
+    "FURNISHED TO": "{source} is delivered to the financial institution for draw or progress verification",
+    "INITIATED BY": "{source} created the T&M ticket to begin tracking extra work scope",
+    "INSPECTED BY": "{source} examined delivered materials at the receiving point for damage or spec conformance",
+    "INVESTIGATED BY": "{source} conducted the formal accident investigation and root-cause analysis",
+    "INVOICED BY": "{source} submits material charges documented on the T&M entry for payment",
+    "ISSUED BY": "{source} formally released the field document with {target} to affected parties",
+    "LOGGED BY": "{source} recorded the phone call or communication event in {target} system",
+    "MANIFESTED BY": "{source} prepared the waste manifest documenting dumpster contents and disposal routing",
+    "MEASURED FOR": "{source}tracks field performance or compliance attributable to this {target}",
+    "MEASURES OUTPUT OF": "{source} quantifies the installed work or production rate of {target}'s crew",
+    "MOBILIZES": "Assignment directs {target}'s crew or resources to a specific work area or task",
+    "MONITORED BY": "{source} performs ongoing environmental sampling or surveillance tied to the waste record",
+    "NOTIFIED OF": "{source} receives formal notice that a delay event has been logged against the project",
+    "OPENED BY": "{source} created {target} header record to begin that day's field documentation",
+    "OPERATED BY": "{source}'s personnel ran the equipment during the logged timecard period",
+    "PERFORMED BY": "{source}'s inspector executed the field inspection documented in {target}",
+    "PLACED TO": "{source}was directed to {target} as the receiving party",
+    "RECEIVED BY": "{source} accepted delivery of materials at the jobsite",
+    "RECORDED BY": "{source} entered the weather or field conditions into {target}",
+    "REGISTERS VISIT BY": "{source} entry documents {target}'s representative checking onto the jobsite",
+    "REGULATED BY": "Regulatory {target} holds jurisdiction over the waste handling and disposal documented in the log",
+    "RENTED FROM": "{source}ged on the entry was rented from {target} under a rental agreement",
+    "REPORTABLE TO": "{source} meets the threshold requiring formal notification to the regulatory {target}",
+    "REPORTED TO": "{source}are submitted to {target} for claims processing or coverage determination",
+    "REPORTS HEADCOUNT FOR": "{source} entry counts the number of workers on site belonging to {target}",
+    "REQUESTED BY": "{source} submitted the workforce request identifying staffing needs by trade and date",
+    "REVIEWED BY": "{source} examined and assessed {target} or field record for accuracy or completeness",
+    "SAMPLED BY": "Testing lab collected material samples from the delivery for quality verification",
+    "SHIPPED BY": "{source} transported the materials recorded in the delivery log to the jobsite",
+    "SPOT-CHECKED BY": "{source} performed random verification of installed quantities against the log entries",
+    "STAFFED BY": "{source} provides the workers who make up the crew membership roster",
+    "SUBMITTED TO": "{source} report is delivered to {target} as a contractual reporting obligation",
+    "TALLIED BY": "{source} aggregated the manpower counts across all trades for {target} summary",
+    "TRACKED BY": "{source} maintains the running log of equipment hours, location, and utilization on site",
+    "VERIFIED BY": "{source} con{target}ed the accuracy of quantities, counts, or conditions recorded in the field log",
+    "WITNESSED BY": "{source}'s representative was present during the inspection as an official observer"
+  }
+}

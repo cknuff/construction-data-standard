@@ -1,0 +1,303 @@
+{
+  "source": "contracts-procurement",
+  "target": "roles",
+  "edges": [
+    [
+      "cp-prequalification",
+      "rl-procure-manager",
+      "ADMINISTERED BY"
+    ],
+    [
+      "cp-prequalification",
+      "rl-preconstruction",
+      "INITIATED BY"
+    ],
+    [
+      "cp-bid-package",
+      "rl-estimator-chief",
+      "ASSEMBLED BY"
+    ],
+    [
+      "cp-bid-package",
+      "rl-procure-manager",
+      "DISTRIBUTED BY"
+    ],
+    [
+      "cp-req-qualificatio",
+      "rl-contract-adminis",
+      "SCREENED BY"
+    ],
+    [
+      "cp-req-proposal",
+      "rl-preconstruction",
+      "DRAFTED BY"
+    ],
+    [
+      "cp-proposal-bid",
+      "rl-estimator-chief",
+      "EVALUATED BY"
+    ],
+    [
+      "cp-proposal-bid",
+      "rl-project-manager",
+      "COMPARED BY"
+    ],
+    [
+      "cp-bid-evaluation",
+      "rl-estimator-chief",
+      "LEVELED BY"
+    ],
+    [
+      "cp-bid-evaluation",
+      "rl-cost-engineer",
+      "ANALYZED BY"
+    ],
+    [
+      "cp-award-notice",
+      "rl-project-executiv",
+      "AUTHORIZED BY"
+    ],
+    [
+      "cp-award-notice",
+      "rl-procure-manager",
+      "COORDINATED BY"
+    ],
+    [
+      "cp-subcontract",
+      "rl-procure-manager",
+      "NEGOTIATED BY"
+    ],
+    [
+      "cp-subcontract",
+      "rl-contract-adminis",
+      "EXECUTED BY"
+    ],
+    [
+      "cp-subcontract",
+      "rl-super",
+      "ENFORCED BY"
+    ],
+    [
+      "cp-purchase-order",
+      "rl-procure-manager",
+      "PLACED BY"
+    ],
+    [
+      "cp-purchase-order",
+      "rl-project-engineer",
+      "EXPEDITED BY"
+    ],
+    [
+      "cp-prime-contract",
+      "rl-project-executiv",
+      "NEGOTIATED BY"
+    ],
+    [
+      "cp-prime-contract",
+      "rl-owner-s",
+      "AWARDED BY"
+    ],
+    [
+      "cp-master-service",
+      "rl-project-executiv",
+      "RATIFIED BY"
+    ],
+    [
+      "cp-master-service",
+      "rl-contract-adminis",
+      "MAINTAINED BY"
+    ],
+    [
+      "cp-scope-work",
+      "rl-preconstruction",
+      "DEFINED BY"
+    ],
+    [
+      "cp-scope-work",
+      "rl-design-manager",
+      "REVIEWED BY"
+    ],
+    [
+      "cp-gen-cond",
+      "rl-contract-adminis",
+      "INTERPRETED BY"
+    ],
+    [
+      "cp-retainage-terms",
+      "rl-accountant-finan",
+      "TRACKED BY"
+    ],
+    [
+      "cp-retainage-terms",
+      "rl-contract-adminis",
+      "STIPULATED BY"
+    ],
+    [
+      "cp-liquidated-damag",
+      "rl-project-manager",
+      "ASSESSED BY"
+    ],
+    [
+      "cp-liquidated-damag",
+      "rl-scheduler-projec",
+      "CALCULATED BY"
+    ],
+    [
+      "cp-allowance",
+      "rl-cost-engineer",
+      "MONITORED BY"
+    ],
+    [
+      "cp-allowance",
+      "rl-project-manager",
+      "DRAWN BY"
+    ],
+    [
+      "cp-bid-bond",
+      "rl-procure-manager",
+      "REQUIRED BY"
+    ],
+    [
+      "cp-perf-bond",
+      "rl-contract-adminis",
+      "SECURED BY"
+    ],
+    [
+      "cp-payment-bond",
+      "rl-accountant-finan",
+      "FILED BY"
+    ],
+    [
+      "cp-insurance-cert",
+      "rl-safety-manager",
+      "VALIDATED BY"
+    ],
+    [
+      "cp-builders-risk",
+      "rl-project-executiv",
+      "PROCURED BY"
+    ],
+    [
+      "cp-warranty",
+      "rl-project-manager",
+      "MANAGED BY"
+    ],
+    [
+      "cp-warranty",
+      "rl-cx-agent-cxa",
+      "COMMISSIONED BY"
+    ],
+    [
+      "cp-substantial-comp",
+      "rl-super",
+      "CERTIFIED BY"
+    ],
+    [
+      "cp-substantial-comp",
+      "rl-owner-s",
+      "ACCEPTED BY"
+    ],
+    [
+      "cp-final-completion",
+      "rl-project-manager",
+      "CLOSED BY"
+    ],
+    [
+      "cp-final-completion",
+      "rl-doc-controller",
+      "COMPILED BY"
+    ],
+    [
+      "cp-prevailing-wage",
+      "rl-accountant-finan",
+      "AUDITED BY"
+    ],
+    [
+      "cp-diversity-dbe",
+      "rl-procure-manager",
+      "REPORTED BY"
+    ],
+    [
+      "cp-closeout-doc",
+      "rl-doc-controller",
+      "ASSEMBLED BY"
+    ],
+    [
+      "cp-bid-coverage",
+      "rl-preconstruction",
+      "BENCHMARKED BY"
+    ],
+    [
+      "cp-average-bidders",
+      "rl-procure-manager",
+      "MEASURED BY"
+    ],
+    [
+      "cp-award-cycle-time",
+      "rl-scheduler-projec",
+      "TRACKED BY"
+    ],
+    [
+      "cp-insurance-comp",
+      "rl-safety-manager",
+      "AUDITED BY"
+    ],
+    [
+      "cp-chg-order-rate",
+      "rl-cost-engineer",
+      "FORECASTED BY"
+    ],
+    [
+      "cp-sub-retention",
+      "rl-project-executiv",
+      "EVALUATED BY"
+    ]
+  ],
+  "verbGlossary": {
+    "ACCEPTED BY": "{source} formally acknowledges that a milestone or deliverable meets contractual requirements, transferring responsibility or initiating the next phase.",
+    "ADMINISTERED BY": "{source} manages the contractual lifecycle of a procurement instrument, handling amendments, compliance tracking, and documentation.",
+    "ANALYZED BY": "{source} examines bid data or contract metrics to identify cost drivers, outliers, and competitive positioning across submissions.",
+    "ASSEMBLED BY": "{source} compiles multiple documents, drawings, specifications, and exhibits into a complete package for issuance or closeout.",
+    "ASSESSED BY": "{source} determines the financial exposure or impact of a contractual clause, calculating damages or penalties based on project performance.",
+    "AUDITED BY": "{source} performs compliance verification against regulatory or contractual requirements, checking records for accuracy and completeness.",
+    "AUTHORIZED BY": "{source} grants executive-level approval for {target} award or procurement action, committing the company to a binding obligation.",
+    "AWARDED BY": "{source} selects and formally designates a contractor or vendor as the recipient of {target} based on qualifications, price, and evaluation criteria.",
+    "BENCHMARKED BY": "{source} compares a procurement metric against historical portfolio data or industry standards to evaluate procurement effectiveness.",
+    "CALCULATED BY": "{source} computes monetary values tied to schedule performance, applying contractual formulas to determine delay-related costs.",
+    "CERTIFIED BY": "{source} attests through formal inspection that a project milestone has been physically achieved and meets specification requirements.",
+    "CLOSED BY": "{source} completes all remaining contractual obligations, resolves open items, and formally terminates {target}.",
+    "COMMISSIONED BY": "{source} verifies that installed systems operate per design intent and contract specifications through functional performance testing.",
+    "COMPARED BY": "{source} evaluates competing proposals side by side against scope requirements, pricing, schedule, and qualifications to inform award decisions.",
+    "COMPILED BY": "{source} gathers and organizes all required project records, warranties, and as-built documents into a final deliverable package.",
+    "COORDINATED BY": "{source} synchronizes the timing and logistics of a procurement action across multiple stake{target}s and project teams.",
+    "DEFINED BY": "{target} establishes the technical scope, deliverables, and performance criteria that {source} instrument must satisfy.",
+    "DISTRIBUTED BY": "{source} sends bid packages to qualified bidders, managing the solicitation timeline and ensuring equitable access to project information.",
+    "DRAFTED BY": "{source} prepares the initial version of a procurement document, assembling requirements, terms, and evaluation criteria for review.",
+    "DRAWN BY": "{source} authorizes expenditure against a contractual allowance for work that falls within the defined allowance scope.",
+    "ENFORCED BY": "{source} ensures compliance with contractual terms in the field or through administrative action, holding parties accountable to obligations.",
+    "EVALUATED BY": "{source} scores and ranks submissions against defined criteria, producing a recommendation for contract award or vendor selection.",
+    "EXECUTED BY": "{source} signs and formalizes {target} instrument, creating a legally binding agreement between parties.",
+    "EXPEDITED BY": "{source} actively follows up with vendors and suppliers to accelerate delivery of materials or equipment against purchase order timelines.",
+    "FILED BY": "{source} submits bond documentation to the appropriate parties, ensuring payment protection is in place before work begins.",
+    "FORECASTED BY": "{source} projects future change order exposure or contract growth based on current trends and remaining project scope.",
+    "INITIATED BY": "{source} starts a procurement process by identifying the need for goods, services, or trade contractors on a project.",
+    "INTERPRETED BY": "{source} provides guidance on the meaning and application of contract terms when disputes or ambiguities arise during execution.",
+    "LEVELED BY": "{source} normalizes bid submissions to a common scope basis, adjusting for exclusions, qualifications, and alternates to enable fair comparison.",
+    "MAINTAINED BY": "{source} keeps a long-term contract current by managing renewals, amendments, and rate adjustments across multiple project assignments.",
+    "MANAGED BY": "{source} oversees the full lifecycle of {target} or procurement instrument from initiation through closeout, including status tracking.",
+    "MEASURED BY": "{source} quantifies a procurement metric by collecting and aggregating data across bid events and contract awards.",
+    "MONITORED BY": "{source} tracks {target} term or allowance balance over time, reviewing trends and flagging when thresholds are approached.",
+    "NEGOTIATED BY": "{source} conducts commercial negotiations on pricing, scope, and contract terms with owners, subcontractors, or vendors.",
+    "PLACED BY": "{source} issues a purchase order to a vendor, specifying quantities, delivery dates, and pricing for materials or equipment.",
+    "PROCURED BY": "{source} obtains insurance coverage or risk-transfer instruments required by the project, selecting carriers and negotiating premiums.",
+    "RATIFIED BY": "{source} gives final executive endorsement to a master agreement, confirming it as the governing framework for future project work.",
+    "REPORTED BY": "{source} compiles and submits diversity participation data and DBE certification status to meet contractual or regulatory requirements.",
+    "REQUIRED BY": "{source} specifies that a bond or surety instrument must be provided as a condition of bid submission or contract execution.",
+    "REVIEWED BY": "{source} examines {target} document for technical accuracy, scope alignment, and completeness before it advances in the workflow.",
+    "SCREENED BY": "{source} evaluates qualification submissions against minimum criteria, shortlisting respondents who meet threshold requirements.",
+    "SECURED BY": "{source} obtains a performance bond or surety from the awarded contractor, protecting the project against non-performance.",
+    "STIPULATED BY": "{source} specifies retainage percentages and release conditions within {target}, establishing the withholding framework.",
+    "TRACKED BY": "{source} monitors a financial or schedule metric over time, maintaining records and reporting status against contractual requirements.",
+    "VALIDATED BY": "{source} confirms that an insurance certificate meets project-specific coverage requirements, endorsements, and policy limits."
+  }
+}

@@ -1,0 +1,309 @@
+{
+  "source": "field-operations",
+  "target": "field-operations",
+  "edges": [
+    [
+      "fo-daily-log-header",
+      "fo-daily-log-note",
+      "CONTAINS"
+    ],
+    [
+      "fo-daily-log-header",
+      "fo-manpower-log",
+      "CONTAINS"
+    ],
+    [
+      "fo-daily-log-header",
+      "fo-equip-log-entry",
+      "CONTAINS"
+    ],
+    [
+      "fo-daily-log-header",
+      "fo-weather-log",
+      "CONTAINS"
+    ],
+    [
+      "fo-daily-log-header",
+      "fo-delay-log-entry",
+      "CONTAINS"
+    ],
+    [
+      "fo-daily-log-header",
+      "fo-dlvy-log-entry",
+      "CONTAINS"
+    ],
+    [
+      "fo-daily-log-header",
+      "fo-safety-violation",
+      "CONTAINS"
+    ],
+    [
+      "fo-daily-log-header",
+      "fo-accident-log",
+      "CONTAINS"
+    ],
+    [
+      "fo-daily-log-header",
+      "fo-daily-log-insp",
+      "CONTAINS"
+    ],
+    [
+      "fo-daily-log-header",
+      "fo-visitor-log",
+      "CONTAINS"
+    ],
+    [
+      "fo-daily-log-header",
+      "fo-scheduled-work",
+      "CONTAINS"
+    ],
+    [
+      "fo-daily-log-header",
+      "fo-productivity-log",
+      "CONTAINS"
+    ],
+    [
+      "fo-daily-log-header",
+      "fo-phone-call-log",
+      "CONTAINS"
+    ],
+    [
+      "fo-daily-log",
+      "fo-daily-log-header",
+      "CONFIGURES SECTIONS OF"
+    ],
+    [
+      "fo-daily-log-header",
+      "fo-daily-report",
+      "COMPILED INTO"
+    ],
+    [
+      "fo-scheduled-work",
+      "fo-scheduled-work-2",
+      "LINKS TO TASK VIA"
+    ],
+    [
+      "fo-scheduled-work",
+      "fo-manpower-log",
+      "VERIFIED BY"
+    ],
+    [
+      "fo-assignment",
+      "fo-scheduled-work",
+      "PLANS WORK FOR"
+    ],
+    [
+      "fo-workforce-req",
+      "fo-assignment",
+      "FILLED BY"
+    ],
+    [
+      "fo-employee-record",
+      "fo-crew-crew",
+      "ASSIGNED TO"
+    ],
+    [
+      "fo-crew-crew",
+      "fo-assignment",
+      "DEPLOYED THROUGH"
+    ],
+    [
+      "fo-employee-record",
+      "fo-timecard-entry",
+      "CLOCKS INTO"
+    ],
+    [
+      "fo-manpower-log",
+      "fo-const-report",
+      "FEEDS DATA TO"
+    ],
+    [
+      "fo-equip-master",
+      "fo-equip-log-entry",
+      "TRACKED DAILY IN"
+    ],
+    [
+      "fo-equip-master",
+      "fo-equip-timecard",
+      "COSTED THROUGH"
+    ],
+    [
+      "fo-mat-shipment",
+      "fo-dlvy-log-entry",
+      "ARRIVES AS"
+    ],
+    [
+      "fo-dlvy-log-entry",
+      "fo-mat-receipt",
+      "CONFIRMED BY"
+    ],
+    [
+      "fo-weather-log",
+      "fo-delay-log-entry",
+      "TRIGGERS"
+    ],
+    [
+      "fo-delay-log-entry",
+      "fo-daily-log-note",
+      "DOCUMENTED IN"
+    ],
+    [
+      "fo-safety-violation",
+      "fo-accident-log",
+      "ESCALATES TO"
+    ],
+    [
+      "fo-daily-log-insp",
+      "fo-safety-violation",
+      "DISCOVERS"
+    ],
+    [
+      "fo-t-m-ticket",
+      "fo-t-m-labor-entry",
+      "ITEMIZES LABOR IN"
+    ],
+    [
+      "fo-t-m-ticket",
+      "fo-t-m-equip-entry",
+      "ITEMIZES EQUIPMENT IN"
+    ],
+    [
+      "fo-t-m-ticket",
+      "fo-t-m-mat-entry",
+      "ITEMIZES MATERIAL IN"
+    ],
+    [
+      "fo-field-productivi",
+      "fo-actual-productio",
+      "RECORDS ACTUALS IN"
+    ],
+    [
+      "fo-field-productivi",
+      "fo-budgeted-product",
+      "BASELINED BY"
+    ],
+    [
+      "fo-actual-productio",
+      "fo-budgeted-product",
+      "MEASURED AGAINST"
+    ],
+    [
+      "fo-quantity-log",
+      "fo-actual-productio",
+      "FEEDS QUANTITIES TO"
+    ],
+    [
+      "fo-manpower-log",
+      "fo-peak-daily",
+      "ROLLS UP INTO"
+    ],
+    [
+      "fo-manpower-log",
+      "fo-average-daily",
+      "ROLLS UP INTO"
+    ],
+    [
+      "fo-equip-log-entry",
+      "fo-equip-utilizatio",
+      "ROLLS UP INTO"
+    ],
+    [
+      "fo-daily-log-header",
+      "fo-daily-log-2",
+      "MEASURED BY"
+    ],
+    [
+      "fo-daily-report",
+      "fo-daily-log-dist",
+      "MEASURED BY"
+    ],
+    [
+      "fo-scheduled-work",
+      "fo-plan-percent",
+      "MEASURED BY"
+    ],
+    [
+      "fo-delay-log-entry",
+      "fo-delay-frequency",
+      "MEASURED BY"
+    ],
+    [
+      "fo-weather-log",
+      "fo-weather-delay",
+      "MEASURED BY"
+    ],
+    [
+      "fo-waste-log-entry",
+      "fo-waste-diversion",
+      "MEASURED BY"
+    ],
+    [
+      "fo-plan-revision",
+      "fo-daily-log-note",
+      "NOTED IN"
+    ],
+    [
+      "fo-dlvy-log-entry",
+      "fo-productivity-log",
+      "CONFIRMS DELIVERY FOR"
+    ],
+    [
+      "fo-waste-log-entry",
+      "fo-dumpster-log",
+      "LOADED INTO"
+    ],
+    [
+      "fo-workforce-req",
+      "fo-crew-crew",
+      "ASSEMBLES"
+    ],
+    [
+      "fo-budgeted-product",
+      "fo-labor-productivity",
+      "BENCHMARKS"
+    ],
+    [
+      "fo-labor-productivity",
+      "fo-manpower-log",
+      "MEASURED FROM"
+    ],
+    [
+      "fo-mat-receipt",
+      "fo-delay-log-entry",
+      "TRIGGERS WHEN MISSING"
+    ]
+  ],
+  "verbGlossary": {
+    "CONTAINS": "{source} is the parent container that groups {target} as one of its child sections for that project-day, establishing the one-to-many relationship between the log date and all field entries recorded under it.",
+    "CONFIGURES SECTIONS OF": "{source} template determines which child sections are required, optional, or hidden within {target}, controlling what data gets collected on each project-day.",
+    "COMPILED INTO": "{source} and all its child sections are assembled into {target} as a formatted report package ready for stakeholder distribution.",
+    "LINKS TO TASK VIA": "{source} connects to CPM schedule activities through {target}, bridging what was planned in the daily log to what the formal schedule says should happen.",
+    "VERIFIED BY": "{source} records the planned subcontractor showing up, and {target} confirms the actual headcount and hours that were worked, closing the plan-vs-actual loop.",
+    "PLANS WORK FOR": "{source} allocates a worker or crew to the project for a date range, and {target} records whether that planned labor actually showed up on a given day.",
+    "FILLED BY": "{source} signals demand for additional workers, and {target} satisfies that demand by allocating a specific worker or crew to the project.",
+    "ASSIGNED TO": "{source} is enrolled as a member of {target}, grouping individual workers into the operational crew unit that gets scheduled and managed as a team.",
+    "DEPLOYED THROUGH": "{source} is dispatched to project work by being linked to {target}, which defines the date range, project, and scope of the crew's field deployment.",
+    "CLOCKS INTO": "{source} is the identity record for the worker, and {target} captures that worker's daily hours, cost code allocation, and overtime classification.",
+    "FEEDS DATA TO": "{source} provides the raw daily headcount and trade-level data that {target} aggregates into certified payroll and workforce diversity compliance reports.",
+    "TRACKED DAILY IN": "{source} defines the equipment asset identity and specifications, and {target} records that asset's daily presence, operating hours, and idle time on site.",
+    "COSTED THROUGH": "{source} defines the equipment asset, and {target} allocates that asset's operating hours to cost codes for equipment cost accounting.",
+    "ARRIVES AS": "{source} tracks the inbound shipment from supplier to site, and {target} records the actual arrival event when the material shows up on the ground.",
+    "CONFIRMED BY": "{source} logs that a delivery arrived on site, and {target} formally verifies that the delivered quantity, condition, and spec match the purchase order.",
+    "TRIGGERS": "Adverse conditions documented in {source} cause a work stoppage or slowdown that is formally recorded as {target}, establishing the causal link between weather and delay.",
+    "DOCUMENTED IN": "The structured delay event in {source} is elaborated on with narrative context in {target}, providing the free-text details that the structured fields cannot capture.",
+    "ESCALATES TO": "A safety infraction recorded in {source} results in an injury or more serious event documented in {target}, linking the violation to its consequence.",
+    "DISCOVERS": "A field inspection recorded in {source} identifies a safety condition that is then formally cited as {target}, connecting the inspection activity to its enforcement action.",
+    "ITEMIZES LABOR IN": "{source} is the parent T&M ticket, and {target} is a labor line item within it detailing worker classification, hours, rate, and cost for that extra work.",
+    "ITEMIZES EQUIPMENT IN": "{source} is the parent T&M ticket, and {target} is an equipment line item within it detailing equipment type, hours, rate, and cost for that extra work.",
+    "ITEMIZES MATERIAL IN": "{source} is the parent T&M ticket, and {target} is a material line item within it detailing material description, quantity, unit cost, and total for that extra work.",
+    "RECORDS ACTUALS IN": "{source} is the field productivity record, and {target} captures the actual quantities produced during the shift as the 'actuals' side of earned value.",
+    "BASELINED BY": "{source} is the field productivity record, and {target} provides the planned quantity baseline against which actual production is compared.",
+    "MEASURED AGAINST": "{source} captures the actual quantity installed in the field, and {target} provides the budgeted quantity, making the earned-value variance visible.",
+    "FEEDS QUANTITIES TO": "{source} records daily installed quantities by cost code, which {target} consumes as the measured field output for earned-value production tracking.",
+    "ROLLS UP INTO": "Individual daily entries in {source} are aggregated over time to compute the summary metric in {target}, which provides the project-level or period-level KPI.",
+    "MEASURED BY": "The operational activity in {source} is the raw input that {target} converts into a standardized rate or percentage metric for benchmarking and comparison.",
+    "NOTED IN": "Receipt of updated drawings in {source} is recorded as a narrative entry in {target} to document that the field team received and acknowledged the revision.",
+    "CONFIRMS DELIVERY FOR": "{source} documents that material arrived on site, which {target} references when recording the quantity delivered vs. quantity installed for that vendor and scope item.",
+    "LOADED INTO": "Waste material recorded in {source} is physically placed into the dumpster tracked by {target}, connecting the waste content record to the container management record."
+  }
+}

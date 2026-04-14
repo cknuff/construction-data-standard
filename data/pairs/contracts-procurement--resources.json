@@ -1,0 +1,344 @@
+{
+  "source": "contracts-procurement",
+  "target": "resources",
+  "universalEdges": [
+    {
+      "source": "cp-bid-package",
+      "targetGroup": "trades",
+      "verb": "SOLICITS BIDS FOR",
+      "evidence": "Bid packages are issued for every trade scope on a project"
+    },
+    {
+      "source": "cp-bid-package",
+      "targetGroup": "materials",
+      "verb": "SPECIFIES QUANTITIES OF",
+      "evidence": "Bid packages define material quantities for every category"
+    },
+    {
+      "source": "cp-bid-package",
+      "targetGroup": "equipment",
+      "verb": "INCLUDES RENTAL OF",
+      "evidence": "Bid packages can incorporate rental costs for any equipment"
+    },
+    {
+      "source": "cp-prequalification",
+      "targetGroup": "trades",
+      "verb": "VERIFIES COMPETENCY OF",
+      "evidence": "Prequalification screens every trade for competency before bidding"
+    },
+    {
+      "source": "cp-req-qualificatio",
+      "targetGroup": "trades",
+      "verb": "VETS EXPERIENCE OF",
+      "evidence": "RFQs evaluate experience for every specialty trade"
+    },
+    {
+      "source": "cp-req-proposal",
+      "targetGroup": "materials",
+      "verb": "REQUESTS PRICING ON",
+      "evidence": "RFPs request pricing on any material or equipment category"
+    },
+    {
+      "source": "cp-req-proposal",
+      "targetGroup": "trades",
+      "verb": "REQUESTS PRICING ON",
+      "evidence": "RFPs solicit proposals from any specialty trade"
+    },
+    {
+      "source": "cp-proposal-bid",
+      "targetGroup": "trades",
+      "verb": "PRICES LABOR FOR",
+      "evidence": "Bids include labor rates for any trade"
+    },
+    {
+      "source": "cp-proposal-bid",
+      "targetGroup": "materials",
+      "verb": "QUOTES UNIT COST OF",
+      "evidence": "Bids provide unit pricing for any material"
+    },
+    {
+      "source": "cp-bid-evaluation",
+      "targetGroup": "trades",
+      "verb": "COMPARES RATES FOR",
+      "evidence": "Bid evaluations compare proposals across any trade"
+    },
+    {
+      "source": "cp-bid-evaluation",
+      "targetGroup": "materials",
+      "verb": "LEVELS PRICING ON",
+      "evidence": "Bid leveling normalizes pricing across bidders for any material"
+    },
+    {
+      "source": "cp-award-notice",
+      "targetGroup": "trades",
+      "verb": "AUTHORIZES MOBILIZATION OF",
+      "evidence": "Award notices authorize any trade to mobilize"
+    },
+    {
+      "source": "cp-award-notice",
+      "targetGroup": "materials",
+      "verb": "RELEASES PROCUREMENT OF",
+      "evidence": "Award notices trigger procurement of any long-lead material"
+    },
+    {
+      "source": "cp-subcontract",
+      "targetGroup": "trades",
+      "verb": "CONTRACTS LABOR OF",
+      "evidence": "Subcontracts commit every trade discipline on the project"
+    },
+    {
+      "source": "cp-purchase-order",
+      "targetGroup": "materials",
+      "verb": "SCHEDULES FABRICATION OF",
+      "evidence": "Purchase orders schedule fabrication and delivery of any material"
+    },
+    {
+      "source": "cp-purchase-order",
+      "targetGroup": "equipment",
+      "verb": "PROVISIONS RENTAL OF",
+      "evidence": "Purchase orders arrange rental for any equipment type"
+    },
+    {
+      "source": "cp-scope-work",
+      "targetGroup": "trades",
+      "verb": "DEFINES INSTALLATION BY",
+      "evidence": "Scope of work sections describe installation requirements for any trade"
+    },
+    {
+      "source": "cp-scope-work",
+      "targetGroup": "materials",
+      "verb": "ENUMERATES FIXTURES IN",
+      "evidence": "Scope of work enumerates fixtures and quantities for any material"
+    },
+    {
+      "source": "cp-gen-cond",
+      "targetGroup": "trades",
+      "verb": "REGULATES HOURS OF",
+      "evidence": "General conditions regulate work hours for every trade"
+    },
+    {
+      "source": "cp-gen-cond",
+      "targetGroup": "materials",
+      "verb": "GOVERNS STORAGE OF",
+      "evidence": "General conditions govern on-site storage of any material"
+    },
+    {
+      "source": "cp-retainage-terms",
+      "targetGroup": "trades",
+      "verb": "WITHHOLDS AGAINST WORK OF",
+      "evidence": "Retainage terms apply to every trade's progress payments"
+    },
+    {
+      "source": "cp-liquidated-damag",
+      "targetGroup": "trades",
+      "verb": "PENALIZES DELAY BY",
+      "evidence": "LD clauses can penalize any critical-path trade"
+    },
+    {
+      "source": "cp-perf-bond",
+      "targetGroup": "trades",
+      "verb": "SECURES COMPLETION BY",
+      "evidence": "Performance bonds guarantee completion by any subcontracted trade"
+    },
+    {
+      "source": "cp-payment-bond",
+      "targetGroup": "materials",
+      "verb": "PROTECTS SUPPLIERS OF",
+      "evidence": "Payment bonds protect suppliers of any material furnished to the project"
+    },
+    {
+      "source": "cp-warranty",
+      "targetGroup": "materials",
+      "verb": "GUARANTEES PERFORMANCE OF",
+      "evidence": "Warranties guarantee performance of every installed material"
+    },
+    {
+      "source": "cp-warranty",
+      "targetGroup": "trades",
+      "verb": "CERTIFIES WORKMANSHIP OF",
+      "evidence": "Warranties certify workmanship by every trade"
+    },
+    {
+      "source": "cp-builders-risk",
+      "targetGroup": "materials",
+      "verb": "COVERS LOSS OF",
+      "evidence": "Builder's risk insures against damage to any installed material"
+    },
+    {
+      "source": "cp-closeout-doc",
+      "targetGroup": "materials",
+      "verb": "COLLECTS SUBMITTALS FOR",
+      "evidence": "Closeout documents collect submittals and warranties for every material"
+    },
+    {
+      "source": "cp-prevailing-wage",
+      "targetGroup": "trades",
+      "verb": "SETS WAGE FLOOR FOR",
+      "evidence": "Prevailing wage applies to every trade on public projects"
+    },
+    {
+      "source": "cp-allowance",
+      "targetGroup": "materials",
+      "verb": "RESERVES BUDGET FOR",
+      "evidence": "Allowances can reserve budget for any material category"
+    },
+    {
+      "source": "cp-chg-order-rate",
+      "targetGroup": "materials",
+      "verb": "TRACKS COST GROWTH ON",
+      "evidence": "Change order rate measured for any material"
+    },
+    {
+      "source": "cp-chg-order-rate",
+      "targetGroup": "trades",
+      "verb": "TRACKS COST GROWTH ON",
+      "evidence": "Change order rate measured for any trade"
+    },
+    {
+      "source": "cp-sub-retention",
+      "targetGroup": "trades",
+      "verb": "MEASURES REBID RATE OF",
+      "evidence": "Subcontractor retention rate measured for any trade"
+    },
+    {
+      "source": "cp-bid-coverage",
+      "targetGroup": "trades",
+      "verb": "GAUGES BID INTEREST FOR",
+      "evidence": "Bid coverage measured for any trade scope"
+    },
+    {
+      "source": "cp-average-bidders",
+      "targetGroup": "trades",
+      "verb": "TALLIES COMPETITORS FOR",
+      "evidence": "Bidder count tracked for any trade scope package"
+    },
+    {
+      "source": "cp-award-cycle-time",
+      "targetGroup": "materials",
+      "verb": "BENCHMARKS LEAD TIME FOR",
+      "evidence": "Award cycle time benchmarked for any long-lead material"
+    },
+    {
+      "source": "cp-award-cycle-time",
+      "targetGroup": "trades",
+      "verb": "BENCHMARKS LEAD TIME FOR",
+      "evidence": "Award cycle time benchmarked for any trade award process"
+    }
+  ],
+  "edges": [
+    [
+      "cp-prequalification",
+      "res-operator",
+      "SCREENS CERTIFICATIONS OF"
+    ],
+    [
+      "cp-req-qualificatio",
+      "res-conc-equip",
+      "CONFIRMS FLEET CAPACITY FOR"
+    ],
+    [
+      "cp-prime-contract",
+      "res-safety",
+      "MANDATES STAFFING OF"
+    ],
+    [
+      "cp-prime-contract",
+      "res-qc",
+      "REQUIRES DEPLOYMENT OF"
+    ],
+    [
+      "cp-master-service",
+      "res-cxa",
+      "GOVERNS ENGAGEMENT OF"
+    ],
+    [
+      "cp-master-service",
+      "res-survey-inst",
+      "COVERS USE OF"
+    ],
+    [
+      "cp-bid-bond",
+      "res-earthmover",
+      "GUARANTEES MOBILIZATION OF"
+    ],
+    [
+      "cp-insurance-cert",
+      "res-crane",
+      "INSURES OPERATION OF"
+    ],
+    [
+      "cp-substantial-comp",
+      "res-surveyor",
+      "CONFIRMS LAYOUT BY"
+    ],
+    [
+      "cp-final-completion",
+      "mat-fp",
+      "CLOSES OUT SCOPE FOR"
+    ],
+    [
+      "cp-diversity-dbe",
+      "res-concrete",
+      "COUNTS PARTICIPATION OF"
+    ],
+    [
+      "cp-insurance-comp",
+      "res-piling",
+      "AUDITS COVERAGE FOR"
+    ]
+  ],
+  "verbGlossary": {
+    "SOLICITS BIDS FOR": "{source} distributed to {target} for competitive pricing",
+    "SPECIFIES QUANTITIES OF": "{source} defines exact {target} quantities bidders must price against",
+    "INCLUDES RENTAL OF": "{source} incorporates {target} rental costs within the solicited scope",
+    "VERIFIES COMPETENCY OF": "{source} confirms {target} meets minimum skill and certification standards",
+    "SCREENS CERTIFICATIONS OF": "{source} validates required {target} licenses and certifications",
+    "VETS EXPERIENCE OF": "{target} evaluates {source}'s past project experience and capability",
+    "CONFIRMS FLEET CAPACITY FOR": "{target} verifies {source} controls adequate equipment to perform the work",
+    "REQUESTS PRICING ON": "{source} asks suppliers to submit pricing for {target}",
+    "PRICES LABOR FOR": "{source} includes hourly or unit labor rates for {target}",
+    "QUOTES UNIT COST OF": "{target} provides per-unit pricing for {source}",
+    "ITEMIZES TONNAGE OF": "{source} breaks out {target} quantities by weight for tonnage-based pricing",
+    "COMPARES RATES FOR": "{source} analyzes competing labor rate proposals for {target}",
+    "LEVELS PRICING ON": "{source} normalizes {target} pricing across bidders for comparison",
+    "AUTHORIZES MOBILIZATION OF": "{source} permits {target} crew to begin mobilization and site setup",
+    "RELEASES PROCUREMENT OF": "{source} triggers release of purchase orders for {target}",
+    "CONTRACTS LABOR OF": "{source} formally commits {target}'s workforce for defined scope",
+    "SCHEDULES FABRICATION OF": "{target} sets fabrication milestones and delivery dates for {source}",
+    "PROVISIONS RENTAL OF": "{source} arranges rental terms for {target}",
+    "DEFINES INSTALLATION BY": "{source} describes installation requirements for {target}",
+    "ENUMERATES FIXTURES IN": "{target} provides fixture schedule and count for {source} package",
+    "REGULATES HOURS OF": "{source} limits allowable work hours and shift schedules for {target}",
+    "GOVERNS STORAGE OF": "{source} dictates staging areas and on-site storage for {target}",
+    "RESERVES BUDGET FOR": "{target} sets aside a provisional dollar amount for {source} category",
+    "WITHHOLDS AGAINST WORK OF": "{source} authorizes withholding a percentage of {target} progress payments",
+    "PENALIZES DELAY BY": "{target} charges penalties when {source} causes schedule overrun on the critical path",
+    "SECURES COMPLETION BY": "{source} guarantees {target} will complete their scope",
+    "PROTECTS SUPPLIERS OF": "{source} ensures {target} suppliers are paid for materials furnished",
+    "GUARANTEES PERFORMANCE OF": "{source} ensures {target} meets specified performance criteria",
+    "CERTIFIES WORKMANSHIP OF": "{source} guarantees {target} installed work meets code and specification standards",
+    "COVERS LOSS OF": "{source} insures against damage or destruction of installed {target}",
+    "COLLECTS SUBMITTALS FOR": "{source} gathers product data, test reports, and as-built records for {target}",
+    "SETS WAGE FLOOR FOR": "{target} establishes minimum hourly rate for {source} on the project",
+    "TRACKS COST GROWTH ON": "{target} measures percentage of contract value added through changes for {source}",
+    "MEASURES REBID RATE OF": "{source} tracks how often {target} is re-engaged on projects",
+    "GAUGES BID INTEREST FOR": "{target} measures how many contractors submitted bids for {source} scope",
+    "TALLIES COMPETITORS FOR": "{source} counts competing proposals received for {target} scope",
+    "BENCHMARKS LEAD TIME FOR": "{source} tracks days from bid opening to award for {target}",
+    "MANDATES STAFFING OF": "{source} requires dedicated {target} personnel on site",
+    "REQUIRES DEPLOYMENT OF": "{source} requires qualified {target} staff throughout construction",
+    "GOVERNS ENGAGEMENT OF": "{target} sets rates and terms for {source}",
+    "COVERS USE OF": "{source} includes provisions for {target}",
+    "GUARANTEES MOBILIZATION OF": "{source} financially guarantees the bidder will mobilize {target} if awarded",
+    "INSURES OPERATION OF": "{target} provides liability coverage for {source} operations",
+    "CONFIRMS LAYOUT BY": "{target} verifies {source} layout work meets tolerances",
+    "CLOSES OUT SCOPE FOR": "{source} confirms {target} passes all testing requirements",
+    "COUNTS PARTICIPATION OF": "{source} tallies dollar value of work by {target}",
+    "AUDITS COVERAGE FOR": "{source} checks whether {target} carries required policy limits"
+  },
+  "_meta": {
+    "universalEdgeSemantics": "Each universalEdge means: the source element connects to EVERY element in the targetGroup via the specified verb. targetGroup values: 'trades' (25 elements), 'equipment' (11 elements), 'materials' (25 elements), 'measures' (9 elements).",
+    "dataEvidence": "Contracts and procurement instruments apply to all resource categories by construction industry definition \u2014 every trade is bid, contracted, invoiced, and warranted; every material is specified, ordered, delivered, and warranted.",
+    "edgesVsUniversal": "The 'edges' array contains SELECTIVE relationships \u2014 operator-specific certifications, CXA-specific master service agreements, crane-specific insurance, surveyor-specific completion milestones, and other role-specific connections."
+  }
+}

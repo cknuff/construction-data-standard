@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Core Project Narrative — UCDM Domain Relationships</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #0a0e1a; color: #e0e4ef; min-height: 100vh; overflow-x: hidden;
+  }
+  header { text-align: center; padding: 28px 24px 8px; }
+  header h1 {
+    font-size: 28px; font-weight: 700; letter-spacing: -0.5px;
+    background: linear-gradient(135deg, #ffb74d, #66bb6a, #26c6da);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  }
+  header p { color: #6b7394; font-size: 14px; margin-top: 5px; }
+  .legend { display: flex; justify-content: center; gap: 32px; padding: 10px 24px 4px; flex-wrap: wrap; }
+  .legend-item { display: flex; align-items: center; gap: 7px; font-size: 13px; color: #8892b0; }
+  .legend-swatch { width: 14px; height: 14px; border-radius: 3px; }
+  .legend-swatch.phases { background: #ffb74d; }
+  .legend-swatch.orgs { background: #26c6da; }
+  .legend-swatch.elements { background: #66bb6a; }
+  .hint { text-align: center; font-size: 12px; color: #4a5070; padding: 0 0 14px; }
+
+  .container { position: relative; max-width: 1440px; margin: 0 auto; padding: 0 24px 48px; }
+  svg.connections {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    pointer-events: none; z-index: 1;
+  }
+  svg.connections path {
+    fill: none; stroke-width: 1.2; opacity: 0;
+    transition: opacity 0.3s ease, stroke-width 0.3s ease;
+  }
+  svg.connections path.visible { opacity: 0.55; stroke-width: 1.8; }
+  svg.connections path.dimmed { opacity: 0.03; }
+  svg.connections text {
+    font-size: 9px; font-weight: 600; letter-spacing: 0.3px;
+    opacity: 0; transition: opacity 0.3s ease; pointer-events: none;
+  }
+  svg.connections text.visible { opacity: 0.85; }
+
+  .columns {
+    display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px;
+    position: relative; z-index: 2;
+  }
+  .domain-column { display: flex; flex-direction: column; gap: 2px; }
+  .domain-hdr {
+    text-align: center; padding: 8px 8px; border-radius: 8px;
+    font-weight: 600; font-size: 13px; letter-spacing: 0.3px; text-transform: uppercase;
+    margin-bottom: 2px;
+  }
+  .domain-hdr span { display: block; font-size: 9px; font-weight: 400; letter-spacing: 0; text-transform: none; opacity: 0.7; margin-top: 1px; }
+  .domain-hdr.phases { background: rgba(255,183,77,0.10); color: #ffb74d; border: 1px solid rgba(255,183,77,0.22); }
+  .domain-hdr.orgs { background: rgba(38,198,218,0.10); color: #26c6da; border: 1px solid rgba(38,198,218,0.22); }
+  .domain-hdr.elements { background: rgba(102,187,106,0.10); color: #66bb6a; border: 1px solid rgba(102,187,106,0.22); }
+
+  .cat-label {
+    font-size: 8px; font-weight: 600; text-transform: uppercase;
+    letter-spacing: 0.7px; color: #3e4560; padding: 5px 8px 1px;
+  }
+  .el-card {
+    padding: 5px 8px; border-radius: 6px; cursor: pointer;
+    transition: all 0.25s ease; border: 1px solid transparent;
+  }
+  .el-card .el-name { font-size: 11px; font-weight: 600; }
+
+  .el-card.phases { background: rgba(255,183,77,0.04); border-color: rgba(255,183,77,0.07); }
+  .el-card.phases .el-name { color: #ffb74d; }
+  .el-card.phases:hover, .el-card.phases.active { background: rgba(255,183,77,0.13); border-color: rgba(255,183,77,0.35); box-shadow: 0 0 14px rgba(255,183,77,0.08); }
+
+  .el-card.orgs { background: rgba(38,198,218,0.04); border-color: rgba(38,198,218,0.07); }
+  .el-card.orgs .el-name { color: #26c6da; }
+  .el-card.orgs:hover, .el-card.orgs.active { background: rgba(38,198,218,0.13); border-color: rgba(38,198,218,0.35); box-shadow: 0 0 14px rgba(38,198,218,0.08); }
+
+  .el-card.elements { background: rgba(102,187,106,0.04); border-color: rgba(102,187,106,0.07); }
+  .el-card.elements .el-name { color: #66bb6a; }
+  .el-card.elements:hover, .el-card.elements.active { background: rgba(102,187,106,0.13); border-color: rgba(102,187,106,0.35); box-shadow: 0 0 14px rgba(102,187,106,0.08); }
+
+  .el-card.dimmed { opacity: 0.12; }
+  .el-card.connected { border-color: rgba(255,255,255,0.22) !important; background: rgba(255,255,255,0.05) !important; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Core Project Narrative</h1>
+  <p>Building Elements + Phases + Organizations — What is built, when, and by whom</p>
+</header>
+<div class="legend">
+  <div class="legend-item"><div class="legend-swatch phases"></div>Phases</div>
+  <div class="legend-item"><div class="legend-swatch elements"></div>Building Elements</div>
+  <div class="legend-item"><div class="legend-swatch orgs"></div>Organizations</div>
+</div>
+<div class="hint">Hover any element to see its cross-domain relationships</div>
+
+<div class="container">
+  <svg class="connections" id="svg-layer"></svg>
+  <div class="columns">
+
+    <!-- LEFT: PHASES -->
+    <div class="domain-column">
+      <div class="domain-hdr phases">Phases<span>When it happens</span></div>
+      <div class="cat-label">Preconstruction</div>
+      <div class="el-card phases" data-id="ph-design"><div class="el-name">Design Development</div></div>
+      <div class="el-card phases" data-id="ph-permit"><div class="el-name">Permitting & Approvals</div></div>
+      <div class="el-card phases" data-id="ph-procurement"><div class="el-name">Bidding & Buyout</div></div>
+      <div class="cat-label">Construction</div>
+      <div class="el-card phases" data-id="ph-foundations"><div class="el-name">Foundations</div></div>
+      <div class="el-card phases" data-id="ph-steel"><div class="el-name">Structural Steel Erection</div></div>
+      <div class="el-card phases" data-id="ph-enclosure"><div class="el-name">Building Enclosure</div></div>
+      <div class="el-card phases" data-id="ph-mep"><div class="el-name">Above-Ceiling Coordination</div></div>
+      <div class="el-card phases" data-id="ph-finishes"><div class="el-name">Finishes & MEP Trim</div></div>
+      <div class="cat-label">Closeout</div>
+      <div class="el-card phases" data-id="ph-punch"><div class="el-name">Punch List & Closeout</div></div>
+      <div class="el-card phases" data-id="ph-cx"><div class="el-name">Commissioning</div></div>
+    </div>
+
+    <!-- CENTER: BUILDING ELEMENTS -->
+    <div class="domain-column">
+      <div class="domain-hdr elements">Building Elements<span>What is built</span></div>
+      <div class="cat-label">Substructure</div>
+      <div class="el-card elements" data-id="be-foundations"><div class="el-name">Foundations</div></div>
+      <div class="cat-label">Superstructure</div>
+      <div class="el-card elements" data-id="be-frame"><div class="el-name">Structural Frame</div></div>
+      <div class="cat-label">Exterior Closure</div>
+      <div class="el-card elements" data-id="be-curtainwall"><div class="el-name">Curtain Wall</div></div>
+      <div class="el-card elements" data-id="be-roof"><div class="el-name">Roof Membrane</div></div>
+      <div class="cat-label">MEP Systems</div>
+      <div class="el-card elements" data-id="be-hvac"><div class="el-name">HVAC Ductwork</div></div>
+      <div class="el-card elements" data-id="be-electrical"><div class="el-name">Electrical Distribution</div></div>
+      <div class="el-card elements" data-id="be-plumbing"><div class="el-name">Plumbing</div></div>
+      <div class="el-card elements" data-id="be-fireprotection"><div class="el-name">Fire Protection</div></div>
+      <div class="cat-label">Interiors</div>
+      <div class="el-card elements" data-id="be-paint"><div class="el-name">Paint & Coatings</div></div>
+      <div class="el-card elements" data-id="be-doors"><div class="el-name">Doors & Hardware</div></div>
+    </div>
+
+    <!-- RIGHT: ORGANIZATIONS -->
+    <div class="domain-column">
+      <div class="domain-hdr orgs">Organizations<span>Who is responsible</span></div>
+      <div class="cat-label">Project Delivery</div>
+      <div class="el-card orgs" data-id="org-owner"><div class="el-name">Owner / Developer</div></div>
+      <div class="el-card orgs" data-id="org-gc"><div class="el-name">General Contractor</div></div>
+      <div class="el-card orgs" data-id="org-sub"><div class="el-name">Subcontractor (Trade)</div></div>
+      <div class="cat-label">Design Team</div>
+      <div class="el-card orgs" data-id="org-arch"><div class="el-name">Architect of Record</div></div>
+      <div class="el-card orgs" data-id="org-struct"><div class="el-name">Structural Engineer</div></div>
+      <div class="el-card orgs" data-id="org-mep-eng"><div class="el-name">MEP Engineer</div></div>
+      <div class="cat-label">Verification & Regulatory</div>
+      <div class="el-card orgs" data-id="org-special"><div class="el-name">Special Inspection Agency</div></div>
+      <div class="el-card orgs" data-id="org-bldg-dept"><div class="el-name">Building Department</div></div>
+      <div class="el-card orgs" data-id="org-cxa"><div class="el-name">Commissioning Agent</div></div>
+      <div class="el-card orgs" data-id="org-fpeng"><div class="el-name">Fire Protection Engineer</div></div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+const typeColors = {
+  'built-during': '#ffb74d',
+  'erected-during': '#ffb74d',
+  'installed-during': '#ffb74d',
+  'finished-during': '#ffb74d',
+  'enclosed-during': '#ffb74d',
+  'designed-by': '#66bb6a',
+  'tested-by': '#80cbc4',
+  'assigned-to': '#ce93d8',
+  'leads': '#ffb74d',
+  'gates': '#ef5350',
+  'manages': '#26c6da',
+  'performs': '#ab47bc',
+  'approves': '#ffd54f',
+  'inspects': '#80cbc4',
+  'awards': '#26c6da',
+  'reviews': '#90a4ae',
+  'commissions': '#80cbc4',
+};
+
+// [sourceId, targetId, typeKey, label]
+const relationships = [
+  // ===== BUILDING ELEMENTS ↔ PHASES =====
+  ["be-foundations", "ph-foundations", "built-during", "BUILT DURING"],
+  ["be-frame", "ph-steel", "erected-during", "ERECTED DURING"],
+  ["be-curtainwall", "ph-enclosure", "enclosed-during", "ENCLOSED DURING"],
+  ["be-roof", "ph-enclosure", "enclosed-during", "ENCLOSED DURING"],
+  ["be-hvac", "ph-mep", "installed-during", "INSTALLED DURING"],
+  ["be-electrical", "ph-mep", "installed-during", "INSTALLED DURING"],
+  ["be-plumbing", "ph-mep", "installed-during", "INSTALLED DURING"],
+  ["be-fireprotection", "ph-mep", "installed-during", "INSTALLED DURING"],
+  ["be-paint", "ph-finishes", "finished-during", "APPLIED DURING"],
+  ["be-doors", "ph-finishes", "finished-during", "INSTALLED DURING"],
+  ["be-fireprotection", "ph-cx", "commissions", "TESTED DURING"],
+  ["be-hvac", "ph-cx", "commissions", "TESTED DURING"],
+
+  // ===== BUILDING ELEMENTS ↔ ORGANIZATIONS =====
+  ["be-frame", "org-arch", "designed-by", "DESIGNED BY"],
+  ["be-frame", "org-struct", "designed-by", "ENGINEERED BY"],
+  ["be-foundations", "org-struct", "designed-by", "ENGINEERED BY"],
+  ["be-hvac", "org-mep-eng", "designed-by", "DESIGNED BY"],
+  ["be-electrical", "org-mep-eng", "designed-by", "DESIGNED BY"],
+  ["be-plumbing", "org-mep-eng", "designed-by", "DESIGNED BY"],
+  ["be-fireprotection", "org-fpeng", "designed-by", "DESIGNED BY"],
+  ["be-foundations", "org-special", "tested-by", "TESTED BY"],
+  ["be-frame", "org-special", "tested-by", "TESTED BY"],
+  ["be-frame", "org-sub", "assigned-to", "ERECTED BY"],
+  ["be-curtainwall", "org-sub", "assigned-to", "INSTALLED BY"],
+  ["be-paint", "org-sub", "assigned-to", "APPLIED BY"],
+  ["be-doors", "org-sub", "assigned-to", "INSTALLED BY"],
+  ["be-fireprotection", "org-sub", "assigned-to", "INSTALLED BY"],
+  ["be-hvac", "org-sub", "assigned-to", "INSTALLED BY"],
+  ["be-electrical", "org-sub", "assigned-to", "INSTALLED BY"],
+  ["be-plumbing", "org-sub", "assigned-to", "INSTALLED BY"],
+  ["be-roof", "org-sub", "assigned-to", "INSTALLED BY"],
+  ["be-foundations", "org-sub", "assigned-to", "PLACED BY"],
+  ["be-curtainwall", "org-arch", "reviews", "REVIEWED BY"],
+
+  // ===== ORGANIZATIONS ↔ PHASES =====
+  // Owner
+  ["org-owner", "ph-design", "approves", "APPROVES"],
+  ["org-owner", "ph-punch", "approves", "ACCEPTS"],
+
+  // GC (9 of 10 — everything except Permitting)
+  ["org-gc", "ph-design", "manages", "PRECONSTRUCTION"],
+  ["org-gc", "ph-procurement", "manages", "MANAGES"],
+  ["org-gc", "ph-foundations", "manages", "MANAGES"],
+  ["org-gc", "ph-steel", "manages", "MANAGES"],
+  ["org-gc", "ph-enclosure", "manages", "MANAGES"],
+  ["org-gc", "ph-mep", "manages", "MANAGES"],
+  ["org-gc", "ph-finishes", "manages", "MANAGES"],
+  ["org-gc", "ph-cx", "manages", "COORDINATES"],
+  ["org-gc", "ph-punch", "manages", "MANAGES"],
+
+  // Subcontractors (7 construction phases)
+  ["org-sub", "ph-procurement", "awards", "AWARDED DURING"],
+  ["org-sub", "ph-foundations", "performs", "PERFORMS"],
+  ["org-sub", "ph-steel", "performs", "PERFORMS"],
+  ["org-sub", "ph-enclosure", "performs", "PERFORMS"],
+  ["org-sub", "ph-mep", "performs", "PERFORMS"],
+  ["org-sub", "ph-finishes", "performs", "PERFORMS"],
+  ["org-sub", "ph-punch", "performs", "CORRECTS"],
+
+  // Architect (design through closeout)
+  ["org-arch", "ph-design", "leads", "LEADS"],
+  ["org-arch", "ph-permit", "reviews", "SUBMITS"],
+  ["org-arch", "ph-procurement", "reviews", "REVIEWS"],
+  ["org-arch", "ph-enclosure", "reviews", "OBSERVES"],
+  ["org-arch", "ph-finishes", "reviews", "OBSERVES"],
+  ["org-arch", "ph-punch", "reviews", "PUNCH WALKS"],
+
+  // Structural Engineer
+  ["org-struct", "ph-design", "leads", "CO-LEADS"],
+  ["org-struct", "ph-foundations", "reviews", "OBSERVES"],
+  ["org-struct", "ph-steel", "reviews", "OBSERVES"],
+
+  // MEP Engineer
+  ["org-mep-eng", "ph-design", "leads", "CO-LEADS"],
+  ["org-mep-eng", "ph-mep", "reviews", "OBSERVES"],
+  ["org-mep-eng", "ph-cx", "reviews", "WITNESSES"],
+
+  // Fire Protection Engineer
+  ["org-fpeng", "ph-mep", "reviews", "OBSERVES"],
+  ["org-fpeng", "ph-cx", "inspects", "WITNESSES"],
+
+  // Special Inspection Agency
+  ["org-special", "ph-foundations", "inspects", "INSPECTS"],
+  ["org-special", "ph-steel", "inspects", "INSPECTS"],
+
+  // Building Department
+  ["org-bldg-dept", "ph-permit", "gates", "GATES"],
+  ["org-bldg-dept", "ph-punch", "inspects", "FINAL INSPECTION"],
+
+  // Commissioning Agent
+  ["org-cxa", "ph-cx", "leads", "LEADS"],
+];
+
+// ===== RENDERING =====
+const svg = document.getElementById('svg-layer');
+const allCards = document.querySelectorAll('.el-card');
+const pathMap = {};
+
+function getCardCenter(el) {
+  const r = el.getBoundingClientRect();
+  const sr = svg.getBoundingClientRect();
+  return {
+    x: r.left + r.width / 2 - sr.left,
+    y: r.top + r.height / 2 - sr.top,
+    left: r.left - sr.left,
+    right: r.right - sr.left,
+    top: r.top - sr.top,
+    bottom: r.bottom - sr.top,
+  };
+}
+
+function buildPaths() {
+  svg.innerHTML = '';
+  const container = document.querySelector('.container');
+  svg.style.height = container.offsetHeight + 'px';
+  Object.keys(pathMap).forEach(k => delete pathMap[k]);
+
+  relationships.forEach((rel, i) => {
+    const [srcId, tgtId, type, label] = rel;
+    const srcEl = document.querySelector(`[data-id="${srcId}"]`);
+    const tgtEl = document.querySelector(`[data-id="${tgtId}"]`);
+    if (!srcEl || !tgtEl) return;
+
+    const s = getCardCenter(srcEl);
+    const t = getCardCenter(tgtEl);
+
+    let sx, sy, tx, ty, cp1x, cp1y, cp2x, cp2y;
+    if (s.x < t.x) { sx = s.right; tx = t.left; } else { sx = s.left; tx = t.right; }
+    sy = s.y; ty = t.y;
+    cp1x = sx + (tx - sx) * 0.38; cp1y = sy;
+    cp2x = sx + (tx - sx) * 0.62; cp2y = ty;
+
+    const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+    const d = `M ${sx} ${sy} C ${cp1x} ${cp1y}, ${cp2x} ${cp2y}, ${tx} ${ty}`;
+    path.setAttribute('d', d);
+    path.setAttribute('stroke', typeColors[type] || '#888');
+    svg.appendChild(path);
+
+    // Label at midpoint of the curve
+    const mx = (sx + tx) / 2;
+    const my = (sy + ty) / 2;
+    const text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+    text.setAttribute('x', mx);
+    text.setAttribute('y', my - 4);
+    text.setAttribute('fill', typeColors[type] || '#888');
+    text.setAttribute('text-anchor', 'middle');
+    text.textContent = label;
+    svg.appendChild(text);
+
+    if (!pathMap[srcId]) pathMap[srcId] = [];
+    if (!pathMap[tgtId]) pathMap[tgtId] = [];
+    pathMap[srcId].push({ path, text, partnerId: tgtId });
+    pathMap[tgtId].push({ path, text, partnerId: srcId });
+  });
+}
+
+function handleHover(e) {
+  const card = e.currentTarget;
+  const id = card.dataset.id;
+  const connections = pathMap[id] || [];
+  const connectedIds = new Set(connections.map(c => c.partnerId));
+  connectedIds.add(id);
+
+  allCards.forEach(c => {
+    if (connectedIds.has(c.dataset.id)) {
+      c.classList.add('connected'); c.classList.remove('dimmed');
+    } else {
+      c.classList.add('dimmed'); c.classList.remove('connected');
+    }
+  });
+  card.classList.add('active');
+  card.classList.remove('connected', 'dimmed');
+
+  svg.querySelectorAll('path').forEach(p => p.classList.add('dimmed'));
+  svg.querySelectorAll('text').forEach(t => t.classList.remove('visible'));
+  connections.forEach(c => {
+    c.path.classList.add('visible');
+    c.path.classList.remove('dimmed');
+    c.text.classList.add('visible');
+  });
+}
+
+function handleLeave() {
+  allCards.forEach(c => c.classList.remove('dimmed', 'connected', 'active'));
+  svg.querySelectorAll('path').forEach(p => p.classList.remove('visible', 'dimmed'));
+  svg.querySelectorAll('text').forEach(t => t.classList.remove('visible'));
+}
+
+allCards.forEach(card => {
+  card.addEventListener('mouseenter', handleHover);
+  card.addEventListener('mouseleave', handleLeave);
+});
+
+buildPaths();
+window.addEventListener('resize', buildPaths);
+</script>
+</body>
+</html>

@@ -1,0 +1,275 @@
+{
+  "source": "building-elements",
+  "target": "standards-classifications",
+  "edges": [
+    [
+      "be-deep-fdn",
+      "sc-masterformat",
+      "CLASSIFIED UNDER"
+    ],
+    [
+      "be-columns",
+      "sc-masterformat",
+      "CLASSIFIED UNDER"
+    ],
+    [
+      "be-curtainwall",
+      "sc-masterformat",
+      "CLASSIFIED UNDER"
+    ],
+    [
+      "be-ductwork",
+      "sc-masterformat",
+      "CLASSIFIED UNDER"
+    ],
+    [
+      "be-power-dist",
+      "sc-masterformat",
+      "CLASSIFIED UNDER"
+    ],
+    [
+      "be-drywall",
+      "sc-masterformat",
+      "CLASSIFIED UNDER"
+    ],
+    [
+      "be-deep-fdn",
+      "sc-uniformat",
+      "GROUPED BY"
+    ],
+    [
+      "be-columns",
+      "sc-uniformat",
+      "GROUPED BY"
+    ],
+    [
+      "be-curtainwall",
+      "sc-uniformat",
+      "GROUPED BY"
+    ],
+    [
+      "be-ductwork",
+      "sc-uniformat",
+      "GROUPED BY"
+    ],
+    [
+      "be-columns",
+      "sc-omniclass",
+      "CROSS-REFERENCED TO"
+    ],
+    [
+      "be-curtainwall",
+      "sc-omniclass",
+      "CROSS-REFERENCED TO"
+    ],
+    [
+      "be-columns",
+      "sc-ifc-class",
+      "MODELED AS"
+    ],
+    [
+      "be-slabs",
+      "sc-ifc-class",
+      "MODELED AS"
+    ],
+    [
+      "be-ductwork",
+      "sc-ifc-class",
+      "MODELED AS"
+    ],
+    [
+      "be-curtainwall",
+      "sc-specification-se",
+      "SPECIFIED BY"
+    ],
+    [
+      "be-roof-mem",
+      "sc-specification-se",
+      "SPECIFIED BY"
+    ],
+    [
+      "be-bg-wp",
+      "sc-specification-se",
+      "SPECIFIED BY"
+    ],
+    [
+      "be-columns",
+      "sc-std-cost-code",
+      "CODED AS"
+    ],
+    [
+      "be-ductwork",
+      "sc-std-cost-code",
+      "CODED AS"
+    ],
+    [
+      "be-columns",
+      "sc-wbs-code",
+      "MAPPED TO"
+    ],
+    [
+      "be-curtainwall",
+      "sc-wbs-code",
+      "MAPPED TO"
+    ],
+    [
+      "be-deep-fdn",
+      "sc-budget-code",
+      "BUDGETED UNDER"
+    ],
+    [
+      "be-curtainwall",
+      "sc-budget-code",
+      "BUDGETED UNDER"
+    ],
+    [
+      "be-excav",
+      "sc-osha-hazard",
+      "REGULATED BY"
+    ],
+    [
+      "be-columns",
+      "sc-osha-hazard",
+      "REGULATED BY"
+    ],
+    [
+      "be-roof-struct",
+      "sc-osha-hazard",
+      "REGULATED BY"
+    ],
+    [
+      "be-power-dist",
+      "sc-osha-hazard",
+      "REGULATED BY"
+    ],
+    [
+      "be-columns",
+      "sc-international-bu",
+      "COMPLIES WITH"
+    ],
+    [
+      "be-stairs",
+      "sc-international-bu",
+      "COMPLIES WITH"
+    ],
+    [
+      "be-ext-doors",
+      "sc-international-bu",
+      "COMPLIES WITH"
+    ],
+    [
+      "be-sprink-main",
+      "sc-nfpa-stds",
+      "TESTED PER"
+    ],
+    [
+      "be-fire-pump",
+      "sc-nfpa-stds",
+      "TESTED PER"
+    ],
+    [
+      "be-fa",
+      "sc-nfpa-stds",
+      "TESTED PER"
+    ],
+    [
+      "be-stairs",
+      "sc-ada-accessibilit",
+      "RATED BY"
+    ],
+    [
+      "be-plumb-fix",
+      "sc-ada-accessibilit",
+      "RATED BY"
+    ],
+    [
+      "be-elev-car",
+      "sc-ada-accessibilit",
+      "RATED BY"
+    ],
+    [
+      "be-ext-insul",
+      "sc-energy-code-stds",
+      "MEASURED BY"
+    ],
+    [
+      "be-windows",
+      "sc-energy-code-stds",
+      "MEASURED BY"
+    ],
+    [
+      "be-ahu",
+      "sc-energy-code-stds",
+      "MEASURED BY"
+    ],
+    [
+      "be-lighting",
+      "sc-energy-code-stds",
+      "MEASURED BY"
+    ],
+    [
+      "be-windows",
+      "sc-leed-certificati",
+      "SCORED UNDER"
+    ],
+    [
+      "be-lighting",
+      "sc-leed-certificati",
+      "SCORED UNDER"
+    ],
+    [
+      "be-landscape",
+      "sc-leed-certificati",
+      "SCORED UNDER"
+    ],
+    [
+      "be-ahu",
+      "sc-well-building",
+      "EVALUATED PER"
+    ],
+    [
+      "be-dom-water",
+      "sc-well-building",
+      "EVALUATED PER"
+    ],
+    [
+      "be-roof-mem",
+      "sc-resilience-net",
+      "BENCHMARKED TO"
+    ],
+    [
+      "be-ahu",
+      "sc-resilience-net",
+      "BENCHMARKED TO"
+    ],
+    [
+      "be-deep-fdn",
+      "sc-aace-cost",
+      "ESTIMATED PER"
+    ],
+    [
+      "be-curtainwall",
+      "sc-aace-cost",
+      "ESTIMATED PER"
+    ]
+  ],
+  "verbGlossary": {
+    "CLASSIFIED UNDER": "{source} is categorized under {target} and section number (e.g., concrete columns under Division 03, structural steel under Division 05, electrical under Division 26)",
+    "GROUPED BY": "{source} is organized into {target} functional system grouping (e.g., foundations under B10, superstructure under B20, exterior enclosure under B30)",
+    "CROSS-REFERENCED TO": "{source} is tagged with {target} entry to enable interoperability across classification systems",
+    "MODELED AS": "{source} is represented as a typed {target} in a BIM model (e.g., IfcColumn, IfcSlab, IfcDuctSegment) for open-standard data exchange",
+    "SPECIFIED BY": "{source}'s material, performance, and installation requirements are defined in a project {target} (e.g., Section 07 92 00 for sealants, Section 08 44 00 for curtain walls)",
+    "CODED AS": "{source} is assigned {target} cost code for labor, material, and equipment cost tracking at the line-item level",
+    "MAPPED TO": "{source} is linked to a WBS code that ties scope, schedule, and cost into a single breakdown structure",
+    "BUDGETED UNDER": "{source} is allocated to a budget code structure for roll-up reporting and variance analysis",
+    "REGULATED BY": "{source}'s construction activities are subject to OSHA hazard regulations (e.g., fall protection for steel erection, trench safety for excavation, lockout/tagout for electrical)",
+    "COMPLIES WITH": "{source} must meet the structural, egress, or fire-resistance requirements of the International Building Code",
+    "TESTED PER": "{source} is tested or inspected following NFPA standards' prescribed protocols (e.g., NFPA 13 hydrostatic test for sprinkler mains, NFPA 72 for fire alarm acceptance)",
+    "RATED BY": "{source} is evaluated against ADA/accessibility criteria for clearance, reach range, or operability (e.g., door hardware force, fixture mounting height, elevator cab dimensions)",
+    "MEASURED BY": "{source}'s thermal, efficiency, or performance value is quantified against energy code thresholds (e.g., R-value for insulation, U-factor for glazing, LPD for lighting)",
+    "SCORED UNDER": "{source} contributes credit points toward LEED certification categories (e.g., recycled content under MR, daylighting under EQ, stormwater under SS)",
+    "EVALUATED PER": "{source} is assessed against WELL Building Standard features for indoor air quality, water quality, light quality, or thermal comfort",
+    "BENCHMARKED TO": "{source}'s performance or resilience characteristics are compared against net zero or resilience standard thresholds",
+    "ESTIMATED PER": "{source}'s cost estimate is prepared following AACE recommended practices for estimate {target}, contingency ranges, and accuracy levels"
+  }
+}

@@ -1,0 +1,990 @@
+{
+  "domain": "Financial Instruments",
+  "description": "How money flows through a project — budgets, contracts, changes, costs, and payments",
+  "catalog": "prod_gold_ram_us02",
+  "last_validated": "2026-03-25",
+  "total_elements": 27,
+  "standard_measures": 9,
+  "coverage_summary": {
+    "high": 23,
+    "medium": 8,
+    "low": 5,
+    "none": 0
+  },
+  "critical_rules": [
+    "CE→CCO deduplication: NEVER sum change_events + commitment_change_orders for the same scope. Use GREATEST(CE total, CCO total).",
+    "Budget = PLANNED spend, not actual cost. Actual cost = committed + direct + approved changes.",
+    "Not all customers purchase financial tools. Exclude zero-financial-data projects from cost benchmarks.",
+    "CEs use snake_case change_reason (design_development). CCOs use title case (Design Development). Always use LOWER() for comparison.",
+    "Void CEs: filter with mapped_to_status != 'void'. Void CCOs: filter with status != 'Void'."
+  ],
+  "sections": {
+    "budget_cost_structure": {
+      "label": "Budget & Cost Structure",
+      "description": "The planned allocation of project funds",
+      "elements": [
+        {
+          "ucdm_element": "Project Budget",
+          "ucdm_code": "fi-budget",
+          "description": "Total approved budget for a project — the financial ceiling against which all costs are measured",
+          "databricks": {
+            "primary_table": "finance.budget_line_items",
+            "primary_columns": [
+              {"column": "project_id", "type": "bigint", "description": "FK to core.projects", "null_rate": "0%"},
+              {"column": "original_amount", "type": "decimal", "description": "Original budget allocation", "null_rate": "low"},
+              {"column": "amount", "type": "decimal", "description": "Current (revised) budget amount", "null_rate": "low"}
+            ],
+            "aggregation": "SUM(amount) GROUP BY project_id for total project budget; SUM(original_amount) for original budget",
+            "secondary_tables": [
+              {
+                "table": "core.projects",
+                "columns": ["project_id", "estimated_value", "total_value"],
+                "join": "budget_line_items.project_id = projects.project_id",
+                "note": "projects.total_value is the contract-level value, not the detailed budget"
+              }
+            ],
+            "gold_layer_ready": false,
+            "ready_tables_note": "budget_line_items is NOT ready in gold layer. Use projects.total_value as proxy.",
+            "company_coverage": "Gated by financial tool purchase"
+          },
+          "gotchas": [
+            "budget_line_items NOT READY in gold layer — cannot query directly yet",
+            "projects.total_value exists as a proxy but is contract value, not detailed budget",
+            "Not all customers purchase financial tools — absence means no tool, not no budget"
+          ]
+        },
+        {
+          "ucdm_element": "Budget Line Item",
+          "ucdm_code": "fi-budget-line",
+          "description": "Individual row in the project budget — allocates dollars to a specific cost code/scope",
+          "databricks": {
+            "primary_table": "finance.budget_line_items",
+            "primary_columns": [
+              {"column": "budget_line_item_id", "type": "bigint", "description": "Primary key", "null_rate": "0%"},
+              {"column": "project_id", "type": "bigint", "description": "FK to core.projects", "null_rate": "0%"},
+              {"column": "cost_code_id", "type": "bigint", "description": "FK to finance.cost_codes", "null_rate": "low"},
+              {"column": "wbs_code_id", "type": "bigint", "description": "FK to finance.wbs_codes", "null_rate": "varies"},
+              {"column": "original_amount", "type": "decimal", "description": "Original budget allocation", "null_rate": "low"},
+              {"column": "amount", "type": "decimal", "description": "Current (revised) budget", "null_rate": "low"}
+            ],
+            "join_paths": [
+              "budget_line_items.cost_code_id → cost_codes.cost_code_id",
+              "budget_line_items.wbs_code_id → wbs_codes.wbs_code_id"
+            ],
+            "gold_layer_ready": false,
+            "sample_query": "SELECT project_id, cost_code_id, original_amount, amount, (amount - original_amount) AS budget_growth FROM finance.budget_line_items WHERE company_id = ?"
+          },
+          "gotchas": [
+            "budget_line_items NOT READY in gold layer",
+            "amount = PLANNED allocation, NOT actual cost",
+            "Variance = amount − (committed_cost + direct_cost + approved_changes)"
+          ]
+        },
+        {
+          "ucdm_element": "Cost Code",
+          "ucdm_code": "fi-cost-code",
+          "description": "Classification code that categorizes costs by type of work — typically MasterFormat-based",
+          "databricks": {
+            "primary_table": "finance.cost_codes",
+            "primary_columns": [
+              {"column": "cost_code_id", "type": "bigint", "description": "Primary key", "null_rate": "0%"},
+              {"column": "code", "type": "string", "description": "Cost code number (e.g., '03 30 00')", "null_rate": "0%"},
+              {"column": "name", "type": "string", "description": "Cost code description", "null_rate": "low"},
+              {"column": "standard_cost_code_id", "type": "bigint", "description": "FK to standard/company template code", "null_rate": "varies"},
+              {"column": "company_id", "type": "bigint", "description": "FK to core.companies", "null_rate": "0%"}
+            ],
+            "secondary_tables": [
+              {
+                "table": "finance.cost_code_lists",
+                "columns": ["cost_code_list_id", "name"],
+                "join": "cost_codes belong to cost_code_lists",
+                "note": "Company-level cost code template structure"
+              }
+            ],
+            "gold_layer_ready": true,
+            "sample_query": "SELECT code, name, COUNT(DISTINCT company_id) as cos FROM finance.cost_codes GROUP BY code, name ORDER BY cos DESC LIMIT 50"
+          },
+          "gotchas": [
+            "Cost code structures vary wildly between companies — some use MasterFormat 3-level, others use flat codes",
+            "First 2 digits of MasterFormat code = division = maps to building system",
+            "The Rosetta Stone between financial data and building elements"
+          ]
+        },
+        {
+          "ucdm_element": "WBS Code",
+          "ucdm_code": "fi-wbs-code",
+          "description": "Work Breakdown Structure code — adds a second dimension to cost classification (phase, location, category)",
+          "databricks": {
+            "primary_table": "finance.wbs_codes",
+            "primary_columns": [
+              {"column": "wbs_code_id", "type": "bigint", "description": "Primary key — used as FK on all financial line items", "null_rate": "0%"},
+              {"column": "cost_code_id", "type": "bigint", "description": "FK to finance.cost_codes", "null_rate": "0%"},
+              {"column": "cost_code", "type": "string", "description": "Cost code number (denormalized)", "null_rate": "low"},
+              {"column": "cost_code_name", "type": "string", "description": "Cost code description (denormalized)", "null_rate": "low"},
+              {"column": "wbs_code_flat_code", "type": "string", "description": "Flattened WBS path", "null_rate": "varies"},
+              {"column": "line_item_type", "type": "string", "description": "Budget line item type segment", "null_rate": "varies"},
+              {"column": "sub_job", "type": "string", "description": "Sub-job segment", "null_rate": "varies"},
+              {"column": "project_id", "type": "bigint", "description": "FK to core.projects", "null_rate": "0%"},
+              {"column": "company_id", "type": "bigint", "description": "FK to core.companies", "null_rate": "0%"}
+            ],
+            "join_paths": [
+              "wbs_codes.cost_code_id → cost_codes.cost_code_id",
+              "All financial line items reference wbs_code_id (CE line items, CCO line items, DC line items, budget mods)"
+            ],
+            "gold_layer_ready": true,
+            "sample_query": "SELECT w.wbs_code_flat_code, w.cost_code, w.cost_code_name, COUNT(*) FROM finance.wbs_codes w WHERE w.company_id = ? GROUP BY 1,2,3"
+          },
+          "gotchas": [
+            "WBS adoption varies widely — some companies use 5+ segments, others none",
+            "wbs_code_id is THE key FK on all financial line items — this is the system mapping key",
+            "WBS 'Rework' or 'Warranty' segments are signals for rework cost detection"
+          ]
+        },
+        {
+          "ucdm_element": "Budget Code",
+          "ucdm_code": "fi-budget-code",
+          "description": "Grouping code for reporting — distinct from cost codes, used for executive roll-ups",
+          "databricks": {
+            "primary_table": "finance.budget_codes",
+            "primary_columns": [
+              {"column": "budget_code_id", "type": "bigint", "description": "Primary key", "null_rate": "0%"},
+              {"column": "code", "type": "string", "description": "Budget code value", "null_rate": "low"},
+              {"column": "name", "type": "string", "description": "Budget code description (e.g., 'Structure', 'MEP', 'Contingency')", "null_rate": "low"},
+              {"column": "company_id", "type": "bigint", "description": "FK to core.companies", "null_rate": "0%"}
+            ],
+            "gold_layer_ready": false,
+            "ready_tables_note": "budget_codes NOT ready in gold layer"
+          },
+          "gotchas": [
+            "budget_codes NOT READY in gold layer",
+            "Least standardized of the three code types — highly company-specific",
+            "Budget codes with 'Rework' or 'Warranty' are rework detection signals (339 cos validated)",
+            "Exclude environmental remediation codes from rework analysis"
+          ]
+        }
+      ]
+    },
+    "commitments": {
+      "label": "Commitments",
+      "description": "Contracted obligations to pay for work",
+      "elements": [
+        {
+          "ucdm_element": "Commitment (Subcontract)",
+          "ucdm_code": "fi-commitment-sub",
+          "description": "Legally binding agreement between GC and subcontractor — largest category of project spend (70-85%)",
+          "databricks": {
+            "primary_table": "finance.commitments",
+            "primary_columns": [
+              {"column": "commitment_id", "type": "bigint", "description": "Primary key", "null_rate": "0%"},
+              {"column": "project_id", "type": "bigint", "description": "FK to core.projects", "null_rate": "0%"},
+              {"column": "company_id", "type": "bigint", "description": "FK to core.companies", "null_rate": "0%"},
+              {"column": "vendor_id", "type": "bigint", "description": "FK to core.project_vendors", "null_rate": "low"},
+              {"column": "title", "type": "string", "description": "Commitment title — often names the trade scope", "null_rate": "low"},
+              {"column": "status", "type": "string", "description": "Commitment status", "null_rate": "low"},
+              {"column": "type", "type": "string", "description": "Distinguishes subcontract vs PO", "null_rate": "low"}
+            ],
+            "filter": "WHERE type = 'Subcontract' (or equivalent — check distinct values)",
+            "join_paths": [
+              "commitments.vendor_id → project_vendors.vendor_id (+ project_id)",
+              "commitments.commitment_id → commitment_line_items.commitment_id",
+              "commitments.commitment_id → commitment_change_orders.commitment_id"
+            ],
+            "gold_layer_ready": true,
+            "sample_query": "SELECT title, status, vendor_id, COUNT(*) FROM finance.commitments WHERE company_id = ? AND type = 'Subcontract' GROUP BY 1,2,3"
+          },
+          "gotchas": [
+            "Type field distinguishes subcontracts from POs — check DISTINCT values for exact strings",
+            "Vendor on commitment links Financial domain → Organizations domain",
+            "Title often contains trade info (e.g., 'Electrical Subcontract')"
+          ]
+        },
+        {
+          "ucdm_element": "Commitment (Purchase Order)",
+          "ucdm_code": "fi-commitment-po",
+          "description": "Agreement to purchase materials, equipment, or services — typically for materials not in a subcontract",
+          "databricks": {
+            "primary_table": "finance.commitments",
+            "primary_columns": "Same as Commitment (Subcontract) — distinguished by type field",
+            "filter": "WHERE type = 'Purchase Order' (or equivalent)",
+            "gold_layer_ready": true
+          },
+          "gotchas": [
+            "Same table as subcontracts — filtered by type",
+            "PO delivery tracking connects to Field Operations domain (daily_log_delivery)",
+            "Material PO delays are a primary schedule risk — connects to Material Shortage insight"
+          ]
+        },
+        {
+          "ucdm_element": "Commitment Line Item",
+          "ucdm_code": "fi-commitment-line",
+          "description": "Cost-code-level detail within a commitment — budget-aligned allocation",
+          "databricks": {
+            "primary_table": "finance.commitment_line_items",
+            "primary_columns": [
+              {"column": "commitment_line_item_id", "type": "bigint", "description": "Primary key", "null_rate": "0%"},
+              {"column": "commitment_id", "type": "bigint", "description": "FK to finance.commitments", "null_rate": "0%"},
+              {"column": "cost_code_id", "type": "bigint", "description": "FK to finance.cost_codes", "null_rate": "low"},
+              {"column": "wbs_code_id", "type": "bigint", "description": "FK to finance.wbs_codes", "null_rate": "varies"},
+              {"column": "description", "type": "string", "description": "Line item description — NLP signal for cost categorization", "null_rate": "varies"},
+              {"column": "amount", "type": "decimal", "description": "Line item dollar amount", "null_rate": "low"},
+              {"column": "project_id", "type": "bigint", "description": "FK to core.projects", "null_rate": "0%"},
+              {"column": "company_id", "type": "bigint", "description": "FK to core.companies", "null_rate": "0%"}
+            ],
+            "join_paths": [
+              "commitment_line_items.commitment_id → commitments.commitment_id",
+              "commitment_line_items.cost_code_id → cost_codes.cost_code_id",
+              "commitment_line_items.wbs_code_id → wbs_codes.wbs_code_id"
+            ],
+            "gold_layer_ready": false,
+            "ready_tables_note": "commitment_line_items NOT ready in gold layer"
+          },
+          "gotchas": [
+            "commitment_line_items NOT READY in gold layer",
+            "Sum of line items by cost code = committed cost on corresponding budget line",
+            "Description is rich NLP signal for cost categorization"
+          ]
+        }
+      ]
+    },
+    "change_management": {
+      "label": "Change Management",
+      "description": "How scope and cost changes flow through the system",
+      "elements": [
+        {
+          "ucdm_element": "Change Event (CE)",
+          "ucdm_code": "fi-chg-event",
+          "description": "Documented scope/cost change — the initial identification before formal commitment modification",
+          "databricks": {
+            "primary_table": "finance.change_events",
+            "primary_columns": [
+              {"column": "change_event_id", "type": "bigint", "description": "Primary key (NOT 'id')", "null_rate": "0%"},
+              {"column": "project_id", "type": "bigint", "description": "FK to core.projects", "null_rate": "0%"},
+              {"column": "company_id", "type": "bigint", "description": "FK to core.companies", "null_rate": "0%"},
+              {"column": "title", "type": "string", "description": "CE title", "null_rate": "low"},
+              {"column": "description", "type": "string", "description": "CE description — NLP signal", "null_rate": "varies"},
+              {"column": "change_reason", "type": "string", "description": "PRIMARY categorization field — structured enum (snake_case)", "null_rate": "~30%"},
+              {"column": "origin_id", "type": "bigint", "description": "FK to originating record — 91.5% NULL, bigint NOT a category", "null_rate": "91.5%"},
+              {"column": "origin_type", "type": "string", "description": "Type of origin: 'Rfi::Header', 'Observations::Item', 'Meeting'", "null_rate": "varies"},
+              {"column": "mapped_to_status", "type": "string", "description": "Use != 'void' to filter voided CEs", "null_rate": "low"},
+              {"column": "status", "type": "string", "description": "CE status", "null_rate": "low"}
+            ],
+            "key_change_reason_values": [
+              "design_development", "owner_directive", "unforeseen_conditions",
+              "allowance_adjustment", "scope_change", "value_engineering",
+              "schedule_acceleration", "code_compliance", "rework"
+            ],
+            "join_paths": [
+              "change_events.change_event_id → change_event_line_items.change_event_id",
+              "change_events.origin_id → rfis.rfi_header_id (when origin_type = 'Rfi::Header')"
+            ],
+            "gold_layer_ready": false,
+            "ready_tables_note": "change_events NOT ready in gold layer. Accessible via direct Databricks SQL.",
+            "validated_stats": {
+              "total_ces": "303K+ with design_development reason",
+              "companies": "6,748 with design-related CEs",
+              "total_cost": "$54.8B"
+            }
+          },
+          "gotchas": [
+            "change_event_id NOT 'id' — validated column name correction",
+            "change_reason is the PRIMARY categorization — NOT origin_id (bigint FK, 91.5% null)",
+            "origin_type values: 'Rfi::Header' (307K), 'Observations::Item', 'Meeting'",
+            "mapped_to_status != 'void' to exclude voided CEs",
+            "change_reason uses snake_case: design_development (NOT title case like CCOs)",
+            "DEDUP RULE: CEs and CCOs track the SAME change at different lifecycle stages — NEVER sum them"
+          ]
+        },
+        {
+          "ucdm_element": "Change Event Line Item",
+          "ucdm_code": "fi-chg-event-line",
+          "description": "Cost-code-level detail within a CE — breaks estimated change cost into budget-aligned allocations",
+          "databricks": {
+            "primary_table": "finance.change_event_line_items",
+            "primary_columns": [
+              {"column": "change_event_line_item_id", "type": "bigint", "description": "Primary key", "null_rate": "0%"},
+              {"column": "change_event_id", "type": "bigint", "description": "FK to finance.change_events", "null_rate": "0%"},
+              {"column": "wbs_code_id", "type": "bigint", "description": "FK to finance.wbs_codes — maps to cost code → building system", "null_rate": "varies"},
+              {"column": "latest_cost_amount", "type": "decimal", "description": "Current cost estimate (NOT 'amount')", "null_rate": "low"},
+              {"column": "description", "type": "string", "description": "Line item description — rich NLP signal", "null_rate": "varies"},
+              {"column": "commitment_potential_change_order_line_item_id", "type": "bigint", "description": "Link to CPCO line item — 40.8% populated", "null_rate": "59.2%"},
+              {"column": "project_id", "type": "bigint", "description": "FK to core.projects", "null_rate": "0%"},
+              {"column": "company_id", "type": "bigint", "description": "FK to core.companies", "null_rate": "0%"}
+            ],
+            "join_paths": [
+              "change_event_line_items.change_event_id → change_events.change_event_id",
+              "change_event_line_items.wbs_code_id → wbs_codes.wbs_code_id → cost_codes.cost_code_id"
+            ],
+            "gold_layer_ready": false,
+            "validated_stats": {
+              "ce_line_item_wbs_rework": "$213M",
+              "ce_line_item_nlp_rework": "$276M"
+            }
+          },
+          "gotchas": [
+            "latest_cost_amount is the correct cost column (NOT 'amount')",
+            "wbs_code_id maps to cost code → MasterFormat → building system",
+            "commitment_potential_change_order_line_item_id: 40.8% populated — most reliable CE→CCO tracing path",
+            "CPCO line items table NOT in gold layer — tracing path limited"
+          ]
+        },
+        {
+          "ucdm_element": "Potential Change Order (CPCO)",
+          "ucdm_code": "fi-cpco",
+          "description": "Intermediate instrument bridging CE to CCO — GC's request to modify a specific subcontract",
+          "databricks": {
+            "primary_table": "finance.commitment_potential_change_orders",
+            "primary_columns": [
+              {"column": "commitment_potential_change_order_id", "type": "bigint", "description": "Primary key", "null_rate": "0%"},
+              {"column": "commitment_id", "type": "bigint", "description": "FK to finance.commitments", "null_rate": "low"},
+              {"column": "commitment_change_order_id", "type": "bigint", "description": "FK to CCO — 89.5% populated", "null_rate": "10.5%"},
+              {"column": "title", "type": "string", "description": "CPCO title", "null_rate": "low"},
+              {"column": "status", "type": "string", "description": "CPCO status", "null_rate": "low"},
+              {"column": "project_id", "type": "bigint", "description": "FK to core.projects", "null_rate": "0%"},
+              {"column": "company_id", "type": "bigint", "description": "FK to core.companies", "null_rate": "0%"}
+            ],
+            "join_paths": [
+              "commitment_potential_change_orders.commitment_change_order_id → commitment_change_orders.commitment_change_order_id (89.5%)",
+              "change_event_line_items.commitment_potential_change_order_line_item_id → (CPCO line items NOT in gold)"
+            ],
+            "gold_layer_ready": false,
+            "ready_tables_note": "Table exists but NOT ready in gold layer"
+          },
+          "gotchas": [
+            "CPCO is the bridge: CE identifies → CPCO formalizes → CCO executes",
+            "commitment_change_order_id is 89.5% populated — good CCO linkage",
+            "CPCO LINE ITEMS table NOT in gold layer — limits line-item-level tracing"
+          ]
+        },
+        {
+          "ucdm_element": "Commitment Change Order (CCO)",
+          "ucdm_code": "fi-cco",
+          "description": "Formal, approved modification to a subcontract/PO — changes committed dollar amount",
+          "databricks": {
+            "primary_table": "finance.commitment_change_orders",
+            "primary_columns": [
+              {"column": "commitment_change_order_id", "type": "bigint", "description": "Primary key", "null_rate": "0%"},
+              {"column": "commitment_id", "type": "bigint", "description": "FK to finance.commitments", "null_rate": "0%"},
+              {"column": "project_id", "type": "bigint", "description": "FK to core.projects", "null_rate": "0%"},
+              {"column": "company_id", "type": "bigint", "description": "FK to core.companies", "null_rate": "0%"},
+              {"column": "title", "type": "string", "description": "CCO title", "null_rate": "low"},
+              {"column": "description", "type": "string", "description": "CCO description — NLP signal", "null_rate": "varies"},
+              {"column": "change_reason", "type": "string", "description": "Independent change_reason — TITLE CASE (e.g., 'Design Development')", "null_rate": "~40%"},
+              {"column": "status", "type": "string", "description": "Approved (96.7%), Pending, Draft, Void, Proceeding", "null_rate": "low"},
+              {"column": "grand_total", "type": "decimal", "description": "CCO cost — THE cost column", "null_rate": "low"},
+              {"column": "number", "type": "string", "description": "CCO number within commitment", "null_rate": "low"}
+            ],
+            "key_change_reason_values": [
+              "Design Development", "Owner Directive", "Unforeseen Conditions",
+              "Allowance Adjustment", "Scope Change", "Value Engineering"
+            ],
+            "join_paths": [
+              "commitment_change_orders.commitment_id → commitments.commitment_id",
+              "commitment_change_orders.commitment_change_order_id → commitment_change_order_line_items.commitment_change_order_id"
+            ],
+            "gold_layer_ready": false,
+            "validated_stats": {
+              "design_ccos": "250K",
+              "companies": "4,200",
+              "design_cost": "$13.8B committed",
+              "approved_rate": "96.7%",
+              "avg_cco_vs_ce": "CCOs are 6.4x larger than CEs on average"
+            }
+          },
+          "gotchas": [
+            "change_reason is TITLE CASE ('Design Development'), NOT snake_case like CEs — always use LOWER() for comparison",
+            "grand_total is the cost column — NOT 'amount'",
+            "status: 'Approved' (96.7%), 'Pending', 'Draft', 'Void', 'Proceeding'",
+            "CCOs have their OWN change_reason — independent of CE. CCOs can exist WITHOUT a corresponding CE.",
+            "No direct FK to change_events in gold layer — use commitment_potential_change_orders as bridge",
+            "commitment_change_order_line_items has NO change_event_id or change_event_line_item_id",
+            "$1.45B saved from CE/CCO deduplication in rework analysis"
+          ]
+        },
+        {
+          "ucdm_element": "CCO Line Item",
+          "ucdm_code": "fi-cco-line",
+          "description": "Cost-code-level detail within a CCO — modifies specific commitment line item amounts",
+          "databricks": {
+            "primary_table": "finance.commitment_change_order_line_items",
+            "primary_columns": [
+              {"column": "commitment_change_order_line_item_id", "type": "bigint", "description": "Primary key", "null_rate": "0%"},
+              {"column": "commitment_change_order_id", "type": "bigint", "description": "FK to finance.commitment_change_orders", "null_rate": "0%"},
+              {"column": "wbs_code_id", "type": "bigint", "description": "FK to finance.wbs_codes — EXISTS directly (Q15 was wrong, Q20c confirmed)", "null_rate": "varies"},
+              {"column": "extended_amount", "type": "decimal", "description": "Line item cost amount", "null_rate": "low"},
+              {"column": "description", "type": "string", "description": "Line item description — NLP signal", "null_rate": "varies"},
+              {"column": "commitment_potential_change_order_id", "type": "bigint", "description": "FK to CPCO — 100% populated", "null_rate": "0%"},
+              {"column": "project_id", "type": "bigint", "description": "FK to core.projects", "null_rate": "0%"},
+              {"column": "company_id", "type": "bigint", "description": "FK to core.companies", "null_rate": "0%"}
+            ],
+            "join_paths": [
+              "commitment_change_order_line_items.commitment_change_order_id → commitment_change_orders.commitment_change_order_id",
+              "commitment_change_order_line_items.wbs_code_id → wbs_codes.wbs_code_id → cost_codes",
+              "commitment_change_order_line_items.commitment_potential_change_order_id → commitment_potential_change_orders (100%)"
+            ],
+            "gold_layer_ready": false,
+            "validated_stats": {
+              "cco_line_items_wbs_rework": "$28M",
+              "cco_line_item_nlp_rework": "$145.5M"
+            }
+          },
+          "gotchas": [
+            "wbs_code_id EXISTS directly on this table (Q15 was wrong — confirmed in Q20c)",
+            "extended_amount is the cost column",
+            "commitment_potential_change_order_id is 100% populated — reliable CPCO link",
+            "NO change_event_id or change_event_line_item_id — no direct FK to CEs"
+          ]
+        },
+        {
+          "ucdm_element": "Owner Change Order (Prime Contract CO)",
+          "ucdm_code": "fi-owner-co",
+          "description": "Formal modification to the prime contract between owner and GC — changes contract value",
+          "databricks": {
+            "primary_table": "finance.prime_contract_change_orders",
+            "primary_columns": [
+              {"column": "prime_contract_change_order_id", "type": "bigint", "description": "Primary key", "null_rate": "0%"},
+              {"column": "prime_contract_id", "type": "bigint", "description": "FK to finance.prime_contracts", "null_rate": "0%"},
+              {"column": "title", "type": "string", "description": "CO title", "null_rate": "low"},
+              {"column": "status", "type": "string", "description": "CO status", "null_rate": "low"},
+              {"column": "project_id", "type": "bigint", "description": "FK to core.projects", "null_rate": "0%"},
+              {"column": "company_id", "type": "bigint", "description": "FK to core.companies", "null_rate": "0%"}
+            ],
+            "gold_layer_ready": false,
+            "ready_tables_note": "prime_contract_change_orders NOT ready in gold layer"
+          },
+          "gotchas": [
+            "NOT ready in gold layer",
+            "Distinct from commitment COs — owner COs change GC revenue, not sub cost",
+            "Delta between owner CO and commitment CO amounts = GC margin on changes",
+            "Lower adoption than commitment-side change management"
+          ]
+        },
+        {
+          "ucdm_element": "Budget Modification",
+          "ucdm_code": "fi-budget-mod",
+          "description": "Internal budget transfer between line items — moves money without changing total budget",
+          "databricks": {
+            "primary_table": "finance.budget_modifications",
+            "primary_columns": [
+              {"column": "budget_modification_id", "type": "bigint", "description": "Primary key", "null_rate": "0%"},
+              {"column": "project_id", "type": "bigint", "description": "FK to core.projects", "null_rate": "0%"},
+              {"column": "company_id", "type": "bigint", "description": "FK to core.companies", "null_rate": "0%"},
+              {"column": "transfer_amount", "type": "decimal", "description": "Amount transferred (NOT 'amount')", "null_rate": "low"},
+              {"column": "notes", "type": "string", "description": "Modification description (NOT 'description')", "null_rate": "varies"},
+              {"column": "wbs_code_id", "type": "bigint", "description": "Direct FK to finance.wbs_codes — no hop needed", "null_rate": "varies"}
+            ],
+            "gold_layer_ready": false,
+            "ready_tables_note": "budget_modifications NOT ready in gold layer",
+            "validated_stats": {
+              "rework_budget_codes": "3,330 cos with rework-coded budget modifications",
+              "rework_net_amount": "$7.9M net"
+            }
+          },
+          "gotchas": [
+            "transfer_amount (NOT 'amount') — validated column name correction",
+            "notes (NOT 'description') — validated column name correction",
+            "wbs_code_id exists directly — no need for budget_line_items hop",
+            "Modifications TO rework-coded lines = actual rework exceeded planned budget",
+            "The transfer_amount is a budget adjustment, NOT a standalone cost transaction"
+          ]
+        }
+      ]
+    },
+    "cost_tracking": {
+      "label": "Cost Tracking",
+      "description": "Non-commitment expenditures — costs that bypass subcontract/PO workflow",
+      "elements": [
+        {
+          "ucdm_element": "Direct Cost",
+          "ucdm_code": "fi-direct-cost",
+          "description": "Non-commitment expenditure — GC self-performed labor, small purchases, equipment rental, T&M, reimbursables",
+          "databricks": {
+            "primary_table": "finance.direct_costs",
+            "primary_columns": [
+              {"column": "direct_cost_id", "type": "bigint", "description": "Primary key", "null_rate": "0%"},
+              {"column": "project_id", "type": "bigint", "description": "FK to core.projects", "null_rate": "0%"},
+              {"column": "company_id", "type": "bigint", "description": "FK to core.companies", "null_rate": "0%"},
+              {"column": "vendor_id", "type": "bigint", "description": "FK to core.project_vendors (optional)", "null_rate": "varies"},
+              {"column": "description", "type": "string", "description": "Direct cost description", "null_rate": "varies"},
+              {"column": "invoice_number", "type": "string", "description": "Invoice reference", "null_rate": "varies"}
+            ],
+            "join_paths": [
+              "direct_costs.direct_cost_id → direct_cost_line_items.direct_cost_id"
+            ],
+            "gold_layer_ready": true,
+            "sample_query": "SELECT description, COUNT(*) AS cnt FROM finance.direct_costs WHERE company_id = ? GROUP BY description ORDER BY cnt DESC"
+          },
+          "gotchas": [
+            "Direct costs bypass commitment/invoice workflow — charge against budget directly",
+            "Companies that self-perform more have higher direct cost ratios",
+            "Represents 15-30% of project cost depending on self-perform scope"
+          ]
+        },
+        {
+          "ucdm_element": "Direct Cost Line Item",
+          "ucdm_code": "fi-direct-cost-line",
+          "description": "Cost-code-level detail within a direct cost — enables granular non-commitment cost tracking",
+          "databricks": {
+            "primary_table": "finance.direct_cost_line_items",
+            "primary_columns": [
+              {"column": "direct_cost_line_item_id", "type": "bigint", "description": "Primary key", "null_rate": "0%"},
+              {"column": "direct_cost_id", "type": "bigint", "description": "FK to finance.direct_costs", "null_rate": "0%"},
+              {"column": "wbs_code_id", "type": "bigint", "description": "FK to finance.wbs_codes", "null_rate": "varies"},
+              {"column": "description", "type": "string", "description": "Line item description — NLP signal for rework keywords", "null_rate": "varies"},
+              {"column": "amount", "type": "decimal", "description": "Line item dollar amount", "null_rate": "low"},
+              {"column": "project_id", "type": "bigint", "description": "FK to core.projects", "null_rate": "0%"},
+              {"column": "company_id", "type": "bigint", "description": "FK to core.companies", "null_rate": "0%"}
+            ],
+            "join_paths": [
+              "direct_cost_line_items.direct_cost_id → direct_costs.direct_cost_id",
+              "direct_cost_line_items.wbs_code_id → wbs_codes.wbs_code_id → cost_codes"
+            ],
+            "gold_layer_ready": true,
+            "validated_stats": {
+              "dc_line_items_wbs_rework": "$399M",
+              "dc_line_item_nlp_rework": "$500M"
+            },
+            "sample_query": "SELECT dl.description, dl.amount, w.cost_code, w.cost_code_name FROM finance.direct_cost_line_items dl JOIN finance.wbs_codes w ON dl.wbs_code_id = w.wbs_code_id WHERE dl.company_id = ? LIMIT 100"
+          },
+          "gotchas": [
+            "Description contains actionable keywords: 'rework', 'repair', 'correction', 'redo'",
+            "$500M in rework-related direct costs identified via NLP on descriptions",
+            "wbs_code_id maps to cost code → building system for system-level cost attribution"
+          ]
+        }
+      ]
+    },
+    "billing_payment": {
+      "label": "Billing & Payment",
+      "description": "How money moves between parties",
+      "elements": [
+        {
+          "ucdm_element": "Owner Invoice / Pay Application",
+          "ucdm_code": "fi-owner-invoice",
+          "description": "Periodic billing from GC to owner — request for payment under the prime contract",
+          "databricks": {
+            "primary_table": "finance.owner_invoices",
+            "primary_columns": [
+              {"column": "owner_invoice_id", "type": "bigint", "description": "Primary key", "null_rate": "0%"},
+              {"column": "project_id", "type": "bigint", "description": "FK to core.projects", "null_rate": "0%"},
+              {"column": "company_id", "type": "bigint", "description": "FK to core.companies", "null_rate": "0%"},
+              {"column": "status", "type": "string", "description": "Invoice status", "null_rate": "low"},
+              {"column": "billing_date", "type": "date", "description": "Billing period date", "null_rate": "low"}
+            ],
+            "secondary_tables": [
+              {
+                "table": "finance.owner_invoice_line_items",
+                "join": "owner_invoice_line_items.owner_invoice_id = owner_invoices.owner_invoice_id",
+                "note": "Line-item-level billing detail"
+              },
+              {
+                "table": "finance.owner_invoice_workflow_responses",
+                "join": "workflow responses on owner_invoice_id",
+                "note": "Approval workflow — timestamps for processing time calculation"
+              },
+              {
+                "table": "finance.owner_invoice_workflow_steps",
+                "join": "workflow steps on owner_invoice_id",
+                "note": "Approval chain definition"
+              }
+            ],
+            "gold_layer_ready": true,
+            "sample_query": "SELECT status, COUNT(*) FROM finance.owner_invoices WHERE company_id = ? GROUP BY status"
+          },
+          "gotchas": [
+            "Pay app amount ≠ project cost — it's billing, not cost",
+            "Monthly billing cycle drives the financial rhythm of every project",
+            "Workflow tables enable invoice processing time calculation"
+          ]
+        },
+        {
+          "ucdm_element": "Subcontractor Invoice",
+          "ucdm_code": "fi-sub-invoice",
+          "description": "Periodic billing from subcontractor to GC for work completed under a subcontract",
+          "databricks": {
+            "primary_table": "finance.subcontractor_invoices",
+            "primary_columns": [
+              {"column": "subcontractor_invoice_id", "type": "bigint", "description": "Primary key", "null_rate": "0%"},
+              {"column": "commitment_id", "type": "bigint", "description": "FK to finance.commitments", "null_rate": "0%"},
+              {"column": "project_id", "type": "bigint", "description": "FK to core.projects", "null_rate": "0%"},
+              {"column": "company_id", "type": "bigint", "description": "FK to core.companies", "null_rate": "0%"},
+              {"column": "status", "type": "string", "description": "Invoice status", "null_rate": "low"},
+              {"column": "billing_date", "type": "date", "description": "Billing period", "null_rate": "low"}
+            ],
+            "gold_layer_ready": true,
+            "sample_query": "SELECT status, COUNT(*) FROM finance.subcontractor_invoices WHERE company_id = ? GROUP BY status"
+          },
+          "gotchas": [
+            "Mirrors pay applications but flows opposite direction — subs bill the GC",
+            "Invoice processing time directly affects sub cash flow",
+            "Sub invoice line items NOT ready in gold layer — header only"
+          ]
+        },
+        {
+          "ucdm_element": "Retainage",
+          "ucdm_code": "fi-retainage",
+          "description": "Funds withheld from progress payments as security — released at completion",
+          "databricks": {
+            "primary_table": null,
+            "note": "No dedicated retainage table — tracked within invoicing system",
+            "embedded_in": [
+              "finance.owner_invoices (retainage held/released fields)",
+              "finance.subcontractor_invoices (retainage held/released fields)"
+            ],
+            "gold_layer_ready": "partial — via invoice tables"
+          },
+          "gotchas": [
+            "Retainage is NOT a cost — it's a withheld portion of earned payment",
+            "Typical rate: 5-10%. Release triggers: substantial completion, final completion",
+            "Some states cap retainage at 5% — jurisdiction-specific"
+          ]
+        },
+        {
+          "ucdm_element": "Payment",
+          "ucdm_code": "fi-payment",
+          "description": "Actual transfer of funds — the final step in the billing cycle",
+          "databricks": {
+            "primary_tables": [
+              {
+                "table": "finance.payments_issued",
+                "description": "Final payments issued by the company",
+                "gold_layer_ready": true
+              },
+              {
+                "table": "finance.payments_received",
+                "description": "Payments received by the company",
+                "gold_layer_ready": true
+              },
+              {
+                "table": "finance.payments_disbursements",
+                "description": "Financial transfers to beneficiaries",
+                "gold_layer_ready": true
+              },
+              {
+                "table": "finance.payments_agreements",
+                "description": "Payment agreement details",
+                "gold_layer_ready": true
+              }
+            ],
+            "related_tables": [
+              "finance.payments_beneficiaries",
+              "finance.payments_manual_holds",
+              "finance.payments_requirements",
+              "finance.payments_subtiers",
+              "finance.payments_subtier_waivers"
+            ]
+          },
+          "gotchas": [
+            "Payment is the actual cash event — distinct from invoice approval",
+            "Pay-when-paid clauses mean sub payment depends on owner payment to GC",
+            "Multiple tables cover different aspects of the payment lifecycle"
+          ]
+        },
+        {
+          "ucdm_element": "Lien Waiver",
+          "ucdm_code": "fi-lien-waiver",
+          "description": "Legal document waiving right to file mechanic's lien — exchanged with each payment",
+          "databricks": {
+            "primary_table": "finance.payments_lien_waivers",
+            "primary_columns": [
+              {"column": "payment_lien_waiver_id", "type": "bigint", "description": "Primary key", "null_rate": "0%"},
+              {"column": "project_id", "type": "bigint", "description": "FK to core.projects", "null_rate": "0%"},
+              {"column": "company_id", "type": "bigint", "description": "FK to core.companies", "null_rate": "0%"}
+            ],
+            "secondary_tables": [
+              {
+                "table": "finance.payments_subtier_waivers",
+                "note": "Subtier (lower-tier sub) lien waivers"
+              }
+            ],
+            "gold_layer_ready": true
+          },
+          "gotchas": [
+            "Four types: conditional/unconditional × progress/final",
+            "Missing lien waivers can block final payment and retainage release",
+            "Some states have statutory forms that must be used exactly"
+          ]
+        }
+      ]
+    },
+    "financial_classification": {
+      "label": "Financial Classification & Structure",
+      "description": "How costs are organized and categorized",
+      "elements": [
+        {
+          "ucdm_element": "Schedule of Values (SOV)",
+          "ucdm_code": "fi-sov",
+          "description": "Cost breakdown defining billing structure — line items represent discrete billable portions of work",
+          "databricks": {
+            "primary_table": null,
+            "note": "No dedicated SOV table — embedded in commitment and billing structure",
+            "embedded_in": [
+              "finance.commitment_line_items (commitment SOV)",
+              "finance.subcontractor_invoices + line items (billing SOV)"
+            ],
+            "gold_layer_ready": false
+          },
+          "gotchas": [
+            "SOV is a BILLING structure, not a cost structure — may not align with cost codes",
+            "Front-loading (billing more early) distorts true percent complete",
+            "SOV lines often describe building elements in plain language — NLP opportunity"
+          ]
+        },
+        {
+          "ucdm_element": "Allowance",
+          "ucdm_code": "fi-allowance",
+          "description": "Budget item for undefined-scope work — price estimated and reconciled to actual",
+          "databricks": {
+            "primary_table": null,
+            "note": "No dedicated allowance tracking — managed via budget codes and manual processes",
+            "inferred_from": "finance.budget_codes WHERE name LIKE '%allowance%'"
+          },
+          "gotchas": [
+            "No dedicated Procore feature for allowance tracking",
+            "Allowances are NOT contingency — they are placeholders for defined scope",
+            "Exceeded allowances become change orders"
+          ]
+        },
+        {
+          "ucdm_element": "Contingency",
+          "ucdm_code": "fi-contingency",
+          "description": "Budget reserve for unforeseen costs — not allocated to specific scope until needed",
+          "databricks": {
+            "primary_table": null,
+            "note": "No dedicated contingency tracking — managed via budget line items and budget codes",
+            "inferred_from": "finance.budget_line_items WHERE budget_code = 'Contingency' (company-specific)"
+          },
+          "gotchas": [
+            "Contingency is NOT a cost — it's a RESERVE",
+            "Burn rate > % complete = red flag for project financial health",
+            "Requires manual identification of contingency budget lines"
+          ]
+        }
+      ]
+    },
+    "earned_value_forecasting": {
+      "label": "Earned Value & Forecasting",
+      "description": "Derived financial measures computed from transactional instruments",
+      "elements": [
+        {
+          "ucdm_element": "Cost Forecast / EAC",
+          "ucdm_code": "fi-eac",
+          "description": "Projection of total project cost at completion — actual cost to date + estimated cost to complete",
+          "databricks": {
+            "primary_table": "finance.budget_forecast_line_items",
+            "primary_columns": [
+              {"column": "project_id", "type": "bigint", "description": "FK to core.projects", "null_rate": "0%"},
+              {"column": "company_id", "type": "bigint", "description": "FK to core.companies", "null_rate": "0%"}
+            ],
+            "gold_layer_ready": false,
+            "ready_tables_note": "budget_forecast_line_items NOT ready in gold layer. Sparse adoption."
+          },
+          "gotchas": [
+            "EAC is computed, not stored as standalone — included because it's the most important derived measure",
+            "Most EAC work done in Excel, not Procore",
+            "Sparse adoption limits benchmarking value"
+          ]
+        },
+        {
+          "ucdm_element": "Cash Flow Projection",
+          "ucdm_code": "fi-cashflow",
+          "description": "Time-phased projection of money in (owner payments) and money out (sub payments, direct costs)",
+          "databricks": {
+            "primary_table": null,
+            "note": "Not a native Procore feature — most GCs manage in Excel or ERP",
+            "computed_from": [
+              "finance.payments_issued (outflow)",
+              "finance.payments_received (inflow)",
+              "finance.owner_invoices (projected income)",
+              "finance.subcontractor_invoices (projected outflow)"
+            ]
+          },
+          "gotchas": [
+            "Not a native Procore feature — lowest coverage element in Financial Instruments",
+            "Can be computed from payment and invoice data",
+            "S-curve distribution typical — cash flow connects to Schedule domain"
+          ]
+        }
+      ]
+    },
+    "standard_measures": {
+      "label": "Standard Measures",
+      "description": "KPIs and metrics derived from financial instrument performance",
+      "elements": [
+        {
+          "ucdm_element": "Budget Variance",
+          "ucdm_code": "fi-kpi-budget-var",
+          "description": "Budget Amount − (Committed Cost + Direct Cost + Approved Changes)",
+          "databricks": {
+            "computed_from": ["finance.budget_line_items", "finance.commitment_line_items", "finance.direct_cost_line_items", "finance.change_event_line_items"],
+            "formula": "SUM(budget_line_items.amount) - SUM(commitment_line_items.amount) - SUM(direct_cost_line_items.amount) - SUM(approved_ce_line_items.latest_cost_amount)",
+            "grain": "Per cost code, per building system, or project-level"
+          }
+        },
+        {
+          "ucdm_element": "Cost Growth %",
+          "ucdm_code": "fi-kpi-cost-growth",
+          "description": "(Final Cost − Original Budget) / Original Budget × 100",
+          "databricks": {
+            "computed_from": ["finance.budget_line_items (original vs final)"],
+            "typical_range": "3-12% well-managed; 15-30% troubled"
+          }
+        },
+        {
+          "ucdm_element": "Cost Performance Index (CPI)",
+          "ucdm_code": "fi-kpi-cpi",
+          "description": "Earned Value / Actual Cost — measures cost efficiency",
+          "databricks": {
+            "computed_from": ["Schedule (% complete)", "finance.budget_line_items", "actual cost surfaces"],
+            "note": "True EVMS rare in commercial construction — simplified CPI more practical"
+          }
+        },
+        {
+          "ucdm_element": "Committed Cost vs. Budget",
+          "ucdm_code": "fi-kpi-committed-ratio",
+          "description": "Total Committed / Budget × 100 — tracks buy-out progress",
+          "databricks": {
+            "computed_from": ["finance.commitments", "finance.commitment_change_orders", "finance.budget_line_items"]
+          }
+        },
+        {
+          "ucdm_element": "Change Order Rate",
+          "ucdm_code": "fi-kpi-co-rate",
+          "description": "(Total CO Value / Original Contract Value) × 100",
+          "databricks": {
+            "computed_from": ["finance.change_events", "finance.commitment_change_orders", "finance.prime_contract_change_orders", "finance.commitments"],
+            "note": "Separate by change_reason for root cause decomposition"
+          }
+        },
+        {
+          "ucdm_element": "Contingency Burn Rate",
+          "ucdm_code": "fi-kpi-contingency-burn",
+          "description": "(Contingency Used / Original Contingency) / (% Complete)",
+          "databricks": {
+            "computed_from": ["finance.budget_line_items (contingency lines)", "finance.budget_modifications (contingency draws)", "schedule (% complete)"],
+            "note": "One of the few LEADING financial indicators"
+          }
+        },
+        {
+          "ucdm_element": "Invoice Processing Time",
+          "ucdm_code": "fi-kpi-invoice-time",
+          "description": "Approval Date − Submission Date (in business days)",
+          "databricks": {
+            "computed_from": ["finance.owner_invoices", "finance.owner_invoice_workflow_responses", "finance.subcontractor_invoices"],
+            "note": "Prompt Payment Acts require payment within 30 days in many states"
+          }
+        },
+        {
+          "ucdm_element": "Cash Flow Variance",
+          "ucdm_code": "fi-kpi-cashflow-var",
+          "description": "Actual Cash Position − Projected Cash Position",
+          "databricks": {
+            "computed_from": ["finance.payments_issued", "finance.payments_received"],
+            "note": "Requires cash flow projection capability — most users manage in Excel/ERP"
+          }
+        },
+        {
+          "ucdm_element": "EAC Variance",
+          "ucdm_code": "fi-kpi-eac-var",
+          "description": "EAC − Original Budget — tracks how projected final cost evolves",
+          "databricks": {
+            "computed_from": ["finance.budget_forecast_line_items", "finance.budget_line_items"],
+            "note": "EAC variance at 25% complete is a strong predictor of final cost growth"
+          }
+        }
+      ]
+    }
+  },
+  "join_reference": {
+    "description": "Key join paths across financial tables",
+    "paths": [
+      {
+        "from": "All financial line items",
+        "to": "Building Systems",
+        "path": "line_item.wbs_code_id → wbs_codes.cost_code_id → cost_codes.code (first 2 digits = MasterFormat division → building system)",
+        "confidence": "High"
+      },
+      {
+        "from": "change_events",
+        "to": "commitment_change_orders",
+        "path": "change_events → change_event_line_items.commitment_potential_change_order_line_item_id → (CPCO line items NOT in gold) OR commitment_potential_change_orders.commitment_change_order_id → commitment_change_orders",
+        "confidence": "Medium — CPCO line items table missing from gold layer"
+      },
+      {
+        "from": "change_events",
+        "to": "rfis",
+        "path": "change_events.origin_id = rfis.rfi_header_id WHERE change_events.origin_type = 'Rfi::Header'",
+        "confidence": "High — 307K CEs with RFI origin"
+      },
+      {
+        "from": "commitment_change_orders",
+        "to": "commitments",
+        "path": "commitment_change_orders.commitment_id = commitments.commitment_id",
+        "confidence": "High"
+      },
+      {
+        "from": "commitments",
+        "to": "vendors/organizations",
+        "path": "commitments.vendor_id → project_vendors.vendor_id (+ project_id)",
+        "confidence": "High"
+      },
+      {
+        "from": "All line items",
+        "to": "projects",
+        "path": "*.project_id = projects.project_id",
+        "confidence": "High — all tables have project_id"
+      },
+      {
+        "from": "All tables",
+        "to": "companies",
+        "path": "*.company_id = companies.company_id",
+        "confidence": "High — all tables have company_id"
+      }
+    ]
+  },
+  "gold_layer_readiness": {
+    "ready": [
+      "finance.cost_codes",
+      "finance.cost_code_lists",
+      "finance.wbs_codes",
+      "finance.commitments",
+      "finance.direct_costs",
+      "finance.direct_cost_line_items",
+      "finance.owner_invoices",
+      "finance.owner_invoice_line_items",
+      "finance.owner_invoice_line_item_with_markups",
+      "finance.owner_invoice_markup_line_items",
+      "finance.owner_invoice_workflow_responses",
+      "finance.owner_invoice_workflow_steps",
+      "finance.subcontractor_invoices",
+      "finance.payments_agreements",
+      "finance.payments_beneficiaries",
+      "finance.payments_disbursements",
+      "finance.payments_issued",
+      "finance.payments_lien_waivers",
+      "finance.payments_manual_holds",
+      "finance.payments_received",
+      "finance.payments_requirements",
+      "finance.payments_subtier_waivers",
+      "finance.payments_subtiers",
+      "finance.pay_requirement_settings",
+      "finance.monitoring_resources",
+      "finance.erp_job_costs"
+    ],
+    "not_ready": [
+      "finance.budget_line_items",
+      "finance.budget_codes",
+      "finance.budget_modifications",
+      "finance.budget_forecast_line_items",
+      "finance.change_events",
+      "finance.change_event_line_items",
+      "finance.commitment_change_orders",
+      "finance.commitment_change_order_line_items",
+      "finance.commitment_line_items",
+      "finance.commitment_potential_change_orders",
+      "finance.prime_contracts",
+      "finance.prime_contract_change_orders",
+      "finance.prime_contract_line_items"
+    ],
+    "note": "NOT READY means not flagged as importable in gold layer catalog, but many are still queryable via direct Databricks SQL on the finance schema."
+  }
+}

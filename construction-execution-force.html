@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Construction Execution — Domain Map</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #0a0e1a; color: #e0e4ef; overflow: hidden;
+    display: flex; flex-direction: column; height: 100vh;
+  }
+
+  /* HEADER */
+  #header {
+    height: 44px; display: flex; align-items: center; padding: 0 16px; gap: 14px;
+    background: rgba(10,14,26,0.92); backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(255,255,255,0.06); flex-shrink: 0; z-index: 30;
+  }
+  #header h1 {
+    font-size: 15px; font-weight: 700; white-space: nowrap;
+    background: linear-gradient(135deg, #ffb74d, #66bb6a, #ce93d8);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  }
+  #search {
+    background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 5px; padding: 5px 10px; color: #e0e4ef; font-size: 11px;
+    width: 180px; outline: none;
+  }
+  #search:focus { border-color: rgba(255,255,255,0.25); }
+  #search::placeholder { color: #4a5070; }
+  .legend { display: flex; gap: 14px; margin-left: auto; }
+  .legend-item { display: flex; align-items: center; gap: 5px; font-size: 10px; color: #6b7394; }
+  .legend-dot { width: 8px; height: 8px; border-radius: 2px; }
+
+  /* MAIN LAYOUT */
+  #main { display: flex; flex: 1; overflow: hidden; gap: 64px; padding: 16px 24px; }
+
+  /* COLUMNS */
+  .column {
+    display: flex; flex-direction: column; flex: 1;
+    border-radius: 8px; position: relative; overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.05);
+  }
+  #col-phases { background: rgba(255,183,77,0.02); }
+  #col-elements { background: rgba(102,187,106,0.02); }
+  #col-resources { background: rgba(255,255,255,0.015); }
+
+  .col-header {
+    padding: 10px 14px; font-size: 12px; font-weight: 700; letter-spacing: 0.5px;
+    text-transform: uppercase; display: flex; align-items: center; gap: 8px;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+    backdrop-filter: blur(8px); flex-shrink: 0; z-index: 5;
+  }
+  .col-header .dot { width: 8px; height: 8px; border-radius: 2px; flex-shrink: 0; }
+  .col-header .count { font-size: 10px; font-weight: 400; color: #4a5070; margin-left: auto; }
+
+  .column-body {
+    flex: 1; overflow-y: auto; padding: 4px 0 20px;
+    scrollbar-width: thin; scrollbar-color: rgba(255,255,255,0.08) transparent;
+  }
+  .column-body::-webkit-scrollbar { width: 4px; }
+  .column-body::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.08); border-radius: 2px; }
+
+  /* CATEGORY HEADERS */
+  .cat-header {
+    font-size: 8px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;
+    padding: 10px 14px 3px; transition: opacity 0.35s ease;
+  }
+  .cat-header.dimmed { opacity: 0.03; }
+
+  /* ITEMS */
+  .item {
+    padding: 7px 14px; font-size: 12px; cursor: pointer; position: relative;
+    border-left: 2px solid transparent; display: flex; align-items: center; gap: 10px;
+    transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1),
+                opacity 0.35s ease,
+                background 0.25s ease,
+                border-color 0.25s ease;
+    z-index: 2;
+  }
+  .item:hover { background: rgba(255,255,255,0.04); }
+  .item .item-name { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .item .edge-tag {
+    font-size: 9px; font-weight: 600; letter-spacing: 0.3px; opacity: 0.7;
+    margin-left: auto; white-space: nowrap; flex-shrink: 0;
+    padding: 2px 8px; border-radius: 3px; background: rgba(255,255,255,0.08);
+  }
+
+  /* ITEM STATES */
+  .item.selected {
+    border-left-color: var(--col-color); z-index: 4;
+    background: rgba(255,255,255,0.1); font-weight: 600;
+  }
+  .item.highlighted {
+    border-left-color: var(--col-color); z-index: 3;
+    background: rgba(255,255,255,0.06);
+  }
+  .item.dimmed { opacity: 0.04; pointer-events: none; }
+  .item.search-match { background: rgba(255,255,255,0.06); }
+  .item.search-dim { opacity: 0.12; }
+
+  /* Phases colors */
+  #col-phases .col-header { color: #ffb74d; }
+  #col-phases .cat-header { color: rgba(255,183,77,0.4); }
+  #col-phases .item { color: #b0986a; --col-color: #ffb74d; }
+  #col-phases .item:hover { color: #ffb74d; }
+  #col-phases .item.selected, #col-phases .item.highlighted { color: #ffb74d; }
+
+  /* Elements colors */
+  #col-elements .col-header { color: #66bb6a; }
+  #col-elements .cat-header { color: rgba(102,187,106,0.4); }
+  #col-elements .item { color: #7ab87e; --col-color: #66bb6a; }
+  #col-elements .item:hover { color: #66bb6a; }
+  #col-elements .item.selected, #col-elements .item.highlighted { color: #66bb6a; }
+
+  /* Resources — Trades (purple) */
+  #col-resources .cat-trades .cat-header { color: rgba(206,147,216,0.4); }
+  #col-resources .item[data-cat="Trades"] { color: #b38dc0; --col-color: #ce93d8; }
+  #col-resources .item[data-cat="Trades"]:hover { color: #ce93d8; }
+  #col-resources .item[data-cat="Trades"].selected,
+  #col-resources .item[data-cat="Trades"].highlighted { color: #ce93d8; }
+
+  /* Resources — Equipment (cyan) */
+  #col-resources .cat-equipment .cat-header { color: rgba(77,208,225,0.4); }
+  #col-resources .item[data-cat="Equipment"] { color: #6eb8c2; --col-color: #4dd0e1; }
+  #col-resources .item[data-cat="Equipment"]:hover { color: #4dd0e1; }
+  #col-resources .item[data-cat="Equipment"].selected,
+  #col-resources .item[data-cat="Equipment"].highlighted { color: #4dd0e1; }
+
+  /* Resources — Materials (coral) */
+  #col-resources .cat-materials .cat-header { color: rgba(255,138,101,0.4); }
+  #col-resources .item[data-cat="Materials"] { color: #c28a70; --col-color: #ff8a65; }
+  #col-resources .item[data-cat="Materials"]:hover { color: #ff8a65; }
+  #col-resources .item[data-cat="Materials"].selected,
+  #col-resources .item[data-cat="Materials"].highlighted { color: #ff8a65; }
+
+  /* Resources column header — use a neutral mix */
+  #col-resources .col-header { color: #b0b0b0; }
+
+  /* SVG OVERLAY */
+  #lines-svg {
+    position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+    pointer-events: none; z-index: 10;
+  }
+  #lines-svg .edge-line {
+    fill: none; stroke-linecap: round;
+  }
+
+  /* HINT */
+  .hint {
+    position: fixed; bottom: 10px; left: 50%; transform: translateX(-50%);
+    font-size: 10px; color: #3e4560; z-index: 20; pointer-events: none;
+    transition: opacity 0.3s;
+  }
+  .stats {
+    position: fixed; bottom: 10px; right: 14px;
+    font-size: 9px; color: #3e4560; z-index: 20;
+  }
+</style>
+</head>
+<body>
+
+<div id="header">
+  <h1>Construction Execution</h1>
+  <input type="text" id="search" placeholder="Search nodes..." autocomplete="off">
+  <div class="legend">
+    <div class="legend-item"><div class="legend-dot" style="background:#ffb74d"></div>Phases</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#66bb6a"></div>Elements</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#ce93d8"></div>Trades</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#4dd0e1"></div>Equipment</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#ff8a65"></div>Materials</div>
+  </div>
+</div>
+
+<div id="main">
+  <div class="column" id="col-phases">
+    <div class="col-header"><div class="dot" style="background:#ffb74d"></div>Phases<span class="count" id="cnt-phases"></span></div>
+    <div class="column-body" id="body-phases"></div>
+  </div>
+  <div class="column" id="col-elements">
+    <div class="col-header"><div class="dot" style="background:#66bb6a"></div>Elements<span class="count" id="cnt-elements"></span></div>
+    <div class="column-body" id="body-elements"></div>
+  </div>
+  <div class="column" id="col-resources">
+    <div class="col-header"><div class="dot" style="background:linear-gradient(135deg,#ce93d8,#4dd0e1,#ff8a65)"></div>Resources<span class="count" id="cnt-resources"></span></div>
+    <div class="column-body" id="body-resources"></div>
+  </div>
+</div>
+
+<svg id="lines-svg"></svg>
+<div class="hint" id="hint">Click any item to see its connections</div>
+<div class="stats" id="stats"></div>
+
+<script>
+// =====================================================
+// DATA
+// =====================================================
+const phaseGroups = [
+  {cat:"Preconstruction",items:[
+    {id:"ph-program",name:"Programming & Feasibility"},{id:"ph-design",name:"Design Development"},
+    {id:"ph-estimating",name:"Estimating & Budgeting"},{id:"ph-permit",name:"Permitting & Approvals"},
+    {id:"ph-precon-plan",name:"Preconstruction Planning"}]},
+  {cat:"Procurement",items:[
+    {id:"ph-bidding",name:"Bidding & Buyout"},{id:"ph-submittals",name:"Submittals & Shop Drawings"},
+    {id:"ph-fabrication",name:"Fabrication & Long-Lead"},{id:"ph-delivery",name:"Material Ordering & Delivery"}]},
+  {cat:"Mobilization",items:[
+    {id:"ph-site-setup",name:"Site Setup"},{id:"ph-safety-orient",name:"Safety & Environmental Orientation"}]},
+  {cat:"Sitework & Foundations",items:[
+    {id:"ph-demo",name:"Demolition & Site Clearing"},{id:"ph-earthwork",name:"Earthwork"},
+    {id:"ph-site-util",name:"Site Utilities"},{id:"ph-foundations",name:"Foundations"},
+    {id:"ph-slab",name:"Slab on Grade"}]},
+  {cat:"Structure",items:[
+    {id:"ph-steel",name:"Structural Steel Erection"},{id:"ph-elev-conc",name:"Elevated Concrete"},
+    {id:"ph-conc-frame",name:"Concrete Frame"},{id:"ph-stairs",name:"Stairs & Misc Metals"}]},
+  {cat:"Building Enclosure",items:[
+    {id:"ph-curtainwall",name:"Curtain Wall & Glazing"},{id:"ph-masonry",name:"Masonry & Cladding"},
+    {id:"ph-barrier",name:"Air & Moisture Barrier"},{id:"ph-roofing",name:"Roofing"}]},
+  {cat:"MEP Rough-In",items:[
+    {id:"ph-abv-ceil",name:"Above-Ceiling Coordination"},{id:"ph-hvac-dist",name:"HVAC Distribution"},
+    {id:"ph-plumb-ri",name:"Plumbing Rough-In"},{id:"ph-elec-ri",name:"Electrical Rough-In"},
+    {id:"ph-fp-ri",name:"Fire Protection"},{id:"ph-lv-ri",name:"Low Voltage Rough-In"}]},
+  {cat:"Interior Rough-In",items:[
+    {id:"ph-framing",name:"Metal Stud Framing"},{id:"ph-drywall",name:"Drywall"},
+    {id:"ph-ceil-grid",name:"Ceiling Grid"}]},
+  {cat:"Finishes & Trim",items:[
+    {id:"ph-paint",name:"Paint & Wall Coatings"},{id:"ph-flooring",name:"Flooring"},
+    {id:"ph-ceilings",name:"Ceilings"},{id:"ph-doors",name:"Doors & Hardware"},
+    {id:"ph-casework",name:"Casework & Millwork"},{id:"ph-hvac-trim",name:"HVAC Trim & Controls"},
+    {id:"ph-plumb-fix",name:"Plumbing Fixtures"},{id:"ph-elec-dev",name:"Electrical Devices & Lighting"},
+    {id:"ph-fa-dev",name:"Fire Alarm Devices"},{id:"ph-lv-dev",name:"Low Voltage Devices"}]},
+  {cat:"Commissioning",items:[
+    {id:"ph-prefunc",name:"Pre-Functional Testing"},{id:"ph-startup",name:"Systems Startup"},
+    {id:"ph-tab",name:"Testing Adjusting & Balancing"},{id:"ph-integrated",name:"Integrated Systems Testing"},
+    {id:"ph-perf-ver",name:"Performance Verification"}]},
+  {cat:"Closeout",items:[
+    {id:"ph-punch",name:"Punch List"},{id:"ph-final-insp",name:"Final Inspections"},
+    {id:"ph-asbuilt",name:"As-Built Documentation"},{id:"ph-training",name:"Owner Training"},
+    {id:"ph-contract-close",name:"Contract Closeout"}]},
+  {cat:"Post-Construction",items:[
+    {id:"ph-warranty",name:"Warranty Period"},{id:"ph-seasonal-cx",name:"Seasonal Commissioning"},
+    {id:"ph-transition",name:"Facility Transition"}]}
+];
+
+const graphNodes = [
+  {id:"be-excav",name:"Excavation & Shoring",domain:"elements",cat:"Site & Earthwork"},
+  {id:"be-backfill",name:"Backfill & Grading",domain:"elements",cat:"Site & Earthwork"},
+  {id:"be-dewater",name:"Dewatering",domain:"elements",cat:"Site & Earthwork"},
+  {id:"be-erosion",name:"Erosion Control",domain:"elements",cat:"Site & Earthwork"},
+  {id:"be-deep-fdn",name:"Deep Foundations",domain:"elements",cat:"Foundations"},
+  {id:"be-shallow-fdn",name:"Shallow Foundations",domain:"elements",cat:"Foundations"},
+  {id:"be-fdn-walls",name:"Foundation Walls",domain:"elements",cat:"Foundations"},
+  {id:"be-grade-beams",name:"Grade Beams",domain:"elements",cat:"Foundations"},
+  {id:"be-sog",name:"Slab on Grade",domain:"elements",cat:"Foundations"},
+  {id:"be-bg-wp",name:"Below-Grade Waterproofing",domain:"elements",cat:"Foundations"},
+  {id:"be-water-main",name:"Water Main",domain:"elements",cat:"Site Utilities"},
+  {id:"be-sanitary",name:"Sanitary Sewer",domain:"elements",cat:"Site Utilities"},
+  {id:"be-storm",name:"Storm Drainage",domain:"elements",cat:"Site Utilities"},
+  {id:"be-gas-svc",name:"Gas Service",domain:"elements",cat:"Site Utilities"},
+  {id:"be-site-elec",name:"Site Electrical",domain:"elements",cat:"Site Utilities"},
+  {id:"be-columns",name:"Columns",domain:"elements",cat:"Structure"},
+  {id:"be-beams",name:"Beams & Girders",domain:"elements",cat:"Structure"},
+  {id:"be-slabs",name:"Floor Slabs & Deck",domain:"elements",cat:"Structure"},
+  {id:"be-roof-struct",name:"Roof Structure",domain:"elements",cat:"Structure"},
+  {id:"be-connections",name:"Connections & Embeds",domain:"elements",cat:"Structure"},
+  {id:"be-stairs",name:"Stairs & Ramps",domain:"elements",cat:"Structure"},
+  {id:"be-misc-metals",name:"Misc Metals",domain:"elements",cat:"Structure"},
+  {id:"be-curtainwall",name:"Curtain Wall",domain:"elements",cat:"Enclosure"},
+  {id:"be-windows",name:"Windows",domain:"elements",cat:"Enclosure"},
+  {id:"be-ext-doors",name:"Exterior Doors",domain:"elements",cat:"Enclosure"},
+  {id:"be-masonry-v",name:"Masonry Veneer",domain:"elements",cat:"Enclosure"},
+  {id:"be-panels",name:"Precast / Metal Panels",domain:"elements",cat:"Enclosure"},
+  {id:"be-amb",name:"Air & Moisture Barrier",domain:"elements",cat:"Enclosure"},
+  {id:"be-ext-insul",name:"Exterior Insulation",domain:"elements",cat:"Enclosure"},
+  {id:"be-roof-mem",name:"Roof Membrane",domain:"elements",cat:"Roofing"},
+  {id:"be-roof-insul",name:"Roof Insulation",domain:"elements",cat:"Roofing"},
+  {id:"be-flashing",name:"Flashing",domain:"elements",cat:"Roofing"},
+  {id:"be-roof-drain",name:"Roof Drainage",domain:"elements",cat:"Roofing"},
+  {id:"be-skylights",name:"Skylights",domain:"elements",cat:"Roofing"},
+  {id:"be-ductwork",name:"Ductwork",domain:"elements",cat:"HVAC"},
+  {id:"be-hvac-pipe",name:"HVAC Piping",domain:"elements",cat:"HVAC"},
+  {id:"be-ahu",name:"Air Handling Equip",domain:"elements",cat:"HVAC"},
+  {id:"be-heating",name:"Heating Equipment",domain:"elements",cat:"HVAC"},
+  {id:"be-cooling",name:"Cooling Equipment",domain:"elements",cat:"HVAC"},
+  {id:"be-duct-insul",name:"Duct Insulation",domain:"elements",cat:"HVAC"},
+  {id:"be-hvac-ctrl",name:"HVAC Controls",domain:"elements",cat:"HVAC"},
+  {id:"be-tab",name:"TAB",domain:"elements",cat:"HVAC"},
+  {id:"be-dom-water",name:"Domestic Water",domain:"elements",cat:"Plumbing"},
+  {id:"be-waste-vent",name:"Waste & Vent",domain:"elements",cat:"Plumbing"},
+  {id:"be-int-storm",name:"Interior Storm Drain",domain:"elements",cat:"Plumbing"},
+  {id:"be-gas-pipe",name:"Gas Piping",domain:"elements",cat:"Plumbing"},
+  {id:"be-plumb-fix",name:"Plumbing Fixtures",domain:"elements",cat:"Plumbing"},
+  {id:"be-water-htr",name:"Water Heaters",domain:"elements",cat:"Plumbing"},
+  {id:"be-pipe-insul",name:"Pipe Insulation",domain:"elements",cat:"Plumbing"},
+  {id:"be-power-dist",name:"Power Distribution",domain:"elements",cat:"Electrical"},
+  {id:"be-branch",name:"Branch Wiring",domain:"elements",cat:"Electrical"},
+  {id:"be-conduit",name:"Conduit & Raceways",domain:"elements",cat:"Electrical"},
+  {id:"be-lighting",name:"Lighting",domain:"elements",cat:"Electrical"},
+  {id:"be-emerg-pwr",name:"Emergency Power",domain:"elements",cat:"Electrical"},
+  {id:"be-grounding",name:"Grounding",domain:"elements",cat:"Electrical"},
+  {id:"be-sprink-main",name:"Sprinkler Mains",domain:"elements",cat:"Fire Protection"},
+  {id:"be-sprink-head",name:"Sprinkler Heads",domain:"elements",cat:"Fire Protection"},
+  {id:"be-standpipe",name:"Standpipes",domain:"elements",cat:"Fire Protection"},
+  {id:"be-fire-pump",name:"Fire Pump",domain:"elements",cat:"Fire Protection"},
+  {id:"be-fa",name:"Fire Alarm",domain:"elements",cat:"Fire Protection"},
+  {id:"be-data",name:"Data / Telecom",domain:"elements",cat:"Low Voltage"},
+  {id:"be-security",name:"Security Systems",domain:"elements",cat:"Low Voltage"},
+  {id:"be-av",name:"Audio / Visual",domain:"elements",cat:"Low Voltage"},
+  {id:"be-bas",name:"Building Automation",domain:"elements",cat:"Low Voltage"},
+  {id:"be-specialty-sys",name:"Specialty Systems",domain:"elements",cat:"Low Voltage"},
+  {id:"be-studs",name:"Metal Stud Framing",domain:"elements",cat:"Interiors"},
+  {id:"be-drywall",name:"Drywall",domain:"elements",cat:"Interiors"},
+  {id:"be-int-doors",name:"Interior Doors",domain:"elements",cat:"Interiors"},
+  {id:"be-act",name:"Acoustic Ceilings",domain:"elements",cat:"Interiors"},
+  {id:"be-dw-ceil",name:"Drywall Ceilings",domain:"elements",cat:"Interiors"},
+  {id:"be-paint",name:"Paint & Coatings",domain:"elements",cat:"Interiors"},
+  {id:"be-wallcover",name:"Wallcovering",domain:"elements",cat:"Interiors"},
+  {id:"be-tile",name:"Floor Tile",domain:"elements",cat:"Interiors"},
+  {id:"be-carpet",name:"Carpet & Resilient",domain:"elements",cat:"Interiors"},
+  {id:"be-spec-floor",name:"Specialty Flooring",domain:"elements",cat:"Interiors"},
+  {id:"be-casework",name:"Casework",domain:"elements",cat:"Interiors"},
+  {id:"be-countertop",name:"Countertops",domain:"elements",cat:"Interiors"},
+  {id:"be-toilet-acc",name:"Toilet Accessories",domain:"elements",cat:"Interiors"},
+  {id:"be-signage",name:"Signage",domain:"elements",cat:"Interiors"},
+  {id:"be-elev-car",name:"Elevator Car",domain:"elements",cat:"Conveying"},
+  {id:"be-elev-mach",name:"Elevator Machinery",domain:"elements",cat:"Conveying"},
+  {id:"be-paving",name:"Paving",domain:"elements",cat:"Site Improvements"},
+  {id:"be-sidewalks",name:"Sidewalks",domain:"elements",cat:"Site Improvements"},
+  {id:"be-landscape",name:"Landscaping",domain:"elements",cat:"Site Improvements"},
+  {id:"be-site-light",name:"Site Lighting",domain:"elements",cat:"Site Improvements"},
+  {id:"be-fencing",name:"Fencing",domain:"elements",cat:"Site Improvements"},
+  {id:"res-laborer",name:"General Laborer",domain:"resources",cat:"Trades"},
+  {id:"res-carpenter",name:"Carpenter",domain:"resources",cat:"Trades"},
+  {id:"res-concrete",name:"Concrete Worker",domain:"resources",cat:"Trades"},
+  {id:"res-ironworker",name:"Ironworker",domain:"resources",cat:"Trades"},
+  {id:"res-mason",name:"Mason",domain:"resources",cat:"Trades"},
+  {id:"res-roofer",name:"Roofer",domain:"resources",cat:"Trades"},
+  {id:"res-glazier",name:"Glazier",domain:"resources",cat:"Trades"},
+  {id:"res-waterproofer",name:"Waterproofer",domain:"resources",cat:"Trades"},
+  {id:"res-drywall",name:"Drywall Hanger",domain:"resources",cat:"Trades"},
+  {id:"res-painter",name:"Painter",domain:"resources",cat:"Trades"},
+  {id:"res-floor",name:"Floor Installer",domain:"resources",cat:"Trades"},
+  {id:"res-ceiling",name:"Ceiling Installer",domain:"resources",cat:"Trades"},
+  {id:"res-insulator",name:"Insulation Installer",domain:"resources",cat:"Trades"},
+  {id:"res-fireproofer",name:"Fireproofer",domain:"resources",cat:"Trades"},
+  {id:"res-plumber",name:"Plumber",domain:"resources",cat:"Trades"},
+  {id:"res-sheetmetal",name:"HVAC / Sheet Metal",domain:"resources",cat:"Trades"},
+  {id:"res-electrician",name:"Electrician",domain:"resources",cat:"Trades"},
+  {id:"res-sprinkler",name:"Sprinkler Fitter",domain:"resources",cat:"Trades"},
+  {id:"res-elevator",name:"Elevator Mechanic",domain:"resources",cat:"Trades"},
+  {id:"res-lowvolt",name:"Low Voltage Tech",domain:"resources",cat:"Trades"},
+  {id:"res-operator",name:"Equipment Operator",domain:"resources",cat:"Trades"},
+  {id:"res-surveyor",name:"Surveyor",domain:"resources",cat:"Trades"},
+  {id:"res-safety",name:"Safety Professional",domain:"resources",cat:"Trades"},
+  {id:"res-qc",name:"QC Inspector",domain:"resources",cat:"Trades"},
+  {id:"res-cxa",name:"Commissioning Agent",domain:"resources",cat:"Trades"},
+  {id:"res-crane",name:"Crane",domain:"resources",cat:"Equipment"},
+  {id:"res-earthmover",name:"Earthmoving Equip",domain:"resources",cat:"Equipment"},
+  {id:"res-conc-equip",name:"Concrete Equip",domain:"resources",cat:"Equipment"},
+  {id:"res-mat-handle",name:"Material Handling",domain:"resources",cat:"Equipment"},
+  {id:"res-access",name:"Access Equipment",domain:"resources",cat:"Equipment"},
+  {id:"res-compaction",name:"Compaction Equip",domain:"resources",cat:"Equipment"},
+  {id:"res-piling",name:"Piling Equip",domain:"resources",cat:"Equipment"},
+  {id:"res-hauling",name:"Hauling Equip",domain:"resources",cat:"Equipment"},
+  {id:"res-temp-util",name:"Temporary Utilities",domain:"resources",cat:"Equipment"},
+  {id:"res-welding",name:"Welding Equip",domain:"resources",cat:"Equipment"},
+  {id:"res-survey-inst",name:"Survey Instruments",domain:"resources",cat:"Equipment"},
+  {id:"mat-concrete",name:"Concrete",domain:"resources",cat:"Materials"},
+  {id:"mat-rebar",name:"Rebar",domain:"resources",cat:"Materials"},
+  {id:"mat-steel",name:"Structural Steel",domain:"resources",cat:"Materials"},
+  {id:"mat-lumber",name:"Lumber & Wood",domain:"resources",cat:"Materials"},
+  {id:"mat-masonry",name:"Masonry",domain:"resources",cat:"Materials"},
+  {id:"mat-roofing",name:"Roofing Materials",domain:"resources",cat:"Materials"},
+  {id:"mat-waterproof",name:"Waterproofing",domain:"resources",cat:"Materials"},
+  {id:"mat-thermal",name:"Thermal & Fire Prot",domain:"resources",cat:"Materials"},
+  {id:"mat-glass",name:"Glass & Glazing",domain:"resources",cat:"Materials"},
+  {id:"mat-doors",name:"Doors & Hardware",domain:"resources",cat:"Materials"},
+  {id:"mat-framing",name:"Framing & Gypsum",domain:"resources",cat:"Materials"},
+  {id:"mat-ceiling",name:"Ceiling Materials",domain:"resources",cat:"Materials"},
+  {id:"mat-flooring",name:"Flooring Materials",domain:"resources",cat:"Materials"},
+  {id:"mat-paint",name:"Paint Materials",domain:"resources",cat:"Materials"},
+  {id:"mat-specialties",name:"Specialties",domain:"resources",cat:"Materials"},
+  {id:"mat-casework",name:"Casework Materials",domain:"resources",cat:"Materials"},
+  {id:"mat-plumbing",name:"Plumbing Materials",domain:"resources",cat:"Materials"},
+  {id:"mat-hvac-dist",name:"HVAC Duct Materials",domain:"resources",cat:"Materials"},
+  {id:"mat-hvac-equip",name:"HVAC Equipment",domain:"resources",cat:"Materials"},
+  {id:"mat-elec",name:"Electrical Wire",domain:"resources",cat:"Materials"},
+  {id:"mat-lighting",name:"Lighting Fixtures",domain:"resources",cat:"Materials"},
+  {id:"mat-fp",name:"Fire Prot Materials",domain:"resources",cat:"Materials"},
+  {id:"mat-lv",name:"Low Voltage Cable",domain:"resources",cat:"Materials"},
+  {id:"mat-site",name:"Site Materials",domain:"resources",cat:"Materials"},
+  {id:"mat-elevator",name:"Elevator Materials",domain:"resources",cat:"Materials"},
+];
+
+const allEdges = [
+  ["be-excav","ph-earthwork","BUILT DURING"],["be-backfill","ph-earthwork","BUILT DURING"],
+  ["be-dewater","ph-earthwork","BUILT DURING"],["be-erosion","ph-site-setup","BUILT DURING"],
+  ["be-deep-fdn","ph-foundations","BUILT DURING"],["be-shallow-fdn","ph-foundations","BUILT DURING"],
+  ["be-fdn-walls","ph-foundations","BUILT DURING"],["be-grade-beams","ph-foundations","BUILT DURING"],
+  ["be-sog","ph-slab","BUILT DURING"],["be-bg-wp","ph-foundations","APPLIED DURING"],
+  ["be-water-main","ph-site-util","BUILT DURING"],["be-sanitary","ph-site-util","BUILT DURING"],
+  ["be-storm","ph-site-util","BUILT DURING"],["be-gas-svc","ph-site-util","BUILT DURING"],
+  ["be-site-elec","ph-site-util","BUILT DURING"],["be-columns","ph-steel","ERECTED"],
+  ["be-beams","ph-steel","ERECTED"],["be-slabs","ph-steel","ERECTED"],
+  ["be-slabs","ph-elev-conc","POURED"],["be-roof-struct","ph-steel","ERECTED"],
+  ["be-connections","ph-steel","ERECTED"],["be-stairs","ph-stairs","ERECTED"],
+  ["be-misc-metals","ph-stairs","ERECTED"],["be-curtainwall","ph-curtainwall","ENCLOSED"],
+  ["be-windows","ph-curtainwall","ENCLOSED"],["be-ext-doors","ph-curtainwall","ENCLOSED"],
+  ["be-masonry-v","ph-masonry","ENCLOSED"],["be-panels","ph-curtainwall","ENCLOSED"],
+  ["be-amb","ph-barrier","APPLIED"],["be-ext-insul","ph-barrier","APPLIED"],
+  ["be-roof-mem","ph-roofing","ENCLOSED"],["be-roof-insul","ph-roofing","ENCLOSED"],
+  ["be-flashing","ph-roofing","ENCLOSED"],["be-roof-drain","ph-roofing","ENCLOSED"],
+  ["be-skylights","ph-roofing","ENCLOSED"],["be-ductwork","ph-hvac-dist","INSTALLED"],
+  ["be-hvac-pipe","ph-hvac-dist","INSTALLED"],["be-ahu","ph-hvac-dist","SET"],
+  ["be-heating","ph-hvac-dist","SET"],["be-cooling","ph-hvac-dist","SET"],
+  ["be-duct-insul","ph-hvac-dist","INSTALLED"],["be-hvac-ctrl","ph-hvac-trim","INSTALLED"],
+  ["be-tab","ph-tab","TESTED"],["be-dom-water","ph-plumb-ri","INSTALLED"],
+  ["be-waste-vent","ph-plumb-ri","INSTALLED"],["be-int-storm","ph-plumb-ri","INSTALLED"],
+  ["be-gas-pipe","ph-plumb-ri","INSTALLED"],["be-plumb-fix","ph-plumb-fix","INSTALLED"],
+  ["be-water-htr","ph-plumb-ri","SET"],["be-pipe-insul","ph-plumb-ri","INSTALLED"],
+  ["be-power-dist","ph-elec-ri","INSTALLED"],["be-branch","ph-elec-ri","INSTALLED"],
+  ["be-conduit","ph-elec-ri","INSTALLED"],["be-lighting","ph-elec-dev","INSTALLED"],
+  ["be-emerg-pwr","ph-elec-ri","INSTALLED"],["be-grounding","ph-elec-ri","INSTALLED"],
+  ["be-sprink-main","ph-fp-ri","INSTALLED"],["be-sprink-head","ph-fp-ri","INSTALLED"],
+  ["be-standpipe","ph-fp-ri","INSTALLED"],["be-fire-pump","ph-fp-ri","SET"],
+  ["be-fa","ph-fa-dev","INSTALLED"],["be-data","ph-lv-ri","INSTALLED"],
+  ["be-security","ph-lv-ri","INSTALLED"],["be-av","ph-lv-dev","INSTALLED"],
+  ["be-bas","ph-lv-ri","INSTALLED"],["be-specialty-sys","ph-lv-ri","INSTALLED"],
+  ["be-studs","ph-framing","INSTALLED"],["be-drywall","ph-drywall","INSTALLED"],
+  ["be-int-doors","ph-doors","INSTALLED"],["be-act","ph-ceilings","INSTALLED"],
+  ["be-dw-ceil","ph-drywall","INSTALLED"],["be-paint","ph-paint","APPLIED"],
+  ["be-wallcover","ph-paint","APPLIED"],["be-tile","ph-flooring","INSTALLED"],
+  ["be-carpet","ph-flooring","INSTALLED"],["be-spec-floor","ph-flooring","INSTALLED"],
+  ["be-casework","ph-casework","INSTALLED"],["be-countertop","ph-casework","INSTALLED"],
+  ["be-toilet-acc","ph-doors","INSTALLED"],["be-signage","ph-doors","INSTALLED"],
+  ["be-elev-car","ph-doors","INSTALLED"],["be-elev-mach","ph-elec-ri","SET"],
+  ["be-paving","ph-punch","BUILT"],["be-sidewalks","ph-punch","BUILT"],
+  ["be-landscape","ph-punch","BUILT"],["be-site-light","ph-punch","BUILT"],
+  ["be-fencing","ph-site-setup","BUILT"],
+  ["be-ahu","ph-startup","STARTED"],["be-heating","ph-startup","STARTED"],
+  ["be-cooling","ph-startup","STARTED"],["be-power-dist","ph-startup","ENERGIZED"],
+  ["be-emerg-pwr","ph-startup","TESTED"],["be-fire-pump","ph-startup","TESTED"],
+  ["be-fa","ph-prefunc","TESTED"],["be-sprink-main","ph-prefunc","TESTED"],
+  ["be-elev-car","ph-prefunc","TESTED"],["be-hvac-ctrl","ph-integrated","TESTED"],
+  ["be-bas","ph-integrated","TESTED"],["be-security","ph-integrated","TESTED"],
+  ["res-laborer","be-excav","SUPPORTS"],["res-laborer","be-backfill","SUPPORTS"],
+  ["res-laborer","be-erosion","INSTALLS"],["res-laborer","be-sog","SUPPORTS"],
+  ["res-carpenter","be-shallow-fdn","FORMS"],["res-carpenter","be-fdn-walls","FORMS"],
+  ["res-carpenter","be-grade-beams","FORMS"],["res-carpenter","be-sog","FORMS"],
+  ["res-carpenter","be-int-doors","INSTALLS"],["res-carpenter","be-casework","INSTALLS"],
+  ["res-carpenter","be-countertop","INSTALLS"],
+  ["res-concrete","be-deep-fdn","PLACES"],["res-concrete","be-shallow-fdn","PLACES"],
+  ["res-concrete","be-fdn-walls","PLACES"],["res-concrete","be-grade-beams","PLACES"],
+  ["res-concrete","be-sog","PLACES"],["res-concrete","be-slabs","PLACES"],
+  ["res-concrete","be-sidewalks","PLACES"],["res-concrete","be-paving","PLACES"],
+  ["res-ironworker","be-columns","ERECTS"],["res-ironworker","be-beams","ERECTS"],
+  ["res-ironworker","be-slabs","ERECTS"],["res-ironworker","be-roof-struct","ERECTS"],
+  ["res-ironworker","be-connections","ERECTS"],["res-ironworker","be-stairs","ERECTS"],
+  ["res-ironworker","be-misc-metals","ERECTS"],
+  ["res-mason","be-masonry-v","LAYS"],["res-mason","be-fdn-walls","LAYS"],
+  ["res-roofer","be-roof-mem","INSTALLS"],["res-roofer","be-roof-insul","INSTALLS"],
+  ["res-roofer","be-flashing","INSTALLS"],["res-roofer","be-roof-drain","INSTALLS"],
+  ["res-roofer","be-skylights","INSTALLS"],
+  ["res-glazier","be-curtainwall","INSTALLS"],["res-glazier","be-windows","INSTALLS"],
+  ["res-glazier","be-ext-doors","INSTALLS"],["res-glazier","be-panels","INSTALLS"],
+  ["res-waterproofer","be-bg-wp","APPLIES"],["res-waterproofer","be-amb","APPLIES"],
+  ["res-waterproofer","be-ext-insul","APPLIES"],
+  ["res-drywall","be-studs","FRAMES"],["res-drywall","be-drywall","HANGS"],
+  ["res-drywall","be-dw-ceil","HANGS"],
+  ["res-painter","be-paint","APPLIES"],["res-painter","be-wallcover","APPLIES"],
+  ["res-floor","be-tile","LAYS"],["res-floor","be-carpet","LAYS"],["res-floor","be-spec-floor","LAYS"],
+  ["res-ceiling","be-act","INSTALLS"],
+  ["res-insulator","be-duct-insul","WRAPS"],["res-insulator","be-pipe-insul","WRAPS"],
+  ["res-insulator","be-ext-insul","INSTALLS"],["res-insulator","be-roof-insul","INSTALLS"],
+  ["res-fireproofer","be-columns","FIREPROOFS"],["res-fireproofer","be-beams","FIREPROOFS"],
+  ["res-fireproofer","be-slabs","FIREPROOFS"],
+  ["res-plumber","be-dom-water","INSTALLS"],["res-plumber","be-waste-vent","INSTALLS"],
+  ["res-plumber","be-int-storm","INSTALLS"],["res-plumber","be-gas-pipe","INSTALLS"],
+  ["res-plumber","be-plumb-fix","INSTALLS"],["res-plumber","be-water-htr","INSTALLS"],
+  ["res-plumber","be-water-main","INSTALLS"],["res-plumber","be-sanitary","INSTALLS"],
+  ["res-sheetmetal","be-ductwork","INSTALLS"],["res-sheetmetal","be-hvac-pipe","INSTALLS"],
+  ["res-sheetmetal","be-ahu","SETS"],["res-sheetmetal","be-heating","SETS"],
+  ["res-sheetmetal","be-cooling","SETS"],["res-sheetmetal","be-hvac-ctrl","INSTALLS"],
+  ["res-electrician","be-power-dist","INSTALLS"],["res-electrician","be-branch","INSTALLS"],
+  ["res-electrician","be-conduit","INSTALLS"],["res-electrician","be-lighting","INSTALLS"],
+  ["res-electrician","be-emerg-pwr","INSTALLS"],["res-electrician","be-grounding","INSTALLS"],
+  ["res-electrician","be-site-elec","INSTALLS"],
+  ["res-sprinkler","be-sprink-main","INSTALLS"],["res-sprinkler","be-sprink-head","INSTALLS"],
+  ["res-sprinkler","be-standpipe","INSTALLS"],["res-sprinkler","be-fire-pump","INSTALLS"],
+  ["res-elevator","be-elev-car","INSTALLS"],["res-elevator","be-elev-mach","INSTALLS"],
+  ["res-lowvolt","be-data","PULLS"],["res-lowvolt","be-security","INSTALLS"],
+  ["res-lowvolt","be-av","INSTALLS"],["res-lowvolt","be-bas","INSTALLS"],
+  ["res-lowvolt","be-specialty-sys","INSTALLS"],["res-lowvolt","be-fa","INSTALLS"],
+  ["res-operator","be-excav","OPERATES"],["res-operator","be-backfill","OPERATES"],
+  ["res-operator","be-dewater","OPERATES"],["res-operator","be-paving","OPERATES"],
+  ["res-crane","be-columns","LIFTS"],["res-crane","be-beams","LIFTS"],
+  ["res-crane","be-slabs","LIFTS"],["res-crane","be-roof-struct","LIFTS"],
+  ["res-crane","be-curtainwall","LIFTS"],["res-crane","be-panels","LIFTS"],
+  ["res-crane","be-ahu","LIFTS"],["res-crane","be-cooling","LIFTS"],
+  ["res-earthmover","be-excav","EXCAVATES"],["res-earthmover","be-backfill","GRADES"],
+  ["res-earthmover","be-dewater","EXCAVATES"],
+  ["res-conc-equip","be-shallow-fdn","PLACES"],["res-conc-equip","be-fdn-walls","PLACES"],
+  ["res-conc-equip","be-sog","PLACES"],["res-conc-equip","be-slabs","PUMPS"],
+  ["res-access","be-curtainwall","ACCESS"],["res-access","be-paint","ACCESS"],
+  ["res-access","be-act","ACCESS"],["res-access","be-ductwork","ACCESS"],
+  ["res-compaction","be-backfill","COMPACTS"],["res-compaction","be-sog","COMPACTS"],
+  ["res-piling","be-deep-fdn","DRIVES"],
+  ["res-hauling","be-excav","HAULS"],["res-hauling","be-backfill","HAULS"],
+  ["res-welding","be-connections","WELDS"],["res-welding","be-misc-metals","WELDS"],
+  ["res-mat-handle","be-ductwork","DISTRIBUTES"],["res-mat-handle","be-drywall","DISTRIBUTES"],
+  ["res-mat-handle","be-studs","DISTRIBUTES"],
+  ["mat-concrete","be-shallow-fdn","PLACED IN"],["mat-concrete","be-deep-fdn","PLACED IN"],
+  ["mat-concrete","be-fdn-walls","PLACED IN"],["mat-concrete","be-grade-beams","PLACED IN"],
+  ["mat-concrete","be-sog","PLACED IN"],["mat-concrete","be-slabs","PLACED IN"],
+  ["mat-concrete","be-sidewalks","PLACED IN"],
+  ["mat-rebar","be-shallow-fdn","EMBEDDED"],["mat-rebar","be-deep-fdn","EMBEDDED"],
+  ["mat-rebar","be-fdn-walls","EMBEDDED"],["mat-rebar","be-grade-beams","EMBEDDED"],
+  ["mat-rebar","be-sog","EMBEDDED"],["mat-rebar","be-slabs","EMBEDDED"],
+  ["mat-steel","be-columns","ERECTED AS"],["mat-steel","be-beams","ERECTED AS"],
+  ["mat-steel","be-slabs","DECKED"],["mat-steel","be-roof-struct","ERECTED AS"],
+  ["mat-steel","be-connections","BOLTED"],["mat-steel","be-stairs","ERECTED AS"],
+  ["mat-steel","be-misc-metals","FABRICATED"],
+  ["mat-lumber","be-shallow-fdn","FORMS"],["mat-lumber","be-casework","BUILT INTO"],
+  ["mat-masonry","be-masonry-v","LAID AS"],["mat-masonry","be-fdn-walls","LAID AS"],
+  ["mat-roofing","be-roof-mem","APPLIED"],["mat-roofing","be-roof-insul","APPLIED"],
+  ["mat-roofing","be-flashing","FORMED"],
+  ["mat-waterproof","be-bg-wp","APPLIED"],["mat-waterproof","be-amb","APPLIED"],
+  ["mat-thermal","be-ext-insul","INSTALLED"],["mat-thermal","be-duct-insul","WRAPPED"],
+  ["mat-thermal","be-pipe-insul","WRAPPED"],
+  ["mat-glass","be-curtainwall","GLAZED"],["mat-glass","be-windows","GLAZED"],
+  ["mat-glass","be-skylights","GLAZED"],
+  ["mat-doors","be-int-doors","INSTALLED"],["mat-doors","be-ext-doors","INSTALLED"],
+  ["mat-framing","be-studs","FRAMED"],["mat-framing","be-drywall","HUNG"],
+  ["mat-framing","be-dw-ceil","HUNG"],["mat-ceiling","be-act","INSTALLED"],
+  ["mat-flooring","be-tile","LAID"],["mat-flooring","be-carpet","LAID"],
+  ["mat-flooring","be-spec-floor","LAID"],["mat-paint","be-paint","APPLIED"],
+  ["mat-casework","be-casework","BUILT"],["mat-casework","be-countertop","BUILT"],
+  ["mat-specialties","be-toilet-acc","INSTALLED"],["mat-specialties","be-signage","INSTALLED"],
+  ["mat-plumbing","be-dom-water","PIPED"],["mat-plumbing","be-waste-vent","PIPED"],
+  ["mat-plumbing","be-plumb-fix","INSTALLED"],["mat-plumbing","be-water-htr","INSTALLED"],
+  ["mat-hvac-dist","be-ductwork","ROUTED"],["mat-hvac-dist","be-hvac-pipe","PIPED"],
+  ["mat-hvac-equip","be-ahu","SET"],["mat-hvac-equip","be-heating","SET"],
+  ["mat-hvac-equip","be-cooling","SET"],["mat-hvac-equip","be-hvac-ctrl","INSTALLED"],
+  ["mat-elec","be-power-dist","INSTALLED"],["mat-elec","be-branch","PULLED"],
+  ["mat-elec","be-conduit","INSTALLED"],["mat-elec","be-grounding","INSTALLED"],
+  ["mat-lighting","be-lighting","INSTALLED"],
+  ["mat-fp","be-sprink-main","PIPED"],["mat-fp","be-sprink-head","INSTALLED"],
+  ["mat-fp","be-standpipe","PIPED"],["mat-fp","be-fire-pump","SET"],
+  ["mat-fp","be-fa","INSTALLED"],
+  ["mat-lv","be-data","PULLED"],["mat-lv","be-security","INSTALLED"],
+  ["mat-lv","be-av","INSTALLED"],["mat-lv","be-bas","INSTALLED"],
+  ["mat-site","be-water-main","PIPED"],["mat-site","be-sanitary","PIPED"],
+  ["mat-site","be-storm","PIPED"],["mat-site","be-gas-svc","PIPED"],
+  ["mat-site","be-paving","PLACED"],
+  ["mat-elevator","be-elev-car","INSTALLED"],["mat-elevator","be-elev-mach","INSTALLED"],
+  ["res-laborer","ph-site-setup","ACTIVE"],["res-laborer","ph-demo","ACTIVE"],
+  ["res-laborer","ph-earthwork","ACTIVE"],["res-laborer","ph-foundations","ACTIVE"],
+  ["res-laborer","ph-slab","ACTIVE"],["res-laborer","ph-steel","ACTIVE"],
+  ["res-laborer","ph-framing","ACTIVE"],["res-laborer","ph-punch","ACTIVE"],
+  ["res-carpenter","ph-foundations","FORMWORK"],["res-carpenter","ph-slab","FORMWORK"],
+  ["res-carpenter","ph-elev-conc","FORMWORK"],["res-carpenter","ph-doors","FINISH"],
+  ["res-carpenter","ph-casework","FINISH"],["res-carpenter","ph-punch","CORRECTS"],
+  ["res-concrete","ph-foundations","PEAKS"],["res-concrete","ph-slab","PEAKS"],
+  ["res-concrete","ph-elev-conc","PEAKS"],["res-concrete","ph-conc-frame","PEAKS"],
+  ["res-ironworker","ph-steel","PEAKS"],["res-ironworker","ph-stairs","ACTIVE"],
+  ["res-mason","ph-masonry","PEAKS"],["res-mason","ph-foundations","ACTIVE"],
+  ["res-roofer","ph-roofing","PEAKS"],["res-glazier","ph-curtainwall","PEAKS"],
+  ["res-waterproofer","ph-foundations","ACTIVE"],["res-waterproofer","ph-barrier","PEAKS"],
+  ["res-drywall","ph-framing","PEAKS"],["res-drywall","ph-drywall","PEAKS"],
+  ["res-painter","ph-paint","PEAKS"],["res-painter","ph-punch","TOUCH-UP"],
+  ["res-floor","ph-flooring","PEAKS"],
+  ["res-ceiling","ph-ceil-grid","ACTIVE"],["res-ceiling","ph-ceilings","PEAKS"],
+  ["res-insulator","ph-hvac-dist","ACTIVE"],["res-insulator","ph-plumb-ri","ACTIVE"],
+  ["res-insulator","ph-barrier","ACTIVE"],["res-fireproofer","ph-steel","FOLLOWS"],
+  ["res-plumber","ph-site-util","UNDERGROUND"],["res-plumber","ph-foundations","UNDERGROUND"],
+  ["res-plumber","ph-plumb-ri","PEAKS"],["res-plumber","ph-plumb-fix","TRIM"],
+  ["res-sheetmetal","ph-hvac-dist","PEAKS"],["res-sheetmetal","ph-hvac-trim","TRIM"],
+  ["res-sheetmetal","ph-startup","STARTUP"],
+  ["res-electrician","ph-site-util","UNDERGROUND"],["res-electrician","ph-elec-ri","PEAKS"],
+  ["res-electrician","ph-elec-dev","TRIM"],["res-electrician","ph-startup","STARTUP"],
+  ["res-sprinkler","ph-fp-ri","PEAKS"],["res-sprinkler","ph-fa-dev","ACTIVE"],
+  ["res-sprinkler","ph-prefunc","TESTING"],
+  ["res-elevator","ph-steel","HOISTWAY"],["res-elevator","ph-doors","CAB"],
+  ["res-elevator","ph-prefunc","TESTING"],
+  ["res-lowvolt","ph-lv-ri","PEAKS"],["res-lowvolt","ph-lv-dev","TRIM"],
+  ["res-lowvolt","ph-fa-dev","ACTIVE"],["res-lowvolt","ph-integrated","TESTING"],
+  ["res-operator","ph-demo","ACTIVE"],["res-operator","ph-earthwork","PEAKS"],
+  ["res-operator","ph-site-util","ACTIVE"],["res-operator","ph-foundations","ACTIVE"],
+  ["res-surveyor","ph-site-setup","LAYOUT"],["res-surveyor","ph-earthwork","LAYOUT"],
+  ["res-surveyor","ph-foundations","LAYOUT"],["res-surveyor","ph-steel","LAYOUT"],
+  ["res-safety","ph-safety-orient","LEADS"],["res-safety","ph-earthwork","MONITORS"],
+  ["res-safety","ph-steel","MONITORS"],["res-safety","ph-roofing","MONITORS"],
+  ["res-safety","ph-punch","MONITORS"],
+  ["res-qc","ph-foundations","INSPECTS"],["res-qc","ph-steel","INSPECTS"],
+  ["res-qc","ph-barrier","INSPECTS"],["res-qc","ph-drywall","INSPECTS"],
+  ["res-qc","ph-paint","INSPECTS"],
+  ["res-cxa","ph-prefunc","LEADS"],["res-cxa","ph-startup","WITNESSES"],
+  ["res-cxa","ph-tab","WITNESSES"],["res-cxa","ph-integrated","LEADS"],
+  ["res-cxa","ph-perf-ver","LEADS"],["res-cxa","ph-seasonal-cx","RETURNS"],
+  ["res-crane","ph-steel","MOBILIZED"],["res-crane","ph-curtainwall","MOBILIZED"],
+  ["res-crane","ph-hvac-dist","SETS UNITS"],
+  ["res-earthmover","ph-demo","MOBILIZED"],["res-earthmover","ph-earthwork","MOBILIZED"],
+  ["res-earthmover","ph-site-util","MOBILIZED"],
+  ["res-conc-equip","ph-foundations","MOBILIZED"],["res-conc-equip","ph-slab","MOBILIZED"],
+  ["res-conc-equip","ph-elev-conc","MOBILIZED"],
+  ["res-access","ph-curtainwall","MOBILIZED"],["res-access","ph-paint","MOBILIZED"],
+  ["res-access","ph-ceilings","MOBILIZED"],["res-access","ph-punch","MOBILIZED"],
+  ["res-compaction","ph-earthwork","MOBILIZED"],["res-compaction","ph-site-util","MOBILIZED"],
+  ["res-piling","ph-foundations","MOBILIZED"],
+  ["res-hauling","ph-demo","MOBILIZED"],["res-hauling","ph-earthwork","MOBILIZED"],
+  ["res-welding","ph-steel","MOBILIZED"],["res-welding","ph-stairs","MOBILIZED"],
+  ["res-temp-util","ph-site-setup","MOBILIZED"],
+  ["res-mat-handle","ph-framing","MOBILIZED"],["res-mat-handle","ph-hvac-dist","MOBILIZED"],
+  ["res-survey-inst","ph-site-setup","MOBILIZED"],["res-survey-inst","ph-earthwork","MOBILIZED"],
+  ["res-survey-inst","ph-foundations","MOBILIZED"],["res-survey-inst","ph-steel","MOBILIZED"],
+  ["mat-concrete","ph-foundations","DELIVERED"],["mat-concrete","ph-slab","DELIVERED"],
+  ["mat-concrete","ph-elev-conc","DELIVERED"],
+  ["mat-rebar","ph-foundations","DELIVERED"],["mat-rebar","ph-elev-conc","DELIVERED"],
+  ["mat-steel","ph-fabrication","FABRICATED"],["mat-steel","ph-steel","DELIVERED"],
+  ["mat-lumber","ph-foundations","DELIVERED"],["mat-masonry","ph-masonry","DELIVERED"],
+  ["mat-roofing","ph-roofing","DELIVERED"],
+  ["mat-waterproof","ph-foundations","DELIVERED"],["mat-waterproof","ph-barrier","DELIVERED"],
+  ["mat-thermal","ph-hvac-dist","DELIVERED"],
+  ["mat-glass","ph-fabrication","FABRICATED"],["mat-glass","ph-curtainwall","DELIVERED"],
+  ["mat-doors","ph-fabrication","FABRICATED"],["mat-doors","ph-doors","DELIVERED"],
+  ["mat-framing","ph-framing","DELIVERED"],["mat-ceiling","ph-ceilings","DELIVERED"],
+  ["mat-flooring","ph-flooring","DELIVERED"],["mat-paint","ph-paint","DELIVERED"],
+  ["mat-casework","ph-fabrication","FABRICATED"],["mat-casework","ph-casework","DELIVERED"],
+  ["mat-plumbing","ph-plumb-ri","DELIVERED"],["mat-hvac-dist","ph-hvac-dist","DELIVERED"],
+  ["mat-hvac-equip","ph-fabrication","LONG LEAD"],["mat-hvac-equip","ph-hvac-dist","DELIVERED"],
+  ["mat-elec","ph-elec-ri","DELIVERED"],["mat-lighting","ph-elec-dev","DELIVERED"],
+  ["mat-fp","ph-fp-ri","DELIVERED"],["mat-lv","ph-lv-ri","DELIVERED"],
+  ["mat-site","ph-site-util","DELIVERED"],
+  ["mat-elevator","ph-fabrication","LONG LEAD"],["mat-elevator","ph-steel","DELIVERED"],
+];
+
+// =====================================================
+// BUILD ADJACENCY
+// =====================================================
+const adj = {};
+const edgeLabelMap = {};
+allEdges.forEach(([s, t, label]) => {
+  if (!adj[s]) adj[s] = new Set();
+  if (!adj[t]) adj[t] = new Set();
+  adj[s].add(t); adj[t].add(s);
+  edgeLabelMap[s + '|' + t] = label;
+  edgeLabelMap[t + '|' + s] = label;
+});
+
+// =====================================================
+// RENDER COLUMNS
+// =====================================================
+// Resource subcategory colors
+const resCatColors = {
+  'Trades': '#ce93d8',
+  'Equipment': '#4dd0e1',
+  'Materials': '#ff8a65'
+};
+
+function renderColumn(bodyId, groups, color) {
+  const body = document.getElementById(bodyId);
+  groups.forEach(group => {
+    const catClass = 'cat-' + group.cat.toLowerCase().replace(/\s+/g, '-');
+    const wrapper = document.createElement('div');
+    wrapper.className = catClass;
+    const h = document.createElement('div');
+    h.className = 'cat-header';
+    h.style.color = color;
+    h.textContent = group.cat;
+    wrapper.appendChild(h);
+    body.appendChild(wrapper);
+    group.items.forEach(item => {
+      const el = document.createElement('div');
+      el.className = 'item';
+      el.dataset.id = item.id;
+      el.dataset.cat = group.cat;
+      el.innerHTML = '<span class="item-name">' + item.name + '</span>';
+      body.appendChild(el);
+    });
+  });
+}
+
+// Build element groups in order
+const elCatOrder = ['Site & Earthwork','Foundations','Site Utilities','Structure','Enclosure',
+  'Roofing','HVAC','Plumbing','Electrical','Fire Protection','Low Voltage','Interiors',
+  'Conveying','Site Improvements'];
+const elementGroups = elCatOrder.map(cat => ({
+  cat, items: graphNodes.filter(n => n.domain === 'elements' && n.cat === cat)
+})).filter(g => g.items.length > 0);
+
+const resCatOrder = ['Trades','Equipment','Materials'];
+const resourceGroups = resCatOrder.map(cat => ({
+  cat, items: graphNodes.filter(n => n.domain === 'resources' && n.cat === cat)
+})).filter(g => g.items.length > 0);
+
+renderColumn('body-phases', phaseGroups, 'rgba(255,183,77,0.45)');
+renderColumn('body-elements', elementGroups, 'rgba(102,187,106,0.45)');
+// Resources uses per-category colors for headers
+const resCatHeaderColors = {
+  'Trades': 'rgba(206,147,216,0.45)',
+  'Equipment': 'rgba(77,208,225,0.45)',
+  'Materials': 'rgba(255,138,101,0.45)'
+};
+(function renderResources() {
+  const body = document.getElementById('body-resources');
+  resourceGroups.forEach(group => {
+    const catClass = 'cat-' + group.cat.toLowerCase().replace(/\s+/g, '-');
+    const wrapper = document.createElement('div');
+    wrapper.className = catClass;
+    const h = document.createElement('div');
+    h.className = 'cat-header';
+    h.style.color = resCatHeaderColors[group.cat] || 'rgba(206,147,216,0.45)';
+    h.textContent = group.cat;
+    wrapper.appendChild(h);
+    body.appendChild(wrapper);
+    group.items.forEach(item => {
+      const el = document.createElement('div');
+      el.className = 'item';
+      el.dataset.id = item.id;
+      el.dataset.cat = group.cat;
+      el.innerHTML = '<span class="item-name">' + item.name + '</span>';
+      body.appendChild(el);
+    });
+  });
+})();
+
+// Count items
+const phaseCount = phaseGroups.reduce((s, g) => s + g.items.length, 0);
+const elemCount = elementGroups.reduce((s, g) => s + g.items.length, 0);
+const resCount = resourceGroups.reduce((s, g) => s + g.items.length, 0);
+document.getElementById('cnt-phases').textContent = phaseCount;
+document.getElementById('cnt-elements').textContent = elemCount;
+document.getElementById('cnt-resources').textContent = resCount;
+document.getElementById('stats').textContent =
+  phaseCount + ' phases · ' + elemCount + ' elements · ' + resCount + ' resources · ' + allEdges.length + ' edges';
+
+// Index all item elements by ID
+const itemEls = {};
+document.querySelectorAll('.item').forEach(el => { itemEls[el.dataset.id] = el; });
+
+// Map each item ID to its column body element
+const itemColBody = {};
+['body-phases','body-elements','body-resources'].forEach(bodyId => {
+  document.querySelectorAll('#' + bodyId + ' .item').forEach(el => {
+    itemColBody[el.dataset.id] = document.getElementById(bodyId);
+  });
+});
+
+// Map each item ID to its color (phases/elements use column color, resources use subcategory color)
+const itemColor = {};
+document.querySelectorAll('#body-phases .item').forEach(el => { itemColor[el.dataset.id] = '#ffb74d'; });
+document.querySelectorAll('#body-elements .item').forEach(el => { itemColor[el.dataset.id] = '#66bb6a'; });
+document.querySelectorAll('#body-resources .item').forEach(el => {
+  itemColor[el.dataset.id] = resCatColors[el.dataset.cat] || '#ce93d8';
+});
+
+// =====================================================
+// SELECTION LOGIC
+// =====================================================
+let selectedId = null;
+const linesSvg = document.getElementById('lines-svg');
+const hint = document.getElementById('hint');
+
+function selectItem(id) {
+  if (selectedId === id) { resetSelection(); return; }
+  selectedId = id;
+
+  const neighbors = adj[id] || new Set();
+  const visibleIds = new Set([id, ...neighbors]);
+
+  // Find the name for the hint
+  const clickedEl = itemEls[id];
+  const clickedName = clickedEl ? clickedEl.querySelector('.item-name').textContent : id;
+  hint.textContent = clickedName + ' — ' + neighbors.size + ' connections · Click again to deselect';
+
+  // Process each column body
+  const bodies = [
+    document.getElementById('body-phases'),
+    document.getElementById('body-elements'),
+    document.getElementById('body-resources')
+  ];
+
+  bodies.forEach(body => {
+    const col = body.parentElement;
+    const bodyRect = body.getBoundingClientRect();
+    const centerY = bodyRect.top + bodyRect.height / 2;
+
+    // Save scroll position and lock
+    body.dataset.savedScroll = body.scrollTop;
+    body.style.overflow = 'hidden';
+
+    const items = body.querySelectorAll('.item');
+    const toCenter = [];
+
+    items.forEach(item => {
+      const iid = item.dataset.id;
+      // Remove old edge tags
+      item.querySelectorAll('.edge-tag').forEach(t => t.remove());
+
+      if (iid === id) {
+        item.classList.add('selected');
+        item.classList.remove('dimmed', 'highlighted');
+        toCenter.push(item);
+      } else if (visibleIds.has(iid)) {
+        item.classList.add('highlighted');
+        item.classList.remove('dimmed', 'selected');
+        toCenter.push(item);
+      } else {
+        item.classList.add('dimmed');
+        item.classList.remove('highlighted', 'selected');
+      }
+    });
+
+    // Dim category headers
+    body.querySelectorAll('.cat-header').forEach(h => h.classList.add('dimmed'));
+
+    // Center the group vertically
+    if (toCenter.length > 0) {
+      const itemH = 32;
+      const maxH = bodyRect.height * 0.88;
+      const naturalH = toCenter.length * itemH;
+      const gap = naturalH > maxH ? Math.max(0, (maxH - toCenter.length * 26) / Math.max(1, toCenter.length - 1)) : 6;
+      const effectiveItemH = naturalH > maxH ? 26 : itemH;
+      const totalH = toCenter.length * effectiveItemH + Math.max(0, toCenter.length - 1) * gap;
+      let targetTop = centerY - totalH / 2;
+
+      toCenter.forEach((item, i) => {
+        const rect = item.getBoundingClientRect();
+        const offset = targetTop - rect.top;
+        item.style.transform = 'translateY(' + offset + 'px)';
+        item.style.transitionDelay = (i * 20) + 'ms';
+        targetTop += effectiveItemH + gap;
+      });
+    }
+  });
+
+  // Draw lines after animation settles
+  setTimeout(drawLines, 480);
+}
+
+function resetSelection() {
+  selectedId = null;
+  hint.textContent = 'Click any item to see its connections';
+  linesSvg.innerHTML = '';
+
+  document.querySelectorAll('.item').forEach(item => {
+    item.classList.remove('selected', 'highlighted', 'dimmed');
+    item.style.transform = '';
+    item.style.transitionDelay = '';
+    item.querySelectorAll('.edge-tag').forEach(t => t.remove());
+  });
+
+  document.querySelectorAll('.cat-header').forEach(h => h.classList.remove('dimmed'));
+
+  // Restore scroll
+  ['body-phases','body-elements','body-resources'].forEach(id => {
+    const body = document.getElementById(id);
+    body.style.overflow = '';
+    if (body.dataset.savedScroll) {
+      body.scrollTop = parseInt(body.dataset.savedScroll);
+    }
+  });
+}
+
+// =====================================================
+// DRAW LINES
+// =====================================================
+// Build a directed edge lookup: "source|target" -> true (to know original direction)
+const directedEdge = {};
+allEdges.forEach(([s, t]) => { directedEdge[s + '|' + t] = true; });
+
+function drawLines() {
+  linesSvg.innerHTML = '';
+  if (!selectedId) return;
+
+  const clickedEl = itemEls[selectedId];
+  if (!clickedEl) return;
+
+  const neighbors = adj[selectedId] || new Set();
+
+  neighbors.forEach(nid => {
+    const targetEl = itemEls[nid];
+    if (!targetEl) return;
+
+    // Determine original edge direction
+    const clickedIsSource = directedEdge[selectedId + '|' + nid];
+    const srcId = clickedIsSource ? selectedId : nid;
+    const dstId = clickedIsSource ? nid : selectedId;
+    const srcEl = clickedIsSource ? clickedEl : targetEl;
+    const dstEl = clickedIsSource ? targetEl : clickedEl;
+
+    const srcRect = srcEl.getBoundingClientRect();
+    const dstRect = dstEl.getBoundingClientRect();
+
+    let x1, y1, x2, y2;
+    const srcCX = srcRect.left + srcRect.width / 2;
+    const dstCX = dstRect.left + dstRect.width / 2;
+
+    if (srcCX < dstCX) {
+      x1 = srcRect.right - 4;
+      x2 = dstRect.left + 4;
+    } else if (srcCX > dstCX) {
+      x1 = srcRect.left + 4;
+      x2 = dstRect.right - 4;
+    } else {
+      x1 = srcRect.right - 4;
+      x2 = dstRect.right - 4;
+    }
+    y1 = srcRect.top + srcRect.height / 2;
+    y2 = dstRect.top + dstRect.height / 2;
+
+    const dx = x2 - x1;
+    const cp1x = x1 + dx * 0.4;
+    const cp2x = x1 + dx * 0.6;
+
+    // Use target node color for the line
+    const color = itemColor[dstId] || '#556';
+
+    // Draw the bezier curve (shorten slightly so arrow sits at end)
+    const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+    path.setAttribute('d', 'M ' + x1 + ' ' + y1 + ' C ' + cp1x + ' ' + y1 + ', ' + cp2x + ' ' + y2 + ', ' + x2 + ' ' + y2);
+    path.setAttribute('stroke', color);
+    path.setAttribute('stroke-width', '1.5');
+    path.setAttribute('opacity', '0');
+    path.classList.add('edge-line');
+    linesSvg.appendChild(path);
+
+    // Draw arrowhead as a separate polygon at the end of the curve
+    // Tangent at t=1 of cubic bezier: 3*(P3 - P2) = 3*(x2-cp2x, y2-y2) = 3*(x2-cp2x, 0)
+    const tx = x2 - cp2x;
+    const ty = y2 - y2; // always 0 for our cp2y=y2
+    const len = Math.sqrt(tx * tx + ty * ty) || 1;
+    const ux = tx / len;
+    const uy = ty / len;
+    // Perpendicular
+    const px = -uy;
+    const py = ux;
+    const arrowLen = 10;
+    const arrowW = 5;
+    // Tip at (x2, y2), base pulled back along tangent
+    const bx = x2 - ux * arrowLen;
+    const by = y2 - uy * arrowLen;
+    const points = [
+      x2 + ',' + y2,
+      (bx + px * arrowW) + ',' + (by + py * arrowW),
+      (bx - px * arrowW) + ',' + (by - py * arrowW)
+    ].join(' ');
+    const arrow = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
+    arrow.setAttribute('points', points);
+    arrow.setAttribute('fill', color);
+    arrow.setAttribute('opacity', '0');
+    arrow.classList.add('edge-arrow');
+    linesSvg.appendChild(arrow);
+
+    // Label at midpoint of the curve
+    const label = edgeLabelMap[selectedId + '|' + nid] || edgeLabelMap[nid + '|' + selectedId] || '';
+    if (label) {
+      const mx = 0.125*x1 + 0.375*cp1x + 0.375*cp2x + 0.125*x2;
+      const my = 0.125*y1 + 0.375*y1 + 0.375*y2 + 0.125*y2;
+      const text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+      text.setAttribute('x', mx);
+      text.setAttribute('y', my - 6);
+      text.setAttribute('text-anchor', 'middle');
+      text.setAttribute('fill', color);
+      text.setAttribute('font-size', '9');
+      text.setAttribute('font-weight', '600');
+      text.setAttribute('font-family', '-apple-system, BlinkMacSystemFont, sans-serif');
+      text.setAttribute('opacity', '0');
+      text.classList.add('edge-label');
+      text.textContent = label;
+      linesSvg.appendChild(text);
+    }
+  });
+
+  // Animate in
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+      linesSvg.querySelectorAll('.edge-line').forEach(p => {
+        p.style.transition = 'opacity 0.35s ease';
+        p.setAttribute('opacity', '0.6');
+      });
+      linesSvg.querySelectorAll('.edge-arrow').forEach(a => {
+        a.style.transition = 'opacity 0.35s ease';
+        a.setAttribute('opacity', '1');
+      });
+      linesSvg.querySelectorAll('.edge-label').forEach(t => {
+        t.style.transition = 'opacity 0.35s ease 0.15s';
+        t.setAttribute('opacity', '0.9');
+      });
+    });
+  });
+}
+
+// =====================================================
+// EVENT HANDLERS
+// =====================================================
+// Click on items
+document.querySelectorAll('.item').forEach(el => {
+  el.addEventListener('click', (e) => {
+    e.stopPropagation();
+    selectItem(el.dataset.id);
+  });
+});
+
+// Click background to deselect
+document.addEventListener('click', (e) => {
+  if (selectedId && !e.target.closest('.item')) {
+    resetSelection();
+  }
+});
+
+// Escape to deselect
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && selectedId) {
+    resetSelection();
+  }
+});
+
+// Search
+document.getElementById('search').addEventListener('input', function() {
+  if (selectedId) resetSelection();
+  const q = this.value.toLowerCase().trim();
+
+  if (!q) {
+    document.querySelectorAll('.item').forEach(el => {
+      el.classList.remove('search-match', 'search-dim');
+    });
+    document.querySelectorAll('.cat-header').forEach(h => h.classList.remove('dimmed'));
+    return;
+  }
+
+  document.querySelectorAll('.item').forEach(el => {
+    const name = el.querySelector('.item-name').textContent.toLowerCase();
+    if (name.includes(q)) {
+      el.classList.add('search-match');
+      el.classList.remove('search-dim');
+    } else {
+      el.classList.add('search-dim');
+      el.classList.remove('search-match');
+    }
+  });
+
+  // Dim headers with no visible items
+  document.querySelectorAll('.cat-header').forEach(h => {
+    let sib = h.nextElementSibling;
+    let anyVisible = false;
+    while (sib && sib.classList.contains('item')) {
+      if (!sib.classList.contains('search-dim')) anyVisible = true;
+      sib = sib.nextElementSibling;
+    }
+    h.classList.toggle('dimmed', !anyVisible);
+  });
+});
+
+// Handle window resize — redraw lines if selected
+window.addEventListener('resize', () => {
+  if (selectedId) {
+    linesSvg.innerHTML = '';
+    // Re-center and redraw
+    const id = selectedId;
+    selectedId = null;
+    resetSelection();
+    requestAnimationFrame(() => selectItem(id));
+  }
+});
+</script>
+</body>
+</html>

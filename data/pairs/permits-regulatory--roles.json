@@ -1,0 +1,211 @@
+{
+  "source": "permits-regulatory",
+  "target": "roles",
+  "edges": [
+    [
+      "pr-building-permit",
+      "rl-project-manager",
+      "PULLED BY"
+    ],
+    [
+      "pr-building-permit",
+      "rl-project-engineer",
+      "SUBMITTED BY"
+    ],
+    [
+      "pr-building-permit",
+      "rl-owner-s",
+      "AUTHORIZED BY"
+    ],
+    [
+      "pr-demolition-permi",
+      "rl-super",
+      "COORDINATED BY"
+    ],
+    [
+      "pr-demolition-permi",
+      "rl-safety-manager",
+      "REVIEWED BY"
+    ],
+    [
+      "pr-renovation-alter",
+      "rl-project-manager",
+      "OBTAINED BY"
+    ],
+    [
+      "pr-trade-permit",
+      "rl-foreman-gen",
+      "PULLED BY"
+    ],
+    [
+      "pr-trade-permit",
+      "rl-assistant-super",
+      "TRACKED BY"
+    ],
+    [
+      "pr-enviro-permit",
+      "rl-quality-manager",
+      "MONITORED BY"
+    ],
+    [
+      "pr-stormwater-permi",
+      "rl-super",
+      "MAINTAINED BY"
+    ],
+    [
+      "pr-street-right-way",
+      "rl-project-engineer",
+      "COORDINATED BY"
+    ],
+    [
+      "pr-utility-connecti",
+      "rl-assistant-projec",
+      "REQUESTED BY"
+    ],
+    [
+      "pr-zoning-appr",
+      "rl-preconstruction",
+      "SECURED BY"
+    ],
+    [
+      "pr-variance-special",
+      "rl-project-executiv",
+      "PETITIONED BY"
+    ],
+    [
+      "pr-building-departm",
+      "rl-design-manager",
+      "SHEPHERDED BY"
+    ],
+    [
+      "pr-fire-marshal",
+      "rl-safety-manager",
+      "COORDINATED BY"
+    ],
+    [
+      "pr-health-departmen",
+      "rl-quality-manager",
+      "FACILITATED BY"
+    ],
+    [
+      "pr-ahj-insp",
+      "rl-super",
+      "SCHEDULED BY"
+    ],
+    [
+      "pr-ahj-insp",
+      "rl-field-engineer",
+      "ATTENDED BY"
+    ],
+    [
+      "pr-special-insp",
+      "rl-quality-manager",
+      "WITNESSED BY"
+    ],
+    [
+      "pr-third-party",
+      "rl-project-engineer",
+      "COMMISSIONED BY"
+    ],
+    [
+      "pr-cert-occupancy",
+      "rl-project-executiv",
+      "OBTAINED BY"
+    ],
+    [
+      "pr-temp-cert",
+      "rl-project-manager",
+      "EXPEDITED BY"
+    ],
+    [
+      "pr-cert-completion",
+      "rl-cx-agent-cxa",
+      "VERIFIED BY"
+    ],
+    [
+      "pr-letter-comp",
+      "rl-doc-controller",
+      "ASSEMBLED BY"
+    ],
+    [
+      "pr-osha-notificatio",
+      "rl-safety-officer",
+      "FILED BY"
+    ],
+    [
+      "pr-site-safety-plan",
+      "rl-safety-manager",
+      "AUTHORED BY"
+    ],
+    [
+      "pr-labor-comp",
+      "rl-contract-adminis",
+      "ENFORCED BY"
+    ],
+    [
+      "pr-permit-applicati",
+      "rl-office-manager",
+      "PREPARED BY"
+    ],
+    [
+      "pr-permit-status",
+      "rl-doc-controller",
+      "TRACKED BY"
+    ],
+    [
+      "pr-insp-scheduling",
+      "rl-assistant-super",
+      "COORDINATED BY"
+    ],
+    [
+      "pr-insp-pass-rate",
+      "rl-quality-manager",
+      "BENCHMARKED BY"
+    ],
+    [
+      "pr-reg-hold",
+      "rl-scheduler-projec",
+      "QUANTIFIED BY"
+    ],
+    [
+      "pr-open-permit",
+      "rl-project-manager",
+      "MONITORED BY"
+    ],
+    [
+      "pr-comp-doc",
+      "rl-doc-controller",
+      "AUDITED BY"
+    ]
+  ],
+  "verbGlossary": {
+    "ASSEMBLED BY": "{source} compiles compliance letters, inspection reports, and supporting documentation into a complete regulatory closeout package.",
+    "ATTENDED BY": "{source} is physically present during a regulatory or AHJ inspection to answer technical questions and provide access to work areas.",
+    "AUDITED BY": "{source} reviews compliance document sets for completeness and accuracy, identifying missing permits or expired certifications before regulatory deadlines.",
+    "AUTHORED BY": "{source} writes and maintains a regulatory plan (e.g., site safety plan) incorporating OSHA standards, site-specific hazards, and emergency procedures.",
+    "AUTHORIZED BY": "{source} grants owner-level approval for a permit application to proceed, confirming the project entity has standing to request {target}.",
+    "BENCHMARKED BY": "{source} compares an inspection or permit metric against project targets and portfolio norms to gauge regulatory performance.",
+    "COMMISSIONED BY": "{source} engages and oversees a third-party testing agency, defining test scope, witnessing procedures, and accepting results.",
+    "COORDINATED BY": "{source} aligns regulatory inspection timing, permit sequencing, or agency submittals with the construction schedule and field readiness.",
+    "ENFORCED BY": "{source} ensures subcontractors and trades comply with prevailing wage, certified payroll, and labor regulation requirements throughout the project.",
+    "EXPEDITED BY": "{source} accelerates {target} or certificate through the approval process by resolving reviewer comments, resubmitting corrections, and maintaining agency contact.",
+    "FACILITATED BY": "{source} manages the interface between the project team and a regulatory agency, routing submittals, scheduling reviews, and resolving conditions of approval.",
+    "FILED BY": "{source} submits a required regulatory notification or report to the governing agency within mandated timeframes.",
+    "MAINTAINED BY": "{source} keeps {target} in active compliance through ongoing field practices, monitoring, and periodic reporting (e.g., SWPPP inspections and logs).",
+    "MONITORED BY": "{source} tracks permit status, expiration dates, or regulatory metrics over time, flagging items that require action before they delay the project.",
+    "OBTAINED BY": "{source} secures {target} or regulatory approval by completing applications, coordinating reviews, and satisfying conditions of issuance.",
+    "PETITIONED BY": "{source} prepares and presents a formal request for a zoning variance or special exception before a regulatory board or hearing body.",
+    "PREPARED BY": "{target} creates {source} application or regulatory submission, assembling drawings, forms, fees, and supporting documentation.",
+    "PULLED BY": "{source} physically obtains a construction permit from the issuing jurisdiction, often requiring in-person pickup or portal download after approval.",
+    "QUANTIFIED BY": "{source} measures the schedule and cost impact of a regulatory hold, translating days of delay into float consumption and potential liquidated damages.",
+    "REQUESTED BY": "{source} initiates {target} application or utility connection request on behalf of the project, providing required project data to the issuing authority.",
+    "REVIEWED BY": "{source} examines {target} application or regulatory submittal for technical accuracy, code compliance, and completeness before submission to the agency.",
+    "SCHEDULED BY": "{source} arranges the date and time for a regulatory inspection, coordinating between the AHJ and field crews to ensure work is ready for review.",
+    "SECURED BY": "{source} obtains a zoning or land-use approval during preconstruction by navigating municipal review processes, public hearings, and conditional requirements.",
+    "SHEPHERDED BY": "{source} guides a plan review submission through the building department review cycle, tracking reviewer comments and coordinating resubmittals across disciplines.",
+    "SUBMITTED BY": "{target} files {source} application or regulatory document with the issuing authority, ensuring all required forms and attachments are included.",
+    "TRACKED BY": "{source} maintains a current log of permit statuses, inspection results, and regulatory milestones, keeping the project team informed of upcoming deadlines.",
+    "VERIFIED BY": "{source} confirms that all systems and conditions required for a certificate have been tested, documented, and meet the standards of the issuing authority.",
+    "WITNESSED BY": "{source} observes a special inspection or test in person, confirming that procedures follow the approved testing plan and documenting results for the record."
+  }
+}

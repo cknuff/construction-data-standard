@@ -1,0 +1,441 @@
+{
+  "source": "documents-communications",
+  "target": "quality-safety-records",
+  "edges": [
+    [
+      "doc-photo",
+      "qsr-observation",
+      "PHOTOGRAPHS"
+    ],
+    [
+      "doc-photo",
+      "qsr-punch-item",
+      "PHOTOGRAPHS"
+    ],
+    [
+      "doc-photo",
+      "qsr-incident",
+      "PHOTOGRAPHS"
+    ],
+    [
+      "doc-photo",
+      "qsr-non-conformance",
+      "PHOTOGRAPHS"
+    ],
+    [
+      "doc-video",
+      "qsr-incident",
+      "CAPTURES"
+    ],
+    [
+      "doc-video",
+      "qsr-safety-observati",
+      "CAPTURES"
+    ],
+    [
+      "doc-daily-report",
+      "qsr-quality-observat",
+      "DOCUMENTS"
+    ],
+    [
+      "doc-daily-report",
+      "qsr-safety-violation",
+      "DOCUMENTS"
+    ],
+    [
+      "doc-daily-log-note",
+      "qsr-observation",
+      "DOCUMENTS"
+    ],
+    [
+      "doc-phone-call-log",
+      "qsr-incident",
+      "DOCUMENTS"
+    ],
+    [
+      "doc-action-plan",
+      "qsr-corrective-actio",
+      "REMEDIATES"
+    ],
+    [
+      "doc-action-plan-line",
+      "qsr-observation",
+      "RESOLVES"
+    ],
+    [
+      "doc-action-plan-line",
+      "qsr-punch-item",
+      "RESOLVES"
+    ],
+    [
+      "doc-action-plan-line",
+      "qsr-corrective-actio",
+      "RESOLVES"
+    ],
+    [
+      "doc-project-task",
+      "qsr-corrective-actio",
+      "RESOLVES"
+    ],
+    [
+      "qsr-observation",
+      "doc-req-info-rfi",
+      "TRIGGERS"
+    ],
+    [
+      "qsr-coord-issue",
+      "doc-req-info-rfi",
+      "TRIGGERS"
+    ],
+    [
+      "qsr-coord-issue-2",
+      "doc-req-info-rfi",
+      "TRIGGERS"
+    ],
+    [
+      "qsr-incident",
+      "doc-notice-delay",
+      "TRIGGERS"
+    ],
+    [
+      "qsr-safety-violation",
+      "doc-site-instruction",
+      "TRIGGERS"
+    ],
+    [
+      "doc-drawing-sheet",
+      "qsr-insp-item",
+      "REFERENCES"
+    ],
+    [
+      "doc-drawing-sheet",
+      "qsr-punch-item",
+      "REFERENCES"
+    ],
+    [
+      "doc-drawing-revision",
+      "qsr-non-conformance",
+      "REFERENCES"
+    ],
+    [
+      "doc-drawing-set",
+      "qsr-insp",
+      "REFERENCES"
+    ],
+    [
+      "doc-shop-drawing",
+      "qsr-non-conformance",
+      "REFERENCES"
+    ],
+    [
+      "doc-rfi-response",
+      "qsr-coord-issue",
+      "CLOSES OUT"
+    ],
+    [
+      "qsr-punch-item-2",
+      "doc-punch-list-as",
+      "CLOSES OUT"
+    ],
+    [
+      "doc-specification-se",
+      "qsr-insp",
+      "GOVERNS"
+    ],
+    [
+      "doc-specification-se",
+      "qsr-insp-item",
+      "GOVERNS"
+    ],
+    [
+      "doc-specification-se",
+      "qsr-non-conformance",
+      "GOVERNS"
+    ],
+    [
+      "doc-specification-se",
+      "qsr-mat-test-report",
+      "GOVERNS"
+    ],
+    [
+      "doc-safety-plan-site",
+      "qsr-safety-observati",
+      "GOVERNS"
+    ],
+    [
+      "doc-safety-plan-site",
+      "qsr-safety-violation",
+      "GOVERNS"
+    ],
+    [
+      "doc-swppp-enviro",
+      "qsr-enviro-cx",
+      "GOVERNS"
+    ],
+    [
+      "doc-submittal",
+      "qsr-mat-test-report",
+      "ATTACHES"
+    ],
+    [
+      "doc-submittal",
+      "qsr-system-perf-test",
+      "ATTACHES"
+    ],
+    [
+      "doc-product-data",
+      "qsr-mat-test-report",
+      "SUBSTANTIATES"
+    ],
+    [
+      "doc-sample-submittal",
+      "qsr-insp-item",
+      "SUBSTANTIATES"
+    ],
+    [
+      "qsr-punch-item",
+      "doc-photo",
+      "ATTACHES TO"
+    ],
+    [
+      "qsr-incident-record",
+      "doc-photo",
+      "ATTACHES TO"
+    ],
+    [
+      "qsr-punch-item",
+      "doc-punch-list-as",
+      "POPULATES"
+    ],
+    [
+      "qsr-punch-item-issue",
+      "doc-punch-list-as",
+      "POPULATES"
+    ],
+    [
+      "qsr-incident",
+      "doc-correspondence",
+      "ESCALATES TO"
+    ],
+    [
+      "qsr-deficiency-notic",
+      "doc-correspondence",
+      "ESCALATES TO"
+    ],
+    [
+      "doc-site-instruction",
+      "qsr-corrective-actio",
+      "DIRECTS"
+    ],
+    [
+      "doc-chg-directive",
+      "qsr-deficiency-notic",
+      "RESPONDS TO"
+    ],
+    [
+      "doc-plan-revision",
+      "qsr-coord-issue-2",
+      "RESPONDS TO"
+    ],
+    [
+      "doc-req-proposal-rfp",
+      "qsr-non-conformance",
+      "RESPONDS TO"
+    ],
+    [
+      "doc-bulletin-archite",
+      "qsr-non-conformance",
+      "SUPERSEDES"
+    ],
+    [
+      "doc-addendum",
+      "qsr-insp-item",
+      "REVISES"
+    ],
+    [
+      "doc-meeting-minutes",
+      "qsr-observation",
+      "TRACKS"
+    ],
+    [
+      "doc-meeting-minutes",
+      "qsr-punch-item",
+      "TRACKS"
+    ],
+    [
+      "doc-meeting",
+      "qsr-safety-observati",
+      "REVIEWS"
+    ],
+    [
+      "doc-meeting",
+      "qsr-deficiency-notic",
+      "REVIEWS"
+    ],
+    [
+      "qsr-incident-witness",
+      "doc-form-proforma",
+      "RECORDED ON"
+    ],
+    [
+      "qsr-incident-record",
+      "doc-form-proforma",
+      "RECORDED ON"
+    ],
+    [
+      "qsr-scheduled-insp",
+      "doc-form-proforma",
+      "RECORDED ON"
+    ],
+    [
+      "doc-permit-applicati",
+      "qsr-third-party",
+      "REQUIRES"
+    ],
+    [
+      "doc-permit-applicati",
+      "qsr-scheduled-insp",
+      "REQUIRES"
+    ],
+    [
+      "qsr-third-party",
+      "doc-permit-applicati",
+      "SATISFIES"
+    ],
+    [
+      "doc-cert-insurance",
+      "qsr-incident",
+      "COVERS"
+    ],
+    [
+      "doc-transmittal",
+      "qsr-mat-test-report",
+      "DELIVERS"
+    ],
+    [
+      "doc-as-built-docs",
+      "qsr-punch-item-2",
+      "CONFIRMS"
+    ],
+    [
+      "doc-warranty-docs",
+      "qsr-system-perf-test",
+      "CONFIRMS"
+    ],
+    [
+      "doc-o-m-manual",
+      "qsr-system-perf-test",
+      "INCORPORATES"
+    ],
+    [
+      "qsr-corrective-actio",
+      "doc-project-task",
+      "ASSIGNS"
+    ],
+    [
+      "doc-daily-log",
+      "qsr-insp",
+      "TEMPLATES"
+    ],
+    [
+      "qsr-insp",
+      "doc-as-built-docs",
+      "VERIFIES"
+    ],
+    [
+      "qsr-insp-item",
+      "doc-submittal-respon",
+      "VERIFIES"
+    ],
+    [
+      "qsr-third-party",
+      "doc-as-built-docs",
+      "VERIFIES"
+    ],
+    [
+      "qsr-action-plan",
+      "doc-action-plan",
+      "MIRRORS"
+    ],
+    [
+      "qsr-action-plan-line",
+      "doc-action-plan-line",
+      "MIRRORS"
+    ],
+    [
+      "doc-submittal-reject",
+      "qsr-deficiency-rate",
+      "INDICATES"
+    ],
+    [
+      "doc-submittal-cycle",
+      "qsr-observation-reso",
+      "INDICATES"
+    ],
+    [
+      "doc-daily-log-2",
+      "qsr-observation-dens",
+      "INDICATES"
+    ],
+    [
+      "doc-drawing-revision-2",
+      "qsr-rework-cost",
+      "INDICATES"
+    ],
+    [
+      "doc-correspondence-r",
+      "qsr-corrective-actio-2",
+      "INDICATES"
+    ],
+    [
+      "doc-rfi-response-2",
+      "qsr-hazard-recurrenc",
+      "INDICATES"
+    ],
+    [
+      "doc-rfi-volume",
+      "qsr-punch-item-3",
+      "INDICATES"
+    ],
+    [
+      "doc-lien-waiver",
+      "qsr-punch-item-2",
+      "DEPENDS ON"
+    ]
+  ],
+  "verbGlossary": {
+    "PHOTOGRAPHS": "{source}captured by photo documenting a field condition, {target}, or incident",
+    "CAPTURES": "{source}recording of a field event, {target}, or incident for the project record",
+    "DOCUMENTS": "{source}log entry that records the occurrence of a quality or {target}",
+    "REMEDIATES": "{source} created to systematically correct {target}, violation, or deficiency",
+    "RESOLVES": "{source}that directly addresses and closes out a quality or safety issue",
+    "TRIGGERS": "{source}that initiates a formal document request or notice",
+    "REFERENCES": "{source} that cites or points to a specific quality/{target} or vice versa for context",
+    "CLOSES OUT": "{source}record that formally completes and closes {target} or issue",
+    "GOVERNS": "{source}, plan, or regulatory document that sets the acceptance standard an {target} or observation is measured against",
+    "ATTACHES": "{source} or product data record appended to a test report as supporting evidence",
+    "SUBSTANTIATES": "{source} or sample that provides material proof supporting an {target} or test finding",
+    "ATTACHES TO": "Quality or {target} that includes linked photo or document evidence in its file",
+    "POPULATES": "{source}that feed into and compose the punch list document for closeout",
+    "ESCALATES TO": "{source}, {target}, or deficiency formally elevated via written correspondence or notice",
+    "DIRECTS": "{source} that orders specific {target} or remediation in the field",
+    "RESPONDS TO": "{source} issued in direct response to a field {target}, non-conformance, or coordination issue",
+    "SUPERSEDES": "{source}that overrides the design basis that caused {target}",
+    "REVISES": "{source} modifies {target} criteria or acceptance standards",
+    "TRACKS": "{source} that record status updates and follow-up on open quality or {target}s",
+    "REVIEWS": "{source} session where {target}s, safety findings, or deficiencies are formally discussed",
+    "RECORDED ON": "{source} statement or {target} result entered on a standardized project form",
+    "REQUIRES": "{source}document that mandates a specific {target} before work can proceed",
+    "SATISFIES": "{source}{target} that fulfills a permit or regulatory requirement",
+    "COVERS": "{source}that provides financial coverage for an {target} or claim",
+    "DELIVERS": "{source} that formally sends a test report or certification to the project team",
+    "CONFIRMS": "{source}document (as-built or warranty) that verifies {target} resolution or system performance is complete",
+    "INCORPORATES": "O&M manual that includes system performance test results as part of the turnover package",
+    "ASSIGNS": "{source} that creates a trackable project task for a responsible party",
+    "TEMPLATES": "{source} template that structures the format for recording {target} activity",
+    "INDICATES": "{source} management metric that serves as a leading or lagging signal for a quality/safety rate",
+    "VERIFIES": "{source} or third-party review that confirms {target} or submittal meets requirements",
+    "MIRRORS": "{source}plan that corresponds one-to-one with a documents-domain action plan record",
+    "DEPENDS ON": "{source} milestone (such as lien waiver release) that requires a quality/safety resolution first"
+  }
+}

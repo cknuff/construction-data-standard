@@ -1,0 +1,144 @@
+{
+  "source": "locations",
+  "target": "risk",
+  "edges": [
+    [
+      "loc-project-site",
+      "rk-risk-register",
+      "HOSTS"
+    ],
+    [
+      "loc-project-site",
+      "rk-enviro-risk",
+      "EXPOSES TO"
+    ],
+    [
+      "loc-project-site",
+      "rk-reg-permit-risk",
+      "SUBJECT TO"
+    ],
+    [
+      "loc-building",
+      "rk-const-execution",
+      "CONCENTRATES"
+    ],
+    [
+      "loc-building",
+      "rk-design-risk",
+      "EXPOSES TO"
+    ],
+    [
+      "loc-exterior-zone",
+      "rk-safety-risk",
+      "CONCENTRATES"
+    ],
+    [
+      "loc-laydown-staging",
+      "rk-supply-chain",
+      "BUFFERS AGAINST"
+    ],
+    [
+      "loc-right-way",
+      "rk-reg-permit-risk",
+      "SUBJECT TO"
+    ],
+    [
+      "loc-below-grade",
+      "rk-geotechnical-ris",
+      "EXPOSES TO"
+    ],
+    [
+      "loc-below-grade",
+      "rk-enviro-risk",
+      "EXPOSES TO"
+    ],
+    [
+      "loc-roof-level",
+      "rk-safety-risk",
+      "CONCENTRATES"
+    ],
+    [
+      "loc-core-shaft",
+      "rk-coord-risk",
+      "CONCENTRATES"
+    ],
+    [
+      "loc-ceiling-plenum",
+      "rk-coord-risk",
+      "CONCENTRATES"
+    ],
+    [
+      "loc-wet-area",
+      "rk-const-execution",
+      "CONCENTRATES"
+    ],
+    [
+      "loc-penetration-open",
+      "rk-design-risk",
+      "CONCENTRATES"
+    ],
+    [
+      "loc-fire-smoke",
+      "rk-reg-permit-risk",
+      "SUBJECT TO"
+    ],
+    [
+      "loc-fire-smoke",
+      "rk-risk-category",
+      "MAPPED TO"
+    ],
+    [
+      "loc-work-zone-phase",
+      "rk-schedule-risk",
+      "CONSTRAINS"
+    ],
+    [
+      "loc-work-zone-phase",
+      "rk-labor-risk",
+      "CONCENTRATES"
+    ],
+    [
+      "loc-cx-zone",
+      "rk-residual-risk",
+      "SURFACES"
+    ],
+    [
+      "loc-defect-density",
+      "rk-risk-score",
+      "FEEDS"
+    ],
+    [
+      "loc-punch-items-per",
+      "rk-const-execution",
+      "SIGNALS"
+    ],
+    [
+      "loc-safety-incident",
+      "rk-incident-rate",
+      "FEEDS"
+    ],
+    [
+      "loc-safety-incident",
+      "rk-safety-risk",
+      "QUANTIFIES"
+    ],
+    [
+      "loc-firestopping-def",
+      "rk-reg-permit-risk",
+      "SIGNALS"
+    ]
+  ],
+  "verbGlossary": {
+    "BUFFERS AGAINST": "{source} serves as a physical buffer that reduces exposure to {target} category (e.g., laydown area buffers against supply chain risk by staging materials on-site ahead of need)",
+    "CONCENTRATES": "{source} type creates a physical density of {target} due to work congestion, trade overlap, or hazard proximity (e.g., core shaft concentrates coordination risk where mechanical, electrical, and plumbing runs converge)",
+    "CONSTRAINS": "{source} imposes physical or sequencing limits that intensify {target} (e.g., work zone phase area constrains schedule risk by limiting concurrent trade access)",
+    "EXPOSES TO": "{source} characteristics create vulnerability to {target} category due to site conditions or physical properties (e.g., below-grade level exposes project to geotechnical risk from soil and water table conditions)",
+    "FEEDS": "{source}-based metric provides measured data that directly inputs into {target} assessment calculation (e.g., defect density by location feeds risk score by quantifying quality failure patterns)",
+    "HOSTS": "{source} is the physical container where risk items are tracked and managed (e.g., project site hosts {target} register as the geographic scope of all identified risks)",
+    "MAPPED TO": "{source} overlay corresponds to {target} classification for cross-domain compliance tracking (e.g., fire compartment mapped to risk category for code compliance and life safety)",
+    "QUANTIFIES": "{source}-based measurement assigns a numeric value to the magnitude of {target} (e.g., safety incident density by zone quantifies safety risk by measuring event frequency per area)",
+    "SIGNALS": "{source}-based metric serves as an early warning indicator that {target} is emerging or worsening in a specific area (e.g., punch items per room signals construction execution risk when counts exceed thresholds)",
+    "SUBJECT TO": "{source} falls under regulatory, permitting, or jurisdictional requirements that create compliance {target} (e.g., right-of-way is subject to regulatory and permit risk from municipal encroachment rules)",
+    "SURFACES": "{source}-based commissioning or inspection activity reveals previously hidden residual {target} (e.g., commissioning zone surfaces residual risk when functional testing uncovers latent defects)"
+  }
+}

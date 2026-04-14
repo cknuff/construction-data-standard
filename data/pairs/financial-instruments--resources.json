@@ -1,0 +1,466 @@
+{
+  "source": "financial-instruments",
+  "target": "resources",
+  "universalEdges": [
+    {
+      "source": "fi-project-budget",
+      "targetGroup": "trades",
+      "verb": "PROVISIONS HEADCOUNT FOR",
+      "evidence": "Budgets allocate labor cost for every trade on the project"
+    },
+    {
+      "source": "fi-project-budget",
+      "targetGroup": "materials",
+      "verb": "EARMARKS SPEND FOR",
+      "evidence": "Budgets designate spend for every material category"
+    },
+    {
+      "source": "fi-project-budget",
+      "targetGroup": "equipment",
+      "verb": "RESERVES CAPACITY FOR",
+      "evidence": "Budgets reserve funding for any required equipment"
+    },
+    {
+      "source": "fi-budget-line-item",
+      "targetGroup": "trades",
+      "verb": "PRICED FOR",
+      "evidence": "Budget line items carry cost estimates for every trade's work"
+    },
+    {
+      "source": "fi-budget-line-item",
+      "targetGroup": "materials",
+      "verb": "QUANTITIES FROM",
+      "evidence": "Budget line items derive values from takeoff quantities of every material"
+    },
+    {
+      "source": "fi-cost-code",
+      "targetGroup": "trades",
+      "verb": "CLASSIFIES LABOR OF",
+      "evidence": "Cost codes classify labor hours and dollars for every trade"
+    },
+    {
+      "source": "fi-cost-code",
+      "targetGroup": "materials",
+      "verb": "CATEGORIZES MATERIAL OF",
+      "evidence": "Cost codes group purchase costs for every material category"
+    },
+    {
+      "source": "fi-cost-code",
+      "targetGroup": "equipment",
+      "verb": "CATEGORIZES RENTAL OF",
+      "evidence": "Cost codes classify rental charges for every equipment type"
+    },
+    {
+      "source": "fi-wbs-code",
+      "targetGroup": "trades",
+      "verb": "STRUCTURES WORK OF",
+      "evidence": "WBS codes organize every trade's scope in the work breakdown"
+    },
+    {
+      "source": "fi-wbs-code",
+      "targetGroup": "materials",
+      "verb": "MAPS MATERIAL TO",
+      "evidence": "WBS codes link every material's cost to deliverables in the breakdown"
+    },
+    {
+      "source": "fi-budget-code",
+      "targetGroup": "trades",
+      "verb": "GROUPS COSTS OF",
+      "evidence": "Budget codes aggregate costs for every trade"
+    },
+    {
+      "source": "fi-budget-code",
+      "targetGroup": "materials",
+      "verb": "TAGS PROCUREMENT OF",
+      "evidence": "Budget codes label procurement for every material"
+    },
+    {
+      "source": "fi-commit-subcontra",
+      "targetGroup": "trades",
+      "verb": "CONTRACTS LABOR OF",
+      "evidence": "Subcontracts engage labor from every trade discipline"
+    },
+    {
+      "source": "fi-commit-purchase",
+      "targetGroup": "materials",
+      "verb": "PROCURES DELIVERY OF",
+      "evidence": "Purchase orders procure every material category"
+    },
+    {
+      "source": "fi-commit-purchase",
+      "targetGroup": "equipment",
+      "verb": "RENTS UNITS OF",
+      "evidence": "Purchase orders rent any equipment type"
+    },
+    {
+      "source": "fi-commit-line-item",
+      "targetGroup": "trades",
+      "verb": "SCOPES LABOR OF",
+      "evidence": "Commitment line items define labor scope for any trade"
+    },
+    {
+      "source": "fi-commit-line-item",
+      "targetGroup": "materials",
+      "verb": "ITEMIZES QUANTITY OF",
+      "evidence": "Commitment line items break down quantities for any material"
+    },
+    {
+      "source": "fi-commit-line-item",
+      "targetGroup": "equipment",
+      "verb": "DETAILS RENTAL OF",
+      "evidence": "Commitment line items specify rental terms for any equipment"
+    },
+    {
+      "source": "fi-chg-event-ce",
+      "targetGroup": "trades",
+      "verb": "ADDS SCOPE FOR",
+      "evidence": "Databricks Q4: change events span 30 distinct reasons across all trade and material categories"
+    },
+    {
+      "source": "fi-chg-event-ce",
+      "targetGroup": "materials",
+      "verb": "REPRICES TONNAGE OF",
+      "evidence": "Change events capture price adjustments for any material"
+    },
+    {
+      "source": "fi-chg-event-line",
+      "targetGroup": "trades",
+      "verb": "RECOSTED FOR",
+      "evidence": "CE line items recalculate cost for changed conditions affecting any trade"
+    },
+    {
+      "source": "fi-chg-event-line",
+      "targetGroup": "materials",
+      "verb": "ADJUSTS QUANTITY OF",
+      "evidence": "CE line items modify quantities for any material"
+    },
+    {
+      "source": "fi-pot-chg-order",
+      "targetGroup": "trades",
+      "verb": "PROPOSES EXTRA WORK FOR",
+      "evidence": "PCOs can request additional work by any trade"
+    },
+    {
+      "source": "fi-pot-chg-order",
+      "targetGroup": "materials",
+      "verb": "ESTIMATES ADDED COST OF",
+      "evidence": "PCOs can estimate added cost for any material"
+    },
+    {
+      "source": "fi-commit-chg-order",
+      "targetGroup": "trades",
+      "verb": "AUTHORIZES ADDITIONAL WORK BY",
+      "evidence": "CCOs approve extra scope for any trade \u2014 Databricks: 250K design CCOs across 4,200 cos"
+    },
+    {
+      "source": "fi-commit-chg-order",
+      "targetGroup": "materials",
+      "verb": "COMMITS ADDED MATERIAL OF",
+      "evidence": "CCOs lock in cost of additional material for any category"
+    },
+    {
+      "source": "fi-cco-line-item",
+      "targetGroup": "trades",
+      "verb": "BILLS ADDED LABOR OF",
+      "evidence": "CCO line items charge for incremental labor by any trade"
+    },
+    {
+      "source": "fi-cco-line-item",
+      "targetGroup": "materials",
+      "verb": "PRICES EXTRA MATERIAL OF",
+      "evidence": "CCO line items carry unit prices for any additional material"
+    },
+    {
+      "source": "fi-owner-chg-order",
+      "targetGroup": "trades",
+      "verb": "BILLS OWNER FOR",
+      "evidence": "Owner COs pass through cost for work by any trade"
+    },
+    {
+      "source": "fi-owner-chg-order",
+      "targetGroup": "materials",
+      "verb": "RECOVERS COST OF",
+      "evidence": "Owner COs recover material cost increases for any material"
+    },
+    {
+      "source": "fi-budget-mod",
+      "targetGroup": "trades",
+      "verb": "REALLOCATES FUNDS TO",
+      "evidence": "Budget modifications redirect budget to cover any trade's overage"
+    },
+    {
+      "source": "fi-budget-mod",
+      "targetGroup": "materials",
+      "verb": "TRANSFERS BUDGET TO",
+      "evidence": "Budget modifications move dollars to cover any material cost overrun"
+    },
+    {
+      "source": "fi-direct-cost",
+      "targetGroup": "trades",
+      "verb": "POSTS DAY-RATE FOR",
+      "evidence": "Direct costs record charges for any trade on T&M basis"
+    },
+    {
+      "source": "fi-direct-cost",
+      "targetGroup": "materials",
+      "verb": "RECORDS PURCHASE OF",
+      "evidence": "Direct costs capture purchases of any material outside commitments"
+    },
+    {
+      "source": "fi-direct-cost",
+      "targetGroup": "equipment",
+      "verb": "BOOKS RENTAL OF",
+      "evidence": "Direct costs record rental charges for any equipment"
+    },
+    {
+      "source": "fi-direct-cost-line",
+      "targetGroup": "materials",
+      "verb": "VOUCHERS DELIVERY OF",
+      "evidence": "DC line items document receipt of any material delivery"
+    },
+    {
+      "source": "fi-direct-cost-line",
+      "targetGroup": "equipment",
+      "verb": "INVOICES MOBILIZATION OF",
+      "evidence": "DC line items bill mobilization of any equipment"
+    },
+    {
+      "source": "fi-owner-invoice",
+      "targetGroup": "trades",
+      "verb": "DRAWS DOWN AGAINST",
+      "evidence": "Owner invoices draw against contract value for any trade's work"
+    },
+    {
+      "source": "fi-owner-invoice",
+      "targetGroup": "materials",
+      "verb": "BILLS INSTALLATION OF",
+      "evidence": "Owner invoices include installed value of any material"
+    },
+    {
+      "source": "fi-sub-invoice",
+      "targetGroup": "trades",
+      "verb": "PAYS PROGRESS OF",
+      "evidence": "Sub invoices pay for any trade's work-in-place"
+    },
+    {
+      "source": "fi-sub-invoice",
+      "targetGroup": "materials",
+      "verb": "COVERS INSTALLED VALUE OF",
+      "evidence": "Sub invoices reimburse installed value of any material"
+    },
+    {
+      "source": "fi-retainage",
+      "targetGroup": "trades",
+      "verb": "WITHHOLDS PERCENT FROM",
+      "evidence": "Retainage withheld from every trade's earned payment"
+    },
+    {
+      "source": "fi-retainage",
+      "targetGroup": "materials",
+      "verb": "HOLDS BACK ON",
+      "evidence": "Retainage defers percentage of payment for any material"
+    },
+    {
+      "source": "fi-payment",
+      "targetGroup": "trades",
+      "verb": "RELEASES FUNDS TO",
+      "evidence": "Payments disburse earned funds to any trade"
+    },
+    {
+      "source": "fi-payment",
+      "targetGroup": "materials",
+      "verb": "SETTLES ACCOUNT FOR",
+      "evidence": "Payments close out balances for any material procurement"
+    },
+    {
+      "source": "fi-lien-waiver",
+      "targetGroup": "materials",
+      "verb": "CLEARS LIEN ON",
+      "evidence": "Lien waivers release supplier lien rights on any delivered material"
+    },
+    {
+      "source": "fi-schedule-values",
+      "targetGroup": "trades",
+      "verb": "BREAKS OUT COST OF",
+      "evidence": "SOV itemizes costs for any trade into billable line items"
+    },
+    {
+      "source": "fi-schedule-values",
+      "targetGroup": "materials",
+      "verb": "LINE-ITEMS VALUE OF",
+      "evidence": "SOV assigns dollar values to any material line for billing"
+    },
+    {
+      "source": "fi-allowance",
+      "targetGroup": "materials",
+      "verb": "BUDGETS ALLOWANCE FOR",
+      "evidence": "Allowances reserve provisional amounts for any material category"
+    },
+    {
+      "source": "fi-contingency",
+      "targetGroup": "trades",
+      "verb": "BUFFERS OVERRUN ON",
+      "evidence": "Contingency provides cost buffer for labor overruns by any trade"
+    },
+    {
+      "source": "fi-contingency",
+      "targetGroup": "materials",
+      "verb": "HEDGES ESCALATION OF",
+      "evidence": "Contingency protects against price increases for any material"
+    },
+    {
+      "source": "fi-cost-forecast",
+      "targetGroup": "trades",
+      "verb": "PROJECTS SPEND ON",
+      "evidence": "Cost forecasts estimate total spend for every resource category"
+    },
+    {
+      "source": "fi-cost-forecast",
+      "targetGroup": "equipment",
+      "verb": "FORECASTS RENTAL OF",
+      "evidence": "Cost forecasts predict cumulative rental cost for any equipment"
+    },
+    {
+      "source": "fi-cash-flow",
+      "targetGroup": "materials",
+      "verb": "SCHEDULES PAYMENTS FOR",
+      "evidence": "Cash flow projects payment milestones for any material"
+    },
+    {
+      "source": "fi-budget-variance",
+      "targetGroup": "trades",
+      "verb": "FLAGS OVERRUN BY",
+      "evidence": "Budget variance highlights overruns for any trade"
+    },
+    {
+      "source": "fi-cost-growth",
+      "targetGroup": "materials",
+      "verb": "MEASURES ESCALATION OF",
+      "evidence": "Cost growth quantifies price increases for any material"
+    },
+    {
+      "source": "fi-cost-perf-index",
+      "targetGroup": "trades",
+      "verb": "BENCHMARKS PRODUCTIVITY OF",
+      "evidence": "CPI compares earned value to actual cost for any trade"
+    },
+    {
+      "source": "fi-committed-cost",
+      "targetGroup": "trades",
+      "verb": "TRACKS OBLIGATION TO",
+      "evidence": "Committed cost monitors contractual dollars obligated to any trade"
+    },
+    {
+      "source": "fi-chg-order-rate",
+      "targetGroup": "trades",
+      "verb": "TALLIES CHANGES FOR",
+      "evidence": "Change order rate counts frequency of changes for any trade"
+    },
+    {
+      "source": "fi-contingency-burn",
+      "targetGroup": "materials",
+      "verb": "DEPLETED BY OVERAGES ON",
+      "evidence": "Contingency burn tracks how overruns on any material consume reserves"
+    },
+    {
+      "source": "fi-invoice-processi",
+      "targetGroup": "trades",
+      "verb": "DELAYS PAYMENT FOR",
+      "evidence": "Invoice processing time applies to invoices from any trade"
+    }
+  ],
+  "edges": [
+    [
+      "fi-allowance",
+      "res-cxa",
+      "SETS ASIDE FEES FOR"
+    ],
+    [
+      "fi-sub-invoice",
+      "res-piling",
+      "REIMBURSES STAND-BY OF"
+    ],
+    [
+      "fi-cash-flow-2",
+      "res-crane",
+      "SIGNALS TIMING GAP ON"
+    ],
+    [
+      "fi-estimate-at",
+      "mat-hvac-equip",
+      "REVISES PROJECTION FOR"
+    ]
+  ],
+  "verbGlossary": {
+    "PROVISIONS HEADCOUNT FOR": "{source} allocates labor cost allowance to cover {target}'s planned crew size",
+    "EARMARKS SPEND FOR": "{source} designates a dollar amount for procurement of {target} category",
+    "RESERVES CAPACITY FOR": "{target} sets aside funding to guarantee availability of {source}",
+    "PRICED FOR": "{target} carries a unit-rate cost estimate for {source}'s work",
+    "QUANTITIES FROM": "{source} derives its dollar value from takeoff quantities of {target}",
+    "CLASSIFIES LABOR OF": "{source} organizes {target}'s labor hours and dollars into a standard accounting category",
+    "CATEGORIZES MATERIAL OF": "{source} groups {target}'s purchase and delivery costs under a standard classification",
+    "CATEGORIZES RENTAL OF": "{source} assigns {target} rental charges to a standard cost classification",
+    "STRUCTURES WORK OF": "{target} places {source}'s scope within the project's hierarchical work breakdown",
+    "MAPS MATERIAL TO": "{source} links {target}'s cost to a specific deliverable in the breakdown structure",
+    "GROUPS COSTS OF": "{source} aggregates {target}'s costs for reporting and variance analysis",
+    "TAGS PROCUREMENT OF": "{source} labels {target} procurement transaction for budget tracking",
+    "CONTRACTS LABOR OF": "{source} formally engages {target}'s labor force for defined scope",
+    "PROCURES DELIVERY OF": "{source} initiates procurement and delivery of {target}",
+    "RENTS UNITS OF": "{target} establishes a rental agreement for {source}",
+    "SCOPES LABOR OF": "{source} defines the exact labor scope and unit pricing for {target}",
+    "ITEMIZES QUANTITY OF": "{source} breaks down {target} into specific quantities with unit costs",
+    "DETAILS RENTAL OF": "{source} specifies {target} rental terms, duration, and line-item cost",
+    "ADDS SCOPE FOR": "{source} introduces new work scope requiring {target} on the project",
+    "REPRICES TONNAGE OF": "{source} captures a price adjustment for {target} due to escalation or scope change",
+    "RECOSTED FOR": "{source} recalculates cost due to changed conditions affecting {target}'s work",
+    "ADJUSTS QUANTITY OF": "{source} modifies the {target} quantity from the original commitment",
+    "PROPOSES EXTRA WORK FOR": "{source} requests approval for additional work by {target}",
+    "ESTIMATES ADDED COST OF": "{source} quantifies the expected cost of additional {target} needed",
+    "AUTHORIZES ADDITIONAL WORK BY": "{source} formally approves extra scope performed by {target}",
+    "COMMITS ADDED MATERIAL OF": "{source} locks in the cost of additional {target} quantities",
+    "BILLS ADDED LABOR OF": "{target} charges for incremental labor hours {source} worked due to scope change",
+    "PRICES EXTRA MATERIAL OF": "{target} carries the unit price for additional {source} added via change order",
+    "RECOVERS COST OF": "{source} passes {target} cost increases through to the owner",
+    "BILLS OWNER FOR": "{target} charges the owner for added {source} work not in original scope",
+    "REALLOCATES FUNDS TO": "{source} redirects budget to cover {target}'s overage",
+    "TRANSFERS BUDGET TO": "{source} moves dollars to cover {target} cost overrun",
+    "POSTS DAY-RATE FOR": "{source} posts a daily rate charge for {target} on time-and-materials basis",
+    "RECORDS PURCHASE OF": "{source} captures {target} purchase made outside the commitment process",
+    "BOOKS RENTAL OF": "{source} records {target} rental charge against the project",
+    "VOUCHERS DELIVERY OF": "{source} documents receipt and cost of {target} delivery",
+    "INVOICES MOBILIZATION OF": "{source} bills for the mobilization and setup of {target}",
+    "DRAWS DOWN AGAINST": "{source} draws against the contract value for {target}'s completed work",
+    "BILLS INSTALLATION OF": "{source} includes the installed value of {target} in the pay application",
+    "PAYS PROGRESS OF": "{source} pays for {target}'s work-in-place during the billing period",
+    "COVERS INSTALLED VALUE OF": "{source} reimburses the installed value of {target} in the work",
+    "REIMBURSES STAND-BY OF": "{target} charges for {source} kept on stand-by during delays",
+    "WITHHOLDS PERCENT FROM": "{target} holds back a contractual percentage from {source}'s earned payment",
+    "HOLDS BACK ON": "{source} defers a percentage of {target} payment until project completion",
+    "RELEASES FUNDS TO": "{source} disburses earned funds to {target} upon invoice approval",
+    "SETTLES ACCOUNT FOR": "{source} closes out the remaining balance owed for {target} procurement",
+    "CLEARS LIEN ON": "{source} releases lien rights on {target} delivered to the project",
+    "BREAKS OUT COST OF": "{source} itemizes {target}'s cost into billable line items",
+    "LINE-ITEMS VALUE OF": "{source} assigns a specific dollar value to {target} line for billing",
+    "BUDGETS ALLOWANCE FOR": "{target} sets aside a provisional dollar amount for {source} category",
+    "SETS ASIDE FEES FOR": "{source} reserves professional service fees for {target}",
+    "BUFFERS OVERRUN ON": "{target} provides a cost buffer to absorb labor overruns on {source}'s scope",
+    "HEDGES ESCALATION OF": "{source} protects against {target} price increases between budget and procurement",
+    "PROJECTS SPEND ON": "{source} estimates the total at-completion spend for {target}",
+    "FORECASTS RENTAL OF": "{source} predicts the cumulative rental cost for {target} through completion",
+    "SCHEDULES PAYMENTS FOR": "{source} times {target} payment milestones against the draw schedule",
+    "FLAGS OVERRUN BY": "{source} highlights when {target}'s actual costs exceed budgeted amount",
+    "MEASURES ESCALATION OF": "{source} quantifies how much {target}'s cost has increased",
+    "BENCHMARKS PRODUCTIVITY OF": "{source} compares earned value to actual cost for {target}'s output",
+    "TRACKS OBLIGATION TO": "{target} monitors total contractual dollars obligated to {source}",
+    "TALLIES CHANGES FOR": "{source} counts the frequency and dollar impact of changes for {target}",
+    "DEPLETED BY OVERAGES ON": "{source} tracks how {target} overruns consume the contingency reserve",
+    "DELAYS PAYMENT FOR": "{target} measures lag between {source}'s invoice and payment",
+    "SIGNALS TIMING GAP ON": "{source} identifies when actual {target} payment timing deviates from projection",
+    "REVISES PROJECTION FOR": "{source} updates the forecasted final cost for {target}"
+  },
+  "_meta": {
+    "universalEdgeSemantics": "Each universalEdge means: the source element connects to EVERY element in the targetGroup via the specified verb. targetGroup values: 'trades' (25 elements), 'equipment' (11 elements), 'materials' (25 elements), 'measures' (9 elements).",
+    "dataEvidence": "Universal relationships validated via Databricks queries against prod_gold_ram_us01 (2-year lookback, March 2026). Q4: change events span 30 distinct reason codes. Financial instruments apply to all resource categories by definition \u2014 every trade, material, and equipment type has budget lines, cost codes, commitments, invoices, and change orders.",
+    "edgesVsUniversal": "The 'edges' array contains the few truly SELECTIVE relationships \u2014 specific fee types (CXA allowance), equipment-specific metrics (crane cash flow variance), and stand-by charges."
+  }
+}

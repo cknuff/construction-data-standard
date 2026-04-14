@@ -1,0 +1,404 @@
+{
+  "domain": "field-operations",
+  "name": "Field Operations",
+  "color": "#ffa726",
+  "categories": [
+    {
+      "name": "Daily Log Framework",
+      "color": "#e1b61c",
+      "nodes": [
+        {
+          "id": "fo-daily-log-header",
+          "name": "Daily Log (Header)",
+          "desc": "The parent record for all daily field data — one per project per day. Acts as the container that links all log sections (manpower, equipment, weather, delays, notes, etc.) to a single date and project. Completion and distribution tracking ensure the log was finalized and sent to stakeholders. The daily log is the legal record of what happened on site each day.",
+          "procore": "project_management.daily_log_completion"
+        },
+        {
+          "id": "fo-daily-log",
+          "name": "Daily Log Section Configuration",
+          "desc": "The template configuration that defines which log sections are required, optional, or hidden for a project. Determines what data gets collected — a project with 'Delays' set to optional may have sporadic delay records, while one with it required will have consistent data. Section configuration is the key to data consistency across projects and companies."
+        }
+      ]
+    },
+    {
+      "name": "Field Notes & Communications",
+      "color": "#f2ae21",
+      "nodes": [
+        {
+          "id": "fo-daily-log-note",
+          "name": "Daily Log Note",
+          "desc": "Free-text field observation entered as part of the daily log — captures site conditions, work progress, issues, coordination problems, or any noteworthy event that doesn't fit structured log categories. Notes may be flagged as issue days. Attachments (photos) can be linked. Notes are the unstructured narrative complement to the structured log sections.",
+          "procore": "project_management.daily_log_note"
+        },
+        {
+          "id": "fo-phone-call-log",
+          "name": "Phone Call Log Entry",
+          "desc": "Record of field-related phone calls — caller, recipient, subject, and notes. Documents verbal communications for the project record. Less formal than written correspondence but can capture critical decisions, commitments, or directives made verbally. Phone calls between the superintendent and subcontractors, inspectors, or the design team are common daily occurrences that rarely get documented elsewhere.",
+          "procore": "project_management.daily_log_phone_call"
+        },
+        {
+          "id": "fo-plan-revision",
+          "name": "Plan Revision Receipt",
+          "desc": "Field record of updated drawing revisions received on site — which drawings were updated, to what revision, and when the field team received them. Critical for confirming that construction crews are working from current documents. Discrepancies between issued revisions and field-held revisions are a major source of construction errors and rework.",
+          "procore": "project_management.daily_log_plan_revision"
+        }
+      ]
+    },
+    {
+      "name": "Workforce & Labor",
+      "color": "#ffa527",
+      "nodes": [
+        {
+          "id": "fo-manpower-log",
+          "name": "Manpower Log Entry",
+          "desc": "Daily record of workforce on site by trade and vendor — captures trade name, number of workers, hours per worker, total man-hours, and the vendor/subcontractor responsible. One entry per trade per vendor per day. The most direct source of trade-level workforce data in field operations. Superintendent or field engineer enters daily as part of the log.",
+          "procore": "project_management.daily_log_manpower"
+        },
+        {
+          "id": "fo-const-report",
+          "name": "Construction Report Entry",
+          "desc": "Certified payroll and workforce diversity reporting record — tracks hours by worker classification (apprentice, journeyman, foreman) and demographic category (minority, women, veteran, local) per trade and vendor. Required on public projects with prevailing wage and diversity requirements. Separate from the manpower log — focuses on compliance reporting rather than daily operations.",
+          "procore": "project_management.daily_log_construction_reports"
+        },
+        {
+          "id": "fo-timecard-entry",
+          "name": "Timecard Entry",
+          "desc": "Structured record of individual worker hours — employee, date, hours worked, cost code, project, overtime classification. More granular than manpower log (individual workers vs. crew-level). Timecards are the source of truth for payroll and labor cost accounting. Captured by field foremen or self-reported by workers.",
+          "procore": "workforce.timecard_entries"
+        },
+        {
+          "id": "fo-employee-record",
+          "name": "Employee Record",
+          "desc": "Master record for a field worker — name, role, job title, trade classification, certifications, company assignment. The identity record that timecards, crew memberships, and workforce planning reference. Includes safety training and certification status.",
+          "procore": "workforce.employees"
+        },
+        {
+          "id": "fo-crew-crew",
+          "name": "Crew / Crew Membership",
+          "desc": "Grouping of workers into a named crew assigned to a specific scope of work — crew name, members, lead/foreman, trade, and assignment. Crews are the operational unit of field labor management. A plumber crew of 6 is scheduled, tracked, and managed as a unit, not 6 individuals.",
+          "procore": "workforce.crew_memberships"
+        }
+      ]
+    },
+    {
+      "name": "Equipment",
+      "color": "#ff9d2d",
+      "nodes": [
+        {
+          "id": "fo-equip-log-entry",
+          "name": "Equipment Log Entry",
+          "desc": "Daily record of equipment on site — equipment name, hours operating, hours idle, and inspection status. One entry per piece of equipment per day. Captures both utilization (operating vs. idle) and safety compliance (inspected flag, inspection_time). Equipment is identified by free-text name — no standardized equipment taxonomy in field data.",
+          "procore": "project_management.daily_log_equipment"
+        },
+        {
+          "id": "fo-equip-master",
+          "name": "Equipment Master Record",
+          "desc": "Catalog record for a piece of equipment — type, model, serial number, capacity, ownership/rental status, maintenance schedule. The identity record for equipment that field logs, timecards, and maintenance records reference. Equipment master data lives in fleet management systems.",
+          "procore": "workforce.equipment"
+        },
+        {
+          "id": "fo-equip-timecard",
+          "name": "Equipment Timecard Entry",
+          "desc": "Structured time record for individual equipment — hours by category (operating, idle, maintenance, travel), cost allocation, and operator assignment. More granular than the daily equipment log (includes cost allocation and maintenance time). Source of truth for equipment cost accounting.",
+          "procore": "workforce.equipment_timecard_entry"
+        }
+      ]
+    },
+    {
+      "name": "Materials & Deliveries",
+      "color": "#e9b21e",
+      "nodes": [
+        {
+          "id": "fo-dlvy-log-entry",
+          "name": "Delivery Log Entry",
+          "desc": "Daily record of materials received on site — contents description, delivery source, tracking number, time, and comments. One entry per delivery event per day. The contents field is a free-text description of what was delivered. Deliveries are major daily events that affect staging, storage, and workflow.",
+          "procore": "project_management.daily_log_delivery"
+        },
+        {
+          "id": "fo-mat-shipment",
+          "name": "Material Shipment Record",
+          "desc": "Structured tracking of material shipments from supplier/fabricator to jobsite — shipment date, expected arrival, contents, quantity, and carrier. Tracks the supply chain between purchase order and site delivery. Separate from delivery log (which records what actually arrived on site).",
+          "procore": "workforce.materials_shipment"
+        },
+        {
+          "id": "fo-mat-receipt",
+          "name": "Material Receipt Record",
+          "desc": "Formal acknowledgment that materials arrived on site matching the purchase order — quantity verification, condition inspection, and storage location. More structured than the delivery log (which is a field observation). Receipt records are the procurement system's confirmation of delivery.",
+          "procore": "workforce.materials_receipt"
+        }
+      ]
+    },
+    {
+      "name": "Weather",
+      "color": "#faaa24",
+      "nodes": [
+        {
+          "id": "fo-weather-log",
+          "name": "Weather Log Entry",
+          "desc": "Daily record of observed weather conditions on the project site — temperature, precipitation, wind, sky conditions, humidity, ground conditions, and whether weather caused a delay. Multiple readings may be taken throughout the day. Both qualitative descriptions (from superintendent) and measured values (from weather stations or manual readings) are captured.",
+          "procore": "project_management.daily_log_observed_weather_condition"
+        }
+      ]
+    },
+    {
+      "name": "Delays",
+      "color": "#ffa12a",
+      "nodes": [
+        {
+          "id": "fo-delay-log-entry",
+          "name": "Delay Log Entry",
+          "desc": "Record of a delay event during construction — structured type, duration, start/end time, comments, and location. Delay entries document when work was stopped or significantly slowed and why. The delay_type field is a structured enum with both standard categories and company-defined custom values. Duration is in days (or fractional days). This is the primary delay tracking mechanism in field operations.",
+          "procore": "project_management.daily_log_delay"
+        }
+      ]
+    },
+    {
+      "name": "Productivity & Quantities",
+      "color": "#ff992f",
+      "nodes": [
+        {
+          "id": "fo-productivity-log",
+          "name": "Productivity Log Entry",
+          "desc": "Daily record of quantities delivered and used/installed — tracks material flow from delivery to installation by vendor and commitment line item. Captures previously_delivered, previously_used, quantity_delivered (today), and quantity_used (today). Links to commitments for scope tracking. Measures the rate at which paid work is being installed.",
+          "procore": "project_management.daily_log_productivity"
+        },
+        {
+          "id": "fo-quantity-log",
+          "name": "Quantity Log Entry",
+          "desc": "Daily record of installed quantities by cost code — quantity, unit of measure, description, and cost code. Distinct from productivity log (which tracks vendor-level delivery and installation). Quantity logs measure what was put in place by cost code — closer to a field-measured percent complete for budget line items.",
+          "procore": "project_management.daily_log_quantity"
+        }
+      ]
+    },
+    {
+      "name": "Safety",
+      "color": "#f1ae21",
+      "nodes": [
+        {
+          "id": "fo-safety-violation",
+          "name": "Safety Violation Log Entry",
+          "desc": "Daily log record of a safety violation observed during field walkthroughs — subject, comments, issued_to (person or company), compliance_due date, and safety_notice type. Lighter weight than a formal observation or incident — this is the superintendent's daily safety diary. Subject field is often generic ('None', 'N/A') or brief.",
+          "procore": "project_management.daily_log_safety_violation"
+        },
+        {
+          "id": "fo-accident-log",
+          "name": "Accident Log Entry",
+          "desc": "Daily log record of an accident or safety event — involved person, involved company, time, comments, and location. This is the field-level first report — the formal incident record (project_management.incident, incident_record) provides the detailed OSHA-reportable information. Accident log entries are the superintendent's immediate documentation.",
+          "procore": "project_management.daily_log_accident"
+        }
+      ]
+    },
+    {
+      "name": "Inspections",
+      "color": "#ffa627",
+      "nodes": [
+        {
+          "id": "fo-daily-log-insp",
+          "name": "Daily Log Inspection Entry",
+          "desc": "Inspection event recorded as part of the daily log — inspecting entity, inspection type, inspector name, start/end time, and comments. Captures regulatory and third-party inspections that happen during the day (fire marshal visit, concrete testing, structural steel inspection, utility inspection). Distinct from the formal inspections tool (project_management.inspections) which has structured checklists and line items.",
+          "procore": "project_management.daily_log_inspection"
+        }
+      ]
+    },
+    {
+      "name": "Visitors",
+      "color": "#ff9d2c",
+      "nodes": [
+        {
+          "id": "fo-visitor-log",
+          "name": "Visitor Log Entry",
+          "desc": "Daily record of non-project visitors on the construction site — visitor identity, purpose, arrival/departure times, and comments. Required for site security, safety compliance (visitors must be briefed on site hazards), and liability documentation. Visitors include owners, architects, inspectors, utility representatives, and unauthorized persons.",
+          "procore": "project_management.daily_log_visitor"
+        }
+      ]
+    },
+    {
+      "name": "Waste & Environmental",
+      "color": "#e8b31e",
+      "nodes": [
+        {
+          "id": "fo-waste-log-entry",
+          "name": "Waste Log Entry",
+          "desc": "Daily record of construction waste generated and removed — material type, quantity, disposal method, disposal location, and vendor. Tracks what waste was produced, how much, and where it went. Required for environmental compliance (LEED waste diversion, stormwater compliance) and cost tracking (dumpster rental, hauling costs).",
+          "procore": "project_management.daily_log_waste"
+        },
+        {
+          "id": "fo-dumpster-log",
+          "name": "Dumpster Log Entry",
+          "desc": "Daily record of dumpster activity — dumpsters delivered and removed from the site. Tracks the containers, not the waste contents (that's the waste log). Dumpster management is a general conditions cost item. Multiple dumpsters may be on site simultaneously for different waste streams (mixed C&D, concrete, metal, cardboard).",
+          "procore": "project_management.daily_log_dumpster"
+        }
+      ]
+    },
+    {
+      "name": "Scheduled Work",
+      "color": "#f9aa24",
+      "nodes": [
+        {
+          "id": "fo-scheduled-work",
+          "name": "Scheduled Work Log Entry",
+          "desc": "Daily record of subcontractors scheduled to work — whether they showed up, how many workers, hours, and what tasks they were assigned to. The 'showed' boolean is the simplest plan-vs-actual signal in field operations. Scheduled work entries link to schedule tasks (via daily_log_scheduled_work_task) connecting the daily log to the CPM schedule.",
+          "procore": "project_management.daily_log_scheduled_work"
+        },
+        {
+          "id": "fo-scheduled-work-2",
+          "name": "Scheduled Work Task Link",
+          "desc": "Junction record linking a scheduled work entry to one or more CPM schedule tasks — the bridge between 'what was planned today' (daily log) and 'what the schedule says' (CPM). Each link captures the task name, current percentage, and schedule_task_id FK to the formal schedule. Enables daily plan-vs-actual at the activity level.",
+          "procore": "project_management.daily_log_scheduled_work_task"
+        }
+      ]
+    },
+    {
+      "name": "Field Productivity Measurement",
+      "color": "#ffa229",
+      "nodes": [
+        {
+          "id": "fo-field-productivi",
+          "name": "Field Productivity Record",
+          "desc": "Structured measurement of field production — actual quantities produced vs. planned, by trade and activity. Distinct from daily_log_productivity (which tracks vendor-level delivery/installation) and daily_log_quantity (which tracks cost-code-level quantities). Field productivity records are designed for crew-level output tracking.",
+          "procore": "workforce.field_productivity"
+        },
+        {
+          "id": "fo-actual-productio",
+          "name": "Actual Production Quantity",
+          "desc": "Recorded measurement of work actually completed — the 'actuals' side of earned value. Tracks what was installed in the field, by scope item, providing the physical percent complete that drives payment and forecasting.",
+          "procore": "workforce.actual_production_quantities"
+        },
+        {
+          "id": "fo-budgeted-product",
+          "name": "Budgeted Production Quantity",
+          "desc": "Planned quantity for a scope item — the 'budget' side of production tracking. Defines how much work is expected to be installed, creating the baseline for earned-value comparison.",
+          "procore": "workforce.budgeted_production_quantities"
+        }
+      ]
+    },
+    {
+      "name": "Time & Material Tracking",
+      "color": "#ff992f",
+      "nodes": [
+        {
+          "id": "fo-t-m-ticket",
+          "name": "T&M Ticket",
+          "desc": "Time and material ticket documenting extra work performed outside the base contract — captures labor hours, equipment hours, and materials used for change work or disputed scope. T&M tickets are the contractor's documentation of actual costs for work that will be billed on a cost-plus basis. Each ticket is a daily record requiring owner or GC sign-off.",
+          "procore": "workforce.time_and_material_entries"
+        },
+        {
+          "id": "fo-t-m-labor-entry",
+          "name": "T&M Labor Entry",
+          "desc": "Labor portion of a T&M ticket — worker classification, hours, rate, and total labor cost. Multiple labor entries per ticket (different workers, different rates). Classification (foreman, journeyman, apprentice) determines the billing rate per contract schedule of rates.",
+          "procore": "workforce.time_and_material_labors"
+        },
+        {
+          "id": "fo-t-m-equip-entry",
+          "name": "T&M Equipment Entry",
+          "desc": "Equipment portion of a T&M ticket — equipment type, hours, rate, and total equipment cost. Equipment rates follow the contract schedule or industry published rates (Blue Book, FEMA).",
+          "procore": "workforce.time_and_material_equipments"
+        },
+        {
+          "id": "fo-t-m-mat-entry",
+          "name": "T&M Material Entry",
+          "desc": "Material portion of a T&M ticket — material description, quantity, unit cost, and total material cost. Materials must be documented with receipts or invoices. Markup on materials is governed by contract terms (typically 10-15% overhead and profit).",
+          "procore": "workforce.time_and_material_materials"
+        }
+      ]
+    },
+    {
+      "name": "Workforce Planning",
+      "color": "#f0af21",
+      "nodes": [
+        {
+          "id": "fo-assignment",
+          "name": "Assignment",
+          "desc": "Allocation of a worker or crew to a specific project for a date range — the workforce planning layer above daily manpower logs. Assignments represent the planned labor allocation; manpower logs record the actual. The gap between assigned and actual is a key management signal.",
+          "procore": "workforce.assignments"
+        },
+        {
+          "id": "fo-workforce-req",
+          "name": "Workforce Request",
+          "desc": "Request for additional workers or specific trades — submitted by field teams to the home office or labor pool. Tracks the demand signal for labor that may not yet be assigned. Request status (open, filled, unfilled) indicates workforce availability.",
+          "procore": "workforce.requests"
+        }
+      ]
+    },
+    {
+      "name": "Field Reporting & Distribution",
+      "color": "#ffa626",
+      "nodes": [
+        {
+          "id": "fo-daily-report",
+          "name": "Daily Report Distribution",
+          "desc": "The act of sending the completed daily log to stakeholders — tracks who received the compiled report, when it was distributed, and by whom. Distribution is a formal project management action — it makes the daily log an official project record. Some contracts require daily distribution to the owner and architect."
+        }
+      ]
+    },
+    {
+      "name": "Standard Measures",
+      "color": "#ff9e2c",
+      "nodes": [
+        {
+          "id": "fo-daily-log-2",
+          "name": "Daily Log Completion Rate",
+          "desc": "Percentage of working days with a completed daily log entry — measures field reporting consistency. Formula: Days with Daily Log / Total Working Days × 100. Consistent daily logging is a prerequisite for field data quality. Low completion rates mean gaps in workforce, weather, delivery, and delay tracking."
+        },
+        {
+          "id": "fo-daily-log-dist",
+          "name": "Daily Log Distribution Rate",
+          "desc": "Percentage of completed daily logs distributed to stakeholders — distributed / completed × 100. Distribution transforms the daily log from internal notes into an official project record with contractual weight. Undistributed logs have weaker standing in disputes and claims."
+        },
+        {
+          "id": "fo-peak-daily",
+          "name": "Peak Daily Headcount",
+          "desc": "Maximum number of workers on site in a single day during the project — MAX(SUM(workers per trade per vendor) per day). Indicates project peak complexity and coordination burden. Peak headcount drives safety staffing requirements, site logistics planning, and temporary facility sizing."
+        },
+        {
+          "id": "fo-average-daily",
+          "name": "Average Daily Headcount",
+          "desc": "Average number of workers on site per active construction day — AVG(daily headcount) across construction days, excluding non-work days. Indicates sustained labor intensity throughout the project. More stable than peak headcount for long-term comparison."
+        },
+        {
+          "id": "fo-equip-utilizatio",
+          "name": "Equipment Utilization Rate",
+          "desc": "Percentage of available time that equipment is actively in use. Calculation: active operating hours ÷ total available hours on site. High utilization indicates right-sizing; low utilization suggests oversized fleet or scheduling gaps. Source entities: equipment logs, telematics."
+        },
+        {
+          "id": "fo-plan-percent",
+          "name": "Plan Percent Complete (PPC)",
+          "desc": "Percentage of scheduled work that was actually performed — showed / total scheduled × 100. The Last Planner System's primary reliability metric. Measures whether the weekly or daily work plan was executed as planned. No-show rate = 1 - PPC. A leading indicator of schedule reliability."
+        },
+        {
+          "id": "fo-delay-frequency",
+          "name": "Delay Frequency",
+          "desc": "Number of recorded delay events per active project month, segmented by delay type — total delays / active months. Enables comparison of delay exposure across projects, geographies, and seasons. Material, weather, and owner-directed are the three most common categories."
+        },
+        {
+          "id": "fo-weather-delay",
+          "name": "Weather Delay Rate",
+          "desc": "Percentage of project days with weather-related delays — weather delay days / total project days × 100. Geographic and seasonal comparison metric. Combines weather observation data (conditions) with delay records (impact). Distinct from bad weather days — only counts days where weather actually stopped or significantly slowed work."
+        },
+        {
+          "id": "fo-waste-diversion",
+          "name": "Waste Diversion Rate",
+          "desc": "Percentage of construction waste recycled or diverted from landfill — recycled/diverted volume / total waste volume × 100. Required for LEED MR credit (50-75% target). Increasingly required by local ordinances and owner sustainability mandates. Measured from waste log entries by disposal method."
+        }
+      ]
+    },
+    {
+      "name": "Derived Analytics",
+      "color": "#d49520",
+      "nodes": [
+        {
+          "id": "fo-material-delay",
+          "name": "Material Delay Signal",
+          "procore": "project_management.daily_log_delay",
+          "desc": "Detects material-related project delays using structured daily log data. Primary signal: daily_log_delay with delay_type = 'Material' provides 84K records across 4,351 companies with zero NLP required. Secondary signal: submittals marked overdue (718K records, 15K companies) indicating procurement bottlenecks upstream of field delivery. Cross-signal analysis: projects with both delay records and overdue submittals show compounding schedule impact. Median material delay duration is 5.0 days per event. Segmented by project type (8 types with 50+ companies) and value band for benchmarking. Daily log delay comments (98.8% populated) enable root cause clustering."
+        },
+        {
+          "id": "fo-labor-productivity",
+          "name": "Labor Productivity Index",
+          "procore": "workforce.field_productivity",
+          "desc": "Composite productivity metric derived from field_productivity records (actual vs. budgeted production quantities) and daily_log_manpower (crew sizes and hours). Measures installed quantity per labor hour against project baselines and cross-project benchmarks. Actual production quantities compared to budgeted production quantities yields a productivity factor by cost code and trade. Manpower log provides headcount and hours by trade per day — combined with installed quantities gives a labor efficiency ratio. Segmented by trade, project type, and phase for meaningful comparison."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,320 @@
+{
+  "source": "quality-safety-records",
+  "target": "quality-safety-records",
+  "edges": [
+    [
+      "qsr-observation",
+      "qsr-corrective-actio",
+      "TRIGGERS"
+    ],
+    [
+      "qsr-observation",
+      "qsr-action-plan",
+      "INITIATES"
+    ],
+    [
+      "qsr-observation",
+      "qsr-punch-item",
+      "PRECEDES"
+    ],
+    [
+      "qsr-observation",
+      "qsr-non-conformance",
+      "ESCALATES TO"
+    ],
+    [
+      "qsr-safety-observati",
+      "qsr-incident",
+      "FOREWARNS"
+    ],
+    [
+      "qsr-safety-observati",
+      "qsr-safety-violation",
+      "ESCALATES TO"
+    ],
+    [
+      "qsr-safety-observati",
+      "qsr-corrective-actio",
+      "TRIGGERS"
+    ],
+    [
+      "qsr-safety-observati",
+      "qsr-scheduled-insp",
+      "PROMPTS SCHEDULING OF"
+    ],
+    [
+      "qsr-quality-observat",
+      "qsr-punch-item",
+      "BECOMES"
+    ],
+    [
+      "qsr-quality-observat",
+      "qsr-non-conformance",
+      "ESCALATES TO"
+    ],
+    [
+      "qsr-quality-observat",
+      "qsr-insp",
+      "PROMPTS"
+    ],
+    [
+      "qsr-enviro-cx",
+      "qsr-action-plan",
+      "INITIATES"
+    ],
+    [
+      "qsr-insp",
+      "qsr-observation",
+      "GENERATES"
+    ],
+    [
+      "qsr-insp",
+      "qsr-deficiency-notic",
+      "RESULTS IN"
+    ],
+    [
+      "qsr-insp",
+      "qsr-insp-item",
+      "CONTAINS"
+    ],
+    [
+      "qsr-insp-item",
+      "qsr-punch-item",
+      "CONVERTS TO"
+    ],
+    [
+      "qsr-insp-item",
+      "qsr-corrective-actio",
+      "TRIGGERS"
+    ],
+    [
+      "qsr-scheduled-insp",
+      "qsr-insp",
+      "PRODUCES"
+    ],
+    [
+      "qsr-third-party",
+      "qsr-non-conformance",
+      "RESULTS IN"
+    ],
+    [
+      "qsr-third-party",
+      "qsr-mat-test-report",
+      "REQUIRES"
+    ],
+    [
+      "qsr-punch-item",
+      "qsr-punch-item-2",
+      "TRACKED BY"
+    ],
+    [
+      "qsr-punch-item",
+      "qsr-punch-item-issue",
+      "CLASSIFIED BY"
+    ],
+    [
+      "qsr-punch-item",
+      "qsr-deficiency-notic",
+      "ESCALATES TO"
+    ],
+    [
+      "qsr-punch-item-2",
+      "qsr-insp",
+      "VERIFIED BY"
+    ],
+    [
+      "qsr-incident",
+      "qsr-incident-record",
+      "DECOMPOSED INTO"
+    ],
+    [
+      "qsr-incident",
+      "qsr-incident-witness",
+      "DOCUMENTED BY"
+    ],
+    [
+      "qsr-incident",
+      "qsr-corrective-actio",
+      "TRIGGERS"
+    ],
+    [
+      "qsr-incident",
+      "qsr-safety-violation",
+      "RESULTS IN"
+    ],
+    [
+      "qsr-incident-record",
+      "qsr-corrective-actio",
+      "PRESCRIBES"
+    ],
+    [
+      "qsr-corrective-actio",
+      "qsr-action-plan-line",
+      "IMPLEMENTED AS"
+    ],
+    [
+      "qsr-safety-violation",
+      "qsr-corrective-actio",
+      "MANDATES"
+    ],
+    [
+      "qsr-non-conformance",
+      "qsr-corrective-actio",
+      "MANDATES"
+    ],
+    [
+      "qsr-non-conformance",
+      "qsr-mat-test-report",
+      "REQUIRES RETEST VIA"
+    ],
+    [
+      "qsr-deficiency-notic",
+      "qsr-corrective-actio",
+      "MANDATES"
+    ],
+    [
+      "qsr-deficiency-notic",
+      "qsr-punch-item",
+      "FORMALIZES"
+    ],
+    [
+      "qsr-coord-issue",
+      "qsr-observation",
+      "DETECTED DURING"
+    ],
+    [
+      "qsr-coord-issue-2",
+      "qsr-coord-issue",
+      "SUBSET OF"
+    ],
+    [
+      "qsr-mat-test-report",
+      "qsr-non-conformance",
+      "TRIGGERS"
+    ],
+    [
+      "qsr-mat-test-report",
+      "qsr-insp-item",
+      "SATISFIES"
+    ],
+    [
+      "qsr-system-perf-test",
+      "qsr-punch-item",
+      "GENERATES"
+    ],
+    [
+      "qsr-action-plan",
+      "qsr-action-plan-line",
+      "DECOMPOSED INTO"
+    ],
+    [
+      "qsr-action-plan-line",
+      "qsr-observation",
+      "REFERENCES"
+    ],
+    [
+      "qsr-action-plan-line",
+      "qsr-punch-item",
+      "REFERENCES"
+    ],
+    [
+      "qsr-observation-dens",
+      "qsr-deficiency-rate",
+      "CORRELATES WITH"
+    ],
+    [
+      "qsr-hazard-recurrenc",
+      "qsr-total-recordable",
+      "PREDICTS"
+    ],
+    [
+      "qsr-deficiency-rate",
+      "qsr-punch-item-3",
+      "PREDICTS"
+    ],
+    [
+      "qsr-rework-cost",
+      "qsr-punch-item-3",
+      "CORRELATES WITH"
+    ],
+    [
+      "qsr-dart-rate",
+      "qsr-total-recordable",
+      "SUBSET OF"
+    ],
+    [
+      "qsr-observation-reso",
+      "qsr-corrective-actio-2",
+      "CORRELATES WITH"
+    ],
+    [
+      "qsr-near-miss-ratio",
+      "qsr-dart-rate",
+      "INVERSELY PREDICTS"
+    ],
+    [
+      "qsr-insp-pass-rate",
+      "qsr-deficiency-rate",
+      "INVERSE OF"
+    ],
+    [
+      "qsr-corrective-actio",
+      "qsr-action-plan",
+      "ESCALATES TO"
+    ],
+    [
+      "qsr-incident",
+      "qsr-insp",
+      "TRIGGERS FOLLOW-UP"
+    ],
+    [
+      "qsr-insp",
+      "qsr-total-recordable",
+      "FEEDS"
+    ],
+    [
+      "qsr-deficiency-notic",
+      "qsr-deficiency-rate",
+      "CONTRIBUTES TO"
+    ],
+    [
+      "qsr-corrective-actio",
+      "qsr-incident",
+      "FAILS TO PREVENT"
+    ]
+  ],
+  "verbGlossary": {
+    "TRIGGERS": "{source} or failed test directly causes creation of a downstream {target} or formal notice",
+    "INITIATES": "{source} or event starts a formal action plan or remediation workflow in response to the issue",
+    "PRECEDES": "{source}identifies {target} that later appears as a punch item at closeout",
+    "ESCALATES TO": "{source} of insufficient severity is upgraded to a more formal notice or {target} when unresolved or serious",
+    "FOREWARNS": "A proactive {target} identifies a hazard condition that, if uncorrected, could result in an incident",
+    "PROMPTS SCHEDULING OF": "{source} causes a new {target} or recurring check to be scheduled to monitor the condition",
+    "BECOMES": "{target} documenting active-construction deficiency converts to a punch item if unresolved by closeout",
+    "PROMPTS": "{source} causes a formal {target} to be initiated to verify the extent or resolution of the issue",
+    "CONTAINS": "{source} is composed of individual {target} checklist lines — each item is evaluated independently for conformance",
+    "GENERATES": "{source} or test produces findings documented as observations, punch items, or non-conformances",
+    "RESULTS IN": "{source}record as its direct output or consequence",
+    "CONVERTS TO": "{source}{target} item is rewritten as a punch item for tracking through the closeout resolution workflow",
+    "PRODUCES": "A scheduled inspection instance creates the actual inspection record when executed in the field",
+    "REQUIRES": "{source}mandates supporting documentation such as material test reports or certifications",
+    "TRACKED BY": "{source} lifecycle progress is monitored through its resolution record from creation to closure",
+    "CLASSIFIED BY": "{source} is grouped into one of the 18 validated issue categories based on keyword clustering of its name",
+    "VERIFIED BY": "{source} resolution is confirmed complete through a follow-up {target} or walkthrough",
+    "DECOMPOSED INTO": "{source}record is broken down into individual child records for granular tracking and assignment",
+    "DOCUMENTED BY": "{source} is formally recorded with supporting witness statements captured during investigation",
+    "PRESCRIBES": "{source} record's findings dictate the specific corrective actions required to prevent recurrence",
+    "IMPLEMENTED AS": "{source} is translated into a specific assignable task within an action plan",
+    "MANDATES": "A formal violation, non-conformance, or deficiency notice contractually or regulatorily requires corrective action",
+    "REQUIRES RETEST VIA": "{source} for failed material requires a new material test to verify the replacement or repair meets spec",
+    "FORMALIZES": "{source} notice elevates an informal {target} finding into a contractual obligation to correct",
+    "DETECTED DURING": "{source}issue is discovered through field observations identifying clashes or constructability problems",
+    "SUBSET OF": "{source}issues are a filtered view of the broader coordination issue set by issue type",
+    "SATISFIES": "{source}test report fulfills the acceptance criteria for a specific {target} checklist item",
+    "REFERENCES": "An action plan line item links back to {source} or {target} that triggered the task",
+    "CORRELATES WITH": "Two quality/safety metrics tend to move together across projects, indicating shared underlying conditions",
+    "PREDICTS": "A leading metric's trend anticipates the future trajectory of a lagging metric on the same project",
+    "INVERSELY PREDICTS": "{source}forecasts a lower value in the other, indicating a protective relationship",
+    "INVERSE OF": "{source}measure the same underlying conformance from opposite directions (pass rate vs. {target} rate)"
+  }
+}

@@ -1,0 +1,312 @@
+{
+  "domain": "workflows-statuses",
+  "name": "Workflows & Statuses",
+  "color": "#29b6f6",
+  "categories": [
+    {
+      "name": "Universal Lifecycle Statuses",
+      "color": "#0bc5ec",
+      "nodes": [
+        {
+          "id": "ws-open",
+          "name": "Open",
+          "desc": "Record is active and available for action — the entry point for most construction records. Indicates the item has been created and is part of the active workflow. Every record type has some version of 'open' as its initial actionable state."
+        },
+        {
+          "id": "ws-progress",
+          "name": "In Progress",
+          "desc": "Work has begun on the record but is not yet complete. Indicates active effort by a responsible party — distinguishes items being worked on from those sitting idle. Common on tasks, action plans, inspections, and punch items."
+        },
+        {
+          "id": "ws-draft",
+          "name": "Draft",
+          "desc": "Record exists but has not been formally issued into the workflow. Editable, not yet visible to reviewers or counterparties. The pre-submission holding state where the creator refines before committing."
+        },
+        {
+          "id": "ws-closed",
+          "name": "Closed",
+          "desc": "Record has completed its lifecycle — no further action required. Terminal state indicating the workflow has run its course, whether resolved successfully or not. Distinct from Void (cancelled) and Approved (decision)."
+        },
+        {
+          "id": "ws-void",
+          "name": "Void",
+          "desc": "Record has been invalidated or cancelled — the work was never completed, just abandoned. Distinct from Closed (completed lifecycle). Voided records should be excluded from most metrics but tracked as a signal of rework or process waste."
+        },
+        {
+          "id": "ws-hold",
+          "name": "On Hold",
+          "desc": "Record is paused, awaiting external input, owner decision, or other blocking condition. Not cancelled — expected to resume. Common when waiting for design clarification, material delivery, or client direction."
+        },
+        {
+          "id": "ws-overdue",
+          "name": "Overdue",
+          "desc": "Record has passed its due date without reaching its expected next state. A computed status based on comparing due_date to current_date and record status. Indicates workflow stall requiring attention."
+        }
+      ]
+    },
+    {
+      "name": "Approval & Review Statuses",
+      "color": "#1cbdf1",
+      "nodes": [
+        {
+          "id": "ws-pending",
+          "name": "Pending",
+          "desc": "Awaiting action from the next responsible party. The record has entered the workflow but the reviewer has not yet begun evaluation. Pre-action holding state that starts the response time clock."
+        },
+        {
+          "id": "ws-submitted",
+          "name": "Submitted",
+          "desc": "Formally sent to the reviewer or approver — the official handoff point. Clock starts on contractual response time. The creator has completed their work and is waiting for a decision."
+        },
+        {
+          "id": "ws-under-review",
+          "name": "Under Review",
+          "desc": "Actively being evaluated by the responsible party. Between submitted and decision. Some systems track this explicitly, others infer it from ball-in-court assignment."
+        },
+        {
+          "id": "ws-approved",
+          "name": "Approved",
+          "desc": "Accepted without conditions — authorizes the associated work, cost, or material to proceed. The positive terminal decision in an approval workflow. On financial records, triggers commitment of funds."
+        },
+        {
+          "id": "ws-approved-as",
+          "name": "Approved as Noted",
+          "desc": "Accepted with conditions, corrections, or minor modifications. Common on submittals — fabrication may proceed but noted changes must be incorporated. The 'yes, but' decision that avoids full rejection."
+        },
+        {
+          "id": "ws-rejected",
+          "name": "Rejected",
+          "desc": "Not accepted — requires rework before resubmission. A hard stop that sends the record back to the originator. Resets the workflow cycle. Should always include rejection reason for tracking."
+        },
+        {
+          "id": "ws-revise-resubmit",
+          "name": "Revise and Resubmit",
+          "desc": "Similar to rejected but with specific revision guidance — the reviewer has identified what needs to change. Softer than rejection, implies the approach is correct but execution needs refinement. Common on submittals."
+        }
+      ]
+    },
+    {
+      "name": "Field Disposition Statuses",
+      "color": "#2db4f7",
+      "nodes": [
+        {
+          "id": "ws-ready-review",
+          "name": "Ready for Review",
+          "desc": "Field work is complete and awaiting quality inspection, superintendent sign-off, or third-party verification. The handoff point between field crews and quality/management teams."
+        },
+        {
+          "id": "ws-conforming",
+          "name": "Conforming",
+          "desc": "Inspection item meets the specified requirements — pass disposition. The field evaluator has verified the work complies with plans, specs, or standards. Moves the item toward closure."
+        },
+        {
+          "id": "ws-deficient",
+          "name": "Deficient",
+          "desc": "Inspection item fails to meet requirements — requires corrective action. A formal finding that the installed work does not comply with plans, specifications, or applicable codes. Triggers rework cycle."
+        },
+        {
+          "id": "ws-not-applicable",
+          "name": "Not Applicable",
+          "desc": "Record or inspection item does not apply in this context — excluded from evaluation. Used when an inspection checklist item is irrelevant to the specific work being inspected."
+        }
+      ]
+    },
+    {
+      "name": "Workflow Components",
+      "color": "#3eacfd",
+      "nodes": [
+        {
+          "id": "ws-workflow-step",
+          "name": "Workflow Step",
+          "desc": "An individual stage in a multi-step approval or review process. Defines who must act, what action is required, and the sequence position. The atomic unit of workflow configuration."
+        },
+        {
+          "id": "ws-appr-chain",
+          "name": "Approval Chain",
+          "desc": "Ordered sequence of reviewers and approvers that a record must pass through before reaching a terminal state. Defines the review hierarchy, required vs. optional reviewers, and fallback rules."
+        },
+        {
+          "id": "ws-ball-court",
+          "name": "Ball in Court",
+          "desc": "The party currently responsible for taking the next action on a record. Construction-specific accountability term — at any moment, someone 'has the ball'. Changes as the record moves through workflow steps."
+        },
+        {
+          "id": "ws-dist-list",
+          "name": "Distribution List",
+          "desc": "Set of parties notified when a record is created, changes status, or receives a response. Ensures relevant stakeholders stay informed without being in the approval chain. Notification, not action."
+        },
+        {
+          "id": "ws-workflow-respons",
+          "name": "Workflow Response",
+          "desc": "A reviewer's formal action at a workflow step — approve, reject, forward, return, or comment. The decision record that advances (or returns) the workflow. Timestamped for cycle time calculation."
+        },
+        {
+          "id": "ws-due-date",
+          "name": "Due Date",
+          "desc": "The date by which action must be completed on a record or workflow step. Contractually significant — missed due dates can trigger liquidated damages, delay claims, or escalation."
+        },
+        {
+          "id": "ws-response-time",
+          "name": "Response Time",
+          "desc": "The elapsed time between submission and response — either the contractual allowance or the actual measured duration. Critical for project pacing — slow responses cascade into schedule delays."
+        },
+        {
+          "id": "ws-escalation",
+          "name": "Escalation",
+          "desc": "Elevation of a stalled workflow item to a higher authority when the responsible party fails to act within the allowed response time. The safety valve for stuck workflows."
+        },
+        {
+          "id": "ws-delegation",
+          "name": "Delegation",
+          "desc": "Temporary or permanent transfer of approval authority from one party to another. Required when the primary reviewer is unavailable — prevents workflow stalls during vacations, role changes, or emergencies."
+        }
+      ]
+    },
+    {
+      "name": "Workflow Patterns",
+      "color": "#13c1ee",
+      "nodes": [
+        {
+          "id": "ws-sequential-appr",
+          "name": "Sequential Approval",
+          "desc": "Approvers review in a defined order — each must act before the next receives the item. Ensures layered review (PM → Architect → Owner). Most formal and slowest pattern."
+        },
+        {
+          "id": "ws-parallel-review",
+          "name": "Parallel Review",
+          "desc": "Multiple reviewers evaluate simultaneously — all must respond before the workflow advances. Faster than sequential but requires all parties to be available. Common on design submittals with multiple discipline reviewers."
+        },
+        {
+          "id": "ws-submit-approve",
+          "name": "Submit and Approve",
+          "desc": "Single submission followed by one or more approval decisions. The simplest and most common construction workflow pattern — the creator sends, the reviewer decides."
+        },
+        {
+          "id": "ws-review-respond",
+          "name": "Review and Respond",
+          "desc": "A question or information request requiring a formal written response. The RFI pattern — question asked, answer provided, response becomes part of the project record. Response may have cost/schedule impact."
+        },
+        {
+          "id": "ws-inspect-disposit",
+          "name": "Inspect and Disposition",
+          "desc": "Field evaluation of installed work against defined criteria, resulting in a conforming/deficient judgment. The quality assurance pattern — inspector walks the work, checks each item, renders a disposition."
+        },
+        {
+          "id": "ws-create-close",
+          "name": "Create and Close",
+          "desc": "Simplest lifecycle: an item is created, worked on, and closed. No formal approval chain — the responsible party resolves and closes. The punch list and field finding pattern."
+        },
+        {
+          "id": "ws-multi-stage",
+          "name": "Multi-Stage Financial Review",
+          "desc": "A change progresses through independent budget, cost, and revenue stages — each with its own approval status. The change management pattern where a single event triggers parallel financial workflows across different ledgers."
+        }
+      ]
+    },
+    {
+      "name": "Financial Workflow Stages",
+      "color": "#24b9f4",
+      "nodes": [
+        {
+          "id": "ws-budget-stage",
+          "name": "Budget Stage",
+          "desc": "The budget approval phase of a change event — tracks whether the budget impact has been formally recognized and approved. First stage in the three-stage financial workflow. Controls whether the project budget is adjusted."
+        },
+        {
+          "id": "ws-cost-stage",
+          "name": "Cost Stage",
+          "desc": "The cost commitment phase of a change — tracks whether costs have been formally committed to subcontractors or vendors via change orders. Second stage. Controls whether the commitment is updated."
+        },
+        {
+          "id": "ws-revenue-stage",
+          "name": "Revenue Stage",
+          "desc": "The owner billing phase of a change — tracks whether the approved change has been incorporated into owner invoicing. Third and final stage. Controls whether the GC bills the owner for the change."
+        },
+        {
+          "id": "ws-chg-event",
+          "name": "Change Event Lifecycle",
+          "desc": "The end-to-end progression of a change from identification through budget recognition, cost commitment, and revenue billing. The composite view across all three financial stages for a single change event."
+        },
+        {
+          "id": "ws-mapped-status",
+          "name": "Mapped Status",
+          "desc": "A standardized status field that normalizes domain-specific statuses into a common vocabulary for cross-record comparison. Allows consistent filtering and aggregation across record types that use different status taxonomies."
+        }
+      ]
+    },
+    {
+      "name": "Electronic Signature Workflows",
+      "color": "#35b0fa",
+      "nodes": [
+        {
+          "id": "ws-e-signature-req",
+          "name": "E-Signature Request",
+          "desc": "A digital signing request sent through an integrated e-signature platform (e.g., DocuSign). Overlays the standard approval workflow — the record's internal status and the e-signature status track independently."
+        },
+        {
+          "id": "ws-e-signature-ball",
+          "name": "E-Signature Ball in Court",
+          "desc": "The signer currently expected to act on a digital signature request. Mirrors the construction ball-in-court concept within the e-signature workflow — identifies who is holding up execution."
+        }
+      ]
+    },
+    {
+      "name": "Standard Measures",
+      "color": "#46a8ff",
+      "nodes": [
+        {
+          "id": "ws-average-appr",
+          "name": "Average Approval Cycle Time",
+          "desc": "Mean elapsed time from formal submission to final approval decision. The primary workflow efficiency metric. Formula: AVG(approval_date - submitted_date) in business days. Segment by record type, reviewer, and project phase."
+        },
+        {
+          "id": "ws-overdue-rate",
+          "name": "Overdue Rate",
+          "desc": "Percentage of records that exceed their due date before reaching the expected next state. Formula: COUNT(overdue_records) / COUNT(records_with_due_dates). Segment by record type and responsible party."
+        },
+        {
+          "id": "ws-first-pass-appr",
+          "name": "First-Pass Approval Rate",
+          "desc": "Percentage of submissions approved on first review without requiring revision or resubmission. Formula: COUNT(approved_first_pass) / COUNT(total_submissions). Higher rate = better pre-submission quality."
+        },
+        {
+          "id": "ws-resubmission-rat",
+          "name": "Resubmission Rate",
+          "desc": "Percentage of submissions that are rejected or returned for revision before eventual approval. Formula: COUNT(rejected_or_returned) / COUNT(total_submissions). The inverse complement of first-pass approval."
+        },
+        {
+          "id": "ws-ball-court-aging",
+          "name": "Ball-in-Court Aging",
+          "desc": "Average time a record sits with the current responsible party before action is taken. Formula: AVG(current_date - bic_assignment_date) for active records. Identifies the slowest link in the workflow chain."
+        },
+        {
+          "id": "ws-status-dwell",
+          "name": "Status Dwell Time",
+          "desc": "Average time a record spends in each status before transitioning to the next state. Identifies which statuses are bottlenecks in the workflow. Formula: AVG(next_status_date - current_status_date) per status."
+        },
+        {
+          "id": "ws-workflow-complet",
+          "name": "Workflow Completion Rate",
+          "desc": "Percentage of records that reach a terminal state (Closed, Approved, Complete) vs. remaining active or stalled. Formula: COUNT(terminal_status) / COUNT(total_created) over a time period."
+        },
+        {
+          "id": "ws-escalation-rate",
+          "name": "Escalation Rate",
+          "desc": "Percentage of workflow items that require elevation to a higher authority because the assigned party failed to act within the allowed time. Formula: COUNT(escalated) / COUNT(total_actionable). Higher rate = more workflow friction."
+        }
+      ]
+    },
+    {
+      "name": "Derived Analytics",
+      "color": "#2199d6",
+      "nodes": [
+        {
+          "id": "ws-bottleneck",
+          "name": "Process Bottleneck Detection",
+          "procore": "project_management.submittals",
+          "desc": "Identifies workflow bottlenecks by analyzing approval cycle times across submittals, RFIs, and observations. Measures time-in-status for each workflow stage: submittal submission-to-approval, RFI creation-to-response, observation assignment-to-closure. Ball-in-court analysis reveals which parties (architect, owner, PM, subcontractor) consistently slow the workflow. Status dwell time by record type and responsible party identifies systemic delays vs. one-off slowdowns. Overdue rates by workflow type and reviewer enable targeted process improvement. Cross-referenced with project phase to distinguish early-project bottlenecks (design coordination) from late-project bottlenecks (closeout backlog)."
+        }
+      ]
+    }
+  ]
+}

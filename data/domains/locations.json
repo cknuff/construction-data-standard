@@ -1,0 +1,201 @@
+{
+  "domain": "locations",
+  "name": "Locations",
+  "color": "#8d6e63",
+  "categories": [
+    {
+      "name": "Site Level",
+      "color": "#6f7d59",
+      "nodes": [
+        {
+          "id": "loc-project-site",
+          "name": "Project Site",
+          "desc": "The overall geographic boundary of a construction project — everything within the property line or limit of work. Top of the location hierarchy; every project has exactly one. Anchored by coordinates (lat/long or state plane). Contains all buildings, exterior zones, staging areas, and infrastructure. Project-level records attach here: daily reports, weather logs, safety metrics, site logistics.",
+          "procore": "core.projects"
+        },
+        {
+          "id": "loc-building",
+          "name": "Building",
+          "desc": "A distinct structure within the project site — the primary vertical container for constructed space. Multi-building projects separate records by structure. Single-building projects still carry one Building node for hierarchy consistency. Children: Floor/Level, Core/Shaft. Systems: structural frame, exterior enclosure, roofing, elevators, building-level HVAC and electrical.",
+          "procore": "core.locations"
+        },
+        {
+          "id": "loc-exterior-zone",
+          "name": "Exterior Zone",
+          "desc": "A defined area outside the building envelope but within the project site — organized by function or orientation. Facade orientation zones (N/S/E/W) are critical for enclosure work as different exposures have different weather and solar conditions. Children: Sub-Zone (optional). Systems: site & earthwork, site utilities, site improvements, exterior enclosure (by facade orientation)."
+        },
+        {
+          "id": "loc-laydown-staging",
+          "name": "Laydown / Staging Area",
+          "desc": "Designated areas for material storage, prefabrication, and equipment staging. Shift as construction progresses — what was steel staging becomes curtain wall staging. Tight urban sites have minimal laydown, requiring just-in-time delivery. Leaf node. Records: delivery logs, material tracking, equipment logs, safety observations for material handling."
+        },
+        {
+          "id": "loc-right-way",
+          "name": "Right-of-Way",
+          "desc": "Public or utility easement areas where project work occurs outside the property line. Governed by municipal permits with strict restoration requirements. Work windows may be restricted (night work, traffic hours). Separate inspection jurisdiction from building department. Leaf node."
+        },
+        {
+          "id": "loc-temp-facility",
+          "name": "Temporary Facility",
+          "desc": "Contractor-provided temporary structures that support construction but are removed at completion. General conditions cost items. Location on site affects logistics. Removed before final site improvements. Leaf node. Records: setup/removal logs, equipment logs, safety inspections, temporary utility records."
+        }
+      ]
+    },
+    {
+      "name": "Building Vertical",
+      "color": "#80755e",
+      "nodes": [
+        {
+          "id": "loc-floor-level",
+          "name": "Floor / Level",
+          "desc": "A horizontal plane within a building that divides it vertically — the primary vertical organizing unit. The most universally used location level. Most field records attach at floor level or below. Below-grade levels have different system profiles (waterproofing, underslab MEP). Every building system has work organized by floor. Children: Zone/Wing, Room/Space, Area, Ceiling Plenum.",
+          "procore": "core.locations"
+        },
+        {
+          "id": "loc-below-grade",
+          "name": "Below-Grade Level",
+          "desc": "Floors below ground level — basements, sub-basements, parking levels, underground mechanical spaces. Unique challenges: waterproofing, hydrostatic pressure, radon mitigation, garage ventilation, fire department access. Waterproofing defects are among the most expensive to remediate. Children: Zone/Wing, Room/Space, Area.",
+          "procore": "core.locations"
+        },
+        {
+          "id": "loc-roof-level",
+          "name": "Roof Level",
+          "desc": "The top of the building including roof surface, mechanical penthouse, and rooftop equipment areas. Both an enclosure system (membrane, insulation, flashing) and a mechanical platform (RTUs, cooling towers, exhaust fans). Safety-critical for fall protection. Access logistics affect equipment replacement in operations. Children: Rooftop Zone (optional).",
+          "procore": "core.locations"
+        }
+      ]
+    },
+    {
+      "name": "Floor Division",
+      "color": "#916c64",
+      "nodes": [
+        {
+          "id": "loc-zone-wing",
+          "name": "Zone / Wing",
+          "desc": "A horizontal subdivision of a floor — used for phasing, scope separation, or building geometry. Project-specific designations defined by the team to organize work. A 50-story tower might define zones as quadrants per floor. A hospital might define zones as departments. Drives the 3-week lookahead schedule. Children: Room/Space, Area.",
+          "procore": "core.locations"
+        },
+        {
+          "id": "loc-core-shaft",
+          "name": "Core / Shaft",
+          "desc": "Vertical penetrations that run through multiple floors — stairs, elevators, mechanical shafts, duct risers. Unique vertical elements that span the building height. Firestopping at every floor penetration is a code requirement and a major quality/punch item generator. Elevator hoistways have specific inspection requirements. Spans multiple floors rather than sitting within one."
+        },
+        {
+          "id": "loc-ceiling-plenum",
+          "name": "Ceiling Plenum",
+          "desc": "The space between the finished ceiling and the structural deck above — where most MEP distribution occurs. The most contested space in a building — 5+ trades working in the same 18-36 inch space. Above-ceiling inspection before drywall/ceiling close is the most critical quality hold point. Healthcare interstitial spaces are full-height walk-through plenums."
+        }
+      ]
+    },
+    {
+      "name": "Room & Space",
+      "color": "#a2646a",
+      "nodes": [
+        {
+          "id": "loc-room-space",
+          "name": "Room / Space",
+          "desc": "An individually identifiable enclosed space within a building — defined by walls, doors, and a room number. The unit of occupancy. Healthcare patient rooms may have 150+ punch items each. Hotel rooms are repetitive — one model room sets the standard. Room numbering convention varies by project. BIM models room data. Leaf node for most purposes.",
+          "procore": "core.locations"
+        },
+        {
+          "id": "loc-functional-area",
+          "name": "Functional Area",
+          "desc": "A space defined by its function rather than enclosure — may span rooms or be part of a larger space. Functional areas have specific code requirements: mechanical rooms (ventilation, fire separation), electrical rooms (clearances, access), data rooms (cooling, power), kitchens (grease duct, hood suppression, health department). These drive inspections. Leaf node."
+        },
+        {
+          "id": "loc-wet-area",
+          "name": "Wet Area",
+          "desc": "Spaces with plumbing fixtures and waterproofing requirements — bathrooms, kitchens, janitor closets, mechanical rooms with floor drains. Waterproofing testing (shower pan flood tests, floor drain tests) required before finishes. Plumbing fixture rough-in must align with tile layout. ADA compliance heavily inspected in restrooms. Healthcare wet areas have infection control requirements. Leaf node."
+        }
+      ]
+    },
+    {
+      "name": "Sub-Space",
+      "color": "#77795b",
+      "nodes": [
+        {
+          "id": "loc-wall-surface",
+          "name": "Wall / Surface",
+          "desc": "An individual wall or surface within a room — identified by orientation or designation. Primarily BIM-driven and punch-item-driven. In high-volume environments (hotels, residential), tracking deficiencies by wall enables pattern analysis (e.g., north walls consistently have drywall cracking from thermal movement). Leaf node."
+        },
+        {
+          "id": "loc-equip-location",
+          "name": "Equipment Location",
+          "desc": "The specific location of a major piece of installed equipment — tracked for commissioning, maintenance, and warranty. Every major equipment piece gets a unique tag (AHU-1, CHL-1) that persists from design through 30+ years of operations. Equipment schedules link tag to location to specifications to O&M manuals. Bridges construction and operations. Leaf node."
+        },
+        {
+          "id": "loc-penetration-open",
+          "name": "Penetration / Opening",
+          "desc": "A specific penetration through a fire-rated or smoke-rated assembly — tracked for firestopping compliance. Every penetration through a rated assembly must be firestopped per a UL-listed system. Tracking individual penetrations enables deficiency pattern analysis. Increasingly required by special inspection programs. One of the most inspected and most deficient items in construction. Leaf node."
+        }
+      ]
+    },
+    {
+      "name": "Cross-Cutting Overlay",
+      "color": "#887161",
+      "nodes": [
+        {
+          "id": "loc-fire-smoke",
+          "name": "Fire / Smoke Compartment",
+          "desc": "A code-defined area enclosed by fire-rated or smoke-rated construction — may span rooms or zones. A regulatory overlay on the physical layout that defines where fire barriers must be maintained, smoke dampers required, and rated doors installed. Healthcare smoke compartments drive corridor separation and are a primary inspection focus. Contains rooms/spaces within the compartment."
+        },
+        {
+          "id": "loc-work-zone-phase",
+          "name": "Work Zone / Phase Area",
+          "desc": "A temporary designation that defines where active construction work is occurring — shifts as the project progresses. Dynamic — moves weekly or daily. Safety zones (crane radius, excavation, hot work) have specific regulatory requirements. Healthcare occupied renovations require infection control risk assessment (ICRA) zones with negative pressure and barriers. Temporary overlay on any hierarchy level."
+        },
+        {
+          "id": "loc-cx-zone",
+          "name": "Commissioning Zone",
+          "desc": "A grouping of spaces for the purpose of systems commissioning — may align with HVAC zones, floors, or functional groups. Groups equipment and spaces tested together. May cross floor boundaries (a single AHU serving floors 1-5 creates one zone spanning 5 floor locations). Organized by mechanical system boundaries not physical construction."
+        },
+        {
+          "id": "loc-grid-line",
+          "name": "Grid Line Intersection",
+          "desc": "A coordinate location defined by the intersection of structural grid lines — the universal reference system for locating anything in a building. Every drawing references grid lines. Survey and layout is done to grid lines. Equipment locations, column locations, and major building elements are described by grid intersection. The bridge between 2D drawings and 3D physical space. Reference point at all floors."
+        }
+      ]
+    },
+    {
+      "name": "Standard Measures",
+      "color": "#996867",
+      "nodes": [
+        {
+          "id": "loc-location-depth",
+          "name": "Location Depth Utilization",
+          "desc": "Measures how many levels of the location hierarchy a company uses in field records — from site-level only (depth 1) to room-level (depth 4+). Higher depth = more granular defect tracking. Calculation: max hierarchy depth with >10 records attached / total available levels. Source: field records linked to location hierarchy."
+        },
+        {
+          "id": "loc-defect-density",
+          "name": "Defect Density by Location Type",
+          "desc": "Count of quality observations, punch items, and inspection deficiencies per location node — reveals where problems concentrate. Calculation: (observations + punch items + deficient inspections) / location count at each hierarchy level. Normalized per floor, per room, or per SF."
+        },
+        {
+          "id": "loc-punch-items-per",
+          "name": "Punch Items per Room",
+          "desc": "Count of punch list items assigned to each room-level location — the primary closeout workload metric. Calculation: total punch items / total rooms. Segmented by room type for cross-project comparison. High-finish rooms (healthcare, hospitality) generate more punch items."
+        },
+        {
+          "id": "loc-floor-completion",
+          "name": "Floor Completion Rate",
+          "desc": "Percentage of punch items and observations closed per floor over time — tracks vertical closeout progress. Calculation: closed_items / total_items per floor measured weekly. Reveals which floors are lagging and whether closeout follows a logical sequence (top-down or bottom-up)."
+        },
+        {
+          "id": "loc-location-coverag",
+          "name": "Location Coverage Rate",
+          "desc": "Percentage of defined locations that have at least one quality record (observation, inspection, or punch item) attached — measures inspection thoroughness. Calculation: locations_with_records / total_defined_locations. Low coverage suggests incomplete inspections."
+        },
+        {
+          "id": "loc-safety-incident",
+          "name": "Safety Incident Density by Zone",
+          "desc": "Count of safety observations and incidents per work zone or floor — identifies high-risk areas. Calculation: safety_observations / active_work_zones. Tracks whether safety issues cluster in specific areas (elevated work, confined spaces, active excavation)."
+        },
+        {
+          "id": "loc-firestopping-def",
+          "name": "Firestopping Deficiency Rate",
+          "desc": "Percentage of inspected penetrations with firestopping deficiencies — a top quality metric for multi-story buildings. Calculation: deficient_penetrations / inspected_penetrations. Segmented by shaft type, rated assembly type, and floor. One of the most inspected items in construction."
+        }
+      ]
+    }
+  ]
+}

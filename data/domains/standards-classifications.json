@@ -1,0 +1,188 @@
+{
+  "domain": "standards-classifications",
+  "name": "Standards & Classifications",
+  "color": "#78909c",
+  "categories": [
+    {
+      "name": "Cost & Work Classifications",
+      "color": "#5a9f92",
+      "nodes": [
+        {
+          "id": "sc-masterformat",
+          "name": "MasterFormat",
+          "desc": "The 50-division classification system published by CSI/CSC that organizes construction costs and specifications by type of work. The single most important standard for cross-company financial data comparison. Divisions map directly to building systems: Division 03 = Concrete → Foundations + Structural Frame, Division 26 = Electrical → Electrical system. Used for cost codes, specification sections, and bid packages. Three levels: division (2-digit), section (4-digit), subsection (6-digit). The UCDM's primary Rosetta Stone between company-specific codes and universal categories."
+        },
+        {
+          "id": "sc-specification-se",
+          "name": "Specification Section",
+          "desc": "A numbered section within a project's technical specifications organized by MasterFormat — defines quality standards, materials, methods, and acceptance criteria for a specific scope of work. Specification sections are the contractual quality standard against which work is inspected and accepted. Each section maps to a MasterFormat number (e.g., 03 30 00 Cast-in-Place Concrete, 09 29 00 Gypsum Board). Sections govern submittals (what must be submitted for approval) and inspections (what must pass).",
+          "procore": "project_management.specification_sections"
+        },
+        {
+          "id": "sc-std-cost-code",
+          "name": "Standard Cost Code List",
+          "desc": "A company-standard or industry-standard template of cost codes used to set up new projects — ensures consistency across an organization's project portfolio. Companies may maintain multiple lists for different project types. Standard lists enable cross-project comparison within a company. The UCDM maps company lists to MasterFormat for cross-company comparison.",
+          "procore": "finance.cost_code_lists"
+        },
+        {
+          "id": "sc-wbs-code",
+          "name": "WBS Code Structure",
+          "desc": "Work Breakdown Structure code templates that provide a second dimension of cost classification beyond cost codes — segments costs by phase, location, category, or other company-defined dimension. WBS codes add granularity within a cost code: cost code 03 30 00 (Concrete) + WBS 'Foundation' vs. WBS 'Elevated Slab'. Key WBS values like 'Rework' and 'Warranty' are signals for rework cost detection. Adoption varies widely.",
+          "procore": "finance.wbs_codes"
+        },
+        {
+          "id": "sc-budget-code",
+          "name": "Budget Code Structure",
+          "desc": "Company-specific grouping codes applied to budget line items for executive reporting — distinct from cost codes (transactional) and WBS codes (segmentation). Budget codes group budget lines into roll-up categories (Structure, Enclosure, MEP, General Conditions, Contingency). Less standardized than cost codes but valuable for executive dashboards and portfolio views.",
+          "procore": "finance.budget_codes"
+        }
+      ]
+    },
+    {
+      "name": "Building & Element Classifications",
+      "color": "#6b9797",
+      "nodes": [
+        {
+          "id": "sc-uniformat",
+          "name": "UniFormat",
+          "desc": "A building element classification system that organizes construction by functional systems rather than by product type — the complement to MasterFormat. While MasterFormat classifies by WHAT is installed (materials, products), UniFormat classifies by WHAT IT DOES (function, system). Used for conceptual estimating, systems-level cost analysis, and facility lifecycle management. Levels: Level 1 (Major Group Elements: A Substructure, B Shell, C Interiors, D Services), Level 2, Level 3."
+        },
+        {
+          "id": "sc-omniclass",
+          "name": "OmniClass",
+          "desc": "A comprehensive classification system covering ALL construction entities — buildings, spaces, elements, products, phases, disciplines, and more. Organized in 15 tables covering different facets of construction (Table 21: Elements, Table 22: Work Results, Table 23: Products, Table 31: Phases, Table 33: Disciplines, Table 34: Organizational Roles). Designed as a unifying framework for BIM and facility management. Rarely used directly in field operations but important for data interoperability."
+        },
+        {
+          "id": "sc-ifc-class",
+          "name": "IFC Classification (buildingSMART)",
+          "desc": "Industry Foundation Classes — an open data standard for BIM that defines entity types, properties, and relationships for all building elements. IFC entities (IfcWall, IfcDoor, IfcDuctSegment, etc.) provide a machine-readable classification of building elements that complements UniFormat and MasterFormat. Used for BIM coordination, clash detection, and digital twin integration."
+        }
+      ]
+    },
+    {
+      "name": "Safety & Hazard Classifications",
+      "color": "#7c8e9d",
+      "nodes": [
+        {
+          "id": "sc-osha-hazard",
+          "name": "OSHA Hazard Categories",
+          "desc": "Standardized safety hazard types defined by OSHA for construction — the Focus Four hazards (Fall, Struck By, Electrical, Caught In/Between) plus additional categories. These categories align directly with observation.hazard_name in Procore — an OSHA-aligned structured taxonomy with 16 types having 50+ companies each. The primary classification for safety observation analysis and recurrence tracking."
+        },
+        {
+          "id": "sc-osha-recordkeepi",
+          "name": "OSHA Recordkeeping Classification",
+          "desc": "The OSHA system for classifying workplace injuries and illnesses by severity — determines which incidents are 'recordable' and drive TRIR and DART rate calculations. Recordable = medical treatment beyond first aid, restricted duty, days away from work, or fatality. The classification directly determines a company's safety metrics for prequalification."
+        },
+        {
+          "id": "sc-ansi-injury",
+          "name": "ANSI Injury Classification",
+          "desc": "The ANSI/BLS system for classifying injuries by nature (laceration, fracture, sprain), body part (hand, back, knee), and cause (fall, struck by, overexertion) — provides detailed injury taxonomy for pattern analysis. More granular than OSHA recordkeeping which only classifies severity. Used for root cause analysis and targeted prevention programs."
+        }
+      ]
+    },
+    {
+      "name": "Building Codes & Regulatory",
+      "color": "#8d86a3",
+      "nodes": [
+        {
+          "id": "sc-international-bu",
+          "name": "International Building Code (IBC)",
+          "desc": "The model building code adopted (with local amendments) by most US jurisdictions — governs structural design, fire safety, egress, accessibility, and building system requirements. IBC classification determines construction type (Type I–V), occupancy group (A, B, E, H, I, M, R, S, U), and fire rating requirements. These classifications directly affect project cost, schedule, and building system requirements. Updated on a 3-year cycle."
+        },
+        {
+          "id": "sc-nfpa-stds",
+          "name": "NFPA Standards",
+          "desc": "National Fire Protection Association standards governing fire protection, life safety, and electrical systems — the technical basis for fire code requirements. NFPA 13 (sprinklers), NFPA 72 (fire alarm), NFPA 101 (Life Safety Code), and NEC/NFPA 70 (electrical) are the most impactful on construction. NFPA standards define system design criteria, installation methods, testing requirements, and inspection frequencies."
+        },
+        {
+          "id": "sc-ada-accessibilit",
+          "name": "ADA / Accessibility Standards",
+          "desc": "Americans with Disabilities Act Accessibility Guidelines (ADAAG) and ICC A117.1 — govern accessible design requirements for public and commercial buildings. Affects door widths, ramp slopes, restroom layouts, signage, elevator requirements, and path of travel clearances. Compliance is both a legal requirement and a project completion condition. Accessibility violations are common punch list items."
+        },
+        {
+          "id": "sc-energy-code-stds",
+          "name": "Energy Code Standards",
+          "desc": "Energy conservation codes (IECC, ASHRAE 90.1) and above-code programs — govern building envelope performance, HVAC efficiency, lighting power density, and renewable energy requirements. Energy code compliance affects construction cost (insulation, glazing performance, equipment efficiency) and requires specific testing and commissioning. Increasingly stringent with each code cycle."
+        }
+      ]
+    },
+    {
+      "name": "Sustainability & Certification",
+      "color": "#629b94",
+      "nodes": [
+        {
+          "id": "sc-leed-certificati",
+          "name": "LEED Certification",
+          "desc": "Leadership in Energy and Environmental Design — the most widely recognized green building certification system. Point-based system across categories: Sustainable Sites, Water Efficiency, Energy & Atmosphere, Materials & Resources, Indoor Environmental Quality, Innovation. Certification levels: Certified (40–49 pts), Silver (50–59), Gold (60–79), Platinum (80+). LEED requirements affect material selection, construction waste management, commissioning scope, and documentation."
+        },
+        {
+          "id": "sc-well-building",
+          "name": "WELL Building Standard",
+          "desc": "A performance-based standard focused on occupant health and wellness — covers air, water, nourishment, light, fitness, comfort, and mind. Less common than LEED but growing rapidly, especially in commercial office and healthcare. WELL requirements affect HVAC design (air quality), lighting design (circadian), and finishes (low-VOC materials). Requires ongoing performance testing."
+        },
+        {
+          "id": "sc-resilience-net",
+          "name": "Resilience & Net Zero Standards",
+          "desc": "Emerging standards for climate resilience (RELi, FORTIFIED) and net-zero energy/carbon performance — increasingly required by institutional owners and government agencies. Resilience standards address flood, wind, seismic, and wildfire hazards. Net-zero standards require energy production to equal or exceed consumption. Both drive building system design decisions and construction scope."
+        }
+      ]
+    },
+    {
+      "name": "Contract & Delivery Standards",
+      "color": "#73939a",
+      "nodes": [
+        {
+          "id": "sc-aia-contract",
+          "name": "AIA Contract Documents",
+          "desc": "The American Institute of Architects standard contract document series — the most widely used contract forms in US construction. Key documents: A101 (Owner-Contractor, Stipulated Sum), A201 (General Conditions), A401 (Contractor-Sub), G-series (administrative forms: G701 Change Order, G702 Pay Application, G704 Certificate of Substantial Completion). AIA documents define roles, responsibilities, and workflows that directly shape how financial instruments, documents, and quality records flow."
+        },
+        {
+          "id": "sc-dlvy-method",
+          "name": "Delivery Method Classification",
+          "desc": "The taxonomy of project delivery methods that determines how design, construction, and risk are allocated between parties. Each delivery method creates different document flows, change order patterns, and financial instrument relationships. Key methods: Design-Bid-Build (DBB), CM at Risk (CMAR), Design-Build (DB), Integrated Project Delivery (IPD), Multi-Prime, Construction Management Agency."
+        },
+        {
+          "id": "sc-aace-cost",
+          "name": "AACE Cost Engineering Standards",
+          "desc": "The Association for the Advancement of Cost Engineering recommended practices — define cost estimating, scheduling, and project controls methodologies. Key standards: 18R-97 (Cost Estimate Classification), 10S-90 (Cost Engineering), EVMS practices. AACE standards provide the methodology framework for financial metrics (EAC, CPI, SPI) and cost classification (estimate classes 1–5)."
+        }
+      ]
+    },
+    {
+      "name": "Standard Measures",
+      "color": "#848aa0",
+      "nodes": [
+        {
+          "id": "sc-cost-code",
+          "name": "Cost Code Standardization Rate",
+          "desc": "Percentage of a company's projects using a consistent standard cost code list — measures data readiness for cross-project benchmarking. Formula: Projects with Standard Cost Codes / Total Projects × 100. Companies with < 50% standardization have unreliable cross-project financial data. Cost code standardization is the prerequisite for all financial benchmarking."
+        },
+        {
+          "id": "sc-masterformat-map",
+          "name": "MasterFormat Mapping Coverage",
+          "desc": "Percentage of a company's cost codes that map to recognized MasterFormat divisions — measures the degree to which company codes can be normalized for cross-company comparison. Formula: Cost Codes with Valid MasterFormat Mapping / Total Cost Codes × 100. Some codes (General Conditions, Overhead, Fee) don't map to MasterFormat building systems."
+        },
+        {
+          "id": "sc-specification-se-2",
+          "name": "Specification Section Coverage",
+          "desc": "Percentage of project specification sections entered as structured data vs. remaining as PDF uploads — measures the quality of specification cross-referencing for submittals and RFIs. Formula: Structured Spec Sections / Estimated Total Sections × 100."
+        },
+        {
+          "id": "sc-safety-class",
+          "name": "Safety Classification Completeness",
+          "desc": "Percentage of safety observations with a structured hazard_name classification — measures the quality of safety data for OSHA hazard analysis. Formula: Observations with hazard_name / Total Safety Observations × 100. Currently 55% populated across the portfolio — a significant enrichment opportunity."
+        },
+        {
+          "id": "sc-wbs-adoption",
+          "name": "WBS Adoption Rate",
+          "desc": "Percentage of projects or companies using WBS codes for cost segmentation — measures the depth of financial data granularity available for building-element-level benchmarking. Formula: Projects with WBS Codes / Total Financial Projects × 100."
+        },
+        {
+          "id": "sc-certification-ad",
+          "name": "Certification Adoption Rate",
+          "desc": "Percentage of projects pursuing third-party certification (LEED, WELL, FORTIFIED, etc.) — measures the market penetration of green building and performance standards. Formula: Certified or Pursuing Projects / Total Projects × 100. Can be segmented by certification type, level, and project type."
+        }
+      ]
+    }
+  ]
+}

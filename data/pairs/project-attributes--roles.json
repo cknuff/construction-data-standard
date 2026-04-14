@@ -1,0 +1,168 @@
+{
+  "source": "project-attributes",
+  "target": "roles",
+  "edges": [
+    [
+      "pa-project-type",
+      "rl-staffing-ratio",
+      "SEGMENTS"
+    ],
+    [
+      "pa-project-type",
+      "rl-safety-staffing",
+      "SEGMENTS"
+    ],
+    [
+      "pa-project-type",
+      "rl-pm-workload",
+      "SEGMENTS"
+    ],
+    [
+      "pa-total-value-band",
+      "rl-staffing-ratio",
+      "SCALES"
+    ],
+    [
+      "pa-total-value-band",
+      "rl-project-executiv",
+      "ACTIVATES"
+    ],
+    [
+      "pa-number-stories",
+      "rl-super-span",
+      "SCALES"
+    ],
+    [
+      "pa-gross-building",
+      "rl-pm-workload",
+      "DRIVES"
+    ],
+    [
+      "pa-gross-building",
+      "rl-assistant-super",
+      "DEMANDS"
+    ],
+    [
+      "pa-peak-workforce",
+      "rl-safety-staffing",
+      "DETERMINES"
+    ],
+    [
+      "pa-peak-workforce",
+      "rl-foreman-gen",
+      "SCALES"
+    ],
+    [
+      "pa-bim-requirement",
+      "rl-bim-manager-vdc",
+      "REQUIRES"
+    ],
+    [
+      "pa-leed-certificati",
+      "rl-cx-agent-cxa",
+      "REQUIRES"
+    ],
+    [
+      "pa-energy-code",
+      "rl-cx-agent-cxa",
+      "REQUIRES"
+    ],
+    [
+      "pa-dlvy-method",
+      "rl-design-manager",
+      "ACTIVATES"
+    ],
+    [
+      "pa-dlvy-method",
+      "rl-preconstruction",
+      "SHAPES"
+    ],
+    [
+      "pa-contract-type",
+      "rl-contract-adminis",
+      "ACTIVATES"
+    ],
+    [
+      "pa-fast-track",
+      "rl-scheduler-projec",
+      "INTENSIFIES"
+    ],
+    [
+      "pa-phased-const",
+      "rl-assistant-super",
+      "DEMANDS"
+    ],
+    [
+      "pa-phased-const",
+      "rl-scheduler-projec",
+      "INTENSIFIES"
+    ],
+    [
+      "pa-occupied-during",
+      "rl-safety-manager",
+      "INTENSIFIES"
+    ],
+    [
+      "pa-occupied-during",
+      "rl-safety-officer",
+      "INTENSIFIES"
+    ],
+    [
+      "pa-number-subcontra",
+      "rl-procure-manager",
+      "DEMANDS"
+    ],
+    [
+      "pa-number-subcontra",
+      "rl-project-engineer",
+      "SCALES"
+    ],
+    [
+      "pa-specialty-system",
+      "rl-project-engineer",
+      "ACTIVATES"
+    ],
+    [
+      "pa-specialty-system",
+      "rl-tab-technician",
+      "ACTIVATES"
+    ],
+    [
+      "pa-self-performed",
+      "rl-foreman-gen",
+      "STAFFS"
+    ],
+    [
+      "pa-self-performed",
+      "rl-journeyman-craft",
+      "STAFFS"
+    ],
+    [
+      "pa-modular-prefab",
+      "rl-quality-manager",
+      "INTENSIFIES"
+    ],
+    [
+      "pa-site-constraints",
+      "rl-field-engineer",
+      "DEMANDS"
+    ],
+    [
+      "pa-owner-type",
+      "rl-owner-s",
+      "SHAPES"
+    ]
+  ],
+  "verbGlossary": {
+    "SEGMENTS": "{source} subdivides {target} for comparison across project types (e.g., project type segments staffing ratio to compare healthcare vs. commercial)",
+    "SCALES": "{source} proportionally increases the demand reflected in {target} or role (e.g., total value band scales the staffing ratio, number of stories scales superintendent span of control)",
+    "DETERMINES": "{target} sets the required level of {source} staffing ratio (e.g., peak workforce determines safety staffing ratio per OSHA guidelines)",
+    "REQUIRES": "{source} attribute makes the target role mandatory on {target} (e.g., BIM requirement requires BIM manager, LEED certification requires commissioning agent)",
+    "ACTIVATES": "{source} delivery or scope attribute creates the need for {target} (e.g., design-build delivery method activates design manager, specialty systems activate project engineer)",
+    "INTENSIFIES": "{source} condition attribute increases the staffing level for {target} beyond baseline (e.g., fast-track intensifies scheduler workload, occupied-during intensifies safety manager presence)",
+    "DRIVES": "{source} dimension attribute increases {target} workload metric (e.g., gross building area drives PM workload index)",
+    "DEMANDS": "{source} complexity attribute creates a staffing need for {target} (e.g., number of subcontractors demands procurement manager, phased construction demands assistant superintendent)",
+    "STAFFS": "{source} self-perform attribute determines the deployment of {target} (e.g., self-performed work staffs foreman and journeyman craft workers)",
+    "SHAPES": "{source} delivery or owner attribute influences the scope and authority of {target} (e.g., delivery method shapes preconstruction manager responsibilities, owner type shapes owner's representative authority)"
+  }
+}

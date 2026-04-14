@@ -1,0 +1,205 @@
+{
+  "source": "field-operations",
+  "target": "standards-classifications",
+  "edges": [
+    [
+      "fo-safety-violation",
+      "sc-osha-hazard",
+      "CITED FOR"
+    ],
+    [
+      "fo-accident-log",
+      "sc-osha-hazard",
+      "CLASSIFIED UNDER"
+    ],
+    [
+      "fo-daily-log-insp",
+      "sc-osha-hazard",
+      "INSPECTED AGAINST"
+    ],
+    [
+      "fo-accident-log",
+      "sc-osha-recordkeepi",
+      "LOGGED PER"
+    ],
+    [
+      "fo-safety-violation",
+      "sc-osha-recordkeepi",
+      "DOCUMENTED PER"
+    ],
+    [
+      "fo-accident-log",
+      "sc-ansi-injury",
+      "CODED BY"
+    ],
+    [
+      "fo-daily-log-insp",
+      "sc-international-bu",
+      "GOVERNED BY"
+    ],
+    [
+      "fo-daily-log-insp",
+      "sc-nfpa-stds",
+      "TESTED PER"
+    ],
+    [
+      "fo-waste-log-entry",
+      "sc-leed-certificati",
+      "TRACKED FOR"
+    ],
+    [
+      "fo-dumpster-log",
+      "sc-leed-certificati",
+      "REPORTED UNDER"
+    ],
+    [
+      "fo-waste-diversion",
+      "sc-leed-certificati",
+      "BENCHMARKED TO"
+    ],
+    [
+      "fo-waste-log-entry",
+      "sc-resilience-net",
+      "VERIFIED AGAINST"
+    ],
+    [
+      "fo-equip-log-entry",
+      "sc-energy-code-stds",
+      "MONITORED PER"
+    ],
+    [
+      "fo-manpower-log",
+      "sc-masterformat",
+      "ORGANIZED BY"
+    ],
+    [
+      "fo-productivity-log",
+      "sc-masterformat",
+      "SEGMENTED BY"
+    ],
+    [
+      "fo-quantity-log",
+      "sc-masterformat",
+      "CLASSIFIED UNDER"
+    ],
+    [
+      "fo-scheduled-work",
+      "sc-masterformat",
+      "ORGANIZED BY"
+    ],
+    [
+      "fo-timecard-entry",
+      "sc-std-cost-code",
+      "CHARGED TO"
+    ],
+    [
+      "fo-equip-timecard",
+      "sc-std-cost-code",
+      "CHARGED TO"
+    ],
+    [
+      "fo-t-m-labor-entry",
+      "sc-std-cost-code",
+      "CODED BY"
+    ],
+    [
+      "fo-t-m-equip-entry",
+      "sc-std-cost-code",
+      "CODED BY"
+    ],
+    [
+      "fo-t-m-mat-entry",
+      "sc-std-cost-code",
+      "CODED BY"
+    ],
+    [
+      "fo-t-m-ticket",
+      "sc-wbs-code",
+      "ALLOCATED AGAINST"
+    ],
+    [
+      "fo-field-productivi",
+      "sc-wbs-code",
+      "TRACKED BY"
+    ],
+    [
+      "fo-budgeted-product",
+      "sc-budget-code",
+      "ALLOCATED AGAINST"
+    ],
+    [
+      "fo-dlvy-log-entry",
+      "sc-specification-se",
+      "RECEIVED AGAINST"
+    ],
+    [
+      "fo-mat-receipt",
+      "sc-specification-se",
+      "VERIFIED AGAINST"
+    ],
+    [
+      "fo-mat-shipment",
+      "sc-specification-se",
+      "SHIPPED PER"
+    ],
+    [
+      "fo-plan-revision",
+      "sc-specification-se",
+      "ISSUED UNDER"
+    ],
+    [
+      "fo-delay-log-entry",
+      "sc-aia-contract",
+      "ESCALATED PER"
+    ],
+    [
+      "fo-delay-frequency",
+      "sc-dlvy-method",
+      "SEGMENTED BY"
+    ],
+    [
+      "fo-actual-productio",
+      "sc-aace-cost",
+      "BENCHMARKED TO"
+    ],
+    [
+      "fo-peak-daily",
+      "sc-safety-class",
+      "SEGMENTED BY"
+    ],
+    [
+      "fo-plan-percent",
+      "sc-wbs-adoption",
+      "BENCHMARKED TO"
+    ],
+    [
+      "fo-equip-utilizatio",
+      "sc-masterformat-map",
+      "SEGMENTED BY"
+    ]
+  ],
+  "verbGlossary": {
+    "CITED FOR": "Record formally references a specific violation of {target} (e.g., safety violation log entry citing an OSHA Focus Four hazard category)",
+    "CLASSIFIED UNDER": "Record is categorized using {target} taxonomy (e.g., accident log entry classified under an OSHA hazard category, quantity log entry classified under a MasterFormat division)",
+    "INSPECTED AGAINST": "{source} entry evaluates jobsite conditions against {target} required criteria (e.g., daily log inspection checked against OSHA hazard categories for fall protection compliance)",
+    "LOGGED PER": "Record is documented following {target} recordkeeping requirements (e.g., accident log entry recorded per OSHA 300 log format and retention rules)",
+    "DOCUMENTED PER": "Supporting field record is captured in the format required by {target} (e.g., safety violation documented per OSHA recordkeeping classification for incident reporting)",
+    "CODED BY": "Record is assigned a classification code from {target} (e.g., accident log coded by ANSI injury type, T&M labor entry coded by standard cost code)",
+    "GOVERNED BY": "{source} or review is required and regulated by {target} (e.g., daily log inspection governed by International Building Code requirements at specific milestones)",
+    "TESTED PER": "Inspection entry follows {target} prescribed testing protocol (e.g., daily log inspection entry for fire suppression tested per NFPA standards)",
+    "TRACKED FOR": "{source} is captured specifically to support the target certification's credit requirements (e.g., waste log entry tracked for LEED construction waste management credit documentation)",
+    "REPORTED UNDER": "{source} is reported within the target certification's tracking framework (e.g., dumpster log entry reported under LEED Materials & Resources waste diversion requirements)",
+    "BENCHMARKED TO": "{source} metric is compared against {target} industry threshold or published baseline (e.g., waste diversion rate benchmarked to LEED minimum diversion thresholds, actual production benchmarked to AACE earned value norms)",
+    "VERIFIED AGAINST": "{source} confirms compliance with {target} through independent verification (e.g., waste log entry verified against net-zero construction waste targets)",
+    "MONITORED PER": "{source}is tracked against {target} performance thresholds (e.g., equipment log entry monitoring fuel consumption per energy code commissioning requirements)",
+    "ORGANIZED BY": "{source} scope is structured according to {target} divisions or sections (e.g., manpower log organized by MasterFormat trade divisions, scheduled work organized by MasterFormat work sections)",
+    "SEGMENTED BY": "{source} operations metric is broken down by {target} for comparative analysis (e.g., productivity log segmented by MasterFormat division to compare trade output rates)",
+    "CHARGED TO": "{source}is allocated to a cost code in the target classification (e.g., timecard entry charged to {target} cost code for payroll and cost tracking)",
+    "ALLOCATED AGAINST": "{source} cost or budget quantity is measured relative to {target} breakdown structure (e.g., T&M ticket allocated against WBS code for change order substantiation)",
+    "TRACKED BY": "{source} is monitored over time using {target} breakdown structure (e.g., field productivity record tracked by WBS code to measure earned value progress)",
+    "RECEIVED AGAINST": "Delivery record documents material arrival checked against {target} submittal requirements (e.g., delivery log entry received against specified material and approved submittal)",
+    "SHIPPED PER": "{source}record references {target} governing material packaging, handling, and delivery requirements (e.g., material shipment shipped per Division 01 product delivery requirements)",
+    "ISSUED UNDER": "Plan revision is distributed referencing {target} it modifies (e.g., plan revision receipt issued under the affected specification section for field coordination)",
+    "ESCALATED PER": "{source}is formally escalated following {target} document's notice and claims procedures (e.g., delay log entry escalated per AIA A201 time extension provisions)"
+  }
+}

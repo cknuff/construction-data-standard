@@ -1,0 +1,335 @@
+{
+  "domain": "organizations",
+  "name": "Organizations",
+  "color": "#42a5f5",
+  "categories": [
+    {
+      "name": "Owner / Developer",
+      "color": "#24b4eb",
+      "nodes": [
+        {
+          "id": "org-private-develope",
+          "name": "Private Developer",
+          "desc": "Company or individual funding a project for profit — develops to sell, lease, or operate. Decision authority on scope, budget, and schedule. Delivers program requirements, design approvals, change authorizations, and substantial completion acceptance. Active across all phases from conception through operations."
+        },
+        {
+          "id": "org-institutional-ow",
+          "name": "Institutional Owner",
+          "desc": "Organization building for its own use — corporate campus, hospital, university, government facility. End user and operator of the facility. Defines program requirements, coordinates stakeholders, provides operations input, and plans occupancy. Especially active in Preconstruction and Post-Construction."
+        },
+        {
+          "id": "org-public-governmen",
+          "name": "Public / Government Entity",
+          "desc": "Federal, state, or local government agency procuring a public project. Regulated procurement authority with statutory constraints — competitive bidding, prevailing wage enforcement, ADA compliance, environmental review. Active across all phases with additional regulatory overlay."
+        }
+      ]
+    },
+    {
+      "name": "Construction Management",
+      "color": "#35acf0",
+      "nodes": [
+        {
+          "id": "org-gen-contr-gc",
+          "name": "General Contractor (GC)",
+          "desc": "Company contracted to construct the project — holds risk for cost, schedule, and quality under lump sum or GMP contract. Single point of responsibility to the owner. Manages subcontractors, schedule, quality control, safety, and cost control. Delivers schedule, budget reports, pay applications, daily reports, punchlist management, and closeout documents. Active from Procurement through Closeout (sometimes Preconstruction if CM at Risk).",
+          "procore": "core.companies"
+        },
+        {
+          "id": "org-const-manager-at",
+          "name": "Construction Manager at Risk (CM at Risk)",
+          "desc": "CM engaged during design to provide preconstruction services (estimating, VE, constructability, scheduling), then transitions to GC role during construction under a GMP. Most common delivery method for large commercial projects. Early involvement improves cost certainty. Active from Preconstruction through Closeout."
+        },
+        {
+          "id": "org-const-manager",
+          "name": "Construction Manager Agency (CM Agency)",
+          "desc": "CM acts as owner's agent — manages project but does NOT hold trade contracts or bear construction cost risk. Provides schedule/budget management, trade coordination, quality oversight, and reporting. Owner holds direct contracts with trades. Common on institutional and public projects. Active from Preconstruction through Closeout."
+        },
+        {
+          "id": "org-design-builder",
+          "name": "Design-Builder",
+          "desc": "Single entity responsible for both design and construction under one contract. Single point of responsibility for owner. Manages architect directly and self-coordinates design-construction overlap. Faster delivery due to concurrent design and construction. Active across all phases."
+        },
+        {
+          "id": "org-program-manager",
+          "name": "Program Manager",
+          "desc": "Firm managing a portfolio of related projects for an owner — multiple projects under one program. Provides portfolio-level schedule, budget, and risk management with standardization across projects. Common for healthcare campuses, university programs, corporate rollouts. Active across all phases on multiple projects simultaneously."
+        }
+      ]
+    },
+    {
+      "name": "Design Team",
+      "color": "#46a3f6",
+      "nodes": [
+        {
+          "id": "org-architect-record",
+          "name": "Architect of Record (AOR)",
+          "desc": "Licensed architecture firm responsible for building design and construction documents — stamp on architectural drawings. Performs construction administration (CA): submittal review, RFI response, field observation, punch list walk. Active from Preconstruction through Closeout. Contracts with owner (design-bid-build/CM) or with design-builder."
+        },
+        {
+          "id": "org-struct-engineer",
+          "name": "Structural Engineer",
+          "desc": "Licensed engineering firm responsible for structural system design — foundation design, connection design, structural calculations. Stamp on structural drawings. Performs submittal review and RFI response for structural scope. Active from Preconstruction through Construction. Typically subconsultant to architect or direct contract with owner."
+        },
+        {
+          "id": "org-mep-engineer",
+          "name": "MEP Engineer",
+          "desc": "Licensed engineering firm(s) responsible for mechanical, electrical, and plumbing system design — HVAC, plumbing, electrical, fire protection. Energy code compliance, load calculations, equipment schedules. Performs submittal review and RFI response. Active from Preconstruction through Commissioning. Subconsultant to architect or direct owner contract."
+        },
+        {
+          "id": "org-civil-engineer",
+          "name": "Civil Engineer",
+          "desc": "Licensed engineering firm responsible for site design — grading, utilities, stormwater, roadways, erosion control. Stamp on civil drawings. Active from Preconstruction through Sitework. Subconsultant to architect or direct owner contract."
+        },
+        {
+          "id": "org-fire-prot",
+          "name": "Fire Protection Engineer",
+          "desc": "Licensed engineering firm responsible for fire protection and life safety system design — sprinkler design, fire alarm design, smoke control, egress analysis, fire code compliance. Active from Preconstruction through Commissioning. Subconsultant to architect or MEP engineer, or direct owner contract."
+        },
+        {
+          "id": "org-geotechnical-eng",
+          "name": "Geotechnical Engineer",
+          "desc": "Licensed engineering firm investigating subsurface conditions and recommending foundation design — soil borings, lab testing, foundation recommendations, earthwork specs, dewatering recommendations. Produces the geotechnical report, one of the first project documents. Active from Preconstruction through Foundations. Typically direct contract with owner, engaged before architect."
+        },
+        {
+          "id": "org-landscape-archit",
+          "name": "Landscape Architect",
+          "desc": "Licensed design firm responsible for exterior landscape, hardscape, irrigation, and site amenity design. Produces planting plans, irrigation plans, hardscape details. Active during Preconstruction and Site Improvements phase. Subconsultant to architect or direct owner contract."
+        }
+      ]
+    },
+    {
+      "name": "Specialty Consultants",
+      "color": "#579bfc",
+      "nodes": [
+        {
+          "id": "org-specifications-w",
+          "name": "Specifications Writer",
+          "desc": "Firm or individual that writes the project manual (specifications) governing materials and installation methods. Product research, code cross-referencing, coordination with design team. Specifications are the legal backbone of construction quality. Active during Preconstruction. Subconsultant to architect or independent contract with owner."
+        },
+        {
+          "id": "org-lighting-designe",
+          "name": "Lighting Designer",
+          "desc": "Firm specializing in architectural and functional lighting design — lighting layout, fixture selection, controls design, daylighting analysis, energy code compliance. Bridges engineering and architecture. Active from Preconstruction through Finishes. Subconsultant to architect or electrical engineer."
+        },
+        {
+          "id": "org-acoustics-consul",
+          "name": "Acoustics Consultant",
+          "desc": "Firm specializing in sound isolation, room acoustics, and noise control — STC/IIC ratings, room finish recommendations, mechanical noise criteria, environmental noise assessment. Critical for healthcare, education, residential, and performing arts. Active from Preconstruction through Commissioning. Subconsultant to architect or direct owner contract."
+        },
+        {
+          "id": "org-building-envelop",
+          "name": "Building Envelope Consultant",
+          "desc": "Firm specializing in design and performance of the building exterior skin — air/water/thermal barrier design, curtain wall engineering review, mock-up testing oversight, field quality inspection. Increasingly common as energy codes tighten and envelope litigation grows. Active from Preconstruction through Enclosure. Direct owner contract or subconsultant to architect."
+        },
+        {
+          "id": "org-sustainability-l",
+          "name": "Sustainability / LEED Consultant",
+          "desc": "Firm managing green building certification and sustainability requirements — LEED/WELL credit tracking, energy modeling coordination, material documentation (EPDs, HPDs, VOC content), commissioning coordination. Active across all phases from design through Commissioning. Direct owner contract or subconsultant to architect."
+        },
+        {
+          "id": "org-code-consultant",
+          "name": "Code Consultant",
+          "desc": "Firm specializing in building code interpretation and life safety compliance — code analysis, occupancy classification, egress analysis, fire resistance requirements, ADA compliance, variance applications. Critical for complex occupancies. Active from Preconstruction through Permitting. Subconsultant to architect or direct owner contract."
+        }
+      ]
+    },
+    {
+      "name": "Trade Contractors",
+      "color": "#2cb0ed",
+      "nodes": [
+        {
+          "id": "org-sub-trade",
+          "name": "Subcontractor (Trade-Specific)",
+          "desc": "Specialty contractor performing a specific trade scope of work under contract to the GC — self-performs trade work, manages own workforce, procures trade-specific materials, responsible for quality of installed work and safety of own crews. Typical project has 25-40 subcontractors. Delivers installed work, submittals, daily manpower reports, pay applications, as-built markups, and warranty. Active from Procurement through Closeout. Subcontract with GC (or direct with owner in CM Agency).",
+          "procore": "core.project_vendors"
+        },
+        {
+          "id": "org-self-performing",
+          "name": "Self-Performing GC Division",
+          "desc": "GC's own workforce performing specific trade work — typically concrete, carpentry, general conditions, demolition. Same scope as subcontractor but with GC-employed labor. Costs tracked as direct costs rather than commitments. Active from Construction through Closeout."
+        }
+      ]
+    },
+    {
+      "name": "Suppliers & Fabricators",
+      "color": "#3da8f3",
+      "nodes": [
+        {
+          "id": "org-mat-supplier",
+          "name": "Material Supplier",
+          "desc": "Company that sells construction materials — manufacturer or distributor. Supplies materials per purchase order, schedules deliveries, provides product documentation and warranties. Delivery reliability directly impacts schedule. Active from Procurement through Construction. Purchase order from GC or subcontractor.",
+          "procore": "core.vendors"
+        },
+        {
+          "id": "org-fabricator",
+          "name": "Fabricator",
+          "desc": "Company that manufactures custom construction components from approved shop drawings — steel fabricators, curtain wall fabricators, precast producers, custom casework shops. Fabrication per approved shop drawings with factory QC. Active from Procurement through Construction. Purchase order or subcontract (if fabricator also installs).",
+          "procore": "core.vendors"
+        },
+        {
+          "id": "org-equip-rental",
+          "name": "Equipment Rental Company",
+          "desc": "Company providing construction equipment on a rental basis — tower cranes, excavators, aerial lifts, temporary fencing, generators. Equipment mobilization, maintenance, and operator support (if provided). Active during Construction. Rental agreement typically month-to-month or project duration.",
+          "procore": "core.vendors"
+        }
+      ]
+    },
+    {
+      "name": "Testing & Inspection",
+      "color": "#4e9ff9",
+      "nodes": [
+        {
+          "id": "org-special-insp",
+          "name": "Special Inspection Agency",
+          "desc": "Independent testing firm performing code-required special inspections — structural steel connections, concrete testing, fireproofing thickness, welding inspection. Code requires independence from contractor. Active from Construction through Commissioning. Direct contract with owner (required by code)."
+        },
+        {
+          "id": "org-mat-testing-lab",
+          "name": "Materials Testing Lab",
+          "desc": "Laboratory that tests construction materials for specification compliance — concrete cylinder testing (7-day and 28-day strength), soil compaction, steel tensile testing, asphalt testing, mortar testing. Active during Construction. Contract with owner, GC, or subcontractor depending on specification."
+        },
+        {
+          "id": "org-cx-agent-cxa",
+          "name": "Commissioning Agent (CxA)",
+          "desc": "Independent professional who verifies building systems perform as designed — commissioning plan development, pre-functional testing, functional performance testing, deficiency tracking, seasonal testing, final report. Not part of design or construction team. Active from Construction through Post-Construction (seasonal). Decision authority: Medium — identifies deficiencies and requires correction; does not authorize design changes or additional cost."
+        },
+        {
+          "id": "org-enviro-monitorin",
+          "name": "Environmental Monitoring Firm",
+          "desc": "Firm monitoring environmental compliance during construction — air quality monitoring, noise monitoring, stormwater sampling, hazmat oversight, regulatory reporting. Required for projects with contaminated soil, asbestos abatement, noise-sensitive neighbors, or stormwater permits. Active during Construction. Contract with owner or GC."
+        }
+      ]
+    },
+    {
+      "name": "Regulatory Authorities",
+      "color": "#5f97fe",
+      "nodes": [
+        {
+          "id": "org-building-departm",
+          "name": "Building Department",
+          "desc": "Local government agency that reviews plans, issues building permits, performs progress inspections, and issues certificates of occupancy. Permit timeline varies from 2 weeks to 12+ months. Plan review comments generate design revisions. Failed field inspections require correction and re-inspection. Active during Preconstruction (permitting) and Construction through Closeout (CO)."
+        },
+        {
+          "id": "org-fire-marshal",
+          "name": "Fire Marshal / Fire Department",
+          "desc": "Fire authority having jurisdiction (AHJ) for fire and life safety compliance — fire protection plan review, fire alarm plan review, field inspections, acceptance testing, hydrant flow testing. Fire marshal sign-off is required for CO. Active from Preconstruction through Commissioning."
+        },
+        {
+          "id": "org-health-departmen",
+          "name": "Health Department",
+          "desc": "Government agency regulating health-related construction — healthcare facilities, food service, pools, labs, childcare. Plan review for health-related spaces, field inspections, operational permits. Active from Preconstruction through Closeout."
+        },
+        {
+          "id": "org-enviro-epa",
+          "name": "Environmental / EPA Agency",
+          "desc": "Federal, state, or local environmental regulatory authority — environmental impact review, stormwater permit oversight, air quality compliance, hazmat oversight. NEPA review on federal projects can add years. Active from Preconstruction through Construction."
+        },
+        {
+          "id": "org-osha-safety",
+          "name": "OSHA / Safety Authority",
+          "desc": "Federal or state occupational safety and health authority — workplace safety regulation, site inspections (scheduled and unscheduled), citation issuance, fatality investigation. Focus areas: fall protection, scaffolding, excavation, crane operations, struck-by hazards. Active during Construction."
+        },
+        {
+          "id": "org-zoning-planning",
+          "name": "Zoning / Planning Authority",
+          "desc": "Local government agency controlling land use, density, setbacks, and project approvals — zoning compliance review, variance review, site plan approval, community review facilitation. Zoning approval is a prerequisite for building permit. Active during Preconstruction."
+        }
+      ]
+    },
+    {
+      "name": "Financial Institutions",
+      "color": "#34acf0",
+      "nodes": [
+        {
+          "id": "org-const-lender",
+          "name": "Construction Lender",
+          "desc": "Bank or financial institution providing construction financing — construction loan funding, draw review, progress inspection (lender's inspector), compliance monitoring. Lender draws tied to percent complete — monthly pay applications scrutinized. Active across all phases (funding drives everything). Loan agreement with owner/developer."
+        },
+        {
+          "id": "org-surety-bonding",
+          "name": "Surety / Bonding Company",
+          "desc": "Insurance company issuing performance and payment bonds guaranteeing contractor's obligations. Bonds protect owner (performance bond) and subcontractors (payment bond). Public projects require bonds by law (Miller Act federal, Little Miller Act state). Active from Procurement through Closeout. Bond agreement with GC."
+        },
+        {
+          "id": "org-insurance-broker",
+          "name": "Insurance Broker / Carrier",
+          "desc": "Companies providing construction insurance — general liability, workers' comp, builders risk, professional liability, umbrella, OCIP/CCIP wrap-up programs. Certificate of insurance collection is a major administrative task. Active across all phases. Insurance policies held by each project party."
+        }
+      ]
+    },
+    {
+      "name": "Utilities",
+      "color": "#45a4f6",
+      "nodes": [
+        {
+          "id": "org-electric-utility",
+          "name": "Electric Utility",
+          "desc": "Local electric utility company providing permanent electrical service — service design review, transformer supply/placement, metering, permanent connection, energization. Utility coordination starts early — transformer location, service size, and meter configuration affect design. Active during Preconstruction (service design) and Construction (connection). Permanent power energization is a major milestone."
+        },
+        {
+          "id": "org-gas-utility",
+          "name": "Gas Utility",
+          "desc": "Local gas utility providing natural gas service — service design review, gas main extension (if required), meter installation, service connection. Gas service for HVAC, domestic hot water, commercial kitchen. Active during Preconstruction and Construction. Service connection typically later in construction."
+        },
+        {
+          "id": "org-water-sewer",
+          "name": "Water / Sewer Authority",
+          "desc": "Municipal authority providing domestic water and sanitary sewer service — service size determination, tap/connection permits, meter installation, water quality testing. Water service affects fire protection (hydrant flow, fire pump supply). Active during Preconstruction and Construction. Sanitary sewer capacity can limit project density."
+        },
+        {
+          "id": "org-telecom-internet",
+          "name": "Telecom / Internet Provider",
+          "desc": "Companies providing data, voice, and internet service — service design, conduit and fiber routing, equipment room requirements, service activation. Multiple carriers may serve the building. Active during Preconstruction and Construction. Service agreement may require conduit and room provision by contractor."
+        }
+      ]
+    },
+    {
+      "name": "Standard Measures",
+      "color": "#569bfb",
+      "nodes": [
+        {
+          "id": "org-sub-count-per",
+          "name": "Subcontractor Count per Project",
+          "desc": "Total number of distinct subcontractors and suppliers engaged on a project — measured from awarded subcontracts and purchase orders. Indicates project complexity and coordination burden."
+        },
+        {
+          "id": "org-trade-coverage",
+          "name": "Trade Coverage Rate",
+          "desc": "Percentage of project scope covered by contracted subcontractors vs. remaining unawarded scope — awarded value / estimated total value × 100. Tracks buyout progress during procurement."
+        },
+        {
+          "id": "org-vendor-insurance",
+          "name": "Vendor Insurance Compliance Rate",
+          "desc": "Percentage of project vendors with current, compliant insurance certificates on file — compliant vendors / total vendors × 100. Tracks risk exposure from uninsured or underinsured trades."
+        },
+        {
+          "id": "org-sub-safety",
+          "name": "Subcontractor Safety Incident Rate",
+          "desc": "OSHA recordable incident rate per subcontractor — (number of recordable incidents × 200,000) / hours worked. Enables comparison of safety performance across trades and companies."
+        },
+        {
+          "id": "org-design-team",
+          "name": "Design Team Responsiveness",
+          "desc": "Average days for design team members to respond to RFIs and review submittals — measured from RFI creation to response and submittal submission to review completion. Indicates design team engagement quality."
+        },
+        {
+          "id": "org-chg-order",
+          "name": "Change Order Dispute Rate by Trade",
+          "desc": "Percentage of change orders disputed or rejected by trade — disputed COs / total COs per trade × 100. Identifies which trade relationships generate the most commercial friction."
+        }
+      ]
+    },
+    {
+      "name": "Derived Analytics",
+      "color": "#3693d8",
+      "nodes": [
+        {
+          "id": "org-trade-quality",
+          "name": "Trade Partner Quality Score",
+          "procore": "core.project_vendors",
+          "desc": "Composite quality score for subcontractors derived from multiple quality and safety signals tied to project_vendors. Inputs: observation deficiency rate (observations assigned to vendor / total vendor scope), inspection deficiency rate (deficient items on vendor work / total inspected items), punch item density (punch items attributed to vendor / vendor contract value), safety observation frequency (safety findings assigned to vendor / vendor labor hours). Each input is normalized to a 0-100 scale using percentile ranking within the vendor trade classification. Combined score enables trade partner comparison within and across projects for prequalification and performance reviews."
+        }
+      ]
+    }
+  ]
+}

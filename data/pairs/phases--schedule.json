@@ -1,0 +1,558 @@
+{
+  "source": "phases",
+  "target": "schedule",
+  "edges": [
+    [
+      "sch-detail-activity",
+      "ph-steel",
+      "SCHEDULES"
+    ],
+    [
+      "sch-detail-activity",
+      "ph-hvac-dist",
+      "SCHEDULES"
+    ],
+    [
+      "sch-detail-activity",
+      "ph-punch",
+      "SCHEDULES"
+    ],
+    [
+      "sch-summary-activity",
+      "ph-design",
+      "GROUPS"
+    ],
+    [
+      "sch-summary-activity",
+      "ph-contract-close",
+      "GROUPS"
+    ],
+    [
+      "sch-milestone",
+      "ph-permit",
+      "GATES"
+    ],
+    [
+      "sch-milestone",
+      "ph-roofing",
+      "GATES"
+    ],
+    [
+      "sch-milestone",
+      "ph-final-insp",
+      "GATES"
+    ],
+    [
+      "sch-milestone",
+      "ph-contract-close",
+      "GATES"
+    ],
+    [
+      "sch-activity-identif",
+      "ph-safety-orient",
+      "IDENTIFIES"
+    ],
+    [
+      "sch-activity-identif",
+      "ph-masonry",
+      "IDENTIFIES"
+    ],
+    [
+      "sch-duration-progres",
+      "ph-fabrication",
+      "TRACKS"
+    ],
+    [
+      "sch-duration-progres",
+      "ph-curtainwall",
+      "TRACKS"
+    ],
+    [
+      "sch-activity-codes",
+      "ph-elec-ri",
+      "CLASSIFIES"
+    ],
+    [
+      "sch-activity-codes",
+      "ph-fp-ri",
+      "CLASSIFIES"
+    ],
+    [
+      "sch-relationship-typ",
+      "ph-foundations",
+      "SEQUENCES"
+    ],
+    [
+      "sch-relationship-typ",
+      "ph-drywall",
+      "SEQUENCES"
+    ],
+    [
+      "sch-lag-lead-time",
+      "ph-elev-conc",
+      "OFFSETS"
+    ],
+    [
+      "sch-lag-lead-time",
+      "ph-paint",
+      "OFFSETS"
+    ],
+    [
+      "sch-dependency-class",
+      "ph-submittals",
+      "CONSTRAINS"
+    ],
+    [
+      "sch-dependency-class",
+      "ph-delivery",
+      "CONSTRAINS"
+    ],
+    [
+      "sch-open-ends",
+      "ph-asbuilt",
+      "FLAGS"
+    ],
+    [
+      "sch-open-ends",
+      "ph-training",
+      "FLAGS"
+    ],
+    [
+      "sch-logic-density",
+      "ph-abv-ceil",
+      "VALIDATES"
+    ],
+    [
+      "sch-logic-density",
+      "ph-stairs",
+      "VALIDATES"
+    ],
+    [
+      "sch-work-calendar",
+      "ph-earthwork",
+      "GOVERNS"
+    ],
+    [
+      "sch-work-calendar",
+      "ph-roofing",
+      "GOVERNS"
+    ],
+    [
+      "sch-schedule-constra",
+      "ph-site-setup",
+      "CONSTRAINS"
+    ],
+    [
+      "sch-schedule-constra",
+      "ph-slab",
+      "CONSTRAINS"
+    ],
+    [
+      "sch-calculated-dates",
+      "ph-curtainwall",
+      "FORECASTS"
+    ],
+    [
+      "sch-calculated-dates",
+      "ph-contract-close",
+      "FORECASTS"
+    ],
+    [
+      "sch-data-date",
+      "ph-steel",
+      "STATUSES"
+    ],
+    [
+      "sch-baseline-dates",
+      "ph-foundations",
+      "BASELINES"
+    ],
+    [
+      "sch-baseline-dates",
+      "ph-contract-close",
+      "BASELINES"
+    ],
+    [
+      "sch-float-slack",
+      "ph-hvac-dist",
+      "BUFFERS"
+    ],
+    [
+      "sch-critical-path",
+      "ph-steel",
+      "DRIVES"
+    ],
+    [
+      "sch-critical-path",
+      "ph-contract-close",
+      "DRIVES"
+    ],
+    [
+      "sch-path-analysis",
+      "ph-elec-ri",
+      "ANALYZES"
+    ],
+    [
+      "sch-earned-schedule",
+      "ph-punch",
+      "MEASURES"
+    ],
+    [
+      "sch-baseline-schedul",
+      "ph-precon-plan",
+      "BASELINE FOR"
+    ],
+    [
+      "sch-baseline-schedul",
+      "ph-steel",
+      "BASELINE FOR"
+    ],
+    [
+      "sch-schedule-update",
+      "ph-framing",
+      "UPDATES"
+    ],
+    [
+      "sch-schedule-update",
+      "ph-punch",
+      "UPDATES"
+    ],
+    [
+      "sch-look-ahead",
+      "ph-drywall",
+      "PLANS"
+    ],
+    [
+      "sch-look-ahead",
+      "ph-flooring",
+      "PLANS"
+    ],
+    [
+      "sch-look-ahead",
+      "ph-ceilings",
+      "PLANS"
+    ],
+    [
+      "sch-recovery-schedul",
+      "ph-steel",
+      "RECOVERS"
+    ],
+    [
+      "sch-recovery-schedul",
+      "ph-contract-close",
+      "RECOVERS"
+    ],
+    [
+      "sch-as-built",
+      "ph-foundations",
+      "RECORDS"
+    ],
+    [
+      "sch-as-built",
+      "ph-contract-close",
+      "RECORDS"
+    ],
+    [
+      "sch-labor-loading",
+      "ph-framing",
+      "LOADS"
+    ],
+    [
+      "sch-equip-loading",
+      "ph-demo",
+      "LOADS"
+    ],
+    [
+      "sch-cost-loading",
+      "ph-steel",
+      "COST LOADS"
+    ],
+    [
+      "sch-cost-loading",
+      "ph-hvac-dist",
+      "COST LOADS"
+    ],
+    [
+      "sch-resource-levelin",
+      "ph-abv-ceil",
+      "LEVELS"
+    ],
+    [
+      "sch-resource-levelin",
+      "ph-paint",
+      "LEVELS"
+    ],
+    [
+      "sch-delay-class",
+      "ph-earthwork",
+      "CATEGORIZES"
+    ],
+    [
+      "sch-delay-class",
+      "ph-delivery",
+      "CATEGORIZES"
+    ],
+    [
+      "sch-time-impact",
+      "ph-steel",
+      "ANALYZES IMPACT ON"
+    ],
+    [
+      "sch-time-impact",
+      "ph-contract-close",
+      "ANALYZES IMPACT ON"
+    ],
+    [
+      "sch-retrospective-de",
+      "ph-foundations",
+      "RECONSTRUCTS"
+    ],
+    [
+      "sch-retrospective-de",
+      "ph-contract-close",
+      "RECONSTRUCTS"
+    ],
+    [
+      "sch-time-extension",
+      "ph-earthwork",
+      "EXTENDS"
+    ],
+    [
+      "sch-time-extension",
+      "ph-contract-close",
+      "EXTENDS"
+    ],
+    [
+      "sch-acceleration",
+      "ph-curtainwall",
+      "ACCELERATES"
+    ],
+    [
+      "sch-acceleration",
+      "ph-punch",
+      "ACCELERATES"
+    ],
+    [
+      "sch-dcma-14-point",
+      "ph-precon-plan",
+      "ASSESSES"
+    ],
+    [
+      "sch-specification-co",
+      "ph-foundations",
+      "VALIDATES"
+    ],
+    [
+      "sch-critical-path-2",
+      "ph-contract-close",
+      "INDEXES"
+    ],
+    [
+      "sch-schedule-levels",
+      "ph-precon-plan",
+      "TIERS"
+    ],
+    [
+      "sch-cpm-tool",
+      "ph-steel",
+      "IMPORTS"
+    ],
+    [
+      "sch-schedule-field",
+      "ph-earthwork",
+      "LINKS TO FIELD"
+    ],
+    [
+      "sch-schedule-field",
+      "ph-framing",
+      "LINKS TO FIELD"
+    ],
+    [
+      "sch-schedule-chg",
+      "ph-steel",
+      "TRACKS CHANGES IN"
+    ],
+    [
+      "sch-schedule-chg",
+      "ph-contract-close",
+      "TRACKS CHANGES IN"
+    ],
+    [
+      "sch-last-planner",
+      "ph-framing",
+      "COORDINATES"
+    ],
+    [
+      "sch-last-planner",
+      "ph-flooring",
+      "COORDINATES"
+    ],
+    [
+      "sch-takt-time",
+      "ph-drywall",
+      "PACES"
+    ],
+    [
+      "sch-takt-time",
+      "ph-casework",
+      "PACES"
+    ],
+    [
+      "sch-linear-schedulin",
+      "ph-site-util",
+      "SEQUENCES LINEARLY"
+    ],
+    [
+      "sch-linear-schedulin",
+      "ph-foundations",
+      "SEQUENCES LINEARLY"
+    ],
+    [
+      "sch-4d-5d-bim",
+      "ph-steel",
+      "SIMULATES"
+    ],
+    [
+      "sch-4d-5d-bim",
+      "ph-curtainwall",
+      "SIMULATES"
+    ],
+    [
+      "sch-schedule-perf",
+      "ph-steel",
+      "BENCHMARKS"
+    ],
+    [
+      "sch-schedule-perf",
+      "ph-punch",
+      "BENCHMARKS"
+    ],
+    [
+      "sch-baseline-executi",
+      "ph-foundations",
+      "BENCHMARKS"
+    ],
+    [
+      "sch-float-erosion",
+      "ph-startup",
+      "MONITORS"
+    ],
+    [
+      "sch-milestone-adhere",
+      "ph-contract-close",
+      "SCORES"
+    ],
+    [
+      "sch-critical-activit",
+      "ph-foundations",
+      "SCORES"
+    ],
+    [
+      "sch-percent-plan",
+      "ph-framing",
+      "SCORES"
+    ],
+    [
+      "sch-out-sequence",
+      "ph-plumb-ri",
+      "FLAGS"
+    ],
+    [
+      "sch-schedule-health",
+      "ph-precon-plan",
+      "SCORES"
+    ],
+    [
+      "ph-submittals",
+      "sch-lag-lead-time",
+      "LEAD TIME FOR"
+    ],
+    [
+      "ph-fabrication",
+      "sch-lag-lead-time",
+      "LEAD TIME FOR"
+    ],
+    [
+      "ph-precon-plan",
+      "sch-baseline-schedul",
+      "PRODUCES"
+    ],
+    [
+      "ph-punch",
+      "sch-milestone",
+      "MILESTONES"
+    ],
+    [
+      "ph-contract-close",
+      "sch-milestone",
+      "MILESTONES"
+    ],
+    [
+      "ph-transition",
+      "sch-milestone",
+      "MILESTONES"
+    ],
+    [
+      "ph-seasonal-cx",
+      "sch-work-calendar",
+      "GOVERNED BY"
+    ],
+    [
+      "ph-warranty",
+      "sch-duration-progres",
+      "DURATIONS FOR"
+    ]
+  ],
+  "verbGlossary": {
+    "ACCELERATES": "{source} compression applied to shorten {target} through overtime, additional crews, or re-sequencing",
+    "ANALYZES": "{source}evaluate near-critical and longest-path alternatives within {target}",
+    "ANALYZES IMPACT ON": "{source}quantifies how a delay event shifts the projected completion of {target}",
+    "ASSESSES": "{source}schedule quality check evaluates logic, float, and constraint health within {target}",
+    "BASELINES": "{source}approved start and finish targets for {target} against which progress is measured",
+    "BASELINE FOR": "{source}approved baseline schedule establishes the original planned durations and sequences for {target}",
+    "BENCHMARKS": "{source} performance metrics (SPI, BEI) compare actual phase progress against planned progress ratios",
+    "BUFFERS": "Float or slack time available within {target} before it impacts the overall project completion date",
+    "CATEGORIZES": "{source}assigns a delay within {target} as excusable, compensable, concurrent, or non-excusable",
+    "CLASSIFIES": "{target} codes tag schedule activities to a specific phase or area for filtering and reporting",
+    "CONSTRAINS": "{source}constraint or dependency restricts when {target} can start or finish",
+    "COORDINATES": "{source}Planner System facilitates collaborative weekly work planning among trades active in {target}",
+    "COST LOADS": "Cost loading assigns dollar values to activities within {target} for cash flow forecasting and earned value",
+    "DRIVES": "Critical path activities within {target} directly control the project completion date with zero float",
+    "DURATIONS FOR": "{source}define the planned calendar or working days allocated to complete {target}",
+    "EXTENDS": "{source}formally adds duration to {target} due to owner-directed or excusable delays",
+    "FLAGS": "{source}schedule anomalies such as open ends or out-of-sequence progress within {target}",
+    "FORECASTS": "Calculated early and late dates project when {target} will start and finish based on current schedule logic",
+    "GATES": "{source} marks a required checkpoint or approval point between phases that must be achieved before proceeding",
+    "GOVERNED BY": "{source} follows work calendar rules (workdays, holidays, weather windows) that control when it can proceed",
+    "GOVERNS": "{source}control when productive work can occur during {target}",
+    "GROUPS": "{source}levels roll up detail activities into phase-level groupings for management reporting",
+    "IDENTIFIES": "{source}assigns unique IDs and descriptions to activities within {target}",
+    "IMPORTS": "CPM tool integration brings detailed phase {target}s from P6 or MS Project into the project controls platform",
+    "INDEXES": "{target} Length Index measures phase schedule efficiency as the ratio of critical path to total float plus critical path",
+    "LEAD TIME FOR": "Submittal approval and fabrication lead times define the procurement duration that must precede {target} start",
+    "LEVELS": "{source}leveling adjusts activity timing within {target} to resolve labor or equipment over-allocation",
+    "LINKS TO FIELD": "{source}-to-field linkage connects planned phase activities to daily log entries for plan-vs-actual tracking",
+    "LOADS": "{source}assigns crew sizes and equipment counts to activities within {target}",
+    "MEASURES": "Earned {target} analysis converts schedule variance into time units to measure phase progress objectively",
+    "MILESTONES": "{source} completion creates a contractual or operational milestone in {target}",
+    "MONITORS": "{target} erosion rate tracking watches how phase buffer time is consumed across successive schedule updates",
+    "OFFSETS": "{source}create mandatory wait periods or overlaps between activities in adjacent phases",
+    "PACES": "{source}planning sets a fixed production rate per zone to flow trades through {target} in continuous sequence",
+    "PLANS": "{source}schedule details the near-term work plan for {target} at a weekly or bi-weekly granularity",
+    "PRODUCES": "{source}planning produces the initial {target} that governs all downstream phase sequencing",
+    "RECONSTRUCTS": "Retrospective delay analysis rebuilds the as-planned vs as-built {target} to attribute phase delays after the fact",
+    "RECORDS": "{source}schedule captures the actual dates and durations for {target} as a permanent project record",
+    "RECOVERS": "{source}schedule re-sequences or compresses activities within {target} to regain lost time",
+    "SCHEDULES": "{source}define the planned start, finish, and duration for work within a specific construction phase",
+    "SCORES": "{source} metrics (milestone adherence, PPC, health score, critical {target} ratio) produce a quantitative rating of phase performance",
+    "SEQUENCES": "Relationship types (FS, SS, FF, SF) define the logical execution order of activities within and between phases",
+    "SEQUENCES LINEARLY": "{source}plan repetitive phase work along a location axis (stations, floors, zones)",
+    "SIMULATES": "4D/5D BIM scheduling animates the construction sequence of {target} to visualize sequencing and cost over time",
+    "STATUSES": "The data date marks the point-in-time through which phase progress has been recorded in {target}",
+    "TIERS": "{source} levels (L1 summary through L4 detail) provide progressively finer views of phase activities",
+    "TRACKS": "{source}tracking monitors actual vs planned time consumption within {target}",
+    "TRACKS CHANGES IN": "{source} change tracking captures date shifts, duration changes, and logic modifications within {target}",
+    "UPDATES": "{source} updates record actual start, actual finish, and remaining duration for activities within {target}",
+    "VALIDATES": "{source}checks verify that schedule logic density or specification compliance meets contractual requirements for {target}"
+  }
+}

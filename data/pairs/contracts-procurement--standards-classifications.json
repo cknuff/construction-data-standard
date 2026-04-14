@@ -1,0 +1,175 @@
+{
+  "source": "contracts-procurement",
+  "target": "standards-classifications",
+  "edges": [
+    [
+      "cp-scope-work",
+      "sc-specification-se",
+      "SCOPED BY"
+    ],
+    [
+      "cp-scope-work",
+      "sc-masterformat",
+      "ORGANIZED BY"
+    ],
+    [
+      "cp-bid-package",
+      "sc-masterformat",
+      "ORGANIZED BY"
+    ],
+    [
+      "cp-bid-package",
+      "sc-std-cost-code",
+      "CODED BY"
+    ],
+    [
+      "cp-subcontract",
+      "sc-specification-se",
+      "INCORPORATES"
+    ],
+    [
+      "cp-subcontract",
+      "sc-wbs-code",
+      "BILLED AGAINST"
+    ],
+    [
+      "cp-purchase-order",
+      "sc-std-cost-code",
+      "CODED BY"
+    ],
+    [
+      "cp-purchase-order",
+      "sc-budget-code",
+      "ALLOCATED AGAINST"
+    ],
+    [
+      "cp-prime-contract",
+      "sc-aia-contract",
+      "GOVERNED BY"
+    ],
+    [
+      "cp-prime-contract",
+      "sc-dlvy-method",
+      "STRUCTURED PER"
+    ],
+    [
+      "cp-gen-cond",
+      "sc-aia-contract",
+      "GOVERNED BY"
+    ],
+    [
+      "cp-gen-cond",
+      "sc-international-bu",
+      "COMPLIES WITH"
+    ],
+    [
+      "cp-allowance",
+      "sc-wbs-code",
+      "TRACKED BY"
+    ],
+    [
+      "cp-retainage-terms",
+      "sc-aace-cost",
+      "BENCHMARKED TO"
+    ],
+    [
+      "cp-liquidated-damag",
+      "sc-aia-contract",
+      "ENFORCED PER"
+    ],
+    [
+      "cp-req-qualificatio",
+      "sc-osha-recordkeepi",
+      "VERIFIED AGAINST"
+    ],
+    [
+      "cp-prequalification",
+      "sc-osha-hazard",
+      "SCREENED AGAINST"
+    ],
+    [
+      "cp-insurance-cert",
+      "sc-nfpa-stds",
+      "COMPLIES WITH"
+    ],
+    [
+      "cp-builders-risk",
+      "sc-international-bu",
+      "GOVERNED BY"
+    ],
+    [
+      "cp-warranty",
+      "sc-specification-se",
+      "SCOPED BY"
+    ],
+    [
+      "cp-warranty",
+      "sc-uniformat",
+      "TAGGED TO"
+    ],
+    [
+      "cp-closeout-doc",
+      "sc-leed-certificati",
+      "COMPLIES WITH"
+    ],
+    [
+      "cp-closeout-doc",
+      "sc-energy-code-stds",
+      "VERIFIED AGAINST"
+    ],
+    [
+      "cp-prevailing-wage",
+      "sc-std-cost-code",
+      "CLASSIFIED UNDER"
+    ],
+    [
+      "cp-diversity-dbe",
+      "sc-masterformat",
+      "SEGMENTED BY"
+    ],
+    [
+      "cp-bid-evaluation",
+      "sc-aace-cost",
+      "BENCHMARKED TO"
+    ],
+    [
+      "cp-chg-order-rate",
+      "sc-wbs-code",
+      "SEGMENTED BY"
+    ],
+    [
+      "cp-chg-order-rate",
+      "sc-masterformat-map",
+      "SEGMENTED BY"
+    ],
+    [
+      "cp-award-cycle-time",
+      "sc-dlvy-method",
+      "SEGMENTED BY"
+    ],
+    [
+      "cp-insurance-comp",
+      "sc-safety-class",
+      "BENCHMARKED TO"
+    ]
+  ],
+  "verbGlossary": {
+    "SCOPED BY": "{source} scope or warranty coverage is defined in terms of {target} divisions (e.g., subcontract scope of work scoped by specification sections, warranty scoped to Division 07 roofing specification)",
+    "ORGANIZED BY": "{source} or scope document is structured according to {target} divisions (e.g., bid package broken into MasterFormat divisions for trade separation)",
+    "CODED BY": "Line items in a procurement or contract document are assigned classification codes from {target} (e.g., purchase order line items coded by standard cost codes)",
+    "INCORPORATES": "{source} instrument formally includes {target} requirements by reference (e.g., subcontract incorporates specification sections as contract exhibits)",
+    "BILLED AGAINST": "{source} payment applications and invoices reference {target} breakdown structure (e.g., subcontractor progress billing against WBS codes)",
+    "ALLOCATED AGAINST": "{source}cost on a purchase order or contract is mapped to {target} structure for cost tracking (e.g., material PO allocated against budget codes)",
+    "GOVERNED BY": "{source} instrument or term is regulated by {target} published form or code (e.g., prime contract governed by AIA A201 general conditions, general conditions governed by IBC fire separation requirements)",
+    "STRUCTURED PER": "{source} or procurement approach follows {target} prescribed delivery framework (e.g., prime contract structured per design-build or CM-at-risk delivery method classification)",
+    "COMPLIES WITH": "{source} document or insurance certificate confirms adherence to {target} or standard (e.g., general conditions comply with IBC accessibility requirements, closeout package complies with LEED documentation requirements)",
+    "BENCHMARKED TO": "{source} metric or term is compared against {target} published industry norms (e.g., retainage percentage benchmarked to AACE recommended practices, bid evaluation benchmarked to AACE cost estimate classifications)",
+    "ENFORCED PER": "{source} penalty or remedy clause is administered following {target} prescribed procedures (e.g., liquidated damages enforced per AIA contract document provisions)",
+    "VERIFIED AGAINST": "{source} is validated against {target} compliance requirements (e.g., subcontractor qualification verified against OSHA recordkeeping history, closeout verified against energy code commissioning requirements)",
+    "SCREENED AGAINST": "{source}is evaluated against {target} safety or hazard criteria during prequalification (e.g., contractor safety record screened against OSHA hazard categories and EMR thresholds)",
+    "TAGGED TO": "{source} scope item is linked to {target} for element-level traceability (e.g., warranty item tagged to a UniFormat building element for tracking coverage by system)",
+    "TRACKED BY": "{source} allowance or contingency is monitored over time using {target} breakdown structure (e.g., allowance drawdowns tracked by WBS code)",
+    "CLASSIFIED UNDER": "{source}document is categorized using {target} taxonomy (e.g., prevailing wage certification classified under standard cost codes for labor rate tracking)",
+    "SEGMENTED BY": "{source} or procurement metric is broken down by {target} for comparative analysis (e.g., change order rate segmented by WBS code to identify problem trades, DBE participation segmented by MasterFormat division)"
+  }
+}

@@ -1,0 +1,499 @@
+{
+  "source": "field-operations",
+  "target": "schedule",
+  "edges": [
+    [
+      "fo-scheduled-work-2",
+      "sch-detail-activity",
+      "LINKS TO"
+    ],
+    [
+      "fo-scheduled-work",
+      "sch-detail-activity",
+      "TRACKS PROGRESS ON"
+    ],
+    [
+      "fo-scheduled-work",
+      "sch-look-ahead",
+      "VALIDATES AGAINST"
+    ],
+    [
+      "fo-daily-log-header",
+      "sch-detail-activity",
+      "REPORTS ON"
+    ],
+    [
+      "fo-daily-log-header",
+      "sch-data-date",
+      "RECORDED ON"
+    ],
+    [
+      "fo-daily-log-note",
+      "sch-detail-activity",
+      "DOCUMENTS PROGRESS ON"
+    ],
+    [
+      "fo-daily-log-note",
+      "sch-milestone",
+      "REPORTS STATUS OF"
+    ],
+    [
+      "fo-daily-log-note",
+      "sch-delay-class",
+      "DESCRIBES CAUSE OF"
+    ],
+    [
+      "fo-manpower-log",
+      "sch-detail-activity",
+      "LOGS LABOR ON"
+    ],
+    [
+      "fo-manpower-log",
+      "sch-labor-loading",
+      "VALIDATES AGAINST"
+    ],
+    [
+      "fo-manpower-log",
+      "sch-look-ahead",
+      "CONFIRMS STAFFING FOR"
+    ],
+    [
+      "fo-manpower-log",
+      "sch-resource-levelin",
+      "INFORMS"
+    ],
+    [
+      "fo-crew-crew",
+      "sch-detail-activity",
+      "ASSIGNED TO"
+    ],
+    [
+      "fo-crew-crew",
+      "sch-takt-time",
+      "ROTATES THROUGH"
+    ],
+    [
+      "fo-timecard-entry",
+      "sch-detail-activity",
+      "LOGS HOURS ON"
+    ],
+    [
+      "fo-timecard-entry",
+      "sch-labor-loading",
+      "ACTUALS COMPARED TO"
+    ],
+    [
+      "fo-timecard-entry",
+      "sch-earned-schedule",
+      "FEEDS ACTUALS TO"
+    ],
+    [
+      "fo-equip-log-entry",
+      "sch-detail-activity",
+      "LOGS EQUIPMENT ON"
+    ],
+    [
+      "fo-equip-log-entry",
+      "sch-equip-loading",
+      "VALIDATES AGAINST"
+    ],
+    [
+      "fo-equip-master",
+      "sch-equip-loading",
+      "SCHEDULED UNDER"
+    ],
+    [
+      "fo-equip-utilizatio",
+      "sch-equip-loading",
+      "MEASURES UTILIZATION OF"
+    ],
+    [
+      "fo-delay-log-entry",
+      "sch-detail-activity",
+      "DELAYS"
+    ],
+    [
+      "fo-delay-log-entry",
+      "sch-delay-class",
+      "CLASSIFIED UNDER"
+    ],
+    [
+      "fo-delay-log-entry",
+      "sch-critical-path",
+      "DISRUPTS"
+    ],
+    [
+      "fo-delay-log-entry",
+      "sch-time-impact",
+      "TRIGGERS"
+    ],
+    [
+      "fo-delay-log-entry",
+      "sch-time-extension",
+      "SUPPORTS CLAIM FOR"
+    ],
+    [
+      "fo-delay-log-entry",
+      "sch-float-slack",
+      "CONSUMES"
+    ],
+    [
+      "fo-delay-log-entry",
+      "sch-retrospective-de",
+      "EVIDENCES"
+    ],
+    [
+      "fo-delay-log-entry",
+      "sch-milestone",
+      "PUSHES"
+    ],
+    [
+      "fo-delay-log-entry",
+      "sch-recovery-schedul",
+      "TRIGGERS NEED FOR"
+    ],
+    [
+      "fo-weather-log",
+      "sch-detail-activity",
+      "SUSPENDS WORK ON"
+    ],
+    [
+      "fo-weather-log",
+      "sch-work-calendar",
+      "MARKS NON-WORK DAY ON"
+    ],
+    [
+      "fo-weather-delay",
+      "sch-float-erosion",
+      "CONTRIBUTES TO"
+    ],
+    [
+      "fo-delay-frequency",
+      "sch-schedule-health",
+      "DEGRADES"
+    ],
+    [
+      "fo-delay-frequency",
+      "sch-critical-activit",
+      "INCREASES"
+    ],
+    [
+      "fo-productivity-log",
+      "sch-detail-activity",
+      "MEASURES OUTPUT ON"
+    ],
+    [
+      "fo-productivity-log",
+      "sch-duration-progres",
+      "UPDATES PROGRESS OF"
+    ],
+    [
+      "fo-productivity-log",
+      "sch-earned-schedule",
+      "FEEDS PERFORMANCE TO"
+    ],
+    [
+      "fo-quantity-log",
+      "sch-detail-activity",
+      "TRACKS QUANTITIES ON"
+    ],
+    [
+      "fo-quantity-log",
+      "sch-duration-progres",
+      "ADVANCES"
+    ],
+    [
+      "fo-quantity-log",
+      "sch-cost-loading",
+      "VALIDATES QUANTITIES AGAINST"
+    ],
+    [
+      "fo-actual-productio",
+      "sch-duration-progres",
+      "MEASURES COMPLETION OF"
+    ],
+    [
+      "fo-budgeted-product",
+      "sch-baseline-schedul",
+      "PLANNED UNDER"
+    ],
+    [
+      "fo-field-productivi",
+      "sch-schedule-perf",
+      "DRIVES"
+    ],
+    [
+      "fo-field-productivi",
+      "sch-baseline-executi",
+      "MEASURED AGAINST"
+    ],
+    [
+      "fo-dlvy-log-entry",
+      "sch-detail-activity",
+      "ENABLES"
+    ],
+    [
+      "fo-dlvy-log-entry",
+      "sch-schedule-constra",
+      "SATISFIES"
+    ],
+    [
+      "fo-mat-shipment",
+      "sch-detail-activity",
+      "ENABLES START OF"
+    ],
+    [
+      "fo-mat-receipt",
+      "sch-look-ahead",
+      "CONFIRMS READINESS FOR"
+    ],
+    [
+      "fo-plan-revision",
+      "sch-schedule-update",
+      "TRIGGERS REVISION OF"
+    ],
+    [
+      "fo-plan-revision",
+      "sch-schedule-chg",
+      "TRIGGERS CHANGE IN"
+    ],
+    [
+      "fo-safety-violation",
+      "sch-detail-activity",
+      "STOPS WORK ON"
+    ],
+    [
+      "fo-accident-log",
+      "sch-detail-activity",
+      "SHUTS DOWN"
+    ],
+    [
+      "fo-accident-log",
+      "sch-time-impact",
+      "TRIGGERS"
+    ],
+    [
+      "fo-daily-log-insp",
+      "sch-detail-activity",
+      "GATES"
+    ],
+    [
+      "fo-daily-log-insp",
+      "sch-milestone",
+      "REQUIRED BEFORE"
+    ],
+    [
+      "fo-const-report",
+      "sch-schedule-update",
+      "SUMMARIZES PROGRESS FOR"
+    ],
+    [
+      "fo-const-report",
+      "sch-milestone",
+      "TRACKS COMPLETION OF"
+    ],
+    [
+      "fo-t-m-ticket",
+      "sch-detail-activity",
+      "LOGGED AGAINST"
+    ],
+    [
+      "fo-t-m-labor-entry",
+      "sch-labor-loading",
+      "ADDS UNPLANNED HOURS TO"
+    ],
+    [
+      "fo-assignment",
+      "sch-look-ahead",
+      "SCHEDULED ON"
+    ],
+    [
+      "fo-workforce-req",
+      "sch-labor-loading",
+      "REQUESTS LABOR FOR"
+    ],
+    [
+      "fo-workforce-req",
+      "sch-resource-levelin",
+      "CONSTRAINED BY"
+    ],
+    [
+      "fo-daily-report",
+      "sch-look-ahead",
+      "DISTRIBUTED WITH"
+    ],
+    [
+      "fo-daily-log-2",
+      "sch-schedule-health",
+      "CORRELATES WITH"
+    ],
+    [
+      "fo-plan-percent",
+      "sch-percent-plan",
+      "MIRRORS"
+    ],
+    [
+      "fo-plan-percent",
+      "sch-last-planner",
+      "MEASURES RELIABILITY OF"
+    ],
+    [
+      "fo-peak-daily",
+      "sch-resource-levelin",
+      "VALIDATES PEAK OF"
+    ],
+    [
+      "fo-average-daily",
+      "sch-labor-loading",
+      "BENCHMARKS AGAINST"
+    ],
+    [
+      "sch-schedule-field",
+      "fo-scheduled-work-2",
+      "ENABLES"
+    ],
+    [
+      "sch-schedule-chg",
+      "fo-delay-log-entry",
+      "TRACED BACK TO"
+    ],
+    [
+      "sch-as-built",
+      "fo-daily-log-header",
+      "RECONSTRUCTED FROM"
+    ],
+    [
+      "sch-retrospective-de",
+      "fo-weather-log",
+      "REFERENCES"
+    ],
+    [
+      "sch-baseline-schedul",
+      "fo-budgeted-product",
+      "SETS TARGETS FOR"
+    ],
+    [
+      "sch-acceleration",
+      "fo-equip-log-entry",
+      "DEMANDS ADDITIONAL"
+    ],
+    [
+      "sch-milestone-adhere",
+      "fo-daily-log-insp",
+      "GATED BY"
+    ],
+    [
+      "sch-out-sequence",
+      "fo-daily-log-note",
+      "EXPLAINED IN"
+    ],
+    [
+      "sch-linear-schedulin",
+      "fo-productivity-log",
+      "CALIBRATED BY"
+    ],
+    [
+      "sch-cpm-tool",
+      "fo-scheduled-work-2",
+      "EXPORTS TO"
+    ],
+    [
+      "sch-4d-5d-bim",
+      "fo-quantity-log",
+      "COMPARED TO"
+    ],
+    [
+      "sch-look-ahead",
+      "fo-workforce-req",
+      "DRIVES"
+    ],
+    [
+      "sch-detail-activity",
+      "fo-actual-productio",
+      "PRODUCES"
+    ],
+    [
+      "sch-milestone",
+      "fo-actual-productio",
+      "GATES BILLING ON"
+    ]
+  ],
+  "verbGlossary": {
+    "LINKS TO": "Direct foreign-key or {target}-ID linkage between a field record and a schedule entity",
+    "TRACKS PROGRESS ON": "{source} entry records completion status or work-in-place against {target}d activity",
+    "VALIDATES AGAINST": "{source} actual is compared to the planned {target} value to check conformance",
+    "REPORTS ON": "{source} or field report documents the status of {target} element",
+    "RECORDED ON": "{source} entry is time-stamped relative to {target} data date for period alignment",
+    "DOCUMENTS PROGRESS ON": "{source}captures work accomplished on {target}d activity",
+    "REPORTS STATUS OF": "{source} entry communicates the current state of {target} or activity",
+    "DESCRIBES CAUSE OF": "Free-text field note explains the root cause behind {target} delay classification",
+    "LOGS LABOR ON": "{source}records labor hours expended on {target}d activity",
+    "CONFIRMS STAFFING FOR": "{source} verifies that required crews are mobilized for upcoming look-ahead {target}s",
+    "INFORMS": "{source} data provides input that shapes {target} planning or leveling decision",
+    "ASSIGNED TO": "{source}assignment is allocated to a specific {target}d activity",
+    "ROTATES THROUGH": "Crew cycles through repetitive zones in a takt-time or linear {target}",
+    "LOGS HOURS ON": "{source} captures actual hours worked against {target}d activity",
+    "ACTUALS COMPARED TO": "{source}-recorded actual usage is compared to {target}-loaded planned quantity",
+    "FEEDS ACTUALS TO": "{source} production data provides the actual values for earned-{target} calculation",
+    "LOGS EQUIPMENT ON": "{source} entry records machinery used on {target}d activity",
+    "SCHEDULED UNDER": "{source}record is planned for deployment under {target} loading plan",
+    "MEASURES UTILIZATION OF": "{source}quantifies how effectively {target}d equipment was used",
+    "DELAYS": "{source}-logged event causes {target}d activity to start or finish later than planned",
+    "CLASSIFIED UNDER": "{source} delay, weather, or safety event is categorized within {target} delay taxonomy",
+    "DISRUPTS": "{source} event breaks {target} or near-critical sequence",
+    "TRIGGERS": "{source} event initiates {target} analysis, time claim, or recovery action",
+    "SUPPORTS CLAIM FOR": "{source} delay record provides documentary evidence for a time-extension request",
+    "CONSUMES": "Delay event uses up available {target} on affected activities",
+    "EVIDENCES": "{source} serves as factual evidence for a retrospective delay or impact analysis",
+    "PUSHES": "{source} delay forces {target} date later than the current planned date",
+    "TRIGGERS NEED FOR": "{source} disruption creates the requirement for a recovery {target} or acceleration plan",
+    "SUSPENDS WORK ON": "Weather or site condition halts production on {target}d activity for the day",
+    "MARKS NON-WORK DAY ON": "Weather event flags a calendar day as non-productive for {target} calculation",
+    "CONTRIBUTES TO": "Cumulative field events add up to measurable {target} erosion or schedule degradation",
+    "DEGRADES": "Repeated field disruptions lower the overall {target} health score",
+    "INCREASES": "High delay frequency raises the ratio of critical activities in {target}",
+    "MEASURES OUTPUT ON": "{source} quantifies units of work installed on {target}d activity",
+    "UPDATES PROGRESS OF": "{source} production data advances the percent-complete of {target}d activity duration",
+    "FEEDS PERFORMANCE TO": "Productivity data flows into earned-{target} or performance-index calculations",
+    "TRACKS QUANTITIES ON": "{source} records installed quantities against {target}d activity",
+    "ADVANCES": "Installed quantity moves the activity progress forward in {target}",
+    "VALIDATES QUANTITIES AGAINST": "{source} quantity is cross-checked against the cost-loaded {target} quantities",
+    "MEASURES COMPLETION OF": "{source} is complete",
+    "PLANNED UNDER": "Budgeted target is established within {target} as the planned benchmark",
+    "DRIVES": "{source} productivity performance directly influences {target} performance index",
+    "MEASURED AGAINST": "{source} productivity is evaluated relative to {target} execution expectations",
+    "ENABLES": "Delivery or material receipt removes a procurement constraint allowing {target} to start",
+    "SATISFIES": "Material arrival fulfills {target} such as finish-to-start on procurement",
+    "ENABLES START OF": "Material shipment arrival allows the dependent {target}d activity to begin",
+    "CONFIRMS READINESS FOR": "{source} confirms that look-ahead {target}s have the materials needed to proceed",
+    "TRIGGERS REVISION OF": "Plan revision receipt forces {target} to incorporate design changes",
+    "TRIGGERS CHANGE IN": "Plan revision or field event initiates a tracked {target} change entry",
+    "LOGGED AGAINST": "{source} such as T&M ticket is associated with {target}d activity or change event",
+    "STOPS WORK ON": "{source} halts production on {target} until the hazard is corrected",
+    "SHUTS DOWN": "Serious accident forces a full work stoppage on the affected {target} or area",
+    "GATES": "Inspection must pass before the next {target}d activity can begin",
+    "REQUIRED BEFORE": "{source} is a prerequisite that must be completed before {target} is achieved",
+    "SUMMARIZES PROGRESS FOR": "{source} rolls up field data into {target}-update narrative",
+    "TRACKS COMPLETION OF": "{source} report monitors {target} completion status against the planned date",
+    "ADDS UNPLANNED HOURS TO": "T&M labor entry records extra hours beyond {target}-loaded plan",
+    "SCHEDULED ON": "Assignment is placed on a specific look-ahead {target} period",
+    "REQUESTS LABOR FOR": "{source} identifies staffing needs to support {target}-loaded labor requirements",
+    "CONSTRAINED BY": "{source} is limited by the resource-leveling constraints in {target}",
+    "DISTRIBUTED WITH": "{source} is sent out alongside the look-ahead {target} to stakeholders",
+    "CORRELATES WITH": "{source} metric statistically moves in tandem with {target} health or performance metric",
+    "MIRRORS": "Plan Percent Complete from field operations reflects the same metric as {target} Percent Plan Complete",
+    "MEASURES RELIABILITY OF": "{source} PPC metric measures the reliability of weekly commitments in the Last Planner System",
+    "VALIDATES PEAK OF": "Peak daily headcount from the field validates the resource-leveling peak in {target}",
+    "BENCHMARKS AGAINST": "{source} is compared to {target} planned labor loading curve",
+    "TRACED BACK TO": "{source} change is traced to its originating field delay or disruption event",
+    "RECONSTRUCTED FROM": "As-built {target} dates are derived from daily log records of actual start and finish",
+    "REFERENCES": "{source} delay analysis references field weather or condition logs as evidence",
+    "SETS TARGETS FOR": "{target} establishes the planned production targets that field will measure against",
+    "DEMANDS ADDITIONAL": "{source}plan requires additional equipment mobilization logged in the field",
+    "GATED BY": "{source}inspection completion before the gate date",
+    "EXPLAINED IN": "{source}is documented and justified in field log narratives",
+    "CALIBRATED BY": "{source}rates are calibrated using actual field productivity data",
+    "EXPORTS TO": "CPM scheduling tool pushes {target} data to the field-operations scheduled work linkage",
+    "COMPARED TO": "{source} metric is placed side-by-side with its {target}-planned counterpart for variance analysis"
+  }
+}

@@ -1,0 +1,521 @@
+{
+  "domain": "building-elements",
+  "name": "Building Elements",
+  "color": "#66bb6a",
+  "categories": [
+    {
+      "name": "Site & Earthwork",
+      "color": "#66bb6a",
+      "nodes": [
+        {
+          "id": "be-excav",
+          "name": "Excavation & Shoring",
+          "desc": "Bulk and detailed excavation, sheeting, shoring, and underpinning. Typical trades: equipment operators, general laborers. Often the first major activity on site — schedule and cost overruns here cascade through the project."
+        },
+        {
+          "id": "be-backfill",
+          "name": "Backfill & Grading",
+          "desc": "Structural fill, fine grading, compaction, and subgrade preparation. Equipment-heavy — dozers, loaders, compactors. Quality depends on compaction testing (typically third-party geotechnical)."
+        },
+        {
+          "id": "be-dewater",
+          "name": "Dewatering",
+          "desc": "Wellpoints, sump pumps, and groundwater control during construction. Triggered by water table conditions — not present on every project. Can become a major unplanned cost if unexpected."
+        },
+        {
+          "id": "be-erosion",
+          "name": "Erosion Control",
+          "desc": "Temporary and permanent measures to prevent soil erosion and sediment runoff during construction, including silt fencing, erosion blankets, and hydroseeding."
+        }
+      ]
+    },
+    {
+      "name": "Foundations",
+      "color": "#66bb6a",
+      "nodes": [
+        {
+          "id": "be-deep-fdn",
+          "name": "Deep Foundations",
+          "desc": "Driven piles, drilled shafts, caissons, micropiles, and helical piers. Requires specialized subcontractors and equipment. Production rates (piles per day) are a key schedule driver. Trades: pile drivers, equipment operators."
+        },
+        {
+          "id": "be-shallow-fdn",
+          "name": "Shallow Foundations",
+          "desc": "Spread footings, strip footings, mat foundations, and pier pads. Concrete and formwork are the primary cost drivers. Trades: concrete workers, carpenters (formwork). Pour records track volume and placement."
+        },
+        {
+          "id": "be-fdn-walls",
+          "name": "Foundation Walls",
+          "desc": "Cast-in-place or precast foundation walls and retaining walls. Formwork complexity drives cost. Waterproofing is a critical follow-on trade. Trades: concrete workers, carpenters."
+        },
+        {
+          "id": "be-grade-beams",
+          "name": "Grade Beams",
+          "desc": "Reinforced concrete beams connecting foundation elements at or below grade. Transfer loads between piles/piers. Trades: concrete workers, carpenters."
+        },
+        {
+          "id": "be-sog",
+          "name": "Slab on Grade",
+          "desc": "Ground-supported concrete floor slabs with vapor barriers and joint sealants. Includes reinforcement (rebar, WWF, fiber). Quality depends on subgrade prep and finishing. Trades: concrete workers."
+        },
+        {
+          "id": "be-bg-wp",
+          "name": "Below-Grade Waterproofing",
+          "desc": "Foundation waterproofing membranes, dampproofing, underslab vapor barriers, and drainage boards. Failure leads to long-term moisture intrusion. Trades: specialty waterproofing applicators."
+        }
+      ]
+    },
+    {
+      "name": "Site Utilities",
+      "color": "#66bb6a",
+      "nodes": [
+        {
+          "id": "be-water-main",
+          "name": "Water Main",
+          "desc": "Underground domestic and fire water supply piping from street to building. Requires coordination with municipality. Trades: plumbers/pipefitters, equipment operators."
+        },
+        {
+          "id": "be-sanitary",
+          "name": "Sanitary Sewer",
+          "desc": "Underground sanitary waste piping from building to main, with manholes and cleanouts. Gravity-driven — slope is critical. Trades: plumbers/pipefitters, equipment operators."
+        },
+        {
+          "id": "be-storm",
+          "name": "Storm Drainage",
+          "desc": "Underground storm water piping, catch basins, and retention/detention systems. Sized by hydrological analysis. Subject to local stormwater regulations. Trades: plumbers/pipefitters, equipment operators."
+        },
+        {
+          "id": "be-gas-svc",
+          "name": "Gas Service",
+          "desc": "Underground gas piping from meter to building. Small scope on most projects but requires specialty inspection. Trades: plumbers/pipefitters."
+        },
+        {
+          "id": "be-site-elec",
+          "name": "Site Electrical",
+          "desc": "Underground electrical and telecom conduit banks, manholes, and handholes. Coordinates with power company. Trades: electricians, equipment operators."
+        }
+      ]
+    },
+    {
+      "name": "Structure",
+      "color": "#66bb6a",
+      "nodes": [
+        {
+          "id": "be-columns",
+          "name": "Columns",
+          "desc": "Steel or concrete vertical load-bearing members. Steel columns: W-shapes, HSS, pipe. Concrete columns: CIP with rebar cages, formwork. Trades: ironworkers (steel), concrete workers (concrete). Critical path activity."
+        },
+        {
+          "id": "be-beams",
+          "name": "Beams & Girders",
+          "desc": "Steel or concrete horizontal spanning members. Steel: W-shapes, built-up sections. Concrete: CIP or precast. Camber and deflection are key design parameters. Trades: ironworkers, concrete workers."
+        },
+        {
+          "id": "be-slabs",
+          "name": "Floor Slabs & Deck",
+          "desc": "Concrete floor slabs on grade and elevated composite or concrete deck systems forming the horizontal structure of each level."
+        },
+        {
+          "id": "be-roof-struct",
+          "name": "Roof Structure",
+          "desc": "Steel or concrete roof framing — long-span joists, trusses, and moment frames. Trades: ironworkers. Often governs crane duration and pick sequence."
+        },
+        {
+          "id": "be-connections",
+          "name": "Connections & Embeds",
+          "desc": "Bolted and welded connections, embed plates, anchor bolts, and base plates. Connection design generates heavy RFI activity — a leading indicator of structural complexity. Trades: ironworkers."
+        },
+        {
+          "id": "be-stairs",
+          "name": "Stairs & Ramps",
+          "desc": "Cast-in-place or steel stairs and structural ramps, with handrails. Both temporary and permanent stairs. Punch items frequently reference stairs and railings. Trades: ironworkers, concrete workers."
+        },
+        {
+          "id": "be-misc-metals",
+          "name": "Misc Metals",
+          "desc": "Miscellaneous and ornamental metals including handrails, guardrails, bollards, ladders, gratings, and steel supports not part of the primary structure."
+        }
+      ]
+    },
+    {
+      "name": "Enclosure",
+      "color": "#66bb6a",
+      "nodes": [
+        {
+          "id": "be-curtainwall",
+          "name": "Curtain Wall",
+          "desc": "Aluminum-framed glass curtain wall systems — unitized or stick-built. High RFI and coordination issue activity (MEP penetrations, structural anchors). Major submittal packages. Trades: glaziers, curtain wall installers."
+        },
+        {
+          "id": "be-windows",
+          "name": "Windows",
+          "desc": "Punched window units in opaque wall systems. Product submittals drive procurement timeline. Trades: glaziers."
+        },
+        {
+          "id": "be-ext-doors",
+          "name": "Exterior Doors",
+          "desc": "Entrance doors, storefronts, revolving doors, overhead doors, and service doors. Door hardware drives complexity. Trades: glaziers (storefronts), carpenters (hollow metal). Doors are one of the highest punch item categories."
+        },
+        {
+          "id": "be-masonry-v",
+          "name": "Masonry Veneer",
+          "desc": "All unit masonry — brick, block, and stone. Sub-specialties: bricklayers (face brick, thin brick veneer), block layers (CMU walls, backup walls, elevator shafts), and stone masons (natural and manufactured stone for exterior veneer and interior lobbies). Weather-sensitive — production depends on temperature and moisture. Measured in SF of wall face per day."
+        },
+        {
+          "id": "be-panels",
+          "name": "Precast / Metal Panels",
+          "desc": "Architectural precast concrete, insulated metal panels (IMP), ACM panels, and terra cotta. Panel layout coordination with structure and MEP is critical. Trades: ironworkers (erection), specialty installers."
+        },
+        {
+          "id": "be-amb",
+          "name": "Air & Moisture Barrier",
+          "desc": "Fluid-applied or sheet membrane air/vapor barriers on exterior sheathing. Performance-critical — failures here cause long-term moisture damage. Third-party inspection is common. Trades: specialty applicators."
+        },
+        {
+          "id": "be-ext-insul",
+          "name": "Exterior Insulation",
+          "desc": "Continuous insulation (CI) on exterior walls — mineral wool, rigid foam, or spray foam. Energy code compliance driver. Trades: specialty installers, general laborers."
+        }
+      ]
+    },
+    {
+      "name": "Roofing",
+      "color": "#66bb6a",
+      "nodes": [
+        {
+          "id": "be-roof-mem",
+          "name": "Roof Membrane",
+          "desc": "Single-ply (TPO, PVC, EPDM), built-up, or modified bitumen roofing membranes. Warranty is a key deliverable — manufacturer requirements drive installation quality. Trades: roofers."
+        },
+        {
+          "id": "be-roof-insul",
+          "name": "Roof Insulation",
+          "desc": "Rigid insulation and tapered systems for drainage, with cover boards. Tapered layout is a design coordination item. Trades: roofers."
+        },
+        {
+          "id": "be-flashing",
+          "name": "Flashing",
+          "desc": "Roof edge metal, copings, counterflashing, reglets, gutters, and downspouts. Flashing failures are a top source of roof leaks. Trades: roofers, sheet metal workers."
+        },
+        {
+          "id": "be-roof-drain",
+          "name": "Roof Drainage",
+          "desc": "Interior roof drains, scuppers, overflow drains, and conductor piping. Cross-trade coordination — roofer installs drain bodies, plumber runs pipe. Design drives structural loads (ponding)."
+        },
+        {
+          "id": "be-skylights",
+          "name": "Skylights",
+          "desc": "Unit skylights, smoke vents, and roof access hatches. Small scope but high defect rate per unit — curb flashing is a common failure point. Trades: glaziers, specialty installers."
+        }
+      ]
+    },
+    {
+      "name": "HVAC",
+      "color": "#66bb6a",
+      "nodes": [
+        {
+          "id": "be-ductwork",
+          "name": "Ductwork",
+          "desc": "Supply, return, and exhaust ductwork — sheet metal, flex, and fittings. Routing coordination with other MEP systems drives schedule. Trades: HVAC/sheet metal workers."
+        },
+        {
+          "id": "be-hvac-pipe",
+          "name": "HVAC Piping",
+          "desc": "Chilled water, hot water, condenser water, and refrigerant piping with insulation. Pipe sizing and routing are key RFI topics. Trades: pipefitters."
+        },
+        {
+          "id": "be-ahu",
+          "name": "Air Handling Equip",
+          "desc": "AHUs, RTUs, fan coil units, VAV boxes, and exhaust fans. Major submittals — equipment delivery is a key scheduling milestone. Trades: HVAC mechanics."
+        },
+        {
+          "id": "be-heating",
+          "name": "Heating Equipment",
+          "desc": "Boilers, unit heaters, radiant heating, and heat exchangers. Seasonal dependency — heating system must be operational for winter work. Trades: HVAC mechanics."
+        },
+        {
+          "id": "be-cooling",
+          "name": "Cooling Equipment",
+          "desc": "Chillers, cooling towers, condensing units, and split systems. Heaviest and most expensive MEP equipment — rigging and crane logistics are critical. Trades: HVAC mechanics."
+        },
+        {
+          "id": "be-duct-insul",
+          "name": "Duct Insulation",
+          "desc": "Thermal and acoustic insulation on ductwork. Required by energy code on exposed supply and return duct. Trades: insulators."
+        },
+        {
+          "id": "be-hvac-ctrl",
+          "name": "HVAC Controls",
+          "desc": "DDC controls, thermostats, sensors, damper actuators, and building automation system (BAS) programming. Controls/commissioning generates heavy RFI and punch item activity. Trades: controls technicians, HVAC mechanics."
+        },
+        {
+          "id": "be-tab",
+          "name": "TAB",
+          "desc": "Testing, Adjusting, and Balancing technician who measures and adjusts air and water flow rates to design values — air system balancing, hydronic balancing, sound and vibration measurement. TAB firm independence from MEP contractor is important for objectivity. Active during Commissioning phase. Decision authority: Low — measures and adjusts to design values; reports deficiencies; does not redesign systems."
+        }
+      ]
+    },
+    {
+      "name": "Plumbing",
+      "color": "#66bb6a",
+      "nodes": [
+        {
+          "id": "be-dom-water",
+          "name": "Domestic Water",
+          "desc": "Hot and cold water distribution piping, valves, hangers, and insulation. Leak testing is a key milestone. Trades: plumbers/pipefitters."
+        },
+        {
+          "id": "be-waste-vent",
+          "name": "Waste & Vent",
+          "desc": "DWV piping, cleanouts, floor drains, and traps. Gravity-driven — slope is critical and generates RFIs for routing in tight ceilings. Trades: plumbers/pipefitters."
+        },
+        {
+          "id": "be-int-storm",
+          "name": "Interior Storm Drain",
+          "desc": "Interior roof drain leaders, area drains, and conductor piping. Connects roof drainage to underground storm system. Trades: plumbers/pipefitters."
+        },
+        {
+          "id": "be-gas-pipe",
+          "name": "Gas Piping",
+          "desc": "Interior natural gas distribution to equipment — boilers, water heaters, kitchen equipment. Requires pressure testing and inspection. Trades: plumbers/pipefitters."
+        },
+        {
+          "id": "be-plumb-fix",
+          "name": "Plumbing Fixtures",
+          "desc": "Toilets, urinals, sinks, faucets, drinking fountains, and floor drains. High submittal activity (product approvals) and very high punch item rates — plumbing fixtures are a top punch category. Trades: plumbers."
+        },
+        {
+          "id": "be-water-htr",
+          "name": "Water Heaters",
+          "desc": "Domestic water heating — tanks, tankless, and heat pump water heaters. Small scope but affects hot water distribution design. Trades: plumbers."
+        },
+        {
+          "id": "be-pipe-insul",
+          "name": "Pipe Insulation",
+          "desc": "Thermal insulation on plumbing piping. Required by energy code on hot water and chilled supply lines. Trades: insulators."
+        }
+      ]
+    },
+    {
+      "name": "Electrical",
+      "color": "#66bb6a",
+      "nodes": [
+        {
+          "id": "be-power-dist",
+          "name": "Power Distribution",
+          "desc": "Main switchgear, distribution panels, transformers, bus duct, and feeders. Major submittals with long lead times — procurement timing is critical. Trades: electricians."
+        },
+        {
+          "id": "be-branch",
+          "name": "Branch Wiring",
+          "desc": "Outlets, switches, junction boxes, home runs, and branch circuits. Highest-volume electrical work. Punch items for cover plates and device alignment are top closeout issues. Trades: electricians."
+        },
+        {
+          "id": "be-conduit",
+          "name": "Conduit & Raceways",
+          "desc": "EMT, rigid, PVC conduit, cable tray, and wireways. Routing coordination with other MEP systems is a major schedule driver. Trades: electricians."
+        },
+        {
+          "id": "be-lighting",
+          "name": "Lighting",
+          "desc": "All light fixtures and controls — interior, exterior, emergency, and controls. Interior fixtures (troffers, downlights, pendants, linear, decorative), exterior fixtures (site, facade, parking, landscape lighting), emergency and exit (emergency battery units, exit signs, egress lighting — code-required), and lighting controls (dimmers, occupancy sensors, daylight harvesting, relay panels). Lighting submittals are among the highest volume on any project — every fixture type requires approval."
+        },
+        {
+          "id": "be-emerg-pwr",
+          "name": "Emergency Power",
+          "desc": "Emergency and standby power systems including generators, transfer switches, UPS systems, and associated distribution for life safety and critical loads."
+        },
+        {
+          "id": "be-grounding",
+          "name": "Grounding",
+          "desc": "Building grounding system, lightning rods, and bonding. Code-required; tested during construction. Small scope. Trades: electricians."
+        }
+      ]
+    },
+    {
+      "name": "Fire Protection",
+      "color": "#66bb6a",
+      "nodes": [
+        {
+          "id": "be-sprink-main",
+          "name": "Sprinkler Mains",
+          "desc": "Fire sprinkler distribution piping — mains, cross-mains, and branch lines with seismic bracing. Head layout coordination with ceilings and MEP is a top coordination issue. Trades: sprinkler fitters."
+        },
+        {
+          "id": "be-sprink-head",
+          "name": "Sprinkler Heads",
+          "desc": "Pendant, upright, sidewall, and concealed sprinkler heads. Very high punch item rate — concealed head cover plates are a top closeout item. Trades: sprinkler fitters."
+        },
+        {
+          "id": "be-standpipe",
+          "name": "Standpipes",
+          "desc": "Standpipe risers, hose valves, and fire department connections (FDC). Required for buildings above certain heights. Flow testing is a code requirement. Trades: sprinkler fitters."
+        },
+        {
+          "id": "be-fire-pump",
+          "name": "Fire Pump",
+          "desc": "Fire pump, jockey pump, controller, and test header. Required when municipal water pressure is insufficient. Acceptance testing is code-required. Trades: sprinkler fitters, electricians."
+        },
+        {
+          "id": "be-fa",
+          "name": "Fire Alarm",
+          "desc": "Install visible fire alarm devices — smoke/heat detectors, pull stations, horn/strobes, duct detectors, device addressing, panel programming. Device placement must match approved fire alarm drawings. Gate: devices complete — ready for acceptance testing. Duration: 1-2%."
+        }
+      ]
+    },
+    {
+      "name": "Low Voltage",
+      "color": "#66bb6a",
+      "nodes": [
+        {
+          "id": "be-data",
+          "name": "Data / Telecom",
+          "desc": "Cat6/fiber optic cabling, patch panels, racks, and telecom rooms. Pathway coordination with electrical. Trades: low-voltage technicians."
+        },
+        {
+          "id": "be-security",
+          "name": "Security Systems",
+          "desc": "CCTV cameras, access control (card readers, controllers), and intrusion detection. Integrates with door hardware — coordination signal. Trades: low-voltage technicians."
+        },
+        {
+          "id": "be-av",
+          "name": "Audio / Visual",
+          "desc": "AV systems — displays, speakers, distributed audio, and conference room systems. Often owner-furnished / contractor-installed (OFCI). Trades: low-voltage technicians."
+        },
+        {
+          "id": "be-bas",
+          "name": "Building Automation",
+          "desc": "A distinct structure within the project site — the primary vertical container for constructed space. Multi-building projects separate records by structure. Single-building projects still carry one Building node for hierarchy consistency. Children: Floor/Level, Core/Shaft. Systems: structural frame, exterior enclosure, roofing, elevators, building-level HVAC and electrical."
+        },
+        {
+          "id": "be-specialty-sys",
+          "name": "Specialty Systems",
+          "desc": "Nurse call, intercom, paging, distributed antenna (DAS), and clock systems. Project-type dependent — nurse call for healthcare, DAS for large buildings. Trades: low-voltage technicians."
+        }
+      ]
+    },
+    {
+      "name": "Interiors",
+      "color": "#66bb6a",
+      "nodes": [
+        {
+          "id": "be-studs",
+          "name": "Metal Stud Framing",
+          "desc": "Interior metal stud partitions, soffits, and bulkhead framing with blocking. Layout accuracy drives downstream finish quality. Trades: drywall hangers."
+        },
+        {
+          "id": "be-drywall",
+          "name": "Drywall",
+          "desc": "Hang and finish gypsum board — drywall hanging, taping and finishing, sanding, specialty boards (moisture/abuse/fire-rated), patching around MEP. Above-ceiling inspection must happen BEFORE drywall closes the ceiling. Gate: drywall complete — walls ready for finishes. Duration: 3-5%."
+        },
+        {
+          "id": "be-int-doors",
+          "name": "Interior Doors",
+          "desc": "Interior hollow metal and wood doors, frames, and finish hardware (hinges, closers, locks, pulls). Hardware sets are complex submittals. Doors/hardware is consistently a top 3 punch item category. Trades: carpenters."
+        },
+        {
+          "id": "be-act",
+          "name": "Acoustic Ceilings",
+          "desc": "Suspended acoustic ceiling grid and tile systems. Layout coordination with lighting, sprinklers, and diffusers. Trades: ceiling installers."
+        },
+        {
+          "id": "be-dw-ceil",
+          "name": "Drywall Ceilings",
+          "desc": "Hang and finish gypsum board — drywall hanging, taping and finishing, sanding, specialty boards (moisture/abuse/fire-rated), patching around MEP. Above-ceiling inspection must happen BEFORE drywall closes the ceiling. Gate: drywall complete — walls ready for finishes. Duration: 3-5%."
+        },
+        {
+          "id": "be-paint",
+          "name": "Paint & Coatings",
+          "desc": "All painting and coating products — interior paint, exterior coatings, specialty coatings, primers, and wall coverings. Interior paint (latex, acrylic for walls, ceilings, trim), exterior paint and coatings (elastomeric, acrylic, high-performance), specialty coatings (epoxy, urethane, anti-graffiti, antimicrobial), primers and sealers (metal primer, wood sealer, block filler), and wall coverings (vinyl, fabric, FRP panels). Paint schedules are a standard submittal."
+        },
+        {
+          "id": "be-wallcover",
+          "name": "Wallcovering",
+          "desc": "Vinyl wallcovering, specialty wall finishes, and wall protection (corner guards, crash rails). Common in healthcare and hospitality. Trades: painters, specialty installers."
+        },
+        {
+          "id": "be-tile",
+          "name": "Floor Tile",
+          "desc": "Ceramic, porcelain, and natural stone tile for floors and walls — including setting materials and grout. Cracked tiles, grout, and lippage are common punch items. Trades: tile setters."
+        },
+        {
+          "id": "be-carpet",
+          "name": "Carpet & Resilient",
+          "desc": "Carpet (broadloom, tile), VCT, LVT, rubber, and sheet vinyl with resilient base. Seams, transitions, and base are frequent closeout items. Trades: floor installers."
+        },
+        {
+          "id": "be-spec-floor",
+          "name": "Specialty Flooring",
+          "desc": "Polished concrete, epoxy, terrazzo, and resinous flooring. Project-type dependent — common in industrial, healthcare, and education. Trades: specialty installers."
+        },
+        {
+          "id": "be-casework",
+          "name": "Casework",
+          "desc": "Cabinets, countertops, shelving, built-in furniture, and wood trim (base/crown molding). High punch item rate — scratches, chips, alignment, and door adjustment. Trades: carpenters."
+        },
+        {
+          "id": "be-countertop",
+          "name": "Countertops",
+          "desc": "Solid surface, stone, quartz, and plastic laminate countertops. Templated after casework installation — template-to-install cycle is a schedule constraint. Trades: specialty installers."
+        },
+        {
+          "id": "be-toilet-acc",
+          "name": "Toilet Accessories",
+          "desc": "Toilet partitions, accessories (paper holders, grab bars, soap dispensers), mirrors, and signage. High punch item rate — installation alignment, missing items, and damage. Trades: carpenters, general laborers."
+        },
+        {
+          "id": "be-signage",
+          "name": "Signage",
+          "desc": "Room signs, directional signs, code-required signs, and ADA signage. Late-project scope — often last items installed before occupancy. Trades: specialty installers."
+        }
+      ]
+    },
+    {
+      "name": "Conveying",
+      "color": "#66bb6a",
+      "nodes": [
+        {
+          "id": "be-elev-car",
+          "name": "Elevator Car",
+          "desc": "Passenger, service, and freight elevator cars — hoistway doors, cab finishes, and controls. Elevator installation is a major scheduling milestone. Long lead time item. Trades: elevator mechanics."
+        },
+        {
+          "id": "be-elev-mach",
+          "name": "Elevator Machinery",
+          "desc": "Traction machines, hydraulic units, motor controllers, and dispatching systems. Acceptance testing/inspection by authority having jurisdiction (AHJ) is required. Trades: elevator mechanics."
+        }
+      ]
+    },
+    {
+      "name": "Site Improvements",
+      "color": "#66bb6a",
+      "nodes": [
+        {
+          "id": "be-paving",
+          "name": "Paving",
+          "desc": "Asphalt and concrete paving for parking lots, access roads, and loading areas. Temperature-sensitive installation (asphalt). Trades: equipment operators, general laborers."
+        },
+        {
+          "id": "be-sidewalks",
+          "name": "Sidewalks",
+          "desc": "Concrete sidewalks, curbs, gutters, ADA ramps, and pavers. ADA compliance is a common observation and punch item trigger. Trades: concrete workers."
+        },
+        {
+          "id": "be-landscape",
+          "name": "Landscaping",
+          "desc": "Trees, shrubs, ground cover, turf, and irrigation systems. Usually one of the last exterior scopes. Plant survival warranty (typically 1 year) extends beyond project completion. Trades: landscape contractors."
+        },
+        {
+          "id": "be-site-light",
+          "name": "Site Lighting",
+          "desc": "Parking lot and pathway lighting — poles, bollard lights, and site electrical. Coordinates with site electrical underground. Trades: electricians."
+        },
+        {
+          "id": "be-fencing",
+          "name": "Fencing",
+          "desc": "Chain link, ornamental, and security fencing with gates and barriers. Small scope on most projects. Trades: fence contractors."
+        }
+      ]
+    }
+  ]
+}

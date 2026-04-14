@@ -1,0 +1,224 @@
+{
+  "source": "field-operations",
+  "target": "risk",
+  "edges": [
+    [
+      "fo-daily-log-header",
+      "rk-risk-register",
+      "DOCUMENTS"
+    ],
+    [
+      "fo-daily-log-header",
+      "rk-const-execution",
+      "CHRONICLES"
+    ],
+    [
+      "fo-daily-log-note",
+      "rk-risk-trigger",
+      "SURFACES"
+    ],
+    [
+      "fo-daily-log-note",
+      "rk-const-execution",
+      "EVIDENCES"
+    ],
+    [
+      "fo-daily-log-note",
+      "rk-coord-risk",
+      "SURFACES"
+    ],
+    [
+      "fo-delay-log-entry",
+      "rk-schedule-risk",
+      "EVIDENCES"
+    ],
+    [
+      "fo-delay-log-entry",
+      "rk-risk-trigger",
+      "ACTIVATES"
+    ],
+    [
+      "fo-delay-log-entry",
+      "rk-schedule-float",
+      "ERODES"
+    ],
+    [
+      "fo-delay-log-entry",
+      "rk-supply-chain",
+      "EVIDENCES"
+    ],
+    [
+      "fo-weather-log",
+      "rk-schedule-risk",
+      "ESCALATES"
+    ],
+    [
+      "fo-weather-log",
+      "rk-enviro-risk",
+      "DOCUMENTS"
+    ],
+    [
+      "fo-weather-log",
+      "rk-schedule-buffer",
+      "CONSUMES"
+    ],
+    [
+      "fo-safety-violation",
+      "rk-safety-risk",
+      "EVIDENCES"
+    ],
+    [
+      "fo-safety-violation",
+      "rk-incident-rate",
+      "DRIVES"
+    ],
+    [
+      "fo-safety-violation",
+      "rk-mitigation-actio",
+      "TRIGGERS"
+    ],
+    [
+      "fo-safety-violation",
+      "rk-reg-permit-risk",
+      "ESCALATES"
+    ],
+    [
+      "fo-accident-log",
+      "rk-safety-risk",
+      "DOCUMENTS"
+    ],
+    [
+      "fo-accident-log",
+      "rk-incident-rate",
+      "DRIVES"
+    ],
+    [
+      "fo-accident-log",
+      "rk-insurance-requir",
+      "TRIGGERS"
+    ],
+    [
+      "fo-manpower-log",
+      "rk-labor-risk",
+      "SIGNALS"
+    ],
+    [
+      "fo-manpower-log",
+      "rk-const-execution",
+      "SIGNALS"
+    ],
+    [
+      "fo-productivity-log",
+      "rk-schedule-risk",
+      "SIGNALS"
+    ],
+    [
+      "fo-productivity-log",
+      "rk-labor-risk",
+      "SIGNALS"
+    ],
+    [
+      "fo-equip-log-entry",
+      "rk-const-execution",
+      "SIGNALS"
+    ],
+    [
+      "fo-equip-log-entry",
+      "rk-schedule-risk",
+      "ESCALATES"
+    ],
+    [
+      "fo-dlvy-log-entry",
+      "rk-supply-chain",
+      "EVIDENCES"
+    ],
+    [
+      "fo-dlvy-log-entry",
+      "rk-schedule-risk",
+      "ESCALATES"
+    ],
+    [
+      "fo-mat-shipment",
+      "rk-supply-chain",
+      "TRACKS"
+    ],
+    [
+      "fo-mat-receipt",
+      "rk-supply-chain",
+      "CLOSES"
+    ],
+    [
+      "fo-daily-log-insp",
+      "rk-const-execution",
+      "EXPOSES"
+    ],
+    [
+      "fo-daily-log-insp",
+      "rk-risk-score",
+      "INFORMS"
+    ],
+    [
+      "fo-waste-log-entry",
+      "rk-enviro-risk",
+      "EVIDENCES"
+    ],
+    [
+      "fo-waste-log-entry",
+      "rk-reg-permit-risk",
+      "SIGNALS"
+    ],
+    [
+      "fo-visitor-log",
+      "rk-safety-risk",
+      "TRACKS"
+    ],
+    [
+      "fo-t-m-ticket",
+      "rk-financial-risk",
+      "ESCALATES"
+    ],
+    [
+      "fo-t-m-ticket",
+      "rk-const-execution",
+      "EVIDENCES"
+    ],
+    [
+      "fo-delay-frequency",
+      "rk-schedule-risk",
+      "QUANTIFIES"
+    ],
+    [
+      "fo-weather-delay",
+      "rk-enviro-risk",
+      "QUANTIFIES"
+    ],
+    [
+      "fo-plan-percent",
+      "rk-schedule-float",
+      "SIGNALS"
+    ],
+    [
+      "fo-equip-utilizatio",
+      "rk-const-execution",
+      "SIGNALS"
+    ]
+  ],
+  "verbGlossary": {
+    "ACTIVATES": "{source} triggers a previously identified risk from dormant to active status (e.g., delay log entry activates {target} trigger when the documented cause matches a registered risk condition)",
+    "CHRONICLES": "{source} creates a time-stamped narrative record of conditions relevant to {target} category (e.g., daily log header chronicles construction execution risk through day-by-day jobsite documentation)",
+    "CLOSES": "{source} confirms resolution of {target} exposure by documenting receipt or completion (e.g., material receipt record closes supply chain risk by confirming delivery arrived on site)",
+    "CONSUMES": "{source} event uses up a portion of {target} buffer or reserve (e.g., weather log entry consumes schedule buffer when weather days erode available float)",
+    "DOCUMENTS": "{source} provides formal written evidence of conditions or events tied to {target} (e.g., accident log entry documents safety risk by recording incident details, root cause, and corrective actions)",
+    "DRIVES": "{source} event directly increases or worsens {target} metric (e.g., safety violation log entry drives incident rate TRIR by adding recordable events to the calculation)",
+    "ERODES": "{source} event gradually reduces {target} buffer through repeated occurrences (e.g., delay log entries erode schedule float erosion as cumulative delays consume remaining slack)",
+    "ESCALATES": "{source} condition raises the severity or urgency of an existing {target} (e.g., delivery log entry escalates schedule risk when late material arrival threatens critical path activities)",
+    "EVIDENCES": "{source} data provides observable proof that {target} condition exists or is materializing (e.g., daily log note evidences construction execution risk through documented rework, crew conflicts, or access issues)",
+    "EXPOSES": "{source} observation reveals a previously unidentified or underestimated {target} (e.g., daily log inspection entry exposes construction execution risk by documenting failed work that requires correction)",
+    "INFORMS": "{source} data provides input that shapes {target} assessment or scoring decision (e.g., daily log inspection entry informs risk score by providing pass/fail evidence for quality evaluation)",
+    "QUANTIFIES": "{source} metric assigns a measurable value to {target} dimension (e.g., delay frequency quantifies schedule risk by counting disruption events per period)",
+    "SIGNALS": "{source} metric serves as an early warning indicator that {target} is emerging before it fully materializes (e.g., manpower log entry signals labor risk when headcount drops below planned staffing levels)",
+    "SURFACES": "{source} narrative uncovers {target} condition buried in daily operations that might otherwise go undetected (e.g., daily log note surfaces coordination risk when field crew documents trade stacking or sequencing conflicts)",
+    "TRACKS": "{source} monitors the ongoing status of {target}-related condition over time (e.g., material shipment record tracks supply chain risk by logging transit status and expected delivery dates)",
+    "TRIGGERS": "{source} event initiates {target} response or downstream action (e.g., safety violation triggers mitigation action requiring immediate corrective measures on the jobsite)"
+  }
+}

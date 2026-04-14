@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UCDM — Unified Construction Data Model</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --orange-50: #FFF7ED;  --orange-100: #FFEDD5; --orange-200: #FED7AA;
+  --orange-300: #FDBA74; --orange-400: #FB923C; --orange-500: #F97316;
+  --orange-600: #EA580C; --orange-700: #C2410C;
+  --navy-900: #0F172A;   --navy-800: #1E293B;  --navy-700: #334155;
+  --navy-600: #475569;   --navy-500: #64748B;  --navy-400: #94A3B8;
+  --gray-50: #F8FAFC;    --gray-100: #F1F5F9;  --gray-200: #E2E8F0;
+  --gray-300: #CBD5E1;   --gray-400: #94A3B8;  --gray-500: #64748B;
+  --teal-500: #14B8A6;   --teal-600: #0D9488;  --teal-700: #0F766E;
+  --blue-500: #3B82F6;   --blue-600: #2563EB;
+  --purple-500: #8B5CF6; --purple-600: #7C3AED;
+  --amber-500: #F59E0B;  --amber-600: #D97706;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Inter', -apple-system, sans-serif; background: var(--gray-50); color: var(--navy-900); }
+header {
+  background: linear-gradient(135deg, var(--navy-900) 0%, var(--navy-800) 100%);
+  padding: 28px 40px; color: white;
+}
+.header-top { display: flex; align-items: center; gap: 16px; margin-bottom: 8px; }
+.logo { font-weight: 800; font-size: 14px; letter-spacing: 3px; color: var(--orange-400); }
+.logo-divider { width: 1px; height: 20px; background: var(--navy-600); }
+.header-title { font-size: 20px; font-weight: 600; }
+.header-sub { font-size: 13px; color: var(--navy-400); font-weight: 400; max-width: 700px; }
+.stats-bar {
+  display: flex; gap: 32px; margin-top: 20px; padding-top: 20px;
+  border-top: 1px solid var(--navy-700);
+}
+.stat { text-align: center; }
+.stat-value { font-size: 28px; font-weight: 700; color: var(--orange-400); }
+.stat-label { font-size: 11px; color: var(--navy-400); text-transform: uppercase; letter-spacing: 1px; margin-top: 2px; }
+nav {
+  display: flex; gap: 0; background: white; border-bottom: 1px solid var(--gray-200);
+  padding: 0 40px; position: sticky; top: 0; z-index: 100;
+}
+nav button {
+  padding: 14px 24px; border: none; background: none; font-family: inherit;
+  font-size: 13px; font-weight: 500; color: var(--gray-500); cursor: pointer;
+  border-bottom: 2px solid transparent; transition: all 0.2s;
+}
+nav button:hover { color: var(--navy-900); }
+nav button.active { color: var(--orange-600); border-bottom-color: var(--orange-500); font-weight: 600; }
+main { padding: 32px 40px; }
+.view { display: none; }
+.view.active { display: block; }
+
+/* ─── MATRIX VIEW ─── */
+.matrix-container { overflow-x: auto; }
+.matrix-layout { display: flex; gap: 24px; }
+.matrix-main { flex: 1; min-width: 0; }
+.matrix-detail {
+  width: 340px; flex-shrink: 0; background: white; border-radius: 12px;
+  border: 1px solid var(--gray-200); padding: 24px; position: sticky; top: 72px;
+  max-height: calc(100vh - 100px); overflow-y: auto;
+}
+.matrix-detail h3 { font-size: 14px; font-weight: 600; margin-bottom: 4px; }
+.matrix-detail .detail-subtitle { font-size: 12px; color: var(--gray-500); margin-bottom: 16px; }
+.matrix-detail .detail-empty { font-size: 13px; color: var(--gray-400); font-style: italic; }
+.resource-group { margin-bottom: 16px; }
+.resource-group-label {
+  font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;
+  color: var(--gray-500); margin-bottom: 6px; display: flex; align-items: center; gap: 6px;
+}
+.resource-group-label .dot { width: 8px; height: 8px; border-radius: 50%; }
+.resource-item {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 6px 10px; font-size: 12px; border-radius: 6px; margin-bottom: 2px;
+}
+.resource-item:hover { background: var(--gray-50); }
+.resource-item .role-badge {
+  font-size: 10px; font-weight: 600; padding: 2px 8px; border-radius: 10px;
+}
+.role-primary { background: var(--orange-100); color: var(--orange-700); }
+.role-supporting { background: var(--gray-100); color: var(--gray-500); }
+table.heatmap {
+  border-collapse: separate; border-spacing: 2px; width: 100%;
+}
+table.heatmap th {
+  font-size: 11px; font-weight: 600; padding: 8px 4px; text-align: center;
+  color: var(--navy-700); position: relative;
+}
+table.heatmap th.system-header {
+  writing-mode: vertical-lr; text-orientation: mixed; transform: rotate(180deg);
+  height: 120px; vertical-align: bottom; white-space: nowrap;
+}
+table.heatmap th.phase-header {
+  text-align: right; padding-right: 12px; white-space: nowrap; font-size: 12px;
+  max-width: 200px;
+}
+table.heatmap td {
+  width: 56px; height: 44px; border-radius: 6px; cursor: pointer;
+  transition: all 0.15s; position: relative; text-align: center;
+  font-size: 10px; font-weight: 600; color: transparent;
+}
+table.heatmap td:hover { transform: scale(1.1); z-index: 10; box-shadow: 0 4px 12px rgba(0,0,0,0.15); color: white; }
+table.heatmap tr.row-highlight td { opacity: 1; }
+table.heatmap td.col-highlight { opacity: 1; }
+.level-0 { background: var(--gray-100); }
+.level-1 { background: var(--orange-100); }
+.level-2 { background: var(--orange-300); }
+.level-3 { background: var(--orange-500); }
+.level-0:hover { background: var(--gray-200); color: var(--gray-500); }
+.level-1:hover { background: var(--orange-200); color: var(--orange-800, #9A3412); }
+.level-2:hover { background: var(--orange-400); }
+.level-3:hover { background: var(--orange-600); }
+td.selected { outline: 2px solid var(--navy-900); outline-offset: 1px; }
+.legend {
+  display: flex; align-items: center; gap: 16px; margin-bottom: 20px;
+  font-size: 12px; color: var(--gray-500);
+}
+.legend-item { display: flex; align-items: center; gap: 6px; }
+.legend-swatch { width: 20px; height: 14px; border-radius: 3px; }
+.phase-category {
+  display: inline-block; width: 6px; height: 6px; border-radius: 50%;
+  margin-right: 6px;
+}
+.cat-planning { background: var(--blue-500); }
+.cat-early { background: var(--teal-500); }
+.cat-core { background: var(--orange-500); }
+.cat-late { background: var(--purple-500); }
+.cat-post { background: var(--gray-400); }
+.division-tag { font-size: 9px; color: var(--gray-400); font-weight: 400; display: block; margin-top: 2px; }
+
+/* ─── NETWORK VIEW ─── */
+#network-svg { width: 100%; background: white; border-radius: 12px; border: 1px solid var(--gray-200); }
+.node-label { font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 500; }
+.node-rect { rx: 4; ry: 4; stroke-width: 1.5; cursor: pointer; transition: opacity 0.2s; }
+.edge { fill: none; stroke-width: 1.5; opacity: 0.12; transition: opacity 0.2s; }
+.edge.highlighted { opacity: 0.6; stroke-width: 2.5; }
+.node-rect.dimmed { opacity: 0.15; }
+.node-label.dimmed { opacity: 0.15; }
+.edge.dimmed { opacity: 0.03; }
+.column-header { font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 700; fill: var(--navy-700); }
+.column-subheader { font-family: 'Inter', sans-serif; font-size: 10px; fill: var(--gray-400); }
+.network-legend {
+  display: flex; gap: 24px; margin-top: 16px; font-size: 12px; color: var(--gray-500);
+  justify-content: center;
+}
+.network-legend-item { display: flex; align-items: center; gap: 6px; }
+.network-legend-swatch { width: 14px; height: 14px; border-radius: 3px; }
+
+/* ─── RELATIONSHIP VIEW ─── */
+.rel-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; }
+.rel-card {
+  background: white; border-radius: 10px; border: 1px solid var(--gray-200);
+  padding: 20px; transition: box-shadow 0.2s;
+}
+.rel-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.08); }
+.rel-category-badge {
+  font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;
+  padding: 3px 10px; border-radius: 10px; display: inline-block; margin-bottom: 10px;
+}
+.rel-pair { font-size: 15px; font-weight: 600; margin-bottom: 4px; color: var(--navy-900); }
+.rel-pair .inverse { color: var(--gray-400); font-weight: 400; }
+.rel-def { font-size: 12px; color: var(--gray-500); line-height: 1.5; margin-bottom: 8px; }
+.rel-example { font-size: 11px; color: var(--gray-400); line-height: 1.5; font-style: italic; }
+.rel-meta { display: flex; gap: 12px; margin-top: 8px; }
+.rel-meta span { font-size: 10px; color: var(--gray-400); background: var(--gray-50); padding: 2px 8px; border-radius: 4px; }
+.rel-filter { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 20px; }
+.rel-filter button {
+  padding: 6px 14px; border-radius: 20px; border: 1px solid var(--gray-200);
+  background: white; font-family: inherit; font-size: 12px; cursor: pointer;
+  transition: all 0.15s; color: var(--gray-500);
+}
+.rel-filter button:hover { border-color: var(--orange-300); color: var(--orange-600); }
+.rel-filter button.active { background: var(--orange-500); color: white; border-color: var(--orange-500); }
+
+/* category colors */
+.cat-bg-compositional { background: #DBEAFE; color: #1E40AF; }
+.cat-bg-classification { background: #E0E7FF; color: #3730A3; }
+.cat-bg-responsibility { background: #FEE2E2; color: #991B1B; }
+.cat-bg-financial { background: #D1FAE5; color: #065F46; }
+.cat-bg-lifecycle { background: #FEF3C7; color: #92400E; }
+.cat-bg-causal { background: #FFE4E6; color: #9F1239; }
+.cat-bg-temporal { background: #CFFAFE; color: #155E75; }
+.cat-bg-spatial { background: #F3E8FF; color: #6B21A8; }
+.cat-bg-resource { background: #FFEDD5; color: #9A3412; }
+.cat-bg-organizational { background: #FCE7F3; color: #9D174D; }
+.cat-bg-document { background: #F1F5F9; color: #334155; }
+.cat-bg-compliance { background: #ECFDF5; color: #047857; }
+.cat-bg-risk { background: #FEF2F2; color: #B91C1C; }
+.cat-bg-model { background: #EDE9FE; color: #5B21B6; }
+.cat-bg-benchmark { background: #FFF7ED; color: #C2410C; }
+
+.view-description { font-size: 13px; color: var(--gray-500); margin-bottom: 24px; max-width: 800px; line-height: 1.6; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-top">
+    <div class="logo">PROCORE</div>
+    <div class="logo-divider"></div>
+    <div class="header-title">Unified Construction Data Model</div>
+  </div>
+  <div class="header-sub">Unified taxonomy mapping 18 construction domains with structured relationships — from preconstruction through operations.</div>
+  <div class="stats-bar">
+    <div class="stat"><div class="stat-value">18</div><div class="stat-label">Domains</div></div>
+    <div class="stat"><div class="stat-value">101</div><div class="stat-label">Domain Links</div></div>
+    <div class="stat"><div class="stat-value">155</div><div class="stat-label">Element Links</div></div>
+    <div class="stat"><div class="stat-value">56</div><div class="stat-label">Relationship Types</div></div>
+    <div class="stat"><div class="stat-value">14</div><div class="stat-label">Building Systems</div></div>
+    <div class="stat"><div class="stat-value">55</div><div class="stat-label">Resources</div></div>
+  </div>
+</header>
+
+<nav>
+  <button class="active" onclick="switchView('matrix')">Phase x System Matrix</button>
+  <button onclick="switchView('network')">Taxonomy Network</button>
+  <button onclick="switchView('domgraph')">Domain Relationships</button>
+  <button onclick="switchView('relationships')">Relationship Types</button>
+</nav>
+
+<main>
+
+<!-- ═══════ MATRIX VIEW ═══════ -->
+<div id="view-matrix" class="view active">
+  <p class="view-description">Activity matrix showing which building systems are active during each construction phase. Inspired by Design Structure Matrix (DSM) methodology from systems engineering. Click any cell to see resource requirements.</p>
+  <div class="legend">
+    <span style="font-weight:600; color: var(--navy-700)">Activity Level:</span>
+    <div class="legend-item"><div class="legend-swatch level-0"></div> Inactive</div>
+    <div class="legend-item"><div class="legend-swatch level-1"></div> Supporting</div>
+    <div class="legend-item"><div class="legend-swatch level-2"></div> Active</div>
+    <div class="legend-item"><div class="legend-swatch level-3"></div> Primary</div>
+    <span style="margin-left: 24px; font-weight:600; color: var(--navy-700)">Phase Type:</span>
+    <div class="legend-item"><span class="phase-category cat-planning"></span> Planning</div>
+    <div class="legend-item"><span class="phase-category cat-early"></span> Early</div>
+    <div class="legend-item"><span class="phase-category cat-core"></span> Core</div>
+    <div class="legend-item"><span class="phase-category cat-late"></span> Late</div>
+    <div class="legend-item"><span class="phase-category cat-post"></span> Post</div>
+  </div>
+  <div class="matrix-layout">
+    <div class="matrix-main">
+      <div class="matrix-container" id="matrix-container"></div>
+    </div>
+    <div class="matrix-detail" id="matrix-detail">
+      <h3>Resource Detail</h3>
+      <div class="detail-subtitle">Click a cell to explore</div>
+      <div class="detail-empty" id="detail-content">Select a phase-system intersection to see which trades, equipment, and materials are involved.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════ NETWORK VIEW ═══════ -->
+<div id="view-network" class="view">
+  <p class="view-description">Three-column taxonomy network showing relationships between construction phases, building systems, and resources. Based on knowledge graph visualization methodology. Hover any node to trace its connections across all three dimensions.</p>
+  <svg id="network-svg"></svg>
+  <div class="network-legend">
+    <div class="network-legend-item"><div class="network-legend-swatch" style="background:var(--orange-500)"></div> Construction Phases</div>
+    <div class="network-legend-item"><div class="network-legend-swatch" style="background:var(--blue-500)"></div> Building Systems</div>
+    <div class="network-legend-item"><div class="network-legend-swatch" style="background:var(--teal-600)"></div> Trades</div>
+    <div class="network-legend-item"><div class="network-legend-swatch" style="background:var(--amber-500)"></div> Equipment</div>
+    <div class="network-legend-item"><div class="network-legend-swatch" style="background:var(--purple-500)"></div> Materials</div>
+  </div>
+</div>
+
+<!-- ═══════ DOMAIN GRAPH VIEW ═══════ -->
+<div id="view-domgraph" class="view">
+  <p class="view-description">Domain-to-domain relationship graph showing how the 18 UCDM domains connect. Edge thickness = connection strength (Dense/Moderate/Sparse). Hover a domain to trace its connections. Click a domain to see its outbound relationships in the detail panel.</p>
+  <div class="matrix-layout">
+    <div class="matrix-main">
+      <svg id="domgraph-svg" style="width:100%; background:white; border-radius:12px; border:1px solid var(--gray-200);"></svg>
+    </div>
+    <div class="matrix-detail" id="domgraph-detail">
+      <h3>Domain Detail</h3>
+      <div class="detail-subtitle">Hover or click a domain</div>
+      <div class="detail-empty" id="domgraph-content">Select a domain node to see its relationships with other domains.</div>
+    </div>
+  </div>
+  <div class="network-legend" style="margin-top:16px">
+    <div class="network-legend-item"><div class="network-legend-swatch" style="background:#F97316"></div> Dense</div>
+    <div class="network-legend-item"><div class="network-legend-swatch" style="background:#FB923C;opacity:0.6"></div> Moderate</div>
+    <div class="network-legend-item"><div class="network-legend-swatch" style="background:#FDBA74;opacity:0.35"></div> Sparse</div>
+    <span style="margin-left:16px; font-size:12px; color:var(--gray-400)">Edge thickness = connection density</span>
+  </div>
+</div>
+
+<!-- ═══════ RELATIONSHIPS VIEW ═══════ -->
+<div id="view-relationships" class="view">
+  <p class="view-description">All 50 relationship types across 15 categories that define how construction entities connect — from compositional containment to cross-project benchmarking. These are generic types applicable to any construction data model.</p>
+  <div class="rel-filter" id="rel-filter"></div>
+  <div class="rel-grid" id="rel-grid"></div>
+</div>
+
+</main>
+
+<script>
+// ═══════════════════════════════════════
+// DATA
+// ═══════════════════════════════════════
+const phases = [
+  { id:"preconstruction", name:"Preconstruction", cat:"planning", desc:"Design development through NTP" },
+  { id:"procurement", name:"Procurement", cat:"planning", desc:"Bidding, buyout, submittals, fabrication" },
+  { id:"mobilization", name:"Mobilization", cat:"early", desc:"Site setup before production" },
+  { id:"sitework", name:"Sitework & Foundations", cat:"early", desc:"Ground-up through slab on grade" },
+  { id:"structure", name:"Structure", cat:"core", desc:"Vertical construction of frame" },
+  { id:"enclosure", name:"Building Enclosure", cat:"core", desc:"Weather-tight shell" },
+  { id:"mep_rough", name:"MEP Rough-In", cat:"core", desc:"Mechanical, electrical, plumbing distribution" },
+  { id:"int_rough", name:"Interior Rough-In", cat:"core", desc:"Framing through drywall" },
+  { id:"finishes", name:"Finishes & MEP Trim", cat:"late", desc:"Visible work and device installation" },
+  { id:"commissioning", name:"Commissioning", cat:"late", desc:"Systems verification and testing" },
+  { id:"closeout", name:"Closeout", cat:"late", desc:"Punch list through final completion" },
+  { id:"warranty", name:"Warranty & Operations", cat:"post", desc:"Post-construction obligations" }
+];
+const systems = [
+  { id:"se", name:"Site & Earthwork", div:"02/31" },
+  { id:"fnd", name:"Foundations", div:"03/31" },
+  { id:"su", name:"Site Utilities", div:"33" },
+  { id:"sf", name:"Structural Frame", div:"03/05" },
+  { id:"ee", name:"Exterior Enclosure", div:"04/07/08" },
+  { id:"rf", name:"Roofing", div:"07" },
+  { id:"hv", name:"HVAC", div:"23" },
+  { id:"pl", name:"Plumbing", div:"22" },
+  { id:"el", name:"Electrical", div:"26" },
+  { id:"fp", name:"Fire Protection", div:"21/28" },
+  { id:"lv", name:"Low Voltage", div:"27/28" },
+  { id:"in", name:"Interiors", div:"06/09/10" },
+  { id:"ev", name:"Elevators", div:"14" },
+  { id:"si", name:"Site Improve.", div:"32" }
+];
+// Activity matrix: phases (rows) × systems (cols), 0–3
+const matrix = [
+  [1,1,1,1,1,1,1,1,1,1,1,1,1,1],
+  [1,1,1,2,2,1,2,1,2,1,1,1,2,1],
+  [2,0,0,0,0,0,0,0,0,0,0,0,0,0],
+  [3,3,3,0,0,0,0,1,1,0,0,0,0,0],
+  [0,0,0,3,1,0,0,0,0,0,0,0,1,0],
+  [0,0,0,0,3,3,0,0,0,0,0,1,0,0],
+  [0,0,0,0,0,0,3,3,3,3,2,0,0,0],
+  [0,0,0,0,0,0,1,1,1,1,0,3,0,0],
+  [0,0,0,0,0,0,2,2,2,2,2,3,1,0],
+  [0,0,0,0,0,0,3,1,2,2,2,0,2,0],
+  [1,1,1,1,1,1,1,1,1,1,1,2,1,1],
+  [1,1,1,1,1,1,2,1,1,1,1,1,1,1]
+];
+// System → Resources (from taxonomy-system-resource-matrix.csv)
+const resources = {
+  se: {
+    trades:[{n:"General Laborer",r:"P"},{n:"Equipment Operator",r:"P"},{n:"Surveyor",r:"P"},{n:"Concrete Worker",r:"S"}],
+    equipment:[{n:"Excavator",r:"P"},{n:"Loader / Backhoe",r:"P"},{n:"Compactor",r:"P"},{n:"Generator",r:"S"}],
+    materials:[{n:"Soil / Fill Material",r:"P"}]
+  },
+  fnd: {
+    trades:[{n:"Concrete Worker",r:"P"},{n:"Carpenter",r:"P"},{n:"Equipment Operator",r:"P"},{n:"Surveyor",r:"P"},{n:"Ironworker",r:"S"},{n:"General Laborer",r:"S"},{n:"Plumber",r:"S"}],
+    equipment:[{n:"Excavator",r:"P"},{n:"Concrete Pump",r:"P"},{n:"Mobile Crane",r:"S"},{n:"Compactor",r:"S"}],
+    materials:[{n:"Concrete",r:"P"},{n:"Rebar & Reinforcing",r:"P"},{n:"Lumber (formwork)",r:"S"},{n:"Waterproofing",r:"S"}]
+  },
+  su: {
+    trades:[{n:"Plumber / Pipefitter",r:"P"},{n:"Electrician",r:"P"},{n:"Equipment Operator",r:"P"},{n:"General Laborer",r:"S"}],
+    equipment:[{n:"Excavator",r:"P"},{n:"Loader / Backhoe",r:"P"},{n:"Compactor",r:"P"}],
+    materials:[{n:"Piping Materials",r:"P"},{n:"Concrete",r:"S"}]
+  },
+  sf: {
+    trades:[{n:"Ironworker",r:"P"},{n:"Concrete Worker",r:"P"},{n:"Equipment Operator",r:"P"},{n:"Carpenter",r:"S"},{n:"Surveyor",r:"S"}],
+    equipment:[{n:"Tower Crane",r:"P"},{n:"Mobile Crane",r:"P"},{n:"Concrete Pump",r:"P"},{n:"Personnel Hoist",r:"S"},{n:"Welding Equipment",r:"P"}],
+    materials:[{n:"Structural Steel",r:"P"},{n:"Concrete",r:"P"},{n:"Rebar & Reinforcing",r:"P"}]
+  },
+  ee: {
+    trades:[{n:"Glazier / Curtain Wall",r:"P"},{n:"Mason",r:"P"},{n:"Ironworker",r:"S"},{n:"General Laborer",r:"S"},{n:"Painter",r:"S"}],
+    equipment:[{n:"Tower Crane",r:"P"},{n:"Aerial Lift",r:"P"},{n:"Scaffolding",r:"P"},{n:"Personnel Hoist",r:"S"}],
+    materials:[{n:"Glass & Curtain Wall",r:"P"},{n:"Masonry",r:"P"},{n:"Waterproofing & Sealants",r:"P"},{n:"Insulation",r:"S"}]
+  },
+  rf: {
+    trades:[{n:"Roofer",r:"P"},{n:"General Laborer",r:"S"},{n:"Plumber",r:"S"}],
+    equipment:[{n:"Mobile Crane",r:"S"},{n:"Personnel Hoist",r:"S"}],
+    materials:[{n:"Roofing Membrane & Insulation",r:"P"},{n:"Flashing & Sheet Metal",r:"S"}]
+  },
+  hv: {
+    trades:[{n:"HVAC / Sheet Metal",r:"P"},{n:"Plumber / Pipefitter",r:"S"},{n:"Electrician",r:"S"},{n:"Low Voltage Tech",r:"S"}],
+    equipment:[{n:"Aerial Lift",r:"P"},{n:"Forklift / Telehandler",r:"S"},{n:"Mobile Crane",r:"S"}],
+    materials:[{n:"Ductwork & HVAC Materials",r:"P"},{n:"Piping & Insulation",r:"S"}]
+  },
+  pl: {
+    trades:[{n:"Plumber / Pipefitter",r:"P"},{n:"General Laborer",r:"S"}],
+    equipment:[{n:"Aerial Lift",r:"S"},{n:"Forklift / Telehandler",r:"S"}],
+    materials:[{n:"Piping & Plumbing Materials",r:"P"},{n:"Plumbing Fixtures",r:"P"}]
+  },
+  el: {
+    trades:[{n:"Electrician",r:"P"},{n:"General Laborer",r:"S"}],
+    equipment:[{n:"Aerial Lift",r:"P"},{n:"Forklift / Telehandler",r:"S"}],
+    materials:[{n:"Wire, Conduit & Equipment",r:"P"},{n:"Lighting Fixtures",r:"P"}]
+  },
+  fp: {
+    trades:[{n:"Sprinkler Fitter",r:"P"},{n:"Electrician",r:"S"},{n:"Low Voltage Tech",r:"S"}],
+    equipment:[{n:"Aerial Lift",r:"S"}],
+    materials:[{n:"Fire Protection Materials",r:"P"}]
+  },
+  lv: {
+    trades:[{n:"Low Voltage Tech",r:"P"},{n:"Electrician",r:"S"}],
+    equipment:[{n:"Aerial Lift",r:"S"}],
+    materials:[{n:"Low Voltage Cable & Devices",r:"P"}]
+  },
+  in: {
+    trades:[{n:"Drywall Worker",r:"P"},{n:"Carpenter",r:"P"},{n:"Painter",r:"P"},{n:"Floor Installer",r:"P"},{n:"Ceiling Installer",r:"P"},{n:"General Laborer",r:"S"}],
+    equipment:[{n:"Aerial Lift",r:"S"},{n:"Scaffolding",r:"S"},{n:"Forklift / Telehandler",r:"S"}],
+    materials:[{n:"Drywall & Framing",r:"P"},{n:"Doors, Frames & Hardware",r:"P"},{n:"Paint & Coatings",r:"P"},{n:"Flooring",r:"P"},{n:"Ceiling Materials",r:"P"},{n:"Casework & Millwork",r:"P"}]
+  },
+  ev: {
+    trades:[{n:"Elevator Mechanic",r:"P"},{n:"Electrician",r:"S"},{n:"Carpenter",r:"S"}],
+    equipment:[{n:"Mobile Crane",r:"S"}],
+    materials:[{n:"Elevator Components",r:"P"}]
+  },
+  si: {
+    trades:[{n:"Equipment Operator",r:"P"},{n:"Concrete Worker",r:"P"},{n:"General Laborer",r:"P"},{n:"Electrician",r:"S"}],
+    equipment:[{n:"Loader / Backhoe",r:"P"},{n:"Compactor",r:"P"}],
+    materials:[{n:"Concrete",r:"S"}]
+  }
+};
+
+// Relationship types (from taxonomy-relationships.csv)
+const relationships = [
+  {cat:"Compositional",rel:"CONTAINS",inv:"PART_OF",def:"Parent entity hierarchically contains child entities at any nesting level",card:"1:many",phases:"All",ex:"Project contains phases; building contains floors; inspection contains checklist items"},
+  {cat:"Compositional",rel:"COMPOSED_OF",inv:"COMPONENT_OF",def:"Entity is physically or logically made up of constituent parts",card:"1:many",phases:"All",ex:"Building system composed of elements; assembly composed of materials"},
+  {cat:"Classification",rel:"CLASSIFIED_AS",inv:"CLASSIFIES",def:"Entity belongs to a category within a taxonomy or coding system",card:"many:1",phases:"All",ex:"Change order classified as design change; cost classified under Division 26"},
+  {cat:"Classification",rel:"MAPS_TO",inv:"MAPPED_FROM",def:"Entity maps to an equivalent in a different standard or classification system",card:"many:1",phases:"All",ex:"Company cost code maps to CSI MasterFormat division"},
+  {cat:"Classification",rel:"TYPED_AS",inv:"TYPE_OF",def:"Entity has a specific type within its broader class",card:"many:1",phases:"All",ex:"Contract typed as subcontract vs. purchase order; inspection typed as quality vs. safety"},
+  {cat:"Responsibility",rel:"ASSIGNED_TO",inv:"HAS_ASSIGNMENT",def:"Work item assigned to a responsible party for action",card:"many:1",phases:"Construction / Closeout",ex:"Punch item assigned to drywall sub; RFI assigned to structural engineer"},
+  {cat:"Responsibility",rel:"CONTRACTED_TO",inv:"HAS_CONTRACT",def:"Scope of work commercially contracted to a vendor or trade partner",card:"many:1",phases:"Procurement / Construction",ex:"Electrical scope contracted to ABC Electric"},
+  {cat:"Responsibility",rel:"PERFORMED_BY",inv:"PERFORMS",def:"Work physically executed by a trade or crew",card:"many:1",phases:"Construction",ex:"Concrete pour performed by concrete crew; wiring performed by electricians"},
+  {cat:"Responsibility",rel:"MANAGED_BY",inv:"MANAGES",def:"Entity overseen by a person or role at the project level",card:"many:many",phases:"All",ex:"Project managed by project manager; safety managed by safety director"},
+  {cat:"Responsibility",rel:"INSPECTED_BY",inv:"INSPECTS",def:"Entity examined or verified by a qualified party",card:"many:many",phases:"Construction / Commissioning",ex:"Fire stopping inspected by special inspector; air balance verified by TAB contractor"},
+  {cat:"Responsibility",rel:"DESIGNED_BY",inv:"DESIGNS",def:"Entity created or specified by a design professional",card:"many:1",phases:"Preconstruction",ex:"Structural system designed by structural engineer"},
+  {cat:"Responsibility",rel:"OWNED_BY",inv:"OWNS",def:"Entity owned by a party with decision authority",card:"many:1",phases:"All",ex:"Project owned by developer; specification owned by architect of record"},
+  {cat:"Financial",rel:"COSTS_AGAINST",inv:"RECEIVES_COST",def:"Actual cost attributed to a budget category or cost account",card:"many:1",phases:"Construction / Closeout",ex:"Rework cost charges against concrete cost code"},
+  {cat:"Financial",rel:"COMMITTED_TO",inv:"HAS_COMMITMENT",def:"Budget dollars contractually committed via contract or PO",card:"many:1",phases:"Procurement / Construction",ex:"$2M committed to electrical subcontract"},
+  {cat:"Financial",rel:"BILLED_AGAINST",inv:"HAS_BILLING",def:"Invoice or pay application submitted against a contract",card:"many:1",phases:"Construction / Closeout",ex:"Monthly pay app billed against electrical subcontract"},
+  {cat:"Financial",rel:"BUDGETED_FOR",inv:"HAS_BUDGET",def:"Budget amount allocated for a planned scope or cost category",card:"many:1",phases:"Preconstruction / Procurement",ex:"$3M budgeted for structural steel"},
+  {cat:"Financial",rel:"ADJUSTS",inv:"ADJUSTED_BY",def:"Financial modification to an existing allocation or commitment",card:"many:1",phases:"Construction / Closeout",ex:"Budget transfer adjusts concrete line item; CO adjusts subcontract value"},
+  {cat:"Lifecycle",rel:"BECOMES",inv:"DERIVED_FROM",def:"Entity evolves or transforms into a different entity type",card:"many:many",phases:"All",ex:"RFI becomes change order; estimate becomes budget; punch item becomes warranty claim"},
+  {cat:"Lifecycle",rel:"VERSIONED_AS",inv:"VERSION_OF",def:"Entity has successive revisions tracked over time",card:"1:many",phases:"All",ex:"Drawing versioned as Rev C; schedule versioned as Update #12"},
+  {cat:"Lifecycle",rel:"SUPERSEDES",inv:"SUPERSEDED_BY",def:"Newer entity replaces an older one",card:"1:1",phases:"All",ex:"Addendum 3 supersedes Addendum 2; revised drawing supersedes original"},
+  {cat:"Lifecycle",rel:"RESOLVES_TO",inv:"HAS_RESOLUTION",def:"Entity reaches a terminal state or disposition",card:"many:1",phases:"Construction / Closeout",ex:"Observation resolves to closed; submittal resolves to approved as noted"},
+  {cat:"Lifecycle",rel:"APPROVED_AS",inv:"HAS_APPROVAL",def:"Entity reviewed and approved with a specific status",card:"many:1",phases:"All",ex:"Submittal approved as noted; change order approved; pay app approved"},
+  {cat:"Causal",rel:"ORIGINATED_FROM",inv:"GENERATES",def:"Entity directly created as a result of another entity",card:"many:1",phases:"All",ex:"Change order originated from RFI; rework originated from design error"},
+  {cat:"Causal",rel:"TRIGGERED_BY",inv:"TRIGGERS",def:"Entity caused by an external event or condition — root cause",card:"many:1",phases:"All",ex:"Schedule delay triggered by material shortage; safety incident triggered by fall hazard"},
+  {cat:"Causal",rel:"LINKED_TO",inv:"LINKED_FROM",def:"General association without strict causation or hierarchy",card:"many:many",phases:"All",ex:"Coordination issue linked to RFI; observation linked to spec section"},
+  {cat:"Temporal",rel:"PRECEDES",inv:"FOLLOWS",def:"One activity occurs before another in time sequence",card:"many:many",phases:"All",ex:"Foundation pour precedes steel erection; submittal approval precedes fabrication"},
+  {cat:"Temporal",rel:"DEPENDS_ON",inv:"ENABLES",def:"Entity cannot start until a dependency is satisfied — blocking",card:"many:many",phases:"All",ex:"Steel erection depends on anchor bolt survey; CO depends on all inspections passed"},
+  {cat:"Temporal",rel:"CONCURRENT_WITH",inv:"CONCURRENT_WITH",def:"Activities occur during the same time period — parallel execution",card:"many:many",phases:"Construction",ex:"Electrical rough-in concurrent with plumbing rough-in"},
+  {cat:"Temporal",rel:"LEADS",inv:"LAGS",def:"One event is a predictive indicator of another — statistical",card:"many:many",phases:"Construction / Closeout",ex:"Quality observations lead punch items; RFI volume leads change order volume"},
+  {cat:"Spatial",rel:"LOCATED_AT",inv:"CONTAINS_ITEM",def:"Entity situated at a specific physical location",card:"many:1",phases:"Construction / Closeout",ex:"Deficiency located at Building A Floor 3; crew working at Zone B"},
+  {cat:"Spatial",rel:"ADJACENT_TO",inv:"ADJACENT_TO",def:"Entities in physical proximity — relevant for coordination",card:"many:many",phases:"Construction",ex:"Electrical conduit adjacent to plumbing pipe; crane swing adjacent to occupied building"},
+  {cat:"Resource",rel:"REQUIRES",inv:"REQUIRED_BY",def:"Entity needs a specific resource type to execute",card:"many:many",phases:"All",ex:"Concrete pour requires pump truck; steel erection requires tower crane"},
+  {cat:"Resource",rel:"CONSUMES",inv:"CONSUMED_BY",def:"Entity physically uses up a material or consumable",card:"many:many",phases:"Construction",ex:"Foundation pour consumes 200 CY concrete"},
+  {cat:"Resource",rel:"SPECIFIES",inv:"SPECIFIED_BY",def:"Entity formally defines what a resource must be",card:"many:many",phases:"Preconstruction / Procurement",ex:"Specification section specifies concrete mix design; submittal specifies fixture model"},
+  {cat:"Resource",rel:"ALLOCATED_TO",inv:"HAS_ALLOCATION",def:"Resource assigned to a specific scope or time period",card:"many:many",phases:"Construction",ex:"8 electricians allocated to Floor 7; tower crane allocated to steel erection"},
+  {cat:"Organizational",rel:"BELONGS_TO",inv:"HAS_MEMBER",def:"Entity is a member of a group or organization",card:"many:1",phases:"All",ex:"PM belongs to general contractor; subcontractor belongs to project team"},
+  {cat:"Organizational",rel:"PLAYS_ROLE",inv:"ROLE_HELD_BY",def:"Entity performs a specific role in a given context",card:"many:many",phases:"All",ex:"Company plays GC role on Project A but sub role on Project B"},
+  {cat:"Organizational",rel:"REPORTS_TO",inv:"SUPERVISES",def:"Hierarchical reporting or oversight relationship",card:"many:1",phases:"All",ex:"Foreman reports to superintendent; sub reports to GC"},
+  {cat:"Organizational",rel:"PARTICIPATES_IN",inv:"HAS_PARTICIPANT",def:"Entity involved in an activity without sole ownership",card:"many:many",phases:"All",ex:"Architect participates in OAC meeting; trades participate in safety standup"},
+  {cat:"Document",rel:"REFERENCES",inv:"REFERENCED_BY",def:"Document cites or points to another entity",card:"many:many",phases:"All",ex:"RFI references drawing S-301; change order references spec section"},
+  {cat:"Document",rel:"ATTACHED_TO",inv:"HAS_ATTACHMENT",def:"File or media artifact associated with an entity",card:"many:1",phases:"All",ex:"Photo attached to observation; test report attached to inspection"},
+  {cat:"Document",rel:"DOCUMENTS",inv:"DOCUMENTED_BY",def:"Entity formally recorded by a document or record",card:"many:many",phases:"All",ex:"Daily log documents field activity; inspection report documents test results"},
+  {cat:"Document",rel:"GOVERNS",inv:"GOVERNED_BY",def:"Document establishes binding rules for an entity",card:"many:many",phases:"All",ex:"Contract governs scope; specification governs installation; code governs design"},
+  {cat:"Document",rel:"RESPONDS_TO",inv:"HAS_RESPONSE",def:"Entity is a direct reply to a question or submission",card:"many:1",phases:"All",ex:"RFI response responds to question; submittal review responds to submission"},
+  {cat:"Compliance",rel:"COMPLIES_WITH",inv:"VERIFIED_BY",def:"Entity meets a regulatory or contractual standard",card:"many:many",phases:"All",ex:"Installation complies with building code; concrete complies with spec"},
+  {cat:"Compliance",rel:"VIOLATES",inv:"VIOLATED_BY",def:"Entity fails to meet a regulatory or contractual requirement",card:"many:many",phases:"Construction / Closeout",ex:"Fall protection violates OSHA 1926.502; fire stopping violates UL listing"},
+  {cat:"Compliance",rel:"ISSUED_BY",inv:"ISSUES",def:"Permit or certificate formally issued by a regulatory authority",card:"many:1",phases:"All",ex:"Building permit issued by city; CO issued by code official"},
+  {cat:"Risk",rel:"IMPACTS",inv:"IMPACTED_BY",def:"Entity has downstream effect on cost, schedule, scope, or quality",card:"many:many",phases:"All",ex:"Design change impacts steel schedule; material shortage impacts 3 trades"},
+  {cat:"Risk",rel:"MITIGATED_BY",inv:"MITIGATES",def:"Risk reduced by a control, action, or contingency",card:"many:many",phases:"All",ex:"Fall risk mitigated by guardrail; budget risk mitigated by contingency"},
+  {cat:"Risk",rel:"EXPOSES_TO",inv:"HAS_EXPOSURE",def:"Activity or condition creates exposure to a risk",card:"many:many",phases:"All",ex:"Deep excavation exposes to cave-in risk; single-source material exposes to supply risk"},
+  {cat:"Model",rel:"REPRESENTS",inv:"REPRESENTED_BY",def:"Digital entity represents a physical building element or condition",card:"many:1",phases:"All",ex:"BIM element represents physical wall; digital twin represents as-built condition"},
+  {cat:"Model",rel:"CLASHES_WITH",inv:"CLASHES_WITH",def:"Two model elements occupy the same physical space",card:"many:many",phases:"Preconstruction / Construction",ex:"Duct clashes with beam; sprinkler head clashes with light fixture"},
+  {cat:"Model",rel:"CAPTURED_BY",inv:"CAPTURES",def:"Physical condition documented by a reality capture method",card:"many:many",phases:"Construction / Closeout",ex:"As-built position captured by laser scan; progress captured by 360 photo"},
+  {cat:"Benchmark",rel:"COMPARABLE_TO",inv:"COMPARABLE_TO",def:"Entities share enough attributes for meaningful comparison",card:"many:many",phases:"All",ex:"$50M commercial project comparable to similar projects in region"},
+  {cat:"Benchmark",rel:"BENCHMARKED_AGAINST",inv:"BENCHMARKS",def:"Entity measured against a reference standard or percentile",card:"many:1",phases:"All",ex:"Rework cost benchmarked against industry median"},
+  {cat:"Benchmark",rel:"SEGMENTED_BY",inv:"SEGMENTS",def:"Metric grouped by an analytical dimension",card:"many:many",phases:"All",ex:"Cost segmented by project type; defects segmented by building system"}
+];
+
+// ═══════════════════════════════════════
+// VIEW SWITCHING
+// ═══════════════════════════════════════
+function switchView(view) {
+  document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
+  document.querySelectorAll('nav button').forEach(b => b.classList.remove('active'));
+  document.getElementById('view-' + view).classList.add('active');
+  event.target.classList.add('active');
+  if (view === 'network' && !networkRendered) renderNetwork();
+  if (view === 'domgraph' && !domGraphRendered) renderDomGraph();
+  if (view === 'relationships' && !relRendered) renderRelationships();
+}
+
+// ═══════════════════════════════════════
+// MATRIX VIEW
+// ═══════════════════════════════════════
+function renderMatrix() {
+  const container = document.getElementById('matrix-container');
+  let html = '<table class="heatmap"><thead><tr><th></th>';
+  systems.forEach(s => {
+    html += `<th class="system-header"><span>${s.name}</span><span class="division-tag">Div ${s.div}</span></th>`;
+  });
+  html += '</tr></thead><tbody>';
+  phases.forEach((p, pi) => {
+    html += `<tr data-phase="${pi}">`;
+    html += `<th class="phase-header"><span class="phase-category cat-${p.cat}"></span>${p.name}</th>`;
+    systems.forEach((s, si) => {
+      const level = matrix[pi][si];
+      html += `<td class="level-${level}" data-phase="${pi}" data-system="${si}" onclick="selectCell(${pi},${si})" title="${p.name} × ${s.name}: ${['Inactive','Supporting','Active','Primary'][level]}">${level > 0 ? level : ''}</td>`;
+    });
+    html += '</tr>';
+  });
+  html += '</tbody></table>';
+  container.innerHTML = html;
+}
+
+let selectedCell = null;
+function selectCell(pi, si) {
+  document.querySelectorAll('td.selected').forEach(td => td.classList.remove('selected'));
+  const td = document.querySelector(`td[data-phase="${pi}"][data-system="${si}"]`);
+  if (td) td.classList.add('selected');
+  selectedCell = { phase: pi, system: si };
+  const phase = phases[pi];
+  const system = systems[si];
+  const level = matrix[pi][si];
+  const res = resources[system.id];
+  const detail = document.getElementById('detail-content');
+  if (level === 0) {
+    detail.innerHTML = `<div style="margin-bottom:12px"><strong>${system.name}</strong> is <strong>inactive</strong> during <strong>${phase.name}</strong>.</div><div style="font-size:12px;color:var(--gray-400)">No direct construction activity for this system in this phase.</div>`;
+    document.querySelector('.matrix-detail h3').textContent = system.name;
+    document.querySelector('.matrix-detail .detail-subtitle').textContent = phase.name + ' — Inactive';
+    return;
+  }
+  document.querySelector('.matrix-detail h3').textContent = system.name;
+  document.querySelector('.matrix-detail .detail-subtitle').textContent = phase.name + ' — ' + ['','Supporting','Active','Primary'][level] + ' activity';
+  let h = '';
+  if (res.trades.length) {
+    h += '<div class="resource-group"><div class="resource-group-label"><span class="dot" style="background:var(--teal-600)"></span>Trades</div>';
+    res.trades.forEach(t => {
+      h += `<div class="resource-item"><span>${t.n}</span><span class="role-badge ${t.r==='P'?'role-primary':'role-supporting'}">${t.r==='P'?'Primary':'Supporting'}</span></div>`;
+    });
+    h += '</div>';
+  }
+  if (res.equipment.length) {
+    h += '<div class="resource-group"><div class="resource-group-label"><span class="dot" style="background:var(--amber-500)"></span>Equipment</div>';
+    res.equipment.forEach(t => {
+      h += `<div class="resource-item"><span>${t.n}</span><span class="role-badge ${t.r==='P'?'role-primary':'role-supporting'}">${t.r==='P'?'Primary':'Supporting'}</span></div>`;
+    });
+    h += '</div>';
+  }
+  if (res.materials.length) {
+    h += '<div class="resource-group"><div class="resource-group-label"><span class="dot" style="background:var(--purple-500)"></span>Materials</div>';
+    res.materials.forEach(t => {
+      h += `<div class="resource-item"><span>${t.n}</span><span class="role-badge ${t.r==='P'?'role-primary':'role-supporting'}">${t.r==='P'?'Primary':'Supporting'}</span></div>`;
+    });
+    h += '</div>';
+  }
+  detail.innerHTML = h;
+}
+
+// ═══════════════════════════════════════
+// NETWORK VIEW
+// ═══════════════════════════════════════
+let networkRendered = false;
+function renderNetwork() {
+  networkRendered = true;
+  const svg = document.getElementById('network-svg');
+  const W = svg.parentElement.clientWidth;
+  const colPhase = 160, colSystem = W * 0.42, colResource = W * 0.78;
+  // Collect unique resources
+  const resNodes = [];
+  const resSet = new Set();
+  const sysResEdges = [];
+  systems.forEach(s => {
+    const r = resources[s.id];
+    ['trades','equipment','materials'].forEach(type => {
+      r[type].forEach(item => {
+        if (!resSet.has(item.n)) {
+          resSet.add(item.n);
+          resNodes.push({ name: item.n, type: type === 'trades' ? 'trade' : type === 'equipment' ? 'equip' : 'material' });
+        }
+        sysResEdges.push({ from: s.id, to: item.n, strength: item.r === 'P' ? 2 : 1 });
+      });
+    });
+  });
+  // Phase → System edges
+  const phaseSysEdges = [];
+  phases.forEach((p, pi) => {
+    systems.forEach((s, si) => {
+      if (matrix[pi][si] >= 2) phaseSysEdges.push({ from: p.id, to: s.id, strength: matrix[pi][si] });
+    });
+  });
+  const phaseH = 36, sysH = 42, resH = 24;
+  const phaseYStart = 60;
+  const totalPhaseH = phases.length * phaseH;
+  const totalSysH = systems.length * sysH;
+  const totalResH = resNodes.length * resH;
+  const H = Math.max(totalPhaseH, totalSysH, totalResH) + 120;
+  svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
+  svg.setAttribute('height', H);
+  svg.style.height = H + 'px';
+  // Position nodes
+  const phaseY = (i) => phaseYStart + 40 + i * ((H - 100) / phases.length);
+  const sysYStart = phaseYStart + 40 + ((H - 100) / 2) - (totalSysH / 2);
+  const sysY = (i) => sysYStart + i * sysH;
+  const resYStart = phaseYStart + 40 + ((H - 100) / 2) - (totalResH / 2);
+  const resY = (i) => resYStart + i * resH;
+  const catColor = { planning: '#3B82F6', early: '#14B8A6', core: '#F97316', late: '#8B5CF6', post: '#94A3B8' };
+  const sysColor = '#3B82F6';
+  const resColor = { trade: '#0D9488', equip: '#D97706', material: '#7C3AED' };
+  let svgContent = '';
+  // Column headers
+  svgContent += `<text x="${colPhase}" y="${phaseYStart}" class="column-header" text-anchor="middle">Phases</text>`;
+  svgContent += `<text x="${colPhase}" y="${phaseYStart+16}" class="column-subheader" text-anchor="middle">12 lifecycle stages</text>`;
+  svgContent += `<text x="${colSystem}" y="${phaseYStart}" class="column-header" text-anchor="middle">Building Systems</text>`;
+  svgContent += `<text x="${colSystem}" y="${phaseYStart+16}" class="column-subheader" text-anchor="middle">14 CSI-aligned systems</text>`;
+  svgContent += `<text x="${colResource}" y="${phaseYStart}" class="column-header" text-anchor="middle">Resources</text>`;
+  svgContent += `<text x="${colResource}" y="${phaseYStart+16}" class="column-subheader" text-anchor="middle">${resNodes.length} trades, equipment & materials</text>`;
+  // Draw edges first (behind nodes)
+  svgContent += '<g class="edges">';
+  phaseSysEdges.forEach(e => {
+    const pi = phases.findIndex(p => p.id === e.from);
+    const si = systems.findIndex(s => s.id === e.to);
+    const y1 = phaseY(pi), y2 = sysY(si) + 10;
+    const x1 = colPhase + 80, x2 = colSystem - 80;
+    const cp = (x1 + x2) / 2;
+    svgContent += `<path class="edge" d="M${x1},${y1} C${cp},${y1} ${cp},${y2} ${x2},${y2}" stroke="${catColor[phases[pi].cat]}" data-from="${e.from}" data-to="${e.to}" />`;
+  });
+  sysResEdges.forEach(e => {
+    const si = systems.findIndex(s => s.id === e.from);
+    const ri = resNodes.findIndex(r => r.name === e.to);
+    const y1 = sysY(si) + 10, y2 = resY(ri) + 8;
+    const x1 = colSystem + 80, x2 = colResource - 90;
+    const cp = (x1 + x2) / 2;
+    svgContent += `<path class="edge" d="M${x1},${y1} C${cp},${y1} ${cp},${y2} ${x2},${y2}" stroke="${resColor[resNodes[ri].type]}" data-from="${e.from}" data-to="${e.to}" />`;
+  });
+  svgContent += '</g>';
+  // Phase nodes
+  phases.forEach((p, i) => {
+    const y = phaseY(i) - 12;
+    svgContent += `<rect class="node-rect" x="${colPhase-75}" y="${y}" width="150" height="24" fill="${catColor[p.cat]}" stroke="${catColor[p.cat]}" data-node="${p.id}" data-col="phase" />`;
+    svgContent += `<text class="node-label" x="${colPhase}" y="${y+16}" text-anchor="middle" fill="white" data-node="${p.id}">${p.name}</text>`;
+  });
+  // System nodes
+  systems.forEach((s, i) => {
+    const y = sysY(i);
+    svgContent += `<rect class="node-rect" x="${colSystem-75}" y="${y}" width="150" height="24" fill="${sysColor}" stroke="${sysColor}" data-node="${s.id}" data-col="system" />`;
+    svgContent += `<text class="node-label" x="${colSystem}" y="${y+16}" text-anchor="middle" fill="white" data-node="${s.id}">${s.name}</text>`;
+  });
+  // Resource nodes
+  resNodes.forEach((r, i) => {
+    const y = resY(i);
+    svgContent += `<rect class="node-rect" x="${colResource-85}" y="${y}" width="170" height="18" fill="${resColor[r.type]}" stroke="${resColor[r.type]}" rx="3" data-node="${r.name}" data-col="resource" />`;
+    svgContent += `<text class="node-label" x="${colResource}" y="${y+13}" text-anchor="middle" fill="white" font-size="10" data-node="${r.name}">${r.name}</text>`;
+  });
+  svg.innerHTML = svgContent;
+  // Hover interactions
+  const allEdges = svg.querySelectorAll('.edge');
+  const allRects = svg.querySelectorAll('.node-rect');
+  const allLabels = svg.querySelectorAll('.node-label');
+  function highlight(nodeId) {
+    const connected = new Set([nodeId]);
+    allEdges.forEach(e => {
+      const from = e.getAttribute('data-from'), to = e.getAttribute('data-to');
+      if (from === nodeId || to === nodeId) {
+        e.classList.add('highlighted');
+        e.classList.remove('dimmed');
+        connected.add(from);
+        connected.add(to);
+      } else {
+        e.classList.remove('highlighted');
+        e.classList.add('dimmed');
+      }
+    });
+    // Second pass: for systems connected to a phase, also show their resources
+    if (phases.find(p => p.id === nodeId)) {
+      const connectedSystems = new Set();
+      allEdges.forEach(e => {
+        if (e.getAttribute('data-from') === nodeId) connectedSystems.add(e.getAttribute('data-to'));
+      });
+      allEdges.forEach(e => {
+        if (connectedSystems.has(e.getAttribute('data-from'))) {
+          e.classList.add('highlighted');
+          e.classList.remove('dimmed');
+          connected.add(e.getAttribute('data-to'));
+        }
+      });
+    }
+    // For resources, also show their systems' phases
+    if (resNodes.find(r => r.name === nodeId)) {
+      const connectedSystems = new Set();
+      allEdges.forEach(e => {
+        if (e.getAttribute('data-to') === nodeId && systems.find(s => s.id === e.getAttribute('data-from'))) {
+          connectedSystems.add(e.getAttribute('data-from'));
+        }
+      });
+      allEdges.forEach(e => {
+        if (connectedSystems.has(e.getAttribute('data-to')) && phases.find(p => p.id === e.getAttribute('data-from'))) {
+          e.classList.add('highlighted');
+          e.classList.remove('dimmed');
+          connected.add(e.getAttribute('data-from'));
+          connected.add(e.getAttribute('data-to'));
+        }
+      });
+    }
+    allRects.forEach(r => {
+      const nid = r.getAttribute('data-node');
+      r.classList.toggle('dimmed', !connected.has(nid));
+    });
+    allLabels.forEach(l => {
+      const nid = l.getAttribute('data-node');
+      l.classList.toggle('dimmed', !connected.has(nid));
+    });
+  }
+  function clearHighlight() {
+    allEdges.forEach(e => { e.classList.remove('highlighted','dimmed'); });
+    allRects.forEach(r => { r.classList.remove('dimmed'); });
+    allLabels.forEach(l => { l.classList.remove('dimmed'); });
+  }
+  svg.querySelectorAll('.node-rect, .node-label').forEach(el => {
+    el.addEventListener('mouseenter', () => highlight(el.getAttribute('data-node')));
+    el.addEventListener('mouseleave', clearHighlight);
+  });
+}
+
+// ═══════════════════════════════════════
+// RELATIONSHIPS VIEW
+// ═══════════════════════════════════════
+let relRendered = false;
+const catBgMap = {
+  Compositional:'compositional', Classification:'classification', Responsibility:'responsibility',
+  Financial:'financial', Lifecycle:'lifecycle', Causal:'causal', Temporal:'temporal',
+  Spatial:'spatial', Resource:'resource', Organizational:'organizational', Document:'document',
+  Compliance:'compliance', Risk:'risk', Model:'model', Benchmark:'benchmark'
+};
+function renderRelationships() {
+  relRendered = true;
+  const categories = [...new Set(relationships.map(r => r.cat))];
+  // Filter buttons
+  const filterDiv = document.getElementById('rel-filter');
+  let fHtml = '<button class="active" onclick="filterRels(\'all\',this)">All (' + relationships.length + ')</button>';
+  categories.forEach(c => {
+    const count = relationships.filter(r => r.cat === c).length;
+    fHtml += `<button onclick="filterRels('${c}',this)">${c} (${count})</button>`;
+  });
+  filterDiv.innerHTML = fHtml;
+  // Cards
+  renderRelCards('all');
+}
+function renderRelCards(filter) {
+  const grid = document.getElementById('rel-grid');
+  const items = filter === 'all' ? relationships : relationships.filter(r => r.cat === filter);
+  let h = '';
+  items.forEach(r => {
+    h += `<div class="rel-card" data-cat="${r.cat}">`;
+    h += `<div class="rel-category-badge cat-bg-${catBgMap[r.cat]}">${r.cat}</div>`;
+    h += `<div class="rel-pair">${r.rel} <span class="inverse">/ ${r.inv}</span></div>`;
+    h += `<div class="rel-def">${r.def}</div>`;
+    h += `<div class="rel-example">${r.ex}</div>`;
+    h += `<div class="rel-meta"><span>${r.card}</span><span>${r.phases}</span></div>`;
+    h += `</div>`;
+  });
+  grid.innerHTML = h;
+}
+function filterRels(cat, btn) {
+  document.querySelectorAll('.rel-filter button').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  renderRelCards(cat);
+}
+
+// ═══════════════════════════════════════
+// DOMAIN GRAPH VIEW
+// ═══════════════════════════════════════
+let domGraphRendered = false;
+
+const domainNodes = [
+  { id:"fi", name:"Financial Instruments", cluster:"core", out:12, in:3 },
+  { id:"dc", name:"Documents & Communications", cluster:"core", out:12, in:4 },
+  { id:"qs", name:"Quality & Safety Records", cluster:"core", out:11, in:4 },
+  { id:"fo", name:"Field Operations", cluster:"field", out:7, in:6 },
+  { id:"sc", name:"Schedule", cluster:"field", out:5, in:9 },
+  { id:"ph", name:"Phases", cluster:"lifecycle", out:6, in:6 },
+  { id:"wf", name:"Workflows & Statuses", cluster:"lifecycle", out:3, in:1 },
+  { id:"be", name:"Building Elements", cluster:"physical", out:4, in:12 },
+  { id:"rs", name:"Resources", cluster:"physical", out:2, in:9 },
+  { id:"lo", name:"Locations", cluster:"physical", out:4, in:9 },
+  { id:"mb", name:"Models & BIM", cluster:"physical", out:4, in:5 },
+  { id:"og", name:"Organizations", cluster:"people", out:5, in:7 },
+  { id:"ro", name:"Roles", cluster:"people", out:2, in:4 },
+  { id:"pa", name:"Project Attributes", cluster:"meta", out:8, in:0 },
+  { id:"st", name:"Standards & Classifications", cluster:"meta", out:6, in:4 },
+  { id:"rk", name:"Risk", cluster:"meta", out:4, in:4 },
+  { id:"cp", name:"Contracts & Procurement", cluster:"commercial", out:2, in:7 },
+  { id:"pr", name:"Permits & Regulatory", cluster:"commercial", out:4, in:7 }
+];
+
+const domainEdges = [
+  // Financial cascade
+  {s:"fi",t:"dc",str:"Dense",rels:"ORIGINATED_FROM, REFERENCES",flow:"\u2192"},
+  {s:"fi",t:"qs",str:"Moderate",rels:"ORIGINATED_FROM, COSTS_AGAINST",flow:"\u2190"},
+  {s:"fi",t:"be",str:"Dense",rels:"MAPS_TO, CLASSIFIED_AS, COSTS_AGAINST",flow:"\u2194"},
+  {s:"fi",t:"og",str:"Dense",rels:"CONTRACTED_TO, COMMITTED_TO",flow:"\u2194"},
+  {s:"fi",t:"sc",str:"Moderate",rels:"DEPENDS_ON, IMPACTS",flow:"\u2194"},
+  {s:"fi",t:"st",str:"Dense",rels:"MAPS_TO, CLASSIFIED_AS",flow:"\u2194"},
+  {s:"fi",t:"fo",str:"Moderate",rels:"TRIGGERED_BY, COSTS_AGAINST",flow:"\u2190"},
+  {s:"fi",t:"cp",str:"Dense",rels:"COMMITTED_TO, BUDGETED_FOR",flow:"\u2194"},
+  {s:"fi",t:"ph",str:"Moderate",rels:"PRECEDES, DEPENDS_ON",flow:"\u2192"},
+  {s:"fi",t:"rk",str:"Moderate",rels:"IMPACTS, MITIGATED_BY",flow:"\u2194"},
+  {s:"fi",t:"lo",str:"Sparse",rels:"LOCATED_AT, COSTS_AGAINST",flow:"\u2190"},
+  {s:"fi",t:"ro",str:"Moderate",rels:"MANAGED_BY, APPROVED_AS",flow:"\u2190"},
+  // Quality & Safety
+  {s:"qs",t:"dc",str:"Dense",rels:"REFERENCES, ATTACHED_TO, LINKED_TO",flow:"\u2194"},
+  {s:"qs",t:"be",str:"Moderate",rels:"MAPS_TO, LOCATED_AT",flow:"\u2192"},
+  {s:"qs",t:"og",str:"Dense",rels:"ASSIGNED_TO, PERFORMED_BY",flow:"\u2194"},
+  {s:"qs",t:"fo",str:"Moderate",rels:"DOCUMENTS, TRIGGERED_BY",flow:"\u2194"},
+  {s:"qs",t:"st",str:"Dense",rels:"COMPLIES_WITH, VIOLATES",flow:"\u2192"},
+  {s:"qs",t:"lo",str:"Moderate",rels:"LOCATED_AT",flow:"\u2192"},
+  {s:"qs",t:"ro",str:"Moderate",rels:"ASSIGNED_TO, INSPECTED_BY",flow:"\u2190"},
+  {s:"qs",t:"ph",str:"Moderate",rels:"PRECEDES, DEPENDS_ON",flow:"\u2192"},
+  {s:"qs",t:"rk",str:"Dense",rels:"EXPOSES_TO, LEADS, IMPACTS",flow:"\u2192"},
+  {s:"qs",t:"mb",str:"Sparse",rels:"LINKED_TO, ORIGINATED_FROM",flow:"\u2190"},
+  {s:"qs",t:"cp",str:"Sparse",rels:"VIOLATES, COSTS_AGAINST",flow:"\u2192"},
+  // Documents & Communications
+  {s:"dc",t:"be",str:"Dense",rels:"REFERENCES, GOVERNS, SPECIFIES",flow:"\u2192"},
+  {s:"dc",t:"og",str:"Dense",rels:"ASSIGNED_TO, RESPONDS_TO, DESIGNED_BY",flow:"\u2194"},
+  {s:"dc",t:"sc",str:"Moderate",rels:"REFERENCES, IMPACTS, PRECEDES",flow:"\u2192"},
+  {s:"dc",t:"fo",str:"Dense",rels:"DOCUMENTS, ATTACHED_TO",flow:"\u2194"},
+  {s:"dc",t:"st",str:"Moderate",rels:"REFERENCES, GOVERNS",flow:"\u2192"},
+  {s:"dc",t:"ph",str:"Moderate",rels:"PRECEDES, DEPENDS_ON",flow:"\u2192"},
+  {s:"dc",t:"lo",str:"Sparse",rels:"REFERENCES, LOCATED_AT",flow:"\u2192"},
+  {s:"dc",t:"ro",str:"Moderate",rels:"ASSIGNED_TO, MANAGED_BY",flow:"\u2194"},
+  {s:"dc",t:"pr",str:"Moderate",rels:"DOCUMENTS, DEPENDS_ON",flow:"\u2194"},
+  {s:"dc",t:"cp",str:"Dense",rels:"REFERENCES, GOVERNS",flow:"\u2194"},
+  {s:"dc",t:"mb",str:"Moderate",rels:"REPRESENTS, REFERENCES",flow:"\u2194"},
+  {s:"dc",t:"rk",str:"Moderate",rels:"IMPACTS, TRIGGERED_BY",flow:"\u2192"},
+  // Standards & Classifications
+  {s:"st",t:"be",str:"Dense",rels:"MAPS_TO, CLASSIFIED_AS",flow:"\u2194"},
+  {s:"st",t:"og",str:"Moderate",rels:"COMPLIES_WITH, CLASSIFIED_AS",flow:"\u2192"},
+  {s:"st",t:"pr",str:"Dense",rels:"GOVERNS, COMPLIES_WITH",flow:"\u2192"},
+  {s:"st",t:"rs",str:"Moderate",rels:"SPECIFIES, CLASSIFIED_AS",flow:"\u2192"},
+  {s:"st",t:"mb",str:"Moderate",rels:"MAPS_TO, CLASSIFIED_AS",flow:"\u2192"},
+  {s:"st",t:"cp",str:"Moderate",rels:"GOVERNS, REFERENCES",flow:"\u2192"},
+  // Organizations & Roles
+  {s:"og",t:"ro",str:"Dense",rels:"PLAYS_ROLE, BELONGS_TO",flow:"\u2194"},
+  {s:"og",t:"be",str:"Moderate",rels:"PERFORMED_BY, CONTRACTED_TO",flow:"\u2192"},
+  {s:"og",t:"cp",str:"Dense",rels:"CONTRACTED_TO, BONDED_BY",flow:"\u2194"},
+  {s:"og",t:"lo",str:"Sparse",rels:"LOCATED_AT, ALLOCATED_TO",flow:"\u2192"},
+  {s:"og",t:"pr",str:"Moderate",rels:"ISSUED_BY, COMPLIES_WITH",flow:"\u2192"},
+  {s:"ro",t:"sc",str:"Moderate",rels:"MANAGED_BY, ALLOCATED_TO",flow:"\u2192"},
+  {s:"ro",t:"fo",str:"Dense",rels:"PERFORMED_BY, MANAGED_BY",flow:"\u2192"},
+  // Spatial
+  {s:"lo",t:"be",str:"Dense",rels:"CONTAINS, LOCATED_AT",flow:"\u2194"},
+  {s:"lo",t:"fo",str:"Moderate",rels:"LOCATED_AT",flow:"\u2190"},
+  {s:"lo",t:"sc",str:"Moderate",rels:"LOCATED_AT, DEPENDS_ON",flow:"\u2194"},
+  {s:"lo",t:"mb",str:"Moderate",rels:"REPRESENTS, LOCATED_AT",flow:"\u2194"},
+  // Lifecycle
+  {s:"ph",t:"sc",str:"Dense",rels:"CONTAINS, PRECEDES",flow:"\u2194"},
+  {s:"ph",t:"wf",str:"Dense",rels:"PRECEDES, DEPENDS_ON",flow:"\u2194"},
+  {s:"ph",t:"be",str:"Dense",rels:"PRECEDES, CONCURRENT_WITH",flow:"\u2192"},
+  {s:"ph",t:"rs",str:"Dense",rels:"REQUIRES, ALLOCATED_TO",flow:"\u2192"},
+  {s:"ph",t:"cp",str:"Moderate",rels:"PRECEDES, DEPENDS_ON",flow:"\u2192"},
+  {s:"ph",t:"pr",str:"Moderate",rels:"DEPENDS_ON, PRECEDES",flow:"\u2194"},
+  {s:"wf",t:"dc",str:"Dense",rels:"RESOLVES_TO, APPROVED_AS",flow:"\u2194"},
+  {s:"wf",t:"fi",str:"Dense",rels:"APPROVED_AS, RESOLVES_TO",flow:"\u2194"},
+  {s:"wf",t:"qs",str:"Dense",rels:"RESOLVES_TO, APPROVED_AS",flow:"\u2192"},
+  // Risk
+  {s:"rk",t:"sc",str:"Dense",rels:"IMPACTS, TRIGGERED_BY",flow:"\u2194"},
+  {s:"rk",t:"cp",str:"Moderate",rels:"MITIGATED_BY, EXPOSES_TO",flow:"\u2190"},
+  {s:"rk",t:"rs",str:"Moderate",rels:"EXPOSES_TO, TRIGGERED_BY",flow:"\u2190"},
+  {s:"rk",t:"pr",str:"Moderate",rels:"TRIGGERED_BY, IMPACTS",flow:"\u2190"},
+  // Models & BIM
+  {s:"mb",t:"be",str:"Dense",rels:"REPRESENTS, CLASHES_WITH",flow:"\u2194"},
+  {s:"mb",t:"sc",str:"Moderate",rels:"LINKED_TO, REPRESENTS",flow:"\u2192"},
+  {s:"mb",t:"rs",str:"Moderate",rels:"SPECIFIES, CONSUMES",flow:"\u2192"},
+  {s:"mb",t:"lo",str:"Moderate",rels:"REPRESENTS, CONTAINS",flow:"\u2194"},
+  // Building Elements outbound
+  {s:"be",t:"rs",str:"Dense",rels:"REQUIRES, COMPOSED_OF",flow:"\u2192"},
+  {s:"be",t:"lo",str:"Dense",rels:"LOCATED_AT, ADJACENT_TO",flow:"\u2192"},
+  {s:"be",t:"st",str:"Dense",rels:"CLASSIFIED_AS, MAPS_TO",flow:"\u2192"},
+  {s:"be",t:"mb",str:"Dense",rels:"REPRESENTED_BY, CLASHES_WITH",flow:"\u2192"},
+  // Schedule outbound
+  {s:"sc",t:"fi",str:"Moderate",rels:"COSTS_AGAINST, BUDGETED_FOR",flow:"\u2192"},
+  {s:"sc",t:"fo",str:"Dense",rels:"LINKED_TO, DOCUMENTS",flow:"\u2192"},
+  {s:"sc",t:"ph",str:"Dense",rels:"CONTAINS, PRECEDES",flow:"\u2192"},
+  {s:"sc",t:"be",str:"Dense",rels:"PRECEDES, CONCURRENT_WITH",flow:"\u2192"},
+  {s:"sc",t:"rs",str:"Moderate",rels:"REQUIRES, ALLOCATED_TO",flow:"\u2192"},
+  // Permits outbound
+  {s:"pr",t:"ph",str:"Dense",rels:"ENABLES, DEPENDS_ON",flow:"\u2192"},
+  {s:"pr",t:"qs",str:"Dense",rels:"COMPLIES_WITH, INSPECTED_BY",flow:"\u2192"},
+  {s:"pr",t:"og",str:"Moderate",rels:"ISSUED_BY, COMPLIES_WITH",flow:"\u2192"},
+  {s:"pr",t:"dc",str:"Moderate",rels:"DOCUMENTS, REFERENCES",flow:"\u2192"},
+  // Field Operations
+  {s:"fo",t:"sc",str:"Dense",rels:"LINKED_TO, DOCUMENTS",flow:"\u2194"},
+  {s:"fo",t:"be",str:"Moderate",rels:"MAPS_TO, LOCATED_AT",flow:"\u2192"},
+  {s:"fo",t:"rs",str:"Dense",rels:"DOCUMENTS, CONSUMES",flow:"\u2192"},
+  {s:"fo",t:"lo",str:"Sparse",rels:"LOCATED_AT",flow:"\u2192"},
+  {s:"fo",t:"og",str:"Moderate",rels:"PERFORMED_BY, MANAGED_BY",flow:"\u2190"},
+  {s:"fo",t:"ph",str:"Moderate",rels:"DOCUMENTS",flow:"\u2192"},
+  {s:"fo",t:"pr",str:"Sparse",rels:"DOCUMENTS, COMPLIES_WITH",flow:"\u2192"},
+  // Resources outbound
+  {s:"rs",t:"be",str:"Dense",rels:"REQUIRES, CONSUMES, PERFORMED_BY",flow:"\u2194"},
+  {s:"rs",t:"lo",str:"Sparse",rels:"ALLOCATED_TO, LOCATED_AT",flow:"\u2192"},
+  // Project Attributes outbound
+  {s:"pa",t:"fi",str:"Dense",rels:"SEGMENTED_BY, BENCHMARKED_AGAINST",flow:"\u2192"},
+  {s:"pa",t:"qs",str:"Dense",rels:"SEGMENTED_BY, BENCHMARKED_AGAINST",flow:"\u2192"},
+  {s:"pa",t:"sc",str:"Moderate",rels:"SEGMENTED_BY, BENCHMARKED_AGAINST",flow:"\u2192"},
+  {s:"pa",t:"be",str:"Moderate",rels:"CLASSIFIED_AS, CONTAINS",flow:"\u2192"},
+  {s:"pa",t:"og",str:"Moderate",rels:"CLASSIFIED_AS, MANAGED_BY",flow:"\u2192"},
+  {s:"pa",t:"rk",str:"Moderate",rels:"EXPOSES_TO, SEGMENTED_BY",flow:"\u2192"},
+  {s:"pa",t:"lo",str:"Moderate",rels:"LOCATED_AT",flow:"\u2192"},
+  {s:"pa",t:"rs",str:"Sparse",rels:"REQUIRES",flow:"\u2192"},
+  // Contracts & Procurement
+  {s:"cp",t:"rs",str:"Moderate",rels:"SPECIFIES, COMMITTED_TO",flow:"\u2192"},
+  {s:"cp",t:"pr",str:"Sparse",rels:"COMPLIES_WITH, DEPENDS_ON",flow:"\u2192"}
+];
+
+const clusterColors = {
+  core: '#F97316',     // Orange — Financial, Documents, Quality
+  field: '#14B8A6',    // Teal — Field Ops, Schedule
+  lifecycle: '#8B5CF6', // Purple — Phases, Workflows
+  physical: '#3B82F6',  // Blue — Building Elements, Resources, Locations, BIM
+  people: '#EC4899',    // Pink — Organizations, Roles
+  meta: '#64748B',      // Slate — Project Attributes, Standards, Risk
+  commercial: '#10B981' // Emerald — Contracts, Permits
+};
+
+function renderDomGraph() {
+  domGraphRendered = true;
+  const svg = document.getElementById('domgraph-svg');
+  const W = svg.parentElement.clientWidth;
+  const H = 720;
+  svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
+  svg.setAttribute('height', H);
+
+  // Layout: Force-directed approximation using cluster-based positioning
+  const cx = W / 2, cy = H / 2;
+  const radius = Math.min(W, H) * 0.34;
+
+  // Position domains in cluster groups around the center
+  const clusterAngles = {
+    core: -Math.PI/2,        // Top
+    field: -Math.PI/6,       // Upper right
+    physical: Math.PI/4,     // Right
+    people: 2*Math.PI/3,     // Lower right
+    commercial: 5*Math.PI/6, // Lower left
+    lifecycle: -5*Math.PI/6, // Upper left
+    meta: Math.PI            // Left
+  };
+
+  const clusterCounts = {};
+  domainNodes.forEach(d => {
+    clusterCounts[d.cluster] = (clusterCounts[d.cluster] || 0) + 1;
+  });
+
+  const clusterIndex = {};
+  const positions = {};
+
+  domainNodes.forEach(d => {
+    if (!clusterIndex[d.cluster]) clusterIndex[d.cluster] = 0;
+    const angle = clusterAngles[d.cluster];
+    const count = clusterCounts[d.cluster];
+    const idx = clusterIndex[d.cluster]++;
+    const spread = 0.35; // radians spread within cluster
+    const clusterR = radius * (0.75 + (count > 2 ? 0.25 : 0));
+    const subAngle = angle + (idx - (count-1)/2) * spread;
+    positions[d.id] = {
+      x: cx + clusterR * Math.cos(subAngle),
+      y: cy + clusterR * Math.sin(subAngle)
+    };
+  });
+
+  const strengthWidth = { Dense: 3, Moderate: 1.5, Sparse: 0.75 };
+  const strengthOpacity = { Dense: 0.25, Moderate: 0.15, Sparse: 0.08 };
+
+  let svgContent = '';
+
+  // Draw edges
+  svgContent += '<g class="dom-edges">';
+  domainEdges.forEach((e, i) => {
+    const p1 = positions[e.s], p2 = positions[e.t];
+    if (!p1 || !p2) return;
+    const midX = (p1.x + p2.x) / 2;
+    const midY = (p1.y + p2.y) / 2;
+    // Slight curve via quadratic bezier
+    const dx = p2.x - p1.x, dy = p2.y - p1.y;
+    const perpX = -dy * 0.08, perpY = dx * 0.08;
+    const cpx = midX + perpX, cpy = midY + perpY;
+    svgContent += `<path class="dom-edge" d="M${p1.x},${p1.y} Q${cpx},${cpy} ${p2.x},${p2.y}" fill="none" stroke="var(--orange-500)" stroke-width="${strengthWidth[e.str]}" opacity="${strengthOpacity[e.str]}" data-src="${e.s}" data-tgt="${e.t}" data-str="${e.str}" data-rels="${e.rels}" data-flow="${e.flow}" />`;
+  });
+  svgContent += '</g>';
+
+  // Draw nodes
+  const nodeR = 28;
+  domainNodes.forEach(d => {
+    const p = positions[d.id];
+    const total = d.out + d.in;
+    const r = nodeR + Math.min(total * 0.5, 12);
+    const col = clusterColors[d.cluster];
+    svgContent += `<circle class="dom-node" cx="${p.x}" cy="${p.y}" r="${r}" fill="${col}" opacity="0.9" stroke="white" stroke-width="2" data-node="${d.id}" style="cursor:pointer" />`;
+    // Label: split long names
+    const words = d.name.split(' ');
+    const lines = [];
+    let cur = '';
+    words.forEach(w => {
+      if ((cur + ' ' + w).length > 14 && cur) { lines.push(cur); cur = w; }
+      else { cur = cur ? cur + ' ' + w : w; }
+    });
+    if (cur) lines.push(cur);
+    const lineH = 12;
+    const startY = p.y - ((lines.length - 1) * lineH) / 2;
+    lines.forEach((line, i) => {
+      svgContent += `<text class="dom-label" x="${p.x}" y="${startY + i * lineH + 4}" text-anchor="middle" fill="white" font-family="Inter,sans-serif" font-size="10" font-weight="600" pointer-events="none">${line}</text>`;
+    });
+    // Connection count badge
+    svgContent += `<text x="${p.x}" y="${p.y + r + 14}" text-anchor="middle" fill="var(--gray-400)" font-family="Inter,sans-serif" font-size="9">${total}</text>`;
+  });
+
+  svg.innerHTML = svgContent;
+
+  // Hover interactions
+  const allDomEdges = svg.querySelectorAll('.dom-edge');
+  const allDomNodes = svg.querySelectorAll('.dom-node');
+
+  function highlightDomain(nodeId) {
+    const connected = new Set([nodeId]);
+    allDomEdges.forEach(e => {
+      const src = e.getAttribute('data-src'), tgt = e.getAttribute('data-tgt');
+      if (src === nodeId || tgt === nodeId) {
+        e.style.opacity = e.getAttribute('data-str') === 'Dense' ? 0.7 : 0.5;
+        e.style.strokeWidth = parseFloat(e.getAttribute('stroke-width')) * 2 + 'px';
+        connected.add(src);
+        connected.add(tgt);
+      } else {
+        e.style.opacity = 0.03;
+      }
+    });
+    allDomNodes.forEach(n => {
+      const nid = n.getAttribute('data-node');
+      n.style.opacity = connected.has(nid) ? 1 : 0.15;
+    });
+    svg.querySelectorAll('.dom-label').forEach(l => {
+      // dom-labels don't have data-node, use position matching
+    });
+  }
+
+  function clearDomHighlight() {
+    allDomEdges.forEach(e => {
+      e.style.opacity = strengthOpacity[e.getAttribute('data-str')];
+      e.style.strokeWidth = strengthWidth[e.getAttribute('data-str')] + 'px';
+    });
+    allDomNodes.forEach(n => { n.style.opacity = 0.9; });
+  }
+
+  function showDomDetail(nodeId) {
+    const node = domainNodes.find(d => d.id === nodeId);
+    if (!node) return;
+    const outEdges = domainEdges.filter(e => e.s === nodeId);
+    const inEdges = domainEdges.filter(e => e.t === nodeId);
+    document.querySelector('#domgraph-detail h3').textContent = node.name;
+    document.querySelector('#domgraph-detail .detail-subtitle').textContent =
+      `${node.out} outbound, ${node.in} inbound (${node.out + node.in} total)`;
+
+    let h = '';
+    if (outEdges.length) {
+      h += '<div class="resource-group"><div class="resource-group-label"><span class="dot" style="background:var(--orange-500)"></span>Outbound</div>';
+      outEdges.forEach(e => {
+        const target = domainNodes.find(d => d.id === e.t);
+        const strBadge = e.str === 'Dense' ? 'role-primary' : 'role-supporting';
+        h += `<div class="resource-item"><span style="font-size:11px">${e.flow} ${target ? target.name : e.t}</span><span class="role-badge ${strBadge}" style="font-size:9px">${e.str}</span></div>`;
+        h += `<div style="font-size:10px;color:var(--gray-400);padding:0 10px 4px 10px">${e.rels}</div>`;
+      });
+      h += '</div>';
+    }
+    if (inEdges.length) {
+      h += '<div class="resource-group"><div class="resource-group-label"><span class="dot" style="background:var(--teal-500)"></span>Inbound</div>';
+      inEdges.forEach(e => {
+        const source = domainNodes.find(d => d.id === e.s);
+        const strBadge = e.str === 'Dense' ? 'role-primary' : 'role-supporting';
+        h += `<div class="resource-item"><span style="font-size:11px">\u2190 ${source ? source.name : e.s}</span><span class="role-badge ${strBadge}" style="font-size:9px">${e.str}</span></div>`;
+      });
+      h += '</div>';
+    }
+    document.getElementById('domgraph-content').innerHTML = h;
+  }
+
+  allDomNodes.forEach(n => {
+    n.addEventListener('mouseenter', () => {
+      highlightDomain(n.getAttribute('data-node'));
+    });
+    n.addEventListener('mouseleave', clearDomHighlight);
+    n.addEventListener('click', () => {
+      showDomDetail(n.getAttribute('data-node'));
+    });
+  });
+}
+
+// ═══════════════════════════════════════
+// INIT
+// ═══════════════════════════════════════
+renderMatrix();
+</script>
+</body>
+</html>

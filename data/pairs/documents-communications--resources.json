@@ -1,0 +1,263 @@
+{
+  "source": "documents-communications",
+  "target": "resources",
+  "universalEdges": [
+    {
+      "source": "doc-submittal",
+      "targetGroup": "materials",
+      "verb": "SUBMITS FOR APPROVAL",
+      "evidence": "Databricks Q3: submittals exist for all 18+ material categories \u2014 Paint/Coatings, Doors/Hardware, HVAC, Plumbing, Electrical, Concrete, Steel, Roofing, Glass, Flooring, Ceilings, Fire Protection, Elevator, Framing, Insulation, Casework, Masonry, Low Voltage"
+    },
+    {
+      "source": "doc-submittal-respon",
+      "targetGroup": "materials",
+      "verb": "APPROVES OR REJECTS",
+      "evidence": "Every material submittal gets a review response \u2014 universal by definition"
+    },
+    {
+      "source": "doc-specification-se",
+      "targetGroup": "materials",
+      "verb": "SPECIFIES REQUIREMENTS FOR",
+      "evidence": "Specification sections exist for every material category in CSI MasterFormat"
+    },
+    {
+      "source": "doc-product-data",
+      "targetGroup": "materials",
+      "verb": "CERTIFIES PERFORMANCE OF",
+      "evidence": "Product data submittals provide manufacturer certifications for every material type"
+    },
+    {
+      "source": "doc-req-info-rfi",
+      "targetGroup": "materials",
+      "verb": "CLARIFIES REQUIREMENT FOR",
+      "evidence": "RFIs can seek clarification about any material in the contract documents"
+    },
+    {
+      "source": "doc-req-info-rfi",
+      "targetGroup": "trades",
+      "verb": "CLARIFIES SCOPE FOR",
+      "evidence": "RFIs can address scope questions for any trade on the project"
+    },
+    {
+      "source": "doc-daily-report",
+      "targetGroup": "trades",
+      "verb": "LOGS HEADCOUNT OF",
+      "evidence": "Databricks: daily_log_manpower records headcount for 30+ trades at 10+ cos each (Q1 join)"
+    },
+    {
+      "source": "doc-daily-report",
+      "targetGroup": "equipment",
+      "verb": "LOGS USAGE OF",
+      "evidence": "Daily reports log equipment hours and activity for any mobilized equipment"
+    },
+    {
+      "source": "doc-daily-report",
+      "targetGroup": "materials",
+      "verb": "RECORDS DELIVERY OF",
+      "evidence": "Daily reports can document delivery of any material to site"
+    },
+    {
+      "source": "doc-notice-delay",
+      "targetGroup": "materials",
+      "verb": "REPORTS DELAY OF",
+      "evidence": "Databricks: daily_log_delay has 84K material delay records across 4,351 cos \u2014 any material can be delayed"
+    },
+    {
+      "source": "doc-punch-list-as",
+      "targetGroup": "materials",
+      "verb": "IDENTIFIES DEFICIENCY IN",
+      "evidence": "Databricks Q2: punch items span all MasterFormat divisions \u2014 any material can have closeout deficiencies"
+    },
+    {
+      "source": "doc-punch-list-as",
+      "targetGroup": "trades",
+      "verb": "ASSIGNS CORRECTION TO",
+      "evidence": "Any trade can be assigned punch list corrections"
+    },
+    {
+      "source": "doc-drawing-set",
+      "targetGroup": "materials",
+      "verb": "DEPICTS INSTALLATION OF",
+      "evidence": "Drawing sets show the location and configuration of every material in the design"
+    },
+    {
+      "source": "doc-addendum",
+      "targetGroup": "materials",
+      "verb": "MODIFIES REQUIREMENT FOR",
+      "evidence": "Addenda can change specifications for any material"
+    },
+    {
+      "source": "doc-chg-directive",
+      "targetGroup": "materials",
+      "verb": "DIRECTS CHANGE TO",
+      "evidence": "Change directives can order modifications to any specified material"
+    },
+    {
+      "source": "doc-chg-directive",
+      "targetGroup": "trades",
+      "verb": "DIRECTS CHANGE TO",
+      "evidence": "Change directives can direct scope changes to any trade"
+    },
+    {
+      "source": "doc-warranty-docs",
+      "targetGroup": "materials",
+      "verb": "WARRANTIES PERFORMANCE OF",
+      "evidence": "Every installed material has warranty documentation"
+    },
+    {
+      "source": "doc-as-built-docs",
+      "targetGroup": "materials",
+      "verb": "RECORDS INSTALLED LOCATION OF",
+      "evidence": "As-built docs record final position of every installed material"
+    },
+    {
+      "source": "doc-o-m-manual",
+      "targetGroup": "materials",
+      "verb": "DOCUMENTS MAINTENANCE OF",
+      "evidence": "O&M manuals document maintenance for all mechanical/complex materials"
+    },
+    {
+      "source": "doc-req-proposal-rfp",
+      "targetGroup": "trades",
+      "verb": "SOLICITS PRICING FOR",
+      "evidence": "RFPs can solicit pricing from any trade"
+    },
+    {
+      "source": "doc-req-proposal-rfp",
+      "targetGroup": "materials",
+      "verb": "SOLICITS PRICING FOR",
+      "evidence": "RFPs can solicit pricing for any material"
+    }
+  ],
+  "edges": [
+    [
+      "doc-shop-drawing",
+      "mat-steel",
+      "DETAILS FABRICATION OF"
+    ],
+    [
+      "doc-shop-drawing",
+      "mat-rebar",
+      "DETAILS FABRICATION OF"
+    ],
+    [
+      "doc-shop-drawing",
+      "mat-hvac-dist",
+      "DETAILS FABRICATION OF"
+    ],
+    [
+      "doc-shop-drawing",
+      "mat-casework",
+      "DETAILS FABRICATION OF"
+    ],
+    [
+      "doc-shop-drawing",
+      "mat-elevator",
+      "DETAILS FABRICATION OF"
+    ],
+    [
+      "doc-shop-drawing",
+      "mat-elec",
+      "DETAILS FABRICATION OF"
+    ],
+    [
+      "doc-sample-submittal",
+      "mat-masonry",
+      "DEMONSTRATES FINISH OF"
+    ],
+    [
+      "doc-sample-submittal",
+      "mat-paint",
+      "DEMONSTRATES FINISH OF"
+    ],
+    [
+      "doc-sample-submittal",
+      "mat-flooring",
+      "DEMONSTRATES FINISH OF"
+    ],
+    [
+      "doc-sample-submittal",
+      "mat-glass",
+      "DEMONSTRATES FINISH OF"
+    ],
+    [
+      "doc-sample-submittal",
+      "mat-casework",
+      "DEMONSTRATES FINISH OF"
+    ],
+    [
+      "doc-daily-log-note",
+      "res-crane",
+      "DOCUMENTS ACTIVITY OF"
+    ],
+    [
+      "doc-site-instruction",
+      "res-concrete",
+      "DIRECTS WORK OF"
+    ],
+    [
+      "doc-photo",
+      "mat-rebar",
+      "DOCUMENTS CONDITION OF"
+    ],
+    [
+      "doc-photo",
+      "res-crane",
+      "DOCUMENTS CONDITION OF"
+    ],
+    [
+      "doc-safety-plan-site",
+      "res-crane",
+      "GOVERNS OPERATION OF"
+    ],
+    [
+      "doc-safety-plan-site",
+      "res-access",
+      "GOVERNS OPERATION OF"
+    ],
+    [
+      "doc-permit-applicati",
+      "res-crane",
+      "PERMITS OPERATION OF"
+    ],
+    [
+      "doc-cert-insurance",
+      "res-crane",
+      "INSURES OPERATION OF"
+    ]
+  ],
+  "verbGlossary": {
+    "SUBMITS FOR APPROVAL": "{source} presents {target} to the design team for conformance review",
+    "APPROVES OR REJECTS": "{source} formally accepts or returns {target} for correction",
+    "DETAILS FABRICATION OF": "{target} provides precise dimensions, connections, and fabrication instructions for {source}",
+    "CERTIFIES PERFORMANCE OF": "{target} provides manufacturer test results and compliance certifications for {source}",
+    "DEMONSTRATES FINISH OF": "{source} shows color, texture, or finish quality of {target} for owner and architect approval",
+    "CLARIFIES REQUIREMENT FOR": "{source} seeks resolution of ambiguity or missing information about {target} in contract documents",
+    "CLARIFIES SCOPE FOR": "{source} seeks resolution of scope boundaries or coordination responsibilities for {target}",
+    "MODIFIES REQUIREMENT FOR": "{source} changes specifications, quantities, or acceptance criteria for {target}",
+    "SOLICITS PRICING FOR": "{source} requests cost proposals for furnishing and installing {target}",
+    "REPORTS DELAY OF": "{source} formally communicates that {target} delivery will not meet the scheduled date",
+    "DIRECTS CHANGE TO": "{source} orders an immediate modification to {target}",
+    "LOGS HEADCOUNT OF": "{source} records the number of {target} present on site for the reporting period",
+    "LOGS USAGE OF": "{source} records hours, mobilization status, or operational activity of {target}",
+    "RECORDS DELIVERY OF": "{source} documents that {target} arrived on site including quantity and condition",
+    "DOCUMENTS ACTIVITY OF": "{source} captures narrative description of work performed by {target}",
+    "DIRECTS WORK OF": "{target} provides field-level direction to {source} regarding sequencing or method",
+    "DOCUMENTS CONDITION OF": "{source} captures the visual state of {target} for quality or progress record",
+    "GOVERNS OPERATION OF": "{target} establishes mandatory procedures and hazard controls for {source}",
+    "PERMITS OPERATION OF": "{source} authorizes mobilization, erection, or operation of {target} on site",
+    "INSURES OPERATION OF": "{target} provides liability coverage for {source} operation on the project",
+    "DOCUMENTS MAINTENANCE OF": "{target} provides maintenance schedules and troubleshooting procedures for {source}",
+    "RECORDS INSTALLED LOCATION OF": "{source} shows final field-verified position of {target}",
+    "IDENTIFIES DEFICIENCY IN": "{source} flags incomplete or non-conforming {target} requiring correction before acceptance",
+    "ASSIGNS CORRECTION TO": "{source} designates {target} to remedy the identified deficiency",
+    "SPECIFIES REQUIREMENTS FOR": "{source} defines required properties, standards, and acceptance criteria for {target}",
+    "DEPICTS INSTALLATION OF": "{source} shows {target} location, quantity, and configuration within the design",
+    "WARRANTIES PERFORMANCE OF": "{target} establishes coverage period, terms, and remedies for {source} defects"
+  },
+  "_meta": {
+    "universalEdgeSemantics": "Each universalEdge means: the source element connects to EVERY element in the targetGroup via the specified verb. targetGroup values: 'trades' (25 elements), 'equipment' (11 elements), 'materials' (25 elements), 'measures' (9 elements).",
+    "dataEvidence": "Universal relationships validated via Databricks queries against prod_gold_ram_us01 (2-year lookback, March 2026). Q3: submittals \u00d7 all 18 material categories. Q1: daily_log_manpower \u00d7 30+ trades.",
+    "edgesVsUniversal": "The 'edges' array contains SELECTIVE relationships \u2014 source elements that connect to specific targets only (e.g., shop drawings for fabricated materials, sample submittals for finish materials). Universal edges are in 'universalEdges'."
+  }
+}

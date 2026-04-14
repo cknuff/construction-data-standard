@@ -1,0 +1,214 @@
+{
+  "domain": "contracts-procurement",
+  "name": "Contracts & Procurement",
+  "color": "#ab47bc",
+  "categories": [
+    {
+      "name": "Procurement Lifecycle",
+      "color": "#8d56b2",
+      "nodes": [
+        {
+          "id": "cp-prequalification",
+          "name": "Prequalification",
+          "desc": "Vetting of a contractor or vendor's financial health, safety record, bonding capacity, and relevant experience BEFORE they are invited to bid. The gatekeeping step that determines who is eligible to compete for work. Evaluates EMR, TRIR, financials, references, and license status."
+        },
+        {
+          "id": "cp-bid-package",
+          "name": "Bid Package",
+          "desc": "A defined scope of work issued to qualified contractors for competitive pricing. Bundles drawings, specifications, schedule, and commercial terms into a single solicitation. The unit of procurement — one package per trade or work scope."
+        },
+        {
+          "id": "cp-req-qualificatio",
+          "name": "Request for Qualification",
+          "desc": "Formal solicitation to assess contractor capabilities before inviting bids. Used on complex or specialized scopes where not all contractors can perform the work. Shortlists the field before pricing begins."
+        },
+        {
+          "id": "cp-req-proposal",
+          "name": "Request for Proposal",
+          "desc": "Detailed solicitation requesting scope, approach, schedule, and price from qualified contractors. More comprehensive than a simple bid — evaluates methodology, not just price. Common on negotiated or best-value procurements."
+        },
+        {
+          "id": "cp-proposal-bid",
+          "name": "Proposal / Bid",
+          "desc": "A contractor's formal response to an ITB, RFQ, or RFP — includes pricing, scope clarifications, exclusions, alternates, and schedule. The document that becomes the basis for contract negotiation upon award."
+        },
+        {
+          "id": "cp-bid-evaluation",
+          "name": "Bid Evaluation / Leveling",
+          "desc": "Comparative analysis of competing proposals — normalizing scope, pricing, qualifications, and exclusions to make an apples-to-apples recommendation. Identifies the apparent low bidder or best-value selection."
+        },
+        {
+          "id": "cp-award-notice",
+          "name": "Award / Notice to Proceed",
+          "desc": "Formal notification to the selected contractor that they have won the work and are authorized to begin. Triggers mobilization, procurement, and insurance/bonding requirements. May precede the executed contract via a Letter of Intent."
+        }
+      ]
+    },
+    {
+      "name": "Contract Instruments",
+      "color": "#9e4eb7",
+      "nodes": [
+        {
+          "id": "cp-subcontract",
+          "name": "Subcontract",
+          "desc": "Executed agreement between a general contractor and a subcontractor for a defined scope of work at an agreed price. The primary commercial vehicle for trade work. Includes scope, price, schedule, insurance, and flow-down terms.",
+          "procore": "finance.commitments"
+        },
+        {
+          "id": "cp-purchase-order",
+          "name": "Purchase Order",
+          "desc": "Agreement for material supply, equipment rental, or services at a specified price. Simpler than a subcontract — typically no labor/scope-of-work component. Tracks what was ordered, from whom, at what cost.",
+          "procore": "finance.commitments"
+        },
+        {
+          "id": "cp-prime-contract",
+          "name": "Prime Contract",
+          "desc": "Agreement between the project owner and the general contractor or CM. The top-level commercial agreement that defines the overall project price, scope, schedule, and terms. All subcontracts flow down from this.",
+          "procore": "finance.prime_contracts"
+        },
+        {
+          "id": "cp-master-service",
+          "name": "Master Service Agreement",
+          "desc": "Standing agreement with a vendor or subcontractor that covers multiple projects or a defined time period. Sets standard terms so individual project work orders can be issued without full contract negotiation each time."
+        }
+      ]
+    },
+    {
+      "name": "Contract Terms & Exhibits",
+      "color": "#af45bd",
+      "nodes": [
+        {
+          "id": "cp-scope-work",
+          "name": "Scope of Work",
+          "desc": "Detailed description of contracted work — defines what the subcontractor or vendor is responsible for delivering. May reference drawings, specifications, and schedule. The single most important exhibit to any construction contract."
+        },
+        {
+          "id": "cp-gen-cond",
+          "name": "General Conditions",
+          "desc": "The standard legal and administrative terms that apply to all contracts on a project — defines roles, responsibilities, dispute resolution, insurance requirements, and procedural obligations. The 'rules of the game' for the project."
+        },
+        {
+          "id": "cp-retainage-terms",
+          "name": "Retainage Terms",
+          "desc": "Contractual provision specifying the percentage of each payment withheld until substantial completion or final acceptance. Protects the owner/GC against incomplete or defective work. Typically 5-10% of contract value."
+        },
+        {
+          "id": "cp-liquidated-damag",
+          "name": "Liquidated Damages",
+          "desc": "Pre-agreed daily or milestone-based financial penalty for late completion. Establishes the cost of delay without requiring the owner to prove actual damages. A critical risk term that drives schedule urgency."
+        },
+        {
+          "id": "cp-allowance",
+          "name": "Allowance",
+          "desc": "A budgeted amount included in the contract for work that cannot be fully defined at contract execution. Spent against actual costs as scope is clarified. Commonly used for concealed conditions, owner selections, or design development items."
+        }
+      ]
+    },
+    {
+      "name": "Surety & Insurance",
+      "color": "#c03dc3",
+      "nodes": [
+        {
+          "id": "cp-bid-bond",
+          "name": "Bid Bond",
+          "desc": "A surety bond submitted with a bid guaranteeing the bidder will enter into the contract at the bid price if awarded. Typically 5-10% of bid amount. Protects the owner against bidders who withdraw after bid opening."
+        },
+        {
+          "id": "cp-perf-bond",
+          "name": "Performance Bond",
+          "desc": "Surety guarantee that the contractor will complete the work per contract terms. If the contractor defaults, the surety must complete the work or compensate the owner. Typically 100% of contract value."
+        },
+        {
+          "id": "cp-payment-bond",
+          "name": "Payment Bond",
+          "desc": "Surety guarantee that the contractor will pay subcontractors, suppliers, and laborers. Protects the project from mechanic's liens filed by unpaid parties. Typically 100% of contract value."
+        },
+        {
+          "id": "cp-insurance-cert",
+          "name": "Insurance Certificate",
+          "desc": "Proof of insurance coverage — documents that the contractor carries required general liability, workers' comp, auto, umbrella, and builders risk coverage. Verified before work begins and tracked throughout the project.",
+          "procore": "core.company_vendor_insurances"
+        },
+        {
+          "id": "cp-builders-risk",
+          "name": "Builders Risk",
+          "desc": "Insurance policy covering physical loss or damage to the building under construction. Typically carried by the owner or GC and covers all parties. Separate from the contractor's general liability."
+        }
+      ]
+    },
+    {
+      "name": "Warranty & Closeout",
+      "color": "#9552b4",
+      "nodes": [
+        {
+          "id": "cp-warranty",
+          "name": "Warranty",
+          "desc": "Post-construction guarantee that work will be free from defects for a specified period. Standard is 1 year from substantial completion; extended warranties apply to specific systems (roofing: 20 years, HVAC: 5 years, waterproofing: 10 years)."
+        },
+        {
+          "id": "cp-substantial-comp",
+          "name": "Substantial Completion",
+          "desc": "The milestone when the project is sufficiently complete for the owner to occupy and use for its intended purpose. Triggers warranty start dates, retainage release, and final completion punchlist. A contractual — not just physical — milestone."
+        },
+        {
+          "id": "cp-final-completion",
+          "name": "Final Completion",
+          "desc": "The point at which ALL contract work is complete — all punch items resolved, all closeout documents delivered, all training completed. Triggers final retainage release and contract closeout. The true end of the project."
+        }
+      ]
+    },
+    {
+      "name": "Compliance Documents",
+      "color": "#a64aba",
+      "nodes": [
+        {
+          "id": "cp-prevailing-wage",
+          "name": "Prevailing Wage Certification",
+          "desc": "Documentation proving that workers on public projects are paid at or above the locally determined prevailing wage rate. Required on federal (Davis-Bacon) and most state public work. Submitted with each pay period."
+        },
+        {
+          "id": "cp-diversity-dbe",
+          "name": "Diversity / DBE Certification",
+          "desc": "Documentation of participation by disadvantaged, minority, women-owned, veteran-owned, or small businesses. Required on most public projects and increasingly on private work. Tracked as percentage of contract value."
+        },
+        {
+          "id": "cp-closeout-doc",
+          "name": "Closeout Document Package",
+          "desc": "The collection of documents required for project handover — as-builts, O&M manuals, warranties, training records, commissioning reports, and final lien waivers. The deliverable set that closes out the contract.",
+          "procore": "finance.contract_compliance_documents"
+        }
+      ]
+    },
+    {
+      "name": "Standard Measures",
+      "color": "#b741c0",
+      "nodes": [
+        {
+          "id": "cp-bid-coverage",
+          "name": "Bid Coverage Rate",
+          "desc": "Percentage of project scope (by value) that was competitively bid vs. sole-sourced or negotiated. Formula: SUM(competitively_bid_contract_value) / total_contract_value. Higher rate = more price discovery."
+        },
+        {
+          "id": "cp-average-bidders",
+          "name": "Average Bidders per Package",
+          "desc": "Mean number of competing proposals received per bid package. Formula: AVG(bidders_per_package). More bidders = more price competition and market depth."
+        },
+        {
+          "id": "cp-award-cycle-time",
+          "name": "Award Cycle Time",
+          "desc": "Mean elapsed time from bid opening to contract execution. Formula: AVG(contract_date - bid_due_date). Shorter cycles get subs mobilized faster and reduce price escalation risk."
+        },
+        {
+          "id": "cp-insurance-comp",
+          "name": "Insurance Compliance Rate",
+          "desc": "Percentage of active subcontractors with current, compliant insurance certificates. Formula: COUNT(compliant_vendors) / COUNT(active_vendors). Below 100% = uninsured work exposure."
+        },
+        {
+          "id": "cp-sub-retention",
+          "name": "Subcontractor Retention Rate",
+          "desc": "Percentage of subcontractors used on previous projects that are re-engaged on new projects. Formula: COUNT(repeat_subs) / COUNT(total_subs). Higher rate = stronger trade partner relationships."
+        }
+      ]
+    }
+  ]
+}

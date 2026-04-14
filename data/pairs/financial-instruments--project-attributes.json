@@ -1,0 +1,389 @@
+{
+  "source": "financial-instruments",
+  "target": "project-attributes",
+  "edges": [
+    [
+      "fi-project-budget",
+      "pa-estimated-value",
+      "DERIVED FROM"
+    ],
+    [
+      "fi-project-budget",
+      "pa-hard-cost",
+      "ALLOCATES TO"
+    ],
+    [
+      "fi-project-budget",
+      "pa-total-value-band",
+      "ESTABLISHES"
+    ],
+    [
+      "fi-project-budget",
+      "pa-project-type",
+      "SEGMENTED BY"
+    ],
+    [
+      "fi-budget-line-item",
+      "pa-total-value-band",
+      "SUMMED INTO"
+    ],
+    [
+      "fi-budget-line-item",
+      "pa-cost-per-sf",
+      "CALCULATED INTO"
+    ],
+    [
+      "fi-cost-code",
+      "pa-project-type",
+      "SEGMENTED BY"
+    ],
+    [
+      "fi-wbs-code",
+      "pa-project-type",
+      "STANDARDIZED BY"
+    ],
+    [
+      "fi-contingency",
+      "pa-contingency-budg",
+      "FUNDS"
+    ],
+    [
+      "fi-contingency-burn",
+      "pa-contingency-budg",
+      "DRAWN FROM"
+    ],
+    [
+      "fi-contingency-burn",
+      "pa-project-type",
+      "SEGMENTED BY"
+    ],
+    [
+      "fi-commit-subcontra",
+      "pa-contract-value",
+      "COMMITTED AGAINST"
+    ],
+    [
+      "fi-commit-subcontra",
+      "pa-number-subcontra",
+      "DISTRIBUTED ACROSS"
+    ],
+    [
+      "fi-commit-purchase",
+      "pa-modular-prefab",
+      "PROCURED FOR"
+    ],
+    [
+      "fi-commit-line-item",
+      "pa-cost-per-sf",
+      "CALCULATED INTO"
+    ],
+    [
+      "fi-chg-event-ce",
+      "pa-cost-growth",
+      "CONTRIBUTES TO"
+    ],
+    [
+      "fi-chg-event-ce",
+      "pa-chg-order-rate",
+      "COUNTED TOWARD"
+    ],
+    [
+      "fi-chg-event-ce",
+      "pa-project-type",
+      "SEGMENTED BY"
+    ],
+    [
+      "fi-chg-event-line",
+      "pa-cost-per-sf",
+      "ALLOCATED INTO"
+    ],
+    [
+      "fi-commit-chg-order",
+      "pa-chg-order-rate",
+      "COUNTED TOWARD"
+    ],
+    [
+      "fi-commit-chg-order",
+      "pa-total-value-band",
+      "SEGMENTED BY"
+    ],
+    [
+      "fi-owner-chg-order",
+      "pa-contract-value",
+      "ADJUSTS"
+    ],
+    [
+      "fi-owner-chg-order",
+      "pa-cost-growth",
+      "CONTRIBUTES TO"
+    ],
+    [
+      "fi-budget-mod",
+      "pa-contingency-budg",
+      "DRAWN FROM"
+    ],
+    [
+      "fi-direct-cost",
+      "pa-cost-per-sf",
+      "CALCULATED INTO"
+    ],
+    [
+      "fi-direct-cost",
+      "pa-self-performed",
+      "TRACKED FOR"
+    ],
+    [
+      "fi-direct-cost-line",
+      "pa-project-type",
+      "SEGMENTED BY"
+    ],
+    [
+      "fi-cost-forecast",
+      "pa-final-cost-at",
+      "PROJECTS TOWARD"
+    ],
+    [
+      "fi-cost-forecast",
+      "pa-total-value-band",
+      "RECALIBRATED BY"
+    ],
+    [
+      "fi-cash-flow",
+      "pa-planned-duration",
+      "PROJECTED ACROSS"
+    ],
+    [
+      "fi-owner-invoice",
+      "pa-percent-complete",
+      "BILLED AT"
+    ],
+    [
+      "fi-sub-invoice",
+      "pa-contract-value",
+      "BILLED AGAINST"
+    ],
+    [
+      "fi-retainage",
+      "pa-contract-value",
+      "WITHHELD FROM"
+    ],
+    [
+      "fi-payment",
+      "pa-actual-completio",
+      "RELEASED AT"
+    ],
+    [
+      "fi-schedule-values",
+      "pa-contract-value",
+      "STRUCTURED WITHIN"
+    ],
+    [
+      "fi-allowance",
+      "pa-contingency-budg",
+      "RESERVED WITHIN"
+    ],
+    [
+      "fi-budget-variance",
+      "pa-cost-growth",
+      "DRIVES"
+    ],
+    [
+      "fi-cost-perf-index",
+      "pa-earned-value-cpi",
+      "REPORTED AS"
+    ],
+    [
+      "fi-cost-growth",
+      "pa-cost-growth",
+      "BENCHMARKED AGAINST"
+    ],
+    [
+      "fi-chg-order-rate",
+      "pa-chg-order-rate",
+      "REPORTED AS"
+    ],
+    [
+      "fi-cash-flow-2",
+      "pa-project-status",
+      "SIGNALS"
+    ],
+    [
+      "fi-estimate-at",
+      "pa-final-cost-at",
+      "FORECASTS"
+    ],
+    [
+      "fi-profit",
+      "pa-project-type",
+      "SEGMENTED BY"
+    ],
+    [
+      "fi-profit",
+      "pa-total-value-band",
+      "SEGMENTED BY"
+    ],
+    [
+      "fi-margin-pct",
+      "pa-project-type",
+      "SEGMENTED BY"
+    ],
+    [
+      "fi-margin-pct",
+      "pa-total-value-band",
+      "SEGMENTED BY"
+    ],
+    [
+      "fi-margin-fade",
+      "pa-project-type",
+      "SEGMENTED BY"
+    ],
+    [
+      "fi-backlog",
+      "pa-project-type",
+      "SEGMENTED BY"
+    ],
+    [
+      "fi-backlog",
+      "pa-total-value-band",
+      "SEGMENTED BY"
+    ],
+    [
+      "fi-win-rate",
+      "pa-project-type",
+      "SEGMENTED BY"
+    ],
+    [
+      "fi-overhead-rate",
+      "pa-total-value-band",
+      "SEGMENTED BY"
+    ],
+    [
+      "fi-dso",
+      "pa-project-type",
+      "SEGMENTED BY"
+    ],
+    [
+      "fi-precon-hit-rate",
+      "pa-project-type",
+      "SEGMENTED BY"
+    ],
+    [
+      "fi-pm-workload",
+      "pa-number-subcontra",
+      "DRIVEN BY"
+    ],
+    [
+      "fi-chg-event-ce",
+      "pa-admin-burden",
+      "CONTRIBUTES TO"
+    ],
+    [
+      "fi-chg-event-ce",
+      "pa-decision-speed",
+      "REQUIRES"
+    ],
+    [
+      "fi-chg-event-ce",
+      "pa-margin-protection",
+      "THREATENS"
+    ],
+    [
+      "fi-commit-chg-order",
+      "pa-margin-protection",
+      "ERODES"
+    ],
+    [
+      "fi-commit-chg-order",
+      "pa-profit-protection",
+      "ERODES"
+    ],
+    [
+      "fi-owner-chg-order",
+      "pa-margin-protection",
+      "RECOVERS"
+    ],
+    [
+      "fi-profit",
+      "pa-profit-protection",
+      "MEASURES"
+    ],
+    [
+      "fi-margin-pct",
+      "pa-margin-protection",
+      "MEASURES"
+    ],
+    [
+      "fi-margin-fade",
+      "pa-margin-protection",
+      "WARNS"
+    ],
+    [
+      "fi-margin-fade",
+      "pa-profit-protection",
+      "WARNS"
+    ],
+    [
+      "fi-budget-variance",
+      "pa-margin-protection",
+      "SIGNALS"
+    ],
+    [
+      "fi-budget-variance",
+      "pa-risk-reduction",
+      "SIGNALS"
+    ],
+    [
+      "fi-retainage",
+      "pa-profit-protection",
+      "STRESSES"
+    ],
+    [
+      "fi-sub-invoice",
+      "pa-admin-burden",
+      "CONTRIBUTES TO"
+    ],
+    [
+      "fi-lien-waiver",
+      "pa-admin-burden",
+      "CONTRIBUTES TO"
+    ]
+  ],
+  "verbGlossary": {
+    "DERIVED FROM": "{source}'s baseline amount originates from {target} estimate attribute (e.g., project budget derived from estimated value)",
+    "ALLOCATES TO": "{source} distributes funds to {target} cost category (e.g., project budget allocates to hard cost)",
+    "ESTABLISHES": "{source} sets the definitive classification for {target} attribute (e.g., budget total establishes the value band)",
+    "SEGMENTED BY": "{source} or metric is broken down by {target} attribute for comparative benchmarking",
+    "SUMMED INTO": "{source} line items aggregate to determine {target} value band classification",
+    "CALCULATED INTO": "{source} cost items are divided by area to produce {target} attribute",
+    "STANDARDIZED BY": "{source} coding structure follows conventions appropriate to {target} type",
+    "FUNDS": "{source} reserve provides monetary backing for {target} contingency attribute",
+    "DRAWN FROM": "{source} burn rate or modification depletes {target} contingency attribute",
+    "COMMITTED AGAINST": "{source} commitment is recorded against {target} contract value attribute",
+    "DISTRIBUTED ACROSS": "{source} value is spread across multiple subcontractors reflected in {target} attribute count",
+    "PROCURED FOR": "{source} is issued to fulfill {target} scope attribute",
+    "CONTRIBUTES TO": "{source} change event adds cost that increases {target} growth metric",
+    "COUNTED TOWARD": "{source} change order is tallied in {target} change order rate metric",
+    "ALLOCATED INTO": "{source} cost is distributed into {target} unit cost attribute",
+    "ADJUSTS": "Owner change order modifies {target} contract value attribute up or down",
+    "TRACKED FOR": "{source} is recorded specifically because {target} attribute requires cost segregation",
+    "PROJECTS TOWARD": "{source} forecast estimates the final value of {target} cost attribute",
+    "RECALIBRATED BY": "Forecast is re-evaluated when project conditions shift {target}",
+    "PROJECTED ACROSS": "{source}forecast is spread over {target} duration attribute",
+    "BILLED AT": "{source} amount reflects {target} completion percentage at time of billing",
+    "BILLED AGAINST": "Subcontractor invoice draws against {target} contract value attribute",
+    "WITHHELD FROM": "{source} is held back from {target} contract value attribute",
+    "RELEASED AT": "{source}is disbursed at the milestone defined by {target} completion attribute",
+    "STRUCTURED WITHIN": "{source} is organized as a breakdown of {target} contract value",
+    "RESERVED WITHIN": "{source} is set aside within {target} contingency budget attribute",
+    "DRIVES": "{source} variance metric causes movement in {target} performance attribute",
+    "REPORTED AS": "{source} is surfaced as {target}-level performance attribute",
+    "BENCHMARKED AGAINST": "{source} is compared to {target}-level benchmark attribute",
+    "SIGNALS": "{source} variance provides an early indicator of {target} status attribute's trajectory",
+    "FORECASTS": "{source} estimate at completion variance predicts deviation from {target} attribute",
+    "DRIVEN BY": "{source} metric is substantially influenced by {target} attribute value",
+    "REQUIRES": "{source} process demands timely {target} -- delays in processing {source} cascade into schedule and cost impacts",
+    "RECOVERS": "{source} financial instrument restores {target} by passing cost impacts through to the party contractually responsible",
+    "WARNS": "{source} trend metric provides early warning that {target} is at risk before the full financial impact materializes",
+    "STRESSES": "{source} financial mechanism creates cash flow pressure on {target} by holding back funds that affect working capital"
+  }
+}

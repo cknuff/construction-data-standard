@@ -1,0 +1,244 @@
+{
+  "source": "resources",
+  "target": "roles",
+  "edges": [
+    [
+      "res-crane",
+      "rl-super",
+      "MOBILIZED_BY"
+    ],
+    [
+      "res-crane",
+      "rl-foreman-gen",
+      "RIGGED_BY"
+    ],
+    [
+      "res-crane",
+      "rl-safety-manager",
+      "INSPECTED_BY"
+    ],
+    [
+      "res-earthmover",
+      "rl-super",
+      "AUTHORIZED_BY"
+    ],
+    [
+      "res-earthmover",
+      "rl-field-engineer",
+      "GRADED_TO_SPEC_BY"
+    ],
+    [
+      "res-conc-equip",
+      "rl-foreman-gen",
+      "STAGED_BY"
+    ],
+    [
+      "res-conc-equip",
+      "rl-quality-manager",
+      "CALIBRATED_BY"
+    ],
+    [
+      "res-piling",
+      "rl-project-engineer",
+      "LOAD_TESTED_BY"
+    ],
+    [
+      "res-access",
+      "rl-safety-officer",
+      "TAGGED_BY"
+    ],
+    [
+      "res-welding",
+      "rl-quality-manager",
+      "CERTIFIED_BY"
+    ],
+    [
+      "res-survey-inst",
+      "rl-field-engineer",
+      "OPERATED_BY"
+    ],
+    [
+      "res-temp-util",
+      "rl-assistant-super",
+      "ROUTED_BY"
+    ],
+    [
+      "res-mat-handle",
+      "rl-foreman-gen",
+      "DISPATCHED_BY"
+    ],
+    [
+      "mat-concrete",
+      "rl-quality-manager",
+      "BATCH_TESTED_BY"
+    ],
+    [
+      "mat-concrete",
+      "rl-foreman-gen",
+      "PLACED_BY"
+    ],
+    [
+      "mat-rebar",
+      "rl-quality-manager",
+      "INSPECTED_BY"
+    ],
+    [
+      "mat-rebar",
+      "rl-field-engineer",
+      "DETAILED_BY"
+    ],
+    [
+      "mat-steel",
+      "rl-project-engineer",
+      "SPECIFIED_BY"
+    ],
+    [
+      "mat-steel",
+      "rl-procure-manager",
+      "PROCURED_BY"
+    ],
+    [
+      "mat-lumber",
+      "rl-estimator-chief",
+      "TAKEOFF_BY"
+    ],
+    [
+      "mat-roofing",
+      "rl-assistant-projec",
+      "SUBMITTED_BY"
+    ],
+    [
+      "mat-hvac-equip",
+      "rl-cx-agent-cxa",
+      "COMMISSIONED_BY"
+    ],
+    [
+      "mat-hvac-dist",
+      "rl-bim-manager-vdc",
+      "CLASH_CHECKED_BY"
+    ],
+    [
+      "mat-elec",
+      "rl-doc-controller",
+      "CATALOGED_BY"
+    ],
+    [
+      "mat-plumbing",
+      "rl-scheduler-projec",
+      "SEQUENCED_BY"
+    ],
+    [
+      "mat-glass",
+      "rl-design-manager",
+      "APPROVED_BY"
+    ],
+    [
+      "mat-fp",
+      "rl-safety-manager",
+      "CODE_REVIEWED_BY"
+    ],
+    [
+      "mat-lighting",
+      "rl-tab-technician",
+      "BALANCED_BY"
+    ],
+    [
+      "mat-elevator",
+      "rl-cx-agent-cxa",
+      "STARTUP_TESTED_BY"
+    ],
+    [
+      "res-safety",
+      "rl-safety-manager",
+      "REPORTS_TO"
+    ],
+    [
+      "res-qc",
+      "rl-quality-manager",
+      "REPORTS_TO"
+    ],
+    [
+      "res-electrician",
+      "rl-foreman-gen",
+      "SUPERVISED_BY"
+    ],
+    [
+      "res-plumber",
+      "rl-assistant-super",
+      "COORDINATED_BY"
+    ],
+    [
+      "res-carpenter",
+      "rl-foreman-gen",
+      "DIRECTED_BY"
+    ],
+    [
+      "res-laborer",
+      "rl-super",
+      "DISPATCHED_BY"
+    ],
+    [
+      "res-ironworker",
+      "rl-safety-officer",
+      "MONITORED_BY"
+    ],
+    [
+      "res-cxa",
+      "rl-cx-agent-cxa",
+      "DIRECTED_BY"
+    ],
+    [
+      "res-compaction",
+      "rl-field-engineer",
+      "PROOF_ROLLED_BY"
+    ],
+    [
+      "mat-waterproof",
+      "rl-quality-manager",
+      "FIELD_VERIFIED_BY"
+    ],
+    [
+      "mat-masonry",
+      "rl-cost-engineer",
+      "UNIT_PRICED_BY"
+    ]
+  ],
+  "verbGlossary": {
+    "AUTHORIZED_BY": "{source}is permitted only after the role reviews the work plan, confirms ground conditions, and grants clearance for {target} to proceed in the designated work zone.",
+    "MOBILIZED_BY": "{source}is transported to the jobsite and positioned for use under the direction of the specified {target}, who authorizes the crane plan and lift schedule.",
+    "RIGGED_BY": "{source} is connected to loads via slings, shackles, or spreader bars by {target}, who directs each pick according to the lift plan.",
+    "INSPECTED_BY": "{source} undergoes a formal examination by {target} to verify compliance with safety regulations, project specifications, or quality standards before use on site.",
+    "OPERATED_BY": "{source} or instrument is physically controlled and run by the specified trade or {target} during active construction operations.",
+    "GRADED_TO_SPEC_BY": "{source}is verified against design elevations and tolerances by {target}, who checks cut/fill grades with survey data and approves the subgrade.",
+    "STAGED_BY": "{source} or materials are pre-positioned at the point of installation by {target} to maintain workflow and minimize double-handling on the jobsite.",
+    "CALIBRATED_BY": "{source} is tested and adjusted to ensure measurement accuracy by {target}, typically before concrete pours, welding operations, or testing procedures.",
+    "LOAD_TESTED_BY": "{source} or installed element undergoes a proof-load or capacity test directed by {target} to confirm it meets the design load requirements.",
+    "TAGGED_BY": "{source} receives a physical inspection tag (green/yellow/red) from {target} indicating its operational status and next-inspection date per site safety protocol.",
+    "CERTIFIED_BY": "{source} or welding procedure is formally qualified by {target} through testing and documentation, producing a certificate required before production work begins.",
+    "ROUTED_BY": "{source} are laid out and connected along a path determined by {target}, ensuring code-compliant distribution of power, water, or other services across the site.",
+    "DISPATCHED_BY": "{source} is assigned to a specific work area or task by {target}, who allocates equipment or labor based on the day's production schedule.",
+    "BATCH_TESTED_BY": "{source} samples from a delivered batch are tested by {target} using break tests, slump tests, or other QC methods to verify mix-design compliance.",
+    "PLACED_BY": "{source} is physically installed or deposited in its final location on the project by the specified trade or {target}, following approved placement procedures.",
+    "DETAILED_BY": "{source} quantities, bends, and lap lengths are calculated and drawn by {target} to produce shop drawings or installation details from the design documents.",
+    "SPECIFIED_BY": "{source} properties, grades, and performance criteria are defined by {target} in project specifications or engineering calculations before procurement.",
+    "PROCURED_BY": "{source} is sourced, bid, purchased, and delivery-scheduled by {target} through the project's procurement workflow, including vendor qualification and lead-time tracking.",
+    "TAKEOFF_BY": "{source} quantities are measured and counted from drawings by {target} to produce an accurate bill of materials for estimating and procurement.",
+    "SUBMITTED_BY": "{source} data sheets, samples, or shop drawings are formally transmitted to the design team for approval by {target} through the submittal process.",
+    "COMMISSIONED_BY": "{source}is functionally tested, performance-verified, and formally accepted by {target} through a structured commissioning protocol.",
+    "CLASH_CHECKED_BY": "{source} routing or placement is verified against the coordinated BIM model by {target} to identify and resolve spatial conflicts before installation.",
+    "CATALOGED_BY": "{source} submittals, spec sheets, and delivery records are logged and filed by {target} into the project document management system for retrieval and audit.",
+    "SEQUENCED_BY": "{source} deliveries and installations are ordered in the project schedule by {target} to align with construction phasing and avoid trade stacking.",
+    "APPROVED_BY": "{source} selection, finish, or mockup is formally accepted by {target}, authorizing the contractor to proceed with fabrication or bulk procurement.",
+    "CODE_REVIEWED_BY": "{source} or assembly is evaluated against applicable building codes and fire-rating requirements by {target} to confirm regulatory compliance before installation.",
+    "BALANCED_BY": "{source}is tested and adjusted by {target} to achieve the specified airflow, water flow, or temperature distribution across all zones.",
+    "STARTUP_TESTED_BY": "Installed equipment undergoes initial energization and functional testing by {target} to verify safe operation and readiness for commissioning.",
+    "REPORTS_TO": "{source} professional provides daily activity reports, safety observations, or inspection results to the supervising {target} as part of the project chain of command.",
+    "SUPERVISED_BY": "{source} receives direct task assignments, work-method instructions, and quality oversight from the specified {target} on the jobsite.",
+    "COORDINATED_BY": "{source} work is scheduled and sequenced alongside adjacent trades by {target} to prevent conflicts and maintain production flow in shared work areas.",
+    "DIRECTED_BY": "{source} receives specific work assignments and installation instructions from {target}, who holds authority over the crew's daily production.",
+    "MONITORED_BY": "{source}'s activities are observed for safety compliance by {target}, who can issue stop-work orders for unsafe conditions.",
+    "PROOF_ROLLED_BY": "{source}is tested by driving loaded equipment across it under the observation of {target}, who checks for deflection indicating inadequate compaction.",
+    "FIELD_VERIFIED_BY": "{source}is physically checked in the field by {target} against approved drawings to confirm correct placement, thickness, or coverage.",
+    "UNIT_PRICED_BY": "{source} cost is broken down into per-unit rates by {target} for cost tracking, progress billing, and earned-value analysis against the budget."
+  }
+}

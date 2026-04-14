@@ -1,0 +1,488 @@
+{
+  "source": "documents-communications",
+  "target": "phases",
+  "edges": [
+    [
+      "doc-drawing-set",
+      "ph-design",
+      "ISSUED DURING"
+    ],
+    [
+      "doc-drawing-set",
+      "ph-bidding",
+      "RELEASED FOR"
+    ],
+    [
+      "doc-drawing-set",
+      "ph-asbuilt",
+      "FINALIZED AT"
+    ],
+    [
+      "doc-drawing-sheet",
+      "ph-steel",
+      "DETAILS"
+    ],
+    [
+      "doc-drawing-revision",
+      "ph-design",
+      "ORIGINATED DURING"
+    ],
+    [
+      "doc-drawing-revision",
+      "ph-curtainwall",
+      "TRIGGERED BY"
+    ],
+    [
+      "doc-specification-se",
+      "ph-design",
+      "AUTHORED DURING"
+    ],
+    [
+      "doc-specification-se",
+      "ph-bidding",
+      "INCORPORATED INTO"
+    ],
+    [
+      "doc-addendum",
+      "ph-bidding",
+      "ISSUED BEFORE CLOSE OF"
+    ],
+    [
+      "doc-addendum",
+      "ph-estimating",
+      "REVISES SCOPE DURING"
+    ],
+    [
+      "doc-bulletin-archite",
+      "ph-hvac-dist",
+      "CLARIFIES WORK IN"
+    ],
+    [
+      "doc-bulletin-archite",
+      "ph-elec-ri",
+      "DIRECTS CHANGES DURING"
+    ],
+    [
+      "doc-req-info-rfi",
+      "ph-design",
+      "RAISED DURING"
+    ],
+    [
+      "doc-req-info-rfi",
+      "ph-foundations",
+      "SEEKS CLARIFICATION DURING"
+    ],
+    [
+      "doc-req-info-rfi",
+      "ph-abv-ceil",
+      "RESOLVES CONFLICTS IN"
+    ],
+    [
+      "doc-rfi-response",
+      "ph-plumb-ri",
+      "UNBLOCKS WORK IN"
+    ],
+    [
+      "doc-rfi-response",
+      "ph-masonry",
+      "PROVIDES DIRECTION FOR"
+    ],
+    [
+      "doc-req-proposal-rfp",
+      "ph-bidding",
+      "SOLICITS BIDS DURING"
+    ],
+    [
+      "doc-req-proposal-rfp",
+      "ph-precon-plan",
+      "SCOPED DURING"
+    ],
+    [
+      "doc-submittal",
+      "ph-submittals",
+      "SUBMITTED DURING"
+    ],
+    [
+      "doc-submittal",
+      "ph-fabrication",
+      "REQUIRED BEFORE"
+    ],
+    [
+      "doc-submittal-respon",
+      "ph-submittals",
+      "RETURNED DURING"
+    ],
+    [
+      "doc-submittal-respon",
+      "ph-delivery",
+      "AUTHORIZES"
+    ],
+    [
+      "doc-shop-drawing",
+      "ph-fabrication",
+      "APPROVED PRIOR TO"
+    ],
+    [
+      "doc-shop-drawing",
+      "ph-steel",
+      "DETAILS CONNECTIONS FOR"
+    ],
+    [
+      "doc-product-data",
+      "ph-submittals",
+      "CATALOGED DURING"
+    ],
+    [
+      "doc-product-data",
+      "ph-hvac-trim",
+      "SPECIFIES EQUIPMENT FOR"
+    ],
+    [
+      "doc-sample-submittal",
+      "ph-design",
+      "MATCHED TO SELECTIONS IN"
+    ],
+    [
+      "doc-sample-submittal",
+      "ph-flooring",
+      "CONFIRMED BEFORE"
+    ],
+    [
+      "doc-correspondence",
+      "ph-precon-plan",
+      "EXCHANGED DURING"
+    ],
+    [
+      "doc-correspondence",
+      "ph-contract-close",
+      "DOCUMENTED THROUGH"
+    ],
+    [
+      "doc-transmittal",
+      "ph-bidding",
+      "ACCOMPANIES DOCUMENTS IN"
+    ],
+    [
+      "doc-transmittal",
+      "ph-permit",
+      "PACKAGES SUBMISSIONS FOR"
+    ],
+    [
+      "doc-notice-delay",
+      "ph-delivery",
+      "FILED DUE TO DELAYS IN"
+    ],
+    [
+      "doc-notice-delay",
+      "ph-earthwork",
+      "REPORTED DURING"
+    ],
+    [
+      "doc-chg-directive",
+      "ph-conc-frame",
+      "MODIFIES SCOPE DURING"
+    ],
+    [
+      "doc-chg-directive",
+      "ph-roofing",
+      "REDIRECTS WORK IN"
+    ],
+    [
+      "doc-meeting",
+      "ph-precon-plan",
+      "HELD DURING"
+    ],
+    [
+      "doc-meeting",
+      "ph-abv-ceil",
+      "COORDINATES TRADES IN"
+    ],
+    [
+      "doc-meeting-minutes",
+      "ph-site-setup",
+      "RECORDED DURING"
+    ],
+    [
+      "doc-meeting-minutes",
+      "ph-punch",
+      "TRACKS ITEMS THROUGH"
+    ],
+    [
+      "doc-daily-report",
+      "ph-earthwork",
+      "LOGS PROGRESS DURING"
+    ],
+    [
+      "doc-daily-report",
+      "ph-slab",
+      "CAPTURES CONDITIONS DURING"
+    ],
+    [
+      "doc-daily-log-note",
+      "ph-drywall",
+      "NARRATES ACTIVITY DURING"
+    ],
+    [
+      "doc-site-instruction",
+      "ph-framing",
+      "DIRECTS FIELD WORK IN"
+    ],
+    [
+      "doc-phone-call-log",
+      "ph-delivery",
+      "EXPEDITES DURING"
+    ],
+    [
+      "doc-plan-revision",
+      "ph-elec-ri",
+      "REDISTRIBUTED DURING"
+    ],
+    [
+      "doc-action-plan",
+      "ph-punch",
+      "ORGANIZED FOR"
+    ],
+    [
+      "doc-action-plan-line",
+      "ph-final-insp",
+      "ASSIGNED FOR COMPLETION BEFORE"
+    ],
+    [
+      "doc-project-task",
+      "ph-startup",
+      "SCHEDULED DURING"
+    ],
+    [
+      "doc-project-task",
+      "ph-training",
+      "COORDINATED WITH"
+    ],
+    [
+      "doc-photo",
+      "ph-foundations",
+      "DOCUMENTS PLACEMENT DURING"
+    ],
+    [
+      "doc-photo",
+      "ph-barrier",
+      "VERIFIES COVERAGE IN"
+    ],
+    [
+      "doc-video",
+      "ph-tab",
+      "RECORDS BALANCING DURING"
+    ],
+    [
+      "doc-permit-applicati",
+      "ph-permit",
+      "FILED DURING"
+    ],
+    [
+      "doc-permit-applicati",
+      "ph-demo",
+      "MUST PRECEDE"
+    ],
+    [
+      "doc-cert-insurance",
+      "ph-site-setup",
+      "VALIDATED BEFORE"
+    ],
+    [
+      "doc-cert-insurance",
+      "ph-warranty",
+      "MAINTAINED THROUGH"
+    ],
+    [
+      "doc-lien-waiver",
+      "ph-contract-close",
+      "COLLECTED DURING"
+    ],
+    [
+      "doc-safety-plan-site",
+      "ph-safety-orient",
+      "PRESENTED DURING"
+    ],
+    [
+      "doc-swppp-enviro",
+      "ph-earthwork",
+      "ENFORCED DURING"
+    ],
+    [
+      "doc-swppp-enviro",
+      "ph-site-util",
+      "GOVERNS COMPLIANCE IN"
+    ],
+    [
+      "doc-punch-list-as",
+      "ph-punch",
+      "GENERATED DURING"
+    ],
+    [
+      "doc-punch-list-as",
+      "ph-final-insp",
+      "CLEARED BEFORE"
+    ],
+    [
+      "doc-as-built-docs",
+      "ph-asbuilt",
+      "COMPILED DURING"
+    ],
+    [
+      "doc-as-built-docs",
+      "ph-transition",
+      "DELIVERED AT"
+    ],
+    [
+      "doc-o-m-manual",
+      "ph-training",
+      "USED FOR INSTRUCTION DURING"
+    ],
+    [
+      "doc-o-m-manual",
+      "ph-transition",
+      "HANDED OVER AT"
+    ],
+    [
+      "doc-warranty-docs",
+      "ph-contract-close",
+      "SUBMITTED AT"
+    ],
+    [
+      "doc-warranty-docs",
+      "ph-warranty",
+      "ACTIVE THROUGH"
+    ],
+    [
+      "doc-form-proforma",
+      "ph-final-insp",
+      "COMPLETED DURING"
+    ],
+    [
+      "doc-daily-log",
+      "ph-program",
+      "CONFIGURED DURING"
+    ],
+    [
+      "doc-rfi-response-2",
+      "ph-design",
+      "PEAKS DURING"
+    ],
+    [
+      "doc-rfi-volume",
+      "ph-abv-ceil",
+      "SPIKES DURING"
+    ],
+    [
+      "doc-submittal-cycle",
+      "ph-submittals",
+      "BENCHMARKED AGAINST"
+    ],
+    [
+      "doc-submittal-reject",
+      "ph-fabrication",
+      "DELAYS"
+    ],
+    [
+      "doc-drawing-revision-2",
+      "ph-design",
+      "INTENSIFIES DURING"
+    ],
+    [
+      "doc-daily-log-2",
+      "ph-site-setup",
+      "MEASURED FROM START OF"
+    ],
+    [
+      "doc-correspondence-r",
+      "ph-precon-plan",
+      "EVALUATED DURING"
+    ],
+    [
+      "doc-daily-log-2",
+      "ph-seasonal-cx",
+      "TRACKED THROUGH"
+    ]
+  ],
+  "verbGlossary": {
+    "ISSUED DURING": "{source} is formally released to stakeholders within the named {target}",
+    "RELEASED FOR": "{source} set is published to enable bidders or trades to perform work in {target}",
+    "FINALIZED AT": "{source} reaches its completed and record state at the end of {target}",
+    "DETAILS": "{source} provides specific fabrication or installation details consumed by {target}",
+    "ORIGINATED DURING": "{source}was first created as a response to conditions arising in {target}",
+    "TRIGGERED BY": "{source} revision was necessitated by field conditions or coordination issues in {target}",
+    "AUTHORED DURING": "{source} was written and finalized within {target}",
+    "INCORPORATED INTO": "{source} is formally included in the bid package assembled for {target}",
+    "ISSUED BEFORE CLOSE OF": "{source} is released to all bidders prior to the bid deadline of {target}",
+    "REVISES SCOPE DURING": "{source} modifies the project scope while {target} is still active",
+    "CLARIFIES WORK IN": "Bulletin or supplemental instruction resolves ambiguity for trades working in {target}",
+    "DIRECTS CHANGES DURING": "{source} instructs specific modifications to work being performed in {target}",
+    "RAISED DURING": "{source} is submitted to the design team while {target} is underway",
+    "SEEKS CLARIFICATION DURING": "{source} requests additional design information needed to proceed with work in {target}",
+    "RESOLVES CONFLICTS IN": "{source} addresses clashes or coordination conflicts identified during {target}",
+    "UNBLOCKS WORK IN": "{source} removes a hold or blocker allowing work in {target} to resume",
+    "PROVIDES DIRECTION FOR": "{source} supplies the design intent or installation guidance needed in {target}",
+    "SOLICITS BIDS DURING": "{source}is distributed to prospective subcontractors during {target}",
+    "SCOPED DURING": "{source}of work is assembled and defined within {target}",
+    "SUBMITTED DURING": "{source} is formally sent to the reviewer while {target} is active",
+    "REQUIRED BEFORE": "{source} must be approved before work in {target} can begin",
+    "RETURNED DURING": "{source} response is sent back to the submitter while {target} is active",
+    "AUTHORIZES": "{source} response grants permission for the vendor to proceed with {target} activity",
+    "APPROVED PRIOR TO": "{source} receives approval before the fabrication or manufacturing step of {target}",
+    "DETAILS CONNECTIONS FOR": "{source} specifies connection geometry and methods required by {target}",
+    "CATALOGED DURING": "{source} is logged and organized within the submittal management process of {target}",
+    "SPECIFIES EQUIPMENT FOR": "{source} defines the make, model, and performance of equipment installed in {target}",
+    "MATCHED TO SELECTIONS IN": "{source} submittal is compared against architect selections made during {target}",
+    "CONFIRMED BEFORE": "{source} submittal is approved to confirm finish or material prior to installation in {target}",
+    "EXCHANGED DURING": "{source} is sent and received between parties while {target} is active",
+    "DOCUMENTED THROUGH": "{source} creates a written record of decisions and agreements through {target}",
+    "ACCOMPANIES DOCUMENTS IN": "{source} serves as the cover sheet for documents distributed during {target}",
+    "PACKAGES SUBMISSIONS FOR": "{source} bundles required documents into a single submission for {target} phase",
+    "FILED DUE TO DELAYS IN": "{source} of delay is issued because of disruptions encountered during {target}",
+    "REPORTED DURING": "{source} of delay is formally submitted while {target} is in progress",
+    "MODIFIES SCOPE DURING": "Change directive alters the contracted work while {target} is actively being built",
+    "REDIRECTS WORK IN": "Change directive re-routes the construction approach or sequence within {target}",
+    "HELD DURING": "{source} takes place while {target} is underway to discuss progress and issues",
+    "COORDINATES TRADES IN": "{source} brings together multiple subcontractors to resolve sequencing in {target}",
+    "RECORDED DURING": "{source} capture decisions and action items from sessions held during {target}",
+    "TRACKS ITEMS THROUGH": "{source} follow open action items through to resolution during {target}",
+    "LOGS PROGRESS DURING": "{source} records the work accomplished on site during {target}",
+    "CAPTURES CONDITIONS DURING": "{source} documents weather, site conditions, and crew counts during {target}",
+    "NARRATES ACTIVITY DURING": "{source} note provides a written account of the day's events during {target}",
+    "DIRECTS FIELD WORK IN": "{source} tells field crews exactly what to do differently during {target}",
+    "EXPEDITES DURING": "{source}log records outreach made to accelerate material or equipment delivery in {target}",
+    "REDISTRIBUTED DURING": "{source} is sent to all affected parties while {target} is in progress",
+    "ORGANIZED FOR": "{source} structures the sequence of corrective tasks needed during {target}",
+    "ASSIGNED FOR COMPLETION BEFORE": "{source} task is given a deadline that falls before the start of {target}",
+    "SCHEDULED DURING": "{source} is time-boxed to occur within {target}",
+    "COORDINATED WITH": "{source} is sequenced to align with activities happening in {target}",
+    "DOCUMENTS PLACEMENT DURING": "{source} captures the as-installed condition of work performed during {target}",
+    "VERIFIES COVERAGE IN": "{source} provides visual proof that a material or membrane was properly applied in {target}",
+    "RECORDS BALANCING DURING": "{source}captures the live testing and adjustment process performed in {target}",
+    "FILED DURING": "{source}is submitted to the authority having jurisdiction during {target}",
+    "MUST PRECEDE": "{source}is a mandatory prerequisite before {target} can start",
+    "VALIDATED BEFORE": "{source}of insurance is verified as current and compliant before {target} begins",
+    "MAINTAINED THROUGH": "{source}must remain active and on file throughout {target}",
+    "COLLECTED DURING": "{source}are gathered from all subcontractors and suppliers during {target}",
+    "PRESENTED DURING": "{source}plan is reviewed with all site personnel during {target}",
+    "ENFORCED DURING": "{source}document is actively monitored and enforced during {target}",
+    "GOVERNS COMPLIANCE IN": "{source}document sets the compliance requirements for {target}",
+    "GENERATED DURING": "{source}document is created from walkthrough findings during {target}",
+    "CLEARED BEFORE": "{source}must be resolved before {target} phase can proceed",
+    "COMPILED DURING": "{source}documentation is assembled and verified during {target}",
+    "DELIVERED AT": "{source}documentation is formally handed to the owner at the start of {target}",
+    "USED FOR INSTRUCTION DURING": "O&M manual serves as the primary teaching reference during {target}",
+    "HANDED OVER AT": "O&M manual is transferred to the owner's operations team at the start of {target}",
+    "SUBMITTED AT": "{source}documentation is provided to the owner at the conclusion of {target}",
+    "ACTIVE THROUGH": "{source}documentation remains in effect and enforceable throughout {target}",
+    "COMPLETED DURING": "{source}is filled out and signed during {target} or closeout phase",
+    "CONFIGURED DURING": "{source} template is set up with project-specific fields during {target}",
+    "PEAKS DURING": "{source} time metric reaches its highest values during {target}",
+    "SPIKES DURING": "{source} volume density is at its greatest concentration during {target} phase",
+    "BENCHMARKED AGAINST": "{source} cycle time is compared to industry standards for {target}",
+    "DELAYS": "{source}submittal rejection rate pushes back the start of {target}",
+    "INTENSIFIES DURING": "{source} frequency increases most rapidly during {target}",
+    "MEASURED FROM START OF": "{source} completion rate is tracked beginning at the onset of {target}",
+    "EVALUATED DURING": "{source} response time is assessed against project norms during {target}",
+    "TRACKED THROUGH": "{source} completion rate is monitored continuously throughout {target}"
+  }
+}

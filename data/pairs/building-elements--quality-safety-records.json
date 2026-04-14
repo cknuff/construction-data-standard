@@ -1,0 +1,482 @@
+{
+  "source": "building-elements",
+  "target": "quality-safety-records",
+  "edges": [
+    [
+      "be-excav",
+      "qsr-safety-observati",
+      "FLAGGED DURING"
+    ],
+    [
+      "be-excav",
+      "qsr-third-party",
+      "SOIL-TESTED BY"
+    ],
+    [
+      "be-excav",
+      "qsr-incident",
+      "CAVE-IN REPORTED ON"
+    ],
+    [
+      "be-dewater",
+      "qsr-enviro-cx",
+      "DISCHARGE MONITORED VIA"
+    ],
+    [
+      "be-erosion",
+      "qsr-enviro-cx",
+      "STORMWATER INSPECTED ON"
+    ],
+    [
+      "be-backfill",
+      "qsr-mat-test-report",
+      "COMPACTION VERIFIED IN"
+    ],
+    [
+      "be-deep-fdn",
+      "qsr-third-party",
+      "LOAD-TESTED BY"
+    ],
+    [
+      "be-shallow-fdn",
+      "qsr-insp",
+      "FOOTING CHECKED DURING"
+    ],
+    [
+      "be-fdn-walls",
+      "qsr-non-conformance",
+      "CRACK REPORTED ON"
+    ],
+    [
+      "be-sog",
+      "qsr-insp-item",
+      "FLATNESS GAUGED ON"
+    ],
+    [
+      "be-bg-wp",
+      "qsr-quality-observat",
+      "SEAL EXAMINED ON"
+    ],
+    [
+      "be-grade-beams",
+      "qsr-mat-test-report",
+      "CONCRETE SAMPLED FOR"
+    ],
+    [
+      "be-water-main",
+      "qsr-system-perf-test",
+      "PRESSURE-TESTED PER"
+    ],
+    [
+      "be-sanitary",
+      "qsr-insp",
+      "SLOPE VERIFIED DURING"
+    ],
+    [
+      "be-storm",
+      "qsr-enviro-cx",
+      "FLOW CAPACITY ASSESSED IN"
+    ],
+    [
+      "be-gas-svc",
+      "qsr-third-party",
+      "LEAK-TESTED BY"
+    ],
+    [
+      "be-site-elec",
+      "qsr-safety-violation",
+      "ENERGIZED WORK CITED ON"
+    ],
+    [
+      "be-columns",
+      "qsr-third-party",
+      "WELD-INSPECTED BY"
+    ],
+    [
+      "be-beams",
+      "qsr-quality-observat",
+      "CAMBER CHECKED VIA"
+    ],
+    [
+      "be-slabs",
+      "qsr-punch-item",
+      "SURFACE DEFECT LOGGED ON"
+    ],
+    [
+      "be-roof-struct",
+      "qsr-insp-item",
+      "BEARING VERIFIED ON"
+    ],
+    [
+      "be-connections",
+      "qsr-non-conformance",
+      "TORQUE DEVIATION FILED ON"
+    ],
+    [
+      "be-stairs",
+      "qsr-deficiency-notic",
+      "RISER VARIANCE NOTED ON"
+    ],
+    [
+      "be-misc-metals",
+      "qsr-quality-observat",
+      "ALIGNMENT OBSERVED ON"
+    ],
+    [
+      "be-curtainwall",
+      "qsr-system-perf-test",
+      "WATER PENETRATION TESTED ON"
+    ],
+    [
+      "be-windows",
+      "qsr-punch-item-issue",
+      "SCRATCH CATEGORIZED ON"
+    ],
+    [
+      "be-ext-doors",
+      "qsr-punch-item",
+      "HARDWARE SNAGGED ON"
+    ],
+    [
+      "be-masonry-v",
+      "qsr-quality-observat",
+      "MORTAR JOINT EXAMINED ON"
+    ],
+    [
+      "be-panels",
+      "qsr-coord-issue",
+      "ANCHOR CLASH RAISED ON"
+    ],
+    [
+      "be-amb",
+      "qsr-insp-item",
+      "CONTINUITY CHECKED ON"
+    ],
+    [
+      "be-ext-insul",
+      "qsr-deficiency-notic",
+      "R-VALUE SHORTFALL NOTED ON"
+    ],
+    [
+      "be-roof-mem",
+      "qsr-system-perf-test",
+      "FLOOD-TESTED PER"
+    ],
+    [
+      "be-flashing",
+      "qsr-quality-observat",
+      "LAP DETAIL OBSERVED ON"
+    ],
+    [
+      "be-roof-insul",
+      "qsr-mat-test-report",
+      "MOISTURE CONTENT TESTED IN"
+    ],
+    [
+      "be-roof-drain",
+      "qsr-insp",
+      "DRAINAGE CONFIRMED DURING"
+    ],
+    [
+      "be-skylights",
+      "qsr-punch-item",
+      "CONDENSATION FLAGGED ON"
+    ],
+    [
+      "be-ductwork",
+      "qsr-scheduled-insp",
+      "DUCT LEAK TEST SCHEDULED FOR"
+    ],
+    [
+      "be-hvac-pipe",
+      "qsr-insp-item",
+      "HANGER SPACING MEASURED ON"
+    ],
+    [
+      "be-ahu",
+      "qsr-system-perf-test",
+      "AIRFLOW BALANCED PER"
+    ],
+    [
+      "be-heating",
+      "qsr-enviro-cx",
+      "COMMISSIONING RECORDED FOR"
+    ],
+    [
+      "be-cooling",
+      "qsr-system-perf-test",
+      "REFRIGERANT CHARGED PER"
+    ],
+    [
+      "be-hvac-ctrl",
+      "qsr-enviro-cx",
+      "SEQUENCE VALIDATED ON"
+    ],
+    [
+      "be-tab",
+      "qsr-insp-pass-rate",
+      "BALANCED AIRFLOW SCORED IN"
+    ],
+    [
+      "be-dom-water",
+      "qsr-mat-test-report",
+      "BACTERIA SAMPLED FOR"
+    ],
+    [
+      "be-waste-vent",
+      "qsr-insp",
+      "DRAIN CAMERA-SCOPED DURING"
+    ],
+    [
+      "be-gas-pipe",
+      "qsr-safety-violation",
+      "GAS LEAK CITED ON"
+    ],
+    [
+      "be-plumb-fix",
+      "qsr-punch-item-issue",
+      "FIXTURE DEFECT CATEGORIZED ON"
+    ],
+    [
+      "be-water-htr",
+      "qsr-scheduled-insp",
+      "RELIEF VALVE SCHEDULED FOR"
+    ],
+    [
+      "be-pipe-insul",
+      "qsr-quality-observat",
+      "VAPOR BARRIER OBSERVED ON"
+    ],
+    [
+      "be-power-dist",
+      "qsr-third-party",
+      "ARC FLASH ASSESSED BY"
+    ],
+    [
+      "be-branch",
+      "qsr-insp-item",
+      "WIRE FILL CHECKED ON"
+    ],
+    [
+      "be-conduit",
+      "qsr-quality-observat",
+      "BEND RADIUS OBSERVED ON"
+    ],
+    [
+      "be-lighting",
+      "qsr-punch-item",
+      "FIXTURE AIM SNAGGED ON"
+    ],
+    [
+      "be-emerg-pwr",
+      "qsr-system-perf-test",
+      "GENERATOR LOAD-BANKED PER"
+    ],
+    [
+      "be-grounding",
+      "qsr-mat-test-report",
+      "RESISTANCE METERED IN"
+    ],
+    [
+      "be-sprink-main",
+      "qsr-third-party",
+      "HYDRO-TESTED BY"
+    ],
+    [
+      "be-sprink-head",
+      "qsr-insp-item",
+      "COVERAGE VERIFIED ON"
+    ],
+    [
+      "be-standpipe",
+      "qsr-scheduled-insp",
+      "FLOW TEST SCHEDULED FOR"
+    ],
+    [
+      "be-fire-pump",
+      "qsr-system-perf-test",
+      "CHURN TESTED PER"
+    ],
+    [
+      "be-fa",
+      "qsr-corrective-actio",
+      "FALSE ALARM CORRECTED ON"
+    ],
+    [
+      "be-data",
+      "qsr-mat-test-report",
+      "CABLE CERTIFIED IN"
+    ],
+    [
+      "be-security",
+      "qsr-action-plan",
+      "LOCKDOWN DRILL PLANNED FOR"
+    ],
+    [
+      "be-bas",
+      "qsr-enviro-cx",
+      "INTEGRATION VERIFIED ON"
+    ],
+    [
+      "be-drywall",
+      "qsr-punch-item-issue",
+      "FINISH DEFECT CATEGORIZED ON"
+    ],
+    [
+      "be-paint",
+      "qsr-punch-item",
+      "TOUCH-UP LISTED ON"
+    ],
+    [
+      "be-tile",
+      "qsr-quality-observat",
+      "LIPPAGE OBSERVED ON"
+    ],
+    [
+      "be-act",
+      "qsr-punch-item",
+      "GRID SAG LOGGED ON"
+    ],
+    [
+      "be-int-doors",
+      "qsr-punch-item-2",
+      "CLOSER ADJUSTED VIA"
+    ],
+    [
+      "be-carpet",
+      "qsr-deficiency-notic",
+      "SEAM DEFECT NOTICED ON"
+    ],
+    [
+      "be-casework",
+      "qsr-punch-item",
+      "DRAWER ALIGNMENT SNAGGED ON"
+    ],
+    [
+      "be-countertop",
+      "qsr-non-conformance",
+      "CHIP DAMAGE FILED ON"
+    ],
+    [
+      "be-signage",
+      "qsr-punch-item-2",
+      "PLACEMENT CORRECTED VIA"
+    ],
+    [
+      "be-elev-car",
+      "qsr-third-party",
+      "ANNUAL CERT PERFORMED BY"
+    ],
+    [
+      "be-elev-mach",
+      "qsr-incident-record",
+      "ENTRAPMENT DOCUMENTED ON"
+    ],
+    [
+      "be-paving",
+      "qsr-mat-test-report",
+      "CORE DENSITY TESTED IN"
+    ],
+    [
+      "be-sidewalks",
+      "qsr-deficiency-notic",
+      "ADA SLOPE CITED ON"
+    ],
+    [
+      "be-fencing",
+      "qsr-safety-observati",
+      "PERIMETER BREACH FLAGGED ON"
+    ],
+    [
+      "be-site-light",
+      "qsr-punch-item",
+      "PHOTOMETRIC SHORTFALL LOGGED ON"
+    ],
+    [
+      "be-landscape",
+      "qsr-observation-dens",
+      "SITE RESTORATION TRACKED IN"
+    ]
+  ],
+  "verbGlossary": {
+    "FLAGGED DURING": "Unsafe condition on {target} is identified and documented in a safety observation during active work (e.g., unsupported trench wall flagged during excavation)",
+    "SOIL-TESTED BY": "{source}of {target} are verified through a third-party or special inspection (e.g., bearing capacity of excavation bottom tested by independent lab)",
+    "CAVE-IN REPORTED ON": "{source} is formally recorded as a jobsite {target} (e.g., trench cave-in during excavation logged as an incident)",
+    "DISCHARGE MONITORED VIA": "Environmental effluent from {target}'s installation is tracked through a commissioning or environmental observation (e.g., dewatering discharge pH monitored via environmental observation)",
+    "STORMWATER INSPECTED ON": "{source}control measures on {target} are assessed through environmental observation (e.g., silt fence integrity inspected after storm event)",
+    "COMPACTION VERIFIED IN": "Soil or backfill density for {target} is confirmed through a material test report (e.g., backfill compaction at 95% Proctor verified in nuclear density test)",
+    "LOAD-TESTED BY": "{source} is confirmed through a third-party special {target} (e.g., pile load test performed by independent engineer)",
+    "FOOTING CHECKED DURING": "{source} placement are verified during a standard {target} prior to concrete pour (e.g., spread footing checked during pre-pour inspection)",
+    "CRACK REPORTED ON": "Structural deficiency in {target} is formally documented as a non-conformance report (e.g., horizontal crack in foundation wall reported as NCR)",
+    "FLATNESS GAUGED ON": "{source}of {target} is measured and recorded as an inspection item (e.g., slab-on-grade FF/FL numbers gauged on floor survey inspection item)",
+    "SEAL EXAMINED ON": "{source}of {target} is evaluated through a quality observation (e.g., below-grade membrane lap seals examined on quality walkthrough)",
+    "CONCRETE SAMPLED FOR": "{source} placed in {target} is tested via cylinder breaks documented in a material test report (e.g., grade beam concrete sampled for 28-day compressive strength)",
+    "PRESSURE-TESTED PER": "{source} for {target} is hydrostatically tested and results recorded in a system performance test report (e.g., water main pressure-tested per system performance test)",
+    "SLOPE VERIFIED DURING": "{source} grade for {target} is confirmed during a standard inspection (e.g., sanitary sewer slope verified during underground inspection)",
+    "FLOW CAPACITY ASSESSED IN": "{source}performance of the drainage element is evaluated in an environmental or commissioning {target} (e.g., storm drainage capacity assessed during commissioning observation)",
+    "LEAK-TESTED BY": "{source}of {target} is verified through a third-party special inspection (e.g., gas service piping leak-tested by independent inspector)",
+    "ENERGIZED WORK CITED ON": "Working on or near the energized element without proper safeguards results in a formal {target} (e.g., live electrical work without lockout/tagout cited on site electrical)",
+    "WELD-INSPECTED BY": "Structural welds on {target} are examined through a third-party special inspection (e.g., column moment connections weld-inspected by certified welding inspector)",
+    "CAMBER CHECKED VIA": "{source} deflection or pre-set camber is measured and noted in {target} (e.g., beam camber checked via quality observation before deck pour)",
+    "SURFACE DEFECT LOGGED ON": "Visible imperfection on {target} surface is recorded as a punch list item (e.g., slab honeycomb or crack logged as punch item on floor slab)",
+    "BEARING VERIFIED ON": "{source} is confirmed through an {target} item (e.g., roof truss bearing seat verified on framing inspection item)",
+    "TORQUE DEVIATION FILED ON": "Connection bolt tension on {target} falls outside specification and is recorded as an NCR (e.g., under-torqued high-strength bolts filed as non-conformance on steel connections)",
+    "RISER VARIANCE NOTED ON": "Dimensional inconsistency in {target} is documented in a deficiency notice (e.g., stair riser height exceeding code tolerance noted on deficiency notice)",
+    "ALIGNMENT OBSERVED ON": "{source}of the miscellaneous metal element is documented in {target} (e.g., embed plate alignment observed on quality walkthrough)",
+    "WATER PENETRATION TESTED ON": "{source}of {target} is validated through a system performance test (e.g., curtain wall water penetration tested per ASTM E1105 on mock-up)",
+    "SCRATCH CATEGORIZED ON": "Cosmetic damage to {target} is classified by issue type on a punch item (e.g., glass scratch on window categorized as manufacturing defect in punch item)",
+    "HARDWARE SNAGGED ON": "{source} hardware deficiency on {target} is captured as a punch item (e.g., panic bar misalignment snagged on exterior door punch item)",
+    "MORTAR JOINT EXAMINED ON": "{source} element is evaluated through {target} (e.g., mortar joint tooling and thickness examined on quality observation)",
+    "ANCHOR CLASH RAISED ON": "Physical interference involving {target}'s attachment is documented as a coordination issue (e.g., panel anchor conflicting with structural embed raised as coordination issue)",
+    "CONTINUITY CHECKED ON": "{source}coverage of the barrier element is verified as an {target} item (e.g., air barrier continuity at window-to-wall transition checked on inspection item)",
+    "R-VALUE SHORTFALL NOTED ON": "{source} element falls below specification and is documented in {target} notice (e.g., exterior insulation R-value shortfall noted on deficiency notice)",
+    "FLOOD-TESTED PER": "{source} element is validated through a controlled water test in a system performance test (e.g., roof membrane flood-tested per 48-hour ponding protocol)",
+    "LAP DETAIL OBSERVED ON": "Overlapping seam workmanship on {target} is documented in a quality observation (e.g., counter-flashing lap detail observed on quality observation)",
+    "MOISTURE CONTENT TESTED IN": "{source} element is measured and documented in a material test report (e.g., roof insulation moisture content tested via core sample)",
+    "DRAINAGE CONFIRMED DURING": "{source}performance of {target} is verified during a standard inspection (e.g., roof drain flow and slope confirmed during roofing inspection)",
+    "CONDENSATION FLAGGED ON": "Moisture accumulation on {target} is identified and recorded as a punch item (e.g., interior condensation on skylight glazing flagged as punch item)",
+    "DUCT LEAK TEST SCHEDULED FOR": "{source}test for the ductwork element is set up as a scheduled {target} (e.g., duct leak test scheduled for supply-air trunk on third floor)",
+    "HANGER SPACING MEASURED ON": "Support spacing for {target} is verified and recorded as an inspection item (e.g., HVAC pipe hanger spacing measured against spec on inspection item)",
+    "AIRFLOW BALANCED PER": "{source}delivery performance of the equipment element is validated in a system performance test (e.g., AHU supply and return airflow balanced per TAB report)",
+    "COMMISSIONING RECORDED FOR": "{source}performance of {target} is documented through a commissioning observation (e.g., boiler startup sequence commissioned and recorded for heating equipment)",
+    "REFRIGERANT CHARGED PER": "{source}levels in {target} are set and confirmed in a system performance test (e.g., chiller refrigerant charged per manufacturer startup requirements)",
+    "SEQUENCE VALIDATED ON": "Control logic for {target} is verified through a commissioning observation (e.g., economizer sequence of operations validated on HVAC controls commissioning)",
+    "BALANCED AIRFLOW SCORED IN": "Test-and-balance results for {target} contribute to the overall inspection pass rate metric (e.g., TAB diffuser readings scored in inspection pass rate)",
+    "BACTERIA SAMPLED FOR": "Potable water from {target} is tested for contamination in a material test report (e.g., domestic water system bacteria sampled for coliform test report)",
+    "DRAIN CAMERA-SCOPED DURING": "{source} is visually verified during a standard {target} (e.g., waste and vent piping camera-scoped during underground inspection)",
+    "GAS LEAK CITED ON": "Detected gas leak on {target} results in a formal safety violation (e.g., failed gas piping pressure test cited as safety violation on gas piping)",
+    "FIXTURE DEFECT CATEGORIZED ON": "{source} damage or malfunction is classified by issue type on {target} (e.g., chipped lavatory basin categorized as manufacturing defect on punch item)",
+    "RELIEF VALVE SCHEDULED FOR": "{source} on {target} is set for testing as a scheduled inspection (e.g., water heater T&P relief valve test scheduled for inspection)",
+    "VAPOR BARRIER OBSERVED ON": "{source} jacketing integrity on {target} is documented through a quality observation (e.g., pipe insulation vapor barrier overlap observed on quality observation)",
+    "ARC FLASH ASSESSED BY": "Electrical hazard severity at {target} is evaluated through a third-party special inspection (e.g., switchgear arc flash boundary assessed by independent engineer)",
+    "WIRE FILL CHECKED ON": "Conductor fill ratio in {target} is verified and recorded as an inspection item (e.g., branch circuit wire fill percentage checked on rough-in inspection item)",
+    "BEND RADIUS OBSERVED ON": "{source} routing geometry for {target} is documented in a quality observation (e.g., conduit bend radius observed on quality walkthrough for code compliance)",
+    "FIXTURE AIM SNAGGED ON": "{source} orientation or positioning issue is captured as {target} (e.g., recessed downlight aim offset snagged on lighting punch item)",
+    "GENERATOR LOAD-BANKED PER": "{source} is tested under simulated load in a system performance test (e.g., generator load-banked at 100% rated capacity per system performance test)",
+    "RESISTANCE METERED IN": "Ground resistance for {target} is measured and documented in a material test report (e.g., grounding electrode resistance metered in fall-of-potential test report)",
+    "HYDRO-TESTED BY": "{source} is pressure-tested through a third-party special {target} (e.g., sprinkler main hydrostatic test witnessed by fire marshal)",
+    "COVERAGE VERIFIED ON": "{source}of {target} is confirmed as an inspection item (e.g., sprinkler head coverage and clearance verified on fire protection inspection item)",
+    "FLOW TEST SCHEDULED FOR": "{source}test for {target} is set up as a scheduled inspection (e.g., standpipe flow test scheduled for annual fire protection inspection)",
+    "CHURN TESTED PER": "{source} element is validated in a system performance test (e.g., fire pump churn test run at zero discharge per NFPA 25 performance test)",
+    "FALSE ALARM CORRECTED ON": "{source}of {target} triggers a corrective action (e.g., fire alarm false alarm from dust during construction corrected via incident action)",
+    "CABLE CERTIFIED IN": "Structured cabling for {target} is tested and certified in a material test report (e.g., Cat6A data cable certified in channel test report)",
+    "LOCKDOWN DRILL PLANNED FOR": "Functional exercise for the security element is organized through an action plan (e.g., access control lockdown drill planned for security system commissioning)",
+    "INTEGRATION VERIFIED ON": "{source}of the building automation element is confirmed through a commissioning {target} (e.g., BAS integration with HVAC and lighting verified on commissioning observation)",
+    "FINISH DEFECT CATEGORIZED ON": "{source}issue on the interior element is classified by issue type on {target} (e.g., drywall nail pop categorized as workmanship defect on punch item)",
+    "TOUCH-UP LISTED ON": "Minor cosmetic repair needed on {target} is recorded as a punch item (e.g., paint touch-up at scuff mark listed on interior punch item)",
+    "LIPPAGE OBSERVED ON": "{source} edge height differential on {target} is documented in a quality observation (e.g., floor tile lippage exceeding 1/32 inch observed on quality observation)",
+    "GRID SAG LOGGED ON": "{source} deflection is recorded as {target} (e.g., acoustic ceiling grid sag at light fixture logged on punch item)",
+    "CLOSER ADJUSTED VIA": "{source} hardware on {target} is corrected through a punch item resolution (e.g., interior door closer swing speed adjusted via punch item resolution)",
+    "SEAM DEFECT NOTICED ON": "Visible joint imperfection on the flooring element is documented in a deficiency notice (e.g., carpet seam separation noticed on deficiency notice)",
+    "DRAWER ALIGNMENT SNAGGED ON": "{source} issue is captured as {target} (e.g., drawer front alignment and soft-close function snagged on casework punch item)",
+    "CHIP DAMAGE FILED ON": "Impact damage to {target} surface is formally documented as a non-conformance report (e.g., countertop edge chip filed as non-conformance against approved sample)",
+    "PLACEMENT CORRECTED VIA": "{source}of {target} is resolved through a punch item resolution (e.g., room signage placement height corrected via punch item resolution)",
+    "ANNUAL CERT PERFORMED BY": "Recurring code-required certification for the conveying element is conducted by a third-party inspector (e.g., elevator car annual safety certification performed by state inspector)",
+    "ENTRAPMENT DOCUMENTED ON": "Person trapped in or by {target} is formally recorded in an incident record (e.g., elevator entrapment event documented on incident record)",
+    "CORE DENSITY TESTED IN": "{source} material density is verified through destructive sampling in a material test report (e.g., asphalt core density tested in material test report)",
+    "ADA SLOPE CITED ON": "Accessibility gradient violation on {target} is documented in a deficiency notice (e.g., sidewalk cross-slope exceeding 2% cited on ADA deficiency notice)",
+    "PERIMETER BREACH FLAGGED ON": "Security gap at {target} is identified and documented in a safety observation (e.g., damaged perimeter fencing section flagged on safety observation)",
+    "PHOTOMETRIC SHORTFALL LOGGED ON": "{source}level below spec on {target} is recorded as a punch item (e.g., parking lot light fixture output shortfall logged on site lighting punch item)",
+    "SITE RESTORATION TRACKED IN": "{source} completion progress is monitored via {target} density metrics (e.g., landscaping punchout observation density tracked in closeout metrics)"
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "source": "models-bim",
+  "target": "risk",
+  "edges": [
+    [
+      "bim-clash-detection",
+      "rk-coord-risk",
+      "IDENTIFIES"
+    ],
+    [
+      "bim-clash-detection",
+      "rk-design-risk",
+      "SURFACES"
+    ],
+    [
+      "bim-coord-issue",
+      "rk-risk-trigger",
+      "TRIGGERS"
+    ],
+    [
+      "bim-coord-issue",
+      "rk-const-execution",
+      "ESCALATES TO"
+    ],
+    [
+      "bim-coord-issue-2",
+      "rk-risk-score",
+      "FEEDS"
+    ],
+    [
+      "bim-coord-issue-3",
+      "rk-risk-mitigation",
+      "INDICATES"
+    ],
+    [
+      "bim-federated-model",
+      "rk-coord-risk",
+      "MITIGATES"
+    ],
+    [
+      "bim-federated-model",
+      "rk-mitigation-actio",
+      "ENABLES"
+    ],
+    [
+      "bim-4d-model",
+      "rk-schedule-risk",
+      "SIMULATES"
+    ],
+    [
+      "bim-4d-model",
+      "rk-schedule-buffer",
+      "VALIDATES"
+    ],
+    [
+      "bim-5d-model-cost",
+      "rk-financial-risk",
+      "QUANTIFIES"
+    ],
+    [
+      "bim-5d-model-cost",
+      "rk-contingency-rese",
+      "INFORMS"
+    ],
+    [
+      "bim-3d-building-info",
+      "rk-design-risk",
+      "EXPOSES"
+    ],
+    [
+      "bim-as-built-model",
+      "rk-residual-risk",
+      "DOCUMENTS"
+    ],
+    [
+      "bim-point-cloud",
+      "rk-const-execution",
+      "DETECTS DEVIATION IN"
+    ],
+    [
+      "bim-drone-capture",
+      "rk-safety-risk",
+      "MONITORS"
+    ],
+    [
+      "bim-drone-capture",
+      "rk-enviro-risk",
+      "MONITORS"
+    ],
+    [
+      "bim-digital-twin",
+      "rk-risk-register",
+      "FEEDS"
+    ],
+    [
+      "bim-clash-resolution",
+      "rk-risk-mitigation",
+      "MEASURES"
+    ],
+    [
+      "bim-drawing-revision",
+      "rk-chg-order-rate",
+      "CORRELATES WITH"
+    ],
+    [
+      "bim-bim-coord",
+      "rk-mitigation-actio",
+      "PRODUCES"
+    ]
+  ],
+  "verbGlossary": {
+    "IDENTIFIES": "{source} reveals coordination {target}s that would cause rework if unresolved",
+    "SURFACES": "{source}that indicate underlying design {target}",
+    "TRIGGERS": "{source} acts as {target} trigger requiring assessment and response",
+    "ESCALATES TO": "{source}",
+    "FEEDS": "{source} metric provides input data for calculating risk scores or populating {target} register",
+    "INDICATES": "{source} resolution time signals the effectiveness of {target} mitigation",
+    "MITIGATES": "{source} coordination reduces spatial conflict {target} before field installation",
+    "ENABLES": "{source}-based coordination enables specific {target}s to reduce risk",
+    "SIMULATES": "{source} simulates schedule sequences to identify schedule {target} scenarios",
+    "VALIDATES": "4D schedule simulation validates whether schedule buffers are adequate",
+    "QUANTIFIES": "5D cost model quantifies financial {target} from design changes and scope growth",
+    "INFORMS": "{source} cost data informs the sizing of {target} reserves",
+    "EXPOSES": "{source} reveals design conflicts, constructability issues, and spatial problems",
+    "DOCUMENTS": "{source}documents final installed conditions and any residual {target}s",
+    "DETECTS DEVIATION IN": "{source} detects field deviations that create execution {target}",
+    "MONITORS": "{source}capture monitors site conditions for safety or environmental {target} indicators",
+    "MEASURES": "{source} {target} through coordination",
+    "CORRELATES WITH": "Drawing revision frequency correlates with change order rate as {target} indicator",
+    "PRODUCES": "{source} coordination meeting produces specific {target}s for identified risks"
+  }
+}

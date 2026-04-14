@@ -1,0 +1,186 @@
+{
+  "source": "locations",
+  "target": "roles",
+  "edges": [
+    [
+      "loc-project-site",
+      "rl-super",
+      "CONTROLS"
+    ],
+    [
+      "loc-project-site",
+      "rl-safety-manager",
+      "SECURES"
+    ],
+    [
+      "loc-project-site",
+      "rl-project-manager",
+      "OVERSEES"
+    ],
+    [
+      "loc-building",
+      "rl-assistant-super",
+      "PATROLS"
+    ],
+    [
+      "loc-building",
+      "rl-quality-manager",
+      "INSPECTS"
+    ],
+    [
+      "loc-exterior-zone",
+      "rl-safety-officer",
+      "BARRICADES"
+    ],
+    [
+      "loc-exterior-zone",
+      "rl-foreman-gen",
+      "STAGES"
+    ],
+    [
+      "loc-laydown-staging",
+      "rl-procure-manager",
+      "ALLOCATES"
+    ],
+    [
+      "loc-laydown-staging",
+      "rl-field-engineer",
+      "SURVEYS"
+    ],
+    [
+      "loc-floor-level",
+      "rl-super",
+      "SEQUENCES"
+    ],
+    [
+      "loc-floor-level",
+      "rl-foreman-gen",
+      "MOBILIZES"
+    ],
+    [
+      "loc-below-grade",
+      "rl-safety-officer",
+      "MONITORS"
+    ],
+    [
+      "loc-below-grade",
+      "rl-field-engineer",
+      "BENCHMARKS"
+    ],
+    [
+      "loc-roof-level",
+      "rl-safety-manager",
+      "PERMITS"
+    ],
+    [
+      "loc-roof-level",
+      "rl-foreman-gen",
+      "RIGS"
+    ],
+    [
+      "loc-zone-wing",
+      "rl-assistant-super",
+      "COORDINATES"
+    ],
+    [
+      "loc-core-shaft",
+      "rl-bim-manager-vdc",
+      "MODELS"
+    ],
+    [
+      "loc-ceiling-plenum",
+      "rl-project-engineer",
+      "DETECTS"
+    ],
+    [
+      "loc-room-space",
+      "rl-quality-manager",
+      "PUNCHLISTS"
+    ],
+    [
+      "loc-wet-area",
+      "rl-quality-manager",
+      "WATERPROOFS"
+    ],
+    [
+      "loc-wall-surface",
+      "rl-journeyman-craft",
+      "FINISHES"
+    ],
+    [
+      "loc-penetration-open",
+      "rl-safety-officer",
+      "FIRESTOPS"
+    ],
+    [
+      "loc-fire-smoke",
+      "rl-cx-agent-cxa",
+      "VERIFIES"
+    ],
+    [
+      "loc-work-zone-phase",
+      "rl-scheduler-projec",
+      "DEMARCATES"
+    ],
+    [
+      "loc-cx-zone",
+      "rl-cx-agent-cxa",
+      "COMMISSIONS"
+    ],
+    [
+      "loc-cx-zone",
+      "rl-tab-technician",
+      "BALANCES"
+    ],
+    [
+      "loc-defect-density",
+      "rl-quality-manager",
+      "TRACKS"
+    ],
+    [
+      "loc-punch-items-per",
+      "rl-super-span",
+      "CORRELATES WITH"
+    ],
+    [
+      "loc-safety-incident",
+      "rl-safety-staffing",
+      "CORRELATES WITH"
+    ],
+    [
+      "loc-floor-completion",
+      "rl-pm-workload",
+      "CORRELATES WITH"
+    ]
+  ],
+  "verbGlossary": {
+    "CONTROLS": "{source} governs access, activity sequencing, and safety compliance across the entire project site on a daily basis.",
+    "SECURES": "{source} establishes and enforces site-wide safety perimeters, access controls, and hazard mitigation measures.",
+    "OVERSEES": "{target} maintains high-level accountability for all activity at {source}, reviewing progress and resolving escalations.",
+    "PATROLS": "{source} walks a building or zone on a recurring basis to observe work quality, crew activity, and safety conditions.",
+    "INSPECTS": "{source} physically examines {target} against quality acceptance criteria, punch list requirements, or code compliance standards.",
+    "BARRICADES": "{source} installs or directs the placement of physical barriers, signage, and fall protection around exterior hazard zones.",
+    "STAGES": "{source} positions crews, materials, and equipment within {target} in preparation for the day's scheduled work.",
+    "ALLOCATES": "{source} designates laydown yard space and staging areas to specific trades, deliveries, or equipment based on the logistics plan.",
+    "SURVEYS": "{target} performs field measurements, grade checks, or layout verification at {source} using instruments or reference points.",
+    "SEQUENCES": "{source} determines the floor-by-floor or zone-by-zone order in which trades mobilize, install, and demobilize.",
+    "MOBILIZES": "{source} moves crew, tools, and materials to a specific floor or zone to begin a scheduled work activity.",
+    "MONITORS": "{target} maintains ongoing surveillance of {source} for hazardous conditions, restricted-space compliance, or environmental risks.",
+    "BENCHMARKS": "{source} establishes elevation control points and survey benchmarks at below-grade locations to guide excavation and foundation work.",
+    "PERMITS": "{source} issues or verifies hot work, confined space, or fall protection permits required before crews access a high-risk location.",
+    "RIGS": "{source} sets up hoisting, scaffolding, or fall arrest systems at roof level prior to crew access for roofing or mechanical work.",
+    "COORDINATES": "{source} sequences multiple trades working in the same zone or wing to prevent stacking, conflicts, and rework.",
+    "MODELS": "{source} creates or updates the BIM/VDC model for a specific location to detect clashes before installation begins.",
+    "DETECTS": "{source} identifies above-ceiling coordination conflicts, routing clashes, or clearance violations during a plenum walkthrough or model review.",
+    "PUNCHLISTS": "{source} generates and tracks the room-by-room punch list of deficiencies that must be corrected before substantial completion.",
+    "WATERPROOFS": "{source} inspects wet-area installations (membranes, drain slopes, tile adhesion) against waterproofing specifications before concealment.",
+    "FINISHES": "{source} installs or touches up wall surfaces, paint, trim, and final finishes to meet closeout quality standards.",
+    "FIRESTOPS": "{source} inspects penetrations and openings for compliant firestopping sealant, wrap, or pillow installation per the fire-rated assembly.",
+    "VERIFIES": "{source} confirms that a fire or smoke compartment meets code-required ratings through visual inspection and documentation review.",
+    "DEMARCATES": "{source} defines the physical boundaries and access rules for each work zone or phase area on the project schedule.",
+    "COMMISSIONS": "{source} performs functional performance testing of building systems within a designated commissioning zone.",
+    "BALANCES": "{source} adjusts airflow, water flow, or electrical loads within a commissioning zone to meet design specifications.",
+    "TRACKS": "{target} monitors {source}-based quality or safety metric over time and flags deviations from acceptable thresholds.",
+    "CORRELATES WITH": "{target}measure has a statistical relationship with {source} staffing metric across the portfolio."
+  }
+}

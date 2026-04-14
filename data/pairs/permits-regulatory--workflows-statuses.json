@@ -1,0 +1,211 @@
+{
+  "source": "permits-regulatory",
+  "target": "workflows-statuses",
+  "edges": [
+    [
+      "pr-permit-applicati",
+      "ws-draft",
+      "ORIGINATES IN"
+    ],
+    [
+      "pr-permit-applicati",
+      "ws-submitted",
+      "FILED AT"
+    ],
+    [
+      "pr-building-permit",
+      "ws-pending",
+      "AWAITS"
+    ],
+    [
+      "pr-building-permit",
+      "ws-approved",
+      "ISSUED UPON"
+    ],
+    [
+      "pr-building-permit",
+      "ws-rejected",
+      "DENIED AT"
+    ],
+    [
+      "pr-building-permit",
+      "ws-sequential-appr",
+      "ROUTES THROUGH"
+    ],
+    [
+      "pr-demolition-permi",
+      "ws-approved",
+      "ISSUED UPON"
+    ],
+    [
+      "pr-demolition-permi",
+      "ws-hold",
+      "SUSPENDED AT"
+    ],
+    [
+      "pr-trade-permit",
+      "ws-submit-approve",
+      "FOLLOWS"
+    ],
+    [
+      "pr-renovation-alter",
+      "ws-revise-resubmit",
+      "RESUBMITTED VIA"
+    ],
+    [
+      "pr-enviro-permit",
+      "ws-appr-chain",
+      "ROUTES THROUGH"
+    ],
+    [
+      "pr-enviro-permit",
+      "ws-approved",
+      "CLEARED UPON"
+    ],
+    [
+      "pr-zoning-appr",
+      "ws-pending",
+      "AWAITS"
+    ],
+    [
+      "pr-zoning-appr",
+      "ws-approved",
+      "GRANTED UPON"
+    ],
+    [
+      "pr-variance-special",
+      "ws-under-review",
+      "HEARD DURING"
+    ],
+    [
+      "pr-building-departm",
+      "ws-under-review",
+      "CONDUCTED DURING"
+    ],
+    [
+      "pr-building-departm",
+      "ws-approved-as",
+      "CONDITIONED AT"
+    ],
+    [
+      "pr-fire-marshal",
+      "ws-review-respond",
+      "FOLLOWS"
+    ],
+    [
+      "pr-ahj-insp",
+      "ws-inspect-disposit",
+      "FOLLOWS"
+    ],
+    [
+      "pr-ahj-insp",
+      "ws-deficient",
+      "CITED AT"
+    ],
+    [
+      "pr-ahj-insp",
+      "ws-conforming",
+      "PASSES AT"
+    ],
+    [
+      "pr-special-insp",
+      "ws-ready-review",
+      "STAGED AT"
+    ],
+    [
+      "pr-third-party",
+      "ws-workflow-respons",
+      "DOCUMENTED VIA"
+    ],
+    [
+      "pr-cert-occupancy",
+      "ws-closed",
+      "FINALIZES AT"
+    ],
+    [
+      "pr-temp-cert",
+      "ws-approved-as",
+      "CONDITIONED AT"
+    ],
+    [
+      "pr-temp-cert",
+      "ws-due-date",
+      "BOUND BY"
+    ],
+    [
+      "pr-cert-completion",
+      "ws-closed",
+      "CLOSES AT"
+    ],
+    [
+      "pr-osha-notificatio",
+      "ws-open",
+      "INITIATES AT"
+    ],
+    [
+      "pr-site-safety-plan",
+      "ws-approved",
+      "ENFORCED UPON"
+    ],
+    [
+      "pr-insp-scheduling",
+      "ws-ball-court",
+      "ASSIGNED VIA"
+    ],
+    [
+      "pr-permit-status",
+      "ws-mapped-status",
+      "MAPPED VIA"
+    ],
+    [
+      "pr-permit-cycle",
+      "ws-average-appr",
+      "MEASURED BY"
+    ],
+    [
+      "pr-insp-pass-rate",
+      "ws-first-pass-appr",
+      "BENCHMARKED AGAINST"
+    ],
+    [
+      "pr-reg-hold",
+      "ws-status-dwell",
+      "MEASURED BY"
+    ],
+    [
+      "pr-open-permit",
+      "ws-overdue-rate",
+      "TRACKED BY"
+    ]
+  ],
+  "verbGlossary": {
+    "ORIGINATES IN": "{source} is first created in {target}, typically as an editable draft before formal submission to the jurisdiction.",
+    "FILED AT": "{source} is formally submitted to the authority having jurisdiction at {target}, starting the official review clock.",
+    "AWAITS": "{source} is queued and waiting for jurisdictional action at {target}; no construction activity may proceed until someone acts.",
+    "ISSUED UPON": "{source} is formally issued and construction work is authorized to begin when {target} is reached.",
+    "DENIED AT": "{source} is rejected by the reviewing authority at {target}, requiring correction and resubmission.",
+    "ROUTES THROUGH": "{source} passes through {target} pattern or approval chain as part of its multi-department review process.",
+    "SUSPENDED AT": "{source} is placed on hold at {target}, halting authorized work until the hold condition is resolved.",
+    "FOLLOWS": "{source} or inspection adheres to this standard {target} pattern from submission through final disposition.",
+    "RESUBMITTED VIA": "{source} is revised and sent back through this resubmission {target} after receiving correction comments.",
+    "CLEARED UPON": "{source}is granted and the compliance hold is removed when {target} is reached.",
+    "GRANTED UPON": "{source}is formally granted by the reviewing body when {target} is reached.",
+    "HEARD DURING": "{source}is presented to and deliberated by the review board during {target}.",
+    "CONDUCTED DURING": "{source}plan review or regulatory examination is actively performed during {target}.",
+    "CONDITIONED AT": "{source} or certificate is approved with specific conditions or stipulations noted at {target}.",
+    "PASSES AT": "{source}inspected work meets code requirements and receives a passing disposition at this field {target}.",
+    "CITED AT": "{source} is recorded at this field {target}.",
+    "STAGED AT": "{source}inspection item is prepared and queued at {target}, awaiting the inspector's arrival and examination.",
+    "DOCUMENTED VIA": "{source}testing or inspection results are formally recorded through {target} response mechanism.",
+    "FINALIZES AT": "{source} reaches its terminal status, formally authorizing building occupancy and completing {target} lifecycle.",
+    "CLOSES AT": "{source} is closed at this terminal {target}, indicating all required work and inspections are complete.",
+    "INITIATES AT": "{source}is first filed and opened at {target}, triggering required compliance tracking.",
+    "ENFORCED UPON": "{source}plan becomes binding and enforceable on the jobsite when {target} is reached.",
+    "ASSIGNED VIA": "{source}inspection or review task is routed to the responsible party through {target}.",
+    "MAPPED VIA": "{source} current position in its regulatory lifecycle is tracked through this mapped {target} representation.",
+    "MEASURED BY": "{source} or inspection metric is quantified using {target} performance measure.",
+    "BENCHMARKED AGAINST": "{source}inspection pass rate is compared against this first-pass {target} metric to evaluate field readiness.",
+    "TRACKED BY": "{source} metric is monitored over time using {target} KPI.",
+    "BOUND BY": "{source}is constrained by {target} component, such as an expiration or conversion deadline."
+  }
+}

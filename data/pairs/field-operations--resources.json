@@ -1,0 +1,425 @@
+{
+  "source": "field-operations",
+  "target": "resources",
+  "universalEdges": [
+    {
+      "source": "fo-manpower-log",
+      "targetGroup": "trades",
+      "verb": "TRACKS HEADCOUNT OF",
+      "evidence": "Databricks Q1: daily_log_manpower records 30+ trades at 10+ companies each. Any trade present on site is tracked."
+    },
+    {
+      "source": "fo-timecard-entry",
+      "targetGroup": "trades",
+      "verb": "LOGS HOURS FOR",
+      "evidence": "Timecards capture hours for every trade on site"
+    },
+    {
+      "source": "fo-crew-crew",
+      "targetGroup": "trades",
+      "verb": "ORGANIZES CREWS FOR",
+      "evidence": "Crews are organized for every trade"
+    },
+    {
+      "source": "fo-employee-record",
+      "targetGroup": "trades",
+      "verb": "REGISTERS WORKERS FROM",
+      "evidence": "Employee records enroll workers from every trade"
+    },
+    {
+      "source": "fo-workforce-req",
+      "targetGroup": "trades",
+      "verb": "REQUESTS WORKERS FROM",
+      "evidence": "Workforce requests can be made for any trade"
+    },
+    {
+      "source": "fo-assignment",
+      "targetGroup": "trades",
+      "verb": "DEPLOYS WORKERS FROM",
+      "evidence": "Work assignments deploy workers from any trade"
+    },
+    {
+      "source": "fo-scheduled-work",
+      "targetGroup": "trades",
+      "verb": "SCHEDULES WORK FOR",
+      "evidence": "Scheduled work plans for any trade or equipment"
+    },
+    {
+      "source": "fo-scheduled-work",
+      "targetGroup": "equipment",
+      "verb": "SCHEDULES USE OF",
+      "evidence": "Scheduled work assigns equipment to planned activities"
+    },
+    {
+      "source": "fo-peak-daily",
+      "targetGroup": "trades",
+      "verb": "MEASURES HEADCOUNT OF",
+      "evidence": "Peak daily headcount measured for every trade"
+    },
+    {
+      "source": "fo-average-daily",
+      "targetGroup": "trades",
+      "verb": "MEASURES HEADCOUNT OF",
+      "evidence": "Average daily headcount measured for every trade"
+    },
+    {
+      "source": "fo-field-productivi",
+      "targetGroup": "trades",
+      "verb": "BENCHMARKS PRODUCTIVITY OF",
+      "evidence": "Field productivity benchmarked for every trade"
+    },
+    {
+      "source": "fo-productivity-log",
+      "targetGroup": "trades",
+      "verb": "MEASURES HEADCOUNT OF",
+      "evidence": "Productivity is measured for every trade on site"
+    },
+    {
+      "source": "fo-plan-percent",
+      "targetGroup": "trades",
+      "verb": "GAUGES PLAN COMPLETION FOR",
+      "evidence": "Plan percent complete gauged for every trade"
+    },
+    {
+      "source": "fo-daily-log-header",
+      "targetGroup": "trades",
+      "verb": "COVERS DAILY ENTRIES FOR",
+      "evidence": "Daily log header establishes scope for all trade entries"
+    },
+    {
+      "source": "fo-const-report",
+      "targetGroup": "trades",
+      "verb": "SUMMARIZES DAILY ACTIVITY OF",
+      "evidence": "Construction report aggregates all trades' headcount and work"
+    },
+    {
+      "source": "fo-daily-report",
+      "targetGroup": "trades",
+      "verb": "DISTRIBUTES REPORT ON",
+      "evidence": "Daily report distributed referencing all trades on site"
+    },
+    {
+      "source": "fo-safety-violation",
+      "targetGroup": "trades",
+      "verb": "CITES VIOLATION BY",
+      "evidence": "Databricks Q1: safety violations can be issued against any trade \u2014 30+ confirmed"
+    },
+    {
+      "source": "fo-safety-violation",
+      "targetGroup": "equipment",
+      "verb": "CITES VIOLATION INVOLVING",
+      "evidence": "Safety violations can cite any equipment involved in an infraction"
+    },
+    {
+      "source": "fo-accident-log",
+      "targetGroup": "trades",
+      "verb": "RECORDS INCIDENT INVOLVING",
+      "evidence": "Accident logs record incidents involving any trade"
+    },
+    {
+      "source": "fo-accident-log",
+      "targetGroup": "equipment",
+      "verb": "RECORDS INCIDENT INVOLVING",
+      "evidence": "Accident logs record incidents involving any equipment"
+    },
+    {
+      "source": "fo-equip-log-entry",
+      "targetGroup": "equipment",
+      "verb": "LOGS DAILY ACTIVITY OF",
+      "evidence": "Equipment log entries track any equipment active on site"
+    },
+    {
+      "source": "fo-equip-master",
+      "targetGroup": "equipment",
+      "verb": "CATALOGS ASSETS FOR",
+      "evidence": "Equipment master catalogs every type of equipment"
+    },
+    {
+      "source": "fo-equip-timecard",
+      "targetGroup": "equipment",
+      "verb": "LOGS HOURS FOR",
+      "evidence": "Equipment timecards capture hours for all equipment"
+    },
+    {
+      "source": "fo-equip-utilizatio",
+      "targetGroup": "equipment",
+      "verb": "RATES UTILIZATION OF",
+      "evidence": "Equipment utilization rated for all equipment types"
+    },
+    {
+      "source": "fo-dlvy-log-entry",
+      "targetGroup": "materials",
+      "verb": "RECEIVES DELIVERY OF",
+      "evidence": "Delivery logs document arrival of any material to site"
+    },
+    {
+      "source": "fo-mat-shipment",
+      "targetGroup": "materials",
+      "verb": "SHIPS LOAD OF",
+      "evidence": "Material shipments track inbound loads for any material"
+    },
+    {
+      "source": "fo-mat-receipt",
+      "targetGroup": "materials",
+      "verb": "VERIFIES RECEIPT OF",
+      "evidence": "Material receipts verify quantity and condition of any delivery"
+    },
+    {
+      "source": "fo-delay-log-entry",
+      "targetGroup": "materials",
+      "verb": "DELAYED BY SHORTAGE OF",
+      "evidence": "Databricks: daily_log_delay has 84K material delay records \u2014 any material can cause delays"
+    },
+    {
+      "source": "fo-delay-log-entry",
+      "targetGroup": "equipment",
+      "verb": "DELAYED BY UNAVAILABILITY OF",
+      "evidence": "Equipment unavailability can cause work stoppages"
+    },
+    {
+      "source": "fo-delay-frequency",
+      "targetGroup": "materials",
+      "verb": "COUNTS DELAY FREQUENCY FOR",
+      "evidence": "Delay frequency counted for any material that causes shortages"
+    },
+    {
+      "source": "fo-daily-log-insp",
+      "targetGroup": "materials",
+      "verb": "INSPECTS INSTALLATION OF",
+      "evidence": "Daily log inspections check quality of any installed material"
+    },
+    {
+      "source": "fo-daily-log-note",
+      "targetGroup": "trades",
+      "verb": "DOCUMENTS ACTIVITY OF",
+      "evidence": "Daily log notes document activities involving any trade"
+    },
+    {
+      "source": "fo-daily-log-note",
+      "targetGroup": "equipment",
+      "verb": "DOCUMENTS ACTIVITY OF",
+      "evidence": "Daily log notes document equipment activity"
+    },
+    {
+      "source": "fo-daily-log-note",
+      "targetGroup": "materials",
+      "verb": "DOCUMENTS PLACEMENT OF",
+      "evidence": "Daily log notes document material placements and deliveries"
+    },
+    {
+      "source": "fo-waste-log-entry",
+      "targetGroup": "materials",
+      "verb": "DISPOSES WASTE FROM",
+      "evidence": "Waste logs record disposal of scraps from any material"
+    },
+    {
+      "source": "fo-waste-diversion",
+      "targetGroup": "materials",
+      "verb": "RATES WASTE DIVERSION OF",
+      "evidence": "Waste diversion rates calculated for any material type"
+    },
+    {
+      "source": "fo-quantity-log",
+      "targetGroup": "materials",
+      "verb": "TALLIES INSTALLED QUANTITY OF",
+      "evidence": "Quantity logs track installed-in-place quantities for any material"
+    },
+    {
+      "source": "fo-actual-productio",
+      "targetGroup": "materials",
+      "verb": "QUANTIFIES PRODUCTION OF",
+      "evidence": "Actual production quantities captured for any material being placed"
+    },
+    {
+      "source": "fo-budgeted-product",
+      "targetGroup": "materials",
+      "verb": "TARGETS PRODUCTION OF",
+      "evidence": "Budgeted production targets set for any material"
+    }
+  ],
+  "edges": [
+    [
+      "fo-t-m-labor-entry",
+      "res-laborer",
+      "BILLS LABOR OF"
+    ],
+    [
+      "fo-t-m-equip-entry",
+      "res-crane",
+      "BILLS USAGE OF"
+    ],
+    [
+      "fo-t-m-mat-entry",
+      "mat-concrete",
+      "BILLS QUANTITY OF"
+    ],
+    [
+      "res-operator",
+      "fo-equip-log-entry",
+      "OPERATES EQUIPMENT FOR"
+    ],
+    [
+      "res-safety",
+      "fo-safety-violation",
+      "ISSUES REPORT ON"
+    ],
+    [
+      "res-safety",
+      "fo-accident-log",
+      "INVESTIGATES INCIDENT IN"
+    ],
+    [
+      "res-safety",
+      "fo-daily-log-insp",
+      "CONDUCTS INSPECTION IN"
+    ],
+    [
+      "res-qc",
+      "fo-daily-log-insp",
+      "PERFORMS INSPECTION IN"
+    ],
+    [
+      "res-surveyor",
+      "fo-quantity-log",
+      "VALIDATES QUANTITIES IN"
+    ],
+    [
+      "res-cxa",
+      "fo-daily-log-insp",
+      "WITNESSES INSPECTION IN"
+    ],
+    [
+      "res-temp-util",
+      "fo-daily-log-header",
+      "SUPPORTS OPERATIONS IN"
+    ],
+    [
+      "res-mat-handle",
+      "fo-dlvy-log-entry",
+      "UNLOADS DELIVERIES FOR"
+    ],
+    [
+      "fo-visitor-log",
+      "res-safety",
+      "CHECKS IN"
+    ],
+    [
+      "fo-visitor-log",
+      "res-cxa",
+      "CHECKS IN"
+    ],
+    [
+      "fo-daily-log-dist",
+      "res-safety",
+      "NOTIFIES UPON COMPLETION"
+    ],
+    [
+      "fo-phone-call-log",
+      "mat-concrete",
+      "COORDINATES DELIVERY OF"
+    ],
+    [
+      "fo-plan-revision",
+      "res-electrician",
+      "DISTRIBUTES REVISION TO"
+    ],
+    [
+      "fo-daily-log",
+      "res-safety",
+      "CONFIGURES LOG SECTIONS FOR"
+    ],
+    [
+      "fo-scheduled-work-2",
+      "res-laborer",
+      "LINKS SCHEDULE ACTIVITY TO"
+    ],
+    [
+      "fo-t-m-ticket",
+      "res-laborer",
+      "CAPTURES COST OF"
+    ],
+    [
+      "fo-weather-log",
+      "res-crane",
+      "RESTRICTS OPERATION OF"
+    ],
+    [
+      "fo-weather-log",
+      "res-conc-equip",
+      "RESTRICTS OPERATION OF"
+    ],
+    [
+      "fo-weather-delay",
+      "res-crane",
+      "RATES WEATHER IMPACT ON"
+    ],
+    [
+      "fo-dumpster-log",
+      "mat-lumber",
+      "HAULS WASTE FROM"
+    ]
+  ],
+  "verbGlossary": {
+    "TRACKS HEADCOUNT OF": "{source} records headcount, hours, or presence of {target} on site for a given day",
+    "LOGS HOURS FOR": "{source} captures billable hours worked by {target} or machine",
+    "ORGANIZES CREWS FOR": "{source} groups individual workers into a named field crew for {target}",
+    "REGISTERS WORKERS FROM": "{source} enrolls a worker into the project workforce roster for {target}",
+    "REQUESTS WORKERS FROM": "{source} signals a need for additional {target} workers on an upcoming work day",
+    "DEPLOYS WORKERS FROM": "{source} dispatches {target} to a scheduled task or work area",
+    "SCHEDULES WORK FOR": "{source} assigns {target} to a planned activity for that day",
+    "SCHEDULES USE OF": "{source} assigns {target} to a planned activity for that day",
+    "MEASURES HEADCOUNT OF": "{source} quantifies headcount or output rate of {target}",
+    "BENCHMARKS PRODUCTIVITY OF": "{source} compares {target}'s output rate against planned or historical norms",
+    "GAUGES PLAN COMPLETION FOR": "{target} evaluates whether {source}'s work is on track",
+    "COVERS DAILY ENTRIES FOR": "{target} establishes the date scope under which {source} entries are recorded",
+    "SUMMARIZES DAILY ACTIVITY OF": "{source} aggregates headcount, usage, and work completed by {target}",
+    "DISTRIBUTES REPORT ON": "{source} sends a compiled field summary referencing {target} to stakeholders",
+    "CITES VIOLATION BY": "{source} names {target} as the party involved in a safety infraction",
+    "CITES VIOLATION INVOLVING": "{source} names {target} as involved in a safety infraction",
+    "RECORDS INCIDENT INVOLVING": "{source} documents {target} involvement in an on-site injury or incident",
+    "LOGS DAILY ACTIVITY OF": "{source} records that {target} was present and active on site that day",
+    "CATALOGS ASSETS FOR": "{source} defines the asset identity, specifications, and ownership for {target}",
+    "RATES UTILIZATION OF": "{source} calculates a utilization rate for {target}",
+    "RECEIVES DELIVERY OF": "{source} documents that {target} arrived on site and was accepted",
+    "SHIPS LOAD OF": "{source} tracks an inbound load of {target} from fabrication shop or supplier",
+    "VERIFIES RECEIPT OF": "{source} confirms delivered quantity, condition, and spec compliance for {target}",
+    "DELAYED BY SHORTAGE OF": "{source} attributes a work stoppage to a missing or late {target}",
+    "DELAYED BY UNAVAILABILITY OF": "{source} attributes a work stoppage to unavailable {target}",
+    "COUNTS DELAY FREQUENCY FOR": "{source} tallies how often {target} shortage causes field delays",
+    "INSPECTS INSTALLATION OF": "{source} checks quality or placement of {target} in the field",
+    "DOCUMENTS ACTIVITY OF": "{source} describes {target}'s activity or equipment operation in narrative form",
+    "DOCUMENTS PLACEMENT OF": "{source} describes {target} placement or delivery in narrative form",
+    "DISPOSES WASTE FROM": "{source} records scraps or debris from {target} removed from the site",
+    "RATES WASTE DIVERSION OF": "{source} calculates the recycled vs. landfilled percentage for {target} type",
+    "TALLIES INSTALLED QUANTITY OF": "{source} records installed-in-place quantities of {target} for progress tracking",
+    "QUANTIFIES PRODUCTION OF": "{source} captures the real volume of {target} placed in a shift",
+    "TARGETS PRODUCTION OF": "{target} sets the planned volume of {source} to be placed",
+    "BILLS LABOR OF": "{source} records labor usage of {target} for cost reimbursement",
+    "BILLS USAGE OF": "{source} records usage of {target} for cost reimbursement",
+    "BILLS QUANTITY OF": "{source} records quantity of {target} used for cost reimbursement",
+    "CAPTURES COST OF": "{source} bundles labor, equipment, and material line items for {target} into a single billable record",
+    "OPERATES EQUIPMENT FOR": "{target} provides the skilled labor that runs {source}",
+    "ISSUES REPORT ON": "{source} authors a safety violation or corrective action notice for {target}",
+    "INVESTIGATES INCIDENT IN": "{target} conducts a root-cause investigation of an incident involving {source}",
+    "CONDUCTS INSPECTION IN": "{target} carries out a field inspection of {source} recorded in the daily log",
+    "PERFORMS INSPECTION IN": "{target} executes a daily log inspection of {source} against a checklist or spec",
+    "VALIDATES QUANTITIES IN": "{source} confirms field productivity measurements for {target} against control points",
+    "WITNESSES INSPECTION IN": "{source} observes and signs off on a field inspection or system test for {target}",
+    "SUPPORTS OPERATIONS IN": "{target} provides power, water, or lighting that enables daily field operations for {source}",
+    "UNLOADS DELIVERIES FOR": "{source} offloads deliveries and stages {target} at the installation point",
+    "CHECKS IN": "{source} records arrival of {target} on site",
+    "NOTIFIES UPON COMPLETION": "{source} triggers notifications to {target} about log completion",
+    "COORDINATES DELIVERY OF": "{source} documents coordination calls about schedules or deliveries of {target}",
+    "DISTRIBUTES REVISION TO": "{source} confirms updated drawing set delivered to {target} on site",
+    "CONFIGURES LOG SECTIONS FOR": "{source} defines which resource-tracking sections are active for {target}",
+    "LINKS SCHEDULE ACTIVITY TO": "{target} connects a daily field entry to a CPM schedule activity for {source}",
+    "RESTRICTS OPERATION OF": "{source} flags conditions that shut down or limit operation of {target}",
+    "RATES WEATHER IMPACT ON": "{target} measures how often weather disrupts {source} operations",
+    "HAULS WASTE FROM": "{source} tracks a load of construction debris from {target} hauled off site"
+  },
+  "_meta": {
+    "universalEdgeSemantics": "Each universalEdge means: the source element connects to EVERY element in the targetGroup via the specified verb. targetGroup values: 'trades' (25 elements), 'equipment' (11 elements), 'materials' (25 elements), 'measures' (9 elements).",
+    "dataEvidence": "Universal relationships validated via Databricks queries against prod_gold_ram_us01 (2-year lookback, March 2026). Q1: manpower \u00d7 30+ trades. Material delays: 84K records, 4,351 cos.",
+    "edgesVsUniversal": "The 'edges' array contains SELECTIVE relationships \u2014 specific role-to-activity connections (e.g., safety professional issues violations, QC inspector performs inspections) and weather/equipment-specific links."
+  }
+}

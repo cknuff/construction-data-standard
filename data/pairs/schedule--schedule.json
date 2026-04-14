@@ -1,0 +1,316 @@
+{
+  "source": "schedule",
+  "target": "schedule",
+  "edges": [
+    [
+      "sch-detail-activity",
+      "sch-summary-activity",
+      "ROLLS UP TO"
+    ],
+    [
+      "sch-detail-activity",
+      "sch-milestone",
+      "DRIVES"
+    ],
+    [
+      "sch-detail-activity",
+      "sch-duration-progres",
+      "MEASURED BY"
+    ],
+    [
+      "sch-detail-activity",
+      "sch-relationship-typ",
+      "LINKED BY"
+    ],
+    [
+      "sch-detail-activity",
+      "sch-work-calendar",
+      "GOVERNED BY"
+    ],
+    [
+      "sch-detail-activity",
+      "sch-calculated-dates",
+      "PRODUCES"
+    ],
+    [
+      "sch-activity-identif",
+      "sch-activity-codes",
+      "STRUCTURES"
+    ],
+    [
+      "sch-summary-activity",
+      "sch-schedule-levels",
+      "MAPS TO"
+    ],
+    [
+      "sch-milestone",
+      "sch-baseline-dates",
+      "BASELINED BY"
+    ],
+    [
+      "sch-milestone",
+      "sch-milestone-adhere",
+      "SCORED BY"
+    ],
+    [
+      "sch-milestone",
+      "sch-schedule-constra",
+      "ENFORCED BY"
+    ],
+    [
+      "sch-relationship-typ",
+      "sch-lag-lead-time",
+      "OFFSET BY"
+    ],
+    [
+      "sch-relationship-typ",
+      "sch-dependency-class",
+      "CATEGORIZED BY"
+    ],
+    [
+      "sch-relationship-typ",
+      "sch-critical-path",
+      "DETERMINES"
+    ],
+    [
+      "sch-relationship-typ",
+      "sch-open-ends",
+      "VALIDATED BY"
+    ],
+    [
+      "sch-dependency-class",
+      "sch-time-impact",
+      "INFORMS"
+    ],
+    [
+      "sch-open-ends",
+      "sch-dcma-14-point",
+      "FLAGGED BY"
+    ],
+    [
+      "sch-logic-density",
+      "sch-schedule-health",
+      "FEEDS"
+    ],
+    [
+      "sch-work-calendar",
+      "sch-calculated-dates",
+      "CONVERTS"
+    ],
+    [
+      "sch-calculated-dates",
+      "sch-float-slack",
+      "YIELDS"
+    ],
+    [
+      "sch-calculated-dates",
+      "sch-critical-path",
+      "REVEALS"
+    ],
+    [
+      "sch-data-date",
+      "sch-schedule-update",
+      "ADVANCES WITH"
+    ],
+    [
+      "sch-data-date",
+      "sch-out-sequence",
+      "EXPOSES"
+    ],
+    [
+      "sch-baseline-dates",
+      "sch-baseline-schedul",
+      "STORED IN"
+    ],
+    [
+      "sch-float-slack",
+      "sch-critical-path",
+      "DEFINES"
+    ],
+    [
+      "sch-float-slack",
+      "sch-resource-levelin",
+      "CONSUMED BY"
+    ],
+    [
+      "sch-float-slack",
+      "sch-float-erosion",
+      "TRACKED BY"
+    ],
+    [
+      "sch-critical-path",
+      "sch-path-analysis",
+      "EXAMINED BY"
+    ],
+    [
+      "sch-critical-path",
+      "sch-critical-path-2",
+      "INDEXED BY"
+    ],
+    [
+      "sch-critical-path",
+      "sch-critical-activit",
+      "QUANTIFIED BY"
+    ],
+    [
+      "sch-critical-path",
+      "sch-recovery-schedul",
+      "COMPRESSED BY"
+    ],
+    [
+      "sch-earned-schedule",
+      "sch-schedule-perf",
+      "CALCULATES"
+    ],
+    [
+      "sch-earned-schedule",
+      "sch-cost-loading",
+      "REQUIRES"
+    ],
+    [
+      "sch-baseline-schedul",
+      "sch-schedule-update",
+      "PROGRESSED BY"
+    ],
+    [
+      "sch-baseline-schedul",
+      "sch-as-built",
+      "EVOLVES INTO"
+    ],
+    [
+      "sch-baseline-schedul",
+      "sch-retrospective-de",
+      "COMPARED IN"
+    ],
+    [
+      "sch-schedule-update",
+      "sch-look-ahead",
+      "REFINES INTO"
+    ],
+    [
+      "sch-schedule-update",
+      "sch-schedule-chg",
+      "LOGGED BY"
+    ],
+    [
+      "sch-schedule-update",
+      "sch-schedule-field",
+      "VALIDATED BY"
+    ],
+    [
+      "sch-look-ahead",
+      "sch-last-planner",
+      "COORDINATED BY"
+    ],
+    [
+      "sch-recovery-schedul",
+      "sch-acceleration",
+      "ESCALATES TO"
+    ],
+    [
+      "sch-as-built",
+      "sch-retrospective-de",
+      "ANALYZED BY"
+    ],
+    [
+      "sch-labor-loading",
+      "sch-resource-levelin",
+      "LEVELED BY"
+    ],
+    [
+      "sch-delay-class",
+      "sch-time-extension",
+      "JUSTIFIES"
+    ],
+    [
+      "sch-delay-class",
+      "sch-time-impact",
+      "QUANTIFIED BY"
+    ],
+    [
+      "sch-time-extension",
+      "sch-acceleration",
+      "DENIED TRIGGERS"
+    ],
+    [
+      "sch-dcma-14-point",
+      "sch-schedule-health",
+      "AGGREGATED INTO"
+    ],
+    [
+      "sch-takt-time",
+      "sch-linear-schedulin",
+      "COMPLEMENTS"
+    ],
+    [
+      "sch-4d-5d-bim",
+      "sch-cpm-tool",
+      "IMPORTS FROM"
+    ],
+    [
+      "sch-last-planner",
+      "sch-percent-plan",
+      "GENERATES"
+    ],
+    [
+      "sch-baseline-schedul",
+      "sch-look-ahead",
+      "REFINED INTO"
+    ],
+    [
+      "sch-time-extension",
+      "sch-critical-path",
+      "EXTENDS"
+    ]
+  ],
+  "verbGlossary": {
+    "ROLLS UP TO": "{source}aggregate into summary activities or WBS nodes — the summary bar's dates and progress are derived entirely from its child detail activities",
+    "DRIVES": "{source} activity's completion is a prerequisite for {target} or event — the target cannot be achieved until the source finishes",
+    "MEASURED BY": "{source} {target} time performance is quantified by the target — original duration, remaining duration, actual dates, and percent complete are tracked through the target's fields",
+    "LINKED BY": "{source} is connected to predecessors and successors through {target} (FS, SS, FF, SF) — the target defines how activities interact in the CPM network",
+    "GOVERNED BY": "{source} follows {target} calendar's rules for working days, holidays, and hours — the target controls the duration-to-date conversion in all CPM calculations",
+    "PRODUCES": "{source} calculated output — the CPM forward and backward pass through activities produces early/late dates as computed results",
+    "STRUCTURES": "{source} naming and coding conventions provide the framework that organizes the target's dimensional classification — {target} IDs encode the trade, area, and phase that activity codes formalize into filterable dimensions",
+    "MAPS TO": "{source} corresponds to a level in {target} hierarchy — summary activities map to specific tiers (L1 executive, L2 phase, L3 area) in the multi-level schedule structure",
+    "BASELINED BY": "{source} milestone's planned date is frozen in {target} — the target preserves the approved date as the immutable reference for all future variance measurement",
+    "SCORED BY": "{source} element's performance is quantified by {target} — the target calculates a ratio or percentage that rates how well the source is performing against plan",
+    "ENFORCED BY": "{source} milestone's date is locked by {target} — the target overrides CPM logic to force the source to a specific date regardless of predecessor calculations",
+    "OFFSET BY": "{source} relationship includes a time delay or overlap defined by the target — the target's lag or lead value shifts the calculated dates beyond what pure logic would produce",
+    "CATEGORIZED BY": "{source} relationship is classified by the target into mandatory, discretionary, or external — the target's classification determines whether the relationship can change during delay analysis",
+    "DETERMINES": "{source} logic network defines the target — the sequence and type of predecessor/successor relationships determine which chain of activities forms {target}",
+    "VALIDATED BY": "{source} is checked for correctness by the target — the target identifies anomalies, missing connections, or discrepancies in the source",
+    "INFORMS": "Source classification provides essential context that the target analysis requires — the target's methodology depends on understanding whether {source}ic",
+    "FLAGGED BY": "Source anomaly is detected and reported by {target} check — the target's assessment identifies {source} deficiency requiring correction",
+    "FEEDS": "{source} metric contributes as an input to {target} — the target aggregates the source along with other indicators into an overall rating",
+    "CONVERTS": "{source} calendar translates the target's duration values into specific calendar dates — working day durations become date ranges through the source's workday/holiday definitions",
+    "YIELDS": "{source} calculation produces the target as a derived result — the difference between early and late dates from the CPM calculation yields total {target} and free float values",
+    "REVEALS": "{source} calculated dates expose the target — the forward and backward pass results identify which chain of activities has zero or least total {target}, revealing the critical path",
+    "ADVANCES WITH": "{source} data date moves forward in sync with the target update cycle — each monthly {target} advances the data date to the new status cutoff",
+    "EXPOSES": "{source} element reveals instances of {target} — the data date boundary identifies activities with progress that violates their logical predecessors",
+    "STORED IN": "{source} dates are preserved within the target as the approved reference — baseline dates are saved as an immutable snapshot inside {target} record",
+    "DEFINES": "{source} value establishes whether {target} exists — zero total float on an activity defines it as part of the critical path",
+    "CONSUMED BY": "{source} float is used up when {target} shifts activities within their available slack — resource leveling delays non-critical activities, reducing their remaining float",
+    "TRACKED BY": "{source} value is monitored across successive updates by {target} — the target measures the rate of change in the source over time to detect deterioration trends",
+    "EXAMINED BY": "{source} {target} path is studied in detail by the target analytical method — the target traces driving relationships, identifies convergence points, and evaluates near-critical alternatives",
+    "INDEXED BY": "{source} path length is expressed as a single-number ratio by the target index — the target divides {target} plus float by critical path to produce a completion probability indicator",
+    "QUANTIFIED BY": "Source element is converted into a measurable value by the target — {target} to {source}ing and trending",
+    "COMPRESSED BY": "{source} critical path duration is shortened through the target's recovery actions — {target}, or overlaps activities to reduce the source's total length",
+    "CALCULATES": "{source} earned {target} method produces the target performance index — the source's time-based measurement yields SPI(t) as its primary output metric",
+    "REQUIRES": "{source} analysis depends on the target data being present — earned {target} cannot be calculated without cost-loaded activities providing planned and earned value curves",
+    "PROGRESSED BY": "{source} baseline schedule is advanced through {target} — the target records actual dates and remaining durations against the source's planned values each period",
+    "EVOLVES INTO": "{source} schedule transforms into {target} lifecycle — the baseline schedule, through successive monthly updates, becomes the as-built record of actual construction",
+    "COMPARED IN": "{source} {target} is placed side-by-side with the as-built record in the target analysis — the target method examines planned vs. actual to attribute delay causes",
+    "REFINES INTO": "{source} monthly update is broken down into the target's finer-grained detail — {target} update feeds the three-to-six-week look-ahead with daily and weekly task specifics",
+    "LOGGED BY": "{source} update's modifications are recorded by {target} tracking system — every date shift, duration change, and logic edit in the source is timestamped in the target",
+    "COORDINATED BY": "{source} short-term plan is collaboratively developed through {target}y — the target's pull planning and constraint removal process shapes the source's weekly commitments",
+    "ESCALATES TO": "{source} condition triggers the target as a more aggressive response — when recovery scheduling cannot regain lost time, the situation escalates to acceleration with overtime and added crews",
+    "ANALYZED BY": "{source} as-built record is examined by the target retrospective method — the target applies as-planned vs. as-built, but-for, or windows analysis to the source's actual dates",
+    "LEVELED BY": "{source} resource demand is smoothed by {target}ing process — the target shifts activities within available float to eliminate peaks and valleys in the source's resource histogram",
+    "JUSTIFIES": "{source} delay classification provides the contractual basis for the target request — the source's categorization as excusable determines whether the target time extension has merit",
+    "DENIED TRIGGERS": "{source} time extension, when denied by the owner despite excusable delay, forces the contractor into the target acceleration — the hallmark of a constructive acceleration claim",
+    "AGGREGATED INTO": "{source} individual quality checks are combined into {target} — each of the source's pass/fail results contributes one point to the target's overall health rating",
+    "COMPLEMENTS": "{source} and target are complementary scheduling methodologies — takt time's fixed-rhythm zones and linear scheduling's location-based sequencing reinforce each other on repetitive work",
+    "IMPORTS FROM": "{source} visualization tool pulls {target} data from the target CPM authoring tool — the 4D/5D model links to activities imported from P6 or MS Project for sequence animation",
+    "GENERATES": "{source} methodology generates {target} as its primary output — the Last Planner System's weekly commitment tracking directly produces the Percent Plan Complete score"
+  }
+}

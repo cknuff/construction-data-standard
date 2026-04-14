@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Field Execution Cluster — UCDM Domain Relationships</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #0a0e1a;
+    color: #e0e4ef;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  header {
+    text-align: center;
+    padding: 32px 24px 12px;
+  }
+  header h1 {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    background: linear-gradient(135deg, #4fc3f7, #ab47bc, #ff7043);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  header p {
+    color: #6b7394;
+    font-size: 14px;
+    margin-top: 6px;
+  }
+
+  .legend {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    padding: 12px 24px 8px;
+    flex-wrap: wrap;
+  }
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: #8892b0;
+  }
+  .legend-swatch {
+    width: 14px;
+    height: 14px;
+    border-radius: 3px;
+  }
+  .legend-swatch.field-ops { background: #4fc3f7; }
+  .legend-swatch.resources { background: #ab47bc; }
+  .legend-swatch.schedule { background: #ff7043; }
+
+  .hint {
+    text-align: center;
+    font-size: 12px;
+    color: #4a5070;
+    padding: 0 0 16px;
+  }
+
+  .container {
+    position: relative;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 24px 48px;
+  }
+
+  svg.connections {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+  }
+  svg.connections path {
+    fill: none;
+    stroke-width: 1.5;
+    opacity: 0;
+    transition: opacity 0.3s ease, stroke-width 0.3s ease;
+  }
+  svg.connections path.visible {
+    opacity: 0.7;
+    stroke-width: 2;
+  }
+  svg.connections path.dimmed {
+    opacity: 0.04;
+  }
+
+  .columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 28px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .domain-column {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .domain-header {
+    text-align: center;
+    padding: 14px 12px;
+    border-radius: 10px;
+    margin-bottom: 6px;
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+  }
+  .domain-header.field-ops {
+    background: rgba(79, 195, 247, 0.12);
+    color: #4fc3f7;
+    border: 1px solid rgba(79, 195, 247, 0.25);
+  }
+  .domain-header.resources {
+    background: rgba(171, 71, 188, 0.12);
+    color: #ce93d8;
+    border: 1px solid rgba(171, 71, 188, 0.25);
+  }
+  .domain-header.schedule {
+    background: rgba(255, 112, 67, 0.12);
+    color: #ff7043;
+    border: 1px solid rgba(255, 112, 67, 0.25);
+  }
+
+  .category-label {
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: #4a5070;
+    padding: 10px 12px 3px;
+  }
+
+  .element-card {
+    padding: 10px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    position: relative;
+    border: 1px solid transparent;
+  }
+  .element-card .el-name {
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 2px;
+  }
+  .element-card .el-desc {
+    font-size: 11px;
+    color: #6b7394;
+    line-height: 1.4;
+  }
+
+  /* Field Ops cards */
+  .element-card.field-ops {
+    background: rgba(79, 195, 247, 0.05);
+    border-color: rgba(79, 195, 247, 0.08);
+  }
+  .element-card.field-ops .el-name { color: #4fc3f7; }
+  .element-card.field-ops:hover,
+  .element-card.field-ops.active {
+    background: rgba(79, 195, 247, 0.14);
+    border-color: rgba(79, 195, 247, 0.35);
+    box-shadow: 0 0 20px rgba(79, 195, 247, 0.1);
+  }
+
+  /* Resources cards */
+  .element-card.resources {
+    background: rgba(171, 71, 188, 0.05);
+    border-color: rgba(171, 71, 188, 0.08);
+  }
+  .element-card.resources .el-name { color: #ce93d8; }
+  .element-card.resources:hover,
+  .element-card.resources.active {
+    background: rgba(171, 71, 188, 0.14);
+    border-color: rgba(171, 71, 188, 0.35);
+    box-shadow: 0 0 20px rgba(171, 71, 188, 0.1);
+  }
+
+  /* Schedule cards */
+  .element-card.schedule {
+    background: rgba(255, 112, 67, 0.05);
+    border-color: rgba(255, 112, 67, 0.08);
+  }
+  .element-card.schedule .el-name { color: #ff7043; }
+  .element-card.schedule:hover,
+  .element-card.schedule.active {
+    background: rgba(255, 112, 67, 0.14);
+    border-color: rgba(255, 112, 67, 0.35);
+    box-shadow: 0 0 20px rgba(255, 112, 67, 0.1);
+  }
+
+  .element-card.dimmed {
+    opacity: 0.15;
+  }
+  .element-card.connected {
+    border-color: rgba(255, 255, 255, 0.25) !important;
+    background: rgba(255, 255, 255, 0.06) !important;
+  }
+
+  /* Relationship tooltip */
+  .rel-tooltip {
+    position: fixed;
+    background: #1a1f35;
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 8px;
+    padding: 10px 14px;
+    font-size: 12px;
+    color: #c8cfe0;
+    pointer-events: none;
+    z-index: 100;
+    max-width: 340px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+    opacity: 0;
+    transition: opacity 0.2s;
+    line-height: 1.5;
+  }
+  .rel-tooltip.show { opacity: 1; }
+  .rel-tooltip .rel-type {
+    font-weight: 700;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    margin-bottom: 4px;
+  }
+  .rel-tooltip .rel-type.tracks { color: #4fc3f7; }
+  .rel-tooltip .rel-type.feeds { color: #66bb6a; }
+  .rel-tooltip .rel-type.validates { color: #ffd54f; }
+  .rel-tooltip .rel-type.assigns { color: #ab47bc; }
+  .rel-tooltip .rel-type.drives { color: #ff7043; }
+  .rel-tooltip .rel-type.links { color: #26c6da; }
+  .rel-tooltip .rel-type.classifies { color: #ef5350; }
+  .rel-tooltip .rel-type.suspends { color: #ff8a65; }
+  .rel-tooltip .rel-type.informs { color: #81c784; }
+  .rel-tooltip .rel-type.performs { color: #ce93d8; }
+  .rel-tooltip .rel-type.organizes { color: #4dd0e1; }
+
+  .rel-badge {
+    display: inline-block;
+    font-size: 9px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 2px 6px;
+    border-radius: 3px;
+    margin-top: 2px;
+  }
+
+  .summary-bar {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 4px;
+    flex-wrap: wrap;
+  }
+  .summary-bar .rel-badge {
+    font-size: 8px;
+    opacity: 0.7;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Field Execution Cluster</h1>
+  <p>Field Operations + Resources + Schedule — 99 cross-domain references</p>
+</header>
+
+<div class="legend">
+  <div class="legend-item"><div class="legend-swatch field-ops"></div>Field Operations</div>
+  <div class="legend-item"><div class="legend-swatch resources"></div>Resources</div>
+  <div class="legend-item"><div class="legend-swatch schedule"></div>Schedule</div>
+</div>
+<div class="hint">Hover any element to see its cross-domain relationships</div>
+
+<div class="container">
+  <svg class="connections" id="svg-layer"></svg>
+
+  <div class="columns">
+    <!-- FIELD OPERATIONS -->
+    <div class="domain-column" id="col-field-ops">
+      <div class="domain-header field-ops">Field Operations</div>
+
+      <div class="category-label">Daily Log Framework</div>
+      <div class="element-card field-ops" data-id="fo-daily-log">
+        <div class="el-name">Daily Log (Header)</div>
+        <div class="el-desc">One per project per day — container for all field data sections</div>
+      </div>
+
+      <div class="category-label">Workforce & Labor</div>
+      <div class="element-card field-ops" data-id="fo-manpower">
+        <div class="el-name">Manpower Log Entry</div>
+        <div class="el-desc">Trade-level headcount and hours per day per project</div>
+      </div>
+      <div class="element-card field-ops" data-id="fo-crew">
+        <div class="el-name">Crew / Crew Membership</div>
+        <div class="el-desc">Named team of workers assigned to work areas or activities</div>
+      </div>
+      <div class="element-card field-ops" data-id="fo-timecard">
+        <div class="el-name">Timecard Entry</div>
+        <div class="el-desc">Individual worker hours — clock in/out with cost code allocation</div>
+      </div>
+
+      <div class="category-label">Equipment</div>
+      <div class="element-card field-ops" data-id="fo-equip-log">
+        <div class="el-name">Equipment Log Entry</div>
+        <div class="el-desc">Daily equipment usage — type, hours, idle/active, operator</div>
+      </div>
+
+      <div class="category-label">Materials & Deliveries</div>
+      <div class="element-card field-ops" data-id="fo-delivery">
+        <div class="el-name">Delivery Log Entry</div>
+        <div class="el-desc">Material arrivals — vendor, quantity, condition, tickets</div>
+      </div>
+
+      <div class="category-label">Weather & Delays</div>
+      <div class="element-card field-ops" data-id="fo-weather">
+        <div class="el-name">Weather Log Entry</div>
+        <div class="el-desc">Observed conditions — temp, precip, wind, work impact</div>
+      </div>
+      <div class="element-card field-ops" data-id="fo-delay">
+        <div class="el-name">Delay Log Entry</div>
+        <div class="el-desc">Structured delay_type (Weather, Material, Owner, Safety) with duration</div>
+      </div>
+
+      <div class="category-label">Scheduled Work</div>
+      <div class="element-card field-ops" data-id="fo-sched-link">
+        <div class="el-name">Scheduled Work Task Link</div>
+        <div class="el-desc">Links daily log entries to specific schedule activities</div>
+      </div>
+
+      <div class="category-label">Productivity</div>
+      <div class="element-card field-ops" data-id="fo-productivity">
+        <div class="el-name">Productivity Log Entry</div>
+        <div class="el-desc">Installed quantities per day — actual vs. planned production rates</div>
+      </div>
+
+      <div class="category-label">T&M Tracking</div>
+      <div class="element-card field-ops" data-id="fo-tm">
+        <div class="el-name">T&M Ticket</div>
+        <div class="el-desc">Time & material billing — labor, equipment, and material at cost</div>
+      </div>
+    </div>
+
+    <!-- RESOURCES -->
+    <div class="domain-column" id="col-resources">
+      <div class="domain-header resources">Resources</div>
+
+      <div class="category-label">General Trades</div>
+      <div class="element-card resources" data-id="res-laborer">
+        <div class="el-name">General Laborer</div>
+        <div class="el-desc">Site prep through closeout — largest headcount in early phases</div>
+      </div>
+      <div class="element-card resources" data-id="res-carpenter">
+        <div class="el-name">Carpenter</div>
+        <div class="el-desc">Framing, formwork, finish carpentry — present on most project phases</div>
+      </div>
+
+      <div class="category-label">Structural Trades</div>
+      <div class="element-card resources" data-id="res-ironworker">
+        <div class="el-name">Ironworker / Steel Erector</div>
+        <div class="el-desc">Structural steel, rebar tying, welding — critical path trade</div>
+      </div>
+      <div class="element-card resources" data-id="res-concrete-worker">
+        <div class="el-name">Concrete Worker</div>
+        <div class="el-desc">Forming, placing, finishing — weather-sensitive, schedule-driving</div>
+      </div>
+
+      <div class="category-label">MEP Trades</div>
+      <div class="element-card resources" data-id="res-electrician">
+        <div class="el-name">Electrician</div>
+        <div class="el-desc">Rough-in through trim — longest duration of any MEP trade</div>
+      </div>
+      <div class="element-card resources" data-id="res-plumber">
+        <div class="el-name">Plumber / Pipefitter</div>
+        <div class="el-desc">Underground through fixture trim — early start, late finish</div>
+      </div>
+      <div class="element-card resources" data-id="res-hvac">
+        <div class="el-name">HVAC / Sheet Metal</div>
+        <div class="el-desc">Ductwork, equipment, controls — above-ceiling coordination driver</div>
+      </div>
+
+      <div class="category-label">Equipment</div>
+      <div class="element-card resources" data-id="res-crane">
+        <div class="el-name">Crane</div>
+        <div class="el-desc">Tower or mobile — often drives critical path on vertical construction</div>
+      </div>
+      <div class="element-card resources" data-id="res-earthmoving">
+        <div class="el-name">Earthmoving Equipment</div>
+        <div class="el-desc">Excavators, dozers, loaders — site work and foundation phase</div>
+      </div>
+
+      <div class="category-label">Materials</div>
+      <div class="element-card resources" data-id="res-concrete">
+        <div class="el-name">Concrete</div>
+        <div class="el-desc">Ready-mix, precast — weather-dependent, same-day delivery required</div>
+      </div>
+      <div class="element-card resources" data-id="res-steel">
+        <div class="el-name">Structural Steel & Metals</div>
+        <div class="el-desc">Long-lead fabrication — schedule-driving procurement item</div>
+      </div>
+      <div class="element-card resources" data-id="res-lumber">
+        <div class="el-name">Lumber & Wood</div>
+        <div class="el-desc">Framing, blocking, sheathing — price-volatile commodity</div>
+      </div>
+    </div>
+
+    <!-- SCHEDULE -->
+    <div class="domain-column" id="col-schedule">
+      <div class="domain-header schedule">Schedule</div>
+
+      <div class="category-label">Activity Structure</div>
+      <div class="element-card schedule" data-id="sch-activity">
+        <div class="el-name">Detail Activity</div>
+        <div class="el-desc">The atomic schedulable work item — duration, logic ties, resources</div>
+      </div>
+      <div class="element-card schedule" data-id="sch-milestone">
+        <div class="el-name">Milestone</div>
+        <div class="el-desc">Zero-duration marker — contractual deadlines, phase gates</div>
+      </div>
+      <div class="element-card schedule" data-id="sch-progress">
+        <div class="el-name">Duration & Progress</div>
+        <div class="el-desc">Original/remaining duration, % complete, actual start/finish</div>
+      </div>
+
+      <div class="category-label">Resource Loading</div>
+      <div class="element-card schedule" data-id="sch-labor-load">
+        <div class="el-name">Labor Loading</div>
+        <div class="el-desc">Planned crew hours/headcount per activity — manpower histogram</div>
+      </div>
+      <div class="element-card schedule" data-id="sch-equip-load">
+        <div class="el-name">Equipment Loading</div>
+        <div class="el-desc">Planned equipment allocation per activity — utilization curves</div>
+      </div>
+      <div class="element-card schedule" data-id="sch-leveling">
+        <div class="el-name">Resource Leveling</div>
+        <div class="el-desc">Balancing resource demand vs. availability — may extend duration</div>
+      </div>
+
+      <div class="category-label">Schedule Analysis</div>
+      <div class="element-card schedule" data-id="sch-float">
+        <div class="el-name">Float / Slack</div>
+        <div class="el-desc">Total and free float — schedule flexibility indicator</div>
+      </div>
+      <div class="element-card schedule" data-id="sch-critical">
+        <div class="el-name">Critical Path</div>
+        <div class="el-desc">Longest path through the network — zero float, drives completion</div>
+      </div>
+
+      <div class="category-label">Schedule Lifecycle</div>
+      <div class="element-card schedule" data-id="sch-lookahead">
+        <div class="el-name">Look-Ahead Schedule</div>
+        <div class="el-desc">Rolling 2-6 week window — field-level planning and coordination</div>
+      </div>
+      <div class="element-card schedule" data-id="sch-update">
+        <div class="el-name">Schedule Update</div>
+        <div class="el-desc">Periodic progress revision — actual dates, remaining durations</div>
+      </div>
+
+      <div class="category-label">Delays & Calendar</div>
+      <div class="element-card schedule" data-id="sch-delay">
+        <div class="el-name">Delay Classification</div>
+        <div class="el-desc">Excusable/compensable/concurrent — contractual delay categories</div>
+      </div>
+      <div class="element-card schedule" data-id="sch-calendar">
+        <div class="el-name">Work Calendar</div>
+        <div class="el-desc">Working days, holidays, weather days — schedule calculation basis</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="rel-tooltip" id="tooltip"></div>
+
+<script>
+// ===== RELATIONSHIP DEFINITIONS =====
+// Each relationship: [sourceId, targetId, type, label, description]
+const relationships = [
+  // ---- FIELD OPS → RESOURCES (TRACKS) ----
+  ["fo-manpower", "res-laborer", "tracks", "TRACKS",
+    "Manpower log records daily headcount and hours for general laborers — the most common trade entry on early-phase logs."],
+  ["fo-manpower", "res-carpenter", "tracks", "TRACKS",
+    "Manpower log records carpenter crew size and hours — present across framing, formwork, and finish phases."],
+  ["fo-manpower", "res-electrician", "tracks", "TRACKS",
+    "Manpower log records electrician headcount — longest-duration MEP trade, tracked from rough-in through trim."],
+  ["fo-manpower", "res-plumber", "tracks", "TRACKS",
+    "Manpower log records plumber/pipefitter crew counts — tracked from underground through fixture installation."],
+  ["fo-manpower", "res-hvac", "tracks", "TRACKS",
+    "Manpower log records HVAC/sheet metal crew counts — critical for above-ceiling coordination tracking."],
+  ["fo-manpower", "res-ironworker", "tracks", "TRACKS",
+    "Manpower log records ironworker headcount during structural steel erection — a critical-path resource."],
+  ["fo-manpower", "res-concrete-worker", "tracks", "TRACKS",
+    "Manpower log records concrete crew size on pour days — weather-sensitive, schedule-driving activity."],
+  ["fo-equip-log", "res-crane", "tracks", "TRACKS",
+    "Equipment log records daily crane hours, idle time, and operator — crane utilization drives schedule efficiency."],
+  ["fo-equip-log", "res-earthmoving", "tracks", "TRACKS",
+    "Equipment log records excavator/dozer usage during site work — hours and idle time per shift."],
+  ["fo-delivery", "res-concrete", "tracks", "TRACKS",
+    "Delivery log records concrete deliveries — truck tickets, batch plant, cubic yards, slump test results."],
+  ["fo-delivery", "res-steel", "tracks", "TRACKS",
+    "Delivery log records structural steel arrivals — fabrication shop, piece marks, quantities, trailer loads."],
+  ["fo-delivery", "res-lumber", "tracks", "TRACKS",
+    "Delivery log records lumber deliveries — board feet, species, grade, supplier."],
+
+  // ---- FIELD OPS → SCHEDULE (various) ----
+  ["fo-sched-link", "sch-activity", "links", "LINKS TO",
+    "Scheduled Work Task Link connects daily log entries to specific CPM activities — the bridge between field records and the schedule."],
+  ["fo-delay", "sch-delay", "classifies", "CLASSIFIES AS",
+    "Delay log entries map to delay classifications — structured delay_type (Weather, Material, Owner) provides the contractual category."],
+  ["fo-delay", "sch-critical", "drives", "MAY IMPACT",
+    "Delays on critical path activities directly impact project completion — delay log duration feeds time impact analysis."],
+  ["fo-weather", "sch-calendar", "suspends", "MAY SUSPEND",
+    "Severe weather conditions may trigger non-work days — weather log entries justify calendar exceptions."],
+  ["fo-productivity", "sch-progress", "validates", "VALIDATES",
+    "Actual installed quantities validate schedule progress claims — field productivity vs. planned production rates."],
+  ["fo-manpower", "sch-labor-load", "validates", "VALIDATES",
+    "Actual manpower counts validate planned labor loading — field headcount vs. schedule resource histogram."],
+  ["fo-equip-log", "sch-equip-load", "validates", "VALIDATES",
+    "Actual equipment hours validate planned equipment loading — field utilization vs. scheduled allocation."],
+  ["fo-daily-log", "sch-update", "informs", "INFORMS",
+    "Completed daily logs provide the field data that informs the next schedule update — progress, delays, weather impacts."],
+
+  // ---- RESOURCES → SCHEDULE (ASSIGNED/PERFORMS/DRIVES) ----
+  ["res-laborer", "sch-labor-load", "assigns", "ASSIGNED VIA",
+    "General laborers are allocated to activities through labor loading — planned headcount per activity per day."],
+  ["res-carpenter", "sch-labor-load", "assigns", "ASSIGNED VIA",
+    "Carpenters are allocated to framing, formwork, and finish activities through labor loading curves."],
+  ["res-electrician", "sch-labor-load", "assigns", "ASSIGNED VIA",
+    "Electricians are loaded across rough-in, trim, and commissioning activities — the longest trade duration."],
+  ["res-plumber", "sch-labor-load", "assigns", "ASSIGNED VIA",
+    "Plumbers are loaded from underground to fixture trim — early-start/late-finish loading profile."],
+  ["res-hvac", "sch-labor-load", "assigns", "ASSIGNED VIA",
+    "HVAC workers are loaded across duct rough-in, equipment set, and controls activities."],
+  ["res-crane", "sch-equip-load", "assigns", "ASSIGNED VIA",
+    "Cranes are allocated to activities via equipment loading — tower crane often assigned to the entire structural phase."],
+  ["res-crane", "sch-critical", "drives", "OFTEN DRIVES",
+    "Crane availability and capacity frequently drive the critical path on vertical construction — single crane = single sequence."],
+  ["res-earthmoving", "sch-equip-load", "assigns", "ASSIGNED VIA",
+    "Earthmoving equipment is allocated to site work activities — fleet size determines excavation production rate."],
+  ["res-ironworker", "sch-critical", "drives", "OFTEN DRIVES",
+    "Steel erection is frequently on the critical path — ironworker availability and crane access drive structural schedule."],
+  ["res-steel", "sch-milestone", "drives", "LONG-LEAD FOR",
+    "Structural steel fabrication is a long-lead procurement item — delivery date often gates a key schedule milestone."],
+  ["res-concrete", "sch-activity", "performs", "CONSUMED BY",
+    "Concrete is consumed by pour activities — delivery must be coordinated with activity dates. Same-day delivery required."],
+  ["res-concrete-worker", "sch-activity", "performs", "PERFORMS",
+    "Concrete workers execute pour activities — crew size × productivity = activity duration."],
+
+  // ---- CREW connections ----
+  ["fo-crew", "res-laborer", "organizes", "ORGANIZES",
+    "Crews organize laborers into named teams assigned to specific work areas or building sections."],
+  ["fo-crew", "res-carpenter", "organizes", "ORGANIZES",
+    "Framing crews, forming crews, and finish crews organize carpenters by work type and location."],
+  ["fo-crew", "sch-lookahead", "informs", "PLANS INTO",
+    "Crew assignments feed look-ahead planning — which crews are available for which activities in the 2-6 week window."],
+  ["fo-crew", "sch-leveling", "informs", "CONSTRAINS",
+    "Available crew capacity constrains resource leveling — you can't schedule more work than your crews can staff."],
+
+  // ---- T&M connections ----
+  ["fo-tm", "res-laborer", "tracks", "BILLS",
+    "T&M tickets capture labor costs at actual rates — trade, hours, overtime, per diem for cost-plus work."],
+  ["fo-tm", "res-crane", "tracks", "BILLS",
+    "T&M tickets capture equipment costs — crane hours at contractual rates for extra work or change orders."],
+
+  // ---- TIMECARD connections ----
+  ["fo-timecard", "res-laborer", "tracks", "RECORDS HOURS",
+    "Timecards record individual worker clock in/out with cost code allocation for payroll and cost tracking."],
+  ["fo-timecard", "sch-activity", "feeds", "CHARGES TO",
+    "Timecard hours are allocated to cost codes that map to schedule activities — actual labor cost per activity."],
+];
+
+// ===== RENDERING =====
+const svg = document.getElementById('svg-layer');
+const tooltip = document.getElementById('tooltip');
+const allCards = document.querySelectorAll('.element-card');
+const pathMap = {};
+
+function getCardCenter(el) {
+  const r = el.getBoundingClientRect();
+  const sr = svg.getBoundingClientRect();
+  return {
+    x: r.left + r.width / 2 - sr.left,
+    y: r.top + r.height / 2 - sr.top,
+    left: r.left - sr.left,
+    right: r.right - sr.left,
+    width: r.width
+  };
+}
+
+const typeColors = {
+  tracks: '#4fc3f7',
+  feeds: '#66bb6a',
+  validates: '#ffd54f',
+  assigns: '#ce93d8',
+  drives: '#ff7043',
+  links: '#26c6da',
+  classifies: '#ef5350',
+  suspends: '#ff8a65',
+  informs: '#81c784',
+  performs: '#ce93d8',
+  organizes: '#4dd0e1',
+};
+
+function buildPaths() {
+  svg.innerHTML = '';
+  const container = document.querySelector('.container');
+  svg.style.height = container.offsetHeight + 'px';
+
+  relationships.forEach((rel, i) => {
+    const [srcId, tgtId, type] = rel;
+    const srcEl = document.querySelector(`[data-id="${srcId}"]`);
+    const tgtEl = document.querySelector(`[data-id="${tgtId}"]`);
+    if (!srcEl || !tgtEl) return;
+
+    const s = getCardCenter(srcEl);
+    const t = getCardCenter(tgtEl);
+
+    // Determine connection side
+    let sx, tx, cp1x, cp2x;
+    if (s.x < t.x) {
+      sx = s.right;
+      tx = t.left;
+    } else {
+      sx = s.left;
+      tx = t.right;
+    }
+    const dx = Math.abs(tx - sx);
+    cp1x = sx + (tx - sx) * 0.4;
+    cp2x = sx + (tx - sx) * 0.6;
+
+    const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+    path.setAttribute('d', `M ${sx} ${s.y} C ${cp1x} ${s.y}, ${cp2x} ${t.y}, ${tx} ${t.y}`);
+    path.setAttribute('stroke', typeColors[type] || '#666');
+    path.dataset.src = srcId;
+    path.dataset.tgt = tgtId;
+    path.dataset.index = i;
+    svg.appendChild(path);
+
+    if (!pathMap[srcId]) pathMap[srcId] = [];
+    if (!pathMap[tgtId]) pathMap[tgtId] = [];
+    pathMap[srcId].push({ path, rel, partnerId: tgtId });
+    pathMap[tgtId].push({ path, rel, partnerId: srcId });
+  });
+}
+
+function handleHover(e) {
+  const card = e.currentTarget;
+  const id = card.dataset.id;
+  const connections = pathMap[id] || [];
+  const connectedIds = new Set(connections.map(c => c.partnerId));
+  connectedIds.add(id);
+
+  // Dim all cards
+  allCards.forEach(c => {
+    if (connectedIds.has(c.dataset.id)) {
+      c.classList.add('connected');
+      c.classList.remove('dimmed');
+    } else {
+      c.classList.add('dimmed');
+      c.classList.remove('connected');
+    }
+  });
+  card.classList.add('active');
+  card.classList.remove('connected');
+  card.classList.remove('dimmed');
+
+  // Show/dim paths
+  svg.querySelectorAll('path').forEach(p => p.classList.add('dimmed'));
+  connections.forEach(c => {
+    c.path.classList.add('visible');
+    c.path.classList.remove('dimmed');
+  });
+
+  // Build tooltip
+  if (connections.length > 0) {
+    const groups = {};
+    connections.forEach(c => {
+      const [src, tgt, type, label, desc] = c.rel;
+      const partnerId = c.partnerId;
+      const partnerEl = document.querySelector(`[data-id="${partnerId}"] .el-name`);
+      const partnerName = partnerEl ? partnerEl.textContent : partnerId;
+      const direction = src === id ? '→' : '←';
+      const key = `${type}-${direction}`;
+      if (!groups[key]) groups[key] = { type, label, direction, items: [] };
+      groups[key].items.push({ name: partnerName, desc });
+    });
+
+    let html = '';
+    Object.values(groups).forEach(g => {
+      html += `<div class="rel-type ${g.type}">${g.label} ${g.direction === '→' ? '(outbound)' : '(inbound)'}</div>`;
+      g.items.forEach(item => {
+        html += `<div style="margin: 2px 0 6px; padding-left: 8px; border-left: 2px solid ${typeColors[g.type]}44;">
+          <strong>${item.name}</strong><br/>
+          <span style="color: #8892b0;">${item.desc}</span>
+        </div>`;
+      });
+    });
+
+    tooltip.innerHTML = html;
+    tooltip.classList.add('show');
+  }
+}
+
+function handleMove(e) {
+  const x = e.clientX + 16;
+  const y = e.clientY + 16;
+  const tw = tooltip.offsetWidth;
+  const th = tooltip.offsetHeight;
+  const vw = window.innerWidth;
+  const vh = window.innerHeight;
+  tooltip.style.left = (x + tw > vw - 20 ? x - tw - 32 : x) + 'px';
+  tooltip.style.top = (y + th > vh - 20 ? Math.max(8, y - th - 16) : y) + 'px';
+}
+
+function handleLeave() {
+  allCards.forEach(c => {
+    c.classList.remove('dimmed', 'connected', 'active');
+  });
+  svg.querySelectorAll('path').forEach(p => {
+    p.classList.remove('visible', 'dimmed');
+  });
+  tooltip.classList.remove('show');
+}
+
+allCards.forEach(card => {
+  card.addEventListener('mouseenter', handleHover);
+  card.addEventListener('mousemove', handleMove);
+  card.addEventListener('mouseleave', handleLeave);
+});
+
+buildPaths();
+window.addEventListener('resize', () => {
+  Object.keys(pathMap).forEach(k => pathMap[k] = []);
+  buildPaths();
+});
+</script>
+
+</body>
+</html>

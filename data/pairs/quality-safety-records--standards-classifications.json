@@ -1,0 +1,283 @@
+{
+  "source": "quality-safety-records",
+  "target": "standards-classifications",
+  "edges": [
+    [
+      "qsr-safety-observati",
+      "sc-osha-hazard",
+      "CLASSIFIED UNDER"
+    ],
+    [
+      "qsr-safety-violation",
+      "sc-osha-hazard",
+      "CITED FOR"
+    ],
+    [
+      "qsr-hazard-recurrenc",
+      "sc-osha-hazard",
+      "RATED BY"
+    ],
+    [
+      "qsr-action-plan",
+      "sc-osha-hazard",
+      "REMEDIATES UNDER"
+    ],
+    [
+      "qsr-corrective-actio",
+      "sc-osha-hazard",
+      "REMEDIATES UNDER"
+    ],
+    [
+      "qsr-observation-reso",
+      "sc-osha-hazard",
+      "SEGMENTED BY"
+    ],
+    [
+      "qsr-incident-record",
+      "sc-osha-recordkeepi",
+      "LOGGED PER"
+    ],
+    [
+      "qsr-incident-witness",
+      "sc-osha-recordkeepi",
+      "DOCUMENTED PER"
+    ],
+    [
+      "qsr-total-recordable",
+      "sc-osha-recordkeepi",
+      "BENCHMARKED TO"
+    ],
+    [
+      "qsr-dart-rate",
+      "sc-osha-recordkeepi",
+      "BENCHMARKED TO"
+    ],
+    [
+      "qsr-near-miss-ratio",
+      "sc-osha-recordkeepi",
+      "BENCHMARKED TO"
+    ],
+    [
+      "qsr-incident",
+      "sc-ansi-injury",
+      "CODED BY"
+    ],
+    [
+      "qsr-incident-record",
+      "sc-ansi-injury",
+      "CLASSIFIED UNDER"
+    ],
+    [
+      "qsr-insp",
+      "sc-international-bu",
+      "GOVERNED BY"
+    ],
+    [
+      "qsr-insp-item",
+      "sc-international-bu",
+      "MEASURED AGAINST"
+    ],
+    [
+      "qsr-scheduled-insp",
+      "sc-international-bu",
+      "REQUIRED BY"
+    ],
+    [
+      "qsr-third-party",
+      "sc-international-bu",
+      "MANDATED BY"
+    ],
+    [
+      "qsr-insp-pass-rate",
+      "sc-international-bu",
+      "RATED BY"
+    ],
+    [
+      "qsr-insp-item",
+      "sc-nfpa-stds",
+      "TESTED PER"
+    ],
+    [
+      "qsr-system-perf-test",
+      "sc-nfpa-stds",
+      "TESTED PER"
+    ],
+    [
+      "qsr-deficiency-notic",
+      "sc-ada-accessibilit",
+      "CITED FOR"
+    ],
+    [
+      "qsr-system-perf-test",
+      "sc-energy-code-stds",
+      "TESTED PER"
+    ],
+    [
+      "qsr-non-conformance",
+      "sc-specification-se",
+      "VIOLATES"
+    ],
+    [
+      "qsr-quality-observat",
+      "sc-specification-se",
+      "MEASURED AGAINST"
+    ],
+    [
+      "qsr-coord-issue-2",
+      "sc-specification-se",
+      "CONFLICTS WITH"
+    ],
+    [
+      "qsr-mat-test-report",
+      "sc-specification-se",
+      "TESTED PER"
+    ],
+    [
+      "qsr-action-plan-line",
+      "sc-specification-se",
+      "SCOPED BY"
+    ],
+    [
+      "qsr-punch-item-issue",
+      "sc-masterformat",
+      "CLASSIFIED UNDER"
+    ],
+    [
+      "qsr-insp",
+      "sc-masterformat",
+      "ORGANIZED BY"
+    ],
+    [
+      "qsr-observation-dens",
+      "sc-masterformat",
+      "SEGMENTED BY"
+    ],
+    [
+      "qsr-punch-item",
+      "sc-std-cost-code",
+      "CODED BY"
+    ],
+    [
+      "qsr-observation",
+      "sc-std-cost-code",
+      "CODED BY"
+    ],
+    [
+      "qsr-punch-item-2",
+      "sc-std-cost-code",
+      "CHARGED TO"
+    ],
+    [
+      "qsr-rework-cost",
+      "sc-wbs-code",
+      "TRACKED BY"
+    ],
+    [
+      "qsr-rework-cost",
+      "sc-budget-code",
+      "ALLOCATED AGAINST"
+    ],
+    [
+      "qsr-mat-test-report",
+      "sc-uniformat",
+      "TAGGED TO"
+    ],
+    [
+      "qsr-coord-issue",
+      "sc-omniclass",
+      "CLASSIFIED UNDER"
+    ],
+    [
+      "qsr-coord-issue",
+      "sc-ifc-class",
+      "TAGGED TO"
+    ],
+    [
+      "qsr-enviro-cx",
+      "sc-leed-certificati",
+      "COMPLIES WITH"
+    ],
+    [
+      "qsr-enviro-cx",
+      "sc-well-building",
+      "COMPLIES WITH"
+    ],
+    [
+      "qsr-enviro-cx",
+      "sc-resilience-net",
+      "VERIFIED AGAINST"
+    ],
+    [
+      "qsr-non-conformance",
+      "sc-aia-contract",
+      "ESCALATED PER"
+    ],
+    [
+      "qsr-deficiency-rate",
+      "sc-dlvy-method",
+      "SEGMENTED BY"
+    ],
+    [
+      "qsr-rework-cost",
+      "sc-aace-cost",
+      "BENCHMARKED TO"
+    ],
+    [
+      "qsr-total-recordable",
+      "sc-safety-class",
+      "SEGMENTED BY"
+    ],
+    [
+      "qsr-corrective-actio-2",
+      "sc-certification-ad",
+      "BENCHMARKED TO"
+    ],
+    [
+      "qsr-punch-item-3",
+      "sc-masterformat-map",
+      "SEGMENTED BY"
+    ],
+    [
+      "qsr-deficiency-rate",
+      "sc-specification-se-2",
+      "SEGMENTED BY"
+    ],
+    [
+      "qsr-punch-item-3",
+      "sc-wbs-adoption",
+      "BENCHMARKED TO"
+    ],
+    [
+      "qsr-observation-dens",
+      "sc-cost-code",
+      "BENCHMARKED TO"
+    ]
+  ],
+  "verbGlossary": {
+    "CLASSIFIED UNDER": "{source} is categorized using {target} taxonomy (e.g., safety observation tagged to an OSHA hazard category, punch item mapped to a MasterFormat division)",
+    "CITED FOR": "{source} formally references a specific violation of {target} (e.g., safety violation citing an OSHA hazard rule, deficiency notice citing ADA non-compliance)",
+    "LOGGED PER": "{source} is documented following {target} recordkeeping requirements (e.g., incident record logged per OSHA 300 log format)",
+    "DOCUMENTED PER": "Supporting record is captured in the format required by {target} (e.g., witness statement documented per OSHA recordkeeping requirements)",
+    "CODED BY": "{source} is assigned a classification code from {target} (e.g., incident coded by ANSI injury type, observation coded by standard cost code)",
+    "GOVERNED BY": "{source} or review is required and regulated by {target} or standard (e.g., building inspection governed by IBC requirements)",
+    "MEASURED AGAINST": "{source} pass/fail or conformance outcome is evaluated relative to {target} acceptance criteria (e.g., inspection item measured against IBC tolerances)",
+    "REQUIRED BY": "Scheduled activity exists because {target} mandates it at specific construction milestones (e.g., concrete pour inspection required by IBC)",
+    "MANDATED BY": "{source}inspection is legally required by {target} code (e.g., structural steel inspection mandated by IBC Section 1705)",
+    "TESTED PER": "Test report or inspection item follows {target} prescribed testing protocol (e.g., fire suppression system tested per NFPA 25, material test per specification section)",
+    "VERIFIED AGAINST": "{source} confirms compliance with {target} through independent verification (e.g., commissioning test verified against net-zero energy performance targets)",
+    "VIOLATES": "{source} documents a failure to meet {target} requirements (e.g., NCR issued for specification non-conformance, safety observation citing NFPA fire code violation)",
+    "CONFLICTS WITH": "{source}issue identifies a contradiction with {target} (e.g., MEP routing clashes with structural specification requirements)",
+    "TAGGED TO": "{source} is linked to {target} for traceability (e.g., material test report tagged to a UniFormat element, coordination issue tagged to an IFC class)",
+    "CHARGED TO": "{source}cost is allocated to a WBS line or cost code in {target} (e.g., punch item resolution cost charged to standard cost code)",
+    "ALLOCATED AGAINST": "{source} is measured relative to {target} code structure (e.g., rework as percent of original budget allocation by budget code)",
+    "TRACKED BY": "{source} or cost is monitored over time using {target} breakdown structure (e.g., rework cost tracked by WBS code across project lifecycle)",
+    "BENCHMARKED TO": "{source} is compared against {target} industry threshold or published baseline (e.g., TRIR benchmarked to OSHA industry averages, rework cost benchmarked to AACE norms)",
+    "RATED BY": "{source}rate or recurrence rate is scored using {target} grading framework (e.g., hazard recurrence rate rated by OSHA hazard severity, inspection pass rate rated by IBC categories)",
+    "COMPLIES WITH": "{source} confirms adherence to {target} (e.g., commissioning observation verifying LEED or WELL criteria)",
+    "REMEDIATES UNDER": "{source} or corrective action addresses a finding classified under {target} (e.g., corrective action plan remediating an OSHA fall hazard finding)",
+    "SCOPED BY": "{source} task is defined in terms of {target} scope of work (e.g., corrective task scoped to Division 09 finishes specification)",
+    "SEGMENTED BY": "{source}is broken down by {target} for comparative analysis (e.g., observation density segmented by MasterFormat division to identify problem trades)",
+    "ESCALATED PER": "{source} or deficiency is formally escalated following {target} document's dispute or notice procedures (e.g., NCR escalated per AIA A201 claim provisions)",
+    "ORGANIZED BY": "{source} scope is structured according to {target} divisions or sections (e.g., inspection checklist organized by MasterFormat divisions)"
+  }
+}

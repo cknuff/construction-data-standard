@@ -1,0 +1,200 @@
+{
+  "source": "resources",
+  "target": "standards-classifications",
+  "edges": [
+    [
+      "res-electrician",
+      "sc-masterformat",
+      "SCOPED UNDER"
+    ],
+    [
+      "res-plumber",
+      "sc-masterformat",
+      "SCOPED UNDER"
+    ],
+    [
+      "res-sheetmetal",
+      "sc-masterformat",
+      "SCOPED UNDER"
+    ],
+    [
+      "res-electrician",
+      "sc-std-cost-code",
+      "BILLED AGAINST"
+    ],
+    [
+      "res-plumber",
+      "sc-std-cost-code",
+      "BILLED AGAINST"
+    ],
+    [
+      "res-laborer",
+      "sc-std-cost-code",
+      "BILLED AGAINST"
+    ],
+    [
+      "res-ironworker",
+      "sc-wbs-code",
+      "ASSIGNED TO"
+    ],
+    [
+      "res-crane",
+      "sc-wbs-code",
+      "ASSIGNED TO"
+    ],
+    [
+      "res-concrete",
+      "sc-wbs-code",
+      "ASSIGNED TO"
+    ],
+    [
+      "mat-steel",
+      "sc-specification-se",
+      "SPECIFIED BY"
+    ],
+    [
+      "mat-concrete",
+      "sc-specification-se",
+      "SPECIFIED BY"
+    ],
+    [
+      "mat-waterproof",
+      "sc-specification-se",
+      "SPECIFIED BY"
+    ],
+    [
+      "mat-roofing",
+      "sc-specification-se",
+      "SPECIFIED BY"
+    ],
+    [
+      "mat-rebar",
+      "sc-budget-code",
+      "ESTIMATED UNDER"
+    ],
+    [
+      "mat-lumber",
+      "sc-budget-code",
+      "ESTIMATED UNDER"
+    ],
+    [
+      "res-safety",
+      "sc-osha-hazard",
+      "INSPECTS PER"
+    ],
+    [
+      "res-qc",
+      "sc-osha-hazard",
+      "INSPECTS PER"
+    ],
+    [
+      "res-sprinkler",
+      "sc-nfpa-stds",
+      "INSTALLS PER"
+    ],
+    [
+      "res-fireproofer",
+      "sc-nfpa-stds",
+      "INSTALLS PER"
+    ],
+    [
+      "mat-fp",
+      "sc-nfpa-stds",
+      "TESTED PER"
+    ],
+    [
+      "res-safety",
+      "sc-osha-recordkeepi",
+      "REPORTS PER"
+    ],
+    [
+      "res-qc",
+      "sc-ansi-injury",
+      "CLASSIFIES PER"
+    ],
+    [
+      "res-elevator",
+      "sc-international-bu",
+      "PERMITTED UNDER"
+    ],
+    [
+      "res-electrician",
+      "sc-international-bu",
+      "PERMITTED UNDER"
+    ],
+    [
+      "mat-thermal",
+      "sc-energy-code-stds",
+      "RATED UNDER"
+    ],
+    [
+      "res-insulator",
+      "sc-energy-code-stds",
+      "INSTALLS PER"
+    ],
+    [
+      "mat-hvac-equip",
+      "sc-energy-code-stds",
+      "RATED UNDER"
+    ],
+    [
+      "res-cxa",
+      "sc-leed-certificati",
+      "VERIFIES FOR"
+    ],
+    [
+      "res-cxa",
+      "sc-well-building",
+      "VERIFIES FOR"
+    ],
+    [
+      "mat-glass",
+      "sc-uniformat",
+      "CLASSIFIED UNDER"
+    ],
+    [
+      "mat-doors",
+      "sc-uniformat",
+      "CLASSIFIED UNDER"
+    ],
+    [
+      "res-surveyor",
+      "sc-aace-cost",
+      "BENCHMARKED TO"
+    ],
+    [
+      "res-operator",
+      "sc-dlvy-method",
+      "MOBILIZED PER"
+    ],
+    [
+      "mat-elec",
+      "sc-masterformat-map",
+      "MAPPED TO"
+    ],
+    [
+      "mat-plumbing",
+      "sc-masterformat-map",
+      "MAPPED TO"
+    ]
+  ],
+  "verbGlossary": {
+    "SCOPED UNDER": "{source}'s scope of work is defined by {target} division or section (e.g., electrician scoped under MasterFormat Division 26 Electrical)",
+    "BILLED AGAINST": "{source}cost for the resource are charged to a line item in {target} classification (e.g., plumber hours billed against standard cost code for plumbing rough-in)",
+    "ASSIGNED TO": "{source} is allocated to a specific element in {target} breakdown structure (e.g., crane assigned to a WBS code for structural steel erection)",
+    "SPECIFIED BY": "{source} must meet the performance and quality requirements defined in {target} (e.g., concrete mix design specified by Division 03 specification section)",
+    "ESTIMATED UNDER": "{source} quantity and cost are budgeted within {target} code's allocation (e.g., rebar tonnage estimated under the concrete budget code line)",
+    "INSPECTS PER": "{source} or quality professional conducts field inspections following {target} hazard categories or protocols (e.g., safety professional inspects per OSHA Focus Four hazard categories)",
+    "INSTALLS PER": "{source} performs installation in compliance with {target} prescriptive requirements (e.g., sprinkler fitter installs per NFPA 13 spacing and coverage rules)",
+    "TESTED PER": "{source} or system is tested following {target} prescribed protocol and acceptance criteria (e.g., fire protection materials tested per NFPA fire resistance ratings)",
+    "REPORTS PER": "{source} documents safety events using {target} recordkeeping format and timelines (e.g., safety professional logs incidents per OSHA 300 log requirements)",
+    "CLASSIFIES PER": "Inspector assigns injury or deficiency codes using {target} classification taxonomy (e.g., QC inspector classifies injury type per ANSI Z16 body part and nature codes)",
+    "PERMITTED UNDER": "{source} installation requires a permit or inspection governed by {target} code (e.g., elevator installation permitted under IBC Chapter 30 elevator provisions)",
+    "RATED UNDER": "{source}'s thermal, energy, or fire performance is rated according to {target} thresholds (e.g., insulation R-value rated under energy code climate zone requirements)",
+    "VERIFIES FOR": "{source} agent confirms system performance meets the target certification's credit requirements (e.g., CxA verifies mechanical systems for LEED Enhanced Commissioning credit)",
+    "CLASSIFIED UNDER": "{source} or element is categorized within {target} hierarchical taxonomy (e.g., glass assemblies classified under UniFormat B2020 Exterior Windows)",
+    "BENCHMARKED TO": "{source} productivity or cost rate is compared against {target} published industry norms (e.g., surveyor layout rates benchmarked to AACE standard labor productivity factors)",
+    "MOBILIZED PER": "{source} is deployed to site based on the target delivery method's phasing and sequencing requirements (e.g., earthmoving equipment mobilized per design-build fast-track phasing plan)",
+    "MAPPED TO": "{source} is cross-referenced to {target} mapping structure for consistent reporting (e.g., electrical wire purchases mapped to MasterFormat Division 26 for cost roll-up)"
+  }
+}

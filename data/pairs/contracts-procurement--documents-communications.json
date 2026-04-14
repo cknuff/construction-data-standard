@@ -1,0 +1,433 @@
+{
+  "source": "contracts-procurement",
+  "target": "documents-communications",
+  "edges": [
+    [
+      "cp-bid-package",
+      "doc-drawing-set",
+      "INCORPORATES"
+    ],
+    [
+      "cp-bid-package",
+      "doc-specification-se",
+      "REFERENCES"
+    ],
+    [
+      "cp-bid-package",
+      "doc-addendum",
+      "AMENDED BY"
+    ],
+    [
+      "cp-bid-package",
+      "doc-transmittal",
+      "DISTRIBUTED VIA"
+    ],
+    [
+      "cp-prequalification",
+      "doc-form-proforma",
+      "COLLECTED USING"
+    ],
+    [
+      "cp-prequalification",
+      "doc-cert-insurance",
+      "REQUIRES SUBMISSION OF"
+    ],
+    [
+      "cp-prequalification",
+      "doc-correspondence",
+      "SOLICITED THROUGH"
+    ],
+    [
+      "cp-req-qualificatio",
+      "doc-transmittal",
+      "TRANSMITTED VIA"
+    ],
+    [
+      "cp-req-qualificatio",
+      "doc-correspondence",
+      "CIRCULATED THROUGH"
+    ],
+    [
+      "cp-req-proposal",
+      "doc-req-proposal-rfp",
+      "FORMALIZED AS"
+    ],
+    [
+      "cp-req-proposal",
+      "doc-drawing-set",
+      "SCOPED AGAINST"
+    ],
+    [
+      "cp-req-proposal",
+      "doc-specification-se",
+      "GOVERNED BY"
+    ],
+    [
+      "cp-proposal-bid",
+      "doc-drawing-revision",
+      "PRICED AGAINST"
+    ],
+    [
+      "cp-proposal-bid",
+      "doc-addendum",
+      "ADJUSTED BY"
+    ],
+    [
+      "cp-bid-evaluation",
+      "doc-meeting-minutes",
+      "DOCUMENTED IN"
+    ],
+    [
+      "cp-bid-evaluation",
+      "doc-correspondence",
+      "CLARIFIED VIA"
+    ],
+    [
+      "cp-award-notice",
+      "doc-transmittal",
+      "ISSUED VIA"
+    ],
+    [
+      "cp-award-notice",
+      "doc-correspondence",
+      "CONFIRMED THROUGH"
+    ],
+    [
+      "cp-prime-contract",
+      "doc-drawing-set",
+      "EXHIBITS"
+    ],
+    [
+      "cp-prime-contract",
+      "doc-specification-se",
+      "BINDS TO"
+    ],
+    [
+      "cp-prime-contract",
+      "doc-bulletin-archite",
+      "MODIFIED BY"
+    ],
+    [
+      "cp-prime-contract",
+      "doc-chg-directive",
+      "SUPPLEMENTED BY"
+    ],
+    [
+      "cp-subcontract",
+      "doc-drawing-sheet",
+      "DELINEATED BY"
+    ],
+    [
+      "cp-subcontract",
+      "doc-specification-se",
+      "INCORPORATES BY REFERENCE"
+    ],
+    [
+      "cp-subcontract",
+      "doc-shop-drawing",
+      "OBLIGATES PRODUCTION OF"
+    ],
+    [
+      "cp-subcontract",
+      "doc-submittal",
+      "REQUIRES"
+    ],
+    [
+      "cp-purchase-order",
+      "doc-product-data",
+      "SPECIFIES VIA"
+    ],
+    [
+      "cp-purchase-order",
+      "doc-transmittal",
+      "CONFIRMED VIA"
+    ],
+    [
+      "cp-purchase-order",
+      "doc-sample-submittal",
+      "VERIFIED BY"
+    ],
+    [
+      "cp-master-service",
+      "doc-action-plan",
+      "ADMINISTERED THROUGH"
+    ],
+    [
+      "cp-scope-work",
+      "doc-drawing-sheet",
+      "DEPICTED ON"
+    ],
+    [
+      "cp-scope-work",
+      "doc-specification-se",
+      "DETAILED IN"
+    ],
+    [
+      "cp-scope-work",
+      "doc-req-info-rfi",
+      "CLARIFIED BY"
+    ],
+    [
+      "cp-gen-cond",
+      "doc-submittal",
+      "PRESCRIBES REQUIREMENTS FOR"
+    ],
+    [
+      "cp-gen-cond",
+      "doc-notice-delay",
+      "REGULATES PROCEDURES FOR"
+    ],
+    [
+      "cp-gen-cond",
+      "doc-safety-plan-site",
+      "MANDATES"
+    ],
+    [
+      "cp-retainage-terms",
+      "doc-lien-waiver",
+      "RELEASED UPON"
+    ],
+    [
+      "cp-retainage-terms",
+      "doc-correspondence",
+      "NEGOTIATED VIA"
+    ],
+    [
+      "cp-liquidated-damag",
+      "doc-notice-delay",
+      "TRIGGERED BY"
+    ],
+    [
+      "cp-liquidated-damag",
+      "doc-daily-report",
+      "EVIDENCED IN"
+    ],
+    [
+      "cp-allowance",
+      "doc-req-proposal-rfp",
+      "DRAWN DOWN THROUGH"
+    ],
+    [
+      "cp-allowance",
+      "doc-chg-directive",
+      "RECONCILED VIA"
+    ],
+    [
+      "cp-bid-bond",
+      "doc-transmittal",
+      "DELIVERED VIA"
+    ],
+    [
+      "cp-payment-bond",
+      "doc-lien-waiver",
+      "CONDITIONED ON"
+    ],
+    [
+      "cp-insurance-cert",
+      "doc-cert-insurance",
+      "RECORDED AS"
+    ],
+    [
+      "cp-insurance-cert",
+      "doc-transmittal",
+      "FURNISHED VIA"
+    ],
+    [
+      "cp-builders-risk",
+      "doc-permit-applicati",
+      "EVIDENCED FOR"
+    ],
+    [
+      "cp-warranty",
+      "doc-warranty-docs",
+      "COMPILED INTO"
+    ],
+    [
+      "cp-warranty",
+      "doc-o-m-manual",
+      "ATTACHED TO"
+    ],
+    [
+      "cp-warranty",
+      "doc-submittal-respon",
+      "VALIDATED THROUGH"
+    ],
+    [
+      "cp-substantial-comp",
+      "doc-punch-list-as",
+      "CONTINGENT UPON"
+    ],
+    [
+      "cp-substantial-comp",
+      "doc-as-built-docs",
+      "ACCOMPANIED BY"
+    ],
+    [
+      "cp-substantial-comp",
+      "doc-photo",
+      "SUBSTANTIATED BY"
+    ],
+    [
+      "cp-substantial-comp",
+      "doc-meeting-minutes",
+      "CERTIFIED DURING"
+    ],
+    [
+      "cp-final-completion",
+      "doc-as-built-docs",
+      "CLOSED WITH"
+    ],
+    [
+      "cp-final-completion",
+      "doc-o-m-manual",
+      "DELIVERED WITH"
+    ],
+    [
+      "cp-final-completion",
+      "doc-warranty-docs",
+      "PACKAGED WITH"
+    ],
+    [
+      "cp-final-completion",
+      "doc-lien-waiver",
+      "CONDITIONED UPON"
+    ],
+    [
+      "cp-prevailing-wage",
+      "doc-daily-report",
+      "VERIFIED AGAINST"
+    ],
+    [
+      "cp-prevailing-wage",
+      "doc-form-proforma",
+      "REPORTED ON"
+    ],
+    [
+      "cp-diversity-dbe",
+      "doc-correspondence",
+      "SUBMITTED VIA"
+    ],
+    [
+      "cp-closeout-doc",
+      "doc-as-built-docs",
+      "INCLUDES"
+    ],
+    [
+      "cp-closeout-doc",
+      "doc-o-m-manual",
+      "BUNDLES"
+    ],
+    [
+      "cp-closeout-doc",
+      "doc-warranty-docs",
+      "ASSEMBLES"
+    ],
+    [
+      "cp-closeout-doc",
+      "doc-punch-list-as",
+      "CLOSES OUT PER"
+    ],
+    [
+      "cp-chg-order-rate",
+      "doc-chg-directive",
+      "DRIVEN BY"
+    ],
+    [
+      "cp-chg-order-rate",
+      "doc-rfi-volume",
+      "CORRELATED WITH"
+    ],
+    [
+      "cp-award-cycle-time",
+      "doc-submittal-cycle",
+      "BENCHMARKED ALONGSIDE"
+    ],
+    [
+      "cp-insurance-comp",
+      "doc-cert-insurance",
+      "MEASURED AGAINST"
+    ],
+    [
+      "cp-sub-retention",
+      "doc-correspondence-r",
+      "REFLECTED IN"
+    ],
+    [
+      "doc-submittal",
+      "cp-purchase-order",
+      "APPROVES PROCUREMENT OF"
+    ]
+  ],
+  "verbGlossary": {
+    "INCORPORATES": "{source} includes a complete {target} as part of its issued procurement documents for bidder reference",
+    "REFERENCES": "{source} or procurement {target} cites a specification section as a binding technical requirement",
+    "AMENDED BY": "{source} or contract instrument is formally revised through issuance of an addendum prior to bid close",
+    "DISTRIBUTED VIA": "{source} {target} is sent to bidders or stakeholders through a formal transmittal record",
+    "COLLECTED USING": "{source} is gathered from prospective bidders using standardized forms or proforma templates",
+    "REQUIRES SUBMISSION OF": "{source} step mandates that a specific compliance {target} be provided by the responding party",
+    "SOLICITED THROUGH": "{source} is initiated vi{target} to prospective firms",
+    "TRANSMITTED VIA": "{source} or procurement {target} is formally delivered to recipients through a logged transmittal",
+    "CIRCULATED THROUGH": "{source}is distributed to prospective respondents via project {target} channels",
+    "FORMALIZED AS": "{source}is converted into a formal RFP or pricing request {target} for external distribution",
+    "SCOPED AGAINST": "{source} request or proposal is priced based on the scope shown in the referenced {target}",
+    "GOVERNED BY": "{source} scope or pricing is controlled by the technical requirements in {target}",
+    "PRICED AGAINST": "{source}are calculated based on {target} quantities and scope",
+    "ADJUSTED BY": "{source}is modified in response to an addendum issued during the procurement period",
+    "DOCUMENTED IN": "{source} decisions, scoring, and rationale are {target}ed in meeting minutes for the project record",
+    "CLARIFIED VIA": "Questions or ambiguities in bid evaluation are resolved through written {target} with bidders",
+    "ISSUED VIA": "{source} {target} or notice to proceed is formally sent to the selected contractor through a transmittal",
+    "CONFIRMED THROUGH": "{source} award decision is communicated and acknowledged via formal project {target}",
+    "EXHIBITS": "{source} formally attaches a drawing set as {target} exhibit defining the scope of work",
+    "BINDS TO": "{source} legally ties the contractor to comply with a referenced {target}",
+    "MODIFIED BY": "{source} scope or design intent is changed through issuance of an architect's bulletin or ASI",
+    "SUPPLEMENTED BY": "{source} is expanded or redirected through a construction change {target} issued by the owner",
+    "DELINEATED BY": "{source} trade scope boundaries are defined by {target}s showing work limits",
+    "INCORPORATES BY REFERENCE": "{source} includes {target}s as binding contract documents without reproducing full text",
+    "OBLIGATES PRODUCTION OF": "{source} requires the trade contractor to prepare and submit {target}s for fabrication approval",
+    "REQUIRES": "{source} instrument mandates that the contractor provide {target}s for approval before procuring materials",
+    "SPECIFIES VIA": "{source} defines material requirements by referencing {target} submittal specifications",
+    "CONFIRMED VIA": "{source} acknowledgment and delivery terms are {target}ed through a formal transmittal exchange",
+    "VERIFIED BY": "{source} material quality is confirmed through review and approval of a physical {target} submittal",
+    "ADMINISTERED THROUGH": "{source} task orders and deliverables are tracked and managed via project {target}s",
+    "DEPICTED ON": "{source} locations, dimensions, and details are visually represented on {target}s",
+    "DETAILED IN": "{source} materials, methods, and quality standards are technically described in {target}s",
+    "CLARIFIED BY": "{source}of work are resolved through a formal request for information",
+    "PRESCRIBES REQUIREMENTS FOR": "{source} define the procedural and quality standards that {target}s must satisfy",
+    "REGULATES PROCEDURES FOR": "{source} establish the contractual rules for providing timely {target} of delay events",
+    "MANDATES": "{source} or contract terms require submission of a specific safety or compliance {target}",
+    "RELEASED UPON": "{source} held under contract is released to the subcontractor upon receipt of an executed lien waiver",
+    "NEGOTIATED VIA": "{source} release terms or modifications are discussed and agreed upon through {target}",
+    "TRIGGERED BY": "{source} is activated when {target} of delay establishes a schedule exceedance",
+    "EVIDENCED IN": "{target}s provide contemporaneous field records used to support or dispute a contractual claim",
+    "DRAWN DOWN THROUGH": "{source} allowance funds are expended by issuing pricing requests for undefined scope items as they arise",
+    "RECONCILED VIA": "{source} balances are adjusted and {target}ed through construction change directives at closeout",
+    "DELIVERED VIA": "Bond {target} is formally transmitted to the obligee through a logged transmittal record",
+    "CONDITIONED ON": "{source} claim release is contingent upon the claimant providing an executed lien waiver",
+    "RECORDED AS": "{source} required by contract is filed and tracked as a certificate of insurance {target}",
+    "FURNISHED VIA": "{source} is formally provided to the requesting party through {target} record",
+    "EVIDENCED FOR": "{source} policy is {target}ed and provided as proof of coverage for permit application requirements",
+    "COMPILED INTO": "{source}are collected and organized into the warranty {target}ation package",
+    "ATTACHED TO": "{source} terms and coverage details are included as an appendix to the operations and maintenance manual",
+    "VALIDATED THROUGH": "{source}-eligible materials and equipment are confirmed as compliant through {target} review process",
+    "CONTINGENT UPON": "{source}cannot be certified until the punch list {target} is resolved to satisfaction",
+    "ACCOMPANIED BY": "{source} is submitted together with as-built {target}ation showing final conditions",
+    "SUBSTANTIATED BY": "{source}is supported by {target}ic evidence documenting the state of finished work",
+    "CERTIFIED DURING": "{source} is formally certified and {target}ed in the minutes of a project meeting",
+    "CLOSED WITH": "{source}is achieved upon delivery of complete and accepted as-built {target}ation",
+    "DELIVERED WITH": "Final completion package includes operations and maintenance manuals as a required closeout deliverable",
+    "PACKAGED WITH": "Final completion submission includes warranty {target}ation bundled as part of the closeout package",
+    "CONDITIONED UPON": "{source}release require execution of lien waivers from all contract parties",
+    "VERIFIED AGAINST": "{source} compliance is checked by comparing certified payroll data against {target} work records",
+    "REPORTED ON": "{source} certifications are submitted using standardized payroll reporting forms",
+    "SUBMITTED VIA": "Diversity or DBE certification {target}s are provided to the project through formal correspondence",
+    "INCLUDES": "Closeout {target} package contains as-built documentation as a required component",
+    "BUNDLES": "Closeout {target} package consolidates operations and maintenance manuals from all trades into one deliverable",
+    "ASSEMBLES": "Closeout {target} package gathers warranty documentation from all subcontractors into a unified set",
+    "CLOSES OUT PER": "Closeout {target} package is finalized only after all punch list items documented on the punch list are resolved",
+    "DRIVEN BY": "{source} rate metric is influenced by the volume and nature of construction change directives issued",
+    "CORRELATED WITH": "{source} rate is statistically associated with the density of {target}s on a project, indicating design ambiguity",
+    "BENCHMARKED ALONGSIDE": "{source} cycle time metric is compared in context with {target} cycle time to assess overall procurement efficiency",
+    "MEASURED AGAINST": "{source}rate is calculated by tracking certificate of insurance {target}s received vs. required",
+    "REFLECTED IN": "{source}or retention trends are visible in the response time patterns of contract {target}"
+  }
+}

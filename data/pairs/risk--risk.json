@@ -1,0 +1,245 @@
+{
+  "source": "risk",
+  "target": "risk",
+  "edges": [
+    [
+      "rk-risk",
+      "rk-risk-register",
+      "CATALOGED IN"
+    ],
+    [
+      "rk-risk",
+      "rk-risk-category",
+      "CLASSIFIED BY"
+    ],
+    [
+      "rk-risk",
+      "rk-risk-trigger",
+      "SIGNALED BY"
+    ],
+    [
+      "rk-risk",
+      "rk-risk-owner",
+      "ASSIGNED TO"
+    ],
+    [
+      "rk-risk",
+      "rk-risk-response",
+      "MANAGED THROUGH"
+    ],
+    [
+      "rk-risk",
+      "rk-residual-risk",
+      "REDUCES TO"
+    ],
+    [
+      "rk-risk-register",
+      "rk-risk-matrix",
+      "VISUALIZED IN"
+    ],
+    [
+      "rk-risk-register",
+      "rk-risk-exposure",
+      "AGGREGATED INTO"
+    ],
+    [
+      "rk-risk-register",
+      "rk-risk-category",
+      "ORGANIZED BY"
+    ],
+    [
+      "rk-risk-category",
+      "rk-design-risk",
+      "INCLUDES"
+    ],
+    [
+      "rk-risk-trigger",
+      "rk-risk-score",
+      "ESCALATES TO"
+    ],
+    [
+      "rk-risk-owner",
+      "rk-mitigation-actio",
+      "EXECUTES"
+    ],
+    [
+      "rk-risk-owner",
+      "rk-risk-allocation",
+      "BOUND BY"
+    ],
+    [
+      "rk-likelihood-asses",
+      "rk-risk-score",
+      "CONTRIBUTES TO"
+    ],
+    [
+      "rk-impact-assessmen",
+      "rk-risk-score",
+      "CONTRIBUTES TO"
+    ],
+    [
+      "rk-risk-score",
+      "rk-risk-matrix",
+      "PLOTTED ON"
+    ],
+    [
+      "rk-risk-score",
+      "rk-risk-response",
+      "DETERMINES"
+    ],
+    [
+      "rk-risk-score",
+      "rk-risk-exposure",
+      "FEEDS"
+    ],
+    [
+      "rk-risk-matrix",
+      "rk-contingency-rese",
+      "JUSTIFIES"
+    ],
+    [
+      "rk-risk-response",
+      "rk-mitigation-actio",
+      "IMPLEMENTED BY"
+    ],
+    [
+      "rk-risk-response",
+      "rk-contingency-rese",
+      "FUNDED BY"
+    ],
+    [
+      "rk-risk-response",
+      "rk-schedule-buffer",
+      "BUFFERED BY"
+    ],
+    [
+      "rk-risk-response",
+      "rk-risk-allocation",
+      "GOVERNED BY"
+    ],
+    [
+      "rk-mitigation-actio",
+      "rk-residual-risk",
+      "YIELDS"
+    ],
+    [
+      "rk-mitigation-actio",
+      "rk-risk-mitigation",
+      "TRACKED BY"
+    ],
+    [
+      "rk-contingency-rese",
+      "rk-contingency-burn",
+      "MEASURED BY"
+    ],
+    [
+      "rk-contingency-rese",
+      "rk-financial-risk",
+      "HEDGES"
+    ],
+    [
+      "rk-schedule-buffer",
+      "rk-schedule-risk",
+      "ABSORBS"
+    ],
+    [
+      "rk-schedule-buffer",
+      "rk-schedule-float",
+      "REFLECTED IN"
+    ],
+    [
+      "rk-residual-risk",
+      "rk-risk-register",
+      "RECORDED IN"
+    ],
+    [
+      "rk-residual-risk",
+      "rk-insurance-requir",
+      "TRANSFERRED THROUGH"
+    ],
+    [
+      "rk-risk-allocation",
+      "rk-surety-bond",
+      "SECURED BY"
+    ],
+    [
+      "rk-risk-allocation",
+      "rk-insurance-requir",
+      "BACKSTOPPED BY"
+    ],
+    [
+      "rk-safety-risk",
+      "rk-incident-rate",
+      "MEASURED BY"
+    ],
+    [
+      "rk-design-risk",
+      "rk-chg-order-rate",
+      "REFLECTED IN"
+    ],
+    [
+      "rk-supply-chain",
+      "rk-schedule-risk",
+      "COMPOUNDS"
+    ],
+    [
+      "rk-geotechnical-ris",
+      "rk-financial-risk",
+      "AMPLIFIES"
+    ],
+    [
+      "rk-labor-risk",
+      "rk-const-execution",
+      "DEGRADES"
+    ],
+    [
+      "rk-coord-risk",
+      "rk-design-risk",
+      "OVERLAPS WITH"
+    ],
+    [
+      "rk-enviro-risk",
+      "rk-reg-permit-risk",
+      "TRIGGERS"
+    ]
+  ],
+  "verbGlossary": {
+    "CATALOGED IN": "Individual {target} is formally documented as an entry in the master risk register for ongoing tracking",
+    "CLASSIFIED BY": "{source} is assigned to {target} category that groups it by source or nature for structured management",
+    "SIGNALED BY": "{source} is preceded by an observable trigger condition that provides early warning of materialization",
+    "ASSIGNED TO": "{source} is placed under the accountability of a specific owner responsible for monitoring and response",
+    "MANAGED THROUGH": "{source} is addressed by selecting and executing a strategic response type from the standard options",
+    "REDUCES TO": "Original {target} is diminished through mitigation to the residual level that remains after response",
+    "VISUALIZED IN": "{source} are displayed as positioned points on {target} matrix for priority communication",
+    "AGGREGATED INTO": "Individual {target}s from the register are summed to produce the total risk exposure value",
+    "ORGANIZED BY": "{source} entries are structured under {target} categories for systematic review and reporting",
+    "INCLUDES": "{source} category taxonomy contains the specific {target} type as a named classification instance",
+    "ESCALATES TO": "{source} initiates a reassessment that may increase {target} score requiring elevated response",
+    "EXECUTES": "{source} owner carries out the planned {target}s assigned to risks under their accountability",
+    "BOUND BY": "{source} owner's responsibilities are defined and constrained by the contractual {target} allocation terms",
+    "CONTRIBUTES TO": "{source} provides one axis of the combined {target} calculation via the scoring formula",
+    "PLOTTED ON": "Calculated risk score determines the position of {target} on the likelihood-impact matrix grid",
+    "DETERMINES": "{source} level dictates which response type is appropriate based on threshold rules in {target} plan",
+    "FEEDS": "Individual {target} is an input to the aggregate risk exposure value calculation for the project",
+    "JUSTIFIES": "{source}of {target}s in red and amber zones provides the basis for contingency reserve sizing",
+    "IMPLEMENTED BY": "{source}is operationalized through specific {target}s with owners and dates",
+    "FUNDED BY": "{source} response costs are covered by drawing from the project {target} reserve allocation",
+    "BUFFERED BY": "{source} response strategy incorporates schedule buffer to absorb potential time impacts from {target}",
+    "GOVERNED BY": "{source}are defined by the contractual {target} allocation provisions",
+    "YIELDS": "Completed {target} produces a residual risk level that is the post-response exposure remaining",
+    "TRACKED BY": "{source} completion status is measured by {target} mitigation completion rate metric",
+    "MEASURED BY": "{source}'s consumption or realization is quantified by {target} measure over time",
+    "HEDGES": "{target} reserve provides financial protection against identified financial risk events materializing",
+    "ABSORBS": "Schedule buffer consumes schedule {target} impact by providing float that delays can consume without affecting milestones",
+    "REFLECTED IN": "Schedule buffer status is captured by the schedule float erosion metric as buffers are consumed",
+    "RECORDED IN": "{source}is documented back into {target} register for ongoing monitoring",
+    "TRANSFERRED THROUGH": "Residual {target} is shifted to an insurance carrier via required coverage policies",
+    "SECURED BY": "{source} allocation provisions are financially guaranteed through surety bonds that assure performance",
+    "BACKSTOPPED BY": "{source} allocation is supported by insurance requirements that provide financial recovery if {target}s materialize",
+    "COMPOUNDS": "{source}schedule {target} by adding delay probability to dependent activities",
+    "AMPLIFIES": "Geotechnical unknowns increase financial {target} through unforeseen cost impacts from subsurface conditions",
+    "DEGRADES": "Labor shortages and productivity variance reduce the quality of construction execution performance",
+    "OVERLAPS WITH": "Coordination failures share root causes and consequences with design {target} through information conflicts",
+    "TRIGGERS": "Environmental {target}s initiate regulatory and permit risk through compliance violations requiring agency response"
+  }
+}

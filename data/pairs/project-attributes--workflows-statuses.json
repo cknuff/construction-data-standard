@@ -1,0 +1,175 @@
+{
+  "source": "project-attributes",
+  "target": "workflows-statuses",
+  "edges": [
+    [
+      "pa-project-status",
+      "ws-open",
+      "TRACKED AS"
+    ],
+    [
+      "pa-project-status",
+      "ws-closed",
+      "TRACKED AS"
+    ],
+    [
+      "pa-project-status",
+      "ws-hold",
+      "TRACKED AS"
+    ],
+    [
+      "pa-project-status",
+      "ws-void",
+      "TRACKED AS"
+    ],
+    [
+      "pa-current-phase",
+      "ws-workflow-step",
+      "ADVANCES THROUGH"
+    ],
+    [
+      "pa-percent-complete",
+      "ws-progress",
+      "REFLECTED BY"
+    ],
+    [
+      "pa-fast-track",
+      "ws-parallel-review",
+      "ENFORCES"
+    ],
+    [
+      "pa-dlvy-method",
+      "ws-sequential-appr",
+      "CONFIGURES"
+    ],
+    [
+      "pa-dlvy-method",
+      "ws-appr-chain",
+      "CONFIGURES"
+    ],
+    [
+      "pa-bid-type",
+      "ws-submit-approve",
+      "CONFIGURES"
+    ],
+    [
+      "pa-contract-type",
+      "ws-multi-stage",
+      "CONFIGURES"
+    ],
+    [
+      "pa-owner-type",
+      "ws-sequential-appr",
+      "CONFIGURES"
+    ],
+    [
+      "pa-planned-completi",
+      "ws-overdue",
+      "TRIGGERS"
+    ],
+    [
+      "pa-planned-completi",
+      "ws-due-date",
+      "ANCHORS"
+    ],
+    [
+      "pa-submittal-appr",
+      "ws-first-pass-appr",
+      "BENCHMARKED AGAINST"
+    ],
+    [
+      "pa-chg-order-rate",
+      "ws-average-appr",
+      "CORRELATED WITH"
+    ],
+    [
+      "pa-rfi-density",
+      "ws-response-time",
+      "CORRELATED WITH"
+    ],
+    [
+      "pa-project-type",
+      "ws-overdue-rate",
+      "SEGMENTS"
+    ],
+    [
+      "pa-project-type",
+      "ws-resubmission-rat",
+      "SEGMENTS"
+    ],
+    [
+      "pa-total-value-band",
+      "ws-escalation-rate",
+      "SEGMENTS"
+    ],
+    [
+      "pa-total-value-band",
+      "ws-ball-court-aging",
+      "SEGMENTS"
+    ],
+    [
+      "pa-number-subcontra",
+      "ws-dist-list",
+      "SCALES"
+    ],
+    [
+      "pa-phased-const",
+      "ws-workflow-step",
+      "MULTIPLIES"
+    ],
+    [
+      "pa-specialty-system",
+      "ws-inspect-disposit",
+      "ACTIVATES"
+    ],
+    [
+      "pa-leed-certificati",
+      "ws-review-respond",
+      "MANDATES"
+    ],
+    [
+      "pa-admin-burden",
+      "ws-appr-chain",
+      "DRIVEN BY"
+    ],
+    [
+      "pa-admin-burden",
+      "ws-multi-stage",
+      "DRIVEN BY"
+    ],
+    [
+      "pa-decision-speed",
+      "ws-response-time",
+      "MEASURED BY"
+    ],
+    [
+      "pa-decision-speed",
+      "ws-average-appr",
+      "MEASURED BY"
+    ],
+    [
+      "pa-decision-speed",
+      "ws-sequential-appr",
+      "SLOWED BY"
+    ]
+  ],
+  "verbGlossary": {
+    "TRACKED AS": "{source} attribute is represented by {target} (e.g., project status tracked as open, closed, on hold, or void)",
+    "ADVANCES THROUGH": "{source} phase attribute progresses by moving through {target} steps (e.g., current phase advances through workflow steps from preconstruction to closeout)",
+    "REFLECTED BY": "{source} completion attribute is indicated by {target} (e.g., percent complete reflected by in-progress status on active items)",
+    "ENFORCES": "{source} attribute mandates the use of {target} pattern (e.g., fast-track enforces parallel review to maintain overlapping design and construction)",
+    "CONFIGURES": "{source} delivery, contract, or owner attribute determines the structure of {target} pattern or approval chain (e.g., delivery method configures sequential approval and approval chain depth)",
+    "TRIGGERS": "{source} schedule attribute activates {target} when deadlines are missed (e.g., planned completion date triggers overdue status on incomplete items)",
+    "ANCHORS": "{source} date attribute sets the reference point for {target} due date (e.g., planned completion date anchors due dates for submittals and closeout items)",
+    "BENCHMARKED AGAINST": "{source} performance attribute is compared to {target} efficiency metric (e.g., submittal approval rate benchmarked against first-pass approval rate)",
+    "CORRELATED WITH": "{source} rate metric shows statistical relationship with {target} timing metric (e.g., change order rate correlated with average approval cycle time)",
+    "SEGMENTS": "{source} subdivides {target} metric for comparative analysis (e.g., project type segments overdue rate, total value band segments escalation rate)",
+    "SCALES": "{source} complexity attribute increases the size of {target} distribution list (e.g., number of subcontractors scales distribution list size)",
+    "MULTIPLIES": "{source} phasing attribute creates additional instances of {target} element (e.g., phased construction multiplies workflow steps for each construction phase)",
+    "ACTIVATES": "{source} attribute triggers {target} pattern for specialty work (e.g., specialty systems activate inspect-and-disposition workflows for commissioning)",
+    "MANDATES": "{source} certification attribute requires {target} as a compliance prerequisite (e.g., LEED certification mandates review-and-respond workflows for commissioning documentation)",
+    "DRIVEN BY": "{source} outcome is directly influenced by the complexity and volume of {target} processes -- more {target} steps means higher {source}",
+    "MEASURED BY": "{source} outcome is quantified through {target} metric, which provides a concrete measurement of the abstract concept",
+    "SLOWED BY": "{source} outcome is degraded by {target} process design that adds sequential handoffs and wait states"
+  }
+}

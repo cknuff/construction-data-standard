@@ -1,0 +1,279 @@
+{
+  "source": "organizations",
+  "target": "organizations",
+  "edges": [
+    [
+      "org-private-develope",
+      "org-gen-contr-gc",
+      "CONTRACTS"
+    ],
+    [
+      "org-private-develope",
+      "org-architect-record",
+      "CONTRACTS"
+    ],
+    [
+      "org-private-develope",
+      "org-design-builder",
+      "CONTRACTS"
+    ],
+    [
+      "org-institutional-ow",
+      "org-const-manager-at",
+      "CONTRACTS"
+    ],
+    [
+      "org-public-governmen",
+      "org-gen-contr-gc",
+      "CONTRACTS"
+    ],
+    [
+      "org-institutional-ow",
+      "org-program-manager",
+      "CONTRACTS"
+    ],
+    [
+      "org-gen-contr-gc",
+      "org-sub-trade",
+      "SUBCONTRACTS"
+    ],
+    [
+      "org-design-builder",
+      "org-sub-trade",
+      "SUBCONTRACTS"
+    ],
+    [
+      "org-design-builder",
+      "org-architect-record",
+      "SUBCONTRACTS"
+    ],
+    [
+      "org-gen-contr-gc",
+      "org-mat-supplier",
+      "PROCURES FROM"
+    ],
+    [
+      "org-gen-contr-gc",
+      "org-fabricator",
+      "PROCURES FROM"
+    ],
+    [
+      "org-gen-contr-gc",
+      "org-equip-rental",
+      "PROCURES FROM"
+    ],
+    [
+      "org-architect-record",
+      "org-struct-engineer",
+      "ENGAGES AS SUBCONSULTANT"
+    ],
+    [
+      "org-architect-record",
+      "org-mep-engineer",
+      "ENGAGES AS SUBCONSULTANT"
+    ],
+    [
+      "org-architect-record",
+      "org-civil-engineer",
+      "ENGAGES AS SUBCONSULTANT"
+    ],
+    [
+      "org-architect-record",
+      "org-landscape-archit",
+      "ENGAGES AS SUBCONSULTANT"
+    ],
+    [
+      "org-architect-record",
+      "org-specifications-w",
+      "ENGAGES AS SUBCONSULTANT"
+    ],
+    [
+      "org-mep-engineer",
+      "org-fire-prot",
+      "ENGAGES AS SUBCONSULTANT"
+    ],
+    [
+      "org-struct-engineer",
+      "org-mep-engineer",
+      "COORDINATES WITH"
+    ],
+    [
+      "org-gen-contr-gc",
+      "org-architect-record",
+      "COORDINATES WITH"
+    ],
+    [
+      "org-private-develope",
+      "org-geotechnical-eng",
+      "COMMISSIONS"
+    ],
+    [
+      "org-institutional-ow",
+      "org-special-insp",
+      "COMMISSIONS"
+    ],
+    [
+      "org-institutional-ow",
+      "org-cx-agent-cxa",
+      "COMMISSIONS"
+    ],
+    [
+      "org-gen-contr-gc",
+      "org-self-performing",
+      "SELF-PERFORMS VIA"
+    ],
+    [
+      "org-surety-bonding",
+      "org-gen-contr-gc",
+      "BONDS"
+    ],
+    [
+      "org-insurance-broker",
+      "org-gen-contr-gc",
+      "INSURES"
+    ],
+    [
+      "org-const-lender",
+      "org-private-develope",
+      "FINANCES"
+    ],
+    [
+      "org-program-manager",
+      "org-gen-contr-gc",
+      "OVERSEES"
+    ],
+    [
+      "org-program-manager",
+      "org-architect-record",
+      "OVERSEES"
+    ],
+    [
+      "org-const-manager",
+      "org-sub-trade",
+      "OVERSEES"
+    ],
+    [
+      "org-building-departm",
+      "org-gen-contr-gc",
+      "INSPECTS"
+    ],
+    [
+      "org-fire-marshal",
+      "org-gen-contr-gc",
+      "INSPECTS"
+    ],
+    [
+      "org-osha-safety",
+      "org-sub-trade",
+      "INSPECTS"
+    ],
+    [
+      "org-building-departm",
+      "org-architect-record",
+      "REVIEWS DESIGN OF"
+    ],
+    [
+      "org-zoning-planning",
+      "org-private-develope",
+      "GRANTS ENTITLEMENT TO"
+    ],
+    [
+      "org-enviro-epa",
+      "org-private-develope",
+      "PERMITS"
+    ],
+    [
+      "org-special-insp",
+      "org-sub-trade",
+      "VERIFIES WORK OF"
+    ],
+    [
+      "org-mat-testing-lab",
+      "org-sub-trade",
+      "TESTS MATERIALS FOR"
+    ],
+    [
+      "org-cx-agent-cxa",
+      "org-mep-engineer",
+      "VALIDATES SYSTEMS OF"
+    ],
+    [
+      "org-electric-utility",
+      "org-gen-contr-gc",
+      "PROVIDES SERVICE TO"
+    ],
+    [
+      "org-water-sewer",
+      "org-gen-contr-gc",
+      "PROVIDES SERVICE TO"
+    ],
+    [
+      "org-code-consultant",
+      "org-architect-record",
+      "ADVISES"
+    ],
+    [
+      "org-sustainability-l",
+      "org-architect-record",
+      "ADVISES"
+    ],
+    [
+      "org-geotechnical-eng",
+      "org-struct-engineer",
+      "ADVISES"
+    ],
+    [
+      "org-gen-contr-gc",
+      "org-sub-count-per",
+      "MEASURES"
+    ],
+    [
+      "org-gen-contr-gc",
+      "org-trade-coverage",
+      "MEASURES"
+    ],
+    [
+      "org-gen-contr-gc",
+      "org-vendor-insurance",
+      "MEASURES"
+    ],
+    [
+      "org-sub-trade",
+      "org-sub-safety",
+      "MEASURES"
+    ],
+    [
+      "org-architect-record",
+      "org-design-team",
+      "MEASURES"
+    ],
+    [
+      "org-sub-trade",
+      "org-chg-order",
+      "MEASURES"
+    ]
+  ],
+  "verbGlossary": {
+    "CONTRACTS": "{source} or developer enters into a prime contract with {target}, establishing a direct contractual relationship with defined scope, compensation, and liability for a project or program.",
+    "SUBCONTRACTS": "{source} awards a subcontract to a specialty {target} for a defined scope of trade work, transferring performance obligation while retaining overall project responsibility to the owner.",
+    "PROCURES FROM": "Contractor or {target} issues a purchase order or supply agreement to obtain materials, fabricated components, or equipment needed for construction.",
+    "ENGAGES AS SUBCONSULTANT": "Lead design professional retains a specialty engineering or consulting {target} under a subconsultant agreement, with the lead firm remaining responsible to the owner for the subconsultant's work.",
+    "COORDINATES WITH": "Two {target}s collaborate on overlapping scope, schedule, or spatial conflicts without a direct contractual relationship between them, typically managed through meetings, BIM coordination, or RFIs.",
+    "COMMISSIONS": "{source} directly engages a third-{target} firm for independent testing, verification, or investigation services that must remain independent from the design and construction teams.",
+    "SELF-PERFORMS VIA": "{target} executes a defined scope of trade work using its own in-house workforce division rather than subcontracting, with costs tracked as direct costs instead of commitments.",
+    "BONDS": "Surety {target} issues performance and payment bonds guaranteeing the contractor's contractual obligations, providing financial protection to the owner and downstream subcontractors.",
+    "INSURES": "{source} or broker provides coverage policies (general liability, workers' compensation, builders risk, professional liability) that transfer specified construction risks from the insured {target}.",
+    "FINANCES": "{source}provides construction lending or project financing, funding the project through periodic draws tied to verified progress milestones.",
+    "OVERSEES": "Management {target} monitors and directs the work of another organization on behalf of the owner, providing schedule, budget, quality, and safety oversight without holding direct trade contracts.",
+    "INSPECTS": "Regulatory {target} conducts field inspections to verify code compliance, issues citations for violations, and must approve work before it can be concealed or the project can proceed.",
+    "REVIEWS DESIGN OF": "Regulatory {target} examines construction documents submitted by the design team for code compliance, issuing plan review comments that must be resolved before permits are granted.",
+    "GRANTS ENTITLEMENT TO": "Land use {target} approves a project's zoning compliance, variances, or site plan, which is a legal prerequisite before building permits can be issued.",
+    "PERMITS": "{source}issues permits governing construction activities such as stormwater discharge, air quality, or hazardous material handling, with ongoing compliance monitoring.",
+    "VERIFIES WORK OF": "{source}inspection agency performs code-required special inspections on the contractor's installed work, con{target}ing structural connections, material placement, or fireproofing meet specifications.",
+    "TESTS MATERIALS FOR": "Testing laboratory performs standardized tests on construction materials (concrete, soil, steel, asphalt) to con{target} they meet specification requirements before or after placement.",
+    "VALIDATES SYSTEMS OF": "{source}tests and verifies that installed building systems perform according to the design {target} specifications, documenting deficiencies that require correction.",
+    "PROVIDES SERVICE TO": "Utility {target} designs, reviews, and connects permanent utility infrastructure to the project, coordinating service capacity, meter placement, and energization with the contractor.",
+    "ADVISES": "Specialty {target} provides expert guidance to the design team on code interpretation, sustainability criteria, subsurface conditions, or other technical matters that influence design decisions.",
+    "MEASURES": "{source} tracks a defined performance metric that quantifies operational, safety, or commercial outcomes, enabling benchmarking and trend analysis."
+  }
+}

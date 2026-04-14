@@ -1,0 +1,202 @@
+{
+  "source": "resources",
+  "target": "risk",
+  "edges": [
+    [
+      "res-safety",
+      "rk-safety-risk",
+      "INSPECTS FOR"
+    ],
+    [
+      "res-safety",
+      "rk-incident-rate",
+      "MONITORS"
+    ],
+    [
+      "res-safety",
+      "rk-mitigation-actio",
+      "ENFORCES"
+    ],
+    [
+      "res-qc",
+      "rk-const-execution",
+      "INSPECTS FOR"
+    ],
+    [
+      "res-qc",
+      "rk-residual-risk",
+      "IDENTIFIES"
+    ],
+    [
+      "res-qc",
+      "rk-risk-mitigation",
+      "DRIVES"
+    ],
+    [
+      "res-cxa",
+      "rk-design-risk",
+      "VALIDATES AGAINST"
+    ],
+    [
+      "res-cxa",
+      "rk-coord-risk",
+      "DETECTS"
+    ],
+    [
+      "res-crane",
+      "rk-safety-risk",
+      "INTRODUCES"
+    ],
+    [
+      "res-crane",
+      "rk-schedule-risk",
+      "CONSTRAINS"
+    ],
+    [
+      "res-crane",
+      "rk-insurance-requir",
+      "ELEVATES"
+    ],
+    [
+      "res-earthmover",
+      "rk-geotechnical-ris",
+      "ENCOUNTERS"
+    ],
+    [
+      "res-earthmover",
+      "rk-enviro-risk",
+      "DISTURBS"
+    ],
+    [
+      "res-piling",
+      "rk-geotechnical-ris",
+      "EXPOSES"
+    ],
+    [
+      "res-access",
+      "rk-safety-risk",
+      "INTRODUCES"
+    ],
+    [
+      "res-operator",
+      "rk-safety-risk",
+      "EXPOSES"
+    ],
+    [
+      "res-electrician",
+      "rk-safety-risk",
+      "EXPOSES"
+    ],
+    [
+      "res-electrician",
+      "rk-coord-risk",
+      "COMPOUNDS"
+    ],
+    [
+      "res-ironworker",
+      "rk-safety-risk",
+      "EXPOSES"
+    ],
+    [
+      "res-ironworker",
+      "rk-insurance-requir",
+      "ELEVATES"
+    ],
+    [
+      "mat-steel",
+      "rk-supply-chain",
+      "SUBJECT TO"
+    ],
+    [
+      "mat-steel",
+      "rk-schedule-risk",
+      "DELAYS"
+    ],
+    [
+      "mat-concrete",
+      "rk-schedule-risk",
+      "CONSTRAINS"
+    ],
+    [
+      "mat-concrete",
+      "rk-const-execution",
+      "EXPOSES"
+    ],
+    [
+      "mat-lumber",
+      "rk-supply-chain",
+      "SUBJECT TO"
+    ],
+    [
+      "mat-hvac-equip",
+      "rk-supply-chain",
+      "SUBJECT TO"
+    ],
+    [
+      "mat-hvac-equip",
+      "rk-schedule-buffer",
+      "CONSUMES"
+    ],
+    [
+      "mat-elevator",
+      "rk-schedule-risk",
+      "DELAYS"
+    ],
+    [
+      "res-temp-util",
+      "rk-reg-permit-risk",
+      "GOVERNED BY"
+    ],
+    [
+      "res-plumber",
+      "rk-reg-permit-risk",
+      "GOVERNED BY"
+    ],
+    [
+      "res-sprinkler",
+      "rk-reg-permit-risk",
+      "GOVERNED BY"
+    ],
+    [
+      "res-laborer",
+      "rk-labor-risk",
+      "EXPOSES"
+    ],
+    [
+      "res-surveyor",
+      "rk-geotechnical-ris",
+      "ASSESSES"
+    ],
+    [
+      "res-welding",
+      "rk-const-execution",
+      "INTRODUCES"
+    ],
+    [
+      "mat-thermal",
+      "rk-enviro-risk",
+      "GOVERNED BY"
+    ]
+  ],
+  "verbGlossary": {
+    "INSPECTS FOR": "{source} personnel conducts field inspections or audits to detect a specific {target} before it materializes (e.g., safety professional inspects for safety risk through jobsite walkthroughs)",
+    "MONITORS": "{source} tracks {target} metric on an ongoing basis to detect threshold breaches (e.g., safety professional monitors incident rate TRIR across the project)",
+    "ENFORCES": "{source} ensures that a required {target} response or mitigation action is carried out on the jobsite (e.g., safety professional enforces mitigation actions like fall protection compliance)",
+    "IDENTIFIES": "{source} discovers or documents {target} that persists after initial mitigation (e.g., QC inspector identifies residual risk during punch list walkthrough)",
+    "DRIVES": "{source} activity directly improves {target} metric through systematic fieldwork (e.g., QC inspector drives risk mitigation completion rate by closing out deficiencies)",
+    "VALIDATES AGAINST": "{source} verifies installed systems against design intent to confirm {target} category is controlled (e.g., commissioning agent validates against design risk by testing MEP system performance)",
+    "DETECTS": "{source} uncovers {target} through cross-trade review or system-level evaluation (e.g., commissioning agent detects coordination risk during integrated systems testing)",
+    "INTRODUCES": "{source} or equipment brings {target} onto the project by its presence or operation (e.g., crane introduces safety risk through lifting operations near workers)",
+    "CONSTRAINS": "{source} or material limits scheduling flexibility due to availability, lead time, or operational requirements (e.g., crane constrains schedule {target} when tower crane erection blocks other work)",
+    "ELEVATES": "{source} increases the level of {target} transfer requirement due to hazard exposure (e.g., ironworker at height elevates insurance requirement thresholds for the project)",
+    "ENCOUNTERS": "{source} or trade comes into direct contact with a site condition that activates {target} (e.g., earthmoving equipment encounters geotechnical risk when hitting unexpected soil conditions)",
+    "DISTURBS": "{source} activity disrupts site conditions in ways that trigger an environmental {target} (e.g., earthmoving equipment disturbs environmental risk through soil erosion or contamination exposure)",
+    "EXPOSES": "{source} or material creates vulnerability to {target} category through its nature or use on the jobsite (e.g., electrician exposes project to safety risk due to energized work)",
+    "COMPOUNDS": "{source} adds complexity to {target} by increasing the number of interdependencies that must be coordinated (e.g., electrician compounds coordination risk when rough-in conflicts with mechanical runs)",
+    "SUBJECT TO": "{source} is vulnerable to {target} category due to market conditions, sourcing constraints, or global supply factors (e.g., structural steel subject to supply chain risk from mill lead times and tariffs)",
+    "DELAYS": "{source} lead time or shortage directly pushes schedule dates and increases {target} (e.g., elevator materials delay schedule risk due to 16-plus week fabrication lead times)",
+    "CONSUMES": "{source} or equipment procurement absorbs schedule {target} time that was reserved for risk events (e.g., HVAC equipment consumes schedule buffer when delivery slips into planned float)",
+    "GOVERNED BY": "{source} or material is regulated by permitting or code requirements that create compliance {target} (e.g., sprinkler fitter governed by regulatory and permit risk through fire marshal inspections)",
+    "ASSESSES": "{source} evaluates site conditions to quantify or characterize {target} before construction proceeds (e.g., surveyor assesses geotechnical risk by verifying grades and subsurface conditions)"
+  }
+}

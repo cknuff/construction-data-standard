@@ -1,0 +1,194 @@
+{
+  "source": "permits-regulatory",
+  "target": "resources",
+  "edges": [
+    [
+      "pr-trade-permit",
+      "res-plumber",
+      "LICENSES"
+    ],
+    [
+      "pr-trade-permit",
+      "res-electrician",
+      "LICENSES"
+    ],
+    [
+      "pr-trade-permit",
+      "res-sheetmetal",
+      "LICENSES"
+    ],
+    [
+      "pr-trade-permit",
+      "res-sprinkler",
+      "LICENSES"
+    ],
+    [
+      "pr-trade-permit",
+      "res-elevator",
+      "LICENSES"
+    ],
+    [
+      "pr-osha-notificatio",
+      "res-safety",
+      "MOBILIZES"
+    ],
+    [
+      "pr-site-safety-plan",
+      "res-safety",
+      "ASSIGNS"
+    ],
+    [
+      "pr-site-safety-plan",
+      "res-crane",
+      "GOVERNS OPERATION OF"
+    ],
+    [
+      "pr-site-safety-plan",
+      "res-access",
+      "GOVERNS OPERATION OF"
+    ],
+    [
+      "pr-labor-comp",
+      "res-laborer",
+      "CERTIFIES WAGES OF"
+    ],
+    [
+      "pr-labor-comp",
+      "res-carpenter",
+      "CERTIFIES WAGES OF"
+    ],
+    [
+      "pr-labor-comp",
+      "res-ironworker",
+      "CERTIFIES WAGES OF"
+    ],
+    [
+      "pr-building-permit",
+      "res-surveyor",
+      "TRIGGERS LAYOUT BY"
+    ],
+    [
+      "pr-building-permit",
+      "res-survey-inst",
+      "TRIGGERS DEPLOYMENT OF"
+    ],
+    [
+      "pr-special-insp",
+      "res-qc",
+      "DISPATCHES"
+    ],
+    [
+      "pr-special-insp",
+      "res-welding",
+      "WITNESSES USE OF"
+    ],
+    [
+      "pr-special-insp",
+      "res-conc-equip",
+      "WITNESSES USE OF"
+    ],
+    [
+      "pr-ahj-insp",
+      "res-temp-util",
+      "VERIFIES INSTALLATION OF"
+    ],
+    [
+      "pr-fire-marshal",
+      "res-sprinkler",
+      "APPROVES WORK BY"
+    ],
+    [
+      "pr-fire-marshal",
+      "mat-fp",
+      "APPROVES SPEC OF"
+    ],
+    [
+      "pr-third-party",
+      "res-cxa",
+      "ENGAGES"
+    ],
+    [
+      "pr-enviro-permit",
+      "res-earthmover",
+      "RESTRICTS OPERATION OF"
+    ],
+    [
+      "pr-stormwater-permi",
+      "res-compaction",
+      "CONSTRAINS USE OF"
+    ],
+    [
+      "pr-demolition-permi",
+      "res-operator",
+      "AUTHORIZES"
+    ],
+    [
+      "pr-demolition-permi",
+      "res-hauling",
+      "AUTHORIZES"
+    ],
+    [
+      "pr-cert-occupancy",
+      "res-cxa",
+      "REQUIRES SIGN-OFF FROM"
+    ],
+    [
+      "pr-cert-occupancy",
+      "mat-lighting",
+      "REQUIRES INSTALLATION OF"
+    ],
+    [
+      "pr-health-departmen",
+      "mat-plumbing",
+      "APPROVES SPEC OF"
+    ],
+    [
+      "pr-insp-scheduling",
+      "res-crane",
+      "COORDINATES STANDBY OF"
+    ],
+    [
+      "pr-insp-pass-rate",
+      "res-qc",
+      "MEASURED BY"
+    ],
+    [
+      "pr-reg-hold",
+      "res-piling",
+      "IDLES"
+    ],
+    [
+      "pr-reg-hold",
+      "res-earthmover",
+      "IDLES"
+    ],
+    [
+      "pr-temp-structures",
+      "res-access",
+      "AUTHORIZES"
+    ]
+  ],
+  "verbGlossary": {
+    "APPROVES SPEC OF": "{target} reviews and accepts {source} specification or shop drawing before the target material may be procured and installed on site.",
+    "APPROVES WORK BY": "{source} must sign off on {target} installation scope, confirming code compliance before the system is placed in service.",
+    "ASSIGNS": "{source} mandates the deployment of {target} or quality resource to the project for the duration of covered work.",
+    "AUTHORIZES": "{source} issuance grants legal permission for {target} (trade crew or equipment) to begin work on the regulated scope.",
+    "CERTIFIES WAGES OF": "{source}requirement mandates verified payroll records for {target}, confirming correct wage rates and benefits.",
+    "CONSTRAINS USE OF": "{source} permit imposes operational limits (hours, vibration, runoff controls) on {target} during permitted activities.",
+    "COORDINATES STANDBY OF": "Inspection scheduling requires {target} to remain on standby or repositioned so the inspector can observe concealed or elevated work.",
+    "DISPATCHES": "{source} requirement triggers deployment of {target} or testing resource to the jobsite for a witnessed inspection event.",
+    "ENGAGES": "{source} or code requirement mandates the hiring or contracting of {target} to perform independent verification or commissioning.",
+    "GOVERNS OPERATION OF": "{source}plan establishes specific operational protocols, exclusion zones, and daily inspection requirements for {target}.",
+    "IDLES": "{target} hold forces {source} (equipment or crew) to stand idle on site, incurring cost without production until the hold is lifted.",
+    "LICENSES": "{source}-specific permit requires {target} worker to hold a valid license or journeyman card before performing permitted work on the project.",
+    "MEASURED BY": "{source} metric is calculated based on the performance or output of {target} (e.g., inspection pass rate measured by QC inspector results).",
+    "MOBILIZES": "{source} notification or filing triggers the initial mobilization of {target} to the project site.",
+    "REQUIRES INSTALLATION OF": "{source} certificate cannot be issued until {target} is fully installed and operational, as confirmed by inspection.",
+    "REQUIRES SIGN-OFF FROM": "{source} certificate issuance depends on a formal written approval or commissioning report from {target}.",
+    "RESTRICTS OPERATION OF": "{source}limits when, where, or how {target} may operate (e.g., wetland buffers, noise curfews, emission controls).",
+    "TRIGGERS DEPLOYMENT OF": "{source} issuance initiates the mobilization and setup of {target} on site for the newly authorized work scope.",
+    "TRIGGERS LAYOUT BY": "{source} issuance authorizes {target} control points, property-line offsets, and elevation benchmarks on site.",
+    "VERIFIES INSTALLATION OF": "{source} inspector checks that {target} or temporary system is properly installed and safe before authorizing continued construction.",
+    "WITNESSES USE OF": "{source}inspection requires {target} operation to be directly observed by a certified inspector during critical structural or testing activities."
+  }
+}

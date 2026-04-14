@@ -1,0 +1,368 @@
+{
+  "source": "contracts-procurement",
+  "target": "schedule",
+  "edges": [
+    [
+      "cp-prequalification",
+      "sch-milestone",
+      "GATES"
+    ],
+    [
+      "cp-prequalification",
+      "sch-look-ahead",
+      "SCREENED BEFORE"
+    ],
+    [
+      "cp-bid-package",
+      "sch-detail-activity",
+      "SCOPED AROUND"
+    ],
+    [
+      "cp-bid-package",
+      "sch-duration-progres",
+      "BOUNDED BY"
+    ],
+    [
+      "cp-bid-package",
+      "sch-baseline-schedul",
+      "ISSUED AGAINST"
+    ],
+    [
+      "cp-req-qualificatio",
+      "sch-lag-lead-time",
+      "CIRCULATED WITHIN"
+    ],
+    [
+      "cp-req-proposal",
+      "sch-milestone",
+      "DUE AT"
+    ],
+    [
+      "cp-req-proposal",
+      "sch-look-ahead",
+      "TIMED WITH"
+    ],
+    [
+      "cp-proposal-bid",
+      "sch-calculated-dates",
+      "PRICED AGAINST"
+    ],
+    [
+      "cp-proposal-bid",
+      "sch-duration-progres",
+      "ESTIMATED FROM"
+    ],
+    [
+      "cp-bid-evaluation",
+      "sch-critical-path",
+      "SCORED RELATIVE TO"
+    ],
+    [
+      "cp-bid-evaluation",
+      "sch-schedule-constra",
+      "EVALUATED AGAINST"
+    ],
+    [
+      "cp-award-notice",
+      "sch-milestone",
+      "TRIGGERED AT"
+    ],
+    [
+      "cp-award-notice",
+      "sch-baseline-schedul",
+      "ANCHORED TO"
+    ],
+    [
+      "cp-award-notice",
+      "sch-lag-lead-time",
+      "MOBILIZES WITHIN"
+    ],
+    [
+      "cp-subcontract",
+      "sch-detail-activity",
+      "GOVERNS"
+    ],
+    [
+      "cp-subcontract",
+      "sch-schedule-update",
+      "REVISED THROUGH"
+    ],
+    [
+      "cp-subcontract",
+      "sch-labor-loading",
+      "CREWS PER"
+    ],
+    [
+      "cp-subcontract",
+      "sch-look-ahead",
+      "SEQUENCED IN"
+    ],
+    [
+      "cp-purchase-order",
+      "sch-lag-lead-time",
+      "PROCURED WITHIN"
+    ],
+    [
+      "cp-purchase-order",
+      "sch-milestone",
+      "DELIVERED BY"
+    ],
+    [
+      "cp-purchase-order",
+      "sch-critical-path",
+      "LONG-LEADS ON"
+    ],
+    [
+      "cp-prime-contract",
+      "sch-baseline-schedul",
+      "ESTABLISHES"
+    ],
+    [
+      "cp-prime-contract",
+      "sch-milestone",
+      "CONTRACTUALLY FIXES"
+    ],
+    [
+      "cp-prime-contract",
+      "sch-schedule-constra",
+      "IMPOSES"
+    ],
+    [
+      "cp-master-service",
+      "sch-work-calendar",
+      "GOVERNED BY"
+    ],
+    [
+      "cp-scope-work",
+      "sch-summary-activity",
+      "DECOMPOSED INTO"
+    ],
+    [
+      "cp-scope-work",
+      "sch-detail-activity",
+      "DETAILED ACROSS"
+    ],
+    [
+      "cp-scope-work",
+      "sch-activity-codes",
+      "CODED PER"
+    ],
+    [
+      "cp-gen-cond",
+      "sch-work-calendar",
+      "PRESCRIBES"
+    ],
+    [
+      "cp-gen-cond",
+      "sch-schedule-constra",
+      "STIPULATES"
+    ],
+    [
+      "cp-retainage-terms",
+      "sch-milestone",
+      "RELEASED AT"
+    ],
+    [
+      "cp-liquidated-damag",
+      "sch-milestone",
+      "ASSESSED AFTER"
+    ],
+    [
+      "cp-liquidated-damag",
+      "sch-critical-path",
+      "PENALIZES ALONG"
+    ],
+    [
+      "cp-liquidated-damag",
+      "sch-delay-class",
+      "TRIGGERED BY"
+    ],
+    [
+      "cp-allowance",
+      "sch-float-slack",
+      "CONSUMED DURING"
+    ],
+    [
+      "cp-bid-bond",
+      "sch-milestone",
+      "EXPIRES AT"
+    ],
+    [
+      "cp-perf-bond",
+      "sch-as-built",
+      "COVERS THROUGH"
+    ],
+    [
+      "cp-perf-bond",
+      "sch-duration-progres",
+      "INDEMNIFIES OVER"
+    ],
+    [
+      "cp-payment-bond",
+      "sch-data-date",
+      "ENFORCEABLE AT"
+    ],
+    [
+      "cp-insurance-cert",
+      "sch-baseline-dates",
+      "EFFECTIVE FROM"
+    ],
+    [
+      "cp-builders-risk",
+      "sch-duration-progres",
+      "INSURES DURING"
+    ],
+    [
+      "cp-warranty",
+      "sch-as-built",
+      "COMMENCES AFTER"
+    ],
+    [
+      "cp-warranty",
+      "sch-milestone",
+      "OBLIGATED UNTIL"
+    ],
+    [
+      "cp-substantial-comp",
+      "sch-milestone",
+      "CERTIFIED AT"
+    ],
+    [
+      "cp-substantial-comp",
+      "sch-schedule-chg",
+      "DOCUMENTED VIA"
+    ],
+    [
+      "cp-final-completion",
+      "sch-as-built",
+      "CLOSES ON"
+    ],
+    [
+      "cp-final-completion",
+      "sch-milestone",
+      "CONCLUDES AT"
+    ],
+    [
+      "cp-prevailing-wage",
+      "sch-labor-loading",
+      "APPLIED TO"
+    ],
+    [
+      "cp-diversity-dbe",
+      "sch-detail-activity",
+      "TRACKED ACROSS"
+    ],
+    [
+      "cp-closeout-doc",
+      "sch-as-built",
+      "ASSEMBLED AFTER"
+    ],
+    [
+      "cp-closeout-doc",
+      "sch-milestone",
+      "SUBMITTED BY"
+    ],
+    [
+      "cp-bid-coverage",
+      "sch-baseline-schedul",
+      "MEASURED BEFORE"
+    ],
+    [
+      "cp-average-bidders",
+      "sch-lag-lead-time",
+      "INDICATES DURING"
+    ],
+    [
+      "cp-award-cycle-time",
+      "sch-critical-path",
+      "CONSTRAINS"
+    ],
+    [
+      "cp-award-cycle-time",
+      "sch-lag-lead-time",
+      "ABSORBS"
+    ],
+    [
+      "cp-insurance-comp",
+      "sch-data-date",
+      "VERIFIED AT"
+    ],
+    [
+      "cp-chg-order-rate",
+      "sch-schedule-update",
+      "MONITORED PER"
+    ],
+    [
+      "cp-chg-order-rate",
+      "sch-time-impact",
+      "CORRELATES WITH"
+    ],
+    [
+      "cp-sub-retention",
+      "sch-schedule-perf",
+      "BENCHMARKED AGAINST"
+    ]
+  ],
+  "verbGlossary": {
+    "GATES": "Prequalification approval acts as a prerequisite gate before a procurement milestone can proceed",
+    "SCREENED BEFORE": "{source}of the look-ahead window when their scope begins",
+    "SCOPED AROUND": "{source} work boundaries defined to align with discrete {target} activities",
+    "BOUNDED BY": "{source} duration and phasing constrained by {target}'s activity durations and progress requirements",
+    "ISSUED AGAINST": "{source} released referencing the approved {target} for scope timing",
+    "CIRCULATED WITHIN": "{source}distributed within the lead-time window required before work must start",
+    "DUE AT": "Request for proposal response deadline tied to a procurement milestone date",
+    "TIMED WITH": "{source} issuance coordinated with the look-ahead {target} to allow adequate response and award time",
+    "PRICED AGAINST": "Bid or proposal pricing developed against the calculated {target} dates that define when work occurs",
+    "ESTIMATED FROM": "{source}cost derived from the planned duration and progress curve of {target}d work",
+    "SCORED RELATIVE TO": "{source} weighs the proposer's ability to meet critical-path {target}s",
+    "EVALUATED AGAINST": "Bids assessed for compliance with {target}s such as mandatory start or finish dates",
+    "TRIGGERED AT": "{source}formally issued upon reaching the designated procurement {target}",
+    "ANCHORED TO": "{source} award date locked to {target} so downstream activities can begin as planned",
+    "MOBILIZES WITHIN": "{source} requires contractor mobilization within the lead-time window before work starts",
+    "GOVERNS": "{source} terms and conditions govern the execution of assigned {target} activities",
+    "REVISED THROUGH": "{source} scope changes reflected in the next {target} cycle",
+    "CREWS PER": "{source} labor commitments sized to match the labor loading required by {target}",
+    "SEQUENCED IN": "{source}or work phased according to the rolling look-ahead {target}",
+    "PROCURED WITHIN": "{source} placed within the procurement lead-time window required by {target} logic",
+    "DELIVERED BY": "{source}delivery under the purchase order tied to {target} that gates downstream work",
+    "LONG-LEADS ON": "{source} for long-lead items placed early to protect {target}",
+    "ESTABLISHES": "{source} formally creates the baseline schedule as {target} document",
+    "CONTRACTUALLY FIXES": "{source} sets binding {target} dates that cannot move without formal change",
+    "IMPOSES": "{source} language creates {target}s such as not-earlier-than or not-later-than dates",
+    "GOVERNED BY": "{source} work hours and availability aligned with the project work calendar",
+    "DECOMPOSED INTO": "{source} scope of work broken down into summary activities and WBS elements in {target}",
+    "DETAILED ACROSS": "{source} requirements distributed across individual detail activities for execution",
+    "CODED PER": "{source} sections tagged with {target} codes for traceability between contract and schedule",
+    "PRESCRIBES": "{source} define working hours, holidays, and shift rules that shape the work calendar",
+    "STIPULATES": "{source} impose {target}s such as phasing requirements or access restrictions",
+    "RELEASED AT": "{source} funds released when the project reaches the contractually specified {target}",
+    "ASSESSED AFTER": "{source}calculated for each calendar day beyond the contractual {target} date",
+    "PENALIZES ALONG": "Liquidated damages accrue for delays to activities on {target} that push past contract dates",
+    "TRIGGERED BY": "{source}activated by a delay event classified under {target}'s delay provisions",
+    "CONSUMED DURING": "{source} allowance dollars drawn down as {target} float is consumed and scope uncertainty resolves",
+    "EXPIRES AT": "{source} validity period ends at the designated {target} if no award is made",
+    "COVERS THROUGH": "{source} remains in effect through the as-built completion of all contracted work",
+    "INDEMNIFIES OVER": "{source} coverage spans the full duration and progress of the contracted scope",
+    "ENFORCEABLE AT": "{source} claims become enforceable as of the data date when payment obligations are due",
+    "EFFECTIVE FROM": "{source} coverage period begins on {target} start date of the insured work",
+    "INSURES DURING": "{source} policy provides coverage during the full construction duration",
+    "COMMENCES AFTER": "{source} period begins after the as-built {target} confirms completion of the warranted work",
+    "OBLIGATED UNTIL": "{source} obligation remains in force until the warranty-expiration {target} is reached",
+    "CERTIFIED AT": "{source}formally certified when the project reaches its substantial completion {target}",
+    "DOCUMENTED VIA": "{source}tracked through {target} change log",
+    "CLOSES ON": "Final completion closes all contract obligations once the as-built {target} is accepted",
+    "CONCLUDES AT": "{source}confirmed at the project's last contractual {target}",
+    "APPLIED TO": "{source} requirements applied to all labor-loaded {target} activities on public projects",
+    "TRACKED ACROSS": "{source}tracked across {target}d activities to ensure compliance throughout the project",
+    "ASSEMBLED AFTER": "{source}document package compiled after the as-built {target} is finalized",
+    "SUBMITTED BY": "{source} required to be submitted by a contractual closeout {target} date",
+    "MEASURED BEFORE": "{source}coverage rate assessed before {target} is set to gauge market interest",
+    "INDICATES DURING": "{source}of bidders per package signals market capacity within the procurement lead-time window",
+    "CONSTRAINS": "{source} cycle time becomes a constraint on {target} when procurement delays compress construction",
+    "ABSORBS": "{source} cycle time consumes available lag in {target} between procurement and construction start",
+    "VERIFIED AT": "{source}rate checked as of the data date to confirm all coverage is current",
+    "MONITORED PER": "{source} rate recalculated each {target} cycle to identify trending scope growth",
+    "CORRELATES WITH": "{source} rate analyzed alongside time impact analyses to reveal cost-{target} linkage",
+    "BENCHMARKED AGAINST": "{source}or retention rate compared to {target} performance index to assess trade reliability"
+  }
+}

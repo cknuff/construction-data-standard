@@ -1,0 +1,217 @@
+{
+  "source": "organizations",
+  "target": "risk",
+  "edges": [
+    [
+      "org-gen-contr-gc",
+      "rk-risk-register",
+      "MAINTAINS"
+    ],
+    [
+      "org-gen-contr-gc",
+      "rk-risk-allocation",
+      "NEGOTIATES"
+    ],
+    [
+      "org-gen-contr-gc",
+      "rk-const-execution",
+      "BEARS"
+    ],
+    [
+      "org-gen-contr-gc",
+      "rk-coord-risk",
+      "MANAGES"
+    ],
+    [
+      "org-const-manager-at",
+      "rk-risk-register",
+      "MAINTAINS"
+    ],
+    [
+      "org-const-manager-at",
+      "rk-financial-risk",
+      "BEARS"
+    ],
+    [
+      "org-const-manager-at",
+      "rk-contingency-rese",
+      "HOLDS"
+    ],
+    [
+      "org-design-builder",
+      "rk-design-risk",
+      "BEARS"
+    ],
+    [
+      "org-design-builder",
+      "rk-coord-risk",
+      "CONSOLIDATES"
+    ],
+    [
+      "org-program-manager",
+      "rk-risk-matrix",
+      "ADMINISTERS"
+    ],
+    [
+      "org-private-develope",
+      "rk-risk-allocation",
+      "DICTATES"
+    ],
+    [
+      "org-private-develope",
+      "rk-financial-risk",
+      "RETAINS"
+    ],
+    [
+      "org-institutional-ow",
+      "rk-schedule-risk",
+      "RETAINS"
+    ],
+    [
+      "org-public-governmen",
+      "rk-reg-permit-risk",
+      "IMPOSES"
+    ],
+    [
+      "org-architect-record",
+      "rk-design-risk",
+      "ORIGINATES"
+    ],
+    [
+      "org-struct-engineer",
+      "rk-design-risk",
+      "ORIGINATES"
+    ],
+    [
+      "org-mep-engineer",
+      "rk-coord-risk",
+      "INTRODUCES"
+    ],
+    [
+      "org-geotechnical-eng",
+      "rk-geotechnical-ris",
+      "INVESTIGATES"
+    ],
+    [
+      "org-civil-engineer",
+      "rk-enviro-risk",
+      "ASSESSES"
+    ],
+    [
+      "org-sub-trade",
+      "rk-labor-risk",
+      "INTRODUCES"
+    ],
+    [
+      "org-sub-trade",
+      "rk-safety-risk",
+      "EXPOSES TO"
+    ],
+    [
+      "org-sub-trade",
+      "rk-const-execution",
+      "PERFORMS AGAINST"
+    ],
+    [
+      "org-self-performing",
+      "rk-labor-risk",
+      "ABSORBS"
+    ],
+    [
+      "org-mat-supplier",
+      "rk-supply-chain",
+      "DRIVES"
+    ],
+    [
+      "org-mat-supplier",
+      "rk-schedule-risk",
+      "INTRODUCES"
+    ],
+    [
+      "org-fabricator",
+      "rk-supply-chain",
+      "INTRODUCES"
+    ],
+    [
+      "org-equip-rental",
+      "rk-schedule-risk",
+      "INTRODUCES"
+    ],
+    [
+      "org-special-insp",
+      "rk-const-execution",
+      "VERIFIES AGAINST"
+    ],
+    [
+      "org-osha-safety",
+      "rk-safety-risk",
+      "ENFORCES AGAINST"
+    ],
+    [
+      "org-enviro-epa",
+      "rk-enviro-risk",
+      "ENFORCES AGAINST"
+    ],
+    [
+      "org-building-departm",
+      "rk-reg-permit-risk",
+      "ENFORCES AGAINST"
+    ],
+    [
+      "org-surety-bonding",
+      "rk-surety-bond",
+      "UNDERWRITES"
+    ],
+    [
+      "org-insurance-broker",
+      "rk-insurance-requir",
+      "UNDERWRITES"
+    ],
+    [
+      "org-const-lender",
+      "rk-financial-risk",
+      "MONITORS"
+    ],
+    [
+      "org-sub-safety",
+      "rk-incident-rate",
+      "MEASURES"
+    ],
+    [
+      "org-chg-order",
+      "rk-chg-order-rate",
+      "MEASURES"
+    ],
+    [
+      "org-vendor-insurance",
+      "rk-insurance-requir",
+      "TRACKS COMPLIANCE WITH"
+    ]
+  ],
+  "verbGlossary": {
+    "ABSORBS": "{source} internalizes {target} by self-performing the work rather than distributing it to external parties (e.g., self-performing GC division absorbs labor risk instead of subcontracting)",
+    "ADMINISTERS": "{source} operates and governs {target} assessment framework on behalf of the project (e.g., program manager administers the risk matrix across a capital program)",
+    "ASSESSES": "{source} evaluates site or design conditions to identify and characterize {target} (e.g., civil engineer assesses environmental risk during site design)",
+    "BEARS": "{source} contractually accepts financial or performance liability for {target} category (e.g., CM at Risk bears financial risk under a GMP contract)",
+    "CONSOLIDATES": "{source} reduces coordination {target} by combining design and construction responsibility under a single entity (e.g., design-builder consolidates coordination risk)",
+    "DICTATES": "{source} uses its contractual leverage to define how {target} is apportioned among project parties (e.g., private developer dictates risk allocation in contract terms)",
+    "DRIVES": "{source}'s actions or performance are the primary cause of {target} materializing (e.g., material supplier drives supply chain risk through lead-time variability)",
+    "ENFORCES AGAINST": "Regulatory organization imposes compliance standards and penalties related to {target} category (e.g., OSHA enforces against safety risk through inspections and citations)",
+    "EXPOSES TO": "{source}'s presence or performance on the project creates vulnerability to {target} category (e.g., subcontractor exposes the project to safety risk through field operations)",
+    "HOLDS": "{source} retains a financial {target} reserve within its contracted scope (e.g., CM at Risk holds contingency reserve under a GMP arrangement)",
+    "IMPOSES": "{source}creates {target} through its regulatory requirements and approval processes (e.g., public entity imposes regulatory and permit risk via code and zoning requirements)",
+    "INTRODUCES": "{source}'s scope of work or involvement creates the conditions for {target} to emerge (e.g., MEP engineer introduces coordination risk through multi-system interface design)",
+    "INVESTIGATES": "{source} performs technical analysis to define the nature and severity of {target} (e.g., geotechnical engineer investigates geotechnical risk through borings and soil analysis)",
+    "MAINTAINS": "{source} is responsible for continuously updating and managing {target} tracking instrument (e.g., general contractor maintains the project risk register throughout construction)",
+    "MANAGES": "{source} actively plans, monitors, and controls {target} through its day-to-day project execution (e.g., GC manages coordination risk across trades on the jobsite)",
+    "MEASURES": "{source}quantifies the magnitude or frequency of {target} indicator (e.g., subcontractor safety incident rate measures TRIR across trade partners)",
+    "MONITORS": "{source} tracks {target} indicators to protect its financial or contractual interest in the project (e.g., construction lender monitors financial risk via draw inspections)",
+    "NEGOTIATES": "{source} engages in contractual discussions to define which party accepts each {target} (e.g., GC negotiates risk allocation terms during preconstruction)",
+    "ORIGINATES": "{source}'s design decisions or deliverables are the root source of {target} category (e.g., architect of record originates design risk through specification and detailing choices)",
+    "PERFORMS AGAINST": "{source} executes field work that is measured against the standards of {target} category (e.g., subcontractor performs against construction execution risk benchmarks)",
+    "RETAINS": "{source} keeps {target} on its own balance sheet rather than transferring it to another party (e.g., institutional owner retains schedule risk on cost-plus contracts)",
+    "TRACKS COMPLIANCE WITH": "{source}monitors adherence to {target} transfer requirement (e.g., vendor insurance compliance rate tracks compliance with insurance requirements across subs)",
+    "UNDERWRITES": "Financial organization accepts {target} in exchange for a premium or fee, providing a guarantee to the project (e.g., surety/bonding company underwrites surety bond risk for contractor performance)",
+    "VERIFIES AGAINST": "Testing or inspection organization confirms that construction work meets the standards that define {target} threshold (e.g., special inspection agency verifies against construction execution risk through field testing)"
+  }
+}

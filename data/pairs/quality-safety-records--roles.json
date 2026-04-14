@@ -1,0 +1,257 @@
+{
+  "source": "quality-safety-records",
+  "target": "roles",
+  "edges": [
+    [
+      "qsr-safety-observati",
+      "rl-safety-officer",
+      "INITIATED BY"
+    ],
+    [
+      "qsr-safety-observati",
+      "rl-safety-manager",
+      "REVIEWED BY"
+    ],
+    [
+      "qsr-safety-observati",
+      "rl-super",
+      "INITIATED BY"
+    ],
+    [
+      "qsr-quality-observat",
+      "rl-quality-manager",
+      "INITIATED BY"
+    ],
+    [
+      "qsr-quality-observat",
+      "rl-project-engineer",
+      "LOGGED BY"
+    ],
+    [
+      "qsr-enviro-cx",
+      "rl-cx-agent-cxa",
+      "INITIATED BY"
+    ],
+    [
+      "qsr-observation",
+      "rl-field-engineer",
+      "INITIATED BY"
+    ],
+    [
+      "qsr-insp",
+      "rl-quality-manager",
+      "PERFORMED BY"
+    ],
+    [
+      "qsr-insp",
+      "rl-super",
+      "SCHEDULED BY"
+    ],
+    [
+      "qsr-insp-item",
+      "rl-quality-manager",
+      "EVALUATED BY"
+    ],
+    [
+      "qsr-insp-item",
+      "rl-field-engineer",
+      "DOCUMENTED BY"
+    ],
+    [
+      "qsr-scheduled-insp",
+      "rl-project-manager",
+      "SCHEDULED BY"
+    ],
+    [
+      "qsr-scheduled-insp",
+      "rl-assistant-projec",
+      "COORDINATED BY"
+    ],
+    [
+      "qsr-third-party",
+      "rl-project-engineer",
+      "COORDINATED BY"
+    ],
+    [
+      "qsr-third-party",
+      "rl-quality-manager",
+      "WITNESSED BY"
+    ],
+    [
+      "qsr-punch-item",
+      "rl-project-manager",
+      "MANAGED BY"
+    ],
+    [
+      "qsr-punch-item",
+      "rl-super",
+      "ASSIGNED BY"
+    ],
+    [
+      "qsr-punch-item",
+      "rl-owner-s",
+      "SIGNED OFF BY"
+    ],
+    [
+      "qsr-punch-item-issue",
+      "rl-quality-manager",
+      "CATEGORIZED BY"
+    ],
+    [
+      "qsr-punch-item-2",
+      "rl-super",
+      "CLOSED OUT BY"
+    ],
+    [
+      "qsr-punch-item-2",
+      "rl-owner-s",
+      "ACCEPTED BY"
+    ],
+    [
+      "qsr-incident",
+      "rl-safety-manager",
+      "INVESTIGATED BY"
+    ],
+    [
+      "qsr-incident",
+      "rl-safety-officer",
+      "REPORTED BY"
+    ],
+    [
+      "qsr-incident",
+      "rl-project-executiv",
+      "NOTIFIED OF"
+    ],
+    [
+      "qsr-incident-record",
+      "rl-safety-manager",
+      "AUTHORED BY"
+    ],
+    [
+      "qsr-incident-record",
+      "rl-doc-controller",
+      "FILED BY"
+    ],
+    [
+      "qsr-incident-witness",
+      "rl-foreman-gen",
+      "PROVIDED BY"
+    ],
+    [
+      "qsr-corrective-actio",
+      "rl-safety-manager",
+      "ISSUED BY"
+    ],
+    [
+      "qsr-corrective-actio",
+      "rl-foreman-gen",
+      "EXECUTED BY"
+    ],
+    [
+      "qsr-safety-violation",
+      "rl-safety-manager",
+      "ISSUED BY"
+    ],
+    [
+      "qsr-safety-violation",
+      "rl-project-executiv",
+      "ESCALATED TO"
+    ],
+    [
+      "qsr-non-conformance",
+      "rl-quality-manager",
+      "ISSUED BY"
+    ],
+    [
+      "qsr-non-conformance",
+      "rl-design-manager",
+      "DISPOSITIONED BY"
+    ],
+    [
+      "qsr-deficiency-notic",
+      "rl-quality-manager",
+      "ISSUED BY"
+    ],
+    [
+      "qsr-deficiency-notic",
+      "rl-super",
+      "FOLLOWED UP BY"
+    ],
+    [
+      "qsr-coord-issue",
+      "rl-bim-manager-vdc",
+      "IDENTIFIED BY"
+    ],
+    [
+      "qsr-coord-issue-2",
+      "rl-design-manager",
+      "IDENTIFIED BY"
+    ],
+    [
+      "qsr-mat-test-report",
+      "rl-field-engineer",
+      "WITNESSED BY"
+    ],
+    [
+      "qsr-system-perf-test",
+      "rl-cx-agent-cxa",
+      "PERFORMED BY"
+    ],
+    [
+      "qsr-system-perf-test",
+      "rl-tab-technician",
+      "PERFORMED BY"
+    ],
+    [
+      "qsr-action-plan",
+      "rl-project-manager",
+      "AUTHORED BY"
+    ],
+    [
+      "qsr-action-plan",
+      "rl-project-executiv",
+      "APPROVED BY"
+    ],
+    [
+      "qsr-action-plan-line",
+      "rl-foreman-gen",
+      "EXECUTED BY"
+    ],
+    [
+      "qsr-total-recordable",
+      "rl-safety-staffing",
+      "CORRELATES WITH"
+    ]
+  ],
+  "verbGlossary": {
+    "ACCEPTED BY": "{source}formally accepts a completed punch item resolution as satisfactory for closeout.",
+    "APPROVED BY": "Senior {target} grants formal authorization for an action plan or corrective strategy to proceed.",
+    "ASSIGNED BY": "{source} delegates a punch item to the responsible trade or crew member for correction.",
+    "AUTHORED BY": "{source} creates the primary written content of an incident record or action plan.",
+    "CATEGORIZED BY": "{source} classifies a punch item by issue type during walk-through or review.",
+    "CLOSED OUT BY": "{source} completes all remaining punch item work and formally marks the resolution as finished.",
+    "COORDINATED BY": "{source} aligns schedules, disciplines, or third-party visits to ensure inspections proceed without conflict.",
+    "CORRELATES WITH": "Standard {target} staffing measure has a statistical relationship with a quality or safety outcome metric.",
+    "DISPOSITIONED BY": "Design {target} determines the accept, reject, or repair disposition of a non-conformance report.",
+    "DOCUMENTED BY": "{source} creates the formal written record of a deficiency or inspection item finding.",
+    "ESCALATED TO": "Senior {target} is formally notified when a safety violation exceeds severity thresholds.",
+    "EVALUATED BY": "{source} reviews individual inspection checklist items and assigns pass, fail, or deficient status.",
+    "EXECUTED BY": "{source} physically carries out the corrective action or action plan task in the field.",
+    "FILED BY": "{source} archives the record into the project document management system for audit and compliance.",
+    "FOLLOWED UP BY": "{source} conducts re-inspection or verification that a deficiency notice has been properly addressed.",
+    "IDENTIFIED BY": "{source} discovers and formally documents a coordination issue, design conflict, or constructability problem.",
+    "INITIATED BY": "{source} creates a new observation or finding record in the quality/safety system based on field conditions.",
+    "INVESTIGATED BY": "{source} conducts a formal root-cause inquiry into an incident, interviewing witnesses and reviewing evidence.",
+    "ISSUED BY": "{source} formally releases a violation, NCR, deficiency notice, or corrective action to the responsible party.",
+    "LOGGED BY": "{source} enters the record into the project tracking system and assigns a control number for workflow.",
+    "MANAGED BY": "{source} oversees the full lifecycle of a quality or safety record from creation through closeout.",
+    "NOTIFIED OF": "Senior {target} is formally informed of a significant incident requiring executive awareness.",
+    "PERFORMED BY": "{source} physically executes an inspection, system test, or commissioning activity on site.",
+    "PROVIDED BY": "Field {target} furnishes a witness statement or firsthand account for an incident record.",
+    "REPORTED BY": "{source} creates and submits the initial incident or safety event report into the formal system.",
+    "REVIEWED BY": "{source} examines a record for accuracy, completeness, and compliance before it advances in workflow.",
+    "SCHEDULED BY": "{source} sets the date, scope, and responsible parties for a planned inspection or quality activity.",
+    "SIGNED OFF BY": "Owner or authority {target} provides final approval on a punch item, clearing it for acceptance.",
+    "WITNESSED BY": "{source} is present during a test, inspection, or material pour to verify procedures and results."
+  }
+}

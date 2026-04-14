@@ -1,0 +1,453 @@
+{
+  "source": "financial-instruments",
+  "target": "phases",
+  "edges": [
+    [
+      "fi-project-budget",
+      "ph-estimating",
+      "ESTABLISHED DURING"
+    ],
+    [
+      "fi-project-budget",
+      "ph-precon-plan",
+      "SCOPED WITHIN"
+    ],
+    [
+      "fi-project-budget",
+      "ph-contract-close",
+      "RECONCILED AT"
+    ],
+    [
+      "fi-budget-line-item",
+      "ph-design",
+      "DERIVED FROM"
+    ],
+    [
+      "fi-budget-line-item",
+      "ph-foundations",
+      "ALLOCATED TO"
+    ],
+    [
+      "fi-budget-line-item",
+      "ph-hvac-dist",
+      "DISTRIBUTED ACROSS"
+    ],
+    [
+      "fi-cost-code",
+      "ph-estimating",
+      "STRUCTURED DURING"
+    ],
+    [
+      "fi-cost-code",
+      "ph-steel",
+      "TAGGED TO"
+    ],
+    [
+      "fi-wbs-code",
+      "ph-precon-plan",
+      "ORGANIZED DURING"
+    ],
+    [
+      "fi-wbs-code",
+      "ph-earthwork",
+      "DECOMPOSED INTO"
+    ],
+    [
+      "fi-budget-code",
+      "ph-program",
+      "DEFINED DURING"
+    ],
+    [
+      "fi-budget-code",
+      "ph-roofing",
+      "ASSIGNED TO"
+    ],
+    [
+      "fi-commit-subcontra",
+      "ph-bidding",
+      "AWARDED DURING"
+    ],
+    [
+      "fi-commit-subcontra",
+      "ph-site-setup",
+      "MOBILIZED FOR"
+    ],
+    [
+      "fi-commit-subcontra",
+      "ph-elec-ri",
+      "EXECUTED DURING"
+    ],
+    [
+      "fi-commit-purchase",
+      "ph-fabrication",
+      "PLACED FOR"
+    ],
+    [
+      "fi-commit-purchase",
+      "ph-delivery",
+      "FULFILLED DURING"
+    ],
+    [
+      "fi-commit-purchase",
+      "ph-curtainwall",
+      "PROCURED FOR"
+    ],
+    [
+      "fi-commit-line-item",
+      "ph-plumb-ri",
+      "PRICED FOR"
+    ],
+    [
+      "fi-commit-line-item",
+      "ph-masonry",
+      "BILLED DURING"
+    ],
+    [
+      "fi-chg-event-ce",
+      "ph-design",
+      "ORIGINATED IN"
+    ],
+    [
+      "fi-chg-event-ce",
+      "ph-foundations",
+      "DISCOVERED DURING"
+    ],
+    [
+      "fi-chg-event-ce",
+      "ph-permit",
+      "TRIGGERED BY"
+    ],
+    [
+      "fi-chg-event-line",
+      "ph-conc-frame",
+      "COSTED AGAINST"
+    ],
+    [
+      "fi-chg-event-line",
+      "ph-framing",
+      "SCOPED TO"
+    ],
+    [
+      "fi-pot-chg-order",
+      "ph-elev-conc",
+      "PROPOSED DURING"
+    ],
+    [
+      "fi-pot-chg-order",
+      "ph-submittals",
+      "IDENTIFIED DURING"
+    ],
+    [
+      "fi-commit-chg-order",
+      "ph-drywall",
+      "APPROVED DURING"
+    ],
+    [
+      "fi-commit-chg-order",
+      "ph-slab",
+      "ISSUED FOR"
+    ],
+    [
+      "fi-cco-line-item",
+      "ph-fp-ri",
+      "CHARGED AGAINST"
+    ],
+    [
+      "fi-cco-line-item",
+      "ph-stairs",
+      "APPLIED TO"
+    ],
+    [
+      "fi-owner-chg-order",
+      "ph-site-util",
+      "COMPENSATED FOR"
+    ],
+    [
+      "fi-owner-chg-order",
+      "ph-barrier",
+      "NEGOTIATED DURING"
+    ],
+    [
+      "fi-budget-mod",
+      "ph-abv-ceil",
+      "REALLOCATED TO"
+    ],
+    [
+      "fi-budget-mod",
+      "ph-paint",
+      "TRANSFERRED DURING"
+    ],
+    [
+      "fi-direct-cost",
+      "ph-demo",
+      "INCURRED DURING"
+    ],
+    [
+      "fi-direct-cost",
+      "ph-safety-orient",
+      "EXPENSED FOR"
+    ],
+    [
+      "fi-direct-cost",
+      "ph-flooring",
+      "RECORDED DURING"
+    ],
+    [
+      "fi-direct-cost-line",
+      "ph-casework",
+      "ITEMIZED FOR"
+    ],
+    [
+      "fi-direct-cost-line",
+      "ph-lv-ri",
+      "POSTED DURING"
+    ],
+    [
+      "fi-owner-invoice",
+      "ph-punch",
+      "WITHHELD UNTIL"
+    ],
+    [
+      "fi-owner-invoice",
+      "ph-perf-ver",
+      "SUBMITTED AFTER"
+    ],
+    [
+      "fi-sub-invoice",
+      "ph-elec-dev",
+      "CERTIFIED FOR"
+    ],
+    [
+      "fi-sub-invoice",
+      "ph-ceil-grid",
+      "MEASURED DURING"
+    ],
+    [
+      "fi-retainage",
+      "ph-final-insp",
+      "RELEASED AFTER"
+    ],
+    [
+      "fi-retainage",
+      "ph-contract-close",
+      "SETTLED AT"
+    ],
+    [
+      "fi-payment",
+      "ph-plumb-fix",
+      "DISBURSED FOR"
+    ],
+    [
+      "fi-payment",
+      "ph-warranty",
+      "HELD THROUGH"
+    ],
+    [
+      "fi-lien-waiver",
+      "ph-contract-close",
+      "COLLECTED DURING"
+    ],
+    [
+      "fi-lien-waiver",
+      "ph-transition",
+      "CLEARED BEFORE"
+    ],
+    [
+      "fi-schedule-values",
+      "ph-bidding",
+      "BROKEN DOWN DURING"
+    ],
+    [
+      "fi-schedule-values",
+      "ph-hvac-trim",
+      "VALUED FOR"
+    ],
+    [
+      "fi-allowance",
+      "ph-program",
+      "BUDGETED DURING"
+    ],
+    [
+      "fi-allowance",
+      "ph-doors",
+      "DRAWN AGAINST"
+    ],
+    [
+      "fi-contingency",
+      "ph-precon-plan",
+      "RESERVED DURING"
+    ],
+    [
+      "fi-contingency",
+      "ph-earthwork",
+      "TAPPED DURING"
+    ],
+    [
+      "fi-cost-forecast",
+      "ph-estimating",
+      "BENCHMARKED FROM"
+    ],
+    [
+      "fi-cost-forecast",
+      "ph-fa-dev",
+      "PROJECTED THROUGH"
+    ],
+    [
+      "fi-cash-flow",
+      "ph-fabrication",
+      "FRONT-LOADED FOR"
+    ],
+    [
+      "fi-cash-flow",
+      "ph-seasonal-cx",
+      "EXTENDED THROUGH"
+    ],
+    [
+      "fi-budget-variance",
+      "ph-conc-frame",
+      "FLAGGED DURING"
+    ],
+    [
+      "fi-cost-growth",
+      "ph-startup",
+      "MONITORED THROUGH"
+    ],
+    [
+      "fi-cost-perf-index",
+      "ph-integrated",
+      "EVALUATED AT"
+    ],
+    [
+      "fi-committed-cost",
+      "ph-bidding",
+      "LOCKED DURING"
+    ],
+    [
+      "fi-chg-order-rate",
+      "ph-tab",
+      "NORMALIZED ACROSS"
+    ],
+    [
+      "fi-contingency-burn",
+      "ph-lv-dev",
+      "DEPLETED BY"
+    ],
+    [
+      "fi-invoice-processi",
+      "ph-training",
+      "DELAYED UNTIL"
+    ],
+    [
+      "fi-cash-flow-2",
+      "ph-asbuilt",
+      "TRUED UP AT"
+    ],
+    [
+      "fi-estimate-at",
+      "ph-prefunc",
+      "REVISED DURING"
+    ],
+    [
+      "fi-allowance",
+      "ph-ceilings",
+      "EXPENDED ON"
+    ],
+    [
+      "fi-markup-pct",
+      "ph-estimating",
+      "ESTABLISHED DURING"
+    ],
+    [
+      "fi-precon-hit-rate",
+      "ph-estimating",
+      "BENCHMARKED FROM"
+    ],
+    [
+      "fi-precon-hit-rate",
+      "ph-bidding",
+      "MEASURED DURING"
+    ],
+    [
+      "fi-win-rate",
+      "ph-bidding",
+      "MEASURED DURING"
+    ],
+    [
+      "fi-profit",
+      "ph-contract-close",
+      "RECONCILED AT"
+    ]
+  ],
+  "verbGlossary": {
+    "ESTABLISHED DURING": "{source} created and approved during the estimating and budgeting {target}",
+    "SCOPED WITHIN": "Project budget total value defined within the preconstruction planning effort based on program requirements",
+    "RECONCILED AT": "Project budget compared to actual spend and closed out during contract closeout",
+    "DERIVED FROM": "{source}s generated from design development documents such as drawings and specifications",
+    "ALLOCATED TO": "{source} dollars assigned to a specific {target} for cost tracking",
+    "DISTRIBUTED ACROSS": "{source} value spread across {target}'s multiple work activities to reflect phased spending",
+    "STRUCTURED DURING": "{source} hierarchy defined and organized during the estimating {target} to match the project breakdown",
+    "TAGGED TO": "{source} assigned to {target} to enable cost tracking at the activity level",
+    "ORGANIZED DURING": "{source} hierarchy established during preconstruction planning to align schedule and cost structures",
+    "DECOMPOSED INTO": "{source} broken into sub-elements corresponding to a specific {target} work packages",
+    "DEFINED DURING": "{source}s created during programming and feasibility to categorize anticipated project costs",
+    "ASSIGNED TO": "{source} linked to {target} to classify that phase's expenditures in the cost ledger",
+    "AWARDED DURING": "Subcontract commitment executed during the bidding and buyout {target} after competitive evaluation",
+    "MOBILIZED FOR": "{source}activated to bring the subcontractor on-site for the site setup {target}",
+    "EXECUTED DURING": "{source}performed during a specific rough-in or {target}",
+    "PLACED FOR": "{source} issued to secure materials or equipment needed for fabrication and long-lead procurement",
+    "FULFILLED DURING": "{source}delivered and received on-site during the material ordering and delivery {target}",
+    "PROCURED FOR": "{source} created to obtain materials required for a building enclosure {target}",
+    "PRICED FOR": "{source} unit price and quantity set for work to be performed in a specific MEP {target}",
+    "BILLED DURING": "{source} invoiced for completed work during a building enclosure {target}",
+    "ORIGINATED IN": "{source} root cause traces back to the design development {target} where the scope was defined",
+    "DISCOVERED DURING": "{source} identified when unforeseen conditions emerge during {target}",
+    "TRIGGERED BY": "{source} caused by regulatory changes or code modifications arising from the permitting {target}",
+    "COSTED AGAINST": "{source} priced against the affected structural {target} budget and resources",
+    "SCOPED TO": "{source} scope limited to work within a specific interior rough-in {target}",
+    "PROPOSED DURING": "{source}submitted for pricing while a structural {target} is actively under way",
+    "IDENTIFIED DURING": "Potential change order recognized from conflicts or gaps discovered during the submittals review {target}",
+    "APPROVED DURING": "{source} approved and executed while an interior rough-in {target} is in progress",
+    "ISSUED FOR": "{source} formally issued to cover additional scope within a sitework {target}",
+    "CHARGED AGAINST": "{source} cost posted to the budget of a specific MEP {target} where the extra work occurs",
+    "APPLIED TO": "{source} cost attributed to a structural {target} for misc metals or rework",
+    "COMPENSATED FOR": "Owner change order reimburses the contractor for owner-directed changes during a site utilities {target}",
+    "NEGOTIATED DURING": "Owner change order terms negotiated while a building enclosure {target} reveals scope gaps",
+    "REALLOCATED TO": "{source} moves dollars from one cost code into {target} that needs additional funding",
+    "TRANSFERRED DURING": "{source} transfers contingency or allowance funds during a finishes {target} to cover overruns",
+    "INCURRED DURING": "{source} recorded for self-performed work or expenses during the demolition and site clearing {target}",
+    "EXPENSED FOR": "{source} charged as a project expense for activities in the safety and environmental orientation {target}",
+    "RECORDED DURING": "{source} transaction captured in the system during a finishes and trim {target}",
+    "ITEMIZED FOR": "{source} broken into individual charges for materials and labor in a finishes {target}",
+    "POSTED DURING": "{source} entered into the cost ledger while a rough-in {target} is actively progressing",
+    "WITHHELD UNTIL": "Owner invoice payment held back pending satisfactory completion of punch list work",
+    "SUBMITTED AFTER": "{source}submitted after the performance verification {target} confirms systems operate to spec",
+    "CERTIFIED FOR": "{source}verified and approved for payment based on work completed in a trim {target}",
+    "MEASURED DURING": "{source}verified against installed work during an interior rough-in {target}",
+    "RELEASED AFTER": "Retainage funds freed once the final inspections {target} confirms all work meets contract requirements",
+    "SETTLED AT": "Retainage balance fully paid out as part of the contract closeout process",
+    "DISBURSED FOR": "{source} issued to a subcontractor or vendor for work completed in a plumbing fixtures {target}",
+    "HELD THROUGH": "{source} retainage withheld throughout the warranty {target} until all warranty obligations are met",
+    "COLLECTED DURING": "Lien waivers gathered from all subcontractors and suppliers during contract closeout",
+    "CLEARED BEFORE": "{source}verified as complete before the facility is formally transitioned to the owner",
+    "BROKEN DOWN DURING": "{source}s created during bidding to align contract value with billable work {target}s",
+    "VALUED FOR": "{source} assigned a dollar value for work within an HVAC trim and controls {target}",
+    "BUDGETED DURING": "{source} are not yet finalized",
+    "DRAWN AGAINST": "Allowance dollars consumed as actual scope and pricing are determined during a finishes {target}",
+    "RESERVED DURING": "{source} funds set aside during preconstruction planning for unknown risks across future {target}s",
+    "TAPPED DURING": "{source} drawn down to cover unforeseen conditions encountered during an earthwork {target}",
+    "BENCHMARKED FROM": "{source} baseline established from the original estimate created during the estimating {target}",
+    "PROJECTED THROUGH": "{source} extended to predict remaining spend through the completion of a commissioning or trim {target}",
+    "FRONT-LOADED FOR": "{source}projection weighted toward early spend for long-lead fabrication deposits and mobilization costs",
+    "EXTENDED THROUGH": "{source}projection timeline stretched to include expenditures during seasonal commissioning activities",
+    "FLAGGED DURING": "{source} variance identified and highlighted when a structural {target} actuals exceed the plan",
+    "MONITORED THROUGH": "{source} tracked through the systems startup {target} to identify late-stage overruns",
+    "EVALUATED AT": "{source} calculated at the integrated systems testing {target} to assess project health",
+    "LOCKED DURING": "{source}cost finalized when subcontracts and purchase orders are executed during bidding and buyout",
+    "NORMALIZED ACROSS": "{source} rate calculated per {target} to enable comparison across projects at the same stage",
+    "DEPLETED BY": "{source} burn rate accelerated by late-{target} changes in devices and low voltage trim installation",
+    "DELAYED UNTIL": "{source} processing time extended because approvals are held until owner training is complete",
+    "TRUED UP AT": "Cash flow variance corrected to actuals when as-built documentation confirms final installed quantities",
+    "REVISED DURING": "Estimate at completion updated during pre-functional testing as final system costs become clear",
+    "EXPENDED ON": "Allowance dollars spent on actual ceiling material and installation once selections are finalized during the finishes {target}"
+  }
+}

@@ -1,0 +1,360 @@
+{
+  "source": "locations",
+  "target": "quality-safety-records",
+  "edges": [
+    [
+      "loc-project-site",
+      "qsr-observation",
+      "OBSERVED AT"
+    ],
+    [
+      "loc-project-site",
+      "qsr-incident",
+      "OCCURRED AT"
+    ],
+    [
+      "loc-project-site",
+      "qsr-safety-violation",
+      "CITED AT"
+    ],
+    [
+      "loc-building",
+      "qsr-quality-observat",
+      "OBSERVED AT"
+    ],
+    [
+      "loc-building",
+      "qsr-insp",
+      "INSPECTED AT"
+    ],
+    [
+      "loc-building",
+      "qsr-scheduled-insp",
+      "SCHEDULED AT"
+    ],
+    [
+      "loc-exterior-zone",
+      "qsr-safety-observati",
+      "OBSERVED AT"
+    ],
+    [
+      "loc-exterior-zone",
+      "qsr-incident",
+      "OCCURRED AT"
+    ],
+    [
+      "loc-laydown-staging",
+      "qsr-safety-observati",
+      "OBSERVED AT"
+    ],
+    [
+      "loc-laydown-staging",
+      "qsr-incident-record",
+      "DOCUMENTED AT"
+    ],
+    [
+      "loc-floor-level",
+      "qsr-observation",
+      "PINNED TO"
+    ],
+    [
+      "loc-floor-level",
+      "qsr-punch-item",
+      "PINNED TO"
+    ],
+    [
+      "loc-floor-level",
+      "qsr-insp",
+      "INSPECTED AT"
+    ],
+    [
+      "loc-floor-level",
+      "qsr-safety-observati",
+      "OBSERVED AT"
+    ],
+    [
+      "loc-below-grade",
+      "qsr-third-party",
+      "INSPECTED AT"
+    ],
+    [
+      "loc-below-grade",
+      "qsr-safety-observati",
+      "OBSERVED AT"
+    ],
+    [
+      "loc-roof-level",
+      "qsr-safety-observati",
+      "OBSERVED AT"
+    ],
+    [
+      "loc-roof-level",
+      "qsr-insp-item",
+      "DEFICIENT ON"
+    ],
+    [
+      "loc-zone-wing",
+      "qsr-punch-item",
+      "TAGGED AT"
+    ],
+    [
+      "loc-zone-wing",
+      "qsr-quality-observat",
+      "OBSERVED AT"
+    ],
+    [
+      "loc-zone-wing",
+      "qsr-insp",
+      "INSPECTED AT"
+    ],
+    [
+      "loc-core-shaft",
+      "qsr-safety-observati",
+      "OBSERVED AT"
+    ],
+    [
+      "loc-core-shaft",
+      "qsr-coord-issue",
+      "FLAGGED AT"
+    ],
+    [
+      "loc-ceiling-plenum",
+      "qsr-insp-item",
+      "DEFICIENT ON"
+    ],
+    [
+      "loc-ceiling-plenum",
+      "qsr-coord-issue",
+      "FLAGGED AT"
+    ],
+    [
+      "loc-room-space",
+      "qsr-punch-item",
+      "TAGGED AT"
+    ],
+    [
+      "loc-room-space",
+      "qsr-punch-item-issue",
+      "CATEGORIZED AT"
+    ],
+    [
+      "loc-room-space",
+      "qsr-quality-observat",
+      "PHOTOGRAPHED AT"
+    ],
+    [
+      "loc-room-space",
+      "qsr-insp",
+      "INSPECTED AT"
+    ],
+    [
+      "loc-functional-area",
+      "qsr-scheduled-insp",
+      "SCHEDULED AT"
+    ],
+    [
+      "loc-functional-area",
+      "qsr-safety-violation",
+      "CITED AT"
+    ],
+    [
+      "loc-wet-area",
+      "qsr-punch-item",
+      "TAGGED AT"
+    ],
+    [
+      "loc-wet-area",
+      "qsr-insp-item",
+      "DEFICIENT ON"
+    ],
+    [
+      "loc-wall-surface",
+      "qsr-punch-item",
+      "PINNED TO"
+    ],
+    [
+      "loc-wall-surface",
+      "qsr-quality-observat",
+      "PHOTOGRAPHED AT"
+    ],
+    [
+      "loc-wall-surface",
+      "qsr-non-conformance",
+      "DEFICIENT ON"
+    ],
+    [
+      "loc-equip-location",
+      "qsr-system-perf-test",
+      "TESTED AT"
+    ],
+    [
+      "loc-equip-location",
+      "qsr-enviro-cx",
+      "COMMISSIONED AT"
+    ],
+    [
+      "loc-equip-location",
+      "qsr-incident",
+      "OCCURRED AT"
+    ],
+    [
+      "loc-penetration-open",
+      "qsr-insp-item",
+      "DEFICIENT ON"
+    ],
+    [
+      "loc-penetration-open",
+      "qsr-third-party",
+      "INSPECTED AT"
+    ],
+    [
+      "loc-fire-smoke",
+      "qsr-insp",
+      "INSPECTED AT"
+    ],
+    [
+      "loc-fire-smoke",
+      "qsr-deficiency-notic",
+      "DEFICIENT ON"
+    ],
+    [
+      "loc-work-zone-phase",
+      "qsr-safety-observati",
+      "OBSERVED AT"
+    ],
+    [
+      "loc-work-zone-phase",
+      "qsr-action-plan",
+      "SCOPED TO"
+    ],
+    [
+      "loc-work-zone-phase",
+      "qsr-corrective-actio",
+      "ASSIGNED TO"
+    ],
+    [
+      "loc-cx-zone",
+      "qsr-enviro-cx",
+      "COMMISSIONED AT"
+    ],
+    [
+      "loc-cx-zone",
+      "qsr-system-perf-test",
+      "TESTED AT"
+    ],
+    [
+      "loc-grid-line",
+      "qsr-coord-issue-2",
+      "REFERENCED AT"
+    ],
+    [
+      "loc-grid-line",
+      "qsr-punch-item",
+      "PINNED TO"
+    ],
+    [
+      "loc-floor-level",
+      "qsr-punch-item-2",
+      "RESOLVED AT"
+    ],
+    [
+      "loc-room-space",
+      "qsr-observation-reso",
+      "MEASURED AT"
+    ],
+    [
+      "loc-defect-density",
+      "qsr-punch-item-3",
+      "QUANTIFIED BY"
+    ],
+    [
+      "loc-punch-items-per",
+      "qsr-punch-item-3",
+      "QUANTIFIED BY"
+    ],
+    [
+      "loc-safety-incident",
+      "qsr-total-recordable",
+      "QUANTIFIED BY"
+    ],
+    [
+      "loc-safety-incident",
+      "qsr-dart-rate",
+      "QUANTIFIED BY"
+    ],
+    [
+      "loc-firestopping-def",
+      "qsr-deficiency-rate",
+      "QUANTIFIED BY"
+    ],
+    [
+      "loc-defect-density",
+      "qsr-observation-dens",
+      "QUANTIFIED BY"
+    ],
+    [
+      "loc-location-coverag",
+      "qsr-insp-pass-rate",
+      "QUANTIFIED BY"
+    ],
+    [
+      "loc-floor-level",
+      "qsr-mat-test-report",
+      "SAMPLED AT"
+    ],
+    [
+      "loc-room-space",
+      "qsr-action-plan-line",
+      "ASSIGNED TO"
+    ],
+    [
+      "loc-building",
+      "qsr-incident-witness",
+      "DOCUMENTED AT"
+    ],
+    [
+      "loc-temp-facility",
+      "qsr-safety-observati",
+      "OBSERVED AT"
+    ],
+    [
+      "loc-right-way",
+      "qsr-incident",
+      "OCCURRED AT"
+    ],
+    [
+      "loc-floor-level",
+      "qsr-non-conformance",
+      "ISSUED AT"
+    ],
+    [
+      "loc-zone-wing",
+      "qsr-corrective-actio",
+      "ASSIGNED TO"
+    ]
+  ],
+  "verbGlossary": {
+    "OBSERVED AT": "A quality or {target} was recorded at this location",
+    "INSPECTED AT": "{source}{target} was conducted at this location",
+    "DEFICIENT ON": "An inspection item or notice was found deficient on a specific location element",
+    "OCCURRED AT": "{target} or event took place at this location",
+    "TAGGED AT": "{source}was tagged to a specific zone or space for closeout",
+    "PHOTOGRAPHED AT": "{source}was photo-documented at this precise location",
+    "PINNED TO": "{source} was geo-pinned or floor-plan-pinned to {target} coordinate",
+    "CITED AT": "A formal {target} or citation was issued referencing this location",
+    "FLAGGED AT": "{source}issue was flagged at a specific spatial location",
+    "TESTED AT": "{source}performance test was conducted at this location",
+    "COMMISSIONED AT": "{source}was performed at this equipment or zone",
+    "SCHEDULED AT": "An inspection or walkthrough was pre-scheduled for this location",
+    "DOCUMENTED AT": "{source}record or witness statement was documented referencing this location",
+    "SCOPED TO": "{source}plan was scoped to address findings within this work zone",
+    "ASSIGNED TO": "{source}was assigned to be resolved at this location",
+    "REFERENCED AT": "{source}issue was referenced using grid-line coordinates",
+    "RESOLVED AT": "{source}was completed and verified at this location",
+    "MEASURED AT": "{source}was measured at the room or space level",
+    "QUANTIFIED BY": "{source}-based measure is quantified by a corresponding quality/safety rate",
+    "SAMPLED AT": "{source}test sample was collected at this floor or level",
+    "CATEGORIZED AT": "{source}was classified by issue category at a specific room or space",
+    "ISSUED AT": "{source}was formally issued referencing this location"
+  }
+}

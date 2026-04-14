@@ -1,0 +1,404 @@
+{
+  "source": "financial-instruments",
+  "target": "risk",
+  "edges": [
+    [
+      "fi-project-budget",
+      "rk-risk-register",
+      "INCORPORATES"
+    ],
+    [
+      "fi-project-budget",
+      "rk-financial-risk",
+      "EXPOSES TO"
+    ],
+    [
+      "fi-project-budget",
+      "rk-risk-exposure",
+      "QUANTIFIES"
+    ],
+    [
+      "fi-contingency",
+      "rk-risk",
+      "RESERVED AGAINST"
+    ],
+    [
+      "fi-contingency",
+      "rk-contingency-rese",
+      "FUNDS"
+    ],
+    [
+      "fi-contingency",
+      "rk-financial-risk",
+      "BUFFERS AGAINST"
+    ],
+    [
+      "fi-contingency",
+      "rk-design-risk",
+      "RESERVED AGAINST"
+    ],
+    [
+      "fi-contingency",
+      "rk-geotechnical-ris",
+      "RESERVED AGAINST"
+    ],
+    [
+      "fi-contingency-burn",
+      "rk-contingency-burn",
+      "MIRRORS"
+    ],
+    [
+      "fi-contingency-burn",
+      "rk-risk-exposure",
+      "SIGNALS"
+    ],
+    [
+      "fi-allowance",
+      "rk-design-risk",
+      "ABSORBS"
+    ],
+    [
+      "fi-allowance",
+      "rk-supply-chain",
+      "ABSORBS"
+    ],
+    [
+      "fi-chg-event-ce",
+      "rk-risk-trigger",
+      "TRIGGERED BY"
+    ],
+    [
+      "fi-chg-event-ce",
+      "rk-design-risk",
+      "TRIGGERED BY"
+    ],
+    [
+      "fi-chg-event-ce",
+      "rk-const-execution",
+      "TRIGGERED BY"
+    ],
+    [
+      "fi-chg-event-ce",
+      "rk-geotechnical-ris",
+      "TRIGGERED BY"
+    ],
+    [
+      "fi-chg-event-ce",
+      "rk-financial-risk",
+      "ESCALATES"
+    ],
+    [
+      "fi-commit-chg-order",
+      "rk-risk",
+      "REALLOCATES"
+    ],
+    [
+      "fi-commit-chg-order",
+      "rk-supply-chain",
+      "TRIGGERED BY"
+    ],
+    [
+      "fi-commit-chg-order",
+      "rk-labor-risk",
+      "TRIGGERED BY"
+    ],
+    [
+      "fi-owner-chg-order",
+      "rk-risk-allocation",
+      "SHIFTS"
+    ],
+    [
+      "fi-owner-chg-order",
+      "rk-financial-risk",
+      "ESCALATES"
+    ],
+    [
+      "fi-pot-chg-order",
+      "rk-risk-score",
+      "EVALUATED BY"
+    ],
+    [
+      "fi-pot-chg-order",
+      "rk-impact-assessmen",
+      "EVALUATED BY"
+    ],
+    [
+      "fi-budget-mod",
+      "rk-residual-risk",
+      "RESPONDS TO"
+    ],
+    [
+      "fi-budget-mod",
+      "rk-risk-response",
+      "ENACTS"
+    ],
+    [
+      "fi-commit-subcontra",
+      "rk-risk-allocation",
+      "TRANSFERS VIA"
+    ],
+    [
+      "fi-commit-subcontra",
+      "rk-const-execution",
+      "TRANSFERS"
+    ],
+    [
+      "fi-commit-subcontra",
+      "rk-labor-risk",
+      "TRANSFERS"
+    ],
+    [
+      "fi-commit-purchase",
+      "rk-supply-chain",
+      "EXPOSES TO"
+    ],
+    [
+      "fi-commit-purchase",
+      "rk-risk-allocation",
+      "TRANSFERS VIA"
+    ],
+    [
+      "fi-retainage",
+      "rk-const-execution",
+      "MITIGATES"
+    ],
+    [
+      "fi-retainage",
+      "rk-residual-risk",
+      "HELD AGAINST"
+    ],
+    [
+      "fi-lien-waiver",
+      "rk-financial-risk",
+      "MITIGATES"
+    ],
+    [
+      "fi-payment",
+      "rk-financial-risk",
+      "EXPOSES TO"
+    ],
+    [
+      "fi-payment",
+      "rk-risk-trigger",
+      "TRIGGERS"
+    ],
+    [
+      "fi-sub-invoice",
+      "rk-financial-risk",
+      "EXPOSES TO"
+    ],
+    [
+      "fi-cost-forecast",
+      "rk-risk-score",
+      "INFORMS"
+    ],
+    [
+      "fi-cost-forecast",
+      "rk-financial-risk",
+      "SIGNALS"
+    ],
+    [
+      "fi-cost-forecast",
+      "rk-likelihood-asses",
+      "INFORMS"
+    ],
+    [
+      "fi-cash-flow",
+      "rk-financial-risk",
+      "EXPOSES TO"
+    ],
+    [
+      "fi-cash-flow",
+      "rk-schedule-risk",
+      "CONSTRAINED BY"
+    ],
+    [
+      "fi-budget-variance",
+      "rk-risk-trigger",
+      "TRIGGERS"
+    ],
+    [
+      "fi-budget-variance",
+      "rk-financial-risk",
+      "SIGNALS"
+    ],
+    [
+      "fi-cost-growth",
+      "rk-risk-score",
+      "ESCALATES"
+    ],
+    [
+      "fi-cost-growth",
+      "rk-contingency-rese",
+      "DEPLETES"
+    ],
+    [
+      "fi-cost-perf-index",
+      "rk-risk-matrix",
+      "FEEDS"
+    ],
+    [
+      "fi-cost-perf-index",
+      "rk-mitigation-actio",
+      "TRIGGERS"
+    ],
+    [
+      "fi-chg-order-rate",
+      "rk-chg-order-rate",
+      "MIRRORS"
+    ],
+    [
+      "fi-chg-order-rate",
+      "rk-coord-risk",
+      "SIGNALS"
+    ],
+    [
+      "fi-committed-cost",
+      "rk-risk-exposure",
+      "QUANTIFIES"
+    ],
+    [
+      "fi-estimate-at",
+      "rk-impact-assessmen",
+      "INFORMS"
+    ],
+    [
+      "fi-cash-flow-2",
+      "rk-schedule-risk",
+      "SIGNALS"
+    ],
+    [
+      "fi-schedule-values",
+      "rk-risk-allocation",
+      "APPORTIONS"
+    ],
+    [
+      "fi-direct-cost",
+      "rk-financial-risk",
+      "EXPOSES TO"
+    ],
+    [
+      "fi-direct-cost",
+      "rk-risk-trigger",
+      "TRIGGERS"
+    ],
+    [
+      "fi-budget-line-item",
+      "rk-risk-category",
+      "MAPPED TO"
+    ],
+    [
+      "fi-cost-code",
+      "rk-risk-category",
+      "MAPPED TO"
+    ],
+    [
+      "fi-wbs-code",
+      "rk-risk-register",
+      "LINKED TO"
+    ],
+    [
+      "fi-owner-invoice",
+      "rk-financial-risk",
+      "EXPOSES TO"
+    ],
+    [
+      "fi-invoice-processi",
+      "rk-financial-risk",
+      "SIGNALS"
+    ],
+    [
+      "fi-cco-line-item",
+      "rk-risk-owner",
+      "ASSIGNED TO"
+    ],
+    [
+      "fi-chg-event-line",
+      "rk-impact-assessmen",
+      "QUANTIFIES"
+    ],
+    [
+      "fi-commit-line-item",
+      "rk-risk-exposure",
+      "CONTRIBUTES TO"
+    ],
+    [
+      "fi-budget-code",
+      "rk-contingency-rese",
+      "CLASSIFIES"
+    ],
+    [
+      "fi-profit",
+      "rk-financial-risk",
+      "EXPOSES TO"
+    ],
+    [
+      "fi-margin-pct",
+      "rk-financial-risk",
+      "SIGNALS"
+    ],
+    [
+      "fi-margin-fade",
+      "rk-financial-risk",
+      "SIGNALS"
+    ],
+    [
+      "fi-overhead-rate",
+      "rk-financial-risk",
+      "ESCALATES"
+    ],
+    [
+      "fi-dso",
+      "rk-financial-risk",
+      "SIGNALS"
+    ],
+    [
+      "fi-revenue-concentration",
+      "rk-financial-risk",
+      "EXPOSES TO"
+    ],
+    [
+      "fi-bonding-capacity",
+      "rk-financial-risk",
+      "MITIGATES"
+    ],
+    [
+      "fi-pm-workload",
+      "rk-const-execution",
+      "SIGNALS"
+    ]
+  ],
+  "verbGlossary": {
+    "ABSORBS": "{source} provides a monetary cushion that absorbs cost impact when {target} materializes, preventing budget overrun (e.g., allowance absorbs design-risk scope gaps)",
+    "APPORTIONS": "{source} structure distributes {target} proportionally across line items or parties (e.g., SOV apportions risk allocation across work packages)",
+    "ASSIGNED TO": "{source} line item is linked to a responsible party who owns the associated {target} (e.g., CCO line item assigned to risk owner for backcharge tracking)",
+    "BUFFERS AGAINST": "{source} reserve provides a dedicated buffer that prevents {target} category from causing immediate project distress (e.g., contingency buffers against financial risk)",
+    "CLASSIFIES": "{source} classification code categorizes or tags {target} reserve for tracking purposes (e.g., budget code classifies contingency reserve by risk type)",
+    "CONSTRAINED BY": "{source} projection is limited or shaped by {target} factor that restricts cash timing or availability (e.g., cash flow projection constrained by schedule risk)",
+    "CONTRIBUTES TO": "{source} line item adds to the cumulative monetary {target} for a given risk (e.g., commitment line item contributes to overall risk exposure value)",
+    "DEPLETES": "Adverse financial trend draws down {target} reserve over time (e.g., cost growth depletes contingency reserve)",
+    "ENACTS": "{source} action formally executes {target} response strategy (e.g., budget modification enacts a risk response by reallocating funds)",
+    "ESCALATES": "{source} event increases the severity or urgency of {target} (e.g., change event escalates financial risk when costs exceed thresholds)",
+    "EVALUATED BY": "{source} item is assessed through {target} evaluation process before approval (e.g., potential change order evaluated by impact assessment)",
+    "EXPOSES TO": "{source} or transaction creates vulnerability to {target} category (e.g., purchase order exposes project to supply chain risk)",
+    "FEEDS": "{source} provides input data to {target} assessment framework (e.g., CPI feeds risk matrix scoring)",
+    "FUNDS": "{source} provides the monetary backing for {target} reserve (e.g., contingency funds the contingency reserve)",
+    "HELD AGAINST": "{source} amount is withheld as security against {target} until obligations are fulfilled (e.g., retainage held against residual risk of incomplete work)",
+    "INCORPORATES": "{source} plan formally includes {target}s as part of its structure (e.g., project budget incorporates risk register items as line items)",
+    "INFORMS": "{source} data provides decision-making input to {target} assessment (e.g., cost forecast informs likelihood assessment of overrun)",
+    "LINKED TO": "{source} classification element is associated with {target} tracking structure for traceability (e.g., WBS code linked to risk register entries)",
+    "MAPPED TO": "{source} categorization corresponds to {target} classification for cross-domain analysis (e.g., cost code mapped to risk category)",
+    "MIRRORS": "{source} and {target} track the same underlying phenomenon from different perspectives (e.g., change order rate mirrors risk change order rate)",
+    "MITIGATES": "{source} mechanism reduces the probability or impact of {target} (e.g., retainage mitigates construction execution risk by ensuring completion)",
+    "QUANTIFIES": "{source} data assigns a dollar value to {target} or its impact (e.g., change event line item quantifies impact assessment in dollars)",
+    "REALLOCATES": "{source} change redistributes cost responsibility among parties in response to {target} event (e.g., commitment change order reallocates risk between GC and sub)",
+    "RESERVED AGAINST": "{source} funds are set aside specifically to cover a named {target} if it occurs (e.g., contingency reserved against geotechnical risk)",
+    "RESPONDS TO": "{source} action is taken as a direct reaction to {target} that has materialized (e.g., budget modification responds to residual risk)",
+    "SHIFTS": "{source} moves {target} ownership from one party to another (e.g., owner change order shifts risk allocation to the owner)",
+    "SIGNALS": "{source} serves as an early warning indicator that {target} is emerging or worsening (e.g., budget variance signals financial risk)",
+    "TRANSFERS": "{source} commitment moves {target} responsibility to another party through contractual obligation (e.g., subcontract transfers construction execution risk to subcontractor)",
+    "TRANSFERS VIA": "{source} serves as the contractual vehicle through which {target} is formally allocated to another party (e.g., subcontract transfers risk via risk allocation clause)",
+    "TRIGGERED BY": "{source} event or instrument is caused or initiated by {target} materializing (e.g., change event triggered by design risk when unforeseen conditions require scope changes)",
+    "TRIGGERS": "{source} event or threshold crossing activates {target} response or escalation (e.g., payment delay triggers risk trigger for subcontractor default)"
+  }
+}

@@ -1,0 +1,214 @@
+{
+  "source": "risk",
+  "target": "roles",
+  "edges": [
+    [
+      "rk-risk-register",
+      "rl-project-manager",
+      "MAINTAINED BY"
+    ],
+    [
+      "rk-risk-register",
+      "rl-project-executiv",
+      "REVIEWED BY"
+    ],
+    [
+      "rk-risk-category",
+      "rl-preconstruction",
+      "CLASSIFIED BY"
+    ],
+    [
+      "rk-risk-trigger",
+      "rl-super",
+      "IDENTIFIED BY"
+    ],
+    [
+      "rk-risk-trigger",
+      "rl-field-engineer",
+      "MONITORED BY"
+    ],
+    [
+      "rk-risk-owner",
+      "rl-project-manager",
+      "ASSIGNED BY"
+    ],
+    [
+      "rk-likelihood-asses",
+      "rl-estimator-chief",
+      "EVALUATED BY"
+    ],
+    [
+      "rk-impact-assessmen",
+      "rl-cost-engineer",
+      "QUANTIFIED BY"
+    ],
+    [
+      "rk-risk-score",
+      "rl-scheduler-projec",
+      "CALCULATED BY"
+    ],
+    [
+      "rk-risk-matrix",
+      "rl-project-executiv",
+      "CALIBRATED BY"
+    ],
+    [
+      "rk-mitigation-actio",
+      "rl-super",
+      "EXECUTED BY"
+    ],
+    [
+      "rk-mitigation-actio",
+      "rl-project-engineer",
+      "TRACKED BY"
+    ],
+    [
+      "rk-contingency-rese",
+      "rl-cost-engineer",
+      "DRAWN DOWN BY"
+    ],
+    [
+      "rk-contingency-rese",
+      "rl-project-executiv",
+      "AUTHORIZED BY"
+    ],
+    [
+      "rk-schedule-buffer",
+      "rl-scheduler-projec",
+      "ALLOCATED BY"
+    ],
+    [
+      "rk-residual-risk",
+      "rl-project-manager",
+      "MONITORED BY"
+    ],
+    [
+      "rk-design-risk",
+      "rl-design-manager",
+      "ASSESSED BY"
+    ],
+    [
+      "rk-design-risk",
+      "rl-bim-manager-vdc",
+      "DETECTED BY"
+    ],
+    [
+      "rk-const-execution",
+      "rl-super",
+      "MITIGATED BY"
+    ],
+    [
+      "rk-safety-risk",
+      "rl-safety-manager",
+      "INSPECTED BY"
+    ],
+    [
+      "rk-safety-risk",
+      "rl-safety-officer",
+      "REPORTED BY"
+    ],
+    [
+      "rk-enviro-risk",
+      "rl-quality-manager",
+      "AUDITED BY"
+    ],
+    [
+      "rk-supply-chain",
+      "rl-procure-manager",
+      "HEDGED BY"
+    ],
+    [
+      "rk-geotechnical-ris",
+      "rl-field-engineer",
+      "SURVEYED BY"
+    ],
+    [
+      "rk-labor-risk",
+      "rl-foreman-gen",
+      "ESCALATED BY"
+    ],
+    [
+      "rk-reg-permit-risk",
+      "rl-contract-adminis",
+      "TRACKED BY"
+    ],
+    [
+      "rk-coord-risk",
+      "rl-project-engineer",
+      "FLAGGED BY"
+    ],
+    [
+      "rk-schedule-risk",
+      "rl-scheduler-projec",
+      "FORECASTED BY"
+    ],
+    [
+      "rk-financial-risk",
+      "rl-accountant-finan",
+      "ANALYZED BY"
+    ],
+    [
+      "rk-insurance-requir",
+      "rl-contract-adminis",
+      "ENFORCED BY"
+    ],
+    [
+      "rk-surety-bond",
+      "rl-procure-manager",
+      "SECURED BY"
+    ],
+    [
+      "rk-risk-allocation",
+      "rl-contract-adminis",
+      "NEGOTIATED BY"
+    ],
+    [
+      "rk-risk-exposure",
+      "rl-cost-engineer",
+      "CALCULATED BY"
+    ],
+    [
+      "rk-contingency-burn",
+      "rl-project-manager",
+      "REVIEWED BY"
+    ],
+    [
+      "rk-incident-rate",
+      "rl-safety-manager",
+      "BENCHMARKED BY"
+    ]
+  ],
+  "verbGlossary": {
+    "ALLOCATED BY": "{source} distributes schedule buffer or contingency time across activities to absorb risk-driven delays.",
+    "ANALYZED BY": "{source} examines financial risk indicators against budget and commitment data to surface cost exposure trends.",
+    "ASSESSED BY": "{target} evaluates {source} category for probability and severity based on design documents, site conditions, or trade coordination gaps.",
+    "ASSIGNED BY": "{source} designates a specific person or trade partner as accountable for monitoring and responding to an identified risk.",
+    "AUDITED BY": "{source} conducts formal checks on environmental compliance, verifying permit adherence and site condition conformance.",
+    "AUTHORIZED BY": "{source} grants formal approval to draw from contingency reserves when {target} event materializes on the project.",
+    "BENCHMARKED BY": "{source} compares {target} metric against portfolio history or industry standards to evaluate project safety or cost performance.",
+    "CALCULATED BY": "{source} computes {target} score or exposure value using likelihood, impact, and cost data from the project record.",
+    "CALIBRATED BY": "{source} adjusts risk matrix thresholds and scoring bands based on project type, contract value, and organizational risk tolerance.",
+    "CLASSIFIED BY": "{source} assigns risks into structured categories during preconstruction planning to organize {target} register.",
+    "DETECTED BY": "{source} identifies {target} condition through model coordination, clash detection, or field observation before it becomes an issue.",
+    "DRAWN DOWN BY": "{source} processes contingency expenditures against {target} event, reducing the remaining reserve balance and updating forecasts.",
+    "ENFORCED BY": "{source} verifies that required insurance certificates and coverage limits are current and compliant with contract terms.",
+    "ESCALATED BY": "{source} raises a labor or field-level risk to project leadership when conditions exceed crew-level resolution authority.",
+    "EVALUATED BY": "{source} scores the likelihood of {target} event occurring based on historical bid data, site conditions, and trade complexity.",
+    "EXECUTED BY": "{source} carries out a mitigation action in the field, implementing corrective work, schedule acceleration, or protective measures.",
+    "FLAGGED BY": "{source} marks a coordination or trade-interface risk for review when overlapping scopes or sequencing conflicts are identified.",
+    "FORECASTED BY": "{source} projects the schedule impact of identified risks using float analysis, critical path simulation, and resource leveling.",
+    "HEDGED BY": "{source} reduces supply chain risk exposure through dual-sourcing, early procurement, or material price lock-in agreements.",
+    "IDENTIFIED BY": "{source} recognizes {target} trigger condition in the field based on weather, site access, crew performance, or material delivery status.",
+    "INSPECTED BY": "{source} conducts safety inspections on site to identify hazard conditions and verify compliance with the project safety plan.",
+    "MAINTAINED BY": "{source} keeps {target} register current throughout the project, updating status, adding new risks, and closing resolved items.",
+    "MITIGATED BY": "{source} takes direct field action to reduce construction execution risk through crew resequencing, method changes, or protective work.",
+    "MONITORED BY": "{source} tracks {target} indicator or residual risk over time, reviewing trends at regular intervals and flagging deviations.",
+    "NEGOTIATED BY": "{source} establishes risk allocation terms in contracts and subcontracts, defining which party bears specific risk categories.",
+    "QUANTIFIED BY": "{source} converts a qualitative risk assessment into dollar or schedule values using estimating data and project cost models.",
+    "REPORTED BY": "{source} documents a safety risk observation or near-miss event, creating the formal record that enters {target} tracking system.",
+    "REVIEWED BY": "{source} examines {target} register or risk metric at set intervals to validate accuracy and confirm response actions are on track.",
+    "SECURED BY": "{source} obtains surety bonds from trade partners, verifying bond capacity and confirming coverage against subcontract values.",
+    "SURVEYED BY": "{source} investigates geotechnical risk conditions through field observation, test pit results, and soil report correlation.",
+    "TRACKED BY": "{source} follows {target} item or permit condition through its lifecycle, updating status and verifying completion of required actions."
+  }
+}

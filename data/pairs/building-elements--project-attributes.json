@@ -1,0 +1,344 @@
+{
+  "source": "building-elements",
+  "target": "project-attributes",
+  "edges": [
+    [
+      "be-deep-fdn",
+      "pa-foundation-type",
+      "CLASSIFIED BY"
+    ],
+    [
+      "be-deep-fdn",
+      "pa-seismic-design",
+      "GOVERNED BY"
+    ],
+    [
+      "be-deep-fdn",
+      "pa-number-stories",
+      "SIZED BY"
+    ],
+    [
+      "be-shallow-fdn",
+      "pa-foundation-type",
+      "CLASSIFIED BY"
+    ],
+    [
+      "be-shallow-fdn",
+      "pa-project-type",
+      "SEGMENTED BY"
+    ],
+    [
+      "be-fdn-walls",
+      "pa-number-stories-2",
+      "SIZED BY"
+    ],
+    [
+      "be-grade-beams",
+      "pa-seismic-design",
+      "GOVERNED BY"
+    ],
+    [
+      "be-sog",
+      "pa-gross-building",
+      "SCALED BY"
+    ],
+    [
+      "be-bg-wp",
+      "pa-climate-zone",
+      "SPECIFIED BY"
+    ],
+    [
+      "be-excav",
+      "pa-site-constraints",
+      "CONSTRAINED BY"
+    ],
+    [
+      "be-excav",
+      "pa-foundation-type",
+      "DRIVEN BY"
+    ],
+    [
+      "be-dewater",
+      "pa-climate-zone",
+      "INFLUENCED BY"
+    ],
+    [
+      "be-erosion",
+      "pa-site-area",
+      "SCALED BY"
+    ],
+    [
+      "be-columns",
+      "pa-struct-system",
+      "DETERMINED BY"
+    ],
+    [
+      "be-columns",
+      "pa-number-stories",
+      "SIZED BY"
+    ],
+    [
+      "be-beams",
+      "pa-struct-system",
+      "DETERMINED BY"
+    ],
+    [
+      "be-slabs",
+      "pa-struct-system",
+      "DETERMINED BY"
+    ],
+    [
+      "be-slabs",
+      "pa-gross-building",
+      "SCALED BY"
+    ],
+    [
+      "be-roof-struct",
+      "pa-struct-system",
+      "DETERMINED BY"
+    ],
+    [
+      "be-connections",
+      "pa-seismic-design",
+      "GOVERNED BY"
+    ],
+    [
+      "be-curtainwall",
+      "pa-building-height",
+      "SCALED BY"
+    ],
+    [
+      "be-curtainwall",
+      "pa-energy-code",
+      "MANDATED BY"
+    ],
+    [
+      "be-windows",
+      "pa-building-height",
+      "SCALED BY"
+    ],
+    [
+      "be-windows",
+      "pa-energy-code",
+      "MANDATED BY"
+    ],
+    [
+      "be-ext-doors",
+      "pa-accessibility-st",
+      "GOVERNED BY"
+    ],
+    [
+      "be-masonry-v",
+      "pa-climate-zone",
+      "SPECIFIED BY"
+    ],
+    [
+      "be-panels",
+      "pa-modular-prefab",
+      "SOURCED FROM"
+    ],
+    [
+      "be-amb",
+      "pa-climate-zone",
+      "SPECIFIED BY"
+    ],
+    [
+      "be-ext-insul",
+      "pa-climate-zone",
+      "SPECIFIED BY"
+    ],
+    [
+      "be-ext-insul",
+      "pa-energy-code",
+      "MANDATED BY"
+    ],
+    [
+      "be-roof-mem",
+      "pa-climate-zone",
+      "SPECIFIED BY"
+    ],
+    [
+      "be-roof-insul",
+      "pa-energy-code",
+      "MANDATED BY"
+    ],
+    [
+      "be-skylights",
+      "pa-leed-certificati",
+      "CREDITED TOWARD"
+    ],
+    [
+      "be-elev-car",
+      "pa-number-stories",
+      "SIZED BY"
+    ],
+    [
+      "be-elev-mach",
+      "pa-building-height",
+      "SIZED BY"
+    ],
+    [
+      "be-sprink-main",
+      "pa-fire-sprinkler",
+      "REQUIRED BY"
+    ],
+    [
+      "be-sprink-head",
+      "pa-occupancy-group",
+      "GOVERNED BY"
+    ],
+    [
+      "be-fa",
+      "pa-occupancy-group",
+      "GOVERNED BY"
+    ],
+    [
+      "be-standpipe",
+      "pa-building-height",
+      "REQUIRED BY"
+    ],
+    [
+      "be-dom-water",
+      "pa-number-units",
+      "SIZED BY"
+    ],
+    [
+      "be-plumb-fix",
+      "pa-number-units",
+      "SIZED BY"
+    ],
+    [
+      "be-plumb-fix",
+      "pa-accessibility-st",
+      "GOVERNED BY"
+    ],
+    [
+      "be-power-dist",
+      "pa-gross-building",
+      "SCALED BY"
+    ],
+    [
+      "be-lighting",
+      "pa-energy-code",
+      "MANDATED BY"
+    ],
+    [
+      "be-emerg-pwr",
+      "pa-occupancy-group",
+      "REQUIRED BY"
+    ],
+    [
+      "be-hvac-ctrl",
+      "pa-energy-code",
+      "MANDATED BY"
+    ],
+    [
+      "be-hvac-ctrl",
+      "pa-net-zero-target",
+      "OPTIMIZED FOR"
+    ],
+    [
+      "be-bas",
+      "pa-leed-certificati",
+      "REQUIRED BY"
+    ],
+    [
+      "be-tab",
+      "pa-leed-certificati",
+      "COMMISSIONED FOR"
+    ],
+    [
+      "be-data",
+      "pa-project-type",
+      "SEGMENTED BY"
+    ],
+    [
+      "be-security",
+      "pa-project-type",
+      "SEGMENTED BY"
+    ],
+    [
+      "be-specialty-sys",
+      "pa-specialty-system",
+      "SPECIFIED BY"
+    ],
+    [
+      "be-studs",
+      "pa-project-type",
+      "SEGMENTED BY"
+    ],
+    [
+      "be-drywall",
+      "pa-project-type",
+      "SEGMENTED BY"
+    ],
+    [
+      "be-act",
+      "pa-project-type",
+      "SEGMENTED BY"
+    ],
+    [
+      "be-paving",
+      "pa-site-area",
+      "SCALED BY"
+    ],
+    [
+      "be-paving",
+      "pa-parking-type",
+      "DETERMINED BY"
+    ],
+    [
+      "be-landscape",
+      "pa-site-area",
+      "SCALED BY"
+    ],
+    [
+      "be-sidewalks",
+      "pa-accessibility-st",
+      "GOVERNED BY"
+    ],
+    [
+      "be-stairs",
+      "pa-accessibility-st",
+      "GOVERNED BY"
+    ],
+    [
+      "be-paint",
+      "pa-gross-building",
+      "SCALED BY"
+    ],
+    [
+      "be-tile",
+      "pa-project-type",
+      "SEGMENTED BY"
+    ],
+    [
+      "be-casework",
+      "pa-project-type",
+      "SEGMENTED BY"
+    ],
+    [
+      "be-fencing",
+      "pa-site-constraints",
+      "DRIVEN BY"
+    ]
+  ],
+  "verbGlossary": {
+    "CLASSIFIED BY": "{source} type is categorized according to {target} attribute (e.g., deep vs. shallow foundation classified by foundation type)",
+    "DETERMINED BY": "{source} selection or configuration is driven by {target} attribute's structural or site designation",
+    "SCALED BY": "{source} scope or quantity increases proportionally with {target} (e.g., curtain wall area scales with building height)",
+    "SIZED BY": "{source} capacity or count is sized based on {target} quantity (e.g., elevator count sized by number of stories)",
+    "REQUIRED BY": "{source} is mandated because {target} attribute triggers a code or contractual requirement",
+    "GOVERNED BY": "{source} design and installation must comply with requirements dictated by {target}, or seismic category",
+    "MANDATED BY": "{source} performance threshold is required by {target} or regulatory standard",
+    "SPECIFIED BY": "{source} characteristics are specified based on {target} thermal, moisture, or specialty requirements",
+    "COMMISSIONED FOR": "{source} undergoes commissioning testing to satisfy the target sustainability certification's verification requirements",
+    "SEGMENTED BY": "{source} installation metrics are broken down by {target} to identify type-specific patterns and benchmarks",
+    "CONSTRAINED BY": "{source} scope or placement is limited by {target} site constraint attribute",
+    "DRIVEN BY": "{source} inclusion or scope is primarily caused by {target} attribute's conditions",
+    "INFLUENCED BY": "{source} scope is affected by {target} attribute without being solely determined by it",
+    "SOURCED FROM": "{source} is prefabricated off-site as specified by {target}",
+    "CREDITED TOWARD": "{source} contributes points or compliance credit toward the target sustainability certification",
+    "OPTIMIZED FOR": "{source} is configured and tuned to achieve the target energy or sustainability performance goal"
+  }
+}

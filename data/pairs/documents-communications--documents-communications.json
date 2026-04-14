@@ -1,0 +1,362 @@
+{
+  "source": "documents-communications",
+  "target": "documents-communications",
+  "edges": [
+    [
+      "doc-drawing-set",
+      "doc-drawing-sheet",
+      "CONTAINS"
+    ],
+    [
+      "doc-drawing-sheet",
+      "doc-drawing-revision",
+      "REVISED BY"
+    ],
+    [
+      "doc-drawing-revision",
+      "doc-drawing-sheet",
+      "SUPERSEDES"
+    ],
+    [
+      "doc-drawing-set",
+      "doc-specification-se",
+      "ACCOMPANIED BY"
+    ],
+    [
+      "doc-specification-se",
+      "doc-submittal",
+      "REQUIRES"
+    ],
+    [
+      "doc-addendum",
+      "doc-drawing-set",
+      "MODIFIES"
+    ],
+    [
+      "doc-addendum",
+      "doc-specification-se",
+      "MODIFIES"
+    ],
+    [
+      "doc-bulletin-archite",
+      "doc-drawing-sheet",
+      "CLARIFIES"
+    ],
+    [
+      "doc-bulletin-archite",
+      "doc-specification-se",
+      "SUPPLEMENTS"
+    ],
+    [
+      "doc-req-info-rfi",
+      "doc-rfi-response",
+      "ANSWERED BY"
+    ],
+    [
+      "doc-req-info-rfi",
+      "doc-drawing-sheet",
+      "REFERENCES"
+    ],
+    [
+      "doc-req-info-rfi",
+      "doc-specification-se",
+      "REFERENCES"
+    ],
+    [
+      "doc-rfi-response",
+      "doc-bulletin-archite",
+      "TRIGGERS"
+    ],
+    [
+      "doc-rfi-response",
+      "doc-drawing-revision",
+      "TRIGGERS"
+    ],
+    [
+      "doc-req-info-rfi",
+      "doc-req-proposal-rfp",
+      "ESCALATES TO"
+    ],
+    [
+      "doc-submittal",
+      "doc-submittal-respon",
+      "REVIEWED BY"
+    ],
+    [
+      "doc-shop-drawing",
+      "doc-submittal",
+      "SUBMITTED AS"
+    ],
+    [
+      "doc-product-data",
+      "doc-submittal",
+      "SUBMITTED AS"
+    ],
+    [
+      "doc-sample-submittal",
+      "doc-submittal",
+      "SUBMITTED AS"
+    ],
+    [
+      "doc-submittal-respon",
+      "doc-drawing-revision",
+      "MAY TRIGGER"
+    ],
+    [
+      "doc-submittal",
+      "doc-specification-se",
+      "RESPONDS TO"
+    ],
+    [
+      "doc-correspondence",
+      "doc-correspondence",
+      "REPLIES TO"
+    ],
+    [
+      "doc-transmittal",
+      "doc-drawing-set",
+      "DELIVERS"
+    ],
+    [
+      "doc-transmittal",
+      "doc-submittal",
+      "DELIVERS"
+    ],
+    [
+      "doc-notice-delay",
+      "doc-correspondence",
+      "SERVED VIA"
+    ],
+    [
+      "doc-chg-directive",
+      "doc-req-proposal-rfp",
+      "TRIGGERS"
+    ],
+    [
+      "doc-chg-directive",
+      "doc-bulletin-archite",
+      "FOLLOWS"
+    ],
+    [
+      "doc-notice-delay",
+      "doc-daily-report",
+      "SUPPORTED BY"
+    ],
+    [
+      "doc-meeting",
+      "doc-meeting-minutes",
+      "PRODUCES"
+    ],
+    [
+      "doc-meeting-minutes",
+      "doc-req-info-rfi",
+      "GENERATES"
+    ],
+    [
+      "doc-meeting-minutes",
+      "doc-project-task",
+      "GENERATES"
+    ],
+    [
+      "doc-meeting-minutes",
+      "doc-action-plan",
+      "GENERATES"
+    ],
+    [
+      "doc-daily-report",
+      "doc-daily-log-note",
+      "CONTAINS"
+    ],
+    [
+      "doc-daily-report",
+      "doc-phone-call-log",
+      "CONTAINS"
+    ],
+    [
+      "doc-daily-log",
+      "doc-daily-report",
+      "TEMPLATES"
+    ],
+    [
+      "doc-plan-revision",
+      "doc-drawing-revision",
+      "ACKNOWLEDGES"
+    ],
+    [
+      "doc-plan-revision",
+      "doc-daily-report",
+      "LOGGED IN"
+    ],
+    [
+      "doc-site-instruction",
+      "doc-daily-report",
+      "RECORDED IN"
+    ],
+    [
+      "doc-site-instruction",
+      "doc-specification-se",
+      "ENFORCES"
+    ],
+    [
+      "doc-action-plan",
+      "doc-action-plan-line",
+      "DECOMPOSES INTO"
+    ],
+    [
+      "doc-action-plan",
+      "doc-meeting-minutes",
+      "REVIEWED AT"
+    ],
+    [
+      "doc-photo",
+      "doc-daily-report",
+      "ATTACHED TO"
+    ],
+    [
+      "doc-photo",
+      "doc-punch-list-as",
+      "DOCUMENTS"
+    ],
+    [
+      "doc-video",
+      "doc-daily-report",
+      "ATTACHED TO"
+    ],
+    [
+      "doc-punch-list-as",
+      "doc-as-built-docs",
+      "PRECEDES"
+    ],
+    [
+      "doc-as-built-docs",
+      "doc-drawing-revision",
+      "INCORPORATES"
+    ],
+    [
+      "doc-as-built-docs",
+      "doc-o-m-manual",
+      "INCLUDES"
+    ],
+    [
+      "doc-as-built-docs",
+      "doc-warranty-docs",
+      "INCLUDES"
+    ],
+    [
+      "doc-o-m-manual",
+      "doc-product-data",
+      "COMPILED FROM"
+    ],
+    [
+      "doc-warranty-docs",
+      "doc-lien-waiver",
+      "ACCOMPANIES"
+    ],
+    [
+      "doc-punch-list-as",
+      "doc-action-plan",
+      "GENERATES"
+    ],
+    [
+      "doc-form-proforma",
+      "doc-daily-report",
+      "STRUCTURES"
+    ],
+    [
+      "doc-form-proforma",
+      "doc-action-plan",
+      "STRUCTURES"
+    ],
+    [
+      "doc-rfi-response-2",
+      "doc-req-info-rfi",
+      "MEASURES"
+    ],
+    [
+      "doc-rfi-volume",
+      "doc-req-info-rfi",
+      "MEASURES"
+    ],
+    [
+      "doc-submittal-cycle",
+      "doc-submittal",
+      "MEASURES"
+    ],
+    [
+      "doc-submittal-reject",
+      "doc-submittal-respon",
+      "MEASURES"
+    ],
+    [
+      "doc-drawing-revision-2",
+      "doc-drawing-revision",
+      "MEASURES"
+    ],
+    [
+      "doc-daily-log-2",
+      "doc-daily-report",
+      "MEASURES"
+    ],
+    [
+      "doc-correspondence-r",
+      "doc-correspondence",
+      "MEASURES"
+    ],
+    [
+      "doc-drawing-set",
+      "doc-req-info-rfi",
+      "PROMPTS"
+    ],
+    [
+      "doc-drawing-revision",
+      "doc-req-info-rfi",
+      "TRIGGERS"
+    ],
+    [
+      "doc-submittal-respon",
+      "doc-shop-drawing",
+      "RELEASES FOR FABRICATION"
+    ]
+  ],
+  "verbGlossary": {
+    "CONTAINS": "Parent {target} includes the target as a component part — the target exists within the source's structure (e.g., a drawing set contains individual sheets, a daily report contains log notes)",
+    "REVISED BY": "{source} document has a newer version issued as the target — {target}",
+    "SUPERSEDES": "{source} revision replaces the target as the current version — all parties must work from the source after issuance, the target is no longer {target} of record",
+    "ACCOMPANIED BY": "{source} document is issued together with {target}ual package (e.g., drawings accompanied by specifications)",
+    "REQUIRES": "{source} document mandates that {target} be produced — a contractual or specification-driven requirement for submittal or deliverable (e.g., specification section requires a submittal)",
+    "MODIFIES": "{source} {target} formally changes the content of the target — the target's requirements, scope, or details are altered by the source (e.g., addendum modifies drawings or specs before contract execution)",
+    "CLARIFIES": "{source} {target} provides additional detail or interpretation of the target without formally changing it — resolves ambiguity in the target's content",
+    "SUPPLEMENTS": "{source} {target} adds information to the target without replacing it — extends or elaborates on the target's content as a companion document",
+    "ANSWERED BY": "{source} request receives the target as its formal response — {target}ion requested by the source",
+    "REFERENCES": "{source} {target} cites or points to the target for context — the source identifies a specific location or section in the target that is relevant to its content",
+    "TRIGGERS": "{source} {target} completion or disposition causes the target to be initiated — a causal workflow relationship where the source's outcome creates the need for the target",
+    "ESCALATES TO": "{source} document is elevated to {target} or cost implications exceed the source's authority — a formal handoff to a higher-impact process",
+    "REVIEWED BY": "{source} document is evaluated by the party producing the target — {target} on the source",
+    "SUBMITTED AS": "{source} document is packaged and transmitted as {target} type — the source is the content and the target is the formal submittal wrapper",
+    "MAY TRIGGER": "{source} {target} disposition can but does not always cause the target to be created — a conditional workflow relationship depending on the source's outcome (e.g., a rejected submittal may trigger a drawing revision)",
+    "RESPONDS TO": "{source} {target} is created in response to requirements defined in the target — the target's content drives the creation and scope of the source",
+    "REPLIES TO": "{source} {target} is a formal written response to a prior instance of the same document type — a sequential correspondence chain between project parties",
+    "DELIVERS": "{source} {target} serves as the cover document recording formal delivery of the target — the source is the delivery receipt, the target is the delivered content",
+    "SERVED VIA": "{source} {target} is formally delivered using the target's communication channel — the source's contractual notice requirements are met through the target",
+    "FOLLOWS": "{source} {target} is issued as a consequence of the target — the target's direction or decision leads to the source being created as the next step",
+    "SUPPORTED BY": "{source} document's claims or assertions are evidenced by the target — {target} that substantiates the source",
+    "PRODUCES": "{source} event generates {target}ed output — the target is the formal record created by the source (e.g., a meeting produces minutes)",
+    "GENERATES": "{source} document creates {target} item or follow-up — the source's content identifies work that must be tracked as the target",
+    "TEMPLATES": "{source} template defines the structure and required sections of the target — the target's format and content requirements are controlled by the source",
+    "ACKNOWLEDGES": "{source} {target} confirms receipt and awareness of the target — the source is a formal record that the target has been received and distributed to affected parties",
+    "LOGGED IN": "{source} {target} is recorded as an entry within the target's daily record — the source event appears as a line item in the target's log",
+    "RECORDED IN": "{source} document's issuance is captured within {target} daily record — the target serves as the archive for the source",
+    "ENFORCES": "{source} directive requires compliance with the requirements defined in the target — the source's authority derives from the target's contractual or {target} provisions",
+    "DECOMPOSES INTO": "{source} document is broken down into {target} — the source defines the overall scope and the targets are the discrete units of work",
+    "REVIEWED AT": "{source} document's status and progress are evaluated during {target} — the source is an agenda item discussed and updated at the target",
+    "ATTACHED TO": "{source} visual record is linked to {target} as supporting evidence — the source photo or video provides visual context for the target's content",
+    "DOCUMENTS": "{source} visual {target} captures the condition or status described by the target — the source provides photographic or video evidence of the target's items",
+    "PRECEDES": "{source} {target} must be completed before the target can begin — a sequential closeout dependency where the source gates the target (e.g., punch list completion precedes as-built compilation)",
+    "INCORPORATES": "{source} compiled {target} includes the target's content as part of its final record — the target's information is absorbed into the source (e.g., as-built docs incorporate final drawing revisions)",
+    "INCLUDES": "{source} compiled document contains {target} or component of the overall deliverable — the target is bundled within the source for handover",
+    "COMPILED FROM": "{source} {target} is assembled by collecting and organizing content from the target — the target is a contributing input that is aggregated into the source",
+    "ACCOMPANIES": "{source} document is delivered alongside {target} milestone — both are required together to satisfy a contractual obligation",
+    "STRUCTURES": "{source} form or template defines the data fields, validation rules, and workflow for the target — the target's content capture follows the source's configured format",
+    "MEASURES": "{source} metric quantifies the performance or volume of {target} type — the source is a KPI calculated from the target's data (e.g., RFI response time measures RFI performance)"
+  }
+}

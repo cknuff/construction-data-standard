@@ -1,0 +1,153 @@
+{
+  "source": "locations",
+  "target": "permits-regulatory",
+  "edges": [
+    [
+      "loc-project-site",
+      "pr-building-permit",
+      "SCOPED BY"
+    ],
+    [
+      "loc-project-site",
+      "pr-enviro-permit",
+      "ASSESSED FOR"
+    ],
+    [
+      "loc-project-site",
+      "pr-zoning-appr",
+      "GOVERNS LAYOUT OF"
+    ],
+    [
+      "loc-project-site",
+      "pr-site-safety-plan",
+      "COVERED BY"
+    ],
+    [
+      "loc-project-site",
+      "pr-stormwater-permi",
+      "DRAINS TO"
+    ],
+    [
+      "loc-building",
+      "pr-building-departm",
+      "SUBMITTED FOR"
+    ],
+    [
+      "loc-building",
+      "pr-fire-marshal",
+      "REVIEWED BY"
+    ],
+    [
+      "loc-building",
+      "pr-cert-occupancy",
+      "CLEARED FOR"
+    ],
+    [
+      "loc-exterior-zone",
+      "pr-enviro-permit",
+      "REGULATED BY"
+    ],
+    [
+      "loc-right-way",
+      "pr-street-right-way",
+      "ENCROACHES ON"
+    ],
+    [
+      "loc-temp-facility",
+      "pr-temp-structures",
+      "PERMITTED BY"
+    ],
+    [
+      "loc-laydown-staging",
+      "pr-street-right-way",
+      "STAGED WITHIN"
+    ],
+    [
+      "loc-below-grade",
+      "pr-special-insp",
+      "INSPECTED AT"
+    ],
+    [
+      "loc-floor-level",
+      "pr-ahj-insp",
+      "INSPECTED AT"
+    ],
+    [
+      "loc-floor-level",
+      "pr-insp-scheduling",
+      "SEQUENCED BY"
+    ],
+    [
+      "loc-roof-level",
+      "pr-ahj-insp",
+      "INSPECTED AT"
+    ],
+    [
+      "loc-core-shaft",
+      "pr-special-insp",
+      "INSPECTED AT"
+    ],
+    [
+      "loc-fire-smoke",
+      "pr-fire-marshal",
+      "DELINEATED FOR"
+    ],
+    [
+      "loc-wet-area",
+      "pr-health-departmen",
+      "REGULATED BY"
+    ],
+    [
+      "loc-penetration-open",
+      "pr-special-insp",
+      "INSPECTED AT"
+    ],
+    [
+      "loc-cx-zone",
+      "pr-third-party",
+      "COMMISSIONED FOR"
+    ],
+    [
+      "loc-equip-location",
+      "pr-utility-connecti",
+      "TERMINATED AT"
+    ],
+    [
+      "loc-safety-incident",
+      "pr-osha-notificatio",
+      "REPORTED TO"
+    ],
+    [
+      "loc-firestopping-def",
+      "pr-fire-marshal",
+      "FLAGGED FOR"
+    ],
+    [
+      "loc-defect-density",
+      "pr-insp-pass-rate",
+      "CORRELATES WITH"
+    ]
+  ],
+  "verbGlossary": {
+    "ASSESSED FOR": "{source} is evaluated to determine {target} requirements (e.g., project site assessed for environmental permit based on soil, wetland, or habitat conditions).",
+    "CLEARED FOR": "{source} receives formal regulatory clearance to be used or occupied (e.g., building cleared for {target} after final inspections pass).",
+    "COMMISSIONED FOR": "{source} undergoes third-party performance verification as part of commissioning (e.g., commissioning zone commissioned for third-party testing of HVAC and controls).",
+    "CORRELATES WITH": "{source}-based metric has a measured relationship to a regulatory metric (e.g., defect density by location correlates with inspection pass rate across projects).",
+    "COVERED BY": "{source} falls within the scope of a regulatory safety plan (e.g., project site covered by site safety plan for fall protection and hazard mitigation).",
+    "DELINEATED FOR": "{source} is drawn specifically to satisfy a regulatory review requirement (e.g., fire/smoke compartment delineated for {target} review of rated separations).",
+    "DRAINS TO": "{source}'s stormwater runoff is controlled under a specific {target} (e.g., project site drains to stormwater management facilities governed by SWPPP permit).",
+    "ENCROACHES ON": "{source} extends into a regulated right-of-way requiring a street or encroachment {target} (e.g., right-of-way work encroaches on public easement requiring street permit).",
+    "FLAGGED FOR": "{source}-based deficiency metric triggers a regulatory review action (e.g., firestopping deficiency rate flagged for {target} re-inspection).",
+    "GOVERNS LAYOUT OF": "{source} approval dictates the allowable site layout and use (e.g., {target} governs layout of project site including setbacks, height, and density).",
+    "INSPECTED AT": "{source} inspector conducts {target} at the specific location (e.g., AHJ inspection performed at each floor level before concealment).",
+    "PERMITTED BY": "{source} requires and is authorized by a specific construction {target} (e.g., temporary facility permitted by temporary structures permit before mobilization).",
+    "REGULATED BY": "{source}controls activity at {target} (e.g., exterior zone regulated by environmental permit for erosion and sediment control).",
+    "REPORTED TO": "{source}-based safety metric triggers a formal notification to {target} (e.g., safety incident density by zone reported to OSHA when thresholds are exceeded).",
+    "REVIEWED BY": "{source}-specific plans are examined by {target} (e.g., building plans reviewed by fire marshal for egress, suppression, and alarm compliance).",
+    "SCOPED BY": "{source} defines the legal boundaries and allowable work for {target} (e.g., project site scoped by building permit for approved construction limits).",
+    "SEQUENCED BY": "Inspection scheduling determines the order in which locations are inspected (e.g., floor levels sequenced by inspection scheduling to align with vertical construction progress).",
+    "STAGED WITHIN": "{source}is temporarily positioned within {target}-controlled area (e.g., laydown area staged within street right-of-way permit boundaries).",
+    "SUBMITTED FOR": "{source}-specific drawings or plans are filed with {target} for review (e.g., building plans submitted for building department plan review).",
+    "TERMINATED AT": "{source}connection endpoints at {target} require a specific permit (e.g., equipment location where utility service is terminated at requires utility connection permit)."
+  }
+}

@@ -1,0 +1,152 @@
+{
+  "source": "schedule",
+  "target": "standards-classifications",
+  "edges": [
+    [
+      "sch-activity-codes",
+      "sc-masterformat",
+      "ORGANIZED BY"
+    ],
+    [
+      "sch-detail-activity",
+      "sc-masterformat",
+      "CLASSIFIED UNDER"
+    ],
+    [
+      "sch-summary-activity",
+      "sc-uniformat",
+      "MAPPED TO"
+    ],
+    [
+      "sch-activity-codes",
+      "sc-std-cost-code",
+      "CODED BY"
+    ],
+    [
+      "sch-detail-activity",
+      "sc-wbs-code",
+      "ASSIGNED TO"
+    ],
+    [
+      "sch-cost-loading",
+      "sc-budget-code",
+      "DISTRIBUTED ACROSS"
+    ],
+    [
+      "sch-cost-loading",
+      "sc-std-cost-code",
+      "ALLOCATED AGAINST"
+    ],
+    [
+      "sch-specification-co",
+      "sc-specification-se",
+      "MEASURED AGAINST"
+    ],
+    [
+      "sch-dcma-14-point",
+      "sc-aace-cost",
+      "BENCHMARKED TO"
+    ],
+    [
+      "sch-schedule-health",
+      "sc-aace-cost",
+      "SCORED PER"
+    ],
+    [
+      "sch-milestone",
+      "sc-international-bu",
+      "TRIGGERED BY"
+    ],
+    [
+      "sch-schedule-constra",
+      "sc-international-bu",
+      "GOVERNED BY"
+    ],
+    [
+      "sch-look-ahead",
+      "sc-nfpa-stds",
+      "SEQUENCED FOR"
+    ],
+    [
+      "sch-detail-activity",
+      "sc-omniclass",
+      "TAGGED TO"
+    ],
+    [
+      "sch-4d-5d-bim",
+      "sc-ifc-class",
+      "LINKED TO"
+    ],
+    [
+      "sch-4d-5d-bim",
+      "sc-uniformat",
+      "MODELED AGAINST"
+    ],
+    [
+      "sch-delay-class",
+      "sc-aia-contract",
+      "GOVERNED BY"
+    ],
+    [
+      "sch-time-extension",
+      "sc-aia-contract",
+      "SUBMITTED PER"
+    ],
+    [
+      "sch-time-impact",
+      "sc-dlvy-method",
+      "SEGMENTED BY"
+    ],
+    [
+      "sch-baseline-schedul",
+      "sc-leed-certificati",
+      "PHASED FOR"
+    ],
+    [
+      "sch-detail-activity",
+      "sc-energy-code-stds",
+      "SEQUENCED FOR"
+    ],
+    [
+      "sch-earned-schedule",
+      "sc-wbs-adoption",
+      "SEGMENTED BY"
+    ],
+    [
+      "sch-milestone-adhere",
+      "sc-masterformat-map",
+      "SEGMENTED BY"
+    ],
+    [
+      "sch-out-sequence",
+      "sc-specification-se-2",
+      "BENCHMARKED TO"
+    ],
+    [
+      "sch-critical-activit",
+      "sc-cost-code",
+      "SEGMENTED BY"
+    ]
+  ],
+  "verbGlossary": {
+    "ORGANIZED BY": "{source} breakdown structure follows {target} division hierarchy (e.g., schedule activities organized by MasterFormat divisions so cost and scope align to spec sections)",
+    "CLASSIFIED UNDER": "{source} element is categorized using {target} taxonomy (e.g., detail activity classified under a MasterFormat division to identify the trade or work scope it belongs to)",
+    "MAPPED TO": "{source}schedule element is cross-referenced to {target} element hierarchy (e.g., summary WBS activity mapped to a UniFormat assembly for element-based reporting)",
+    "CODED BY": "{source} is assigned a classification code from the target standard (e.g., activity code value drawn from {target} cost code list for cost tracking alignment)",
+    "ASSIGNED TO": "{source} is linked to a specific node in the target breakdown structure (e.g., detail activity assigned to a WBS code so progress and cost roll up correctly)",
+    "DISTRIBUTED ACROSS": "Cost-loaded schedule values are spread across {target} line items (e.g., cash flow projections distributed across budget codes for period-by-period forecasting)",
+    "ALLOCATED AGAINST": "{source}cost on {target} is charged to the target classification's account (e.g., labor and material cost loading allocated against the standard cost code for earned value measurement)",
+    "MEASURED AGAINST": "{source} specification compliance is evaluated relative to {target} acceptance criteria (e.g., schedule specification requirements measured against the project spec section for contractual conformance)",
+    "BENCHMARKED TO": "{source} is compared against {target} published thresholds or industry norms (e.g., DCMA 14-point results benchmarked to AACE schedule quality standards)",
+    "SCORED PER": "{source} health composite metric is graded using {target} evaluation framework (e.g., schedule health score scored per AACE recommended practice thresholds)",
+    "TRIGGERED BY": "{source}is created because {target} code requires an inspection or approval at that construction stage (e.g., foundation milestone triggered by IBC required inspection hold point)",
+    "GOVERNED BY": "{source} or delay classification follows rules defined in {target} or contract standard (e.g., schedule constraint dates governed by IBC occupancy permit prerequisites, delay types governed by AIA contract provisions)",
+    "SEQUENCED FOR": "{source}are ordered to satisfy {target} prerequisite inspections or certification requirements (e.g., fire protection activities sequenced for NFPA testing milestones, envelope activities sequenced for energy code compliance testing)",
+    "TAGGED TO": "{source} is linked to {target} for cross-domain traceability (e.g., detail activity tagged to an OmniClass work result for BIM coordination and reporting)",
+    "LINKED TO": "{source}schedule element is associated with {target} model objects (e.g., 4D simulation activities linked to IFC entity classes for clash-free sequencing)",
+    "MODELED AGAINST": "{source}schedule maps construction sequences to {target} classification (e.g., 4D schedule phases modeled against UniFormat assemblies for visual progress tracking)",
+    "SUBMITTED PER": "{source}document is prepared and submitted following {target} standard's required procedures and notice periods (e.g., time extension request submitted per AIA A201 Article 15 claim provisions)",
+    "SEGMENTED BY": "{source} or analysis is broken down by {target} for comparative insight (e.g., time impact analysis segmented by delivery method to compare delay exposure across project types)",
+    "PHASED FOR": "{source}schedule phases are structured to align with the target certification's prerequisite sequencing and credit submittal milestones (e.g., commissioning activities phased for LEED fundamental commissioning prerequisite deadlines)"
+  }
+}

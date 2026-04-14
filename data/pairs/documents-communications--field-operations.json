@@ -1,0 +1,343 @@
+{
+  "source": "documents-communications",
+  "target": "field-operations",
+  "edges": [
+    [
+      "doc-daily-report",
+      "fo-daily-log-header",
+      "POPULATES"
+    ],
+    [
+      "doc-daily-log-note",
+      "fo-daily-log-note",
+      "TRANSCRIBES INTO"
+    ],
+    [
+      "doc-daily-log",
+      "fo-daily-log",
+      "CONFIGURES SECTIONS OF"
+    ],
+    [
+      "doc-phone-call-log",
+      "fo-phone-call-log",
+      "LOGS CONVERSATION IN"
+    ],
+    [
+      "doc-plan-revision",
+      "fo-plan-revision",
+      "NOTIFIES FIELD OF"
+    ],
+    [
+      "doc-drawing-set",
+      "fo-daily-log-note",
+      "REFERENCES WORK FROM"
+    ],
+    [
+      "doc-drawing-revision",
+      "fo-plan-revision",
+      "TRIGGERS FIELD UPDATE VIA"
+    ],
+    [
+      "doc-drawing-sheet",
+      "fo-scheduled-work",
+      "SCOPES WORK FOR"
+    ],
+    [
+      "doc-specification-se",
+      "fo-productivity-log",
+      "DEFINES INSTALL CRITERIA FOR"
+    ],
+    [
+      "doc-specification-se",
+      "fo-daily-log-insp",
+      "ESTABLISHES INSPECTION STANDARD FOR"
+    ],
+    [
+      "doc-addendum",
+      "fo-delay-log-entry",
+      "CAUSES SCOPE DELAY IN"
+    ],
+    [
+      "doc-bulletin-archite",
+      "fo-scheduled-work",
+      "REVISES FIELD SCOPE IN"
+    ],
+    [
+      "doc-req-info-rfi",
+      "fo-delay-log-entry",
+      "HOLDS WORK PENDING"
+    ],
+    [
+      "doc-rfi-response",
+      "fo-scheduled-work-2",
+      "CLEARS WORK CONSTRAINT FOR"
+    ],
+    [
+      "doc-rfi-response",
+      "fo-daily-log-note",
+      "DIRECTS FIELD EXECUTION VIA"
+    ],
+    [
+      "doc-req-proposal-rfp",
+      "fo-workforce-req",
+      "SOLICITS LABOR PRICING FOR"
+    ],
+    [
+      "doc-submittal",
+      "fo-dlvy-log-entry",
+      "GATES DELIVERY UNTIL APPROVED IN"
+    ],
+    [
+      "doc-submittal",
+      "fo-mat-shipment",
+      "AUTHORIZES FABRICATION FOR"
+    ],
+    [
+      "doc-submittal-respon",
+      "fo-mat-receipt",
+      "CLEARS MATERIAL ACCEPTANCE IN"
+    ],
+    [
+      "doc-shop-drawing",
+      "fo-field-productivi",
+      "DETAILS INSTALLATION METHOD FOR"
+    ],
+    [
+      "doc-product-data",
+      "fo-daily-log-insp",
+      "SETS ACCEPTANCE CRITERIA FOR"
+    ],
+    [
+      "doc-sample-submittal",
+      "fo-mat-receipt",
+      "VALIDATES FINISH STANDARD FOR"
+    ],
+    [
+      "doc-correspondence",
+      "fo-delay-log-entry",
+      "DOCUMENTS DISPUTE IN"
+    ],
+    [
+      "doc-transmittal",
+      "fo-daily-report",
+      "DISTRIBUTES FIELD RECORDS VIA"
+    ],
+    [
+      "doc-notice-delay",
+      "fo-delay-log-entry",
+      "SUBSTANTIATES CLAIM WITH"
+    ],
+    [
+      "doc-notice-delay",
+      "fo-weather-log",
+      "CITES WEATHER EVIDENCE FROM"
+    ],
+    [
+      "doc-chg-directive",
+      "fo-manpower-log",
+      "MOBILIZES ADDITIONAL LABOR IN"
+    ],
+    [
+      "doc-chg-directive",
+      "fo-t-m-ticket",
+      "INITIATES FORCE ACCOUNT ON"
+    ],
+    [
+      "doc-meeting-minutes",
+      "fo-scheduled-work",
+      "ASSIGNS LOOKAHEAD TASKS TO"
+    ],
+    [
+      "doc-meeting",
+      "fo-visitor-log",
+      "REGISTERS ATTENDEES IN"
+    ],
+    [
+      "doc-site-instruction",
+      "fo-manpower-log",
+      "REDIRECTS CREW EFFORT IN"
+    ],
+    [
+      "doc-site-instruction",
+      "fo-equip-log-entry",
+      "DEPLOYS EQUIPMENT PER"
+    ],
+    [
+      "doc-action-plan",
+      "fo-scheduled-work",
+      "SEQUENCES RECOVERY WORK IN"
+    ],
+    [
+      "doc-action-plan-line",
+      "fo-assignment",
+      "ASSIGNS CORRECTIVE TASK TO"
+    ],
+    [
+      "doc-project-task",
+      "fo-scheduled-work-2",
+      "LINKS DELIVERABLE TO"
+    ],
+    [
+      "doc-photo",
+      "fo-daily-log-note",
+      "ATTACHES VISUAL EVIDENCE TO"
+    ],
+    [
+      "doc-photo",
+      "fo-safety-violation",
+      "DOCUMENTS HAZARD CONDITION IN"
+    ],
+    [
+      "doc-video",
+      "fo-accident-log",
+      "CAPTURES INCIDENT FOOTAGE FOR"
+    ],
+    [
+      "doc-permit-applicati",
+      "fo-daily-log-insp",
+      "REQUIRES JURISDICTIONAL SIGN-OFF IN"
+    ],
+    [
+      "doc-safety-plan-site",
+      "fo-safety-violation",
+      "DEFINES VIOLATION CRITERIA FOR"
+    ],
+    [
+      "doc-safety-plan-site",
+      "fo-accident-log",
+      "PRESCRIBES RESPONSE PROTOCOL FOR"
+    ],
+    [
+      "doc-swppp-enviro",
+      "fo-waste-log-entry",
+      "MANDATES TRACKING COMPLIANCE IN"
+    ],
+    [
+      "doc-swppp-enviro",
+      "fo-dumpster-log",
+      "REGULATES DISPOSAL RECORDS IN"
+    ],
+    [
+      "doc-punch-list-as",
+      "fo-quantity-log",
+      "QUANTIFIES REMAINING DEFICIENCIES IN"
+    ],
+    [
+      "doc-as-built-docs",
+      "fo-actual-productio",
+      "RECORDS FINAL INSTALLED QUANTITIES FROM"
+    ],
+    [
+      "doc-o-m-manual",
+      "fo-equip-master",
+      "REFERENCES INSTALLED EQUIPMENT IN"
+    ],
+    [
+      "doc-warranty-docs",
+      "fo-mat-receipt",
+      "BACKS WARRANTY CLAIM WITH"
+    ],
+    [
+      "doc-form-proforma",
+      "fo-daily-log-header",
+      "STRUCTURES DATA ENTRY FOR"
+    ],
+    [
+      "doc-daily-log-2",
+      "fo-daily-log-2",
+      "BENCHMARKS COMPLETION AGAINST"
+    ],
+    [
+      "doc-rfi-response-2",
+      "fo-delay-frequency",
+      "CORRELATES RESPONSE LAG TO"
+    ],
+    [
+      "doc-submittal-cycle",
+      "fo-delay-log-entry",
+      "PREDICTS PROCUREMENT HOLD IN"
+    ],
+    [
+      "doc-drawing-revision-2",
+      "fo-plan-percent",
+      "SIGNALS SCOPE CHURN AFFECTING"
+    ],
+    [
+      "doc-rfi-volume",
+      "fo-productivity-log",
+      "INDICATES DESIGN AMBIGUITY IMPACTING"
+    ],
+    [
+      "doc-submittal-reject",
+      "fo-mat-shipment",
+      "BLOCKS FABRICATION RELEASE FOR"
+    ],
+    [
+      "doc-correspondence-r",
+      "fo-delay-frequency",
+      "EXPOSES COMMUNICATION BOTTLENECK IN"
+    ],
+    [
+      "doc-photo",
+      "fo-daily-log-header",
+      "ATTACHES TO"
+    ]
+  ],
+  "verbGlossary": {
+    "POPULATES": "{source} content feeds directly into {target}, pre-filling data from the source document.",
+    "TRANSCRIBES INTO": "{source} or notes from {target} are entered as structured field log entries for daily record-keeping.",
+    "CONFIGURES SECTIONS OF": "{source}document defines the layout, required sections, and data fields of a field operations log.",
+    "LOGS CONVERSATION IN": "{source}record captures the details of a phone call and stores it as {target} entry.",
+    "NOTIFIES FIELD OF": "{source} revision notice alerts field teams that updated drawings or plans are available for use.",
+    "REFERENCES WORK FROM": "{source} personnel cite {target} (such as a drawing set) within their daily notes to identify what was built that day.",
+    "TRIGGERS FIELD UPDATE VIA": "{source} forces a corresponding plan revision receipt in the field so {target}s work from current documents.",
+    "SCOPES WORK FOR": "{source} defines the boundaries, dimensions, and details that determine what a scheduled work entry covers.",
+    "DEFINES INSTALL CRITERIA FOR": "{source} sets the material, method, and tolerance requirements that {target}s measure against.",
+    "ESTABLISHES INSPECTION STANDARD FOR": "{source} provides the pass/fail criteria used during {target} entry.",
+    "CAUSES SCOPE DELAY IN": "{source}project scope, resulting in {target} entry while crews adjust to new requirements.",
+    "REVISES FIELD SCOPE IN": "{source}scheduled work items in the field.",
+    "HOLDS WORK PENDING": "An open RFI pauses field activity, generating {target} entry until the question is resolved.",
+    "CLEARS WORK CONSTRAINT FOR": "{source} removes a hold, allowing a scheduled work task link to proceed.",
+    "DIRECTS FIELD EXECUTION VIA": "{source} provides the clarification that field teams record in their {target}s as the basis for proceeding.",
+    "SOLICITS LABOR PRICING FOR": "A request for proposal asks trade contractors to price labor, informing {target} request planning.",
+    "GATES DELIVERY UNTIL APPROVED IN": "{source} must be approved before the corresponding material delivery can be logged on site.",
+    "AUTHORIZES FABRICATION FOR": "{source} releases the fabricator to begin manufacturing, initiating the material shipment chain.",
+    "CLEARS MATERIAL ACCEPTANCE IN": "{source} review/response confirms that delivered materials meet specification, allowing a material receipt to be logged.",
+    "DETAILS INSTALLATION METHOD FOR": "{source} provides the step-by-step installation sequence that drives field productivity measurement.",
+    "SETS ACCEPTANCE CRITERIA FOR": "{source} submittal specifications define what inspectors check during {target} entry.",
+    "VALIDATES FINISH STANDARD FOR": "{source} submittal becomes the benchmark against which received materials are compared on site.",
+    "DOCUMENTS DISPUTE IN": "{source} records a disagreement or claim, which is cross-referenced in {target} as supporting evidence.",
+    "DISTRIBUTES FIELD RECORDS VIA": "{source} packages and routes completed {target}s to stakeholders outside the field team.",
+    "SUBSTANTIATES CLAIM WITH": "{source} of delay uses {target} entries as factual evidence backing a time extension or cost claim.",
+    "CITES WEATHER EVIDENCE FROM": "{source} of delay references {target} data to justify a claimed weather-related schedule impact.",
+    "MOBILIZES ADDITIONAL LABOR IN": "{source}authorizes extra work, which shows up as increased headcount in {target}.",
+    "INITIATES FORCE ACCOUNT ON": "{source}triggers time-and-material tracking when the changed work cannot be priced in advance.",
+    "ASSIGNS LOOKAHEAD TASKS TO": "{source} capture committed work activities that become scheduled work log entries for the upcoming period.",
+    "REGISTERS ATTENDEES IN": "{source} event records external participants who also appear in {target} for site access compliance.",
+    "REDIRECTS CREW EFFORT IN": "{source} changes {target} assignments, which is reflected in updated manpower log entries for that day.",
+    "DEPLOYS EQUIPMENT PER": "{source} directs specific equipment to a work area, resulting in {target} entry.",
+    "SEQUENCES RECOVERY WORK IN": "{source} lays out the order of corrective or acceleration activities that map to scheduled work entries.",
+    "ASSIGNS CORRECTIVE TASK TO": "{source} line item creates a specific assignment for {target} member or trade to complete.",
+    "LINKS DELIVERABLE TO": "A project task is tied to a scheduled work task link so that document milestones align with field progress.",
+    "ATTACHES VISUAL EVIDENCE TO": "{source} is embedded within {target} to provide photographic proof of the condition described.",
+    "DOCUMENTS HAZARD CONDITION IN": "{source} captures an unsafe condition, which becomes part of {target} log record.",
+    "CAPTURES INCIDENT FOOTAGE FOR": "{source} is attached to {target} entry as evidence for the investigation.",
+    "REQUIRES JURISDICTIONAL SIGN-OFF IN": "{source}mandates that certain inspections pass before work can proceed, tracked in the inspection log.",
+    "DEFINES VIOLATION CRITERIA FOR": "{source}plan establishes the rules whose breach constitutes {target} log entry.",
+    "PRESCRIBES RESPONSE PROTOCOL FOR": "{source}plan dictates the emergency and reporting procedures to follow when {target} entry is created.",
+    "MANDATES TRACKING COMPLIANCE IN": "{source}document (SWPPP) requires that waste generation and disposal be tracked in {target} entries.",
+    "REGULATES DISPOSAL RECORDS IN": "{source} records.",
+    "QUANTIFIES REMAINING DEFICIENCIES IN": "{source}document enumerates outstanding items, with each deficiency tracked as {target} entry to measure closeout progress.",
+    "RECORDS FINAL INSTALLED QUANTITIES FROM": "{source}documentation captures the actual installed quantities derived from field production records.",
+    "REFERENCES INSTALLED EQUIPMENT IN": "An O&M manual catalogs the equipment permanently installed on the project, cross-referencing equipment master records.",
+    "BACKS WARRANTY CLAIM WITH": "{source}documentation uses material receipt records to prove delivery dates and product traceability for warranty enforcement.",
+    "STRUCTURES DATA ENTRY FOR": "{source}defines the required fields and layout that {target} record follows.",
+    "BENCHMARKS COMPLETION AGAINST": "{source}-side {target} completion rate is compared against the field operations completion rate to identify reporting gaps.",
+    "CORRELATES RESPONSE LAG TO": "{source} time is measured against delay frequency to quantify how slow answers contribute to field stoppages.",
+    "PREDICTS PROCUREMENT HOLD IN": "{source} cycle time trends are used to forecast likely {target} entries from late material approvals.",
+    "SIGNALS SCOPE CHURN AFFECTING": "{source} frequency indicates design instability that erodes plan percent complete in the field.",
+    "INDICATES DESIGN AMBIGUITY IMPACTING": "High RFI volume density suggests unclear design documents, which correlates with reduced field productivity.",
+    "BLOCKS FABRICATION RELEASE FOR": "{source}submittal rejection rate prevents materials from entering fabrication, delaying the material shipment pipeline.",
+    "EXPOSES COMMUNICATION BOTTLENECK IN": "Slow correspondence response times correlate with increased delay frequency, revealing communication breakdowns that stall field work."
+  }
+}

@@ -1,0 +1,382 @@
+{
+  "source": "quality-safety-records",
+  "target": "resources",
+  "universalEdges": [
+    {
+      "source": "qsr-safety-observati",
+      "targetGroup": "trades",
+      "verb": "OBSERVED FOR",
+      "evidence": "Databricks Q1: safety observations co-occur with 30+ trades at 10+ companies each (2yr lookback)"
+    },
+    {
+      "source": "qsr-safety-violation",
+      "targetGroup": "trades",
+      "verb": "CITED AGAINST",
+      "evidence": "Databricks Q1: any trade can be cited \u2014 Electrician, Laborer, Ironworker, Plumber, Carpenter all in top 10"
+    },
+    {
+      "source": "qsr-incident",
+      "targetGroup": "trades",
+      "verb": "INVOLVED IN INCIDENT WITH",
+      "evidence": "Databricks Q1: incidents span all trade categories present on site"
+    },
+    {
+      "source": "qsr-incident-record",
+      "targetGroup": "trades",
+      "verb": "FILED FOR",
+      "evidence": "Any trade worker can be the subject of an incident record"
+    },
+    {
+      "source": "qsr-incident-witness",
+      "targetGroup": "trades",
+      "verb": "TESTIFIED BY",
+      "evidence": "Any trade worker on site can witness an incident"
+    },
+    {
+      "source": "qsr-punch-item",
+      "targetGroup": "trades",
+      "verb": "ASSIGNED TO",
+      "evidence": "Databricks Q2: punch items span all 16 MasterFormat divisions at 5+ companies each"
+    },
+    {
+      "source": "qsr-punch-item-issue",
+      "targetGroup": "trades",
+      "verb": "ATTRIBUTED TO",
+      "evidence": "Databricks Q2: every trade division produces punch items \u2014 09 Finishes highest, then 26-28 Electrical"
+    },
+    {
+      "source": "qsr-punch-item-2",
+      "targetGroup": "trades",
+      "verb": "CLOSED OUT BY",
+      "evidence": "Any trade that receives a punch item must close it out"
+    },
+    {
+      "source": "qsr-insp-item",
+      "targetGroup": "trades",
+      "verb": "FAILED BY",
+      "evidence": "Inspection items can flag deficiencies in any trade's installed work"
+    },
+    {
+      "source": "qsr-non-conformance",
+      "targetGroup": "trades",
+      "verb": "ISSUED AGAINST",
+      "evidence": "NCRs can be issued against any trade whose work deviates from spec"
+    },
+    {
+      "source": "qsr-deficiency-notic",
+      "targetGroup": "trades",
+      "verb": "SERVED TO",
+      "evidence": "Deficiency notices can be served to any trade responsible for non-compliant work"
+    },
+    {
+      "source": "qsr-quality-observat",
+      "targetGroup": "trades",
+      "verb": "DOCUMENTED AGAINST",
+      "evidence": "Quality observations can flag deficient work by any trade"
+    },
+    {
+      "source": "qsr-observation",
+      "targetGroup": "trades",
+      "verb": "NOTED FOR",
+      "evidence": "General observations can be recorded for any trade's work area"
+    },
+    {
+      "source": "qsr-corrective-actio",
+      "targetGroup": "trades",
+      "verb": "ASSIGNED BACK TO",
+      "evidence": "Corrective actions can be assigned to any trade that performed non-conforming work"
+    },
+    {
+      "source": "qsr-action-plan",
+      "targetGroup": "trades",
+      "verb": "DIRECTED AT",
+      "evidence": "Action plans can target remediation by any trade"
+    },
+    {
+      "source": "qsr-action-plan-line",
+      "targetGroup": "trades",
+      "verb": "REMEDIATED BY",
+      "evidence": "Action plan tasks can be executed by any trade"
+    },
+    {
+      "source": "qsr-scheduled-insp",
+      "targetGroup": "trades",
+      "verb": "SCHEDULED FOR",
+      "evidence": "Scheduled inspections verify work completed by any trade at milestones"
+    },
+    {
+      "source": "qsr-coord-issue",
+      "targetGroup": "trades",
+      "verb": "FLAGGED AGAINST",
+      "evidence": "Coordination issues can involve any trade's installed or planned work"
+    },
+    {
+      "source": "qsr-coord-issue-2",
+      "targetGroup": "trades",
+      "verb": "CLASHED WITH",
+      "evidence": "Spatial or specification conflicts can occur with any trade's scope"
+    },
+    {
+      "source": "qsr-observation-dens",
+      "targetGroup": "trades",
+      "verb": "CONCENTRATED ON",
+      "evidence": "Observation density is a metric calculated per trade"
+    },
+    {
+      "source": "qsr-deficiency-rate",
+      "targetGroup": "trades",
+      "verb": "MEASURED FOR",
+      "evidence": "Deficiency rate is computed across all inspections for each trade"
+    },
+    {
+      "source": "qsr-punch-item-3",
+      "targetGroup": "trades",
+      "verb": "HIGHEST AMONG",
+      "evidence": "Punch item density is compared across all trades"
+    },
+    {
+      "source": "qsr-total-recordable",
+      "targetGroup": "trades",
+      "verb": "TRACKED FOR",
+      "evidence": "TRIR is tracked for every trade's workforce on site"
+    },
+    {
+      "source": "qsr-dart-rate",
+      "targetGroup": "trades",
+      "verb": "CALCULATED FOR",
+      "evidence": "DART rate applies to every trade with workers on site"
+    },
+    {
+      "source": "qsr-hazard-recurrenc",
+      "targetGroup": "trades",
+      "verb": "PERSISTED WITH",
+      "evidence": "Hazard recurrence can occur in any trade's work zone"
+    },
+    {
+      "source": "qsr-rework-cost",
+      "targetGroup": "trades",
+      "verb": "INCURRED BY",
+      "evidence": "Rework cost is attributable to corrections for any trade"
+    },
+    {
+      "source": "qsr-observation-reso",
+      "targetGroup": "trades",
+      "verb": "RESOLVED BY",
+      "evidence": "Resolution time is measured per trade"
+    },
+    {
+      "source": "qsr-insp-pass-rate",
+      "targetGroup": "trades",
+      "verb": "SCORED FOR",
+      "evidence": "Pass rate is computed per trade's work scope"
+    },
+    {
+      "source": "qsr-near-miss-ratio",
+      "targetGroup": "trades",
+      "verb": "ELEVATED FOR",
+      "evidence": "Near-miss ratio applies to all trades"
+    },
+    {
+      "source": "qsr-safety-observati",
+      "targetGroup": "equipment",
+      "verb": "OBSERVED NEAR",
+      "evidence": "Safety observations recorded near any equipment on the jobsite"
+    },
+    {
+      "source": "qsr-incident",
+      "targetGroup": "equipment",
+      "verb": "OCCURRED ON",
+      "evidence": "Incidents can involve any type of construction equipment"
+    },
+    {
+      "source": "qsr-punch-item",
+      "targetGroup": "materials",
+      "verb": "CATEGORIZED FOR",
+      "evidence": "Databricks Q2+Q3: punch items span all MasterFormat divisions and material categories"
+    },
+    {
+      "source": "qsr-punch-item-issue",
+      "targetGroup": "materials",
+      "verb": "CATEGORIZED FOR",
+      "evidence": "Punch item issues can involve any installed material"
+    },
+    {
+      "source": "qsr-non-conformance",
+      "targetGroup": "materials",
+      "verb": "REJECTED FOR",
+      "evidence": "NCRs can reject any installed or delivered material that fails spec"
+    },
+    {
+      "source": "qsr-quality-observat",
+      "targetGroup": "materials",
+      "verb": "IDENTIFIED ON",
+      "evidence": "Quality observations can flag defects on any installed material"
+    },
+    {
+      "source": "qsr-deficiency-notic",
+      "targetGroup": "materials",
+      "verb": "DEFICIENT IN",
+      "evidence": "Deficiency notices can identify non-conformance in any material"
+    },
+    {
+      "source": "qsr-insp-item",
+      "targetGroup": "materials",
+      "verb": "INSPECTED ON",
+      "evidence": "Inspection items evaluate installed condition of any material"
+    },
+    {
+      "source": "qsr-observation",
+      "targetGroup": "materials",
+      "verb": "NOTED FOR",
+      "evidence": "Observations can be recorded for conditions on any material"
+    },
+    {
+      "source": "qsr-rework-cost",
+      "targetGroup": "materials",
+      "verb": "DRIVEN BY",
+      "evidence": "Rework cost can be caused by failures in any material's installation"
+    }
+  ],
+  "edges": [
+    [
+      "qsr-insp",
+      "res-qc",
+      "CONDUCTED BY"
+    ],
+    [
+      "qsr-third-party",
+      "res-qc",
+      "WITNESSED BY"
+    ],
+    [
+      "qsr-corrective-actio-2",
+      "res-safety",
+      "MONITORED BY"
+    ],
+    [
+      "qsr-enviro-cx",
+      "res-cxa",
+      "VALIDATED BY"
+    ],
+    [
+      "qsr-safety-observati",
+      "res-safety",
+      "REPORTED BY"
+    ],
+    [
+      "qsr-mat-test-report",
+      "mat-concrete",
+      "TESTED ON"
+    ],
+    [
+      "qsr-mat-test-report",
+      "mat-steel",
+      "SAMPLED FROM"
+    ],
+    [
+      "qsr-mat-test-report",
+      "mat-rebar",
+      "VERIFIED FOR"
+    ],
+    [
+      "qsr-mat-test-report",
+      "mat-masonry",
+      "BATCH-TESTED FOR"
+    ],
+    [
+      "qsr-mat-test-report",
+      "mat-elec",
+      "CONTINUITY-TESTED ON"
+    ],
+    [
+      "qsr-system-perf-test",
+      "res-sheetmetal",
+      "COMMISSIONED WITH"
+    ],
+    [
+      "qsr-system-perf-test",
+      "mat-hvac-equip",
+      "PERFORMANCE-TESTED ON"
+    ],
+    [
+      "qsr-system-perf-test",
+      "mat-lighting",
+      "LOAD-TESTED ON"
+    ],
+    [
+      "qsr-insp",
+      "mat-fp",
+      "PRESSURE-TESTED ON"
+    ],
+    [
+      "qsr-safety-violation",
+      "res-earthmover",
+      "LOCKOUT-TAGGED ON"
+    ],
+    [
+      "qsr-incident",
+      "res-welding",
+      "CAUSED BY"
+    ]
+  ],
+  "verbGlossary": {
+    "OBSERVED FOR": "{source} is recorded involving or near {target}'s work area or crew",
+    "CITED AGAINST": "{source} is issued naming {target} or worker as the responsible party",
+    "FILED FOR": "{source} is formally logged concerning {target} worker who was affected",
+    "TESTIFIED BY": "{source} is provided by {target} worker who observed the event",
+    "ASSIGNED TO": "{source} is formally assigned to {target} for correction during closeout",
+    "ATTRIBUTED TO": "{source} is traced back to {target} whose work scope caused the deficiency",
+    "CLOSED OUT BY": "{source} is completed and signed off by {target} after rework",
+    "FAILED BY": "{source} is marked deficient due to work performed by {target}",
+    "ISSUED AGAINST": "{source} is formally issued against {target} whose work deviated from spec",
+    "SERVED TO": "{source} is formally delivered to {target} responsible for non-compliant work",
+    "DOCUMENTED AGAINST": "{source} is written up identifying deficient work by {target}",
+    "NOTED FOR": "{source} is recorded noting a condition related to {target}'s or material's work area",
+    "ASSIGNED BACK TO": "{source} is returned to {target} who performed the non-conforming work",
+    "DIRECTED AT": "{source} targets the work area or scope of {target} for remediation",
+    "REMEDIATED BY": "{source} is executed by {target} to correct a previously identified deficiency",
+    "SCHEDULED FOR": "{source} is set up to verify work completed by {target} at a milestone",
+    "FLAGGED AGAINST": "{source} is raised involving {target}'s installed or planned work",
+    "CLASHED WITH": "{source} identifies a spatial or specification conflict with {target}'s scope",
+    "CONCENTRATED ON": "{source} shows disproportionately high findings for {target}",
+    "MEASURED FOR": "{source} is calculated for {target}'s scope across inspections",
+    "HIGHEST AMONG": "{source} indicates {target} has the greatest volume of open items",
+    "TRACKED FOR": "{source} is monitored over time for {target}'s workforce",
+    "CALCULATED FOR": "{source} is computed from lost-time and restricted-duty incidents for {target}",
+    "PERSISTED WITH": "{source} indicates the same hazard keeps appearing in {target}'s zone",
+    "INCURRED BY": "{source} is attributable to corrections required on work by {target}",
+    "RESOLVED BY": "{target} measures how quickly {source} addresses a finding",
+    "SCORED FOR": "{source} is computed for {target}'s work scope across inspections",
+    "ELEVATED FOR": "{source} is notably higher for {target}, indicating increased risk exposure",
+    "OBSERVED NEAR": "{source} is recorded in the vicinity of {target} during operations",
+    "OCCURRED ON": "{source} took place on or involving {target} during construction operations",
+    "CATEGORIZED FOR": "{source} is classified under a category related to {target}'s installation",
+    "REJECTED FOR": "{source} rejects installed or delivered {target} that fails spec",
+    "IDENTIFIED ON": "{source} flags a visible defect or concern on {target}",
+    "DEFICIENT IN": "{source} identifies {target} as installed does not meet standards",
+    "INSPECTED ON": "{target} evaluates the installed condition of {source} for compliance",
+    "DRIVEN BY": "{source} is primarily caused by failures in {target}'s installation",
+    "CONDUCTED BY": "{source} is physically performed and signed off by {target}",
+    "WITNESSED BY": "{source} is observed and co-signed by {target} as an independent verifier",
+    "MONITORED BY": "{source} is tracked and overseen by {target}",
+    "VALIDATED BY": "{source} is reviewed by {target}",
+    "REPORTED BY": "{source} is documented by {target} during a jobsite walkthrough",
+    "TESTED ON": "{source} documents testing performed on a sample of {target}",
+    "SAMPLED FROM": "{source} records a test specimen extracted from a batch of {target}",
+    "VERIFIED FOR": "{source} confirms {target} meets specification requirements",
+    "BATCH-TESTED FOR": "{source} covers a full batch acceptance test on {target} delivery",
+    "CONTINUITY-TESTED ON": "{source} includes continuity or resistance testing on {target}",
+    "COMMISSIONED WITH": "{source} is executed with {target} who installed the system",
+    "PERFORMANCE-TESTED ON": "{target} measures operational parameters of {source} under load",
+    "LOAD-TESTED ON": "{target} applies load testing to {source}",
+    "PRESSURE-TESTED ON": "{source} includes a pressure or hydrostatic test on {target}",
+    "LOCKOUT-TAGGED ON": "{source} issued for failure to follow lockout/tagout procedures on {target}",
+    "CAUSED BY": "{source} determines {target} was the proximate cause of the event",
+    "INVOLVED IN INCIDENT WITH": "{source} identifies {target} worker as directly involved in the safety event"
+  },
+  "_meta": {
+    "universalEdgeSemantics": "Each universalEdge means: the source element connects to EVERY element in the targetGroup via the specified verb. targetGroup values: 'trades' (25 elements), 'equipment' (11 elements), 'materials' (25 elements), 'measures' (9 elements). These groups correspond to the category sections in taxonomy-resources.csv.",
+    "dataEvidence": "Universal relationships validated via Databricks queries against prod_gold_ram_us01 (2-year lookback, March 2026). Q1: safety obs \u00d7 30+ trades. Q2: punch items \u00d7 all 16 MasterFormat divisions. Q3: submittals \u00d7 all 18 material categories.",
+    "edgesVsUniversal": "The 'edges' array contains SELECTIVE relationships \u2014 source elements that connect to specific targets only (e.g., material test reports apply to testable materials, not all). Universal edges are in 'universalEdges'."
+  }
+}

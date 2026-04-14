@@ -1,0 +1,162 @@
+{
+  "source": "models-bim",
+  "target": "resources",
+  "edges": [
+    [
+      "bim-3d-building-info",
+      "res-ironworker",
+      "MODELS WORK OF"
+    ],
+    [
+      "bim-3d-building-info",
+      "res-concrete",
+      "MODELS WORK OF"
+    ],
+    [
+      "bim-3d-building-info",
+      "res-carpenter",
+      "MODELS WORK OF"
+    ],
+    [
+      "bim-federated-model",
+      "res-plumber",
+      "COORDINATES PLACEMENT OF"
+    ],
+    [
+      "bim-federated-model",
+      "res-sheetmetal",
+      "COORDINATES PLACEMENT OF"
+    ],
+    [
+      "bim-federated-model",
+      "res-electrician",
+      "COORDINATES PLACEMENT OF"
+    ],
+    [
+      "bim-federated-model",
+      "res-sprinkler",
+      "COORDINATES PLACEMENT OF"
+    ],
+    [
+      "bim-4d-model",
+      "res-crane",
+      "SEQUENCES DEPLOYMENT OF"
+    ],
+    [
+      "bim-4d-model",
+      "res-conc-equip",
+      "SEQUENCES DEPLOYMENT OF"
+    ],
+    [
+      "bim-5d-model-cost",
+      "mat-steel",
+      "QUANTIFIES"
+    ],
+    [
+      "bim-5d-model-cost",
+      "mat-concrete",
+      "QUANTIFIES"
+    ],
+    [
+      "bim-5d-model-cost",
+      "mat-rebar",
+      "QUANTIFIES"
+    ],
+    [
+      "bim-quantity-takeoff",
+      "mat-framing",
+      "MEASURES"
+    ],
+    [
+      "bim-quantity-takeoff",
+      "mat-glass",
+      "MEASURES"
+    ],
+    [
+      "bim-quantity-takeoff",
+      "mat-masonry",
+      "MEASURES"
+    ],
+    [
+      "bim-quantity-takeoff",
+      "mat-hvac-dist",
+      "MEASURES"
+    ],
+    [
+      "bim-model-element",
+      "mat-doors",
+      "SPECIFIES"
+    ],
+    [
+      "bim-model-element",
+      "mat-lighting",
+      "SPECIFIES"
+    ],
+    [
+      "bim-model-properties",
+      "mat-hvac-equip",
+      "PARAMETERIZES"
+    ],
+    [
+      "bim-model-properties",
+      "mat-elevator",
+      "PARAMETERIZES"
+    ],
+    [
+      "bim-clash-detection",
+      "res-plumber",
+      "DETECTS CONFLICT BETWEEN"
+    ],
+    [
+      "bim-clash-detection",
+      "res-sheetmetal",
+      "DETECTS CONFLICT BETWEEN"
+    ],
+    [
+      "bim-model-based",
+      "res-ironworker",
+      "DIRECTS FABRICATION OF"
+    ],
+    [
+      "bim-model-based",
+      "res-glazier",
+      "DIRECTS INSTALLATION BY"
+    ],
+    [
+      "bim-point-cloud",
+      "res-survey-inst",
+      "CAPTURED USING"
+    ],
+    [
+      "bim-drone-capture",
+      "res-surveyor",
+      "OPERATED BY"
+    ],
+    [
+      "bim-as-built-model",
+      "res-qc",
+      "VERIFIED BY"
+    ],
+    [
+      "bim-digital-twin",
+      "mat-hvac-equip",
+      "MONITORS PERFORMANCE OF"
+    ]
+  ],
+  "verbGlossary": {
+    "MODELS WORK OF": "{source} represents the geometry and scope installed by this {target}",
+    "COORDINATES PLACEMENT OF": "{source} spatially coordinates routing and placement across MEP {target}s",
+    "SEQUENCES DEPLOYMENT OF": "{source} links {target} mobilization to the construction schedule",
+    "QUANTIFIES": "{source} extracts {target} quantities for cost estimation and procurement",
+    "MEASURES": "{source} calculates area, length, or volume of materials from {target}",
+    "SPECIFIES": "{target} carries product specification data for {source} or assembly",
+    "PARAMETERIZES": "{source} properties store performance ratings, capacities, and technical specs for {target}",
+    "DETECTS CONFLICT BETWEEN": "{source} identifies spatial interference in {target} routing or placement",
+    "DIRECTS FABRICATION OF": "{source}-based shop drawings guide offsite fabrication of {target}-specific components",
+    "DIRECTS INSTALLATION BY": "{source}-based drawings guide field installation sequence for {target}",
+    "CAPTURED USING": "{source} data captured using survey instruments and laser scanners",
+    "OPERATED BY": "{source}capture flown and managed by survey personnel",
+    "VERIFIED BY": "{source}checked by QC inspector against installed field conditions",
+    "MONITORS PERFORMANCE OF": "{source}tracks real-time operating data from installed {target}"
+  }
+}

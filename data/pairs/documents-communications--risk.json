@@ -1,0 +1,393 @@
+{
+  "source": "documents-communications",
+  "target": "risk",
+  "edges": [
+    [
+      "doc-daily-report",
+      "rk-risk-trigger",
+      "SURFACES"
+    ],
+    [
+      "doc-daily-report",
+      "rk-safety-risk",
+      "DOCUMENTS"
+    ],
+    [
+      "doc-daily-report",
+      "rk-enviro-risk",
+      "DOCUMENTS"
+    ],
+    [
+      "doc-daily-log-note",
+      "rk-risk-trigger",
+      "SIGNALS"
+    ],
+    [
+      "doc-daily-log-note",
+      "rk-const-execution",
+      "EVIDENCES"
+    ],
+    [
+      "doc-daily-log-note",
+      "rk-geotechnical-ris",
+      "EVIDENCES"
+    ],
+    [
+      "doc-req-info-rfi",
+      "rk-design-risk",
+      "EXPOSES"
+    ],
+    [
+      "doc-req-info-rfi",
+      "rk-coord-risk",
+      "EXPOSES"
+    ],
+    [
+      "doc-req-info-rfi",
+      "rk-risk-trigger",
+      "INITIATES"
+    ],
+    [
+      "doc-rfi-response",
+      "rk-design-risk",
+      "RESOLVES"
+    ],
+    [
+      "doc-rfi-response",
+      "rk-mitigation-actio",
+      "AUTHORIZES"
+    ],
+    [
+      "doc-drawing-revision",
+      "rk-design-risk",
+      "TRIGGERED BY"
+    ],
+    [
+      "doc-drawing-revision",
+      "rk-risk-trigger",
+      "CONSTITUTES"
+    ],
+    [
+      "doc-drawing-revision-2",
+      "rk-design-risk",
+      "SIGNALS"
+    ],
+    [
+      "doc-drawing-set",
+      "rk-risk-register",
+      "REFERENCED BY"
+    ],
+    [
+      "doc-drawing-sheet",
+      "rk-impact-assessmen",
+      "SCOPES"
+    ],
+    [
+      "doc-specification-se",
+      "rk-design-risk",
+      "GOVERNS"
+    ],
+    [
+      "doc-specification-se",
+      "rk-supply-chain",
+      "CONSTRAINS"
+    ],
+    [
+      "doc-addendum",
+      "rk-risk-register",
+      "REVISES"
+    ],
+    [
+      "doc-bulletin-archite",
+      "rk-design-risk",
+      "MITIGATES"
+    ],
+    [
+      "doc-notice-delay",
+      "rk-schedule-risk",
+      "FORMALIZES"
+    ],
+    [
+      "doc-notice-delay",
+      "rk-risk-allocation",
+      "INVOKES"
+    ],
+    [
+      "doc-notice-delay",
+      "rk-risk-trigger",
+      "CONSTITUTES"
+    ],
+    [
+      "doc-submittal",
+      "rk-supply-chain",
+      "MITIGATES"
+    ],
+    [
+      "doc-submittal-respon",
+      "rk-design-risk",
+      "MITIGATES"
+    ],
+    [
+      "doc-submittal-reject",
+      "rk-supply-chain",
+      "SIGNALS"
+    ],
+    [
+      "doc-submittal-cycle",
+      "rk-schedule-risk",
+      "SIGNALS"
+    ],
+    [
+      "doc-shop-drawing",
+      "rk-coord-risk",
+      "MITIGATES"
+    ],
+    [
+      "doc-product-data",
+      "rk-supply-chain",
+      "VALIDATES AGAINST"
+    ],
+    [
+      "doc-correspondence",
+      "rk-risk",
+      "ESCALATES"
+    ],
+    [
+      "doc-correspondence",
+      "rk-risk-register",
+      "DOCUMENTED IN"
+    ],
+    [
+      "doc-correspondence-r",
+      "rk-risk-mitigation",
+      "SIGNALS"
+    ],
+    [
+      "doc-chg-directive",
+      "rk-risk-response",
+      "ENACTS"
+    ],
+    [
+      "doc-chg-directive",
+      "rk-financial-risk",
+      "ESCALATES"
+    ],
+    [
+      "doc-site-instruction",
+      "rk-safety-risk",
+      "MITIGATES"
+    ],
+    [
+      "doc-site-instruction",
+      "rk-mitigation-actio",
+      "DIRECTS"
+    ],
+    [
+      "doc-meeting",
+      "rk-risk-register",
+      "REVIEWS"
+    ],
+    [
+      "doc-meeting-minutes",
+      "rk-risk",
+      "TRACKS"
+    ],
+    [
+      "doc-meeting-minutes",
+      "rk-mitigation-actio",
+      "TRACKS"
+    ],
+    [
+      "doc-meeting-minutes",
+      "rk-risk-score",
+      "REPORTED AT"
+    ],
+    [
+      "doc-photo",
+      "rk-risk-trigger",
+      "EVIDENCES"
+    ],
+    [
+      "doc-photo",
+      "rk-const-execution",
+      "EVIDENCES"
+    ],
+    [
+      "doc-video",
+      "rk-safety-risk",
+      "EVIDENCES"
+    ],
+    [
+      "doc-action-plan",
+      "rk-mitigation-actio",
+      "IMPLEMENTS"
+    ],
+    [
+      "doc-action-plan",
+      "rk-residual-risk",
+      "REDUCES"
+    ],
+    [
+      "doc-action-plan-line",
+      "rk-mitigation-actio",
+      "EXECUTES"
+    ],
+    [
+      "doc-project-task",
+      "rk-mitigation-actio",
+      "TRACKS"
+    ],
+    [
+      "doc-safety-plan-site",
+      "rk-safety-risk",
+      "GOVERNS"
+    ],
+    [
+      "doc-safety-plan-site",
+      "rk-incident-rate",
+      "CONTROLS"
+    ],
+    [
+      "doc-swppp-enviro",
+      "rk-enviro-risk",
+      "GOVERNS"
+    ],
+    [
+      "doc-permit-applicati",
+      "rk-reg-permit-risk",
+      "ADDRESSES"
+    ],
+    [
+      "doc-cert-insurance",
+      "rk-insurance-requir",
+      "SATISFIES"
+    ],
+    [
+      "doc-cert-insurance",
+      "rk-risk-allocation",
+      "TRANSFERS VIA"
+    ],
+    [
+      "doc-lien-waiver",
+      "rk-financial-risk",
+      "MITIGATES"
+    ],
+    [
+      "doc-punch-list-as",
+      "rk-residual-risk",
+      "CLOSES OUT"
+    ],
+    [
+      "doc-as-built-docs",
+      "rk-residual-risk",
+      "CLOSES OUT"
+    ],
+    [
+      "doc-warranty-docs",
+      "rk-residual-risk",
+      "TRANSFERS"
+    ],
+    [
+      "doc-o-m-manual",
+      "rk-const-execution",
+      "REDUCES"
+    ],
+    [
+      "doc-transmittal",
+      "rk-risk-register",
+      "DISTRIBUTES"
+    ],
+    [
+      "doc-plan-revision",
+      "rk-coord-risk",
+      "TRIGGERED BY"
+    ],
+    [
+      "doc-plan-revision",
+      "rk-risk-trigger",
+      "CONSTITUTES"
+    ],
+    [
+      "doc-phone-call-log",
+      "rk-risk-trigger",
+      "DOCUMENTS"
+    ],
+    [
+      "doc-rfi-volume",
+      "rk-design-risk",
+      "PREDICTS"
+    ],
+    [
+      "doc-rfi-volume",
+      "rk-coord-risk",
+      "PREDICTS"
+    ],
+    [
+      "doc-daily-log-2",
+      "rk-incident-rate",
+      "CORRELATES WITH"
+    ],
+    [
+      "doc-form-proforma",
+      "rk-risk-register",
+      "STANDARDIZES"
+    ],
+    [
+      "doc-daily-log",
+      "rk-safety-risk",
+      "STANDARDIZES"
+    ],
+    [
+      "doc-req-proposal-rfp",
+      "rk-financial-risk",
+      "QUANTIFIES"
+    ],
+    [
+      "doc-sample-submittal",
+      "rk-design-risk",
+      "VALIDATES AGAINST"
+    ]
+  ],
+  "verbGlossary": {
+    "ADDRESSES": "{source} directly responds to or manages a specific {target} through formal regulatory or compliance action (e.g., permit application addresses regulatory risk)",
+    "AUTHORIZES": "{source} response grants formal approval for {target} mitigation action to proceed (e.g., RFI response authorizes a mitigation action for a design ambiguity)",
+    "CLOSES OUT": "{source}document formally resolves and retires a residual {target} upon project completion (e.g., punch list closes out residual risk when all deficiencies are corrected)",
+    "CONSTRAINS": "{source} imposes material or performance requirements that limit exposure to {target} (e.g., specification constrains supply chain risk by narrowing acceptable products)",
+    "CONSTITUTES": "{source} event itself represents or embodies {target} trigger in the project record (e.g., notice of delay constitutes a risk trigger for schedule claims)",
+    "CONTROLS": "{source}document establishes procedures that actively manage and reduce {target} metric (e.g., safety plan controls incident rate through mandated protocols)",
+    "CORRELATES WITH": "{source} management metric trends in parallel with {target} metric over time (e.g., daily log completion rate correlates with incident rate)",
+    "DIRECTS": "{source} orders specific field action to address {target} condition (e.g., site instruction directs a mitigation action for an unsafe condition)",
+    "DISTRIBUTES": "{source} formally circulates {target}-related information to responsible parties (e.g., transmittal distributes updated risk register to the project team)",
+    "DOCUMENTED IN": "{source} or discussion is formally captured within project correspondence for the record (e.g., {target} documented in project correspondence)",
+    "DOCUMENTS": "{source}records the occurrence or evidence of {target} condition (e.g., daily report documents a safety risk observed on site)",
+    "ENACTS": "{source}document formally puts {target} response strategy into contractual effect (e.g., change directive enacts a risk response by ordering immediate work)",
+    "ESCALATES": "{source} raises the severity or visibility of {target} to higher authority or stakeholders (e.g., correspondence escalates an unresolved risk to senior management)",
+    "EVIDENCES": "{source}record provides proof that {target} trigger or risk condition exists (e.g., photo evidences construction execution risk such as a structural defect)",
+    "EXECUTES": "{source}document item carries out a specific step within {target} mitigation plan (e.g., action plan line item executes a mitigation action assignment)",
+    "EXPOSES": "{source} reveals or uncovers a previously unidentified or underestimated {target} (e.g., RFI exposes design risk when field conditions conflict with drawings)",
+    "FORMALIZES": "{source} converts an informal {target} condition into a formal contractual notice (e.g., notice of delay formalizes schedule risk into a documented claim basis)",
+    "GOVERNS": "{source}document sets the standards against which {target} is managed (e.g., safety plan governs safety risk through mandated procedures)",
+    "IMPLEMENTS": "{source} document puts a risk mitigation strategy into operational practice (e.g., action plan implements mitigation actions defined in {target} register)",
+    "INITIATES": "{source} formally starts {target} identification or response process (e.g., RFI initiates a risk trigger when a design conflict is raised)",
+    "INVOKES": "{source} document activates a contractual {target} allocation clause (e.g., notice of delay invokes risk allocation provisions for time extensions)",
+    "MITIGATES": "{source} or document action reduces the probability or impact of {target} (e.g., submittal mitigates supply chain risk by confirming material compliance early)",
+    "PREDICTS": "{source} volume or frequency metric serves as a leading indicator of an emerging {target} (e.g., RFI volume density predicts design risk escalation)",
+    "QUANTIFIES": "{source} assigns a measurable value to the potential financial impact of {target} (e.g., pricing request quantifies financial risk of a proposed scope change)",
+    "REDUCES": "{source} activity lowers the severity or residual exposure of {target} (e.g., O&M manual reduces construction execution risk by ensuring proper operational handoff)",
+    "REFERENCED BY": "{source} or document set is cited within {target} register entry to identify the affected scope (e.g., drawing set referenced by risk register for location-specific risks)",
+    "REPORTED AT": "{source} metric is formally presented and reviewed during a documented meeting (e.g., {target} reported at progress meeting per meeting minutes)",
+    "RESOLVES": "{source} response eliminates or sufficiently addresses {target} condition (e.g., RFI response resolves design risk by providing definitive design direction)",
+    "REVIEWS": "{source} session formally evaluates {target}s for status and decision-making (e.g., meeting reviews open risk register items)",
+    "REVISES": "{source} modifies {target} landscape by changing scope, requirements, or contract terms (e.g., addendum revises risk register when new scope items introduce new risks)",
+    "SATISFIES": "{source}document fulfills a contractual {target} transfer requirement (e.g., certificate of insurance satisfies an insurance requirement)",
+    "SCOPES": "{source} or document defines the physical or functional boundary used to assess {target} impact (e.g., drawing sheet scopes the area evaluated in an impact assessment)",
+    "SIGNALS": "{source} metric or event provides an early warning that {target} is emerging or worsening (e.g., submittal rejection rate signals supply chain risk issues)",
+    "STANDARDIZES": "{source}establishes a consistent structure for recording or tracking {target} information (e.g., proforma form standardizes risk register entry format)",
+    "SURFACES": "{source}document reveals {target} trigger condition through routine project reporting (e.g., daily report surfaces a risk trigger when an unforeseen condition is noted)",
+    "TRACKS": "{source} records ongoing status updates for {target}s or mitigation progress (e.g., meeting minutes track mitigation action completion status)",
+    "TRANSFERS": "{source}document shifts residual {target} responsibility to the next party or phase (e.g., warranty documentation transfers residual risk to the manufacturer or warrantor)",
+    "TRANSFERS VIA": "{source}document serves as the formal vehicle for shifting {target} to another party (e.g., certificate of insurance transfers risk via the insurance requirement to the insurer)",
+    "TRIGGERED BY": "{source} is issued as a direct result of {target} event materializing (e.g., drawing revision triggered by design risk when errors are discovered)",
+    "VALIDATES AGAINST": "{source} confirms compliance with requirements, reducing uncertainty about {target} (e.g., product data submittal validates material against supply chain risk specifications)"
+  }
+}

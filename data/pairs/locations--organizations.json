@@ -1,0 +1,217 @@
+{
+  "source": "locations",
+  "target": "organizations",
+  "edges": [
+    [
+      "loc-project-site",
+      "org-gen-contr-gc",
+      "MANAGED BY"
+    ],
+    [
+      "loc-project-site",
+      "org-private-develope",
+      "OWNED BY"
+    ],
+    [
+      "loc-project-site",
+      "org-building-departm",
+      "PERMITTED BY"
+    ],
+    [
+      "loc-project-site",
+      "org-osha-safety",
+      "REGULATED BY"
+    ],
+    [
+      "loc-project-site",
+      "org-const-lender",
+      "FINANCED BY"
+    ],
+    [
+      "loc-project-site",
+      "org-insurance-broker",
+      "INSURED BY"
+    ],
+    [
+      "loc-project-site",
+      "org-water-sewer",
+      "CONNECTED BY"
+    ],
+    [
+      "loc-building",
+      "org-architect-record",
+      "DESIGNED BY"
+    ],
+    [
+      "loc-building",
+      "org-struct-engineer",
+      "ENGINEERED BY"
+    ],
+    [
+      "loc-exterior-zone",
+      "org-civil-engineer",
+      "GRADED BY"
+    ],
+    [
+      "loc-exterior-zone",
+      "org-landscape-archit",
+      "LANDSCAPED BY"
+    ],
+    [
+      "loc-laydown-staging",
+      "org-mat-supplier",
+      "STOCKED BY"
+    ],
+    [
+      "loc-right-way",
+      "org-zoning-planning",
+      "PERMITTED BY"
+    ],
+    [
+      "loc-right-way",
+      "org-electric-utility",
+      "TRENCHED BY"
+    ],
+    [
+      "loc-temp-facility",
+      "org-equip-rental",
+      "FURNISHED BY"
+    ],
+    [
+      "loc-floor-level",
+      "org-sub-trade",
+      "FRAMED BY"
+    ],
+    [
+      "loc-floor-level",
+      "org-const-manager-at",
+      "SEQUENCED BY"
+    ],
+    [
+      "loc-below-grade",
+      "org-geotechnical-eng",
+      "SURVEYED BY"
+    ],
+    [
+      "loc-roof-level",
+      "org-special-insp",
+      "INSPECTED BY"
+    ],
+    [
+      "loc-ceiling-plenum",
+      "org-mep-engineer",
+      "ROUTED BY"
+    ],
+    [
+      "loc-fire-smoke",
+      "org-fire-prot",
+      "RATED BY"
+    ],
+    [
+      "loc-fire-smoke",
+      "org-fire-marshal",
+      "CERTIFIED BY"
+    ],
+    [
+      "loc-cx-zone",
+      "org-cx-agent-cxa",
+      "COMMISSIONED BY"
+    ],
+    [
+      "loc-penetration-open",
+      "org-special-insp",
+      "SEALED BY"
+    ],
+    [
+      "loc-wet-area",
+      "org-mat-testing-lab",
+      "TESTED BY"
+    ],
+    [
+      "loc-equip-location",
+      "org-fabricator",
+      "FABRICATED FOR"
+    ],
+    [
+      "loc-work-zone-phase",
+      "org-self-performing",
+      "MOBILIZED BY"
+    ],
+    [
+      "loc-work-zone-phase",
+      "org-design-builder",
+      "COORDINATED BY"
+    ],
+    [
+      "loc-wall-surface",
+      "org-building-envelop",
+      "DETAILED BY"
+    ],
+    [
+      "loc-grid-line",
+      "org-struct-engineer",
+      "LAID OUT BY"
+    ],
+    [
+      "org-sub-count-per",
+      "loc-project-site",
+      "COUNTED AT"
+    ],
+    [
+      "org-trade-coverage",
+      "loc-floor-level",
+      "MEASURED AT"
+    ],
+    [
+      "org-sub-safety",
+      "loc-project-site",
+      "TRACKED AT"
+    ],
+    [
+      "loc-defect-density",
+      "org-sub-trade",
+      "ATTRIBUTED TO"
+    ],
+    [
+      "loc-safety-incident",
+      "org-osha-safety",
+      "REPORTED TO"
+    ]
+  ],
+  "verbGlossary": {
+    "MANAGED BY": "{source} area is under the day-to-day construction management of this {target}",
+    "OWNED BY": "{source} is held by this {target} or developer who commissioned the construction work",
+    "PERMITTED BY": "Project site or right-of-way use is authorized through permits issued by this regulatory {target}",
+    "REGULATED BY": "{source} is enforced by this occupational safety {target}",
+    "FINANCED BY": "{source} is funded through draw schedules administered by this construction lender",
+    "INSURED BY": "Project site builder's risk or general liability coverage is underwritten by this insurance carrier",
+    "CONNECTED BY": "{source} are installed and activated by this utility {target}",
+    "DESIGNED BY": "{source} layout and {target}ural intent was created by this architect as the design professional of record",
+    "ENGINEERED BY": "{source} structural systems were analyzed, sized, and specified by this engineering {target}",
+    "GRADED BY": "Exterior zone earthwork and site grading was designed or executed by this civil engineering {target}",
+    "LANDSCAPED BY": "{source}planting design was specified by this landscape architecture {target}",
+    "STOCKED BY": "{source} receives and stores materials delivered by this {target} for project consumption",
+    "TRENCHED BY": "{source}is excavated for utility installation by or on behalf of this utility provider",
+    "FURNISHED BY": "Temporary facility trailers, fencing, or sanitation are supplied by this equipment rental {target}",
+    "FRAMED BY": "{source} level structural framing or trade-specific scope is installed by this {target}",
+    "SEQUENCED BY": "{source} level construction sequence and trade stacking is planned by this construction manager",
+    "SURVEYED BY": "{source} are investigated and characterized by this geotechnical engineering {target}",
+    "INSPECTED BY": "{source} is examined for code compliance or quality conformance by this special inspection agency",
+    "ROUTED BY": "{source} are designed and coordinated by this {target}",
+    "RATED BY": "{source} is specified by this fire protection engineering {target}",
+    "CERTIFIED BY": "{source} is reviewed and approved for code compliance by this {target}",
+    "COMMISSIONED BY": "{source}are functionally tested and verified by this commissioning agent",
+    "SEALED BY": "{source}firestop assembly is inspected and documented by this special inspection agency",
+    "TESTED BY": "{source}area waterproofing assembly is flood-tested or moisture-tested by this materials testing lab",
+    "FABRICATED FOR": "{source}receives a custom-built assembly or component manufactured by this {target}",
+    "MOBILIZED BY": "{source}is staffed and equipped by this self-performing division for direct-hire execution",
+    "COORDINATED BY": "Work zone trade sequencing and design integration is managed by this design-build {target}",
+    "DETAILED BY": "Wall surface thermal, moisture, and air barrier assemblies are specified by this building envelope {target}",
+    "LAID OUT BY": "{source} line intersections and control points are established from structural engineering documents by this {target}",
+    "COUNTED AT": "{source}count metric tallies the number of trade {target}s active at this project site",
+    "MEASURED AT": "{source}coverage rate calculates the percentage of floor levels with assigned {target}s",
+    "TRACKED AT": "{target} safety incident rate is monitored across all trades at this project site",
+    "ATTRIBUTED TO": "{source}-based defect density metric is allocated to this responsible {target}",
+    "REPORTED TO": "{source} is submitted to this regulatory {target} for compliance tracking"
+  }
+}

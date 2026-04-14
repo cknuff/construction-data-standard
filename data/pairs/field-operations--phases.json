@@ -1,0 +1,329 @@
+{
+  "source": "field-operations",
+  "target": "phases",
+  "edges": [
+    [
+      "fo-daily-log-header",
+      "ph-earthwork",
+      "OPENED FOR"
+    ],
+    [
+      "fo-daily-log-header",
+      "ph-punch",
+      "OPENED FOR"
+    ],
+    [
+      "fo-daily-log-note",
+      "ph-foundations",
+      "DOCUMENTS"
+    ],
+    [
+      "fo-daily-log-note",
+      "ph-punch",
+      "DOCUMENTS"
+    ],
+    [
+      "fo-manpower-log",
+      "ph-steel",
+      "TRACKS LABOR DURING"
+    ],
+    [
+      "fo-manpower-log",
+      "ph-framing",
+      "TRACKS LABOR DURING"
+    ],
+    [
+      "fo-crew-crew",
+      "ph-demo",
+      "MOBILIZED FOR"
+    ],
+    [
+      "fo-crew-crew",
+      "ph-steel",
+      "MOBILIZED FOR"
+    ],
+    [
+      "fo-delay-log-entry",
+      "ph-earthwork",
+      "DELAYS"
+    ],
+    [
+      "fo-delay-log-entry",
+      "ph-delivery",
+      "DELAYS"
+    ],
+    [
+      "fo-delay-log-entry",
+      "ph-roofing",
+      "DELAYS"
+    ],
+    [
+      "fo-weather-log",
+      "ph-earthwork",
+      "LOGGED DURING"
+    ],
+    [
+      "fo-weather-log",
+      "ph-slab",
+      "LOGGED DURING"
+    ],
+    [
+      "fo-weather-log",
+      "ph-roofing",
+      "LOGGED DURING"
+    ],
+    [
+      "fo-equip-log-entry",
+      "ph-demo",
+      "LOGGED DURING"
+    ],
+    [
+      "fo-equip-log-entry",
+      "ph-earthwork",
+      "LOGGED DURING"
+    ],
+    [
+      "fo-equip-timecard",
+      "ph-earthwork",
+      "RECORDS HOURS DURING"
+    ],
+    [
+      "fo-dlvy-log-entry",
+      "ph-delivery",
+      "RECORDS RECEIPT DURING"
+    ],
+    [
+      "fo-mat-shipment",
+      "ph-fabrication",
+      "SHIPS DURING"
+    ],
+    [
+      "fo-mat-receipt",
+      "ph-delivery",
+      "RECEIVED DURING"
+    ],
+    [
+      "fo-safety-violation",
+      "ph-steel",
+      "CITED DURING"
+    ],
+    [
+      "fo-safety-violation",
+      "ph-roofing",
+      "CITED DURING"
+    ],
+    [
+      "fo-accident-log",
+      "ph-steel",
+      "REPORTED DURING"
+    ],
+    [
+      "fo-daily-log-insp",
+      "ph-foundations",
+      "INSPECTED DURING"
+    ],
+    [
+      "fo-daily-log-insp",
+      "ph-final-insp",
+      "INSPECTED DURING"
+    ],
+    [
+      "fo-productivity-log",
+      "ph-framing",
+      "MEASURES OUTPUT DURING"
+    ],
+    [
+      "fo-quantity-log",
+      "ph-slab",
+      "TALLIED DURING"
+    ],
+    [
+      "fo-visitor-log",
+      "ph-safety-orient",
+      "REGISTERED DURING"
+    ],
+    [
+      "fo-waste-log-entry",
+      "ph-demo",
+      "DISPOSED DURING"
+    ],
+    [
+      "fo-dumpster-log",
+      "ph-demo",
+      "HAULED DURING"
+    ],
+    [
+      "fo-scheduled-work",
+      "ph-hvac-dist",
+      "PLANNED FOR"
+    ],
+    [
+      "fo-scheduled-work-2",
+      "ph-steel",
+      "LINKED TO"
+    ],
+    [
+      "fo-t-m-ticket",
+      "ph-punch",
+      "AUTHORIZED DURING"
+    ],
+    [
+      "fo-t-m-ticket",
+      "ph-warranty",
+      "AUTHORIZED DURING"
+    ],
+    [
+      "fo-t-m-labor-entry",
+      "ph-punch",
+      "CHARGED DURING"
+    ],
+    [
+      "fo-timecard-entry",
+      "ph-steel",
+      "CLOCKED DURING"
+    ],
+    [
+      "fo-assignment",
+      "ph-elec-ri",
+      "ASSIGNED TO"
+    ],
+    [
+      "fo-workforce-req",
+      "ph-steel",
+      "REQUESTED FOR"
+    ],
+    [
+      "fo-const-report",
+      "ph-startup",
+      "SUMMARIZES"
+    ],
+    [
+      "fo-daily-report",
+      "ph-punch",
+      "DISTRIBUTED FOR"
+    ],
+    [
+      "fo-plan-revision",
+      "ph-submittals",
+      "RECEIVED DURING"
+    ],
+    [
+      "fo-phone-call-log",
+      "ph-delivery",
+      "COORDINATED DURING"
+    ],
+    [
+      "fo-actual-productio",
+      "ph-slab",
+      "MEASURED DURING"
+    ],
+    [
+      "fo-budgeted-product",
+      "ph-earthwork",
+      "BASELINED FOR"
+    ],
+    [
+      "fo-field-productivi",
+      "ph-framing",
+      "EVALUATED DURING"
+    ],
+    [
+      "fo-employee-record",
+      "ph-safety-orient",
+      "ONBOARDED DURING"
+    ],
+    [
+      "fo-employee-record",
+      "ph-contract-close",
+      "RELEASED DURING"
+    ],
+    [
+      "fo-peak-daily",
+      "ph-steel",
+      "PEAKS DURING"
+    ],
+    [
+      "fo-average-daily",
+      "ph-hvac-dist",
+      "AVERAGED DURING"
+    ],
+    [
+      "fo-delay-frequency",
+      "ph-earthwork",
+      "COUNTED DURING"
+    ],
+    [
+      "fo-weather-delay",
+      "ph-slab",
+      "IMPACTS"
+    ],
+    [
+      "fo-equip-utilizatio",
+      "ph-earthwork",
+      "RATED DURING"
+    ],
+    [
+      "fo-waste-diversion",
+      "ph-demo",
+      "TRACKED DURING"
+    ],
+    [
+      "fo-daily-log-2",
+      "ph-punch",
+      "BENCHMARKED DURING"
+    ],
+    [
+      "fo-daily-log-dist",
+      "ph-steel",
+      "REPORTED DURING"
+    ],
+    [
+      "fo-plan-percent",
+      "ph-framing",
+      "SCORED DURING"
+    ]
+  ],
+  "verbGlossary": {
+    "OPENED FOR": "{source} is created to record a day's field activity during {target}",
+    "DOCUMENTS": "{source} narratively records field conditions, progress, or issues occurring in {target}",
+    "TRACKS LABOR DURING": "{source} captures trade headcount and worker-hours present on site during {target}",
+    "MOBILIZED FOR": "{source}is assembled and deployed to the jobsite to perform work in a specific {target}",
+    "DELAYS": "{source} entry records lost time or schedule impact to {target} from weather, material, or other causes",
+    "LOGGED DURING": "{source}is recorded on {target} while a phase is active",
+    "RECORDS HOURS DURING": "{source} captures machine operating hours consumed during {target}",
+    "RECORDS RECEIPT DURING": "{source} entry documents material arrival on site during {target}",
+    "SHIPS DURING": "Material shipment leaves fabricator or supplier during the procurement or delivery {target}",
+    "RECEIVED DURING": "{source} is signed for on site during the active {target}",
+    "CITED DURING": "{source} is issued for a hazard observed while {target} is under way",
+    "REPORTED DURING": "Accident, incident, or distribution metric is formally recorded during an active {target}",
+    "INSPECTED DURING": "{source} entry records a jurisdictional or third-party inspection occurring in {target}",
+    "MEASURES OUTPUT DURING": "{source} captures units installed or completed per labor-hour during {target}",
+    "TALLIED DURING": "{source} records cumulative installed quantities for pay or progress during {target}",
+    "REGISTERED DURING": "{source} records non-crew personnel entering the site during {target}",
+    "DISPOSED DURING": "{source} entry records debris or demolition material removed from site during {target}",
+    "HAULED DURING": "{source} tracks container pulls and disposal loads during {target}",
+    "PLANNED FOR": "{source} identifies the day's planned activities for a given {target}",
+    "LINKED TO": "Scheduled work task link ties a daily log work item back to a schedule task in {target}",
+    "AUTHORIZED DURING": "T&M ticket is approved for extra or out-of-scope work performed during {target}",
+    "CHARGED DURING": "T&M labor, equipment, or material entry records billable cost incurred during {target}",
+    "CLOCKED DURING": "{source} entry records individual worker start and stop times during {target}",
+    "ASSIGNED TO": "{source}assignment is made to perform work in a specific {target}",
+    "REQUESTED FOR": "{source} is submitted to secure additional trade labor needed for {target}",
+    "SUMMARIZES": "{source} entry provides a narrative or metric summary of progress within {target}",
+    "DISTRIBUTED FOR": "{source} is compiled and sent to stakeholders covering activity in {target}",
+    "COORDINATED DURING": "{source} records coordination calls with subcontractors or suppliers during {target}",
+    "MEASURED DURING": "{source} captures real output achieved during {target} for earned-value tracking",
+    "BASELINED FOR": "Budgeted production quantity sets the planned output target for {target}",
+    "EVALUATED DURING": "{source} productivity record compares actual vs. budgeted output rates during {target}",
+    "ONBOARDED DURING": "{source}record is activated when a worker enters the project during orientation",
+    "RELEASED DURING": "{source}record is deactivated when a worker demobilizes at {target} completion or closeout",
+    "PEAKS DURING": "{source} identifies the maximum workforce deployed during {target}",
+    "AVERAGED DURING": "Average daily headcount metric computes mean workforce level across {target}",
+    "COUNTED DURING": "{source} tallies the number of delay events recorded during {target}",
+    "IMPACTS": "{source}rate quantifies lost days as a percentage of working days in {target}",
+    "RATED DURING": "{source} measures active-use hours vs. available hours during {target}",
+    "TRACKED DURING": "{source} measures recycled vs. total waste volume during {target}",
+    "BENCHMARKED DURING": "{source} measures how consistently logs are filed during {target}",
+    "SCORED DURING": "{source} measures weekly planned-vs-completed task ratio during {target}"
+  }
+}

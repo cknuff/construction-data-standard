@@ -1,0 +1,273 @@
+{
+  "source": "risk",
+  "target": "schedule",
+  "edges": [
+    [
+      "rk-risk",
+      "sch-critical-path",
+      "DISRUPTS"
+    ],
+    [
+      "rk-risk",
+      "sch-milestone",
+      "DELAYS"
+    ],
+    [
+      "rk-risk-register",
+      "sch-look-ahead",
+      "INFORMS"
+    ],
+    [
+      "rk-risk-register",
+      "sch-baseline-schedul",
+      "FEEDS"
+    ],
+    [
+      "rk-risk-category",
+      "sch-delay-class",
+      "MAPS TO"
+    ],
+    [
+      "rk-risk-trigger",
+      "sch-schedule-chg",
+      "INITIATES"
+    ],
+    [
+      "rk-risk-owner",
+      "sch-recovery-schedul",
+      "ACCOUNTABLE FOR"
+    ],
+    [
+      "rk-likelihood-asses",
+      "sch-float-slack",
+      "WEIGHTED BY"
+    ],
+    [
+      "rk-impact-assessmen",
+      "sch-critical-path",
+      "QUANTIFIED AGAINST"
+    ],
+    [
+      "rk-risk-score",
+      "sch-schedule-health",
+      "DEGRADES"
+    ],
+    [
+      "rk-risk-score",
+      "sch-critical-activit",
+      "PRIORITIZED BY"
+    ],
+    [
+      "rk-risk-matrix",
+      "sch-time-impact",
+      "DRIVES"
+    ],
+    [
+      "rk-risk-response",
+      "sch-acceleration",
+      "TRIGGERS"
+    ],
+    [
+      "rk-risk-response",
+      "sch-time-extension",
+      "JUSTIFIES"
+    ],
+    [
+      "rk-mitigation-actio",
+      "sch-look-ahead",
+      "SCHEDULED IN"
+    ],
+    [
+      "rk-mitigation-actio",
+      "sch-float-slack",
+      "PRESERVES"
+    ],
+    [
+      "rk-contingency-rese",
+      "sch-cost-loading",
+      "BUDGETED IN"
+    ],
+    [
+      "rk-schedule-buffer",
+      "sch-critical-path",
+      "PROTECTS"
+    ],
+    [
+      "rk-residual-risk",
+      "sch-float-erosion",
+      "ACCELERATES"
+    ],
+    [
+      "rk-design-risk",
+      "sch-lag-lead-time",
+      "EXTENDS"
+    ],
+    [
+      "rk-design-risk",
+      "sch-calculated-dates",
+      "SHIFTS"
+    ],
+    [
+      "rk-const-execution",
+      "sch-detail-activity",
+      "DELAYS"
+    ],
+    [
+      "rk-financial-risk",
+      "sch-cost-loading",
+      "DISRUPTS"
+    ],
+    [
+      "rk-schedule-risk",
+      "sch-baseline-executi",
+      "UNDERMINES"
+    ],
+    [
+      "rk-safety-risk",
+      "sch-detail-activity",
+      "HALTS"
+    ],
+    [
+      "rk-safety-risk",
+      "sch-work-calendar",
+      "RESTRICTS"
+    ],
+    [
+      "rk-enviro-risk",
+      "sch-work-calendar",
+      "CONSTRAINS"
+    ],
+    [
+      "rk-reg-permit-risk",
+      "sch-schedule-constra",
+      "IMPOSES"
+    ],
+    [
+      "rk-reg-permit-risk",
+      "sch-milestone",
+      "GATES"
+    ],
+    [
+      "rk-supply-chain",
+      "sch-detail-activity",
+      "STARVES"
+    ],
+    [
+      "rk-supply-chain",
+      "sch-lag-lead-time",
+      "INFLATES"
+    ],
+    [
+      "rk-geotechnical-ris",
+      "sch-retrospective-de",
+      "DOCUMENTED IN"
+    ],
+    [
+      "rk-labor-risk",
+      "sch-labor-loading",
+      "DEPLETES"
+    ],
+    [
+      "rk-labor-risk",
+      "sch-resource-levelin",
+      "DESTABILIZES"
+    ],
+    [
+      "rk-coord-risk",
+      "sch-dependency-class",
+      "BREAKS"
+    ],
+    [
+      "rk-risk-allocation",
+      "sch-time-extension",
+      "GOVERNS"
+    ],
+    [
+      "rk-insurance-requir",
+      "sch-schedule-constra",
+      "CONSTRAINS"
+    ],
+    [
+      "rk-surety-bond",
+      "sch-milestone",
+      "ENFORCES"
+    ],
+    [
+      "rk-risk-exposure",
+      "sch-schedule-perf",
+      "INVERSELY TRACKS"
+    ],
+    [
+      "rk-contingency-burn",
+      "sch-float-erosion",
+      "CORRELATES WITH"
+    ],
+    [
+      "rk-incident-rate",
+      "sch-schedule-health",
+      "DEGRADES"
+    ],
+    [
+      "rk-risk-mitigation",
+      "sch-earned-schedule",
+      "IMPROVES"
+    ],
+    [
+      "rk-chg-order-rate",
+      "sch-schedule-chg",
+      "DRIVES"
+    ],
+    [
+      "rk-schedule-float",
+      "sch-float-erosion",
+      "MEASURES"
+    ],
+    [
+      "rk-const-execution",
+      "sch-percent-plan",
+      "REDUCES"
+    ]
+  ],
+  "verbGlossary": {
+    "ACCOUNTABLE FOR": "{source}bears responsibility for producing or executing {target}",
+    "ACCELERATES": "{source}of the target buffer or {target} over time",
+    "BREAKS": "{source} severs logical relationships in {target}",
+    "BUDGETED IN": "Reserve amount is carried as a line item within {target} structure",
+    "CONSTRAINS": "{source} imposes a limiting condition on {target} window",
+    "CORRELATES WITH": "{source} metric trends in parallel with {target} over time",
+    "DEGRADES": "{source} condition reduces the value or health of {target}",
+    "DELAYS": "{source} pushes {target} or milestone completion date later",
+    "DEPLETES": "{source} condition reduces the available quantity of {target} pool",
+    "DESTABILIZES": "{source} undermines the feasibility of {target}ing plan",
+    "DISRUPTS": "{source} causes unplanned interruption or resequencing of the target",
+    "DOCUMENTED IN": "{source} is formally recorded as part of the target retrospective analysis",
+    "DRIVES": "{source} condition is a primary cause of {target} or analysis",
+    "ENFORCES": "{source}of the target on time",
+    "EXTENDS": "{source} adds duration or lead time to {target}",
+    "FEEDS": "{source} register provides input data consumed by {target} process",
+    "GATES": "{source} condition must be cleared before {target} can proceed",
+    "GOVERNS": "{source}determines entitlement rules for {target}",
+    "HALTS": "Safety event forces an immediate stop-work on {target}",
+    "IMPROVES": "{source}rate of mitigations positively influences the target performance index",
+    "IMPOSES": "Regulatory or permit risk forces an external constraint onto {target} element",
+    "INFLATES": "{source} condition increases the lag or lead duration beyond its planned value",
+    "INFORMS": "{source} provides context or data that shapes planning of the target",
+    "INITIATES": "{source} causes formal creation of a change record in {target}",
+    "INVERSELY TRACKS": "As the source exposure value rises, {target} declines",
+    "JUSTIFIES": "{source} response type provides the contractual or technical basis for the target request",
+    "MAPS TO": "{source} risk taxonomy aligns one-to-one with categories in {target}",
+    "MEASURES": "{source} metric is the quantitative indicator of the target erosion phenomenon",
+    "PRESERVES": "{source} maintains {target}ing consumption",
+    "PRIORITIZED BY": "{source}is used to rank the urgency of addressing the source risk",
+    "PROTECTS": "Buffer shields the target {target} from delay propagation",
+    "QUANTIFIED AGAINST": "Impact assessment uses {target}ment baseline",
+    "REDUCES": "{source} lowers the target completion percentage below plan",
+    "RESTRICTS": "{source}limits available work hours or days on the target calendar",
+    "SCHEDULED IN": "{source} is placed on the target look-ahead for near-term execution",
+    "SHIFTS": "{source} moves the target calculated dates forward or backward",
+    "STARVES": "Supply chain disruption deprives {target} of materials needed to proceed",
+    "TRIGGERS": "{source} response activates {target}",
+    "UNDERMINES": "{source} condition weakens adherence to {target} execution plan",
+    "WEIGHTED BY": "Likelihood assessment uses the target {target} as a weighting factor in probability calculation"
+  }
+}

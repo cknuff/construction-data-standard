@@ -1,0 +1,308 @@
+{
+  "source": "organizations",
+  "target": "schedule",
+  "edges": [
+    [
+      "org-gen-contr-gc",
+      "sch-baseline-schedul",
+      "DEVELOPS"
+    ],
+    [
+      "org-gen-contr-gc",
+      "sch-critical-path",
+      "OWNS"
+    ],
+    [
+      "org-gen-contr-gc",
+      "sch-look-ahead",
+      "ISSUES"
+    ],
+    [
+      "org-gen-contr-gc",
+      "sch-recovery-schedul",
+      "DIRECTS"
+    ],
+    [
+      "org-gen-contr-gc",
+      "sch-float-slack",
+      "MANAGES"
+    ],
+    [
+      "org-const-manager-at",
+      "sch-baseline-schedul",
+      "REVIEWS"
+    ],
+    [
+      "org-const-manager-at",
+      "sch-dcma-14-point",
+      "ENFORCES"
+    ],
+    [
+      "org-const-manager",
+      "sch-milestone",
+      "MONITORS"
+    ],
+    [
+      "org-const-manager",
+      "sch-schedule-health",
+      "REPORTS ON"
+    ],
+    [
+      "org-program-manager",
+      "sch-milestone",
+      "TRACKS ACROSS PROJECTS"
+    ],
+    [
+      "org-program-manager",
+      "sch-schedule-levels",
+      "AGGREGATES"
+    ],
+    [
+      "org-design-builder",
+      "sch-baseline-schedul",
+      "INTEGRATES DESIGN INTO"
+    ],
+    [
+      "org-design-builder",
+      "sch-detail-activity",
+      "SEQUENCES"
+    ],
+    [
+      "org-private-develope",
+      "sch-milestone",
+      "APPROVES"
+    ],
+    [
+      "org-private-develope",
+      "sch-schedule-constra",
+      "IMPOSES"
+    ],
+    [
+      "org-institutional-ow",
+      "sch-time-extension",
+      "ADJUDICATES"
+    ],
+    [
+      "org-public-governmen",
+      "sch-schedule-constra",
+      "MANDATES"
+    ],
+    [
+      "org-sub-trade",
+      "sch-detail-activity",
+      "PERFORMS"
+    ],
+    [
+      "org-sub-trade",
+      "sch-last-planner",
+      "MAKES PROMISES IN"
+    ],
+    [
+      "org-sub-trade",
+      "sch-labor-loading",
+      "STAFFS"
+    ],
+    [
+      "org-sub-trade",
+      "sch-duration-progres",
+      "REPORTS"
+    ],
+    [
+      "org-sub-trade",
+      "sch-delay-class",
+      "CAUSES OR INCURS"
+    ],
+    [
+      "org-sub-trade",
+      "sch-time-extension",
+      "SUBMITS"
+    ],
+    [
+      "org-self-performing",
+      "sch-detail-activity",
+      "SELF-PERFORMS"
+    ],
+    [
+      "org-architect-record",
+      "sch-schedule-constra",
+      "DRIVES THROUGH SUBMITTALS"
+    ],
+    [
+      "org-struct-engineer",
+      "sch-dependency-class",
+      "GATES THROUGH CALCULATIONS"
+    ],
+    [
+      "org-mep-engineer",
+      "sch-dependency-class",
+      "GATES THROUGH COORDINATION"
+    ],
+    [
+      "org-civil-engineer",
+      "sch-detail-activity",
+      "SEQUENCES SITEWORK IN"
+    ],
+    [
+      "org-mat-supplier",
+      "sch-schedule-constra",
+      "CONSTRAINS BY LEAD TIME"
+    ],
+    [
+      "org-mat-supplier",
+      "sch-lag-lead-time",
+      "DETERMINES"
+    ],
+    [
+      "org-fabricator",
+      "sch-lag-lead-time",
+      "SETS SHOP DRAWING DURATION FOR"
+    ],
+    [
+      "org-fabricator",
+      "sch-detail-activity",
+      "GATES ERECTION IN"
+    ],
+    [
+      "org-equip-rental",
+      "sch-equip-loading",
+      "FURNISHES"
+    ],
+    [
+      "org-special-insp",
+      "sch-milestone",
+      "CLEARS"
+    ],
+    [
+      "org-cx-agent-cxa",
+      "sch-milestone",
+      "VERIFIES TURNOVER AT"
+    ],
+    [
+      "org-building-departm",
+      "sch-schedule-constra",
+      "IMPOSES PERMIT HOLDS ON"
+    ],
+    [
+      "org-fire-marshal",
+      "sch-milestone",
+      "SIGNS OFF ON"
+    ],
+    [
+      "org-osha-safety",
+      "sch-delay-class",
+      "TRIGGERS STOP-WORK IN"
+    ],
+    [
+      "org-const-lender",
+      "sch-milestone",
+      "TIES DRAWS TO"
+    ],
+    [
+      "org-const-lender",
+      "sch-cost-loading",
+      "VALIDATES DRAWS AGAINST"
+    ],
+    [
+      "org-surety-bonding",
+      "sch-schedule-perf",
+      "EVALUATES"
+    ],
+    [
+      "org-insurance-broker",
+      "sch-delay-class",
+      "UNDERWRITES"
+    ],
+    [
+      "org-electric-utility",
+      "sch-milestone",
+      "SCHEDULES CUTOVER AT"
+    ],
+    [
+      "org-water-sewer",
+      "sch-milestone",
+      "SCHEDULES TAP AT"
+    ],
+    [
+      "org-specifications-w",
+      "sch-specification-co",
+      "DEFINES REQUIREMENTS FOR"
+    ],
+    [
+      "org-sustainability-l",
+      "sch-milestone",
+      "AUDITS COMMISSIONING AT"
+    ],
+    [
+      "org-sub-count-per",
+      "sch-resource-levelin",
+      "DRIVES COMPLEXITY OF"
+    ],
+    [
+      "org-trade-coverage",
+      "sch-schedule-health",
+      "CORRELATES WITH"
+    ],
+    [
+      "org-design-team",
+      "sch-delay-class",
+      "PREDICTS DESIGN-DRIVEN"
+    ],
+    [
+      "org-chg-order",
+      "sch-time-impact",
+      "FEEDS"
+    ]
+  ],
+  "verbGlossary": {
+    "DEVELOPS": "{source} creates {target}, establishes activity logic, and sets the planned construction sequence",
+    "OWNS": "{source} is contractually responsible for maintaining and defending {target} through all schedule updates",
+    "ISSUES": "{source} produces and distributes look-ahead {target}s to coordinate near-term trade contractor work",
+    "DIRECTS": "{source} leads the recovery {target} effort, resequencing and compressing work to regain lost time",
+    "MANAGES": "{source} allocates and protects {target} to maintain schedule flexibility and avoid delay exposure",
+    "REVIEWS": "{source} examines {target}s for completeness, logic quality, and contract compliance before acceptance",
+    "ENFORCES": "{source} requires {target} to pass the DCMA 14-point assessment or equivalent quality checks as a condition of approval",
+    "MONITORS": "{source} tracks {target} status and milestones on an ongoing basis to identify deviations requiring corrective action",
+    "REPORTS ON": "{source} compiles {target} health metrics and presents them to the owner or project leadership at regular intervals",
+    "TRACKS ACROSS PROJECTS": "{source} monitors {target} status across multiple projects in a portfolio to coordinate interdependencies and resources",
+    "AGGREGATES": "{source} rolls up detailed project {target}s into higher-level summary schedules for program-level visibility",
+    "INTEGRATES DESIGN INTO": "{source} incorporates design phase activities and deliverables directly into the master construction {target} under a single contract",
+    "SEQUENCES": "{source} determines the execution order of detail activities based on design completion, trade coordination, and constructability",
+    "APPROVES": "{source} formally accepts {target} submission as meeting contract requirements and authorizes proceeding",
+    "IMPOSES": "{source} establishes {target}s such as fixed completion dates, phased occupancy, or blackout periods",
+    "ADJUDICATES": "{source} evaluates and decides on time extension requests based on contractual entitlement and delay analysis",
+    "MANDATES": "{source}requires specific {target}s such as noise curfews, lane closure windows, or seasonal restrictions",
+    "PERFORMS": "{source} executes the physical work described by detail activities in {target}",
+    "MAKES PROMISES IN": "{source} provides weekly work commitments through the Last Planner System, creating a reliable plan for zone-based execution",
+    "STAFFS": "{source} assigns labor crews to {target}d activities based on production rates and labor loading requirements",
+    "REPORTS": "{source} provides actual start dates, percent complete, and remaining duration for its assigned {target} activities",
+    "CAUSES OR INCURS": "{source} actions or inactions result in {target} delays that must be classified for entitlement and liability analysis",
+    "SUBMITS": "{source} formally requests additional contract time through a time extension claim supported by {target} analysis",
+    "SELF-PERFORMS": "{source} division executes trade work with its own forces rather than subcontracting, appearing as both {target}r and performer",
+    "DRIVES THROUGH SUBMITTALS": "{source}submittal review duration creates {target}s that gate procurement and fabrication activities",
+    "GATES THROUGH CALCULATIONS": "{source}ing organization's structural calculations and sealed drawings must be complete before dependent construction activities can start",
+    "GATES THROUGH COORDINATION": "MEP engineer's coordination drawings and clash resolution must be complete before mechanical, electrical, and plumbing rough-in can proceed",
+    "SEQUENCES SITEWORK IN": "{source} design establishes the order of earthwork, utilities, and paving activities in the site {target}",
+    "CONSTRAINS BY LEAD TIME": "{source} material procurement lead time creates {target} that the activity cannot start before material delivery",
+    "DETERMINES": "{source} manufacturing and shipping durations define the lag times required between procurement and installation activities",
+    "SETS SHOP DRAWING DURATION FOR": "{source} shop drawing production and approval cycle determines the lag between award and delivery for fabricated assemblies",
+    "GATES ERECTION IN": "{source} production completion gates the start of erection activities; steel, precast, or curtain wall cannot erect until fabrication delivers",
+    "FURNISHES": "{source} provides cranes, hoists, and specialty equipment whose availability windows constrain {target}d activities",
+    "CLEARS": "Inspection agency performs required special inspections and issues clearance, enabling {target} milestone to be marked complete",
+    "VERIFIES TURNOVER AT": "{source} confirms that systems meet performance requirements at turnover milestones before closeout activities can proceed",
+    "IMPOSES PERMIT HOLDS ON": "{source} permit review timelines and conditions create hard constraints on the construction {target}",
+    "SIGNS OFF ON": "{source} performs inspections and provides sign-off required before occupancy-related milestones can be achieved",
+    "TRIGGERS STOP-WORK IN": "Safety authority citation results in a work stoppage that creates an excusable or non-excusable delay depending on fault",
+    "TIES DRAWS TO": "{source}requires milestone completion as a precondition for releasing draw payments, linking cash flow to {target} progress",
+    "VALIDATES DRAWS AGAINST": "{source}inspector verifies that cost-loaded {target} progress matches the draw request before funding",
+    "EVALUATES": "{source} monitors {target} performance index and other metrics to assess contractor ability to complete on time",
+    "UNDERWRITES": "{source} assesses delay risk and exposure when pricing builder's risk, delay-in-startup, or liquidated damages coverage",
+    "SCHEDULES CUTOVER AT": "Electric utility coordinates the permanent power cutover at a project milestone, replacing temporary construction power",
+    "SCHEDULES TAP AT": "Water or sewer authority coordinates the utility connection at a project milestone, enabling building system testing",
+    "DEFINES REQUIREMENTS FOR": "{source}establishes {target} specification requirements (update frequency, software, logic rules) that govern schedule compliance",
+    "AUDITS COMMISSIONING AT": "Sustainability consultant audits commissioning activities at milestone checkpoints to verify LEED or green building compliance",
+    "DRIVES COMPLEXITY OF": "{source}count per project increases the complexity of resource leveling across competing trade {target}s",
+    "CORRELATES WITH": "{source}coverage rate statistically tracks with overall {target} health, since uncovered scopes create schedule risk",
+    "PREDICTS DESIGN-DRIVEN": "{source}provides an early warning signal for potential design-driven delays in {target}",
+    "FEEDS": "{source}rate by trade provides input to time impact analyses quantifying {target} effects of disputed changes"
+  }
+}

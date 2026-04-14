@@ -1,0 +1,290 @@
+{
+  "source": "building-elements",
+  "target": "documents-communications",
+  "edges": [
+    [
+      "be-columns",
+      "doc-drawing-set",
+      "DETAILED IN"
+    ],
+    [
+      "be-curtainwall",
+      "doc-drawing-set",
+      "DETAILED IN"
+    ],
+    [
+      "be-ductwork",
+      "doc-drawing-sheet",
+      "SHOWN ON"
+    ],
+    [
+      "be-sprink-main",
+      "doc-drawing-sheet",
+      "SHOWN ON"
+    ],
+    [
+      "be-connections",
+      "doc-drawing-revision",
+      "REVISED BY"
+    ],
+    [
+      "be-roof-struct",
+      "doc-drawing-revision",
+      "REVISED BY"
+    ],
+    [
+      "be-amb",
+      "doc-specification-se",
+      "SPECIFIED IN"
+    ],
+    [
+      "be-windows",
+      "doc-specification-se",
+      "SPECIFIED IN"
+    ],
+    [
+      "be-fa",
+      "doc-specification-se",
+      "SPECIFIED IN"
+    ],
+    [
+      "be-flashing",
+      "doc-req-info-rfi",
+      "CLARIFIED BY"
+    ],
+    [
+      "be-bg-wp",
+      "doc-req-info-rfi",
+      "CLARIFIED BY"
+    ],
+    [
+      "be-hvac-ctrl",
+      "doc-req-info-rfi",
+      "CLARIFIED BY"
+    ],
+    [
+      "be-curtainwall",
+      "doc-rfi-response",
+      "RESOLVED BY"
+    ],
+    [
+      "be-connections",
+      "doc-rfi-response",
+      "RESOLVED BY"
+    ],
+    [
+      "be-ahu",
+      "doc-submittal",
+      "SUBMITTED FOR"
+    ],
+    [
+      "be-lighting",
+      "doc-submittal",
+      "SUBMITTED FOR"
+    ],
+    [
+      "be-plumb-fix",
+      "doc-submittal",
+      "SUBMITTED FOR"
+    ],
+    [
+      "be-columns",
+      "doc-shop-drawing",
+      "FABRICATED FROM"
+    ],
+    [
+      "be-ductwork",
+      "doc-shop-drawing",
+      "FABRICATED FROM"
+    ],
+    [
+      "be-casework",
+      "doc-shop-drawing",
+      "FABRICATED FROM"
+    ],
+    [
+      "be-roof-mem",
+      "doc-product-data",
+      "DOCUMENTED IN"
+    ],
+    [
+      "be-pipe-insul",
+      "doc-product-data",
+      "DOCUMENTED IN"
+    ],
+    [
+      "be-tile",
+      "doc-sample-submittal",
+      "SAMPLED FOR"
+    ],
+    [
+      "be-countertop",
+      "doc-sample-submittal",
+      "SAMPLED FOR"
+    ],
+    [
+      "be-power-dist",
+      "doc-submittal-respon",
+      "APPROVED VIA"
+    ],
+    [
+      "be-shallow-fdn",
+      "doc-addendum",
+      "MODIFIED BY"
+    ],
+    [
+      "be-curtainwall",
+      "doc-bulletin-archite",
+      "SUPPLEMENTED BY"
+    ],
+    [
+      "be-sog",
+      "doc-site-instruction",
+      "DIRECTED BY"
+    ],
+    [
+      "be-excav",
+      "doc-daily-log-note",
+      "RECORDED IN"
+    ],
+    [
+      "be-backfill",
+      "doc-daily-report",
+      "LOGGED IN"
+    ],
+    [
+      "be-deep-fdn",
+      "doc-photo",
+      "PHOTOGRAPHED IN"
+    ],
+    [
+      "be-erosion",
+      "doc-photo",
+      "PHOTOGRAPHED IN"
+    ],
+    [
+      "be-elev-car",
+      "doc-req-proposal-rfp",
+      "PRICED VIA"
+    ],
+    [
+      "be-roof-mem",
+      "doc-chg-directive",
+      "CHANGED BY"
+    ],
+    [
+      "be-fa",
+      "doc-meeting-minutes",
+      "DISCUSSED IN"
+    ],
+    [
+      "be-elev-car",
+      "doc-notice-delay",
+      "DELAYED PER"
+    ],
+    [
+      "be-excav",
+      "doc-permit-applicati",
+      "PERMITTED BY"
+    ],
+    [
+      "be-dewater",
+      "doc-swppp-enviro",
+      "GOVERNED BY"
+    ],
+    [
+      "be-paint",
+      "doc-punch-list-as",
+      "DEFICIENCIES IN"
+    ],
+    [
+      "be-int-doors",
+      "doc-punch-list-as",
+      "DEFICIENCIES IN"
+    ],
+    [
+      "be-conduit",
+      "doc-as-built-docs",
+      "RECORDED AS-BUILT IN"
+    ],
+    [
+      "be-dom-water",
+      "doc-as-built-docs",
+      "RECORDED AS-BUILT IN"
+    ],
+    [
+      "be-elev-car",
+      "doc-o-m-manual",
+      "MAINTAINED PER"
+    ],
+    [
+      "be-bas",
+      "doc-o-m-manual",
+      "MAINTAINED PER"
+    ],
+    [
+      "be-roof-mem",
+      "doc-warranty-docs",
+      "WARRANTED IN"
+    ],
+    [
+      "be-curtainwall",
+      "doc-transmittal",
+      "TRANSMITTED VIA"
+    ],
+    [
+      "be-tab",
+      "doc-action-plan",
+      "TRACKED IN"
+    ],
+    [
+      "be-sprink-main",
+      "doc-action-plan-line",
+      "ASSIGNED VIA"
+    ],
+    [
+      "be-deep-fdn",
+      "doc-video",
+      "CAPTURED IN"
+    ],
+    [
+      "be-columns",
+      "doc-plan-revision",
+      "UPDATED BY"
+    ]
+  ],
+  "verbGlossary": {
+    "DETAILED IN": "{source} geometry, dimensions, and assembly are fully described in {target}",
+    "SHOWN ON": "{source} routing, layout, or location is depicted on {target}",
+    "REVISED BY": "{source} design is altered through {target}",
+    "SPECIFIED IN": "{source} material, performance, and installation requirements are defined in {target}",
+    "CLARIFIED BY": "Ambiguity about {target}'s design intent is resolved through an RFI",
+    "RESOLVED BY": "A design question about {target} is formally answered in the RFI response",
+    "SUBMITTED FOR": "{source} {target}, shop drawings, or samples are submitted for architect/engineer approval",
+    "FABRICATED FROM": "{source} is manufactured or fabricated using {target} dimensions and details",
+    "DOCUMENTED IN": "{source} manufacturer data, test reports, or certifications are {target}ed in a product data submittal",
+    "SAMPLED FOR": "{source}of {target} material or finish is submitted for approval",
+    "APPROVED VIA": "{source} {target} is formally reviewed and accepted through a submittal response",
+    "MODIFIED BY": "{source} requirements are changed through an addendum issued during bidding or construction",
+    "SUPPLEMENTED BY": "{source} design is further clarified or revised by an architect's supplemental instruction or bulletin",
+    "DIRECTED BY": "Field work on {target} is instructed through a site instruction or field directive",
+    "RECORDED IN": "{source} installation progress or field conditions are noted in {target} entry",
+    "LOGGED IN": "{source} work activity, crew, and conditions are {target}ed in a daily report",
+    "PHOTOGRAPHED IN": "{source} condition, progress, or concealed work is visually {target}ed in a photo",
+    "PRICED VIA": "{source} scope is priced by subcontractors through a request for proposal or pricing request",
+    "CHANGED BY": "{source} scope or design is formally changed through a construction change {target}",
+    "DISCUSSED IN": "{source} status, issues, or coordination is addressed in {target}",
+    "DELAYED PER": "{source} installation or delivery delay is formally communicated via {target} of delay",
+    "PERMITTED BY": "{source} work requires and is authorized through a building permit or permit application",
+    "GOVERNED BY": "{source} installation is regulated by an environmental compliance {target}",
+    "DEFICIENCIES IN": "{source} installation deficiencies are itemized on the punch list",
+    "RECORDED AS-BUILT IN": "{source} final installed location, routing, or configuration is {target}ed in as-built records",
+    "MAINTAINED PER": "{source} long-term operation and maintenance procedures are {target}ed in an O&M manual",
+    "WARRANTED IN": "{source} warranty terms, duration, and coverage are {target}ed in warranty records",
+    "UPDATED BY": "{source} design or layout is revised through a plan revision {target}",
+    "TRANSMITTED VIA": "{source} {target}s (shop drawings, submittals, data) are formally sent via a transmittal",
+    "TRACKED IN": "{source} commissioning or completion tasks are organized in {target}",
+    "ASSIGNED VIA": "A specific task related to {target} is created and assigned as an action plan line item",
+    "CAPTURED IN": "{source} installation process or critical activity is {target}ed on video"
+  }
+}

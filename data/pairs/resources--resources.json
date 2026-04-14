@@ -1,0 +1,313 @@
+{
+  "source": "resources",
+  "target": "resources",
+  "edges": [
+    [
+      "res-operator",
+      "res-crane",
+      "OPERATES"
+    ],
+    [
+      "res-operator",
+      "res-earthmover",
+      "OPERATES"
+    ],
+    [
+      "res-operator",
+      "res-compaction",
+      "OPERATES"
+    ],
+    [
+      "res-operator",
+      "res-piling",
+      "OPERATES"
+    ],
+    [
+      "res-operator",
+      "res-hauling",
+      "OPERATES"
+    ],
+    [
+      "res-surveyor",
+      "res-survey-inst",
+      "OPERATES"
+    ],
+    [
+      "res-ironworker",
+      "res-welding",
+      "OPERATES"
+    ],
+    [
+      "res-concrete",
+      "res-conc-equip",
+      "OPERATES"
+    ],
+    [
+      "res-laborer",
+      "res-mat-handle",
+      "OPERATES"
+    ],
+    [
+      "res-electrician",
+      "res-temp-util",
+      "OPERATES"
+    ],
+    [
+      "res-laborer",
+      "res-access",
+      "STAGES"
+    ],
+    [
+      "res-safety",
+      "res-laborer",
+      "MONITORS"
+    ],
+    [
+      "res-safety",
+      "res-operator",
+      "MONITORS"
+    ],
+    [
+      "res-safety",
+      "res-ironworker",
+      "MONITORS"
+    ],
+    [
+      "res-safety",
+      "res-roofer",
+      "MONITORS"
+    ],
+    [
+      "res-qc",
+      "res-concrete",
+      "INSPECTS"
+    ],
+    [
+      "res-qc",
+      "res-ironworker",
+      "INSPECTS"
+    ],
+    [
+      "res-qc",
+      "res-waterproofer",
+      "INSPECTS"
+    ],
+    [
+      "res-qc",
+      "res-fireproofer",
+      "INSPECTS"
+    ],
+    [
+      "res-cxa",
+      "res-sheetmetal",
+      "COMMISSIONS"
+    ],
+    [
+      "res-cxa",
+      "res-electrician",
+      "COMMISSIONS"
+    ],
+    [
+      "res-cxa",
+      "res-plumber",
+      "COMMISSIONS"
+    ],
+    [
+      "res-cxa",
+      "res-lowvolt",
+      "COMMISSIONS"
+    ],
+    [
+      "res-surveyor",
+      "res-concrete",
+      "LAYS_OUT_FOR"
+    ],
+    [
+      "res-surveyor",
+      "res-mason",
+      "LAYS_OUT_FOR"
+    ],
+    [
+      "res-surveyor",
+      "res-ironworker",
+      "LAYS_OUT_FOR"
+    ],
+    [
+      "res-laborer",
+      "res-carpenter",
+      "ASSISTS"
+    ],
+    [
+      "res-laborer",
+      "res-concrete",
+      "ASSISTS"
+    ],
+    [
+      "res-laborer",
+      "res-mason",
+      "ASSISTS"
+    ],
+    [
+      "res-laborer",
+      "res-ironworker",
+      "ASSISTS"
+    ],
+    [
+      "res-crane",
+      "res-mat-handle",
+      "SUPPLEMENTS"
+    ],
+    [
+      "res-crane",
+      "res-access",
+      "SUPPLEMENTS"
+    ],
+    [
+      "res-earthmover",
+      "res-hauling",
+      "LOADS"
+    ],
+    [
+      "res-earthmover",
+      "res-compaction",
+      "PRECEDES"
+    ],
+    [
+      "res-temp-util",
+      "res-conc-equip",
+      "POWERS"
+    ],
+    [
+      "res-temp-util",
+      "res-welding",
+      "POWERS"
+    ],
+    [
+      "res-temp-util",
+      "res-access",
+      "POWERS"
+    ],
+    [
+      "mat-rebar",
+      "mat-concrete",
+      "EMBEDDED_IN"
+    ],
+    [
+      "mat-lumber",
+      "mat-concrete",
+      "FORMS_FOR"
+    ],
+    [
+      "mat-steel",
+      "mat-concrete",
+      "COMPOSITES_WITH"
+    ],
+    [
+      "mat-masonry",
+      "mat-rebar",
+      "REINFORCED_BY"
+    ],
+    [
+      "mat-roofing",
+      "mat-thermal",
+      "LAYERED_WITH"
+    ],
+    [
+      "mat-waterproof",
+      "mat-concrete",
+      "APPLIED_TO"
+    ],
+    [
+      "mat-framing",
+      "mat-thermal",
+      "FILLED_WITH"
+    ],
+    [
+      "mat-plumbing",
+      "mat-fp",
+      "COORDINATED_WITH"
+    ],
+    [
+      "mat-hvac-dist",
+      "mat-thermal",
+      "INSULATED_BY"
+    ],
+    [
+      "mat-elec",
+      "mat-lighting",
+      "FEEDS"
+    ],
+    [
+      "mat-elec",
+      "mat-lv",
+      "FEEDS"
+    ],
+    [
+      "mat-hvac-equip",
+      "mat-hvac-dist",
+      "CONNECTED_BY"
+    ],
+    [
+      "mat-hvac-equip",
+      "mat-elec",
+      "POWERED_BY"
+    ],
+    [
+      "mat-elevator",
+      "mat-elec",
+      "POWERED_BY"
+    ],
+    [
+      "mat-concrete",
+      "mat-site",
+      "COMBINED_WITH"
+    ],
+    [
+      "res-plumber",
+      "res-sprinkler",
+      "COORDINATES_WITH"
+    ],
+    [
+      "res-sheetmetal",
+      "res-electrician",
+      "COORDINATES_WITH"
+    ],
+    [
+      "res-sheetmetal",
+      "res-sprinkler",
+      "COORDINATES_WITH"
+    ],
+    [
+      "res-drywall",
+      "res-painter",
+      "PRECEDES"
+    ]
+  ],
+  "verbGlossary": {
+    "OPERATES": "{source} resource controls and runs {target} to perform its intended construction function, requiring specific training or certification.",
+    "STAGES": "{source} resource assembles, positions, and secures {target} at the work location so other trades can use it safely.",
+    "MONITORS": "{source} or quality professional observes {target}'s work activities to verify compliance with safety plans, OSHA regulations, and site-specific requirements.",
+    "INSPECTS": "{source} professional examines and verifies {target}'s completed work against specifications, approved submittals, and code requirements before it is covered or accepted.",
+    "COMMISSIONS": "{source} agent verifies {target}'s installed systems perform to design intent through functional testing, test-and-balance, and integrated system checks.",
+    "LAYS_OUT_FOR": "{source} establishes control points, reference lines, and elevation marks that the receiving {target} uses to position their work accurately.",
+    "ASSISTS": "General {target} provides manual support to the skilled trade \u2014 moving materials, holding components, cleaning work areas, and performing preparatory tasks.",
+    "SUPPLEMENTS": "{source} serves as a secondary or backup resource that extends the capability or capacity of the primary {target} on site.",
+    "LOADS": "Earthmoving {target} fills hauling equipment with excavated material, spoil, or aggregate at the dig face or stockpile.",
+    "PRECEDES": "{source} completes its operation before the next resource can begin \u2014 establishing a sequential dependency in {target}ion chain.",
+    "POWERS": "Temporary utilities supply electrical power, compressed air, or fuel to the dependent {target} so it can operate before permanent building services are available.",
+    "EMBEDDED_IN": "Reinforcing {target} is placed inside the host material before it cures or sets, becoming permanently bonded to provide tensile or structural capacity.",
+    "FORMS_FOR": "{source} is assembled as temporary formwork that shapes and contains {target} during placement and curing, then removed.",
+    "COMPOSITES_WITH": "Two {target}s are combined into a composite structural system where each contributes complementary properties \u2014 typically steel for tension and concrete for compression.",
+    "REINFORCED_BY": "{source} receives reinforcing elements placed in its cores, joints, or cavities to increase structural capacity beyond the base {target} alone.",
+    "LAYERED_WITH": "{target}s are installed in direct contact as a multi-layer assembly where each layer provides a distinct performance function \u2014 typically waterproofing, insulation, and membrane.",
+    "APPLIED_TO": "{source} is adhered, sprayed, or sheet-applied to the surface of the host {target} to provide moisture protection or surface treatment.",
+    "FILLED_WITH": "Cavities or stud bays in the framing {target} are packed with insulation or fill material to achieve thermal, acoustic, or fire-resistance performance.",
+    "COORDINATED_WITH": "Two {target}s or material systems must coordinate their rough-in locations, routing, and installation sequence to avoid conflicts and share limited ceiling or wall cavity space.",
+    "INSULATED_BY": "Distribution {target} is wrapped or enclosed by thermal insulation to prevent condensation, heat loss, or heat gain in the conveyed medium.",
+    "FEEDS": "Electrical con{target}or material supplies power or signal current to the connected system, making it operational.",
+    "CONNECTED_BY": "{source} is joined to its distribution network through {target}work, piping, or conduit that delivers or returns the working medium.",
+    "POWERED_BY": "{source} or system requires electrical {target} from the conductor material for motor drive, controls, and operational functions.",
+    "COMBINED_WITH": "{target}s are mixed, blended, or placed together to form a unified site-work or structural element such as aggregate base, fill, or paving.",
+    "COORDINATES_WITH": "Two {target}s share overlapping work zones, require sequential access, or must align their installations to avoid spatial conflicts \u2014 typically during MEP rough-in."
+  }
+}

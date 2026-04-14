@@ -1,0 +1,368 @@
+{
+  "source": "quality-safety-records",
+  "target": "schedule",
+  "edges": [
+    [
+      "qsr-observation",
+      "sch-detail-activity",
+      "LOGGED AGAINST"
+    ],
+    [
+      "qsr-observation",
+      "sch-schedule-chg",
+      "TRIGGERS RESCHEDULE OF"
+    ],
+    [
+      "qsr-safety-observati",
+      "sch-critical-path",
+      "HALTS WORK ON"
+    ],
+    [
+      "qsr-safety-observati",
+      "sch-delay-class",
+      "CLASSIFIED AS CAUSE OF"
+    ],
+    [
+      "qsr-quality-observat",
+      "sch-detail-activity",
+      "RECORDED DURING"
+    ],
+    [
+      "qsr-quality-observat",
+      "sch-float-slack",
+      "CONSUMES FLOAT ON"
+    ],
+    [
+      "qsr-enviro-cx",
+      "sch-milestone",
+      "GATES HANDOVER AT"
+    ],
+    [
+      "qsr-enviro-cx",
+      "sch-schedule-constra",
+      "IMPOSES CONSTRAINT ON"
+    ],
+    [
+      "qsr-insp",
+      "sch-detail-activity",
+      "SCHEDULED FOR"
+    ],
+    [
+      "qsr-insp",
+      "sch-baseline-dates",
+      "ANCHORED TO"
+    ],
+    [
+      "qsr-insp-item",
+      "sch-detail-activity",
+      "EVALUATES WORK IN"
+    ],
+    [
+      "qsr-insp-item",
+      "sch-duration-progres",
+      "BLOCKS COMPLETION OF"
+    ],
+    [
+      "qsr-scheduled-insp",
+      "sch-look-ahead",
+      "SEQUENCED IN"
+    ],
+    [
+      "qsr-scheduled-insp",
+      "sch-work-calendar",
+      "BOOKED PER"
+    ],
+    [
+      "qsr-third-party",
+      "sch-milestone",
+      "MUST PRECEDE"
+    ],
+    [
+      "qsr-third-party",
+      "sch-schedule-constra",
+      "CONSTRAINS"
+    ],
+    [
+      "qsr-punch-item",
+      "sch-detail-activity",
+      "GENERATED FROM"
+    ],
+    [
+      "qsr-punch-item",
+      "sch-milestone",
+      "HOLDS CLOSE-OUT OF"
+    ],
+    [
+      "qsr-punch-item",
+      "sch-as-built",
+      "DOCUMENTED IN"
+    ],
+    [
+      "qsr-punch-item-issue",
+      "sch-recovery-schedul",
+      "FORCES RECOVERY IN"
+    ],
+    [
+      "qsr-punch-item-issue",
+      "sch-critical-path",
+      "EXTENDS"
+    ],
+    [
+      "qsr-punch-item-2",
+      "sch-duration-progres",
+      "RESOLVED WITHIN"
+    ],
+    [
+      "qsr-punch-item-2",
+      "sch-data-date",
+      "CLOSED AS OF"
+    ],
+    [
+      "qsr-incident",
+      "sch-delay-class",
+      "CAUSES DELAY PER"
+    ],
+    [
+      "qsr-incident",
+      "sch-critical-path",
+      "SHUTS DOWN"
+    ],
+    [
+      "qsr-incident",
+      "sch-time-impact",
+      "ASSESSED FOR IMPACT VIA"
+    ],
+    [
+      "qsr-incident-record",
+      "sch-data-date",
+      "FILED AS OF"
+    ],
+    [
+      "qsr-incident-record",
+      "sch-retrospective-de",
+      "REFERENCED IN"
+    ],
+    [
+      "qsr-incident-witness",
+      "sch-detail-activity",
+      "TESTIFIES ABOUT WORK IN"
+    ],
+    [
+      "qsr-corrective-actio",
+      "sch-detail-activity",
+      "ASSIGNED TO ACTIVITY IN"
+    ],
+    [
+      "qsr-corrective-actio",
+      "sch-schedule-update",
+      "INCORPORATED INTO"
+    ],
+    [
+      "qsr-safety-violation",
+      "sch-time-extension",
+      "JUSTIFIES"
+    ],
+    [
+      "qsr-safety-violation",
+      "sch-acceleration",
+      "NECESSITATES"
+    ],
+    [
+      "qsr-non-conformance",
+      "sch-detail-activity",
+      "REJECTS WORK IN"
+    ],
+    [
+      "qsr-non-conformance",
+      "sch-recovery-schedul",
+      "TRIGGERS RECOVERY VIA"
+    ],
+    [
+      "qsr-deficiency-notic",
+      "sch-detail-activity",
+      "STOPS PROGRESS ON"
+    ],
+    [
+      "qsr-deficiency-notic",
+      "sch-schedule-chg",
+      "DRIVES REVISION OF"
+    ],
+    [
+      "qsr-coord-issue",
+      "sch-relationship-typ",
+      "DISRUPTS LOGIC IN"
+    ],
+    [
+      "qsr-coord-issue",
+      "sch-schedule-update",
+      "RESOLVED BEFORE"
+    ],
+    [
+      "qsr-coord-issue-2",
+      "sch-time-impact",
+      "ANALYZED FOR DELAY IN"
+    ],
+    [
+      "qsr-coord-issue-2",
+      "sch-dependency-class",
+      "RECLASSIFIES"
+    ],
+    [
+      "qsr-mat-test-report",
+      "sch-milestone",
+      "REQUIRED BEFORE"
+    ],
+    [
+      "qsr-mat-test-report",
+      "sch-lag-lead-time",
+      "SPANS CURE TIME IN"
+    ],
+    [
+      "qsr-system-perf-test",
+      "sch-milestone",
+      "VALIDATES READINESS AT"
+    ],
+    [
+      "qsr-system-perf-test",
+      "sch-schedule-constra",
+      "PRECONDITIONS"
+    ],
+    [
+      "qsr-action-plan",
+      "sch-recovery-schedul",
+      "DRIVES TASKS IN"
+    ],
+    [
+      "qsr-action-plan",
+      "sch-schedule-update",
+      "REFLECTED IN"
+    ],
+    [
+      "qsr-action-plan-line",
+      "sch-detail-activity",
+      "MAPPED TO ACTIVITY IN"
+    ],
+    [
+      "qsr-action-plan-line",
+      "sch-duration-progres",
+      "TRACKED ALONGSIDE"
+    ],
+    [
+      "qsr-observation-dens",
+      "sch-schedule-perf",
+      "CORRELATES WITH"
+    ],
+    [
+      "qsr-deficiency-rate",
+      "sch-float-erosion",
+      "PREDICTS"
+    ],
+    [
+      "qsr-punch-item-3",
+      "sch-milestone-adhere",
+      "INVERSELY IMPACTS"
+    ],
+    [
+      "qsr-total-recordable",
+      "sch-schedule-health",
+      "DEGRADES"
+    ],
+    [
+      "qsr-dart-rate",
+      "sch-critical-activit",
+      "CONCENTRATES ON"
+    ],
+    [
+      "qsr-hazard-recurrenc",
+      "sch-schedule-perf",
+      "ERODES"
+    ],
+    [
+      "qsr-rework-cost",
+      "sch-earned-schedule",
+      "INFLATES VARIANCE IN"
+    ],
+    [
+      "qsr-observation-reso",
+      "sch-float-slack",
+      "DETERMINES REMAINING"
+    ],
+    [
+      "qsr-insp-pass-rate",
+      "sch-baseline-executi",
+      "INFLUENCES"
+    ],
+    [
+      "qsr-near-miss-ratio",
+      "sch-out-sequence",
+      "SIGNALS RISK IN"
+    ],
+    [
+      "qsr-corrective-actio-2",
+      "sch-percent-plan",
+      "AFFECTS"
+    ]
+  ],
+  "verbGlossary": {
+    "LOGGED AGAINST": "{source} recorded in reference to the specific {target} where the issue was found on site",
+    "TRIGGERS RESCHEDULE OF": "{source} finding causes a tracked {target} change requiring activity re-sequencing or re-duration",
+    "HALTS WORK ON": "{source} stops active work on a critical-path {target} until the hazard is resolved",
+    "CLASSIFIED AS CAUSE OF": "{source} formally categorized as the root cause of {target} delay event",
+    "RECORDED DURING": "{source} documented while the corresponding {target} is in progress",
+    "CONSUMES FLOAT ON": "{source} resolution time eats into available {target} on the affected activity path",
+    "GATES HANDOVER AT": "{source}must be cleared before the handover {target} can be achieved",
+    "IMPOSES CONSTRAINT ON": "Environmental or commissioning finding adds a mandatory {target} that must be satisfied before proceeding",
+    "SCHEDULED FOR": "{source} event placed on {target} tied to a specific detail activity's completion or readiness",
+    "ANCHORED TO": "{source} date fixed relative to {target} dates for contractual or regulatory compliance",
+    "EVALUATES WORK IN": "{source} checks the quality or conformance of work performed within a specific {target}",
+    "BLOCKS COMPLETION OF": "{source}inspection item prevents {target} from being marked complete until the deficiency is corrected",
+    "SEQUENCED IN": "{target}d inspection positioned within the look-ahead schedule to coordinate inspector availability with field readiness",
+    "BOOKED PER": "{target}d inspection date set according to the project work calendar's available working days",
+    "MUST PRECEDE": "{source}inspection must be completed and passed before the downstream {target} can proceed",
+    "CONSTRAINS": "{source}inspection requirement creates a hard constraint on {target} that cannot be overridden",
+    "GENERATED FROM": "{source} created as a deficiency found during walkthrough of a completed {target}",
+    "HOLDS CLOSE-OUT OF": "Open punch item prevents a milestone (typically substantial completion) from being formally closed",
+    "DOCUMENTED IN": "{source} recorded in the as-built {target} record to reflect actual field conditions at completion",
+    "FORCES RECOVERY IN": "{source} issue category indicates rework scope significant enough to trigger a recovery {target}",
+    "EXTENDS": "{source} issue adds duration to {target} by requiring unplanned remediation work",
+    "RESOLVED WITHIN": "{source} resolution completed within the remaining duration window of the affected {target}",
+    "CLOSED AS OF": "{source} formally closed and verified as of {target} data date for period-end reporting",
+    "CAUSES DELAY PER": "{source} results in {target} delay that is formally classified by type (excusable, compensable, etc.)",
+    "SHUTS DOWN": "{source} forces an immediate shutdown of critical-path work until the site is cleared for re-entry",
+    "ASSESSED FOR IMPACT VIA": "{source}'s effect on project duration evaluated through a formal time impact analysis",
+    "FILED AS OF": "{source} date-stamped against {target} data date for accurate period attribution",
+    "REFERENCED IN": "{source} cited as supporting evidence in a retrospective delay analysis or claims proceeding",
+    "TESTIFIES ABOUT WORK IN": "Witness statement describes conditions during a specific {target} relevant to the incident",
+    "ASSIGNED TO ACTIVITY IN": "{source} task linked to {target} where the remediation work must be performed",
+    "INCORPORATED INTO": "{source} activities folded into the next {target} with durations and resources",
+    "JUSTIFIES": "{source} serves as contractual justification for a time extension request",
+    "NECESSITATES": "{source} requires {target} acceleration (overtime, added crews) to recover lost time after a stop-work event",
+    "REJECTS WORK IN": "{source} report formally rejects completed work in {target}, requiring tear-out and redo",
+    "TRIGGERS RECOVERY VIA": "{source} finding is severe enough to initiate a recovery {target} to maintain the completion date",
+    "STOPS PROGRESS ON": "{source} notice halts further progress on the affected {target} until the deficiency is cured",
+    "DRIVES REVISION OF": "{source} notice forces a revision to {target} to accommodate remediation and re-inspection time",
+    "DISRUPTS LOGIC IN": "{source}issue invalidates an assumed predecessor-successor relationship in {target} logic",
+    "RESOLVED BEFORE": "{source}issue must be resolved prior to the next {target} to avoid cascading delays",
+    "ANALYZED FOR DELAY IN": "{source}issue evaluated via time impact analysis to quantify its {target} effect",
+    "RECLASSIFIES": "{source}issue changes a dependency from discretionary to mandatory or vice versa",
+    "REQUIRED BEFORE": "{source}test report must be submitted and accepted before the associated construction {target} can proceed",
+    "SPANS CURE TIME IN": "{source}test report covers a curing or testing period that occupies lag time in {target} logic",
+    "VALIDATES READINESS AT": "{source}performance test confirms that building systems meet criteria required to achieve the commissioning {target}",
+    "PRECONDITIONS": "{source}performance test result is a prerequisite constraint that must be satisfied before {target} can advance",
+    "DRIVES TASKS IN": "{source} generates remediation {target}s that are inserted into the recovery schedule",
+    "REFLECTED IN": "{source} commitments captured in {target} update so planned remediation is visible in the project timeline",
+    "MAPPED TO ACTIVITY IN": "{source} line item linked to a specific {target} so the remediation task inherits dates and resources",
+    "TRACKED ALONGSIDE": "{source} task progress monitored in parallel with {target}'s duration and percent complete",
+    "CORRELATES WITH": "{source} density metric analyzed alongside {target} performance index to detect quality-driven delays",
+    "PREDICTS": "{source}rate serves as a leading indicator that {target} on affected paths will erode",
+    "INVERSELY IMPACTS": "Higher punch item density corresponds to lower milestone adherence as close-out activities accumulate",
+    "DEGRADES": "{source}recordable incident rate weakens overall {target} health through stop-work events and investigation time",
+    "CONCENTRATES ON": "{source}rate incidents cluster around critical activities where {target} pressure increases safety risk",
+    "ERODES": "{source}systematically reduce {target} performance through repeated work stoppages",
+    "INFLATES VARIANCE IN": "{source}cost percentage increases the gap between earned {target} and actual progress",
+    "DETERMINES REMAINING": "{source} resolution time directly controls how much {target} remains on the affected activity's path",
+    "INFLUENCES": "{source}inspection pass rate supports stronger baseline execution index through fewer rework-driven re-{target}s",
+    "SIGNALS RISK IN": "Elevated near-miss ratio on out-of-sequence activities indicates rushed work with higher safety and {target} risk",
+    "AFFECTS": "{source} closure rate impacts percent plan complete by governing how quickly remediation {target}s finish"
+  }
+}

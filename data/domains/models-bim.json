@@ -1,0 +1,160 @@
+{
+  "domain": "models-bim",
+  "name": "Models & BIM",
+  "color": "#26a69a",
+  "categories": [
+    {
+      "name": "BIM Authoring Models",
+      "color": "#08b590",
+      "nodes": [
+        {
+          "id": "bim-3d-building-info",
+          "name": "3D Building Information Model",
+          "desc": "A parametric digital representation of the physical and functional characteristics of a building — the authoritative geometric and data source for design, construction coordination, and facility operations. Organized by discipline: architectural, structural, MEP (mechanical, electrical, plumbing), civil. Each discipline model is authored in a BIM tool and contains model elements with type, material, dimensions, location, and relationship properties. The model is the source of truth for quantities, coordination, and visualization. Lifecycle: Concept → Schematic Design → Design Development → Construction Documents → As-Built."
+        },
+        {
+          "id": "bim-federated-model",
+          "name": "Federated Model",
+          "desc": "A combined multi-discipline model assembled from individual discipline models — the integrated view used for coordination, clash detection, and owner reviews. Created by aggregating models from architect, structural engineer, MEP engineers, and trade contractors into a single spatial environment. Federated models are reference-only (not editable) and must be refreshed as discipline models are updated."
+        },
+        {
+          "id": "bim-4d-model",
+          "name": "4D Model (Schedule-Linked)",
+          "desc": "A 3D model linked to the project schedule — visualizes construction sequence over time by associating model elements with schedule activities. Enables construction phasing visualization, logistics planning, and progress tracking. Each model element or group is linked to a schedule activity that defines when it is installed. Lifecycle: Created during preconstruction → Updated as schedule changes → Used during construction for planning."
+        },
+        {
+          "id": "bim-5d-model-cost",
+          "name": "5D Model (Cost-Linked)",
+          "desc": "A 3D model linked to cost data — enables quantity-based estimating and cost visualization by associating model elements with cost information (cost codes, unit prices, assemblies). Quantities extracted from the model drive the estimate. Lifecycle: Created during estimating → Updated as design evolves → Reconciled against bid amounts."
+        },
+        {
+          "id": "bim-as-built-model",
+          "name": "As-Built Model",
+          "desc": "A BIM model updated to reflect actual constructed conditions — incorporates field modifications, deviations from design, and final installed locations. Created during closeout by updating the design model with as-built survey data, field markups, and contractor input. Delivered to the owner as part of closeout documentation for facility management and future renovations."
+        }
+      ]
+    },
+    {
+      "name": "Model Elements & Properties",
+      "color": "#19ad95",
+      "nodes": [
+        {
+          "id": "bim-model-element",
+          "name": "Model Element",
+          "desc": "An individual component within a BIM model — a wall, beam, column, pipe, duct, fixture, or any other discrete building component with geometry, type, material, and location properties. Model elements are the atomic units of BIM — each one represents a specific physical thing that will be built. Element properties include: type/family, material, dimensions (length, width, height, diameter), location (level, grid, coordinates), and relationships to other elements (hosted by, connected to, adjacent to)."
+        },
+        {
+          "id": "bim-level-developmen",
+          "name": "Level of Development (LOD)",
+          "desc": "A specification that defines the completeness and reliability of a model element at a given project phase — governs what information can be extracted from the model. LOD 100 (conceptual), LOD 200 (approximate geometry), LOD 300 (precise geometry for coordination), LOD 350 (coordination with other systems), LOD 400 (fabrication-ready), LOD 500 (as-built verified). Each LOD level defines what geometry, data, and relationships are reliable. LOD governs which model uses are valid at each phase."
+        },
+        {
+          "id": "bim-quantity-takeoff",
+          "name": "Quantity Takeoff",
+          "desc": "Material quantities extracted from model elements — counts, areas, volumes, lengths, and weights derived from model geometry and type properties. Quantities drive estimating (5D), procurement, and production tracking. Model-based takeoff is more accurate and faster than manual takeoff from 2D drawings but depends on model quality and LOD."
+        },
+        {
+          "id": "bim-model-properties",
+          "name": "Model Properties & Parameters",
+          "desc": "The non-geometric data attached to model elements — manufacturer, model number, fire rating, acoustic rating, energy performance, warranty period, maintenance requirements, and other attribute data. Model properties make BIM more than geometry — they carry the information needed for specification compliance, facility management, and lifecycle analysis. COBie (Construction Operations Building Information Exchange) is the standard format for extracting model properties for facility handover."
+        }
+      ]
+    },
+    {
+      "name": "Coordination & Clash Detection",
+      "color": "#2aa49b",
+      "nodes": [
+        {
+          "id": "bim-clash-detection",
+          "name": "Clash Detection Result",
+          "desc": "An identified spatial conflict between model elements from different disciplines — a pipe running through a beam, a duct intersecting a structural column, or conflicting MEP routes. Clash detection is automated (Navisworks, Solibri) and produces clash reports with geometry, location, and the involved elements/disciplines. Clashes must be resolved before construction to avoid field rework. Types: hard clash (physical intersection), soft clash (clearance violation), workflow clash (sequencing conflict)."
+        },
+        {
+          "id": "bim-coord-issue",
+          "name": "Coordination Issue",
+          "desc": "A design or constructability problem identified during BIM coordination, drawing review, or field coordination — captures clashes, design conflicts, and constructability concerns before they become field problems. Key properties: issue_type (structured: Clash, Coordination, Design Review, Constructability, Requirement Change, Existing Condition, Client Feedback, Building Code, Other), trade (free text — NOT standardized), status, priority, rfi_header_id (links to RFIs, 4,967 linked issues across 204 cos). Lifecycle: Identified → Under Review → Resolved → Closed.",
+          "procore": "project_management.coordination_issue"
+        },
+        {
+          "id": "bim-bim-coord",
+          "name": "BIM Coordination Meeting",
+          "desc": "A regular team meeting where designers, trade contractors, and the GC review the federated model, resolve clashes, and make coordination decisions. Typically weekly during design and early construction. Decisions made in coordination meetings drive RFIs, change events, and revised drawings. Meeting records capture decisions and action items. The coordination meeting is the workflow — clash detection and coordination issues are the inputs/outputs."
+        }
+      ]
+    },
+    {
+      "name": "Reality Capture",
+      "color": "#3b9ca1",
+      "nodes": [
+        {
+          "id": "bim-point-cloud",
+          "name": "Point Cloud / Laser Scan",
+          "desc": "3D spatial data captured by terrestrial or mobile laser scanning — represents existing conditions or as-built geometry as millions of measured points. Used for: existing conditions documentation (renovation), as-built verification (comparing model to field), progress monitoring (scan-to-BIM), and quality control (dimensional tolerance checking). Scan-to-BIM workflows convert point clouds into model elements."
+        },
+        {
+          "id": "bim-360-photo",
+          "name": "360 Photo / Spherical Capture",
+          "desc": "Spherical photographs taken at regular intervals throughout the project — creates an immersive, navigable visual record of site conditions over time. Captured on a regular schedule (daily, weekly, or at milestones) and organized by location and date. Enables remote site walks, progress tracking, and dispute documentation. The visual evidence layer for quality and safety records."
+        },
+        {
+          "id": "bim-drone-capture",
+          "name": "Drone Capture",
+          "desc": "Aerial photography, videography, photogrammetry, and LiDAR data captured by unmanned aerial vehicles (UAVs) — provides site-level documentation, earthwork volume calculations, progress monitoring, and safety surveillance. Drone data includes orthomosaic maps (stitched overhead images), 3D terrain models, and volumetric calculations for cut/fill earthwork tracking."
+        },
+        {
+          "id": "bim-const-photo",
+          "name": "Construction Photo",
+          "desc": "A standard photograph documenting site conditions, progress, quality issues, safety observations, or completed work — the most fundamental visual record in construction. Photos are attached to observations, punch items, inspections, daily logs, and RFIs as supporting evidence. Key properties: title, description, location, date, trade, category. Extremely high volume — thousands per project.",
+          "procore": "project_management.photo"
+        }
+      ]
+    },
+    {
+      "name": "Visualization & Communication",
+      "color": "#10b192",
+      "nodes": [
+        {
+          "id": "bim-model-based",
+          "name": "Model-Based Drawing",
+          "desc": "A 2D drawing view generated from or linked to a 3D BIM model — plans, sections, elevations, and details extracted from the model rather than drawn independently. Model-based drawings maintain a live link to the model — when the model changes, the drawing updates. This is the primary output mechanism for BIM during construction (contractors still work from 2D drawings, not 3D models). Drawing sheets in Procore track revisions to these outputs."
+        },
+        {
+          "id": "bim-digital-twin",
+          "name": "Digital Twin",
+          "desc": "A living digital representation of the building that combines the as-built BIM model with real-time sensor data, maintenance records, and operational information — the post-construction evolution of BIM. Updated continuously during operations. Digital twins enable predictive maintenance, energy optimization, and space management. Currently an emerging technology with limited construction-phase application."
+        }
+      ]
+    },
+    {
+      "name": "Standard Measures",
+      "color": "#21a998",
+      "nodes": [
+        {
+          "id": "bim-coord-issue-2",
+          "name": "Coordination Issue Density",
+          "desc": "Count of coordination issues per system or trade per million dollars. Tracks MEP/architectural coordination complexity. Calculation: issue count / (contract value / $1M). Source: coordination issues, contract value."
+        },
+        {
+          "id": "bim-coord-issue-3",
+          "name": "Coordination Issue Resolution Time",
+          "desc": "Average days from coordination issue creation to resolution — measures how quickly spatial and design conflicts are resolved. Faster resolution = less downstream delay. Segmented by issue_type (Clash vs. Design Review vs. Constructability) and trade. Calculated: AVG(DATEDIFF(resolved_date, created_date))."
+        },
+        {
+          "id": "bim-clash-resolution",
+          "name": "Clash Resolution Rate",
+          "desc": "Percentage of identified clashes resolved before construction start — measures pre-construction coordination effectiveness. Higher rate = fewer field conflicts. Calculated: COUNT(coordination_issues WHERE status = 'Closed' AND issue_type = 'Clash' AND resolved_date < construction_start) / COUNT(coordination_issues WHERE issue_type = 'Clash'). Requires schedule phase data for cutoff."
+        },
+        {
+          "id": "bim-photo-docs-rate",
+          "name": "Photo Documentation Rate",
+          "desc": "Number of construction photos documented per day or per million dollars — measures visual documentation discipline and thoroughness. Higher rates indicate more rigorous field documentation. Calculated: COUNT(photos) / construction_duration_days or COUNT(photos) / (total_value / 1,000,000). Segmented by project_type."
+        },
+        {
+          "id": "bim-bim-coord-2",
+          "name": "BIM Coordination Adoption Score",
+          "desc": "A composite measure of BIM coordination maturity based on: (1) whether coordination_issues exist, (2) issue volume relative to project size, (3) issue_type diversity (Clash + Design Review + Constructability), (4) resolution rate, (5) RFI linkage rate. Produces a score from 0-100 representing how thoroughly a project uses BIM coordination. Requires thresholds from benchmarking."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,297 @@
+{
+  "source": "phases",
+  "target": "standards-classifications",
+  "edges": [
+    [
+      "ph-program",
+      "sc-uniformat",
+      "SCOPED BY"
+    ],
+    [
+      "ph-program",
+      "sc-omniclass",
+      "CATEGORIZED BY"
+    ],
+    [
+      "ph-program",
+      "sc-dlvy-method",
+      "STRUCTURED BY"
+    ],
+    [
+      "ph-design",
+      "sc-specification-se",
+      "SPECIFIED PER"
+    ],
+    [
+      "ph-design",
+      "sc-ifc-class",
+      "MODELED PER"
+    ],
+    [
+      "ph-design",
+      "sc-energy-code-stds",
+      "DESIGNED TO"
+    ],
+    [
+      "ph-design",
+      "sc-ada-accessibilit",
+      "DESIGNED TO"
+    ],
+    [
+      "ph-estimating",
+      "sc-masterformat",
+      "QUANTIFIED BY"
+    ],
+    [
+      "ph-estimating",
+      "sc-std-cost-code",
+      "CODED BY"
+    ],
+    [
+      "ph-estimating",
+      "sc-uniformat",
+      "PRICED BY"
+    ],
+    [
+      "ph-estimating",
+      "sc-aace-cost",
+      "BENCHMARKED TO"
+    ],
+    [
+      "ph-estimating",
+      "sc-budget-code",
+      "ALLOCATED BY"
+    ],
+    [
+      "ph-permit",
+      "sc-international-bu",
+      "REGULATED BY"
+    ],
+    [
+      "ph-permit",
+      "sc-nfpa-stds",
+      "REGULATED BY"
+    ],
+    [
+      "ph-precon-plan",
+      "sc-wbs-code",
+      "STRUCTURED BY"
+    ],
+    [
+      "ph-bidding",
+      "sc-masterformat",
+      "PACKAGED BY"
+    ],
+    [
+      "ph-bidding",
+      "sc-aia-contract",
+      "CONTRACTED PER"
+    ],
+    [
+      "ph-submittals",
+      "sc-specification-se",
+      "GOVERNED BY"
+    ],
+    [
+      "ph-fabrication",
+      "sc-specification-se",
+      "FABRICATED PER"
+    ],
+    [
+      "ph-delivery",
+      "sc-masterformat",
+      "TRACKED BY"
+    ],
+    [
+      "ph-site-setup",
+      "sc-osha-hazard",
+      "SAFEGUARDED PER"
+    ],
+    [
+      "ph-safety-orient",
+      "sc-osha-hazard",
+      "ADDRESSES"
+    ],
+    [
+      "ph-safety-orient",
+      "sc-osha-recordkeepi",
+      "DOCUMENTED PER"
+    ],
+    [
+      "ph-safety-orient",
+      "sc-ansi-injury",
+      "TRAINED ON"
+    ],
+    [
+      "ph-foundations",
+      "sc-international-bu",
+      "INSPECTED PER"
+    ],
+    [
+      "ph-steel",
+      "sc-specification-se",
+      "TESTED PER"
+    ],
+    [
+      "ph-roofing",
+      "sc-energy-code-stds",
+      "RATED AGAINST"
+    ],
+    [
+      "ph-curtainwall",
+      "sc-energy-code-stds",
+      "TESTED PER"
+    ],
+    [
+      "ph-abv-ceil",
+      "sc-masterformat",
+      "COORDINATED BY"
+    ],
+    [
+      "ph-fp-ri",
+      "sc-nfpa-stds",
+      "TESTED PER"
+    ],
+    [
+      "ph-elec-ri",
+      "sc-nfpa-stds",
+      "INSTALLED PER"
+    ],
+    [
+      "ph-paint",
+      "sc-leed-certificati",
+      "COMPLIES WITH"
+    ],
+    [
+      "ph-prefunc",
+      "sc-energy-code-stds",
+      "VERIFIED AGAINST"
+    ],
+    [
+      "ph-startup",
+      "sc-nfpa-stds",
+      "COMMISSIONED PER"
+    ],
+    [
+      "ph-tab",
+      "sc-specification-se",
+      "BALANCED PER"
+    ],
+    [
+      "ph-integrated",
+      "sc-leed-certificati",
+      "CERTIFIED UNDER"
+    ],
+    [
+      "ph-integrated",
+      "sc-well-building",
+      "VERIFIED AGAINST"
+    ],
+    [
+      "ph-perf-ver",
+      "sc-resilience-net",
+      "VALIDATED AGAINST"
+    ],
+    [
+      "ph-final-insp",
+      "sc-international-bu",
+      "INSPECTED PER"
+    ],
+    [
+      "ph-final-insp",
+      "sc-ada-accessibilit",
+      "INSPECTED PER"
+    ],
+    [
+      "ph-punch",
+      "sc-masterformat-map",
+      "SEGMENTED BY"
+    ],
+    [
+      "ph-punch",
+      "sc-cost-code",
+      "BENCHMARKED TO"
+    ],
+    [
+      "ph-asbuilt",
+      "sc-ifc-class",
+      "DELIVERED IN"
+    ],
+    [
+      "ph-contract-close",
+      "sc-aia-contract",
+      "CLOSED PER"
+    ],
+    [
+      "ph-contract-close",
+      "sc-aace-cost",
+      "RECONCILED AGAINST"
+    ],
+    [
+      "ph-training",
+      "sc-safety-class",
+      "MEASURED AGAINST"
+    ],
+    [
+      "ph-warranty",
+      "sc-specification-se",
+      "WARRANTED PER"
+    ],
+    [
+      "ph-seasonal-cx",
+      "sc-resilience-net",
+      "VALIDATED AGAINST"
+    ],
+    [
+      "ph-transition",
+      "sc-omniclass",
+      "CATALOGED BY"
+    ],
+    [
+      "ph-transition",
+      "sc-certification-ad",
+      "BENCHMARKED TO"
+    ]
+  ],
+  "verbGlossary": {
+    "SCOPED BY": "{source}defines the project's element scope using {target} hierarchy (e.g., feasibility study scoped by UniFormat assemblies to establish system-level budgets)",
+    "CATEGORIZED BY": "{source} activity is classified using {target} multi-table taxonomy for facility type and space function (e.g., programming categorized by OmniClass tables for building use and space type)",
+    "STRUCTURED BY": "{source} work breakdown is organized according to {target} hierarchy (e.g., preconstruction plan structured by WBS codes, program structured by delivery method)",
+    "SPECIFIED PER": "{source} produces specifications that conform to {target} section format and content requirements (e.g., design documents specified per CSI specification sections)",
+    "MODELED PER": "{source}are classified according to the target schema during {target} (e.g., design model elements tagged per IFC classification for interoperability)",
+    "DESIGNED TO": "{source} incorporates {target} or standard's requirements into the building design (e.g., envelope designed to energy code thermal performance, layouts designed to ADA clearance requirements)",
+    "QUANTIFIED BY": "{source}measures quantities using {target} divisions as the takeoff structure (e.g., quantities taken off by MasterFormat division for trade-level pricing)",
+    "CODED BY": "{source} line items are assigned codes from {target} for cost tracking and reporting (e.g., estimate line items coded by standard cost codes)",
+    "PRICED BY": "{source}costs organized by {target} classification (e.g., conceptual estimate priced by UniFormat assembly for early-stage budgeting)",
+    "BENCHMARKED TO": "{source} cost or performance metric is compared to {target} published industry baselines (e.g., estimate benchmarked to AACE parametric data, punch item rates benchmarked to cost code standardization)",
+    "ALLOCATED BY": "{source} budget is distributed across {target} structure's line items (e.g., estimating budget allocated by budget codes to establish cost control baseline)",
+    "REGULATED BY": "{source} activity must satisfy {target} legal requirements before proceeding (e.g., permitting regulated by IBC occupancy and structural provisions, fire protection regulated by NFPA)",
+    "PACKAGED BY": "{source}groups scope into bid packages along {target} trade divisions (e.g., bid packages organized by MasterFormat divisions for subcontractor solicitation)",
+    "CONTRACTED PER": "{source} procurement uses contract forms and procedures from {target} (e.g., subcontracts executed per AIA contract documents during buyout)",
+    "GOVERNED BY": "{source} submittal requirements are dictated by the specification sections in {target} (e.g., submittals governed by specification section submittal requirements)",
+    "FABRICATED PER": "Fabrication work conforms to the material, tolerance, and workmanship requirements in the target {target} (e.g., structural steel fabricated per specification section welding and finishing requirements)",
+    "TRACKED BY": "{source}deliverable status during {target} is monitored using the target classification's divisions (e.g., material deliveries tracked by MasterFormat division for procurement status reporting)",
+    "SAFEGUARDED PER": "{source}setup phase implements hazard controls defined by {target} classification (e.g., perimeter protection and fall arrest installed per OSHA hazard category requirements)",
+    "ADDRESSES": "{source} orientation covers the hazard categories defined in {target} (e.g., safety orientation addresses OSHA Focus Four hazard categories for site-specific risks)",
+    "DOCUMENTED PER": "{source} records are created in the format required by {target} recordkeeping rules (e.g., safety orientation attendance documented per OSHA recordkeeping classification)",
+    "TRAINED ON": "{source}are trained during {target} on injury types and prevention methods from the target classification (e.g., orientation covers ANSI injury classifications for hazard recognition)",
+    "INSPECTED PER": "{source} work is inspected following the acceptance criteria and procedures in {target} (e.g., foundations inspected per IBC structural provisions, plumbing inspected per IBC plumbing code)",
+    "TESTED PER": "{source} installation undergoes testing protocols mandated by {target} (e.g., structural steel tested per specification section weld inspection, fire protection tested per NFPA)",
+    "INSTALLED PER": "{source} work is installed following the target {target} methods, materials, and tolerances (e.g., electrical rough-in installed per NFPA 70, flooring installed per specification section)",
+    "RATED AGAINST": "{source} assembly's performance is evaluated against {target} rating thresholds (e.g., roofing assembly rated against energy code R-value and solar reflectance requirements)",
+    "COORDINATED BY": "{source} trade sequencing is organized according to {target} division responsibilities (e.g., above-ceiling coordination sequenced by MasterFormat mechanical, electrical, and plumbing divisions)",
+    "COMPLIES WITH": "{source} material or process selection meets the target certification's environmental or health requirements (e.g., paint and coatings comply with LEED low-emitting materials credit)",
+    "VERIFIED AGAINST": "{source} phase test results are compared to {target} performance thresholds (e.g., pre-functional testing verified against energy code criteria, integrated testing verified against WELL)",
+    "COMMISSIONED PER": "Systems startup follows {target} commissioning and acceptance protocols (e.g., fire alarm startup commissioned per NFPA 72 acceptance testing procedures)",
+    "BALANCED PER": "Testing, adjusting, and balancing work follows the target {target} airflow, water flow, and sound criteria (e.g., HVAC systems balanced per specification section TAB requirements)",
+    "CERTIFIED UNDER": "{source} testing produces documentation required for the target sustainability certification (e.g., integrated testing certified under LEED energy performance prerequisites)",
+    "VALIDATED AGAINST": "{source}performance is confirmed against {target} (e.g., seasonal commissioning validated against net-zero energy targets)",
+    "SEGMENTED BY": "{source} metric is broken down by {target} mapping coverage for analysis (e.g., punch items segmented by MasterFormat mapping to identify problem divisions)",
+    "MEASURED AGAINST": "{source} outcome is evaluated relative to {target} completeness metric (e.g., owner training completeness measured against safety classification coverage)",
+    "DELIVERED IN": "{source} deliverables are formatted according to {target} schema (e.g., as-built models delivered in IFC classification format for facility management handoff)",
+    "CLOSED PER": "Contract closeout follows the procedures and documentation requirements in {target} standard (e.g., final payment and retainage released per AIA contract closeout provisions)",
+    "RECONCILED AGAINST": "{source} cost actuals are compared to {target} cost classification for final accounting (e.g., contract closeout costs reconciled against AACE cost engineering classifications)",
+    "WARRANTED PER": "Post-construction warranty obligations follow the target {target} warranty duration and coverage terms (e.g., roofing warranty period and scope warranted per specification section requirements)",
+    "CATALOGED BY": "{source}transition are classified using {target} product taxonomy (e.g., equipment and systems cataloged by OmniClass product tables for asset management)"
+  }
+}

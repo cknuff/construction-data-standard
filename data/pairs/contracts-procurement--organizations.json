@@ -1,0 +1,407 @@
+{
+  "source": "contracts-procurement",
+  "target": "organizations",
+  "edges": [
+    [
+      "cp-prequalification",
+      "org-sub-trade",
+      "SCREENS"
+    ],
+    [
+      "cp-prequalification",
+      "org-gen-contr-gc",
+      "ADMINISTERED BY"
+    ],
+    [
+      "cp-prequalification",
+      "org-public-governmen",
+      "MANDATED BY"
+    ],
+    [
+      "cp-bid-package",
+      "org-gen-contr-gc",
+      "ASSEMBLED BY"
+    ],
+    [
+      "cp-bid-package",
+      "org-sub-trade",
+      "ISSUED TO"
+    ],
+    [
+      "cp-bid-package",
+      "org-architect-record",
+      "SCOPED BY"
+    ],
+    [
+      "cp-req-qualificatio",
+      "org-gen-contr-gc",
+      "ISSUED BY"
+    ],
+    [
+      "cp-req-qualificatio",
+      "org-sub-trade",
+      "RESPONDED TO BY"
+    ],
+    [
+      "cp-req-proposal",
+      "org-private-develope",
+      "ISSUED BY"
+    ],
+    [
+      "cp-req-proposal",
+      "org-mat-supplier",
+      "RESPONDED TO BY"
+    ],
+    [
+      "cp-proposal-bid",
+      "org-sub-trade",
+      "SUBMITTED BY"
+    ],
+    [
+      "cp-bid-evaluation",
+      "org-gen-contr-gc",
+      "PERFORMED BY"
+    ],
+    [
+      "cp-bid-evaluation",
+      "org-architect-record",
+      "CONSULTED ON BY"
+    ],
+    [
+      "cp-award-notice",
+      "org-sub-trade",
+      "AWARDED TO"
+    ],
+    [
+      "cp-award-notice",
+      "org-private-develope",
+      "AUTHORIZED BY"
+    ],
+    [
+      "cp-prime-contract",
+      "org-private-develope",
+      "EXECUTED BY"
+    ],
+    [
+      "cp-prime-contract",
+      "org-gen-contr-gc",
+      "CONTRACTED UNDER"
+    ],
+    [
+      "cp-prime-contract",
+      "org-design-builder",
+      "CONTRACTED UNDER"
+    ],
+    [
+      "cp-subcontract",
+      "org-gen-contr-gc",
+      "ISSUED BY"
+    ],
+    [
+      "cp-subcontract",
+      "org-sub-trade",
+      "CONTRACTED UNDER"
+    ],
+    [
+      "cp-subcontract",
+      "org-self-performing",
+      "SELF-PERFORMED UNDER"
+    ],
+    [
+      "cp-subcontract",
+      "org-const-manager-at",
+      "ISSUED BY"
+    ],
+    [
+      "cp-purchase-order",
+      "org-mat-supplier",
+      "AWARDED TO"
+    ],
+    [
+      "cp-purchase-order",
+      "org-equip-rental",
+      "AWARDED TO"
+    ],
+    [
+      "cp-master-service",
+      "org-private-develope",
+      "NEGOTIATED BY"
+    ],
+    [
+      "cp-master-service",
+      "org-special-insp",
+      "CONTRACTED UNDER"
+    ],
+    [
+      "cp-master-service",
+      "org-cx-agent-cxa",
+      "CONTRACTED UNDER"
+    ],
+    [
+      "cp-scope-work",
+      "org-architect-record",
+      "DEFINED BY"
+    ],
+    [
+      "cp-scope-work",
+      "org-sub-trade",
+      "BIDS ON"
+    ],
+    [
+      "cp-scope-work",
+      "org-self-performing",
+      "SELF-PERFORMS"
+    ],
+    [
+      "cp-scope-work",
+      "org-mep-engineer",
+      "DEFINED BY"
+    ],
+    [
+      "cp-gen-cond",
+      "org-private-develope",
+      "STIPULATED BY"
+    ],
+    [
+      "cp-gen-cond",
+      "org-sub-trade",
+      "BOUND BY"
+    ],
+    [
+      "cp-retainage-terms",
+      "org-gen-contr-gc",
+      "WITHHOLDS PER"
+    ],
+    [
+      "cp-retainage-terms",
+      "org-sub-trade",
+      "WITHHELD FROM PER"
+    ],
+    [
+      "cp-liquidated-damag",
+      "org-gen-contr-gc",
+      "ASSESSED AGAINST"
+    ],
+    [
+      "cp-liquidated-damag",
+      "org-sub-trade",
+      "FLOWED DOWN TO"
+    ],
+    [
+      "cp-allowance",
+      "org-private-develope",
+      "ESTABLISHED BY"
+    ],
+    [
+      "cp-allowance",
+      "org-architect-record",
+      "SPECIFIED BY"
+    ],
+    [
+      "cp-bid-bond",
+      "org-surety-bonding",
+      "UNDERWRITTEN BY"
+    ],
+    [
+      "cp-bid-bond",
+      "org-gen-contr-gc",
+      "FURNISHED BY"
+    ],
+    [
+      "cp-perf-bond",
+      "org-surety-bonding",
+      "UNDERWRITTEN BY"
+    ],
+    [
+      "cp-perf-bond",
+      "org-gen-contr-gc",
+      "BONDED UNDER"
+    ],
+    [
+      "cp-perf-bond",
+      "org-const-lender",
+      "REQUIRED BY"
+    ],
+    [
+      "cp-payment-bond",
+      "org-surety-bonding",
+      "UNDERWRITTEN BY"
+    ],
+    [
+      "cp-payment-bond",
+      "org-sub-trade",
+      "PROTECTED BY"
+    ],
+    [
+      "cp-insurance-cert",
+      "org-insurance-broker",
+      "ISSUED BY"
+    ],
+    [
+      "cp-insurance-cert",
+      "org-sub-trade",
+      "FURNISHED BY"
+    ],
+    [
+      "cp-insurance-cert",
+      "org-gen-contr-gc",
+      "COLLECTED BY"
+    ],
+    [
+      "cp-builders-risk",
+      "org-insurance-broker",
+      "UNDERWRITTEN BY"
+    ],
+    [
+      "cp-builders-risk",
+      "org-gen-contr-gc",
+      "PROCURED BY"
+    ],
+    [
+      "cp-warranty",
+      "org-sub-trade",
+      "PROVIDED BY"
+    ],
+    [
+      "cp-warranty",
+      "org-private-develope",
+      "ENFORCED BY"
+    ],
+    [
+      "cp-substantial-comp",
+      "org-architect-record",
+      "CERTIFIED BY"
+    ],
+    [
+      "cp-substantial-comp",
+      "org-private-develope",
+      "ACCEPTED BY"
+    ],
+    [
+      "cp-final-completion",
+      "org-gen-contr-gc",
+      "ACHIEVED BY"
+    ],
+    [
+      "cp-final-completion",
+      "org-building-departm",
+      "INSPECTED BY"
+    ],
+    [
+      "cp-final-completion",
+      "org-sub-trade",
+      "CLOSED OUT BY"
+    ],
+    [
+      "cp-prevailing-wage",
+      "org-public-governmen",
+      "MANDATED BY"
+    ],
+    [
+      "cp-prevailing-wage",
+      "org-sub-trade",
+      "COMPLIED WITH BY"
+    ],
+    [
+      "cp-diversity-dbe",
+      "org-sub-trade",
+      "CERTIFIED UNDER"
+    ],
+    [
+      "cp-diversity-dbe",
+      "org-program-manager",
+      "TRACKED BY"
+    ],
+    [
+      "cp-closeout-doc",
+      "org-gen-contr-gc",
+      "ASSEMBLED BY"
+    ],
+    [
+      "cp-closeout-doc",
+      "org-architect-record",
+      "REVIEWED BY"
+    ],
+    [
+      "cp-bid-coverage",
+      "org-gen-contr-gc",
+      "MEASURED BY"
+    ],
+    [
+      "cp-average-bidders",
+      "org-gen-contr-gc",
+      "TRACKED BY"
+    ],
+    [
+      "cp-award-cycle-time",
+      "org-program-manager",
+      "BENCHMARKED BY"
+    ],
+    [
+      "cp-insurance-comp",
+      "org-gen-contr-gc",
+      "TRACKED BY"
+    ],
+    [
+      "cp-chg-order-rate",
+      "org-sub-trade",
+      "ATTRIBUTED TO"
+    ],
+    [
+      "cp-sub-retention",
+      "org-gen-contr-gc",
+      "TRACKED BY"
+    ]
+  ],
+  "verbGlossary": {
+    "SCREENS": "{source} evaluated through a prequalification process for financial capacity, safety record, and trade competency before being eligible to bid",
+    "ADMINISTERED BY": "{source} responsible for managing and enforcing {target} instrument, process, or general conditions on the project",
+    "MANDATED BY": "Regulatory or public {target} that requires a procurement step, certification, or compliance document by law or policy",
+    "ASSEMBLED BY": "{source} that compiles bid packages, closeout documents, or procurement deliverables from multiple sources",
+    "ISSUED TO": "{source} that receives a bid package, RFP, or procurement solicitation for response",
+    "SCOPED BY": "{source}defines the trade scope of work included in a bid package",
+    "RESPONDED TO BY": "{source} that submits a qualification statement or proposal in response to a solicitation",
+    "ISSUED BY": "{source} that formally releases a procurement document, contract instrument, or award notice",
+    "SUBMITTED BY": "{source} that formally delivers a bid, proposal, or compliance certification",
+    "PERFORMED BY": "{source} that carries out the bid evaluation or leveling analysis",
+    "CONSULTED ON BY": "{source}whose technical input is sought during bid evaluation or scope clarification",
+    "REVIEWED BY": "{source} that examines {target}, closeout package, or evaluation for accuracy and completeness",
+    "AWARDED TO": "{source} selected to receive {target}, purchase order, or notice to proceed",
+    "AUTHORIZED BY": "{source}that grants formal approval for {target} award or expenditure",
+    "EXECUTED BY": "Owner {target} that signs and executes the prime contract with the construction team",
+    "CONTRACTED UNDER": "{source} that performs work governed by a specific contract instrument",
+    "SELF-PERFORMED UNDER": "{target} division that executes scope of work with its own forces rather than subcontracting",
+    "NEGOTIATED BY": "{source} that negotiates the commercial terms of a master service agreement or contract",
+    "DEFINED BY": "Design professional who authors the technical scope, specifications, or requirements in contract documents",
+    "BIDS ON": "{target} that submits competitive pricing against a defined scope of work",
+    "SELF-PERFORMS": "{target} division that executes a scope of work with its own craft labor instead of subcontracting",
+    "STIPULATED BY": "Owner or public {target} that establishes binding contract terms in general conditions",
+    "BOUND BY": "{source} contractually obligated to comply with general conditions or flow-down terms",
+    "WITHHOLDS PER": "{target} that deducts retainage from subcontractor payments per contract retainage terms",
+    "WITHHELD FROM PER": "{target} whose progress payments are reduced by retainage per contract terms",
+    "ASSESSED AGAINST": "{source} against which liquidated damages are charged for schedule or performance failure",
+    "FLOWED DOWN TO": "{target} to whom prime contract liquidated damages provisions are passed via subcontract",
+    "ENFORCED BY": "{target} that exercises contractual rights to collect damages or enforce warranty obligations",
+    "ESTABLISHED BY": "{source}that sets allowance dollar amounts in {target} for undefined or provisional scope items",
+    "SPECIFIED BY": "{source}that defines allowance scope or material standards in contract documents",
+    "UNDERWRITTEN BY": "Surety or insurance {target} that assumes financial risk by issuing a bond or insurance policy",
+    "FURNISHED BY": "Contractor or {target} that procures and delivers a required bond or insurance certificate to the obligee",
+    "REQUIRED BY": "Owner, lender, or public {target} that mandates bonds or insurance as a condition of contract",
+    "BONDED UNDER": "{source}whose contractual performance and payment obligations are secured by a surety bond",
+    "PROTECTED BY": "{target} or supplier whose right to payment is secured by a payment bond",
+    "COLLECTED BY": "{target} that gathers insurance certificates from all subcontractors and vendors for compliance tracking",
+    "PROCURED BY": "{source} that purchases builders risk or project-wide insurance coverage",
+    "PROVIDED BY": "{target}, fabricator, or supplier that furnishes a warranty for installed work or materials",
+    "CERTIFIED BY": "{target} or authority that formally certifies a completion milestone or compliance document",
+    "ACCEPTED BY": "{target} that formally accepts a completion milestone or closeout deliverable",
+    "ACHIEVED BY": "{target} that reaches substantial or final completion milestone per contract requirements",
+    "INSPECTED BY": "Regulatory {target} that performs final inspection before certificate of occupancy or completion",
+    "CLOSED OUT BY": "{target} that completes all punch list, warranty, and documentation requirements to close their contract",
+    "COMPLIED WITH BY": "{source} that meets prevailing wage, safety, or regulatory requirements specified in contract",
+    "CERTIFIED UNDER": "{source} that holds a diversity, DBE, or minority business certification recognized by {target}",
+    "TRACKED BY": "{source} that monitors a procurement metric, compliance rate, or retention statistic over time",
+    "MEASURED BY": "{source} that calculates and reports a procurement performance metric",
+    "BENCHMARKED BY": "{source}that compares procurement cycle times or metrics across projects in a portfolio",
+    "ATTRIBUTED TO": "{source} whose actions or trade scope are the source of a change order or retention metric"
+  }
+}

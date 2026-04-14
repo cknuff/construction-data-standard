@@ -1,0 +1,178 @@
+{
+  "source": "documents-communications",
+  "target": "locations",
+  "edges": [
+    [
+      "doc-drawing-sheet",
+      "loc-floor-level",
+      "DEPICTS"
+    ],
+    [
+      "doc-drawing-sheet",
+      "loc-grid-line",
+      "REFERENCES"
+    ],
+    [
+      "doc-drawing-revision",
+      "loc-zone-wing",
+      "MODIFIES"
+    ],
+    [
+      "doc-specification-se",
+      "loc-functional-area",
+      "SPECIFIES FOR"
+    ],
+    [
+      "doc-addendum",
+      "loc-floor-level",
+      "REVISES"
+    ],
+    [
+      "doc-bulletin-archite",
+      "loc-room-space",
+      "CLARIFIES"
+    ],
+    [
+      "doc-req-info-rfi",
+      "loc-penetration-open",
+      "REFERENCES"
+    ],
+    [
+      "doc-req-info-rfi",
+      "loc-ceiling-plenum",
+      "REFERENCES"
+    ],
+    [
+      "doc-shop-drawing",
+      "loc-equip-location",
+      "DETAILS"
+    ],
+    [
+      "doc-submittal",
+      "loc-building",
+      "FILED FOR"
+    ],
+    [
+      "doc-notice-delay",
+      "loc-work-zone-phase",
+      "ADDRESSES"
+    ],
+    [
+      "doc-chg-directive",
+      "loc-zone-wing",
+      "DIRECTS WORK AT"
+    ],
+    [
+      "doc-meeting-minutes",
+      "loc-work-zone-phase",
+      "REFERENCES"
+    ],
+    [
+      "doc-daily-report",
+      "loc-project-site",
+      "COVERS"
+    ],
+    [
+      "doc-daily-log-note",
+      "loc-floor-level",
+      "PINNED TO"
+    ],
+    [
+      "doc-daily-log-note",
+      "loc-exterior-zone",
+      "PINNED TO"
+    ],
+    [
+      "doc-site-instruction",
+      "loc-room-space",
+      "DIRECTS WORK AT"
+    ],
+    [
+      "doc-action-plan",
+      "loc-work-zone-phase",
+      "SCOPED TO"
+    ],
+    [
+      "doc-action-plan-line",
+      "loc-room-space",
+      "ASSIGNED TO"
+    ],
+    [
+      "doc-photo",
+      "loc-wall-surface",
+      "PHOTOGRAPHED AT"
+    ],
+    [
+      "doc-photo",
+      "loc-grid-line",
+      "PINNED TO"
+    ],
+    [
+      "doc-video",
+      "loc-roof-level",
+      "PHOTOGRAPHED AT"
+    ],
+    [
+      "doc-permit-applicati",
+      "loc-right-way",
+      "FILED FOR"
+    ],
+    [
+      "doc-safety-plan-site",
+      "loc-laydown-staging",
+      "COVERS"
+    ],
+    [
+      "doc-swppp-enviro",
+      "loc-exterior-zone",
+      "COVERS"
+    ],
+    [
+      "doc-punch-list-as",
+      "loc-wet-area",
+      "CATALOGUES"
+    ],
+    [
+      "doc-as-built-docs",
+      "loc-fire-smoke",
+      "RECORDS"
+    ],
+    [
+      "doc-o-m-manual",
+      "loc-cx-zone",
+      "DOCUMENTS"
+    ],
+    [
+      "doc-transmittal",
+      "loc-temp-facility",
+      "DELIVERED TO"
+    ],
+    [
+      "doc-rfi-volume",
+      "loc-floor-level",
+      "MEASURED AT"
+    ]
+  ],
+  "verbGlossary": {
+    "ADDRESSES": "{source} discusses or raises issues pertaining to conditions at this {target}",
+    "ASSIGNED TO": "{source}is assigned to be completed at this {target}",
+    "CATALOGUES": "{source} systematically lists deficiencies or items organized by this {target}",
+    "CLARIFIES": "{source} provides additional design or construction clarification for this {target}",
+    "COVERS": "{source} scope encompasses the entirety of this {target} or area",
+    "DELIVERED TO": "{source}is delivered to this {target} location for pickup or staging",
+    "DEPICTS": "Dra{target} sheet graphically represents the plan, section, or detail of this location",
+    "DETAILS": "Shop dra{target} provides fabrication-level dimensional detail for elements at this location",
+    "DIRECTS WORK AT": "{source} instructs construction activity to be performed at this {target}",
+    "DOCUMENTS": "{source}document captures as-installed conditions or operating procedures for this {target}",
+    "FILED FOR": "{source} is formally submitted or recorded with respect to this {target}",
+    "MEASURED AT": "{source}document measure is tracked or aggregated at this {target} granularity",
+    "MODIFIES": "{source}requirements applicable to this {target}",
+    "PHOTOGRAPHED AT": "{source} or video was captured at this {target} as visual documentation",
+    "PINNED TO": "{source} entry or photo is geo-tagged or floor-plan-pinned to {target} coordinate",
+    "RECORDS": "{source}document preserves the final installed condition at this {target}",
+    "REFERENCES": "{source} textually or graphically cites this {target} as relevant context",
+    "REVISES": "{source} issues updated design information that changes conditions at this {target}",
+    "SCOPED TO": "{source} or plan defines its applicability boundary as this {target}",
+    "SPECIFIES FOR": "{source} or product data defines material and performance requirements for this {target} type"
+  }
+}

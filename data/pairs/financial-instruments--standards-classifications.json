@@ -1,0 +1,207 @@
+{
+  "source": "financial-instruments",
+  "target": "standards-classifications",
+  "edges": [
+    [
+      "fi-cost-code",
+      "sc-masterformat",
+      "MAPPED TO"
+    ],
+    [
+      "fi-budget-line-item",
+      "sc-masterformat",
+      "ORGANIZED BY"
+    ],
+    [
+      "fi-direct-cost-line",
+      "sc-masterformat",
+      "CLASSIFIED UNDER"
+    ],
+    [
+      "fi-commit-line-item",
+      "sc-masterformat",
+      "CLASSIFIED UNDER"
+    ],
+    [
+      "fi-wbs-code",
+      "sc-wbs-code",
+      "STRUCTURED PER"
+    ],
+    [
+      "fi-budget-line-item",
+      "sc-wbs-code",
+      "CODED BY"
+    ],
+    [
+      "fi-cco-line-item",
+      "sc-wbs-code",
+      "CHARGED TO"
+    ],
+    [
+      "fi-budget-code",
+      "sc-budget-code",
+      "STRUCTURED PER"
+    ],
+    [
+      "fi-budget-mod",
+      "sc-budget-code",
+      "ALLOCATED AGAINST"
+    ],
+    [
+      "fi-cost-code",
+      "sc-std-cost-code",
+      "DERIVED FROM"
+    ],
+    [
+      "fi-direct-cost",
+      "sc-std-cost-code",
+      "CODED BY"
+    ],
+    [
+      "fi-chg-event-line",
+      "sc-specification-se",
+      "SCOPED BY"
+    ],
+    [
+      "fi-commit-line-item",
+      "sc-specification-se",
+      "REFERENCED AGAINST"
+    ],
+    [
+      "fi-schedule-values",
+      "sc-uniformat",
+      "BROKEN DOWN BY"
+    ],
+    [
+      "fi-budget-line-item",
+      "sc-uniformat",
+      "TAGGED TO"
+    ],
+    [
+      "fi-commit-subcontra",
+      "sc-aia-contract",
+      "GOVERNED BY"
+    ],
+    [
+      "fi-owner-chg-order",
+      "sc-aia-contract",
+      "ESCALATED PER"
+    ],
+    [
+      "fi-commit-chg-order",
+      "sc-aia-contract",
+      "ADMINISTERED PER"
+    ],
+    [
+      "fi-lien-waiver",
+      "sc-aia-contract",
+      "REQUIRED BY"
+    ],
+    [
+      "fi-owner-invoice",
+      "sc-dlvy-method",
+      "FORMATTED PER"
+    ],
+    [
+      "fi-chg-order-rate",
+      "sc-dlvy-method",
+      "SEGMENTED BY"
+    ],
+    [
+      "fi-cost-forecast",
+      "sc-aace-cost",
+      "BENCHMARKED TO"
+    ],
+    [
+      "fi-cost-growth",
+      "sc-aace-cost",
+      "BENCHMARKED TO"
+    ],
+    [
+      "fi-budget-variance",
+      "sc-aace-cost",
+      "MEASURED AGAINST"
+    ],
+    [
+      "fi-cost-perf-index",
+      "sc-aace-cost",
+      "CALCULATED PER"
+    ],
+    [
+      "fi-contingency",
+      "sc-aace-cost",
+      "SIZED PER"
+    ],
+    [
+      "fi-project-budget",
+      "sc-leed-certificati",
+      "PROVISIONED FOR"
+    ],
+    [
+      "fi-allowance",
+      "sc-energy-code-stds",
+      "RESERVED FOR"
+    ],
+    [
+      "fi-committed-cost",
+      "sc-masterformat-map",
+      "SEGMENTED BY"
+    ],
+    [
+      "fi-budget-variance",
+      "sc-wbs-adoption",
+      "SEGMENTED BY"
+    ],
+    [
+      "fi-contingency-burn",
+      "sc-cost-code",
+      "SEGMENTED BY"
+    ],
+    [
+      "fi-chg-order-rate",
+      "sc-specification-se-2",
+      "SEGMENTED BY"
+    ],
+    [
+      "fi-cash-flow-2",
+      "sc-masterformat-map",
+      "SEGMENTED BY"
+    ],
+    [
+      "fi-margin-pct",
+      "sc-dlvy-method",
+      "SEGMENTED BY"
+    ],
+    [
+      "fi-win-rate",
+      "sc-dlvy-method",
+      "SEGMENTED BY"
+    ]
+  ],
+  "verbGlossary": {
+    "MAPPED TO": "{source} classification element is cross-referenced to {target} taxonomy for standardized reporting (e.g., project cost code mapped to a MasterFormat division for industry-comparable breakdowns)",
+    "ORGANIZED BY": "{source} line items are structured according to {target} division or section hierarchy (e.g., budget line items organized by MasterFormat divisions for trade-level budgeting)",
+    "CLASSIFIED UNDER": "Cost record is categorized using {target} taxonomy (e.g., direct cost line item classified under a MasterFormat division to identify the trade responsible for the expenditure)",
+    "STRUCTURED PER": "{source} breakdown structure follows {target} hierarchical numbering scheme (e.g., WBS codes structured per the company WBS code standard for consistent project decomposition)",
+    "CODED BY": "{source} is assigned a classification code from {target} (e.g., budget line item coded by WBS code for work package tracking, direct cost coded by standard cost code)",
+    "CHARGED TO": "Cost amount is posted against a specific classification code in {target} structure (e.g., CCO line item amount charged to a WBS code for rework cost allocation)",
+    "ALLOCATED AGAINST": "{source} adjustment is distributed relative to {target} breakdown structure (e.g., budget modification allocated against a budget code to reallocate funds between categories)",
+    "DERIVED FROM": "Project-specific financial classification is created based on {target} master list (e.g., project cost codes derived from the company standard cost code list)",
+    "SCOPED BY": "{source} cost is defined in terms of {target} scope of work (e.g., change event line item scoped by specification section to tie cost to a spec requirement)",
+    "REFERENCED AGAINST": "{source} references {target} section for contract compliance verification (e.g., subcontract line item referenced against specification section to confirm scope alignment)",
+    "BROKEN DOWN BY": "{source} is decomposed according to {target} element classification (e.g., SOV broken down by UniFormat elements for element-based cost tracking)",
+    "TAGGED TO": "{source} is linked to {target} for cross-domain traceability (e.g., budget line item tagged to a UniFormat element for design-to-cost alignment)",
+    "GOVERNED BY": "{source} or contract is subject to {target} terms and conditions (e.g., subcontract governed by AIA A201 General Conditions for dispute resolution and payment terms)",
+    "ESCALATED PER": "{source} or dispute is formally escalated following {target} document's claim procedures (e.g., owner change order escalated per AIA contract claim provisions)",
+    "ADMINISTERED PER": "{source} process follows {target} document's prescribed administration procedures (e.g., commitment change order administered per AIA A201 change order provisions)",
+    "REQUIRED BY": "{source} document is mandated by {target} standard at specific project milestones (e.g., lien waiver required by AIA contract documents before payment release)",
+    "FORMATTED PER": "{source} or pay application follows the target delivery method's prescribed billing format (e.g., owner invoice formatted per the delivery method's schedule of values template)",
+    "SEGMENTED BY": "{source} is broken down by {target} for comparative analysis (e.g., change order rate segmented by delivery method to compare design-bid-build vs. design-build performance)",
+    "BENCHMARKED TO": "{source} is compared against {target} published industry thresholds (e.g., cost forecast benchmarked to AACE cost engineering norms for estimate accuracy classification)",
+    "MEASURED AGAINST": "{source} variance is evaluated relative to {target} acceptable tolerance bands (e.g., budget variance measured against AACE recommended contingency and accuracy ranges)",
+    "CALCULATED PER": "{source}performance metric is computed using {target} prescribed formula (e.g., Cost Performance Index calculated per AACE earned value methodology)",
+    "SIZED PER": "{source} reserve is established based on {target} risk-based sizing methodology (e.g., contingency sized per AACE recommended practice for estimate classification and risk assessment)",
+    "PROVISIONED FOR": "{source} includes a dedicated allocation to meet the target certification's compliance requirements (e.g., project budget provisioned for LEED certification commissioning and documentation costs)",
+    "RESERVED FOR": "{source} is set aside to cover anticipated costs driven by {target} requirements (e.g., allowance reserved for energy code compliance measures such as enhanced insulation or HVAC upgrades)"
+  }
+}

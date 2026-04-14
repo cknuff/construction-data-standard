@@ -1,0 +1,124 @@
+{
+  "source": "locations",
+  "target": "standards-classifications",
+  "edges": [
+    [
+      "loc-building",
+      "sc-uniformat",
+      "ZONED BY"
+    ],
+    [
+      "loc-floor-level",
+      "sc-uniformat",
+      "DECOMPOSED BY"
+    ],
+    [
+      "loc-room-space",
+      "sc-omniclass",
+      "CLASSIFIED UNDER"
+    ],
+    [
+      "loc-fire-smoke",
+      "sc-nfpa-stds",
+      "GOVERNED BY"
+    ],
+    [
+      "loc-fire-smoke",
+      "sc-international-bu",
+      "GOVERNED BY"
+    ],
+    [
+      "loc-penetration-open",
+      "sc-nfpa-stds",
+      "SEALED PER"
+    ],
+    [
+      "loc-project-site",
+      "sc-osha-hazard",
+      "SURVEYED FOR"
+    ],
+    [
+      "loc-exterior-zone",
+      "sc-osha-hazard",
+      "SURVEYED FOR"
+    ],
+    [
+      "loc-roof-level",
+      "sc-osha-hazard",
+      "POSTED PER"
+    ],
+    [
+      "loc-wet-area",
+      "sc-ada-accessibilit",
+      "GRADED PER"
+    ],
+    [
+      "loc-room-space",
+      "sc-ada-accessibilit",
+      "DIMENSIONED PER"
+    ],
+    [
+      "loc-cx-zone",
+      "sc-leed-certificati",
+      "COMMISSIONED PER"
+    ],
+    [
+      "loc-cx-zone",
+      "sc-energy-code-stds",
+      "TESTED PER"
+    ],
+    [
+      "loc-work-zone-phase",
+      "sc-masterformat",
+      "SCOPED BY"
+    ],
+    [
+      "loc-equip-location",
+      "sc-specification-se",
+      "SPECIFIED BY"
+    ],
+    [
+      "loc-grid-line",
+      "sc-ifc-class",
+      "REFERENCED BY"
+    ],
+    [
+      "loc-defect-density",
+      "sc-masterformat-map",
+      "SEGMENTED BY"
+    ],
+    [
+      "loc-safety-incident",
+      "sc-safety-class",
+      "SEGMENTED BY"
+    ],
+    [
+      "loc-firestopping-def",
+      "sc-specification-se-2",
+      "BENCHMARKED TO"
+    ],
+    [
+      "loc-punch-items-per",
+      "sc-cost-code",
+      "SEGMENTED BY"
+    ]
+  ],
+  "verbGlossary": {
+    "ZONED BY": "{source} is subdivided into functional zones using {target} element hierarchy (e.g., building zoned into UniFormat Level 2 assemblies such as shell, interiors, services)",
+    "DECOMPOSED BY": "{source} is broken into constituent building elements according to {target} assembly structure (e.g., floor level decomposed by UniFormat elements for cost estimation)",
+    "CLASSIFIED UNDER": "{source} or space type is categorized using {target} taxonomy (e.g., room classified under OmniClass Table 13 space types)",
+    "GOVERNED BY": "{source} or compartment is defined and regulated by {target} or standard (e.g., fire/smoke compartment governed by NFPA 101 life safety requirements or IBC Chapter 7 fire-resistance provisions)",
+    "SEALED PER": "Penetration or opening at {target} is firestopped or sealed following the target standard's listed assembly requirements (e.g., pipe penetration sealed per NFPA 251 through-penetration firestop procedures)",
+    "SURVEYED FOR": "{source} is inspected or walked for hazards cataloged in {target} classification (e.g., project site surveyed for OSHA Focus Four hazards before work begins)",
+    "POSTED PER": "{source} is marked with required warning signage or fall-protection notices as mandated by {target} (e.g., roof level posted per OSHA 1926 Subpart M fall protection requirements)",
+    "GRADED PER": "{source} is evaluated for slope, clearance, or surface compliance against {target} (e.g., wet area graded per ADA Standards for Accessible Design Section 403 floor surface requirements)",
+    "DIMENSIONED PER": "{source} or space layout is verified against {target} minimum dimensional requirements (e.g., restroom dimensioned per ADA clear floor space and turning radius provisions)",
+    "COMMISSIONED PER": "{source} is functionally tested and verified as part of the target certification's commissioning prerequisites (e.g., commissioning zone tested per LEED EAp1 fundamental commissioning requirements)",
+    "TESTED PER": "{source}'s installed systems are performance-tested following {target} prescribed protocols (e.g., commissioning zone envelope tested per ASHRAE 90.1 energy code compliance)",
+    "SCOPED BY": "{source} area is defined using {target} division structure to delineate trade scope (e.g., phase area scoped by MasterFormat divisions to sequence electrical before finishes)",
+    "SPECIFIED BY": "Equipment or component at {target} is described by the target specification section's performance and installation requirements (e.g., equipment location specified by Section 23 HVAC installation criteria)",
+    "REFERENCED BY": "{source} coordinate or grid intersection is tied to {target} spatial reference schema (e.g., grid line intersection referenced by IFC IfcGridAxis for model coordination)",
+    "SEGMENTED BY": "{source}-based metric is broken down by the target classification for comparative analysis (e.g., defect density segmented by MasterFormat division to identify problem trades at each {target})",
+    "BENCHMARKED TO": "{source}-based rate metric is compared against {target} published thresholds or industry baselines (e.g., firestopping deficiency rate benchmarked to specification section coverage norms)"
+  }
+}

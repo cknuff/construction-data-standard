@@ -1,0 +1,428 @@
+{
+  "source": "building-elements",
+  "target": "field-operations",
+  "edges": [
+    [
+      "be-excav",
+      "fo-equip-log-entry",
+      "EXCAVATED PER"
+    ],
+    [
+      "be-excav",
+      "fo-daily-log-note",
+      "RECORDED IN"
+    ],
+    [
+      "be-backfill",
+      "fo-quantity-log",
+      "COMPACTED PER"
+    ],
+    [
+      "be-dewater",
+      "fo-equip-log-entry",
+      "PUMPED VIA"
+    ],
+    [
+      "be-erosion",
+      "fo-daily-log-insp",
+      "INSPECTED UNDER"
+    ],
+    [
+      "be-deep-fdn",
+      "fo-daily-log-note",
+      "DRIVEN PER"
+    ],
+    [
+      "be-shallow-fdn",
+      "fo-productivity-log",
+      "POURED PER"
+    ],
+    [
+      "be-fdn-walls",
+      "fo-const-report",
+      "FORMED PER"
+    ],
+    [
+      "be-grade-beams",
+      "fo-scheduled-work",
+      "PLACED PER"
+    ],
+    [
+      "be-sog",
+      "fo-field-productivi",
+      "FINISHED PER"
+    ],
+    [
+      "be-bg-wp",
+      "fo-daily-log-insp",
+      "APPLIED PER"
+    ],
+    [
+      "be-water-main",
+      "fo-daily-log-insp",
+      "PRESSURE TESTED VIA"
+    ],
+    [
+      "be-sanitary",
+      "fo-manpower-log",
+      "LAID BY"
+    ],
+    [
+      "be-storm",
+      "fo-quantity-log",
+      "GRADED PER"
+    ],
+    [
+      "be-gas-svc",
+      "fo-safety-violation",
+      "FLAGGED ON"
+    ],
+    [
+      "be-site-elec",
+      "fo-delay-log-entry",
+      "DELAYED ON"
+    ],
+    [
+      "be-columns",
+      "fo-equip-log-entry",
+      "ERECTED VIA"
+    ],
+    [
+      "be-beams",
+      "fo-manpower-log",
+      "SET BY"
+    ],
+    [
+      "be-slabs",
+      "fo-actual-productio",
+      "MEASURED BY"
+    ],
+    [
+      "be-roof-struct",
+      "fo-safety-violation",
+      "CITED DURING"
+    ],
+    [
+      "be-connections",
+      "fo-daily-log-insp",
+      "TORQUED PER"
+    ],
+    [
+      "be-stairs",
+      "fo-scheduled-work",
+      "SEQUENCED IN"
+    ],
+    [
+      "be-misc-metals",
+      "fo-dlvy-log-entry",
+      "RECEIVED PER"
+    ],
+    [
+      "be-curtainwall",
+      "fo-plan-revision",
+      "REVISED ON"
+    ],
+    [
+      "be-windows",
+      "fo-dlvy-log-entry",
+      "DELIVERED FOR"
+    ],
+    [
+      "be-ext-doors",
+      "fo-mat-receipt",
+      "ACCEPTED VIA"
+    ],
+    [
+      "be-masonry-v",
+      "fo-weather-log",
+      "WEATHER HELD ON"
+    ],
+    [
+      "be-panels",
+      "fo-equip-log-entry",
+      "HOISTED VIA"
+    ],
+    [
+      "be-amb",
+      "fo-daily-log-insp",
+      "ADHERED PER"
+    ],
+    [
+      "be-ext-insul",
+      "fo-quantity-log",
+      "BOARDED PER"
+    ],
+    [
+      "be-roof-mem",
+      "fo-weather-log",
+      "RAIN DELAYED ON"
+    ],
+    [
+      "be-roof-insul",
+      "fo-budgeted-product",
+      "TARGETED IN"
+    ],
+    [
+      "be-flashing",
+      "fo-daily-log-note",
+      "DETAILED IN"
+    ],
+    [
+      "be-roof-drain",
+      "fo-daily-log-insp",
+      "TESTED VIA"
+    ],
+    [
+      "be-skylights",
+      "fo-mat-shipment",
+      "SHIPPED FOR"
+    ],
+    [
+      "be-ductwork",
+      "fo-productivity-log",
+      "HUNG PER"
+    ],
+    [
+      "be-hvac-pipe",
+      "fo-manpower-log",
+      "BRAZED BY"
+    ],
+    [
+      "be-ahu",
+      "fo-equip-log-entry",
+      "RIGGED VIA"
+    ],
+    [
+      "be-cooling",
+      "fo-delay-log-entry",
+      "BACK ORDERED ON"
+    ],
+    [
+      "be-duct-insul",
+      "fo-timecard-entry",
+      "WRAPPED PER"
+    ],
+    [
+      "be-hvac-ctrl",
+      "fo-daily-log-note",
+      "CALIBRATED PER"
+    ],
+    [
+      "be-tab",
+      "fo-field-productivi",
+      "BALANCED PER"
+    ],
+    [
+      "be-dom-water",
+      "fo-daily-log-insp",
+      "FLUSHED PER"
+    ],
+    [
+      "be-waste-vent",
+      "fo-productivity-log",
+      "ROUGHED IN PER"
+    ],
+    [
+      "be-gas-pipe",
+      "fo-safety-violation",
+      "LEAK TESTED ON"
+    ],
+    [
+      "be-plumb-fix",
+      "fo-scheduled-work-2",
+      "TRIMMED PER"
+    ],
+    [
+      "be-pipe-insul",
+      "fo-timecard-entry",
+      "INSULATED PER"
+    ],
+    [
+      "be-power-dist",
+      "fo-daily-log-insp",
+      "ENERGIZED PER"
+    ],
+    [
+      "be-branch",
+      "fo-manpower-log",
+      "PULLED BY"
+    ],
+    [
+      "be-conduit",
+      "fo-quantity-log",
+      "RUN PER"
+    ],
+    [
+      "be-lighting",
+      "fo-actual-productio",
+      "LAMPED PER"
+    ],
+    [
+      "be-emerg-pwr",
+      "fo-daily-log-insp",
+      "TRANSFER TESTED VIA"
+    ],
+    [
+      "be-grounding",
+      "fo-daily-log-note",
+      "MEGGERED PER"
+    ],
+    [
+      "be-sprink-main",
+      "fo-manpower-log",
+      "THREADED BY"
+    ],
+    [
+      "be-sprink-head",
+      "fo-quantity-log",
+      "COUNTED IN"
+    ],
+    [
+      "be-standpipe",
+      "fo-daily-log-insp",
+      "HYDRO TESTED VIA"
+    ],
+    [
+      "be-fire-pump",
+      "fo-daily-log-note",
+      "FLOW TESTED PER"
+    ],
+    [
+      "be-fa",
+      "fo-scheduled-work",
+      "COMMISSIONED PER"
+    ],
+    [
+      "be-drywall",
+      "fo-actual-productio",
+      "HUNG AND TAPED PER"
+    ],
+    [
+      "be-act",
+      "fo-scheduled-work",
+      "GRIDDED PER"
+    ],
+    [
+      "be-paint",
+      "fo-weather-log",
+      "HUMIDITY HELD ON"
+    ],
+    [
+      "be-tile",
+      "fo-field-productivi",
+      "GROUTED PER"
+    ],
+    [
+      "be-carpet",
+      "fo-waste-log-entry",
+      "SCRAPPED INTO"
+    ],
+    [
+      "be-casework",
+      "fo-dlvy-log-entry",
+      "UNCRATED PER"
+    ],
+    [
+      "be-countertop",
+      "fo-mat-shipment",
+      "TEMPLATED FOR"
+    ],
+    [
+      "be-elev-car",
+      "fo-daily-log-insp",
+      "LOAD TESTED VIA"
+    ],
+    [
+      "be-elev-mach",
+      "fo-equip-log-entry",
+      "ALIGNED VIA"
+    ],
+    [
+      "be-paving",
+      "fo-weather-log",
+      "TEMP HELD ON"
+    ],
+    [
+      "be-sidewalks",
+      "fo-quantity-log",
+      "SCREEDED PER"
+    ],
+    [
+      "be-fencing",
+      "fo-daily-log-header",
+      "SECURED PER"
+    ]
+  ],
+  "verbGlossary": {
+    "EXCAVATED PER": "{source} are tracked against {target} entry for the excavator or backhoe on site that day",
+    "RECORDED IN": "{source} activity is documented as free-text narrative in {target} by the superintendent",
+    "COMPACTED PER": "Fill material placed for backfill and grading is verified against {target} entries measuring lift thickness and compaction passes",
+    "PUMPED VIA": "{source} operation is logged through {target} entry tracking pump run-hours and discharge volume",
+    "INSPECTED UNDER": "{source} measures such as silt fence and inlet protection are verified through {target} entry",
+    "DRIVEN PER": "{source} driving or drilling activity is documented in {target} recording blow counts, tip elevation, and refusal depth",
+    "POURED PER": "{source} placement rate is captured in {target} entry measuring cubic yards placed per hour",
+    "FORMED PER": "{source} forming and stripping activities are summarized in a construction report entry for the day",
+    "PLACED PER": "{source} placement is scheduled as a planned activity in a scheduled work log entry for {target} coordination",
+    "FINISHED PER": "{source}-on-grade flatness and finish quality metrics are tracked in a field productivity record against specification tolerances",
+    "APPLIED PER": "{source} application is verified through {target} entry before backfill proceeds",
+    "PRESSURE TESTED VIA": "{source}are hydrostatically pressure tested and results are documented in {target} entry",
+    "LAID BY": "{source} installation {target} size and hours are tracked through a manpower log entry for the plumbing subcontractor",
+    "GRADED PER": "{source} inverts and slope are measured against {target} entries recording linear feet installed at specified grades",
+    "FLAGGED ON": "{source}generates {target} log entry when hot work or excavation procedures are not followed",
+    "DELAYED ON": "{source} is attributed to a specific cause in {target} entry such as utility company no-show or permit hold",
+    "ERECTED VIA": "{source} placement by crane or other lifting equipment is tracked through {target} entry",
+    "SET BY": "{source} setting {target} composition and headcount are recorded in a manpower log entry for the steel erector",
+    "MEASURED BY": "{source} placement volumes are captured in an actual production quantity record against the pour plan",
+    "CITED DURING": "{source} structure work at height generates {target} log entries for fall protection or guardrail deficiencies",
+    "TORQUED PER": "{source} are documented in {target} entry",
+    "SEQUENCED IN": "{source} installation is ordered as a scheduled work log entry to maintain vertical access for follow-on trades",
+    "RECEIVED PER": "{source}are checked in through {target} entry verifying shop drawing compliance on arrival",
+    "REVISED ON": "{source} layout or detail changes are distributed to the field via a plan revision receipt triggering re-measurement",
+    "DELIVERED FOR": "{source} units arriving on site are documented in {target} entry with count, size, and condition noted",
+    "ACCEPTED VIA": "{source}s are inspected and formally accepted through a material receipt record checking hardware, finish, and rating label",
+    "WEATHER HELD ON": "{source} veneer installation is suspended and recorded in {target} entry when temperature drops below mortar-set minimums",
+    "HOISTED VIA": "{source} lifts are recorded in {target} entry tracking crane picks, rigging, and placement sequence",
+    "ADHERED PER": "Air and moisture barrier application continuity and lap dimensions are verified through {target} entry",
+    "BOARDED PER": "{source} installation square footage is tallied in {target} entry for progress measurement",
+    "RAIN DELAYED ON": "{source} installation is halted and logged in {target} entry when precipitation prevents adhesion or welding",
+    "TARGETED IN": "{source} planned coverage area per shift is established in a budgeted production quantity record",
+    "DETAILED IN": "Flashing installation locations, material types, and termination details are described in {target}",
+    "TESTED VIA": "{source} is water-tested and results are documented in {target} entry before close-in",
+    "SHIPPED FOR": "{source} units are tracked from fabricator to jobsite through a material shipment record with delivery ETA",
+    "HUNG PER": "{source}work hanging rate in linear feet or pounds per hour is captured in {target} entry",
+    "BRAZED BY": "HVAC piping brazing and soldering {target} composition is tracked in a manpower log entry for the mechanical subcontractor",
+    "RIGGED VIA": "{source} unit setting with crane or forklift is recorded in {target} entry documenting rigging plan execution",
+    "BACK ORDERED ON": "{source}delivery delay is documented in {target} entry attributing schedule impact to supply chain shortage",
+    "WRAPPED PER": "{source} installation hours are captured on {target} entry for the insulation subcontractor's labor",
+    "CALIBRATED PER": "{source} calibration and setpoint verification are documented in {target} during commissioning",
+    "BALANCED PER": "{source} results are recorded in a field productivity record tracking airflow readings against design CFM",
+    "FLUSHED PER": "{source} flushing and disinfection procedure is documented in {target} entry before occupancy",
+    "ROUGHED IN PER": "Waste and vent rough-in progress is captured in {target} entry measuring joints completed per shift",
+    "LEAK TESTED ON": "{source}test failure or improper purge procedure generates {target} log entry",
+    "TRIMMED PER": "{source} trim-out installation is linked to a CPM schedule activity through a scheduled work task link",
+    "INSULATED PER": "{source} installation labor hours are tracked on {target} entry for the mechanical insulation crew",
+    "ENERGIZED PER": "{source} energization sequence is witnessed and documented in {target} entry",
+    "PULLED BY": "Branch wiring {target} pulling cable through conduit is tracked by headcount in a manpower log entry for the electrical subcontractor",
+    "RUN PER": "{source} linear footage installed is recorded in {target} entry for electrical rough-in progress",
+    "LAMPED PER": "{source} installation count per shift is captured in an actual production quantity record",
+    "TRANSFER TESTED VIA": "Emergency power automatic transfer switch operation is witnessed and documented in {target} entry",
+    "MEGGERED PER": "{source} resistance megger test results are recorded in {target}",
+    "THREADED BY": "{source} threading and assembly {target} size is tracked in a manpower log entry for the fire protection subcontractor",
+    "COUNTED IN": "{source} head installation quantities by floor or zone are tallied in {target} entry for fire protection progress",
+    "HYDRO TESTED VIA": "{source} hydrostatic test at required PSI is documented in {target} entry before concealment",
+    "FLOW TESTED PER": "{source} flow test and pressure curve results are documented in {target} as part of acceptance testing",
+    "COMMISSIONED PER": "{source}-by-device commissioning is scheduled and tracked as a scheduled work log entry",
+    "HUNG AND TAPED PER": "{source} hanging and finishing quantities per shift are recorded in an actual production quantity record",
+    "GRIDDED PER": "{source} installation is tracked as a planned activity in a scheduled work log entry",
+    "HUMIDITY HELD ON": "{source}is suspended and documented in {target} entry when humidity exceeds product specifications",
+    "GROUTED PER": "{source} installation and grouting output rate is tracked in a field productivity record measuring square feet per shift",
+    "SCRAPPED INTO": "{source} cutoff waste is recorded in {target} entry by material type and weight",
+    "UNCRATED PER": "{source} are documented in {target} entry verifying piece count and finish condition",
+    "TEMPLATED FOR": "Countertop field dimensions are verified and units are tracked from fabrication through a material shipment record",
+    "LOAD TESTED VIA": "{source} car load test and safety device verification are documented in {target} entry",
+    "ALIGNED VIA": "{source} machinery alignment and leveling procedure is documented in {target} entry during installation",
+    "TEMP HELD ON": "{source} operations are suspended and recorded in {target} entry when ambient temperature falls below asphalt laydown minimums",
+    "SCREEDED PER": "{source} placement and screed finish quantities are measured in {target} entry",
+    "SECURED PER": "{source} and site security are confirmed as part of {target} header for each work day"
+  }
+}

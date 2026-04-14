@@ -1,0 +1,214 @@
+{
+  "source": "organizations",
+  "target": "permits-regulatory",
+  "edges": [
+    [
+      "org-private-develope",
+      "pr-building-permit",
+      "APPLIES FOR"
+    ],
+    [
+      "org-private-develope",
+      "pr-zoning-appr",
+      "PETITIONS FOR"
+    ],
+    [
+      "org-institutional-ow",
+      "pr-cert-occupancy",
+      "RECEIVES"
+    ],
+    [
+      "org-public-governmen",
+      "pr-labor-comp",
+      "ENFORCES"
+    ],
+    [
+      "org-gen-contr-gc",
+      "pr-building-permit",
+      "PULLS"
+    ],
+    [
+      "org-gen-contr-gc",
+      "pr-permit-applicati",
+      "SUBMITS"
+    ],
+    [
+      "org-gen-contr-gc",
+      "pr-insp-scheduling",
+      "COORDINATES"
+    ],
+    [
+      "org-gen-contr-gc",
+      "pr-site-safety-plan",
+      "DEVELOPS"
+    ],
+    [
+      "org-gen-contr-gc",
+      "pr-osha-notificatio",
+      "FILES"
+    ],
+    [
+      "org-const-manager-at",
+      "pr-permit-status",
+      "TRACKS"
+    ],
+    [
+      "org-design-builder",
+      "pr-building-departm",
+      "MANAGES REVIEW FOR"
+    ],
+    [
+      "org-program-manager",
+      "pr-permit-cycle",
+      "MONITORS"
+    ],
+    [
+      "org-architect-record",
+      "pr-building-departm",
+      "SUBMITS DRAWINGS FOR"
+    ],
+    [
+      "org-architect-record",
+      "pr-fire-marshal",
+      "SUBMITS LIFE SAFETY PLANS FOR"
+    ],
+    [
+      "org-struct-engineer",
+      "pr-special-insp",
+      "SPECIFIES REQUIREMENTS FOR"
+    ],
+    [
+      "org-mep-engineer",
+      "pr-trade-permit",
+      "SEALS DRAWINGS FOR"
+    ],
+    [
+      "org-civil-engineer",
+      "pr-stormwater-permi",
+      "PREPARES SWPPP FOR"
+    ],
+    [
+      "org-fire-prot",
+      "pr-fire-marshal",
+      "SUBMITS CALCULATIONS FOR"
+    ],
+    [
+      "org-code-consultant",
+      "pr-variance-special",
+      "PREPARES JUSTIFICATION FOR"
+    ],
+    [
+      "org-sub-trade",
+      "pr-trade-permit",
+      "PULLS"
+    ],
+    [
+      "org-sub-trade",
+      "pr-ahj-insp",
+      "PREPARES WORK FOR"
+    ],
+    [
+      "org-sub-trade",
+      "pr-labor-comp",
+      "COMPLIES WITH"
+    ],
+    [
+      "org-special-insp",
+      "pr-special-insp",
+      "PERFORMS"
+    ],
+    [
+      "org-special-insp",
+      "pr-cert-completion",
+      "FURNISHES REPORTS FOR"
+    ],
+    [
+      "org-mat-testing-lab",
+      "pr-third-party",
+      "CONDUCTS"
+    ],
+    [
+      "org-enviro-monitorin",
+      "pr-enviro-permit",
+      "VERIFIES COMPLIANCE WITH"
+    ],
+    [
+      "org-building-departm",
+      "pr-building-permit",
+      "ISSUES"
+    ],
+    [
+      "org-building-departm",
+      "pr-ahj-insp",
+      "CONDUCTS"
+    ],
+    [
+      "org-building-departm",
+      "pr-cert-occupancy",
+      "GRANTS"
+    ],
+    [
+      "org-fire-marshal",
+      "pr-fire-marshal",
+      "CONDUCTS"
+    ],
+    [
+      "org-osha-safety",
+      "pr-site-safety-plan",
+      "AUDITS"
+    ],
+    [
+      "org-zoning-planning",
+      "pr-zoning-appr",
+      "GRANTS"
+    ],
+    [
+      "org-water-sewer",
+      "pr-utility-connecti",
+      "APPROVES TAP FOR"
+    ],
+    [
+      "org-vendor-insurance",
+      "pr-comp-doc",
+      "MEASURED BY"
+    ],
+    [
+      "org-sub-safety",
+      "pr-insp-pass-rate",
+      "CORRELATES WITH"
+    ]
+  ],
+  "verbGlossary": {
+    "APPLIES FOR": "{source} or developer submits a formal application to a regulatory body to obtain {target} or approval",
+    "APPROVES TAP FOR": "{source}authorizes a physical tap connection to municipal water or sewer mains",
+    "AUDITS": "{source} reviews plans, records, or site conditions to verify compliance with applicable standards",
+    "COMPLIES WITH": "{source} adheres to {target} by maintaining proper documentation, certifications, and wage records",
+    "CONDUCTS": "{source} physically performs an inspection, plan review, or testing activity as the authority having jurisdiction",
+    "COORDINATES": "{source} aligns inspection schedules with construction sequencing to avoid work stoppages",
+    "CORRELATES WITH": "{source}measure statistically relates to {target} or compliance metric",
+    "DEVELOPS": "{source} creates a required regulatory plan such as a site safety plan or stormwater prevention plan",
+    "ENFORCES": "Government entity compels compliance with labor, safety, or environmental regulations through oversight and penalties",
+    "FILES": "{source} submits a required regulatory notification to the governing authority before work begins",
+    "FURNISHES REPORTS FOR": "Inspection agency delivers completed test and inspection reports required for {target} issuance",
+    "GRANTS": "{source} formally issues an approval, {target}, or entitlement after satisfactory review",
+    "ISSUES": "{source} or authority formally issues {target} or certificate upon approval of the application",
+    "MANAGES REVIEW FOR": "{source}plan review process between the design team and the reviewing authority",
+    "MEASURED BY": "{source}is quantified against a regulatory documentation completeness standard",
+    "MONITORS": "{source}tracks {target} cycle times and regulatory milestones to identify schedule risks",
+    "PERFORMS": "{source} or testing lab executes the required inspection or test per code mandate",
+    "PETITIONS FOR": "{source} or developer formally requests {target}, variance, or special exception from the planning authority",
+    "PREPARES JUSTIFICATION FOR": "Code consultant assembles technical rationale and code analysis supporting a variance or special exception request",
+    "PREPARES SWPPP FOR": "{source} develops the stormwater pollution prevention plan required for the stormwater {target}",
+    "PREPARES WORK FOR": "{source} readies installed work for inspection by the authority having jurisdiction, ensuring accessibility and compliance",
+    "PULLS": "{source} obtains a required {target} from the issuing authority, taking responsibility for the permitted scope of work",
+    "RECEIVES": "{source} is formally delivered {target}, certificate, or regulatory notice from the issuing authority",
+    "SEALS DRAWINGS FOR": "Licensed engineer stamps and signs construction documents required for {target} issuance",
+    "SPECIFIES REQUIREMENTS FOR": "{source}defines the scope, frequency, and acceptance criteria for special inspections per {target}",
+    "SUBMITS": "{source} delivers a formal {target} package to the reviewing authority for processing",
+    "SUBMITS CALCULATIONS FOR": "{source} provides hydraulic calculations and system design data for {target} review and approval",
+    "SUBMITS DRAWINGS FOR": "{source} of record submits construction documents to the building department for plan review and {target} issuance",
+    "SUBMITS LIFE SAFETY PLANS FOR": "{source} provides life safety, egress, and fire separation drawings to {target} for review",
+    "TRACKS": "{source}monitors {target} status, review comments, and approval milestones throughout the project",
+    "VERIFIES COMPLIANCE WITH": "{source}monitoring firm confirms that site activities meet the conditions of {target} through sampling and reporting"
+  }
+}

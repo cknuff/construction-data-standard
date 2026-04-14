@@ -1,0 +1,487 @@
+{
+  "source": "financial-instruments",
+  "target": "workflows-statuses",
+  "edges": [
+    [
+      "fi-project-budget",
+      "ws-draft",
+      "ORIGINATES IN"
+    ],
+    [
+      "fi-project-budget",
+      "ws-approved",
+      "REQUIRES"
+    ],
+    [
+      "fi-project-budget",
+      "ws-sequential-appr",
+      "ROUTES THROUGH"
+    ],
+    [
+      "fi-project-budget",
+      "ws-budget-stage",
+      "ADVANCES THROUGH"
+    ],
+    [
+      "fi-budget-line-item",
+      "ws-approved",
+      "LOCKED UPON"
+    ],
+    [
+      "fi-budget-line-item",
+      "ws-budget-stage",
+      "CODED DURING"
+    ],
+    [
+      "fi-budget-mod",
+      "ws-draft",
+      "ORIGINATES IN"
+    ],
+    [
+      "fi-budget-mod",
+      "ws-pending",
+      "AWAITS"
+    ],
+    [
+      "fi-budget-mod",
+      "ws-approved",
+      "REQUIRES"
+    ],
+    [
+      "fi-budget-mod",
+      "ws-rejected",
+      "RETURNED TO"
+    ],
+    [
+      "fi-budget-mod",
+      "ws-appr-chain",
+      "ROUTES THROUGH"
+    ],
+    [
+      "fi-commit-subcontra",
+      "ws-draft",
+      "ORIGINATES IN"
+    ],
+    [
+      "fi-commit-subcontra",
+      "ws-pending",
+      "AWAITS"
+    ],
+    [
+      "fi-commit-subcontra",
+      "ws-approved",
+      "EXECUTED UPON"
+    ],
+    [
+      "fi-commit-subcontra",
+      "ws-void",
+      "VOIDED TO"
+    ],
+    [
+      "fi-commit-subcontra",
+      "ws-e-signature-req",
+      "CERTIFIES VIA"
+    ],
+    [
+      "fi-commit-subcontra",
+      "ws-sequential-appr",
+      "ROUTES THROUGH"
+    ],
+    [
+      "fi-commit-purchase",
+      "ws-approved",
+      "EXECUTED UPON"
+    ],
+    [
+      "fi-commit-purchase",
+      "ws-submit-approve",
+      "FOLLOWS"
+    ],
+    [
+      "fi-commit-purchase",
+      "ws-e-signature-req",
+      "CERTIFIES VIA"
+    ],
+    [
+      "fi-chg-event-ce",
+      "ws-open",
+      "INITIATES AT"
+    ],
+    [
+      "fi-chg-event-ce",
+      "ws-progress",
+      "ADVANCES TO"
+    ],
+    [
+      "fi-chg-event-ce",
+      "ws-closed",
+      "FINALIZES AT"
+    ],
+    [
+      "fi-chg-event-ce",
+      "ws-void",
+      "VOIDED TO"
+    ],
+    [
+      "fi-chg-event-ce",
+      "ws-chg-event",
+      "GOVERNED BY"
+    ],
+    [
+      "fi-chg-event-ce",
+      "ws-mapped-status",
+      "MAPPED VIA"
+    ],
+    [
+      "fi-chg-event-ce",
+      "ws-multi-stage",
+      "ROUTES THROUGH"
+    ],
+    [
+      "fi-pot-chg-order",
+      "ws-pending",
+      "AWAITS"
+    ],
+    [
+      "fi-pot-chg-order",
+      "ws-approved",
+      "ADVANCES UPON"
+    ],
+    [
+      "fi-pot-chg-order",
+      "ws-revise-resubmit",
+      "RETURNED TO"
+    ],
+    [
+      "fi-pot-chg-order",
+      "ws-cost-stage",
+      "PRICED DURING"
+    ],
+    [
+      "fi-commit-chg-order",
+      "ws-draft",
+      "ORIGINATES IN"
+    ],
+    [
+      "fi-commit-chg-order",
+      "ws-pending",
+      "AWAITS"
+    ],
+    [
+      "fi-commit-chg-order",
+      "ws-approved",
+      "EXECUTED UPON"
+    ],
+    [
+      "fi-commit-chg-order",
+      "ws-void",
+      "VOIDED TO"
+    ],
+    [
+      "fi-commit-chg-order",
+      "ws-appr-chain",
+      "ROUTES THROUGH"
+    ],
+    [
+      "fi-commit-chg-order",
+      "ws-cost-stage",
+      "COMMITTED DURING"
+    ],
+    [
+      "fi-owner-chg-order",
+      "ws-draft",
+      "ORIGINATES IN"
+    ],
+    [
+      "fi-owner-chg-order",
+      "ws-submitted",
+      "SUBMITTED AT"
+    ],
+    [
+      "fi-owner-chg-order",
+      "ws-approved",
+      "EXECUTED UPON"
+    ],
+    [
+      "fi-owner-chg-order",
+      "ws-rejected",
+      "RETURNED TO"
+    ],
+    [
+      "fi-owner-chg-order",
+      "ws-revenue-stage",
+      "BILLED DURING"
+    ],
+    [
+      "fi-owner-chg-order",
+      "ws-sequential-appr",
+      "ROUTES THROUGH"
+    ],
+    [
+      "fi-owner-chg-order",
+      "ws-e-signature-req",
+      "CERTIFIES VIA"
+    ],
+    [
+      "fi-direct-cost",
+      "ws-pending",
+      "AWAITS"
+    ],
+    [
+      "fi-direct-cost",
+      "ws-approved",
+      "RELEASED UPON"
+    ],
+    [
+      "fi-direct-cost",
+      "ws-cost-stage",
+      "RECORDED DURING"
+    ],
+    [
+      "fi-owner-invoice",
+      "ws-draft",
+      "ORIGINATES IN"
+    ],
+    [
+      "fi-owner-invoice",
+      "ws-submitted",
+      "SUBMITTED AT"
+    ],
+    [
+      "fi-owner-invoice",
+      "ws-under-review",
+      "HELD DURING"
+    ],
+    [
+      "fi-owner-invoice",
+      "ws-approved",
+      "CERTIFIED UPON"
+    ],
+    [
+      "fi-owner-invoice",
+      "ws-rejected",
+      "RETURNED TO"
+    ],
+    [
+      "fi-owner-invoice",
+      "ws-revenue-stage",
+      "BILLED DURING"
+    ],
+    [
+      "fi-owner-invoice",
+      "ws-due-date",
+      "BOUND BY"
+    ],
+    [
+      "fi-owner-invoice",
+      "ws-overdue",
+      "ESCALATES TO"
+    ],
+    [
+      "fi-sub-invoice",
+      "ws-submitted",
+      "SUBMITTED AT"
+    ],
+    [
+      "fi-sub-invoice",
+      "ws-under-review",
+      "HELD DURING"
+    ],
+    [
+      "fi-sub-invoice",
+      "ws-approved",
+      "CERTIFIED UPON"
+    ],
+    [
+      "fi-sub-invoice",
+      "ws-revise-resubmit",
+      "RETURNED TO"
+    ],
+    [
+      "fi-sub-invoice",
+      "ws-cost-stage",
+      "RECORDED DURING"
+    ],
+    [
+      "fi-sub-invoice",
+      "ws-ball-court",
+      "ASSIGNED VIA"
+    ],
+    [
+      "fi-retainage",
+      "ws-hold",
+      "HELD DURING"
+    ],
+    [
+      "fi-retainage",
+      "ws-approved",
+      "RELEASED UPON"
+    ],
+    [
+      "fi-retainage",
+      "ws-closed",
+      "RELEASED AT"
+    ],
+    [
+      "fi-payment",
+      "ws-approved",
+      "RELEASED UPON"
+    ],
+    [
+      "fi-payment",
+      "ws-due-date",
+      "BOUND BY"
+    ],
+    [
+      "fi-payment",
+      "ws-overdue",
+      "ESCALATES TO"
+    ],
+    [
+      "fi-lien-waiver",
+      "ws-pending",
+      "AWAITS"
+    ],
+    [
+      "fi-lien-waiver",
+      "ws-approved",
+      "CLEARED UPON"
+    ],
+    [
+      "fi-lien-waiver",
+      "ws-e-signature-req",
+      "CERTIFIES VIA"
+    ],
+    [
+      "fi-lien-waiver",
+      "ws-submit-approve",
+      "FOLLOWS"
+    ],
+    [
+      "fi-schedule-values",
+      "ws-approved",
+      "LOCKED UPON"
+    ],
+    [
+      "fi-schedule-values",
+      "ws-budget-stage",
+      "ESTABLISHED DURING"
+    ],
+    [
+      "fi-allowance",
+      "ws-approved",
+      "RELEASED UPON"
+    ],
+    [
+      "fi-allowance",
+      "ws-cost-stage",
+      "DRAWN DURING"
+    ],
+    [
+      "fi-contingency",
+      "ws-approved",
+      "RELEASED UPON"
+    ],
+    [
+      "fi-contingency",
+      "ws-appr-chain",
+      "ROUTES THROUGH"
+    ],
+    [
+      "fi-cost-forecast",
+      "ws-under-review",
+      "HELD DURING"
+    ],
+    [
+      "fi-cost-forecast",
+      "ws-approved",
+      "FINALIZED UPON"
+    ],
+    [
+      "fi-invoice-processi",
+      "ws-status-dwell",
+      "MEASURED BY"
+    ],
+    [
+      "fi-invoice-processi",
+      "ws-ball-court-aging",
+      "TRACKED BY"
+    ],
+    [
+      "fi-chg-order-rate",
+      "ws-average-appr",
+      "MEASURED BY"
+    ],
+    [
+      "fi-contingency-burn",
+      "ws-workflow-complet",
+      "TRACKED BY"
+    ],
+    [
+      "fi-budget-variance",
+      "ws-budget-stage",
+      "COMPUTED AT"
+    ],
+    [
+      "fi-cost-growth",
+      "ws-cost-stage",
+      "COMPUTED AT"
+    ],
+    [
+      "fi-committed-cost",
+      "ws-approved",
+      "REALIZED UPON"
+    ],
+    [
+      "fi-cost-perf-index",
+      "ws-revenue-stage",
+      "COMPUTED AT"
+    ],
+    [
+      "fi-estimate-at",
+      "ws-cost-stage",
+      "REFORECAST DURING"
+    ]
+  ],
+  "verbGlossary": {
+    "ORIGINATES IN": "{source}is first created in {target}, typically as an editable draft before any review begins.",
+    "REQUIRES": "{source} cannot proceed or take effect without reaching this approval status; a hard gate in {target}.",
+    "ROUTES THROUGH": "{source} passes through {target} pattern or approval chain as part of its lifecycle processing.",
+    "ADVANCES THROUGH": "{source} progresses through this financial {target} stage, moving from one lifecycle phase to the next.",
+    "ADVANCES TO": "{source} transitions forward into {target} as work or negotiation continues.",
+    "LOCKED UPON": "{source}'s values become read-only once {target} is reached, preventing further edits.",
+    "CODED DURING": "{source}s are assigned cost codes and WBS codes during {target} stage.",
+    "AWAITS": "{source} is queued and waiting for action at {target}; no progress until someone acts.",
+    "RETURNED TO": "{source} is sent back to {target} for revision after failing review or approval.",
+    "EXECUTED UPON": "{source} becomes a binding contractual commitment when {target} is reached.",
+    "VOIDED TO": "{source} is canceled and moved to void {target}, removing it from active financial tracking.",
+    "CERTIFIES VIA": "{source} obtains formal certification or authentication through {target}.",
+    "FOLLOWS": "{source} adheres to this standard {target} pattern from initiation through completion.",
+    "INITIATES AT": "{source}is first logged or opened at {target}, triggering downstream tracking.",
+    "FINALIZES AT": "{source} reaches its terminal {target}, completing all workflow actions and locking the record.",
+    "GOVERNED BY": "{source}'s lifecycle transitions are controlled by {target} stage definition.",
+    "MAPPED VIA": "{source}'s current position in the change management lifecycle is tracked through this mapped {target}.",
+    "PRICED DURING": "{source}s and pricing are applied to {target} during this financial workflow stage.",
+    "COMMITTED DURING": "{source}'s costs are formally committed to the project budget during this stage.",
+    "SUBMITTED AT": "{source} is formally submitted for review or payment at {target}.",
+    "BILLED DURING": "{source} generates revenue recognition or billing entries during {target} stage.",
+    "RECORDED DURING": "{source}'s cost transactions are posted to project financials during this stage.",
+    "HELD DURING": "{source} is paused or retained at {target} pending further review or conditions.",
+    "CERTIFIED UPON": "{source} or pay application is formally certified as accurate and payable at {target}.",
+    "BOUND BY": "{source} is constrained by {target} component, such as a contractual due date.",
+    "ESCALATES TO": "{source} automatically transitions to {target} when deadlines are missed.",
+    "ASSIGNED VIA": "{source} is routed to a responsible party through {target}.",
+    "RELEASED UPON": "Funds, retainage, or payments are disbursed when {target} is achieved.",
+    "CLEARED UPON": "{source}document is accepted and the financial hold is removed at {target}.",
+    "ESTABLISHED DURING": "{source} or baseline is set up and agreed upon during this budget stage.",
+    "DRAWN DURING": "{source}are drawn down and applied to actual costs during this stage.",
+    "FINALIZED UPON": "{source}forecast or projection is locked as the official estimate when this review {target} is reached.",
+    "MEASURED BY": "{source}is quantified using {target} performance measure.",
+    "TRACKED BY": "{source}is monitored over time using {target} KPI.",
+    "COMPUTED AT": "{source}measure is calculated at this specific {target} stage as costs or revenues are recognized.",
+    "REALIZED UPON": "{source}forecasted cost becomes an actual project cost when {target} is reached.",
+    "REFORECAST DURING": "{source}is recalculated and updated during this financial stage.",
+    "RELEASED AT": "{source}are disbursed when the project or instrument reaches this terminal {target}, such as project closeout.",
+    "ADVANCES UPON": "{source} moves forward to the next stage in its lifecycle when {target} is achieved."
+  }
+}

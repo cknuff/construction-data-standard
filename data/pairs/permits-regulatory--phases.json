@@ -1,0 +1,454 @@
+{
+  "source": "permits-regulatory",
+  "target": "phases",
+  "edges": [
+    [
+      "pr-zoning-appr",
+      "ph-program",
+      "REQUIRED BEFORE"
+    ],
+    [
+      "pr-zoning-appr",
+      "ph-design",
+      "CONSTRAINS"
+    ],
+    [
+      "pr-variance-special",
+      "ph-program",
+      "REQUIRED BEFORE"
+    ],
+    [
+      "pr-variance-special",
+      "ph-design",
+      "ENABLES"
+    ],
+    [
+      "pr-building-departm",
+      "ph-design",
+      "REVIEWS"
+    ],
+    [
+      "pr-building-departm",
+      "ph-permit",
+      "GATES"
+    ],
+    [
+      "pr-fire-marshal",
+      "ph-design",
+      "REVIEWS"
+    ],
+    [
+      "pr-fire-marshal",
+      "ph-fp-ri",
+      "GOVERNS"
+    ],
+    [
+      "pr-fire-marshal",
+      "ph-fa-dev",
+      "GOVERNS"
+    ],
+    [
+      "pr-health-departmen",
+      "ph-plumb-ri",
+      "GOVERNS"
+    ],
+    [
+      "pr-health-departmen",
+      "ph-permit",
+      "GATES"
+    ],
+    [
+      "pr-permit-applicati",
+      "ph-permit",
+      "INITIATED DURING"
+    ],
+    [
+      "pr-permit-applicati",
+      "ph-estimating",
+      "FOLLOWS"
+    ],
+    [
+      "pr-permit-status",
+      "ph-permit",
+      "TRACKED DURING"
+    ],
+    [
+      "pr-permit-cycle",
+      "ph-permit",
+      "MEASURES"
+    ],
+    [
+      "pr-building-permit",
+      "ph-permit",
+      "ISSUED DURING"
+    ],
+    [
+      "pr-building-permit",
+      "ph-site-setup",
+      "REQUIRED BEFORE"
+    ],
+    [
+      "pr-building-permit",
+      "ph-earthwork",
+      "ENABLES"
+    ],
+    [
+      "pr-building-permit",
+      "ph-foundations",
+      "ENABLES"
+    ],
+    [
+      "pr-demolition-permi",
+      "ph-demo",
+      "REQUIRED BEFORE"
+    ],
+    [
+      "pr-demolition-permi",
+      "ph-permit",
+      "ISSUED DURING"
+    ],
+    [
+      "pr-renovation-alter",
+      "ph-permit",
+      "ISSUED DURING"
+    ],
+    [
+      "pr-renovation-alter",
+      "ph-framing",
+      "ENABLES"
+    ],
+    [
+      "pr-temp-structures",
+      "ph-site-setup",
+      "REQUIRED BEFORE"
+    ],
+    [
+      "pr-temp-structures",
+      "ph-steel",
+      "ENABLES"
+    ],
+    [
+      "pr-trade-permit",
+      "ph-plumb-ri",
+      "REQUIRED BEFORE"
+    ],
+    [
+      "pr-trade-permit",
+      "ph-elec-ri",
+      "REQUIRED BEFORE"
+    ],
+    [
+      "pr-trade-permit",
+      "ph-hvac-dist",
+      "REQUIRED BEFORE"
+    ],
+    [
+      "pr-trade-permit",
+      "ph-fp-ri",
+      "REQUIRED BEFORE"
+    ],
+    [
+      "pr-enviro-permit",
+      "ph-earthwork",
+      "REQUIRED BEFORE"
+    ],
+    [
+      "pr-enviro-permit",
+      "ph-demo",
+      "CONSTRAINS"
+    ],
+    [
+      "pr-stormwater-permi",
+      "ph-site-setup",
+      "REQUIRED BEFORE"
+    ],
+    [
+      "pr-stormwater-permi",
+      "ph-earthwork",
+      "GOVERNS"
+    ],
+    [
+      "pr-street-right-way",
+      "ph-site-util",
+      "REQUIRED BEFORE"
+    ],
+    [
+      "pr-street-right-way",
+      "ph-site-setup",
+      "ENABLES"
+    ],
+    [
+      "pr-utility-connecti",
+      "ph-site-util",
+      "REQUIRED BEFORE"
+    ],
+    [
+      "pr-utility-connecti",
+      "ph-startup",
+      "ENABLES"
+    ],
+    [
+      "pr-osha-notificatio",
+      "ph-site-setup",
+      "REQUIRED BEFORE"
+    ],
+    [
+      "pr-osha-notificatio",
+      "ph-safety-orient",
+      "TRIGGERS"
+    ],
+    [
+      "pr-site-safety-plan",
+      "ph-safety-orient",
+      "REQUIRED BEFORE"
+    ],
+    [
+      "pr-site-safety-plan",
+      "ph-site-setup",
+      "GOVERNS"
+    ],
+    [
+      "pr-labor-comp",
+      "ph-bidding",
+      "CONSTRAINS"
+    ],
+    [
+      "pr-labor-comp",
+      "ph-contract-close",
+      "VERIFIED DURING"
+    ],
+    [
+      "pr-ahj-insp",
+      "ph-foundations",
+      "INSPECTED DURING"
+    ],
+    [
+      "pr-ahj-insp",
+      "ph-framing",
+      "INSPECTED DURING"
+    ],
+    [
+      "pr-ahj-insp",
+      "ph-elec-ri",
+      "INSPECTED DURING"
+    ],
+    [
+      "pr-ahj-insp",
+      "ph-plumb-ri",
+      "INSPECTED DURING"
+    ],
+    [
+      "pr-ahj-insp",
+      "ph-hvac-dist",
+      "INSPECTED DURING"
+    ],
+    [
+      "pr-ahj-insp",
+      "ph-drywall",
+      "REQUIRED BEFORE"
+    ],
+    [
+      "pr-ahj-insp",
+      "ph-final-insp",
+      "CLOSES OUT"
+    ],
+    [
+      "pr-special-insp",
+      "ph-foundations",
+      "INSPECTED DURING"
+    ],
+    [
+      "pr-special-insp",
+      "ph-steel",
+      "INSPECTED DURING"
+    ],
+    [
+      "pr-special-insp",
+      "ph-conc-frame",
+      "INSPECTED DURING"
+    ],
+    [
+      "pr-special-insp",
+      "ph-elev-conc",
+      "INSPECTED DURING"
+    ],
+    [
+      "pr-special-insp",
+      "ph-masonry",
+      "INSPECTED DURING"
+    ],
+    [
+      "pr-special-insp",
+      "ph-fp-ri",
+      "INSPECTED DURING"
+    ],
+    [
+      "pr-third-party",
+      "ph-tab",
+      "VALIDATES"
+    ],
+    [
+      "pr-third-party",
+      "ph-integrated",
+      "VALIDATES"
+    ],
+    [
+      "pr-third-party",
+      "ph-perf-ver",
+      "VALIDATES"
+    ],
+    [
+      "pr-third-party",
+      "ph-startup",
+      "VALIDATES"
+    ],
+    [
+      "pr-insp-scheduling",
+      "ph-foundations",
+      "COORDINATED WITH"
+    ],
+    [
+      "pr-insp-scheduling",
+      "ph-steel",
+      "COORDINATED WITH"
+    ],
+    [
+      "pr-insp-scheduling",
+      "ph-final-insp",
+      "COORDINATED WITH"
+    ],
+    [
+      "pr-insp-pass-rate",
+      "ph-final-insp",
+      "MEASURES"
+    ],
+    [
+      "pr-insp-pass-rate",
+      "ph-punch",
+      "MEASURES"
+    ],
+    [
+      "pr-reg-hold",
+      "ph-earthwork",
+      "DELAYS"
+    ],
+    [
+      "pr-reg-hold",
+      "ph-foundations",
+      "DELAYS"
+    ],
+    [
+      "pr-reg-hold",
+      "ph-steel",
+      "DELAYS"
+    ],
+    [
+      "pr-temp-cert",
+      "ph-punch",
+      "ENABLES"
+    ],
+    [
+      "pr-temp-cert",
+      "ph-training",
+      "ENABLES"
+    ],
+    [
+      "pr-temp-cert",
+      "ph-transition",
+      "APPROVED FOR"
+    ],
+    [
+      "pr-cert-occupancy",
+      "ph-final-insp",
+      "ISSUED AFTER"
+    ],
+    [
+      "pr-cert-occupancy",
+      "ph-contract-close",
+      "ENABLES"
+    ],
+    [
+      "pr-cert-occupancy",
+      "ph-transition",
+      "REQUIRED BEFORE"
+    ],
+    [
+      "pr-cert-completion",
+      "ph-contract-close",
+      "CLOSES OUT"
+    ],
+    [
+      "pr-cert-completion",
+      "ph-asbuilt",
+      "ISSUED AFTER"
+    ],
+    [
+      "pr-letter-comp",
+      "ph-warranty",
+      "ENABLES"
+    ],
+    [
+      "pr-letter-comp",
+      "ph-seasonal-cx",
+      "APPROVED FOR"
+    ],
+    [
+      "pr-open-permit",
+      "ph-contract-close",
+      "BLOCKS"
+    ],
+    [
+      "pr-open-permit",
+      "ph-punch",
+      "TRACKED DURING"
+    ],
+    [
+      "pr-comp-doc",
+      "ph-asbuilt",
+      "VERIFIED DURING"
+    ],
+    [
+      "pr-comp-doc",
+      "ph-contract-close",
+      "REQUIRED BEFORE"
+    ],
+    [
+      "pr-permit-renewal",
+      "ph-warranty",
+      "TRACKED DURING"
+    ],
+    [
+      "pr-fire-marshal",
+      "ph-final-insp",
+      "INSPECTED DURING"
+    ],
+    [
+      "pr-health-departmen",
+      "ph-plumb-fix",
+      "INSPECTED DURING"
+    ]
+  ],
+  "verbGlossary": {
+    "APPROVED FOR": "{source} approval authorizes {target} to proceed (e.g., temp CO approves partial occupancy during facility transition).",
+    "BLOCKS": "Unresolved permit or regulatory item prevents {target} from completing (e.g., open permits block contract closeout).",
+    "CLOSES OUT": "{source} action formally concludes {target} (e.g., certificate of completion closes out contract closeout).",
+    "CONSTRAINS": "{source} limits or shapes what can occur during {target} (e.g., zoning constrains design, environmental permit constrains demolition scope).",
+    "COORDINATED WITH": "Inspection scheduling must align with {target} timeline to avoid delays (e.g., inspection scheduling coordinated with foundation pours).",
+    "DELAYS": "{source} hold actively pauses or slows progress on {target} until the hold is resolved.",
+    "ENABLES": "{source} or approval unlocks {target} to begin or proceed (e.g., building permit enables earthwork).",
+    "FOLLOWS": "{source} permit activity occurs sequentially after {target} completes (e.g., permit application follows estimating).",
+    "GATES": "{source} review is a hard prerequisite that must pass before {target} can be entered (e.g., plan review gates permitting).",
+    "GOVERNS": "{source} has ongoing jurisdiction over work performed during {target} (e.g., fire marshal governs fire protection rough-in).",
+    "INITIATED DURING": "{source} permit process begins within the timeframe of {target} (e.g., permit application initiated during permitting).",
+    "INSPECTED DURING": "{source} inspector examines work in progress during {target}; must pass before concealment (e.g., AHJ inspects framing before drywall).",
+    "ISSUED AFTER": "{source} or permit is formally issued upon satisfactory completion of {target} (e.g., CO issued after final inspections).",
+    "ISSUED DURING": "{source} is formally granted within the timeframe of {target} (e.g., building permit issued during permitting).",
+    "MEASURES": "{source}quantifies the performance or duration of {target} (e.g., permit cycle time measures permitting, inspection pass rate measures final inspections).",
+    "REQUIRED BEFORE": "{source} or regulatory action must be obtained before {target} can legally begin (e.g., demolition permit required before demolition).",
+    "REVIEWS": "{source} evaluates plans or documents produced during {target} (e.g., building department reviews design development).",
+    "TRACKED DURING": "{source} status or metric is monitored throughout {target} (e.g., permit status tracked during permitting).",
+    "TRIGGERS": "{source} filing initiates a required activity within {target} (e.g., OSHA notification triggers safety orientation).",
+    "VALIDATES": "{source}testing or inspection confirms {target} work meets code and performance standards (e.g., third-party testing validates TAB).",
+    "VERIFIED DURING": "{source}documentation or labor requirements are checked against records during {target} (e.g., compliance docs verified during as-built documentation)."
+  }
+}

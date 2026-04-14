@@ -1,0 +1,204 @@
+{
+  "source": "financial-instruments",
+  "target": "locations",
+  "edges": [
+    [
+      "fi-project-budget",
+      "loc-project-site",
+      "FUNDS"
+    ],
+    [
+      "fi-project-budget",
+      "loc-building",
+      "ALLOCATES TO"
+    ],
+    [
+      "fi-budget-line-item",
+      "loc-floor-level",
+      "BREAKS DOWN TO"
+    ],
+    [
+      "fi-budget-line-item",
+      "loc-zone-wing",
+      "BREAKS DOWN TO"
+    ],
+    [
+      "fi-cost-code",
+      "loc-building",
+      "CATEGORIZES SPEND AT"
+    ],
+    [
+      "fi-cost-code",
+      "loc-floor-level",
+      "CATEGORIZES SPEND AT"
+    ],
+    [
+      "fi-wbs-code",
+      "loc-floor-level",
+      "MAPS COST TO"
+    ],
+    [
+      "fi-wbs-code",
+      "loc-building",
+      "MAPS COST TO"
+    ],
+    [
+      "fi-commit-subcontra",
+      "loc-project-site",
+      "SCOPES WORK AT"
+    ],
+    [
+      "fi-commit-subcontra",
+      "loc-building",
+      "SCOPES WORK AT"
+    ],
+    [
+      "fi-commit-purchase",
+      "loc-laydown-staging",
+      "DELIVERS MATERIAL TO"
+    ],
+    [
+      "fi-commit-line-item",
+      "loc-floor-level",
+      "PRICES WORK ON"
+    ],
+    [
+      "fi-commit-line-item",
+      "loc-zone-wing",
+      "PRICES WORK ON"
+    ],
+    [
+      "fi-chg-event-ce",
+      "loc-floor-level",
+      "ORIGINATES AT"
+    ],
+    [
+      "fi-chg-event-ce",
+      "loc-below-grade",
+      "ORIGINATES AT"
+    ],
+    [
+      "fi-chg-event-line",
+      "loc-floor-level",
+      "ADJUSTS COST FOR"
+    ],
+    [
+      "fi-commit-chg-order",
+      "loc-building",
+      "MODIFIES SCOPE AT"
+    ],
+    [
+      "fi-commit-chg-order",
+      "loc-floor-level",
+      "MODIFIES SCOPE AT"
+    ],
+    [
+      "fi-cco-line-item",
+      "loc-zone-wing",
+      "REPRICES WORK IN"
+    ],
+    [
+      "fi-owner-chg-order",
+      "loc-building",
+      "BILLS OWNER FOR CHANGE AT"
+    ],
+    [
+      "fi-budget-mod",
+      "loc-floor-level",
+      "TRANSFERS BUDGET TO"
+    ],
+    [
+      "fi-direct-cost",
+      "loc-project-site",
+      "INCURRED AT"
+    ],
+    [
+      "fi-direct-cost",
+      "loc-exterior-zone",
+      "INCURRED AT"
+    ],
+    [
+      "fi-direct-cost-line",
+      "loc-floor-level",
+      "CHARGES TO"
+    ],
+    [
+      "fi-sub-invoice",
+      "loc-building",
+      "BILLS WORK COMPLETED AT"
+    ],
+    [
+      "fi-owner-invoice",
+      "loc-building",
+      "DRAWS AGAINST WORK AT"
+    ],
+    [
+      "fi-schedule-values",
+      "loc-floor-level",
+      "ITEMIZES VALUE BY"
+    ],
+    [
+      "fi-allowance",
+      "loc-wet-area",
+      "RESERVES SPEND FOR"
+    ],
+    [
+      "fi-contingency",
+      "loc-below-grade",
+      "HEDGES RISK AT"
+    ],
+    [
+      "fi-cost-forecast",
+      "loc-building",
+      "PROJECTS FINAL COST FOR"
+    ],
+    [
+      "fi-cash-flow",
+      "loc-building",
+      "CURVES DISBURSEMENT ACROSS"
+    ],
+    [
+      "fi-budget-variance",
+      "loc-floor-level",
+      "SIGNALS OVERRUN ON"
+    ],
+    [
+      "fi-cost-growth",
+      "loc-building",
+      "TRACKS ESCALATION AT"
+    ],
+    [
+      "fi-contingency-burn",
+      "loc-below-grade",
+      "MONITORS DRAWDOWN AT"
+    ]
+  ],
+  "verbGlossary": {
+    "FUNDS": "{source} provides the overall financial authorization for all construction work at a project {target}",
+    "ALLOCATES TO": "{source} is partitioned and assigned to {target} or location within the project for cost control",
+    "BREAKS DOWN TO": "{source} subdivides a lump-sum budget into {target}-specific cost segments at the floor or zone level",
+    "CATEGORIZES SPEND AT": "{source} classifies expenditures by trade or division for work performed at {target} or floor",
+    "MAPS COST TO": "{source} creates a structured cost hierarchy that ties financial transactions to a physical {target} in the project",
+    "SCOPES WORK AT": "{source} commitment defines the contracted scope of work at {target} or building",
+    "DELIVERS MATERIAL TO": "{source}schedules material delivery to a laydown or {target} for subsequent installation",
+    "PRICES WORK ON": "{source} assigns {target} price or lump sum to work performed at a specific floor or zone",
+    "ORIGINATES AT": "{source} is triggered by a field condition discovered at {target} or below-grade level",
+    "ADJUSTS COST FOR": "{source} revises the estimated cost impact for work at {target} or location",
+    "MODIFIES SCOPE AT": "{source} formally changes the subcontractor's contracted scope at {target} or floor",
+    "REPRICES WORK IN": "{source} adjusts the committed {target} rate or lump sum for work in a specific zone or wing",
+    "BILLS OWNER FOR CHANGE AT": "{source}cost of a scope change at {target} location through to the owner",
+    "TRANSFERS BUDGET TO": "{source} moves dollars between cost codes or line items assigned to {target} to cover overruns",
+    "INCURRED AT": "{source} is recorded against {target} location or exterior zone where the expenditure occurred",
+    "CHARGES TO": "{source} posts an actual dollar amount to {target} where the labor, material, or equipment was consumed",
+    "BILLS WORK COMPLETED AT": "Subcontractor invoice requests payment for work completed at {target} during the billing period",
+    "DRAWS AGAINST WORK AT": "Owner invoice or pay application requests payment from the owner for work completed at {target} location",
+    "ITEMIZES VALUE BY": "{source} breaks the contract amount into {target}-based line items for progress billing at each floor",
+    "RESERVES SPEND FOR": "{source}sets aside a budgeted amount for undefined or owner-selected work in {target} such as a wet area",
+    "HEDGES RISK AT": "{source} fund covers unforeseen conditions at high-risk {target}s such as below-grade levels where unknowns are common",
+    "PROJECTS FINAL COST FOR": "{source} or estimate at completion predicts the total cost to finish all work at {target}",
+    "CURVES DISBURSEMENT ACROSS": "{source}projection distributes anticipated payments over time for work planned across {target} or location",
+    "SIGNALS OVERRUN ON": "{source} variance identifies {target}s or levels where actual or committed costs exceed the approved budget",
+    "TRACKS ESCALATION AT": "{source} measures the rate at which costs are increasing relative to original budget at {target}",
+    "MONITORS DRAWDOWN AT": "{source} burn rate tracks how fast the contingency reserve is being consumed at a high-risk {target}"
+  }
+}

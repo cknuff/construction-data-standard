@@ -1,0 +1,205 @@
+{
+  "source": "field-operations",
+  "target": "permits-regulatory",
+  "edges": [
+    [
+      "fo-daily-log-header",
+      "pr-building-permit",
+      "REFERENCES"
+    ],
+    [
+      "fo-daily-log-insp",
+      "pr-ahj-insp",
+      "DOCUMENTS"
+    ],
+    [
+      "fo-daily-log-insp",
+      "pr-special-insp",
+      "DOCUMENTS"
+    ],
+    [
+      "fo-daily-log-insp",
+      "pr-fire-marshal",
+      "DOCUMENTS"
+    ],
+    [
+      "fo-daily-log-insp",
+      "pr-insp-pass-rate",
+      "FEEDS"
+    ],
+    [
+      "fo-daily-log-note",
+      "pr-reg-hold",
+      "REPORTS"
+    ],
+    [
+      "fo-daily-log-note",
+      "pr-permit-status",
+      "REPORTS"
+    ],
+    [
+      "fo-safety-violation",
+      "pr-osha-notificatio",
+      "TRIGGERS"
+    ],
+    [
+      "fo-safety-violation",
+      "pr-site-safety-plan",
+      "VIOLATES"
+    ],
+    [
+      "fo-accident-log",
+      "pr-osha-notificatio",
+      "TRIGGERS"
+    ],
+    [
+      "fo-accident-log",
+      "pr-site-safety-plan",
+      "REFERENCES"
+    ],
+    [
+      "fo-visitor-log",
+      "pr-ahj-insp",
+      "LOGS ARRIVAL OF"
+    ],
+    [
+      "fo-visitor-log",
+      "pr-special-insp",
+      "LOGS ARRIVAL OF"
+    ],
+    [
+      "fo-waste-log-entry",
+      "pr-enviro-permit",
+      "SUBSTANTIATES"
+    ],
+    [
+      "fo-waste-log-entry",
+      "pr-stormwater-permi",
+      "SUBSTANTIATES"
+    ],
+    [
+      "fo-dumpster-log",
+      "pr-enviro-permit",
+      "SUBSTANTIATES"
+    ],
+    [
+      "fo-waste-diversion",
+      "pr-enviro-permit",
+      "MEASURES AGAINST"
+    ],
+    [
+      "fo-delay-log-entry",
+      "pr-reg-hold",
+      "RECORDS"
+    ],
+    [
+      "fo-delay-log-entry",
+      "pr-permit-cycle",
+      "RECORDS"
+    ],
+    [
+      "fo-delay-frequency",
+      "pr-reg-hold",
+      "CORRELATES WITH"
+    ],
+    [
+      "fo-weather-log",
+      "pr-stormwater-permi",
+      "EVIDENCES"
+    ],
+    [
+      "fo-weather-delay",
+      "pr-insp-scheduling",
+      "DISRUPTS"
+    ],
+    [
+      "fo-manpower-log",
+      "pr-labor-comp",
+      "SUBSTANTIATES"
+    ],
+    [
+      "fo-timecard-entry",
+      "pr-labor-comp",
+      "SUBSTANTIATES"
+    ],
+    [
+      "fo-employee-record",
+      "pr-labor-comp",
+      "CERTIFIES AGAINST"
+    ],
+    [
+      "fo-crew-crew",
+      "pr-trade-permit",
+      "MOBILIZES UNDER"
+    ],
+    [
+      "fo-equip-log-entry",
+      "pr-temp-structures",
+      "DEPLOYS UNDER"
+    ],
+    [
+      "fo-equip-master",
+      "pr-building-permit",
+      "REGISTERED UNDER"
+    ],
+    [
+      "fo-mat-receipt",
+      "pr-third-party",
+      "SAMPLED BY"
+    ],
+    [
+      "fo-mat-shipment",
+      "pr-building-departm",
+      "CONFORMS TO"
+    ],
+    [
+      "fo-dlvy-log-entry",
+      "pr-street-right-way",
+      "OPERATES UNDER"
+    ],
+    [
+      "fo-scheduled-work",
+      "pr-insp-scheduling",
+      "COORDINATES WITH"
+    ],
+    [
+      "fo-daily-report",
+      "pr-comp-doc",
+      "FEEDS"
+    ],
+    [
+      "fo-const-report",
+      "pr-cert-completion",
+      "EVIDENCES"
+    ],
+    [
+      "fo-plan-revision",
+      "pr-building-departm",
+      "RESUBMITTED TO"
+    ]
+  ],
+  "verbGlossary": {
+    "CERTIFIES AGAINST": "{source} provides worker credential or classification data checked against a regulatory compliance requirement (e.g., employee records certify against labor compliance for prevailing wage verification).",
+    "CONFORMS TO": "{source}-tracked material or shipment adheres to specifications validated through a regulatory plan review (e.g., material shipments conform to building department approved plans).",
+    "COORDINATES WITH": "{source} scheduling activity is aligned with {target} timeline to avoid work stoppages (e.g., scheduled work coordinates with inspection scheduling so trades are not covering work before inspector arrival).",
+    "CORRELATES WITH": "{source} metric is statistically associated with a regulatory measure, enabling root-cause analysis (e.g., delay frequency correlates with regulatory hold duration to quantify {target} impact on schedule).",
+    "DEPLOYS UNDER": "{source} equipment is mobilized on site under the authority of {target} that governs temporary installations (e.g., crane log entries deploy under a temporary structures permit).",
+    "DISRUPTS": "{source} condition causes a regulatory scheduling activity to be postponed or rescheduled (e.g., weather delays disrupt planned inspection scheduling windows).",
+    "DOCUMENTS": "{source} creates a contemporaneous record of {target} event occurring on site (e.g., daily log inspection entry documents an AHJ inspection visit and its outcome).",
+    "EVIDENCES": "{source} serves as supporting proof for a {target} or certification (e.g., weather logs evidence stormwater permit BMP activation, construction reports evidence certificate of completion readiness).",
+    "FEEDS": "{source} data flows into a regulatory metric or compliance document as source input (e.g., daily log inspection entries feed inspection pass rate calculations, daily reports feed compliance document completeness).",
+    "LOGS ARRIVAL OF": "{source} visitor tracking captures the on-site presence of a regulatory inspector for audit trail purposes (e.g., visitor log logs arrival of {target} inspector or special inspector).",
+    "MEASURES AGAINST": "{source} metric is evaluated relative to a regulatory {target} threshold or target (e.g., waste diversion rate measures against environmental permit recycling requirements).",
+    "MOBILIZES UNDER": "{source} crew deploys to perform work authorized by a specific trade or activity {target} (e.g., electrical crew mobilizes under a trade permit for rough-in work).",
+    "OPERATES UNDER": "{source} activity takes place within the constraints and conditions of a site-access {target} (e.g., delivery log entries operate under street/right-of-way permits that govern truck routing and staging).",
+    "RECORDS": "{source} captures the occurrence and duration of a regulatory-caused event (e.g., delay log entry records a regulatory hold stopping work on a specific day).",
+    "REFERENCES": "{source} cites or links to {target} or regulatory document for traceability (e.g., daily log header references the active building permit number, accident log references the site safety plan).",
+    "REGISTERED UNDER": "{source} equipment master data is associated with {target} that authorizes its presence on site (e.g., equipment master record registered under building permit for tower crane installation).",
+    "REPORTS": "{source} note narratively describes a regulatory condition or status observed in the field (e.g., daily log note reports {target} hold or regulatory status change encountered during the workday).",
+    "RESUBMITTED TO": "{source}-received plan revision is sent back to {target} for re-review and approval (e.g., plan revision receipt triggers resubmission to building department plan review).",
+    "SAMPLED BY": "{source}received on site are tested or sampled by a third-party inspector for {target} (e.g., concrete or steel material receipts sampled by third-party testing lab).",
+    "SUBSTANTIATES": "{source} provides documentary evidence that supports compliance with a regulatory {target} requirement (e.g., waste logs substantiate environmental permit disposal tracking, manpower logs substantiate labor compliance certified payroll).",
+    "TRIGGERS": "{source} event initiates a mandatory regulatory notification or filing (e.g., safety violation triggers an OSHA notification, accident log entry triggers OSHA reporting requirement).",
+    "VIOLATES": "{source}-documented condition represents a non-conformance against a regulatory safety plan (e.g., safety violation log entry violates the site safety plan requiring corrective action)."
+  }
+}

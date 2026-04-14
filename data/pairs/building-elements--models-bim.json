@@ -1,0 +1,283 @@
+{
+  "source": "building-elements",
+  "target": "models-bim",
+  "edges": [
+    [
+      "be-columns",
+      "bim-3d-building-info",
+      "MODELED IN"
+    ],
+    [
+      "be-beams",
+      "bim-3d-building-info",
+      "MODELED IN"
+    ],
+    [
+      "be-slabs",
+      "bim-3d-building-info",
+      "MODELED IN"
+    ],
+    [
+      "be-curtainwall",
+      "bim-3d-building-info",
+      "MODELED IN"
+    ],
+    [
+      "be-deep-fdn",
+      "bim-3d-building-info",
+      "MODELED IN"
+    ],
+    [
+      "be-ductwork",
+      "bim-federated-model",
+      "COORDINATED IN"
+    ],
+    [
+      "be-sprink-main",
+      "bim-federated-model",
+      "COORDINATED IN"
+    ],
+    [
+      "be-conduit",
+      "bim-federated-model",
+      "COORDINATED IN"
+    ],
+    [
+      "be-columns",
+      "bim-4d-model",
+      "SEQUENCED IN"
+    ],
+    [
+      "be-slabs",
+      "bim-4d-model",
+      "SEQUENCED IN"
+    ],
+    [
+      "be-curtainwall",
+      "bim-4d-model",
+      "SEQUENCED IN"
+    ],
+    [
+      "be-beams",
+      "bim-5d-model-cost",
+      "QUANTITY TAKEN OFF IN"
+    ],
+    [
+      "be-slabs",
+      "bim-5d-model-cost",
+      "QUANTITY TAKEN OFF IN"
+    ],
+    [
+      "be-drywall",
+      "bim-5d-model-cost",
+      "QUANTITY TAKEN OFF IN"
+    ],
+    [
+      "be-ductwork",
+      "bim-clash-detection",
+      "TESTED FOR CLASH BY"
+    ],
+    [
+      "be-sprink-main",
+      "bim-clash-detection",
+      "TESTED FOR CLASH BY"
+    ],
+    [
+      "be-conduit",
+      "bim-clash-detection",
+      "TESTED FOR CLASH BY"
+    ],
+    [
+      "be-beams",
+      "bim-clash-detection",
+      "TESTED FOR CLASH BY"
+    ],
+    [
+      "be-ductwork",
+      "bim-coord-issue",
+      "GENERATES"
+    ],
+    [
+      "be-sprink-main",
+      "bim-coord-issue",
+      "GENERATES"
+    ],
+    [
+      "be-conduit",
+      "bim-coord-issue",
+      "GENERATES"
+    ],
+    [
+      "be-ductwork",
+      "bim-bim-coord",
+      "RESOLVED IN"
+    ],
+    [
+      "be-sprink-main",
+      "bim-bim-coord",
+      "RESOLVED IN"
+    ],
+    [
+      "be-columns",
+      "bim-model-element",
+      "REPRESENTED BY"
+    ],
+    [
+      "be-ductwork",
+      "bim-model-element",
+      "REPRESENTED BY"
+    ],
+    [
+      "be-int-doors",
+      "bim-model-element",
+      "REPRESENTED BY"
+    ],
+    [
+      "be-connections",
+      "bim-level-developmen",
+      "DETAILED TO"
+    ],
+    [
+      "be-curtainwall",
+      "bim-level-developmen",
+      "DETAILED TO"
+    ],
+    [
+      "be-drywall",
+      "bim-quantity-takeoff",
+      "MEASURED BY"
+    ],
+    [
+      "be-paint",
+      "bim-quantity-takeoff",
+      "MEASURED BY"
+    ],
+    [
+      "be-roof-mem",
+      "bim-quantity-takeoff",
+      "MEASURED BY"
+    ],
+    [
+      "be-masonry-v",
+      "bim-quantity-takeoff",
+      "MEASURED BY"
+    ],
+    [
+      "be-ahu",
+      "bim-model-properties",
+      "PARAMETERIZED IN"
+    ],
+    [
+      "be-power-dist",
+      "bim-model-properties",
+      "PARAMETERIZED IN"
+    ],
+    [
+      "be-columns",
+      "bim-as-built-model",
+      "VERIFIED AGAINST"
+    ],
+    [
+      "be-ductwork",
+      "bim-as-built-model",
+      "VERIFIED AGAINST"
+    ],
+    [
+      "be-columns",
+      "bim-point-cloud",
+      "SCANNED BY"
+    ],
+    [
+      "be-slabs",
+      "bim-point-cloud",
+      "SCANNED BY"
+    ],
+    [
+      "be-roof-mem",
+      "bim-drone-capture",
+      "SURVEYED BY"
+    ],
+    [
+      "be-excav",
+      "bim-drone-capture",
+      "SURVEYED BY"
+    ],
+    [
+      "be-amb",
+      "bim-const-photo",
+      "DOCUMENTED BY"
+    ],
+    [
+      "be-bg-wp",
+      "bim-const-photo",
+      "DOCUMENTED BY"
+    ],
+    [
+      "be-sprink-head",
+      "bim-360-photo",
+      "CAPTURED BY"
+    ],
+    [
+      "be-act",
+      "bim-360-photo",
+      "CAPTURED BY"
+    ],
+    [
+      "be-connections",
+      "bim-model-based",
+      "DRAWN FROM"
+    ],
+    [
+      "be-panels",
+      "bim-model-based",
+      "DRAWN FROM"
+    ],
+    [
+      "be-bas",
+      "bim-digital-twin",
+      "MONITORED VIA"
+    ],
+    [
+      "be-hvac-ctrl",
+      "bim-digital-twin",
+      "MONITORED VIA"
+    ],
+    [
+      "be-connections",
+      "bim-3d-building-info",
+      "FABRICATED FROM"
+    ],
+    [
+      "be-panels",
+      "bim-3d-building-info",
+      "FABRICATED FROM"
+    ],
+    [
+      "be-curtainwall",
+      "bim-drawing-revision",
+      "DRIVES"
+    ]
+  ],
+  "verbGlossary": {
+    "MODELED IN": "{source} geometry and data authored inside a BIM {target}",
+    "COORDINATED IN": "{source} spatially coordinated across disciplines within {target}",
+    "SEQUENCED IN": "{source} linked to a construction schedule via a 4D simulation",
+    "QUANTITY TAKEN OFF IN": "{source} material quantities extracted from a cost-linked {target}",
+    "TESTED FOR CLASH BY": "{source} checked for spatial interference via automated {target}",
+    "GENERATES": "{source} routing or placement produces {target} requiring resolution",
+    "RESOLVED IN": "{source} conflict addressed during a BIM coordination meeting",
+    "REPRESENTED BY": "{source} mapped to a discrete {target} element with properties",
+    "DETAILED TO": "{source} {target}ed to a specific Level of Development for its project stage",
+    "MEASURED BY": "{source} area, length, or volume extracted through quantity takeoff",
+    "PARAMETERIZED IN": "{source} specs (capacity, load, rating) stored as {target} parameters",
+    "VERIFIED AGAINST": "{source} compared to the as-built {target} for accuracy",
+    "SCANNED BY": "{source} captured as point-cloud geometry via laser scanning",
+    "SURVEYED BY": "{source} or site condition captured via drone aerial imagery",
+    "DOCUMENTED BY": "{source} installation recorded with a construction photograph",
+    "CAPTURED BY": "{source} condition recorded within a 360-degree spherical photo",
+    "DRAWN FROM": "{source}generated directly from {target}",
+    "MONITORED VIA": "{source} operational data streamed to a digital twin for ongoing tracking",
+    "FABRICATED FROM": "{source} shop-fabricated using geometry and data exported from {target}",
+    "DRIVES": "{source} design changes cause drawing revisions in {target}"
+  }
+}

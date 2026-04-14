@@ -1,0 +1,514 @@
+{
+  "source": "locations",
+  "target": "schedule",
+  "edges": [
+    [
+      "sch-detail-activity",
+      "loc-project-site",
+      "LOCATED AT"
+    ],
+    [
+      "sch-detail-activity",
+      "loc-floor-level",
+      "ASSIGNED TO"
+    ],
+    [
+      "sch-detail-activity",
+      "loc-zone-wing",
+      "ZONED TO"
+    ],
+    [
+      "sch-detail-activity",
+      "loc-room-space",
+      "PERFORMED IN"
+    ],
+    [
+      "sch-detail-activity",
+      "loc-exterior-zone",
+      "PERFORMED IN"
+    ],
+    [
+      "sch-detail-activity",
+      "loc-below-grade",
+      "PERFORMED IN"
+    ],
+    [
+      "sch-detail-activity",
+      "loc-roof-level",
+      "PERFORMED IN"
+    ],
+    [
+      "sch-summary-activity",
+      "loc-building",
+      "AGGREGATES ACROSS"
+    ],
+    [
+      "sch-summary-activity",
+      "loc-floor-level",
+      "AGGREGATES ACROSS"
+    ],
+    [
+      "sch-milestone",
+      "loc-floor-level",
+      "GATES RELEASE OF"
+    ],
+    [
+      "sch-milestone",
+      "loc-building",
+      "GATES RELEASE OF"
+    ],
+    [
+      "sch-milestone",
+      "loc-cx-zone",
+      "GATES RELEASE OF"
+    ],
+    [
+      "sch-activity-codes",
+      "loc-floor-level",
+      "TAGS BY"
+    ],
+    [
+      "sch-activity-codes",
+      "loc-zone-wing",
+      "TAGS BY"
+    ],
+    [
+      "sch-activity-codes",
+      "loc-building",
+      "TAGS BY"
+    ],
+    [
+      "sch-relationship-typ",
+      "loc-floor-level",
+      "SEQUENCES ACROSS"
+    ],
+    [
+      "sch-relationship-typ",
+      "loc-zone-wing",
+      "SEQUENCES ACROSS"
+    ],
+    [
+      "sch-lag-lead-time",
+      "loc-floor-level",
+      "OFFSETS BETWEEN"
+    ],
+    [
+      "sch-lag-lead-time",
+      "loc-zone-wing",
+      "OFFSETS BETWEEN"
+    ],
+    [
+      "sch-schedule-constra",
+      "loc-right-way",
+      "CONSTRAINED BY ACCESS TO"
+    ],
+    [
+      "sch-schedule-constra",
+      "loc-laydown-staging",
+      "CONSTRAINED BY ACCESS TO"
+    ],
+    [
+      "sch-calculated-dates",
+      "loc-floor-level",
+      "FORECASTS COMPLETION OF"
+    ],
+    [
+      "sch-calculated-dates",
+      "loc-zone-wing",
+      "FORECASTS COMPLETION OF"
+    ],
+    [
+      "sch-critical-path",
+      "loc-floor-level",
+      "THREADS THROUGH"
+    ],
+    [
+      "sch-critical-path",
+      "loc-core-shaft",
+      "THREADS THROUGH"
+    ],
+    [
+      "sch-critical-path",
+      "loc-building",
+      "THREADS THROUGH"
+    ],
+    [
+      "sch-float-slack",
+      "loc-zone-wing",
+      "BUFFERS WORK IN"
+    ],
+    [
+      "sch-float-slack",
+      "loc-floor-level",
+      "BUFFERS WORK IN"
+    ],
+    [
+      "sch-look-ahead",
+      "loc-floor-level",
+      "PLANS WORK ON"
+    ],
+    [
+      "sch-look-ahead",
+      "loc-zone-wing",
+      "PLANS WORK ON"
+    ],
+    [
+      "sch-look-ahead",
+      "loc-room-space",
+      "PLANS WORK ON"
+    ],
+    [
+      "sch-schedule-update",
+      "loc-floor-level",
+      "REPORTS PROGRESS ON"
+    ],
+    [
+      "sch-baseline-schedul",
+      "loc-building",
+      "BASELINES SEQUENCE OF"
+    ],
+    [
+      "sch-baseline-dates",
+      "loc-floor-level",
+      "BASELINES DATES FOR"
+    ],
+    [
+      "sch-recovery-schedul",
+      "loc-floor-level",
+      "RESEQUENCES WORK ON"
+    ],
+    [
+      "sch-recovery-schedul",
+      "loc-zone-wing",
+      "RESEQUENCES WORK ON"
+    ],
+    [
+      "sch-as-built",
+      "loc-floor-level",
+      "RECORDS ACTUAL DATES FOR"
+    ],
+    [
+      "sch-as-built",
+      "loc-building",
+      "RECORDS ACTUAL DATES FOR"
+    ],
+    [
+      "sch-labor-loading",
+      "loc-floor-level",
+      "MOBILIZED TO"
+    ],
+    [
+      "sch-labor-loading",
+      "loc-zone-wing",
+      "MOBILIZED TO"
+    ],
+    [
+      "sch-equip-loading",
+      "loc-laydown-staging",
+      "STAGED AT"
+    ],
+    [
+      "sch-equip-loading",
+      "loc-project-site",
+      "MOBILIZED TO"
+    ],
+    [
+      "sch-resource-levelin",
+      "loc-floor-level",
+      "LEVELS ACROSS"
+    ],
+    [
+      "sch-resource-levelin",
+      "loc-zone-wing",
+      "LEVELS ACROSS"
+    ],
+    [
+      "sch-cost-loading",
+      "loc-floor-level",
+      "ALLOCATES COST TO"
+    ],
+    [
+      "sch-cost-loading",
+      "loc-building",
+      "ALLOCATES COST TO"
+    ],
+    [
+      "sch-delay-class",
+      "loc-project-site",
+      "LOCATES DELAY AT"
+    ],
+    [
+      "sch-delay-class",
+      "loc-floor-level",
+      "LOCATES DELAY AT"
+    ],
+    [
+      "sch-time-impact",
+      "loc-floor-level",
+      "ANALYZES IMPACT ON"
+    ],
+    [
+      "sch-acceleration",
+      "loc-floor-level",
+      "ACCELERATES WORK ON"
+    ],
+    [
+      "sch-acceleration",
+      "loc-zone-wing",
+      "ACCELERATES WORK ON"
+    ],
+    [
+      "sch-takt-time",
+      "loc-floor-level",
+      "PACES THROUGH"
+    ],
+    [
+      "sch-takt-time",
+      "loc-zone-wing",
+      "PACES THROUGH"
+    ],
+    [
+      "sch-takt-time",
+      "loc-building",
+      "FLOWS THROUGH"
+    ],
+    [
+      "sch-linear-schedulin",
+      "loc-floor-level",
+      "PROGRESSES THROUGH"
+    ],
+    [
+      "sch-linear-schedulin",
+      "loc-building",
+      "PROGRESSES THROUGH"
+    ],
+    [
+      "sch-linear-schedulin",
+      "loc-right-way",
+      "PROGRESSES ALONG"
+    ],
+    [
+      "sch-last-planner",
+      "loc-zone-wing",
+      "COMMITS WORK IN"
+    ],
+    [
+      "sch-last-planner",
+      "loc-floor-level",
+      "COMMITS WORK IN"
+    ],
+    [
+      "sch-4d-5d-bim",
+      "loc-floor-level",
+      "SIMULATES SEQUENCE OF"
+    ],
+    [
+      "sch-4d-5d-bim",
+      "loc-building",
+      "SIMULATES SEQUENCE OF"
+    ],
+    [
+      "sch-4d-5d-bim",
+      "loc-grid-line",
+      "ANIMATES ERECTION AT"
+    ],
+    [
+      "sch-schedule-field",
+      "loc-floor-level",
+      "LINKS FIELD WORK AT"
+    ],
+    [
+      "sch-schedule-field",
+      "loc-zone-wing",
+      "LINKS FIELD WORK AT"
+    ],
+    [
+      "sch-data-date",
+      "loc-floor-level",
+      "STATUSES WORK ON"
+    ],
+    [
+      "sch-earned-schedule",
+      "loc-floor-level",
+      "MEASURES PROGRESS ON"
+    ],
+    [
+      "sch-earned-schedule",
+      "loc-building",
+      "MEASURES PROGRESS ON"
+    ],
+    [
+      "sch-path-analysis",
+      "loc-floor-level",
+      "TRACES PATH THROUGH"
+    ],
+    [
+      "sch-path-analysis",
+      "loc-core-shaft",
+      "TRACES PATH THROUGH"
+    ],
+    [
+      "loc-work-zone-phase",
+      "sch-detail-activity",
+      "DEFINES BOUNDARY FOR"
+    ],
+    [
+      "loc-work-zone-phase",
+      "sch-takt-time",
+      "DEFINES ZONE FOR"
+    ],
+    [
+      "loc-work-zone-phase",
+      "sch-last-planner",
+      "DEFINES ZONE FOR"
+    ],
+    [
+      "loc-floor-completion",
+      "sch-milestone",
+      "TRIGGERS"
+    ],
+    [
+      "loc-floor-completion",
+      "sch-earned-schedule",
+      "FEEDS"
+    ],
+    [
+      "loc-floor-completion",
+      "sch-percent-plan",
+      "VALIDATES"
+    ],
+    [
+      "loc-location-coverag",
+      "sch-schedule-health",
+      "CORRELATES WITH"
+    ],
+    [
+      "loc-location-depth",
+      "sch-activity-codes",
+      "ALIGNED WITH"
+    ],
+    [
+      "sch-dcma-14-point",
+      "loc-building",
+      "ASSESSES SCHEDULE FOR"
+    ],
+    [
+      "sch-schedule-health",
+      "loc-floor-level",
+      "SCORED BY"
+    ],
+    [
+      "sch-float-erosion",
+      "loc-floor-level",
+      "MONITORED ON"
+    ],
+    [
+      "sch-milestone-adhere",
+      "loc-building",
+      "MEASURED ACROSS"
+    ],
+    [
+      "sch-percent-plan",
+      "loc-zone-wing",
+      "MEASURED IN"
+    ],
+    [
+      "sch-out-sequence",
+      "loc-floor-level",
+      "DETECTED ON"
+    ],
+    [
+      "sch-specification-co",
+      "loc-building",
+      "VALIDATED FOR"
+    ],
+    [
+      "sch-duration-progres",
+      "loc-floor-level",
+      "TRACKED ON"
+    ],
+    [
+      "sch-duration-progres",
+      "loc-zone-wing",
+      "TRACKED ON"
+    ],
+    [
+      "loc-fire-smoke",
+      "sch-milestone",
+      "REQUIRES CLEARANCE FROM"
+    ],
+    [
+      "loc-cx-zone",
+      "sch-milestone",
+      "REQUIRES TURNOVER OF"
+    ],
+    [
+      "loc-laydown-staging",
+      "sch-equip-loading",
+      "CONSTRAINS STAGING FOR"
+    ],
+    [
+      "loc-temp-facility",
+      "sch-detail-activity",
+      "SUPPORTS"
+    ]
+  ],
+  "verbGlossary": {
+    "LOCATED AT": "{source} is geographically situated at a project-level location where the work takes place",
+    "ASSIGNED TO": "{source}is tagged to a specific floor or level in {target} breakdown structure for tracking and sequencing",
+    "ZONED TO": "{target} is allocated to a specific zone or wing within a floor, enabling zone-based scheduling and crew flow",
+    "PERFORMED IN": "Physical work described by {target} occurs inside a specific space, area, or level",
+    "AGGREGATES ACROSS": "Summary {target} or WBS element rolls up detail activities spanning multiple locations into a single line",
+    "GATES RELEASE OF": "{source}must be achieved before {target} is released for the next wave of work or occupancy",
+    "TAGS BY": "Activity code values encode {target} assignment (floor, zone, building) on each schedule activity for filtering",
+    "SEQUENCES ACROSS": "{source}define the floor-to-floor or zone-to-zone execution order of activities in location-based scheduling",
+    "OFFSETS BETWEEN": "{source}creates a mandatory time gap between the same {target} performed in successive locations (e.g., cure time between floors)",
+    "CONSTRAINED BY ACCESS TO": "{target} start is restricted until a site location such as a right-of-way or laydown area becomes accessible",
+    "FORECASTS COMPLETION OF": "Calculated early/late dates project when work at a specific location will be finished based on current logic",
+    "THREADS THROUGH": "{target} runs through activities at specific locations, making those locations schedule-critical",
+    "BUFFERS WORK IN": "Float available on activities at {target} provides time buffer before delays at that location affect the project end date",
+    "PLANS WORK ON": "Look-ahead {target} details the near-term activities planned for a specific floor, zone, or room",
+    "REPORTS PROGRESS ON": "{source} captures percent complete and remaining duration for activities at a specific location",
+    "BASELINES SEQUENCE OF": "{target} locks the planned order in which locations (buildings, floors) will be constructed",
+    "BASELINES DATES FOR": "{source}approved start and finish targets for work at a specific floor or level",
+    "RESEQUENCES WORK ON": "Recovery {target} changes the order or overlap of work at specific locations to regain lost time",
+    "RECORDS ACTUAL DATES FOR": "{source}schedule captures the true start and finish dates of work completed at each {target}",
+    "MOBILIZED TO": "{source}is moved to a specific floor or zone to begin {target}d work at that location",
+    "STAGED AT": "{source}is pre-positioned at a laydown or staging area before deployment to the active work location",
+    "LEVELS ACROSS": "{source}leveling adjusts {target} timing so that crews and equipment are balanced across locations without overloading any single area",
+    "ALLOCATES COST TO": "Cost loading distributes budgeted dollars to activities at specific locations for location-based cash flow forecasting",
+    "LOCATES DELAY AT": "{source}identifies which physical location experienced the delay event for claims documentation",
+    "ANALYZES IMPACT ON": "{source}evaluates how a delay at a specific location ripples through the overall {target}",
+    "ACCELERATES WORK ON": "{source}plan adds overtime, crews, or shifts to compress {target} at a specific floor or zone",
+    "PACES THROUGH": "{source}planning sets a fixed production cadence for crews flowing through successive zones or floors in a repeating cycle",
+    "FLOWS THROUGH": "Work flows continuously through a building as takt-time crews cycle from zone to zone and floor to floor",
+    "PROGRESSES THROUGH": "{source}maps activity progress along {target} axis (floor-by-floor or station-by-station) on a time-distance diagram",
+    "PROGRESSES ALONG": "Linear scheduling sequences work along a horizontal location path such as a pipeline, roadway, or right-of-way",
+    "COMMITS WORK IN": "{source}Planner weekly work plan assigns crew commitments to specific zones or floors for the upcoming period",
+    "SIMULATES SEQUENCE OF": "4D BIM model animates the construction sequence at each {target} to visualize spatial and temporal conflicts",
+    "ANIMATES ERECTION AT": "4D simulation shows structural erection progressing at grid-line intersections to verify crane reach and sequencing",
+    "LINKS FIELD WORK AT": "{source}-to-field linkage connects planned activities to daily logs and progress recorded at a specific location",
+    "STATUSES WORK ON": "Data date marks the point through which progress at a specific location has been recorded in {target}",
+    "MEASURES PROGRESS ON": "{source}schedule analysis computes time-based performance metrics for work completed at {target}",
+    "TRACES PATH THROUGH": "{source}identifies the longest or near-{target} running through activities at specific locations",
+    "DEFINES BOUNDARY FOR": "{source} area establishes the physical limits within which {target}d activity is permitted to operate",
+    "DEFINES ZONE FOR": "{source}creates the repeating spatial unit used in takt-time or Last Planner zone-based planning",
+    "TRIGGERS": "{source}of all activities at {target} triggers an associated milestone or metric update in the schedule",
+    "FEEDS": "{source}-based completion rate provides actual progress data into {target} performance calculations",
+    "VALIDATES": "{source} coverage or completion metric cross-checks {target}'s reported percent plan complete",
+    "CORRELATES WITH": "{source} coverage rate statistically moves in tandem with overall {target} health scoring",
+    "ALIGNED WITH": "{source} depth matches the activity code structure used to tag activities by location in {target}",
+    "ASSESSES SCHEDULE FOR": "{source}check evaluates {target} quality for activities assigned to a specific building or location set",
+    "SCORED BY": "{source} health score is computed for activities assigned to a specific location to identify problem areas",
+    "MONITORED ON": "{target} erosion rate is tracked at the floor level to detect where schedule buffer is being consumed fastest",
+    "MEASURED ACROSS": "{source}rate is evaluated across all locations within a building to assess overall {target} reliability",
+    "MEASURED IN": "{source} performance metric is calculated for activities within a specific zone to measure zone-level execution",
+    "DETECTED ON": "{source}is identified at a specific floor where activities are executing ahead of or behind their planned logic",
+    "VALIDATED FOR": "{source} specification compliance is checked for activities assigned to a specific building or location grouping",
+    "TRACKED ON": "{source}is captured at the floor or zone level for location-specific status reporting",
+    "REQUIRES CLEARANCE FROM": "Fire/smoke compartment boundaries require {target}s for firestopping inspection before adjacent work proceeds",
+    "REQUIRES TURNOVER OF": "{source}must reach a turnover milestone in {target} before functional testing can begin in that zone",
+    "CONSTRAINS STAGING FOR": "{source}area capacity limits the volume of equipment and material that can be staged, constraining {target} loading",
+    "SUPPORTS": "Temporary facility (trailer, temp power, temp water) must be operational to support {target}d activities at the site"
+  }
+}

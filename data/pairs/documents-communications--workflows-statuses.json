@@ -1,0 +1,333 @@
+{
+  "source": "documents-communications",
+  "target": "workflows-statuses",
+  "edges": [
+    [
+      "doc-req-info-rfi",
+      "ws-open",
+      "INITIATES"
+    ],
+    [
+      "doc-req-info-rfi",
+      "ws-ball-court",
+      "ASSIGNS"
+    ],
+    [
+      "doc-req-info-rfi",
+      "ws-review-respond",
+      "FOLLOWS"
+    ],
+    [
+      "doc-rfi-response",
+      "ws-closed",
+      "RESOLVES"
+    ],
+    [
+      "doc-rfi-response",
+      "ws-workflow-respons",
+      "RECORDS"
+    ],
+    [
+      "doc-submittal",
+      "ws-submitted",
+      "ADVANCES TO"
+    ],
+    [
+      "doc-submittal",
+      "ws-sequential-appr",
+      "FOLLOWS"
+    ],
+    [
+      "doc-submittal",
+      "ws-appr-chain",
+      "ROUTES THROUGH"
+    ],
+    [
+      "doc-submittal-respon",
+      "ws-approved",
+      "APPROVES TO"
+    ],
+    [
+      "doc-submittal-respon",
+      "ws-rejected",
+      "REJECTS TO"
+    ],
+    [
+      "doc-submittal-respon",
+      "ws-revise-resubmit",
+      "RETURNS TO"
+    ],
+    [
+      "doc-shop-drawing",
+      "ws-submit-approve",
+      "FOLLOWS"
+    ],
+    [
+      "doc-product-data",
+      "ws-under-review",
+      "ADVANCES TO"
+    ],
+    [
+      "doc-drawing-set",
+      "ws-dist-list",
+      "DISTRIBUTES VIA"
+    ],
+    [
+      "doc-drawing-set",
+      "ws-draft",
+      "ORIGINATES IN"
+    ],
+    [
+      "doc-drawing-revision",
+      "ws-approved",
+      "FINALIZES AT"
+    ],
+    [
+      "doc-specification-se",
+      "ws-void",
+      "VOIDS AT"
+    ],
+    [
+      "doc-addendum",
+      "ws-dist-list",
+      "DISTRIBUTES VIA"
+    ],
+    [
+      "doc-bulletin-archite",
+      "ws-approved",
+      "REQUIRES"
+    ],
+    [
+      "doc-chg-directive",
+      "ws-chg-event",
+      "INITIATES"
+    ],
+    [
+      "doc-chg-directive",
+      "ws-cost-stage",
+      "ADVANCES TO"
+    ],
+    [
+      "doc-notice-delay",
+      "ws-hold",
+      "TRIGGERS"
+    ],
+    [
+      "doc-correspondence",
+      "ws-ball-court",
+      "ASSIGNS"
+    ],
+    [
+      "doc-transmittal",
+      "ws-dist-list",
+      "DISTRIBUTES VIA"
+    ],
+    [
+      "doc-daily-report",
+      "ws-create-close",
+      "FOLLOWS"
+    ],
+    [
+      "doc-daily-log-note",
+      "ws-progress",
+      "DOCUMENTS"
+    ],
+    [
+      "doc-site-instruction",
+      "ws-ball-court",
+      "ASSIGNS"
+    ],
+    [
+      "doc-plan-revision",
+      "ws-dist-list",
+      "DISTRIBUTES VIA"
+    ],
+    [
+      "doc-action-plan",
+      "ws-open",
+      "INITIATES"
+    ],
+    [
+      "doc-action-plan-line",
+      "ws-workflow-step",
+      "MAPS TO"
+    ],
+    [
+      "doc-project-task",
+      "ws-due-date",
+      "ESTABLISHES"
+    ],
+    [
+      "doc-project-task",
+      "ws-delegation",
+      "ROUTES VIA"
+    ],
+    [
+      "doc-permit-applicati",
+      "ws-submitted",
+      "ADVANCES TO"
+    ],
+    [
+      "doc-cert-insurance",
+      "ws-pending",
+      "AWAITS AT"
+    ],
+    [
+      "doc-cert-insurance",
+      "ws-overdue",
+      "TRIGGERS"
+    ],
+    [
+      "doc-lien-waiver",
+      "ws-e-signature-req",
+      "REQUIRES"
+    ],
+    [
+      "doc-lien-waiver",
+      "ws-e-signature-ball",
+      "ROUTES THROUGH"
+    ],
+    [
+      "doc-safety-plan-site",
+      "ws-approved",
+      "APPROVES TO"
+    ],
+    [
+      "doc-swppp-enviro",
+      "ws-conforming",
+      "DISPOSITIONS TO"
+    ],
+    [
+      "doc-punch-list-as",
+      "ws-ready-review",
+      "ADVANCES TO"
+    ],
+    [
+      "doc-punch-list-as",
+      "ws-closed",
+      "CLOSES AT"
+    ],
+    [
+      "doc-as-built-docs",
+      "ws-approved",
+      "FINALIZES AT"
+    ],
+    [
+      "doc-warranty-docs",
+      "ws-pending",
+      "AWAITS AT"
+    ],
+    [
+      "doc-form-proforma",
+      "ws-e-signature-req",
+      "REQUIRES"
+    ],
+    [
+      "doc-meeting-minutes",
+      "ws-ball-court",
+      "ASSIGNS"
+    ],
+    [
+      "doc-photo",
+      "ws-deficient",
+      "DOCUMENTS"
+    ],
+    [
+      "doc-video",
+      "ws-progress",
+      "DOCUMENTS"
+    ],
+    [
+      "doc-req-proposal-rfp",
+      "ws-parallel-review",
+      "FOLLOWS"
+    ],
+    [
+      "doc-req-proposal-rfp",
+      "ws-due-date",
+      "ESTABLISHES"
+    ],
+    [
+      "doc-phone-call-log",
+      "ws-workflow-respons",
+      "RECORDS"
+    ],
+    [
+      "doc-daily-log",
+      "ws-create-close",
+      "FOLLOWS"
+    ],
+    [
+      "doc-rfi-response-2",
+      "ws-response-time",
+      "MEASURES BY"
+    ],
+    [
+      "doc-submittal-cycle",
+      "ws-average-appr",
+      "MEASURES BY"
+    ],
+    [
+      "doc-submittal-reject",
+      "ws-first-pass-appr",
+      "MEASURES BY"
+    ],
+    [
+      "doc-drawing-revision-2",
+      "ws-status-dwell",
+      "MEASURES BY"
+    ],
+    [
+      "doc-daily-log-2",
+      "ws-workflow-complet",
+      "MEASURES BY"
+    ],
+    [
+      "doc-correspondence-r",
+      "ws-ball-court-aging",
+      "MEASURES BY"
+    ],
+    [
+      "doc-rfi-volume",
+      "ws-escalation-rate",
+      "CORRELATES WITH"
+    ],
+    [
+      "doc-submittal-reject",
+      "ws-resubmission-rat",
+      "CORRELATES WITH"
+    ],
+    [
+      "doc-correspondence-r",
+      "ws-overdue-rate",
+      "CORRELATES WITH"
+    ]
+  ],
+  "verbGlossary": {
+    "INITIATES": "{source} creation opens a new {target} or lifecycle instance",
+    "ASSIGNS": "{source} designates a responsible party vi{target} or delegation",
+    "ESTABLISHES": "{source} sets a deadline, due date, or time constraint on {target}",
+    "FOLLOWS": "{source} moves through a defined {target} pattern from start to finish",
+    "TRIGGERS": "{source} event causes {target} status change such as overdue or hold",
+    "RESOLVES": "{source} response satisfies the open item and advances it to closed",
+    "RECORDS": "{source} captures {target} response or decision for the project record",
+    "ADVANCES TO": "{source} progresses forward to the next {target} in its lifecycle",
+    "ROUTES THROUGH": "{source} passes through {target} chain or signature sequence",
+    "APPROVES TO": "Review document grants {target} and moves item to an approved status",
+    "REJECTS TO": "Review document denies {target} and moves item to a rejected status",
+    "RETURNS TO": "Review document sends item back for revision and resubmission",
+    "DISTRIBUTES VIA": "{source} is issued to recipients through a distribution list or transmittal",
+    "ORIGINATES IN": "{source} begins its lifecycle in a preliminary or draft {target}",
+    "FINALIZES AT": "{source} reaches its terminal approved state after completing all review steps",
+    "REQUIRES": "{source} mandates a specific {target} action such as signature or approval before proceeding",
+    "CLOSES AT": "{source} reaches its completed and closed status in {target}",
+    "DOCUMENTS": "{source} provides visual or written evidence of a field disposition or {target}",
+    "MAPS TO": "{source} template or line item corresponds to a specific {target}",
+    "MEASURES BY": "{source}measure quantifies {target} metric or performance indicator",
+    "CORRELATES WITH": "{source}measure trends in relation to {target} performance metric",
+    "AWAITS AT": "{source} is parked in {target} waiting for an external action or condition",
+    "DISPOSITIONS TO": "{source} receives a field inspection {target} of conforming or deficient",
+    "VOIDS AT": "{source} is formally cancelled and assigned a void {target}",
+    "ROUTES VIA": "{source} is forwarded through a delegation {target} to the assigned party"
+  }
+}

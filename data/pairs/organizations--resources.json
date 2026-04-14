@@ -1,0 +1,362 @@
+{
+  "source": "organizations",
+  "target": "resources",
+  "edges": [
+    [
+      "org-gen-contr-gc",
+      "res-laborer",
+      "EMPLOYS"
+    ],
+    [
+      "org-gen-contr-gc",
+      "res-carpenter",
+      "STAFFS"
+    ],
+    [
+      "org-gen-contr-gc",
+      "res-crane",
+      "MOBILIZES"
+    ],
+    [
+      "org-gen-contr-gc",
+      "res-earthmover",
+      "PROVISIONS"
+    ],
+    [
+      "org-gen-contr-gc",
+      "res-safety",
+      "RETAINS"
+    ],
+    [
+      "org-self-performing",
+      "res-concrete",
+      "FIELDS"
+    ],
+    [
+      "org-self-performing",
+      "res-ironworker",
+      "CREWS"
+    ],
+    [
+      "org-self-performing",
+      "res-laborer",
+      "DISPATCHES"
+    ],
+    [
+      "org-sub-trade",
+      "res-electrician",
+      "FURNISHES"
+    ],
+    [
+      "org-sub-trade",
+      "res-plumber",
+      "FURNISHES"
+    ],
+    [
+      "org-sub-trade",
+      "res-sheetmetal",
+      "SUPPLIES"
+    ],
+    [
+      "org-sub-trade",
+      "res-sprinkler",
+      "MANS"
+    ],
+    [
+      "org-sub-trade",
+      "res-elevator",
+      "MANS"
+    ],
+    [
+      "org-sub-trade",
+      "res-drywall",
+      "PROVIDES"
+    ],
+    [
+      "org-sub-trade",
+      "res-painter",
+      "DEPLOYS"
+    ],
+    [
+      "org-sub-trade",
+      "res-mason",
+      "COMMITS"
+    ],
+    [
+      "org-sub-trade",
+      "res-roofer",
+      "ALLOCATES"
+    ],
+    [
+      "org-sub-trade",
+      "res-floor",
+      "ENGAGES"
+    ],
+    [
+      "org-sub-trade",
+      "res-ceiling",
+      "ASSIGNS"
+    ],
+    [
+      "org-sub-trade",
+      "res-glazier",
+      "SENDS"
+    ],
+    [
+      "org-sub-trade",
+      "res-insulator",
+      "DELIVERS"
+    ],
+    [
+      "org-sub-trade",
+      "res-fireproofer",
+      "INSTALLS_VIA"
+    ],
+    [
+      "org-sub-trade",
+      "res-lowvolt",
+      "SUBLETS"
+    ],
+    [
+      "org-equip-rental",
+      "res-crane",
+      "LEASES"
+    ],
+    [
+      "org-equip-rental",
+      "res-earthmover",
+      "RENTS"
+    ],
+    [
+      "org-equip-rental",
+      "res-access",
+      "RENTS_OUT"
+    ],
+    [
+      "org-equip-rental",
+      "res-compaction",
+      "HIRES_OUT"
+    ],
+    [
+      "org-equip-rental",
+      "res-piling",
+      "SUPPLIES_ON_HIRE"
+    ],
+    [
+      "org-equip-rental",
+      "res-hauling",
+      "FURNISHES_ON_CALL"
+    ],
+    [
+      "org-equip-rental",
+      "res-mat-handle",
+      "DISPATCHES_TO_SITE"
+    ],
+    [
+      "org-equip-rental",
+      "res-welding",
+      "ISSUES"
+    ],
+    [
+      "org-equip-rental",
+      "res-conc-equip",
+      "PLACES"
+    ],
+    [
+      "org-mat-supplier",
+      "mat-concrete",
+      "BATCHES"
+    ],
+    [
+      "org-mat-supplier",
+      "mat-lumber",
+      "DISTRIBUTES"
+    ],
+    [
+      "org-mat-supplier",
+      "mat-rebar",
+      "STOCKS"
+    ],
+    [
+      "org-mat-supplier",
+      "mat-masonry",
+      "PALLETIZES"
+    ],
+    [
+      "org-mat-supplier",
+      "mat-roofing",
+      "SHIPS"
+    ],
+    [
+      "org-mat-supplier",
+      "mat-paint",
+      "WAREHOUSES"
+    ],
+    [
+      "org-mat-supplier",
+      "mat-plumbing",
+      "INVENTORIES"
+    ],
+    [
+      "org-mat-supplier",
+      "mat-elec",
+      "SPOOLS"
+    ],
+    [
+      "org-mat-supplier",
+      "mat-site",
+      "STAGES"
+    ],
+    [
+      "org-mat-supplier",
+      "mat-doors",
+      "DELIVERS"
+    ],
+    [
+      "org-fabricator",
+      "mat-steel",
+      "FABRICATES"
+    ],
+    [
+      "org-fabricator",
+      "mat-hvac-dist",
+      "SHOP_DRAWS"
+    ],
+    [
+      "org-fabricator",
+      "mat-casework",
+      "MILLS"
+    ],
+    [
+      "org-fabricator",
+      "mat-glass",
+      "TEMPERS"
+    ],
+    [
+      "org-fabricator",
+      "mat-elevator",
+      "ASSEMBLES"
+    ],
+    [
+      "org-fabricator",
+      "mat-lighting",
+      "PRE_WIRES"
+    ],
+    [
+      "org-fabricator",
+      "mat-fp",
+      "PREFABRICATES"
+    ],
+    [
+      "org-const-manager-at",
+      "res-qc",
+      "ENGAGES"
+    ],
+    [
+      "org-const-manager-at",
+      "res-operator",
+      "MOBILIZES"
+    ],
+    [
+      "org-design-builder",
+      "res-surveyor",
+      "COMMISSIONS"
+    ],
+    [
+      "org-special-insp",
+      "res-qc",
+      "CERTIFIES"
+    ],
+    [
+      "org-mat-testing-lab",
+      "mat-concrete",
+      "TESTS"
+    ],
+    [
+      "org-cx-agent-cxa",
+      "res-cxa",
+      "DEPLOYS"
+    ],
+    [
+      "org-cx-agent-cxa",
+      "mat-hvac-equip",
+      "VERIFIES"
+    ],
+    [
+      "org-sub-count-per",
+      "res-laborer",
+      "QUANTIFIES"
+    ],
+    [
+      "org-trade-coverage",
+      "res-electrician",
+      "BENCHMARKS"
+    ],
+    [
+      "org-vendor-insurance",
+      "res-safety",
+      "AUDITS"
+    ],
+    [
+      "org-sub-safety",
+      "res-laborer",
+      "RATES"
+    ]
+  ],
+  "verbGlossary": {
+    "ALLOCATES": "{source} contractor dedicates a specified headcount of {target} workers to a project for a defined scope period",
+    "ASSEMBLES": "{source} builds elevator cabs, hoistways, or complex assemblies in a controlled shop environment before site delivery",
+    "ASSIGNS": "{source} contractor designates specific skilled {target}s to a project scope or work area",
+    "AUDITS": "{source}evaluates whether a vendor's safety certifications and coverage meet project requirements",
+    "BATCHES": "{source} supplier mixes and delivers ready-mix concrete in specified volumes to the jobsite",
+    "BENCHMARKS": "{source} coverage metric compares actual {target} staffing levels against planned or industry-standard norms",
+    "CERTIFIES": "{source} validates that a QC inspector holds required certifications for the work being inspected",
+    "COMMISSIONS": "Design-builder engages a surveyor to establish control points and verify site conditions before construction",
+    "COMMITS": "{source} contractor contractually pledges {target} crew to perform masonry or similar scope on the project",
+    "CREWS": "{source}assigns in-house iron{target}s into field crews for structural work",
+    "DELIVERS": "{source} transports finished {target}s to the jobsite loading dock or laydown area per the delivery schedule",
+    "DEPLOYS": "{source} sends trained personnel to a project site for active field duty on scheduled work activities",
+    "DISPATCHES": "{source} routes available {target} workers from its labor pool to a specific project or task on a given day",
+    "DISPATCHES_TO_SITE": "{source} rental company sends material-handling {target} to the jobsite per the contractor's call-off request",
+    "DISTRIBUTES": "{source} supplier delivers bulk lumber or commodity {target}s across multiple jobsites from a regional yard",
+    "EMPLOYS": "{source} maintains {target} workers on its direct payroll for project staffing",
+    "ENGAGES": "{source} contracts or activates a specialist {target} for a defined scope of inspection or operational work",
+    "FABRICATES": "{source} cuts, welds, and finishes structural steel members in a shop per approved drawings before shipment",
+    "FIELDS": "{source}deploys its own concrete {target}s to execute placement and finishing on site",
+    "FURNISHES": "{source} provides skilled {target} labor as part of its contractual scope of work on the project",
+    "FURNISHES_ON_CALL": "{source} rental company makes hauling trucks available on an as-needed basis per the contractor's daily call-offs",
+    "HIRES_OUT": "{source} rental company provides compaction {target} under a rental agreement for site work phases",
+    "INSTALLS_VIA": "{source} contractor performs fireproofing installation using its own specialized workforce and application {target}",
+    "INVENTORIES": "{source} supplier maintains stock levels of plumbing {target}s and pipe in a regional warehouse for project draw-down",
+    "ISSUES": "{source} rental company releases welding rigs and accessories from its fleet to a project under a rental ticket",
+    "LEASES": "{source} rental company provides {target}s under a long-term rental agreement including maintenance and rigging support",
+    "MANS": "{source} staffs a specialty {target} position such as elevator mechanic or sprinkler fitter from its trained workforce",
+    "MILLS": "{source} {target}s and finishes casework components such as countertops and cabinets in a millwork shop",
+    "MOBILIZES": "{source} arranges transport, setup, and commissioning of heavy equipment or {target}s to the project site",
+    "PALLETIZES": "{source} supplier packs and stages masonry units on pallets for efficient jobsite delivery and {target} placement",
+    "PLACES": "{source} rental company positions concrete {target}s or placing booms on site for pour-day operations",
+    "PRE_WIRES": "{source} pre-assembles lighting {target} wiring harnesses in a shop to reduce on-site installation time",
+    "PREFABRICATES": "{source} builds fire protection {target} spools and assemblies off-site for rapid field installation",
+    "PROVIDES": "{source} contractor supplies qualified drywall hangers and finishers to execute interior framing and board scope",
+    "PROVISIONS": "{source} secures and stages earthmoving {target} on site to support grading and excavation phases",
+    "QUANTIFIES": "{source} count metric tallies the number of {target} firms and their labor force active on a project",
+    "RATES": "{source}calculates the frequency or severity rate of recordable injuries for {target} workforce",
+    "RENTS": "{source} rental company provides earthmoving {target}s under a short-term rental agreement for site work",
+    "RENTS_OUT": "{source} rental company supplies aerial lifts and {target}ing platforms to contractors for elevated work access",
+    "RETAINS": "{source} keeps a dedicated safety professional on the project staff for the duration of construction",
+    "SENDS": "{source} contractor transports glaziers from its shop or union hall to the project site for curtain wall installation",
+    "SHIPS": "{source} supplier arranges freight and delivers roofing {target}s from its distribution center to the jobsite",
+    "SHOP_DRAWS": "{source} produces detailed shop drawings and then fabricates HVAC {target}work to those approved dimensions",
+    "SPOOLS": "{source} supplier cuts and packages electrical {target} to project-specified lengths for jobsite delivery",
+    "STAFFS": "{source} fills carpenter positions on the project from its direct-hire workforce or labor pool",
+    "STAGES": "{source} supplier pre-positions site {target}s at a laydown yard or staging area near the project for phased delivery",
+    "STOCKS": "{source} supplier maintains {target} inventory in standard sizes and grades for on-demand project delivery",
+    "SUBLETS": "{source} contractor parcels out low-voltage cabling scope to a specialized technician workforce within its organization",
+    "SUPPLIES": "{source} provides HVAC sheet-metal {target}s as part of its mechanical scope on the project",
+    "SUPPLIES_ON_HIRE": "{source} rental company makes piling rigs available for foundation work under a mobilization-plus-daily-rate structure",
+    "TEMPERS": "{source} heat-treats and finishes glass panels to specification before shipping to the glazing subcontractor",
+    "TESTS": "{target}s testing lab performs compressive strength, slump, or other quality tests on concrete cylinders and samples",
+    "VERIFIES": "{source} confirms that installed HVAC {target} meets design intent through functional performance testing",
+    "WAREHOUSES": "{source} supplier stores paint and coating {target}s in a climate-controlled facility for phased project delivery"
+  }
+}

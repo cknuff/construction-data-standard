@@ -1,0 +1,221 @@
+{
+  "domain": "permits-regulatory",
+  "name": "Permits & Regulatory",
+  "color": "#ec407a",
+  "categories": [
+    {
+      "name": "Construction Permits",
+      "color": "#ce4f70",
+      "nodes": [
+        {
+          "id": "pr-building-permit",
+          "name": "Building Permit",
+          "desc": "Primary authorization from the local building department to begin construction. Lifecycle: Application → Plan Review → Approval → Issuance → Active → Final Inspection → Closed. Specifies scope of permitted work, applicable building codes, occupancy classification, construction type, and conditions of approval. Required before any structural or building system work begins. Issued by the Authority Having Jurisdiction (AHJ)."
+        },
+        {
+          "id": "pr-demolition-permi",
+          "name": "Demolition Permit",
+          "desc": "Authorization to demolish or remove existing structures. Lifecycle: Application → Hazmat Survey → Review → Approval → Issuance → Active → Completion Notification. Requires documentation of hazardous material surveys (asbestos / lead / PCBs) and abatement plans before issuance. Separate from building permit in most jurisdictions."
+        },
+        {
+          "id": "pr-renovation-alter",
+          "name": "Renovation / Alteration Permit",
+          "desc": "Authorization for modifications to existing structures — alterations / repairs / changes of use. Triggers when work exceeds substantial improvement thresholds defined by the jurisdiction (often 50% of building value). May trigger full code compliance for the entire building vs. only the work area depending on scope classification. Decision authority: building official determines scope classification."
+        },
+        {
+          "id": "pr-temp-structures",
+          "name": "Temporary Structures Permit",
+          "desc": "Authorization for temporary construction facilities — scaffolding / shoring / formwork / temporary enclosures / construction hoists. Required for structures affecting public safety or right-of-way. Lifecycle: Application → Engineering Review → Issuance → Active → Inspection → Removal → Closeout. Typically requires PE-stamped drawings for scaffolding over certain heights."
+        },
+        {
+          "id": "pr-trade-permit",
+          "name": "Trade Permit",
+          "desc": "Separate jurisdictional permits required for specific building system work — electrical / plumbing / mechanical / fire protection / elevator. Each trade permit authorizes work by licensed contractors in that discipline and triggers trade-specific rough-in and final inspections. Some jurisdictions issue trade permits as part of the building permit; others require separate applications per trade."
+        }
+      ]
+    },
+    {
+      "name": "Site & Environmental Permits",
+      "color": "#df4775",
+      "nodes": [
+        {
+          "id": "pr-enviro-permit",
+          "name": "Environmental Permit",
+          "desc": "Regulatory authorizations for work affecting air quality / water resources / wetlands / hazardous materials. Issued by federal (EPA) / state / and local environmental agencies. Lifecycle: Environmental Assessment → Application → Agency Review → Issuance → Compliance Monitoring → Closeout. May require Environmental Impact Statements (EIS) or Assessments (EA) for large or sensitive projects."
+        },
+        {
+          "id": "pr-stormwater-permi",
+          "name": "Stormwater Permit / SWPPP",
+          "desc": "Stormwater Pollution Prevention Plan and associated permit required for sites disturbing one or more acres. Mandates erosion and sediment control (ESC) best management practices (BMPs). Lifecycle: NOI Filing → SWPPP Preparation → Permit Coverage → Active Monitoring → NOT (Notice of Termination). Requires weekly inspections and post-rain-event inspections with corrective actions for BMP deficiencies."
+        },
+        {
+          "id": "pr-street-right-way",
+          "name": "Street / Right-of-Way Permit",
+          "desc": "Authorization for construction activities within the public right-of-way — lane closures / sidewalk closures / utility cuts / material staging / crane operations over public streets. Issued by local transportation or public works departments. Often time-restricted (nighttime work only / no closures during rush hour) with traffic control plan requirements."
+        },
+        {
+          "id": "pr-utility-connecti",
+          "name": "Utility Connection Permit",
+          "desc": "Authorization to connect to or modify public utility infrastructure — water / sanitary sewer / storm sewer / gas / electric / telecommunications. Each utility provider has separate application processes and design review requirements. Lifecycle: Application → Design Review → Fee Payment → Scheduling → Connection → Inspection → Activation. Often on the critical path for project completion and occupancy."
+        }
+      ]
+    },
+    {
+      "name": "Zoning & Land Use",
+      "color": "#f03e7b",
+      "nodes": [
+        {
+          "id": "pr-zoning-appr",
+          "name": "Zoning Approval",
+          "desc": "Land use authorization confirming that the proposed project complies with local zoning ordinances — permitted uses / setbacks / height limits / lot coverage / floor area ratio (FAR) / parking requirements / density. Typically required before building permit application. Lifecycle: Zoning Review → Staff Report → Public Hearing (if required) → Approval / Denial. Decision authority: zoning administrator or planning commission."
+        },
+        {
+          "id": "pr-variance-special",
+          "name": "Variance / Special Exception",
+          "desc": "Formal relief from specific zoning requirements when strict compliance creates undue hardship. Lifecycle: Application → Staff Review → Public Hearing → Board Decision → Appeal Period. Requires demonstration of hardship (not self-created) and that the variance won't adversely affect surrounding properties. Decision authority: Board of Zoning Appeals or equivalent."
+        }
+      ]
+    },
+    {
+      "name": "Plan Review & Regulatory Approvals",
+      "color": "#ff3681",
+      "nodes": [
+        {
+          "id": "pr-building-departm",
+          "name": "Building Department Plan Review",
+          "desc": "Formal review of construction documents by the building department to verify code compliance before permit issuance. Covers structural / life safety / accessibility / energy / and building code requirements. Lifecycle: Submittal → Initial Review → Comments Issued → Resubmittal → Approval → Permit Issuance. Decision authority: plans examiner and building official. Multiple review cycles are common — first review often returns 50-200+ comments."
+        },
+        {
+          "id": "pr-fire-marshal",
+          "name": "Fire Marshal Review",
+          "desc": "Fire and life safety plan review and field approval by the fire marshal or fire prevention bureau. Covers fire sprinkler design / fire alarm systems / means of egress / fire-rated assemblies / hazardous materials storage / and fire access. Often a parallel review track to the building department. Lifecycle: Submittal → Review → Comments → Resubmittal → Approval → Field Inspections → Final Sign-Off."
+        },
+        {
+          "id": "pr-health-departmen",
+          "name": "Health Department Approval",
+          "desc": "Regulatory approval from the health department for projects involving food service / healthcare / pools / laboratories / or other health-regulated occupancies. Reviews focus on sanitation / food safety / infection control / ventilation / and hazardous material handling. Required in addition to building department approval. Decision authority: health officer or environmental health specialist."
+        }
+      ]
+    },
+    {
+      "name": "Regulatory Inspections",
+      "color": "#d64b72",
+      "nodes": [
+        {
+          "id": "pr-ahj-insp",
+          "name": "AHJ Inspection",
+          "desc": "Field inspections performed by the Authority Having Jurisdiction (building department) at required construction milestones. Verifies that work in place complies with approved plans and applicable codes. Lifecycle: Request → Scheduling → Inspection → Pass / Fail / Conditional. Typical sequence: foundation / slab / rough framing / rough MEP / insulation / drywall / final. Failed inspections require correction and re-inspection."
+        },
+        {
+          "id": "pr-special-insp",
+          "name": "Special Inspection",
+          "desc": "Code-required inspections performed by independent certified special inspectors (not the building department) for critical structural and life-safety work. Required where deficiencies would be concealed and could create structural failure. The special inspector is hired by the owner (not the contractor) and reports to the building official. Lifecycle: Statement of Special Inspections → Inspector Qualification → Ongoing Inspections → Reports → Final Letter."
+        },
+        {
+          "id": "pr-third-party",
+          "name": "Third-Party Testing",
+          "desc": "Independent materials testing and quality assurance performed by certified testing laboratories. Verifies that construction materials and installed systems meet specifications and code requirements. Common tests: concrete cylinder breaks / soil compaction (Proctor) / steel tension testing / weld inspection / air and water infiltration / duct leakage. Results documented in formal lab reports."
+        }
+      ]
+    },
+    {
+      "name": "Certificates & Occupancy",
+      "color": "#e74378",
+      "nodes": [
+        {
+          "id": "pr-cert-occupancy",
+          "name": "Certificate of Occupancy",
+          "desc": "Final authorization from the building department to occupy and use a completed building for its permitted purpose. Confirms all code requirements met / all required inspections passed / all special inspection letters received. Lifecycle: Application → Final Inspections → Documentation Review → Issuance. The CO is the ultimate regulatory deliverable — unlocks the owner's ability to occupy / lease / or operate the facility."
+        },
+        {
+          "id": "pr-temp-cert",
+          "name": "Temporary Certificate of Occupancy",
+          "desc": "Conditional occupancy approval when a building is safe to occupy but has outstanding items preventing full CO. Specifies conditions and deadline for completing remaining work. Lifecycle: Application → Review → Issuance (with conditions) → Renewal/Extension → Conversion to Full CO. Carries a list of open items (fire alarm completion / punch list / landscaping) and typically expires in 90-180 days."
+        },
+        {
+          "id": "pr-cert-completion",
+          "name": "Certificate of Completion",
+          "desc": "Regulatory sign-off confirming that construction work is complete and compliant — used for projects without occupancy (site work / infrastructure / demolition) or for trade-specific scope completion. Lifecycle: Application → Final Inspection → Documentation Review → Issuance. Distinct from a CO which authorizes occupancy."
+        },
+        {
+          "id": "pr-letter-comp",
+          "name": "Letter of Compliance",
+          "desc": "Written confirmation from a regulatory agency / design professional / or special inspector that specific work or systems comply with applicable codes and standards. Lifecycle: Inspection/Testing → Report → Letter Issuance. Each letter covers a specific scope. The building department typically requires a complete set of compliance letters before issuing a CO."
+        }
+      ]
+    },
+    {
+      "name": "Safety & Labor Compliance",
+      "color": "#f83a7e",
+      "nodes": [
+        {
+          "id": "pr-osha-notificatio",
+          "name": "OSHA Notification",
+          "desc": "Required notifications to OSHA and activity-specific safety permits for hazardous construction operations. Includes crane assembly/disassembly notifications / confined space entry permits / excavation permits (depths over 20 feet in some states) / lead and asbestos abatement notifications / and blasting permits. Lifecycle: Notification/Application → Review → Issuance → Active → Closeout."
+        },
+        {
+          "id": "pr-site-safety-plan",
+          "name": "Site Safety Plan",
+          "desc": "Project-specific safety documentation identifying hazards / control measures / emergency procedures / and safety responsibilities. May include fall protection plan / hazard communication plan / crane lift plans / traffic control plans / and fire prevention plan. Required by OSHA and often by the owner's contract. Lifecycle: Development → Submission → Owner/CM Review → Approval → Active → Updates as Conditions Change."
+        },
+        {
+          "id": "pr-labor-comp",
+          "name": "Labor Compliance",
+          "desc": "Requirements for workforce compensation / documentation / and equal opportunity — particularly on public and federally funded projects. Includes prevailing wage determinations / certified payroll reporting / apprenticeship ratios / and diversity goals (DBE / MBE / WBE / Section 3). Lifecycle: Wage Determination → Compliance Plan → Ongoing Reporting → Audits → Closeout Certification."
+        }
+      ]
+    },
+    {
+      "name": "Permit Lifecycle & Tracking",
+      "color": "#ff3283",
+      "nodes": [
+        {
+          "id": "pr-permit-applicati",
+          "name": "Permit Application",
+          "desc": "The formal request to a regulatory agency for a permit / approval / or certificate. Includes project information / scope of work / applicable codes / required documents (plans / calculations / surveys) / and fees. Each agency has its own format and requirements. Lifecycle: Preparation → Submission → Completeness Check → Accepted for Review → Under Review → Comments → Resubmission → Approval."
+        },
+        {
+          "id": "pr-permit-status",
+          "name": "Permit Status",
+          "desc": "The current state of a permit in its lifecycle — from application through issuance / active construction / and final closeout. Tracking status across all required permits is a critical path management activity. A single expired or missing permit can halt construction and trigger stop-work orders. Decision authority: building official / fire marshal / or other AHJ depending on permit type."
+        },
+        {
+          "id": "pr-insp-scheduling",
+          "name": "Inspection Scheduling",
+          "desc": "The process of requesting / scheduling / and coordinating regulatory inspections with the AHJ / special inspectors / and testing labs. Requires sequencing inspections to match construction progress — calling at the right time to avoid delays while not covering up work before it's inspected. Lifecycle: Request → Schedule → Inspect → Pass/Fail → Reinspect (if failed) → Document."
+        }
+      ]
+    },
+    {
+      "name": "Standard Measures",
+      "color": "#de4775",
+      "nodes": [
+        {
+          "id": "pr-permit-cycle",
+          "name": "Permit Cycle Time",
+          "desc": "Elapsed time from permit application submission to permit issuance. Calculation: issuance date minus application date / optionally excluding resubmission periods. Segmented by permit type (building / trade / environmental) and jurisdiction. Longer cycle times indicate regulatory complexity / application quality issues / or agency resource constraints."
+        },
+        {
+          "id": "pr-reg-hold",
+          "name": "Regulatory Hold Duration",
+          "desc": "Total calendar days of construction delay caused by regulatory actions — stop-work orders / permit delays / failed inspections requiring correction / expired permits. Calculation: sum of days from hold issuance to resolution for all regulatory events. A leading indicator of regulatory risk exposure and compliance management effectiveness."
+        },
+        {
+          "id": "pr-open-permit",
+          "name": "Open Permit Aging",
+          "desc": "Average elapsed days that permits remain in open/active status. Calculation: sum of (current date or closure date minus issuance date) / total permits. Tracks whether permits are being closed out in a timely manner. Open permits at project completion indicate incomplete final inspections or documentation gaps."
+        },
+        {
+          "id": "pr-comp-doc",
+          "name": "Compliance Document Completeness",
+          "desc": "Percentage of required regulatory and compliance documents received and verified. Calculation: received documents / total required documents × 100. Includes insurance certificates / special inspection letters / compliance letters / as-built certifications / test reports. A closeout readiness indicator."
+        },
+        {
+          "id": "pr-permit-renewal",
+          "name": "Permit Renewal Rate",
+          "desc": "Percentage of permits that require renewal or extension during the project — indicating original validity period was insufficient. Calculation: renewed permits / total permits × 100. High renewal rates indicate schedule overruns / permit validity misalignment / or phasing issues."
+        }
+      ]
+    }
+  ]
+}

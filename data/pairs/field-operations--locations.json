@@ -1,0 +1,583 @@
+{
+  "source": "field-operations",
+  "target": "locations",
+  "edges": [
+    [
+      "fo-daily-log-header",
+      "loc-project-site",
+      "LOGGED AT"
+    ],
+    [
+      "fo-daily-log-note",
+      "loc-project-site",
+      "LOGGED AT"
+    ],
+    [
+      "fo-daily-log-note",
+      "loc-floor-level",
+      "LOGGED AT"
+    ],
+    [
+      "fo-daily-log-note",
+      "loc-zone-wing",
+      "LOGGED AT"
+    ],
+    [
+      "fo-manpower-log",
+      "loc-project-site",
+      "TRACKED AT"
+    ],
+    [
+      "fo-manpower-log",
+      "loc-floor-level",
+      "TRACKED AT"
+    ],
+    [
+      "fo-manpower-log",
+      "loc-zone-wing",
+      "TRACKED AT"
+    ],
+    [
+      "fo-manpower-log",
+      "loc-building",
+      "TRACKED AT"
+    ],
+    [
+      "fo-crew-crew",
+      "loc-work-zone-phase",
+      "DEPLOYED TO"
+    ],
+    [
+      "fo-crew-crew",
+      "loc-floor-level",
+      "DEPLOYED TO"
+    ],
+    [
+      "fo-assignment",
+      "loc-work-zone-phase",
+      "DISPATCHED TO"
+    ],
+    [
+      "fo-assignment",
+      "loc-building",
+      "DISPATCHED TO"
+    ],
+    [
+      "fo-workforce-req",
+      "loc-work-zone-phase",
+      "REQUESTED FOR"
+    ],
+    [
+      "fo-timecard-entry",
+      "loc-project-site",
+      "CLOCKED AT"
+    ],
+    [
+      "fo-timecard-entry",
+      "loc-building",
+      "CLOCKED AT"
+    ],
+    [
+      "fo-equip-log-entry",
+      "loc-project-site",
+      "OPERATED AT"
+    ],
+    [
+      "fo-equip-log-entry",
+      "loc-laydown-staging",
+      "OPERATED AT"
+    ],
+    [
+      "fo-equip-log-entry",
+      "loc-exterior-zone",
+      "OPERATED AT"
+    ],
+    [
+      "fo-equip-master",
+      "loc-laydown-staging",
+      "STORED AT"
+    ],
+    [
+      "fo-equip-master",
+      "loc-temp-facility",
+      "STORED AT"
+    ],
+    [
+      "fo-equip-timecard",
+      "loc-project-site",
+      "LOGGED AT"
+    ],
+    [
+      "fo-dlvy-log-entry",
+      "loc-laydown-staging",
+      "DELIVERED TO"
+    ],
+    [
+      "fo-dlvy-log-entry",
+      "loc-project-site",
+      "DELIVERED TO"
+    ],
+    [
+      "fo-mat-shipment",
+      "loc-project-site",
+      "SHIPPED TO"
+    ],
+    [
+      "fo-mat-shipment",
+      "loc-laydown-staging",
+      "SHIPPED TO"
+    ],
+    [
+      "fo-mat-receipt",
+      "loc-laydown-staging",
+      "RECEIVED AT"
+    ],
+    [
+      "fo-mat-receipt",
+      "loc-project-site",
+      "RECEIVED AT"
+    ],
+    [
+      "fo-safety-violation",
+      "loc-floor-level",
+      "OCCURRED AT"
+    ],
+    [
+      "fo-safety-violation",
+      "loc-project-site",
+      "OCCURRED AT"
+    ],
+    [
+      "fo-safety-violation",
+      "loc-roof-level",
+      "OCCURRED AT"
+    ],
+    [
+      "fo-safety-violation",
+      "loc-core-shaft",
+      "OCCURRED AT"
+    ],
+    [
+      "fo-accident-log",
+      "loc-project-site",
+      "OCCURRED AT"
+    ],
+    [
+      "fo-accident-log",
+      "loc-floor-level",
+      "OCCURRED AT"
+    ],
+    [
+      "fo-accident-log",
+      "loc-exterior-zone",
+      "OCCURRED AT"
+    ],
+    [
+      "fo-accident-log",
+      "loc-equip-location",
+      "OCCURRED AT"
+    ],
+    [
+      "fo-daily-log-insp",
+      "loc-floor-level",
+      "INSPECTED AT"
+    ],
+    [
+      "fo-daily-log-insp",
+      "loc-room-space",
+      "INSPECTED AT"
+    ],
+    [
+      "fo-daily-log-insp",
+      "loc-fire-smoke",
+      "INSPECTED AT"
+    ],
+    [
+      "fo-daily-log-insp",
+      "loc-penetration-open",
+      "INSPECTED AT"
+    ],
+    [
+      "fo-weather-log",
+      "loc-project-site",
+      "RECORDED AT"
+    ],
+    [
+      "fo-weather-log",
+      "loc-exterior-zone",
+      "RECORDED AT"
+    ],
+    [
+      "fo-delay-log-entry",
+      "loc-project-site",
+      "REPORTED AT"
+    ],
+    [
+      "fo-delay-log-entry",
+      "loc-work-zone-phase",
+      "REPORTED AT"
+    ],
+    [
+      "fo-delay-log-entry",
+      "loc-right-way",
+      "REPORTED AT"
+    ],
+    [
+      "fo-productivity-log",
+      "loc-floor-level",
+      "MEASURED AT"
+    ],
+    [
+      "fo-productivity-log",
+      "loc-zone-wing",
+      "MEASURED AT"
+    ],
+    [
+      "fo-productivity-log",
+      "loc-building",
+      "MEASURED AT"
+    ],
+    [
+      "fo-quantity-log",
+      "loc-floor-level",
+      "TALLIED AT"
+    ],
+    [
+      "fo-quantity-log",
+      "loc-zone-wing",
+      "TALLIED AT"
+    ],
+    [
+      "fo-quantity-log",
+      "loc-room-space",
+      "TALLIED AT"
+    ],
+    [
+      "fo-actual-productio",
+      "loc-floor-level",
+      "QUANTIFIED AT"
+    ],
+    [
+      "fo-budgeted-product",
+      "loc-floor-level",
+      "PLANNED FOR"
+    ],
+    [
+      "fo-budgeted-product",
+      "loc-building",
+      "PLANNED FOR"
+    ],
+    [
+      "fo-field-productivi",
+      "loc-zone-wing",
+      "BENCHMARKED AT"
+    ],
+    [
+      "fo-field-productivi",
+      "loc-building",
+      "BENCHMARKED AT"
+    ],
+    [
+      "fo-waste-log-entry",
+      "loc-laydown-staging",
+      "DISPOSED AT"
+    ],
+    [
+      "fo-waste-log-entry",
+      "loc-project-site",
+      "DISPOSED AT"
+    ],
+    [
+      "fo-dumpster-log",
+      "loc-laydown-staging",
+      "HAULED FROM"
+    ],
+    [
+      "fo-dumpster-log",
+      "loc-exterior-zone",
+      "HAULED FROM"
+    ],
+    [
+      "fo-visitor-log",
+      "loc-project-site",
+      "CHECKED IN AT"
+    ],
+    [
+      "fo-visitor-log",
+      "loc-temp-facility",
+      "CHECKED IN AT"
+    ],
+    [
+      "fo-scheduled-work",
+      "loc-floor-level",
+      "PLANNED AT"
+    ],
+    [
+      "fo-scheduled-work",
+      "loc-zone-wing",
+      "PLANNED AT"
+    ],
+    [
+      "fo-scheduled-work",
+      "loc-work-zone-phase",
+      "PLANNED AT"
+    ],
+    [
+      "fo-scheduled-work-2",
+      "loc-work-zone-phase",
+      "LINKED TO"
+    ],
+    [
+      "fo-const-report",
+      "loc-project-site",
+      "SUMMARIZED AT"
+    ],
+    [
+      "fo-const-report",
+      "loc-building",
+      "SUMMARIZED AT"
+    ],
+    [
+      "fo-phone-call-log",
+      "loc-project-site",
+      "COORDINATED AT"
+    ],
+    [
+      "fo-plan-revision",
+      "loc-building",
+      "DISTRIBUTED AT"
+    ],
+    [
+      "fo-plan-revision",
+      "loc-floor-level",
+      "DISTRIBUTED AT"
+    ],
+    [
+      "fo-t-m-ticket",
+      "loc-floor-level",
+      "BILLED AT"
+    ],
+    [
+      "fo-t-m-ticket",
+      "loc-room-space",
+      "BILLED AT"
+    ],
+    [
+      "fo-t-m-labor-entry",
+      "loc-floor-level",
+      "WORKED AT"
+    ],
+    [
+      "fo-t-m-equip-entry",
+      "loc-project-site",
+      "OPERATED AT"
+    ],
+    [
+      "fo-t-m-mat-entry",
+      "loc-room-space",
+      "INSTALLED AT"
+    ],
+    [
+      "fo-daily-report",
+      "loc-project-site",
+      "COMPILED FOR"
+    ],
+    [
+      "fo-daily-log",
+      "loc-project-site",
+      "CONFIGURED FOR"
+    ],
+    [
+      "fo-daily-log-2",
+      "loc-project-site",
+      "MEASURED AT"
+    ],
+    [
+      "fo-daily-log-dist",
+      "loc-project-site",
+      "DISTRIBUTED FOR"
+    ],
+    [
+      "fo-peak-daily",
+      "loc-project-site",
+      "COUNTED AT"
+    ],
+    [
+      "fo-peak-daily",
+      "loc-building",
+      "COUNTED AT"
+    ],
+    [
+      "fo-average-daily",
+      "loc-project-site",
+      "AVERAGED AT"
+    ],
+    [
+      "fo-equip-utilizatio",
+      "loc-project-site",
+      "RATED AT"
+    ],
+    [
+      "fo-plan-percent",
+      "loc-work-zone-phase",
+      "GAUGED AT"
+    ],
+    [
+      "fo-delay-frequency",
+      "loc-project-site",
+      "TALLIED AT"
+    ],
+    [
+      "fo-weather-delay",
+      "loc-project-site",
+      "RATED AT"
+    ],
+    [
+      "fo-waste-diversion",
+      "loc-project-site",
+      "RATED AT"
+    ],
+    [
+      "fo-employee-record",
+      "loc-project-site",
+      "REGISTERED AT"
+    ],
+    [
+      "fo-employee-record",
+      "loc-temp-facility",
+      "REGISTERED AT"
+    ],
+    [
+      "fo-safety-violation",
+      "loc-below-grade",
+      "OCCURRED AT"
+    ],
+    [
+      "fo-accident-log",
+      "loc-roof-level",
+      "OCCURRED AT"
+    ],
+    [
+      "fo-daily-log-insp",
+      "loc-wet-area",
+      "INSPECTED AT"
+    ],
+    [
+      "fo-daily-log-insp",
+      "loc-ceiling-plenum",
+      "INSPECTED AT"
+    ],
+    [
+      "fo-safety-violation",
+      "loc-functional-area",
+      "OCCURRED AT"
+    ],
+    [
+      "fo-quantity-log",
+      "loc-wall-surface",
+      "TALLIED AT"
+    ],
+    [
+      "fo-t-m-labor-entry",
+      "loc-room-space",
+      "WORKED AT"
+    ],
+    [
+      "fo-scheduled-work",
+      "loc-building",
+      "PLANNED AT"
+    ],
+    [
+      "fo-equip-log-entry",
+      "loc-below-grade",
+      "OPERATED AT"
+    ],
+    [
+      "fo-manpower-log",
+      "loc-exterior-zone",
+      "TRACKED AT"
+    ],
+    [
+      "fo-mat-receipt",
+      "loc-floor-level",
+      "RECEIVED AT"
+    ],
+    [
+      "loc-location-depth",
+      "fo-daily-log-2",
+      "QUANTIFIED BY"
+    ],
+    [
+      "loc-location-coverag",
+      "fo-plan-percent",
+      "QUANTIFIED BY"
+    ],
+    [
+      "loc-floor-completion",
+      "fo-productivity-log",
+      "QUANTIFIED BY"
+    ],
+    [
+      "loc-safety-incident",
+      "fo-safety-violation",
+      "QUANTIFIED BY"
+    ],
+    [
+      "loc-safety-incident",
+      "fo-accident-log",
+      "QUANTIFIED BY"
+    ],
+    [
+      "loc-defect-density",
+      "fo-daily-log-insp",
+      "QUANTIFIED BY"
+    ],
+    [
+      "loc-punch-items-per",
+      "fo-quantity-log",
+      "QUANTIFIED BY"
+    ]
+  ],
+  "verbGlossary": {
+    "LOGGED AT": "{source}, daily note, or equipment timecard is recorded referencing this {target} as the work site",
+    "TRACKED AT": "{source}records trade presence at {target}, building, floor, or zone",
+    "DEPLOYED TO": "{source}group is assigned and mobilized to a specific work {target} or floor for the day",
+    "DISPATCHED TO": "{source}assignment sends a person to {target} or work zone to perform a task",
+    "REQUESTED FOR": "{source} identifies the work {target} or area where additional trade workers are needed",
+    "CLOCKED AT": "{source} entry records hours worked by an employee at a specific project {target} or building",
+    "OPERATED AT": "{source} entry documents that a piece of equipment was running at {target} area or zone",
+    "STORED AT": "{source}record identifies the laydown yard or temporary facility where a machine is parked or maintained",
+    "DELIVERED TO": "{source} entry documents that materials arrived at {target} or project site",
+    "SHIPPED TO": "{source} tracks an inbound load destined for a specific project {target} or staging area",
+    "RECEIVED AT": "{source} confirms acceptance of a delivery at {target} or floor level",
+    "OCCURRED AT": "{source}, accident, or incident is recorded as having taken place at {target}",
+    "INSPECTED AT": "{source} entry documents a quality or safety check performed at {target}, floor, or compartment",
+    "RECORDED AT": "{source} entry captures conditions observed at the project {target} or exterior zone",
+    "REPORTED AT": "{source} entry identifies the project {target} or work zone where the stoppage or interruption took place",
+    "MEASURED AT": "{source} or completion metric is calculated for {target}, zone, or building",
+    "TALLIED AT": "{source} entry records installed-in-place volumes at {target}, zone, room, or wall surface",
+    "QUANTIFIED AT": "{source} captures real output measured at {target} level",
+    "PLANNED FOR": "Budgeted production quantity sets {target} or building for planning purposes",
+    "BENCHMARKED AT": "{source} productivity record compares trade output against norms scoped to {target} or building",
+    "DISPOSED AT": "{source} entry records debris removal from {target} or project site",
+    "HAULED FROM": "{source} tracks a debris load removed from {target} or exterior zone",
+    "CHECKED IN AT": "{source} entry records arrival of an inspector, owner rep, or specialist at the project {target} or field office",
+    "PLANNED AT": "Scheduled work log entry assigns upcoming work activities to {target}, zone, or building",
+    "LINKED TO": "Scheduled work task link connects a field activity to a CPM schedule activity at a specific work {target}",
+    "SUMMARIZED AT": "{source} entry aggregates daily field activity for a specific project {target} or building",
+    "COORDINATED AT": "{source} documents a coordination call referencing activities at the project {target}",
+    "DISTRIBUTED AT": "Plan revision receipt confirms updated dra{target}s were issued for a specific building or floor",
+    "BILLED AT": "T&M ticket records billable work performed at {target} or room",
+    "WORKED AT": "T&M labor entry records hours for corrective or extra work performed at {target} or room",
+    "INSTALLED AT": "T&M material entry records material placement at {target} or space",
+    "COMPILED FOR": "{source} packages all field log entries for the project {target} into a stakeholder summary",
+    "CONFIGURED FOR": "{source} {target} configuration defines which log sections are active for the project site",
+    "DISTRIBUTED FOR": "{source} rate tracks notification delivery to stakeholders for the project {target}",
+    "COUNTED AT": "{source} captures maximum workers present at a project {target} or building",
+    "AVERAGED AT": "Average daily headcount metric computes mean workforce {target} at the project site over a period",
+    "RATED AT": "Utilization, weather delay, or waste diversion rate is calculated at the project {target} level",
+    "GAUGED AT": "Plan percent complete metric evaluates progress within a specific work {target} or phase area",
+    "REGISTERED AT": "{source}record enrolls a worker into the project roster at {target} or field office",
+    "QUANTIFIED BY": "{source}-based standard measure is calculated using data from a field operations record"
+  }
+}

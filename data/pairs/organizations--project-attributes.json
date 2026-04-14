@@ -1,0 +1,262 @@
+{
+  "source": "organizations",
+  "target": "project-attributes",
+  "edges": [
+    [
+      "org-gen-contr-gc",
+      "pa-dlvy-method",
+      "EXECUTES UNDER"
+    ],
+    [
+      "org-gen-contr-gc",
+      "pa-gc-cm-firm",
+      "ASSIGNED AS"
+    ],
+    [
+      "org-gen-contr-gc",
+      "pa-self-performed",
+      "PERFORMS WITHIN"
+    ],
+    [
+      "org-design-builder",
+      "pa-dlvy-method",
+      "EXECUTES UNDER"
+    ],
+    [
+      "org-const-manager-at",
+      "pa-dlvy-method",
+      "EXECUTES UNDER"
+    ],
+    [
+      "org-const-manager",
+      "pa-dlvy-method",
+      "EXECUTES UNDER"
+    ],
+    [
+      "org-program-manager",
+      "pa-program-type",
+      "MANAGES UNDER"
+    ],
+    [
+      "org-private-develope",
+      "pa-owner-type",
+      "CLASSIFIED AS"
+    ],
+    [
+      "org-institutional-ow",
+      "pa-owner-type",
+      "CLASSIFIED AS"
+    ],
+    [
+      "org-public-governmen",
+      "pa-owner-type",
+      "CLASSIFIED AS"
+    ],
+    [
+      "org-public-governmen",
+      "pa-prevailing-wage",
+      "MANDATES"
+    ],
+    [
+      "org-architect-record",
+      "pa-architect-record",
+      "ASSIGNED AS"
+    ],
+    [
+      "org-architect-record",
+      "pa-bim-requirement",
+      "SPECIFIES"
+    ],
+    [
+      "org-struct-engineer",
+      "pa-struct-system",
+      "DESIGNS FOR"
+    ],
+    [
+      "org-struct-engineer",
+      "pa-seismic-design",
+      "DESIGNS FOR"
+    ],
+    [
+      "org-mep-engineer",
+      "pa-specialty-system",
+      "DESIGNS FOR"
+    ],
+    [
+      "org-mep-engineer",
+      "pa-energy-code",
+      "DESIGNS FOR"
+    ],
+    [
+      "org-civil-engineer",
+      "pa-site-area",
+      "DESIGNS FOR"
+    ],
+    [
+      "org-fire-prot",
+      "pa-fire-sprinkler",
+      "DESIGNS FOR"
+    ],
+    [
+      "org-geotechnical-eng",
+      "pa-foundation-type",
+      "RECOMMENDS"
+    ],
+    [
+      "org-landscape-archit",
+      "pa-site-area",
+      "DESIGNS FOR"
+    ],
+    [
+      "org-building-envelop",
+      "pa-climate-zone",
+      "CONSULTS FOR"
+    ],
+    [
+      "org-sustainability-l",
+      "pa-leed-certificati",
+      "CERTIFIES FOR"
+    ],
+    [
+      "org-sustainability-l",
+      "pa-net-zero-target",
+      "CONSULTS FOR"
+    ],
+    [
+      "org-code-consultant",
+      "pa-building-code",
+      "ADVISES ON"
+    ],
+    [
+      "org-code-consultant",
+      "pa-occupancy-group",
+      "ADVISES ON"
+    ],
+    [
+      "org-sub-trade",
+      "pa-number-subcontra",
+      "COUNTED TOWARD"
+    ],
+    [
+      "org-sub-trade",
+      "pa-project-type",
+      "SEGMENTED BY"
+    ],
+    [
+      "org-self-performing",
+      "pa-self-performed",
+      "PERFORMS WITHIN"
+    ],
+    [
+      "org-mat-supplier",
+      "pa-modular-prefab",
+      "FABRICATES FOR"
+    ],
+    [
+      "org-fabricator",
+      "pa-modular-prefab",
+      "FABRICATES FOR"
+    ],
+    [
+      "org-equip-rental",
+      "pa-site-constraints",
+      "MOBILIZED FOR"
+    ],
+    [
+      "org-special-insp",
+      "pa-const-type",
+      "INSPECTS FOR"
+    ],
+    [
+      "org-cx-agent-cxa",
+      "pa-leed-certificati",
+      "COMMISSIONS FOR"
+    ],
+    [
+      "org-surety-bonding",
+      "pa-bonding-requirem",
+      "UNDERWRITES FOR"
+    ],
+    [
+      "org-insurance-broker",
+      "pa-estimated-value",
+      "UNDERWRITES FOR"
+    ],
+    [
+      "org-building-departm",
+      "pa-building-code",
+      "ENFORCES"
+    ],
+    [
+      "org-fire-marshal",
+      "pa-fire-sprinkler",
+      "ENFORCES"
+    ],
+    [
+      "org-osha-safety",
+      "pa-safety-incident",
+      "AUDITS AGAINST"
+    ],
+    [
+      "org-zoning-planning",
+      "pa-number-stories",
+      "RESTRICTS"
+    ],
+    [
+      "org-electric-utility",
+      "pa-address",
+      "SERVES"
+    ],
+    [
+      "org-water-sewer",
+      "pa-address",
+      "SERVES"
+    ],
+    [
+      "org-sub-count-per",
+      "pa-number-subcontra",
+      "BENCHMARKED AGAINST"
+    ],
+    [
+      "org-sub-safety",
+      "pa-safety-incident",
+      "BENCHMARKED AGAINST"
+    ],
+    [
+      "org-design-team",
+      "pa-dlvy-method",
+      "SEGMENTED BY"
+    ],
+    [
+      "org-chg-order",
+      "pa-chg-order-rate",
+      "BENCHMARKED AGAINST"
+    ]
+  ],
+  "verbGlossary": {
+    "EXECUTES UNDER": "{source} delivers {target} using the target delivery method structure (e.g., GC executes under design-bid-build)",
+    "ASSIGNED AS": "{source} is designated as the named party for {target} attribute (e.g., AOR firm assigned as the architect of record)",
+    "PERFORMS WITHIN": "{source} self-performs work scope captured by {target} attribute percentage",
+    "MANAGES UNDER": "{source} administers {target} under the target program type's multi-project structure",
+    "CLASSIFIED AS": "{source} is categorized by the target owner type attribute on {target} record",
+    "MANDATES": "{source}requires {target} attribute as a condition of contract",
+    "SPECIFIES": "{source}defines {target} scope attribute in contract documents",
+    "DESIGNS FOR": "{source}ing or design organization produces design documents addressing {target} attribute's requirements",
+    "RECOMMENDS": "{source} organization provides expert recommendation that determines {target} building attribute selection",
+    "CONSULTS FOR": "{source}provides expertise addressing {target} attribute's technical requirements",
+    "CERTIFIES FOR": "{source} organization validates project compliance with {target}",
+    "ADVISES ON": "{source}provides guidance on compliance with {target}",
+    "COUNTED TOWARD": "{source} contributes to the numeric total captured in {target} attribute",
+    "SEGMENTED BY": "{source} metric is broken down by {target} attribute for comparative analysis",
+    "FABRICATES FOR": "{source} or fabricator organization produces components specified by {target} scope attribute",
+    "MOBILIZED FOR": "{source} provides equipment appropriate to {target} site constraint conditions",
+    "INSPECTS FOR": "{source} performs inspections specific to {target} attribute's material requirements",
+    "COMMISSIONS FOR": "{source} verifies building systems to satisfy the target certification's performance requirements",
+    "UNDERWRITES FOR": "{source}provides surety, bonding, or insurance backing scaled to {target} requirement or value",
+    "ENFORCES": "Regulatory organization administers and enforces the target code or standard on {target}",
+    "AUDITS AGAINST": "{source}reviews project performance against {target} or quality metric",
+    "RESTRICTS": "{source}limits on {target} building dimension attribute",
+    "SERVES": "{source}provides service to {target} at the target address attribute location",
+    "BENCHMARKED AGAINST": "{source}-level metric is compared against {target} attribute threshold"
+  }
+}

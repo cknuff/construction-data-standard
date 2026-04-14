@@ -1,0 +1,285 @@
+{
+  "source": "financial-instruments",
+  "target": "roles",
+  "edges": [
+    [
+      "fi-project-budget",
+      "rl-estimator-chief",
+      "DEVELOPED BY"
+    ],
+    [
+      "fi-project-budget",
+      "rl-project-manager",
+      "MANAGED BY"
+    ],
+    [
+      "fi-project-budget",
+      "rl-project-executiv",
+      "APPROVED BY"
+    ],
+    [
+      "fi-budget-line-item",
+      "rl-cost-engineer",
+      "ALLOCATED BY"
+    ],
+    [
+      "fi-cost-code",
+      "rl-accountant-finan",
+      "RECONCILED BY"
+    ],
+    [
+      "fi-wbs-code",
+      "rl-scheduler-projec",
+      "STRUCTURED BY"
+    ],
+    [
+      "fi-commit-subcontra",
+      "rl-procure-manager",
+      "NEGOTIATED BY"
+    ],
+    [
+      "fi-commit-subcontra",
+      "rl-contract-adminis",
+      "ADMINISTERED BY"
+    ],
+    [
+      "fi-commit-subcontra",
+      "rl-preconstruction",
+      "SCOPED BY"
+    ],
+    [
+      "fi-commit-purchase",
+      "rl-procure-manager",
+      "ISSUED BY"
+    ],
+    [
+      "fi-commit-line-item",
+      "rl-estimator-chief",
+      "PRICED BY"
+    ],
+    [
+      "fi-chg-event-ce",
+      "rl-project-manager",
+      "MANAGED BY"
+    ],
+    [
+      "fi-chg-event-ce",
+      "rl-super",
+      "INITIATED BY"
+    ],
+    [
+      "fi-chg-event-ce",
+      "rl-design-manager",
+      "REVIEWED BY"
+    ],
+    [
+      "fi-chg-event-line",
+      "rl-cost-engineer",
+      "PRICED BY"
+    ],
+    [
+      "fi-pot-chg-order",
+      "rl-project-engineer",
+      "DRAFTED BY"
+    ],
+    [
+      "fi-commit-chg-order",
+      "rl-contract-adminis",
+      "PROCESSED BY"
+    ],
+    [
+      "fi-owner-chg-order",
+      "rl-project-executiv",
+      "NEGOTIATED BY"
+    ],
+    [
+      "fi-owner-chg-order",
+      "rl-owner-s",
+      "APPROVED BY"
+    ],
+    [
+      "fi-budget-mod",
+      "rl-project-manager",
+      "EXECUTED BY"
+    ],
+    [
+      "fi-budget-mod",
+      "rl-cost-engineer",
+      "ANALYZED BY"
+    ],
+    [
+      "fi-direct-cost",
+      "rl-super",
+      "INCURRED BY"
+    ],
+    [
+      "fi-direct-cost",
+      "rl-accountant-finan",
+      "RECORDED BY"
+    ],
+    [
+      "fi-direct-cost",
+      "rl-safety-manager",
+      "FLAGGED BY"
+    ],
+    [
+      "fi-direct-cost-line",
+      "rl-cost-engineer",
+      "CODED BY"
+    ],
+    [
+      "fi-owner-invoice",
+      "rl-project-manager",
+      "PREPARED BY"
+    ],
+    [
+      "fi-owner-invoice",
+      "rl-owner-s",
+      "CERTIFIED BY"
+    ],
+    [
+      "fi-sub-invoice",
+      "rl-accountant-finan",
+      "PROCESSED BY"
+    ],
+    [
+      "fi-payment",
+      "rl-accountant-finan",
+      "DISBURSED BY"
+    ],
+    [
+      "fi-lien-waiver",
+      "rl-contract-adminis",
+      "COLLECTED BY"
+    ],
+    [
+      "fi-contingency",
+      "rl-cost-engineer",
+      "FORECASTED BY"
+    ],
+    [
+      "fi-cost-forecast",
+      "rl-cost-engineer",
+      "PREPARED BY"
+    ],
+    [
+      "fi-cash-flow",
+      "rl-accountant-finan",
+      "PROJECTED BY"
+    ],
+    [
+      "fi-budget-variance",
+      "rl-project-manager",
+      "MONITORED BY"
+    ],
+    [
+      "fi-chg-order-rate",
+      "rl-project-executiv",
+      "BENCHMARKED BY"
+    ],
+    [
+      "fi-profit",
+      "rl-project-executiv",
+      "MONITORED BY"
+    ],
+    [
+      "fi-margin-pct",
+      "rl-project-executiv",
+      "MONITORED BY"
+    ],
+    [
+      "fi-margin-fade",
+      "rl-project-executiv",
+      "MONITORED BY"
+    ],
+    [
+      "fi-margin-fade",
+      "rl-project-manager",
+      "FLAGGED BY"
+    ],
+    [
+      "fi-markup-pct",
+      "rl-preconstruction",
+      "ESTABLISHED BY"
+    ],
+    [
+      "fi-markup-pct",
+      "rl-project-executiv",
+      "NEGOTIATED BY"
+    ],
+    [
+      "fi-backlog",
+      "rl-project-executiv",
+      "MONITORED BY"
+    ],
+    [
+      "fi-win-rate",
+      "rl-preconstruction",
+      "MANAGED BY"
+    ],
+    [
+      "fi-overhead-rate",
+      "rl-accountant-finan",
+      "CALCULATED BY"
+    ],
+    [
+      "fi-dso",
+      "rl-accountant-finan",
+      "MONITORED BY"
+    ],
+    [
+      "fi-bonding-capacity",
+      "rl-project-executiv",
+      "MANAGED BY"
+    ],
+    [
+      "fi-pm-workload",
+      "rl-project-manager",
+      "MEASURED FOR"
+    ],
+    [
+      "fi-precon-hit-rate",
+      "rl-preconstruction",
+      "MANAGED BY"
+    ],
+    [
+      "fi-precon-hit-rate",
+      "rl-estimator-chief",
+      "DEVELOPED BY"
+    ]
+  ],
+  "verbGlossary": {
+    "ADMINISTERED BY": "{source} manages the contractual lifecycle of a commitment, handling amendments, compliance tracking, and closeout documentation.",
+    "ALLOCATED BY": "{source} distributes budget dollars across line items and cost codes according to the project estimate and scope breakdown.",
+    "ANALYZED BY": "{source} examines {target} or variance to identify root causes, trends, and corrective actions.",
+    "APPROVED BY": "{source} grants formal authorization for {target} to proceed, committing the project to the associated cost or scope.",
+    "BENCHMARKED BY": "{source} compares a financial metric against portfolio or industry standards to assess project performance.",
+    "CERTIFIED BY": "{source} attests that an invoice or pay application accurately represents completed work and is eligible for payment.",
+    "CODED BY": "{source} assigns cost codes and WBS codes to direct cost line items for proper cost allocation and tracking.",
+    "COLLECTED BY": "{source} gathers lien waivers from subcontractors and suppliers each billing cycle to protect against lien claims.",
+    "DEVELOPED BY": "{source} creates the original project budget from conceptual estimates, detailed takeoffs, and market pricing.",
+    "DISBURSED BY": "{source} executes payment transactions, routing funds from the project account to subcontractors and suppliers.",
+    "DRAFTED BY": "{source} prepares the initial version of a potential change order or financial document for review by others.",
+    "EXECUTED BY": "{source} carries out a budget modification or transfer, moving funds between line items per approved direction.",
+    "FLAGGED BY": "{source} identifies direct costs associated with safety incidents, rework, or non-conformance for separate tracking and analysis.",
+    "FORECASTED BY": "{source} projects future contingency draws or cost trends based on current burn rate and remaining scope.",
+    "INCURRED BY": "Field {target} authorizes or causes a direct cost to be charged against the project through field operations or resource usage.",
+    "INITIATED BY": "{source} creates a change event based on a field condition, design issue, or owner directive requiring cost evaluation.",
+    "ISSUED BY": "{source} formally releases a purchase order or commitment to a vendor, establishing a contractual obligation.",
+    "MANAGED BY": "{source} oversees the full lifecycle of {target} from creation through closeout, including status tracking and approvals.",
+    "MONITORED BY": "{source} tracks {target} or metric over time, reviewing trends and flagging deviations from plan.",
+    "NEGOTIATED BY": "{source} conducts commercial negotiations on pricing, scope, and terms for a commitment or change order.",
+    "PREPARED BY": "{source} creates a financial document (invoice, SOV, forecast) assembling data from multiple project sources.",
+    "PRICED BY": "{source} develops the unit costs and extended amounts for line items in a change event or commitment.",
+    "PROCESSED BY": "{source} routes {target} through its approval and payment workflow, ensuring completeness and compliance.",
+    "PROJECTED BY": "{source} creates forward-looking cash flow schedules based on billing cycles, commitment values, and payment terms.",
+    "RECONCILED BY": "{source} compares actual costs posted against cost codes to committed and budgeted amounts, resolving discrepancies.",
+    "RECORDED BY": "{source} enters a financial transaction into the project accounting system, creating the official cost record.",
+    "REVIEWED BY": "{source} examines {target} for accuracy, completeness, and alignment with contract terms before advancing it in workflow.",
+    "SCOPED BY": "{source} defines the work scope and technical requirements that a commitment will cover during preconstruction.",
+    "STRUCTURED BY": "{source} establishes the hierarchical code framework (cost codes, WBS) that organizes project financial data.",
+    "ESTABLISHED BY": "{source} develops the initial fee structure or markup percentage during preconstruction based on market conditions and project complexity.",
+    "CALCULATED BY": "{source} computes a financial metric or rate from underlying project data for reporting and analysis.",
+    "MEASURED FOR": "{source} workload or capacity metric is quantified for {target} to assess bandwidth and project allocation."
+  }
+}

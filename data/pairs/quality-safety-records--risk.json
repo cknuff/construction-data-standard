@@ -1,0 +1,467 @@
+{
+  "source": "quality-safety-records",
+  "target": "risk",
+  "edges": [
+    [
+      "qsr-observation",
+      "rk-risk-trigger",
+      "SIGNALS"
+    ],
+    [
+      "qsr-observation",
+      "rk-risk-register",
+      "LOGGED IN"
+    ],
+    [
+      "qsr-observation",
+      "rk-risk-score",
+      "ELEVATES"
+    ],
+    [
+      "qsr-safety-observati",
+      "rk-safety-risk",
+      "INDICATES"
+    ],
+    [
+      "qsr-safety-observati",
+      "rk-risk-trigger",
+      "ACTIVATES"
+    ],
+    [
+      "qsr-safety-observati",
+      "rk-likelihood-asses",
+      "INFORMS"
+    ],
+    [
+      "qsr-quality-observat",
+      "rk-const-execution",
+      "EXPOSES"
+    ],
+    [
+      "qsr-quality-observat",
+      "rk-design-risk",
+      "REVEALS"
+    ],
+    [
+      "qsr-enviro-cx",
+      "rk-enviro-risk",
+      "INDICATES"
+    ],
+    [
+      "qsr-enviro-cx",
+      "rk-reg-permit-risk",
+      "ESCALATES"
+    ],
+    [
+      "qsr-insp",
+      "rk-risk",
+      "VALIDATES ABSENCE OF"
+    ],
+    [
+      "qsr-insp-item",
+      "rk-risk-trigger",
+      "TRIGGERED BY"
+    ],
+    [
+      "qsr-insp-item",
+      "rk-const-execution",
+      "EXPOSES"
+    ],
+    [
+      "qsr-scheduled-insp",
+      "rk-mitigation-actio",
+      "IMPLEMENTS"
+    ],
+    [
+      "qsr-third-party",
+      "rk-reg-permit-risk",
+      "MITIGATES"
+    ],
+    [
+      "qsr-third-party",
+      "rk-risk-allocation",
+      "REQUIRED BY"
+    ],
+    [
+      "qsr-punch-item",
+      "rk-const-execution",
+      "EVIDENCES"
+    ],
+    [
+      "qsr-punch-item",
+      "rk-residual-risk",
+      "REPRESENTS"
+    ],
+    [
+      "qsr-punch-item-issue",
+      "rk-risk-category",
+      "CLASSIFIES INTO"
+    ],
+    [
+      "qsr-punch-item-2",
+      "rk-residual-risk",
+      "CLOSES"
+    ],
+    [
+      "qsr-punch-item-2",
+      "rk-risk-mitigation",
+      "CONTRIBUTES TO"
+    ],
+    [
+      "qsr-incident",
+      "rk-safety-risk",
+      "MATERIALIZES"
+    ],
+    [
+      "qsr-incident",
+      "rk-risk-register",
+      "LOGGED IN"
+    ],
+    [
+      "qsr-incident",
+      "rk-impact-assessmen",
+      "QUANTIFIED BY"
+    ],
+    [
+      "qsr-incident",
+      "rk-risk-score",
+      "ELEVATES"
+    ],
+    [
+      "qsr-incident-record",
+      "rk-likelihood-asses",
+      "INFORMS"
+    ],
+    [
+      "qsr-incident-record",
+      "rk-risk-trigger",
+      "DOCUMENTS"
+    ],
+    [
+      "qsr-incident-witness",
+      "rk-risk-owner",
+      "ASSIGNS ACCOUNTABILITY TO"
+    ],
+    [
+      "qsr-corrective-actio",
+      "rk-mitigation-actio",
+      "IMPLEMENTS"
+    ],
+    [
+      "qsr-corrective-actio",
+      "rk-residual-risk",
+      "REDUCES"
+    ],
+    [
+      "qsr-corrective-actio",
+      "rk-risk-response",
+      "ENACTS"
+    ],
+    [
+      "qsr-safety-violation",
+      "rk-safety-risk",
+      "MATERIALIZES"
+    ],
+    [
+      "qsr-safety-violation",
+      "rk-reg-permit-risk",
+      "ESCALATES"
+    ],
+    [
+      "qsr-safety-violation",
+      "rk-risk-exposure",
+      "INCREASES"
+    ],
+    [
+      "qsr-safety-violation",
+      "rk-insurance-requir",
+      "TRIGGERS REVIEW OF"
+    ],
+    [
+      "qsr-non-conformance",
+      "rk-const-execution",
+      "EVIDENCES"
+    ],
+    [
+      "qsr-non-conformance",
+      "rk-design-risk",
+      "REVEALS"
+    ],
+    [
+      "qsr-non-conformance",
+      "rk-risk-register",
+      "LOGGED IN"
+    ],
+    [
+      "qsr-deficiency-notic",
+      "rk-risk-trigger",
+      "ACTIVATES"
+    ],
+    [
+      "qsr-deficiency-notic",
+      "rk-labor-risk",
+      "INDICATES"
+    ],
+    [
+      "qsr-coord-issue",
+      "rk-coord-risk",
+      "EVIDENCES"
+    ],
+    [
+      "qsr-coord-issue",
+      "rk-risk-score",
+      "ELEVATES"
+    ],
+    [
+      "qsr-coord-issue-2",
+      "rk-design-risk",
+      "REVEALS"
+    ],
+    [
+      "qsr-coord-issue-2",
+      "rk-coord-risk",
+      "ESCALATES"
+    ],
+    [
+      "qsr-mat-test-report",
+      "rk-supply-chain",
+      "VALIDATES AGAINST"
+    ],
+    [
+      "qsr-mat-test-report",
+      "rk-risk-trigger",
+      "TRIGGERED BY"
+    ],
+    [
+      "qsr-system-perf-test",
+      "rk-const-execution",
+      "VALIDATES AGAINST"
+    ],
+    [
+      "qsr-system-perf-test",
+      "rk-residual-risk",
+      "REDUCES"
+    ],
+    [
+      "qsr-action-plan",
+      "rk-risk-response",
+      "ENACTS"
+    ],
+    [
+      "qsr-action-plan",
+      "rk-mitigation-actio",
+      "IMPLEMENTS"
+    ],
+    [
+      "qsr-action-plan-line",
+      "rk-mitigation-actio",
+      "IMPLEMENTS"
+    ],
+    [
+      "qsr-action-plan-line",
+      "rk-risk-owner",
+      "ASSIGNED TO"
+    ],
+    [
+      "rk-safety-risk",
+      "qsr-scheduled-insp",
+      "MITIGATED BY"
+    ],
+    [
+      "rk-safety-risk",
+      "qsr-action-plan",
+      "MITIGATED BY"
+    ],
+    [
+      "rk-const-execution",
+      "qsr-insp",
+      "MITIGATED BY"
+    ],
+    [
+      "rk-const-execution",
+      "qsr-quality-observat",
+      "DETECTED BY"
+    ],
+    [
+      "rk-design-risk",
+      "qsr-coord-issue-2",
+      "DETECTED BY"
+    ],
+    [
+      "rk-enviro-risk",
+      "qsr-enviro-cx",
+      "DETECTED BY"
+    ],
+    [
+      "rk-supply-chain",
+      "qsr-mat-test-report",
+      "DETECTED BY"
+    ],
+    [
+      "rk-labor-risk",
+      "qsr-deficiency-notic",
+      "INDICATED BY"
+    ],
+    [
+      "rk-risk-matrix",
+      "qsr-observation-dens",
+      "CALIBRATED BY"
+    ],
+    [
+      "rk-risk-matrix",
+      "qsr-deficiency-rate",
+      "CALIBRATED BY"
+    ],
+    [
+      "qsr-observation-dens",
+      "rk-likelihood-asses",
+      "INFORMS"
+    ],
+    [
+      "qsr-observation-dens",
+      "rk-risk-score",
+      "ELEVATES"
+    ],
+    [
+      "qsr-deficiency-rate",
+      "rk-const-execution",
+      "SIGNALS"
+    ],
+    [
+      "qsr-deficiency-rate",
+      "rk-risk-exposure",
+      "INCREASES"
+    ],
+    [
+      "qsr-punch-item-3",
+      "rk-residual-risk",
+      "SIGNALS"
+    ],
+    [
+      "qsr-punch-item-3",
+      "rk-const-execution",
+      "SIGNALS"
+    ],
+    [
+      "qsr-total-recordable",
+      "rk-incident-rate",
+      "MIRRORS"
+    ],
+    [
+      "qsr-total-recordable",
+      "rk-safety-risk",
+      "QUANTIFIES"
+    ],
+    [
+      "qsr-dart-rate",
+      "rk-safety-risk",
+      "QUANTIFIES"
+    ],
+    [
+      "qsr-dart-rate",
+      "rk-risk-exposure",
+      "INCREASES"
+    ],
+    [
+      "qsr-hazard-recurrenc",
+      "rk-safety-risk",
+      "ESCALATES"
+    ],
+    [
+      "qsr-hazard-recurrenc",
+      "rk-likelihood-asses",
+      "INFORMS"
+    ],
+    [
+      "qsr-rework-cost",
+      "rk-financial-risk",
+      "ESCALATES"
+    ],
+    [
+      "qsr-rework-cost",
+      "rk-contingency-burn",
+      "ACCELERATES"
+    ],
+    [
+      "qsr-observation-reso",
+      "rk-residual-risk",
+      "PROLONGS"
+    ],
+    [
+      "qsr-observation-reso",
+      "rk-risk-mitigation",
+      "DEGRADES"
+    ],
+    [
+      "qsr-insp-pass-rate",
+      "rk-const-execution",
+      "SIGNALS"
+    ],
+    [
+      "qsr-insp-pass-rate",
+      "rk-risk-score",
+      "MODERATES"
+    ],
+    [
+      "qsr-near-miss-ratio",
+      "rk-safety-risk",
+      "SIGNALS"
+    ],
+    [
+      "qsr-near-miss-ratio",
+      "rk-likelihood-asses",
+      "INFORMS"
+    ],
+    [
+      "qsr-corrective-actio-2",
+      "rk-risk-mitigation",
+      "CONTRIBUTES TO"
+    ],
+    [
+      "qsr-corrective-actio-2",
+      "rk-residual-risk",
+      "REDUCES"
+    ]
+  ],
+  "verbGlossary": {
+    "ACTIVATES": "{source} fires {target} trigger, moving a risk from dormant to active status",
+    "ACCELERATES": "{source} causes {target}-side burn rate or consumption metric to increase faster",
+    "ASSIGNED TO": "{source} is linked to {target} owner responsible for its completion",
+    "ASSIGNS ACCOUNTABILITY TO": "{source} identifies the party accountable for {target} event that materialized",
+    "CALIBRATED BY": "{target} framework uses a quality/safety metric to tune probability or severity thresholds",
+    "CLASSIFIES INTO": "{source} maps its root cause into the corresponding {target} for tracking",
+    "CLOSES": "{source}of a quality finding formally closes the associated residual {target}",
+    "CONTRIBUTES TO": "A quality/safety metric or closure event improves the overall {target} mitigation completion rate",
+    "DEGRADES": "Slow quality resolution worsens {target} mitigation completion rate",
+    "DETECTED BY": "{target} is discovered or surfaced through a quality/safety record type",
+    "DOCUMENTS": "{source}record provides formal written evidence of {target} trigger or event",
+    "ELEVATES": "A quality/safety finding or trend raises the calculated {target}",
+    "ENACTS": "{source} or action plan formally executes a planned {target} response strategy",
+    "ESCALATES": "A quality/safety finding increases the severity or urgency of {target} beyond its prior level",
+    "EVIDENCES": "{source}record provides concrete proof that {target} category has materialized on the project",
+    "EXPOSES": "{source} reveals vulnerability to {target} that was previously latent or underestimated",
+    "IMPLEMENTS": "{source}carries out a specific {target} mitigation action in the field",
+    "INCREASES": "A quality/safety metric or violation raises the monetary or schedule exposure value of {target}",
+    "INDICATED BY": "{target} is made apparent by a pattern of quality/safety formal notices",
+    "INDICATES": "{source}that a specific {target} is present or growing",
+    "INFORMS": "{source}record or metric provides data that shapes {target} likelihood or severity assessment",
+    "LOGGED IN": "{source} is formally entered into {target} register as a tracked risk event",
+    "MATERIALIZES": "A quality/safety event represents {target} that has actually occurred (moved from potential to realized)",
+    "MITIGATES": "{source}inspection or process directly reduces the probability or impact of {target} category",
+    "MIRRORS": "{source} tracks the same underlying phenomenon as the corresponding {target}",
+    "MITIGATED BY": "{target} is reduced in probability or impact through a quality/safety process or inspection",
+    "MODERATES": "A favorable quality/safety metric lowers or tempers an otherwise elevated {target}",
+    "PROLONGS": "Slow resolution time extends the duration that a residual {target} remains open and active",
+    "QUANTIFIED BY": "{source}is measured through {target} impact assessment process",
+    "QUANTIFIES": "{source}rate metric puts a numeric value on the level of {target} category",
+    "REDUCES": "{source} or test result lowers the residual {target} remaining after response",
+    "REPRESENTS": "{source} stands as a concrete instance of residual {target} that persists until resolved",
+    "REQUIRED BY": "{source} is mandated by {target} allocation or transfer mechanism",
+    "REVEALS": "A quality/safety finding uncovers a previously hidden or underestimated design or coordination {target}",
+    "SIGNALS": "A quality/safety metric serves as a leading or lagging indicator of {target} condition",
+    "TRIGGERED BY": "{source} is created in response to {target} trigger condition being met",
+    "TRIGGERS REVIEW OF": "{source} forces a re-evaluation of insurance or bonding requirements",
+    "VALIDATES ABSENCE OF": "{source}inspection confirms that {target} has not materialized for the inspected scope",
+    "VALIDATES AGAINST": "A test report verifies materials or systems against the standards required to mitigate {target}"
+  }
+}

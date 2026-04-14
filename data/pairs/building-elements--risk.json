@@ -1,0 +1,308 @@
+{
+  "source": "building-elements",
+  "target": "risk",
+  "edges": [
+    [
+      "be-excav",
+      "rk-geotechnical-ris",
+      "ENCOUNTERS"
+    ],
+    [
+      "be-excav",
+      "rk-safety-risk",
+      "POSES"
+    ],
+    [
+      "be-dewater",
+      "rk-enviro-risk",
+      "AGGRAVATES"
+    ],
+    [
+      "be-dewater",
+      "rk-reg-permit-risk",
+      "REQUIRES CLEARANCE FROM"
+    ],
+    [
+      "be-erosion",
+      "rk-enviro-risk",
+      "SAFEGUARDS AGAINST"
+    ],
+    [
+      "be-backfill",
+      "rk-geotechnical-ris",
+      "CONCEALS"
+    ],
+    [
+      "be-deep-fdn",
+      "rk-schedule-risk",
+      "DELAYS DUE TO"
+    ],
+    [
+      "be-deep-fdn",
+      "rk-risk-exposure",
+      "CONCENTRATES"
+    ],
+    [
+      "be-shallow-fdn",
+      "rk-design-risk",
+      "BEARS LOAD PER"
+    ],
+    [
+      "be-bg-wp",
+      "rk-residual-risk",
+      "SEALS AGAINST"
+    ],
+    [
+      "be-sog",
+      "rk-risk-trigger",
+      "CRACKS UNDER"
+    ],
+    [
+      "be-water-main",
+      "rk-supply-chain",
+      "AWAITS DELIVERY FOR"
+    ],
+    [
+      "be-sanitary",
+      "rk-reg-permit-risk",
+      "INSPECTED UNDER"
+    ],
+    [
+      "be-storm",
+      "rk-enviro-risk",
+      "DIVERTS RUNOFF PER"
+    ],
+    [
+      "be-gas-svc",
+      "rk-safety-risk",
+      "INTRODUCES"
+    ],
+    [
+      "be-columns",
+      "rk-const-execution",
+      "ERECTED UNDER"
+    ],
+    [
+      "be-beams",
+      "rk-coord-risk",
+      "CLASHES WITH"
+    ],
+    [
+      "be-slabs",
+      "rk-schedule-risk",
+      "GATES"
+    ],
+    [
+      "be-connections",
+      "rk-design-risk",
+      "MISALIGNS UNDER"
+    ],
+    [
+      "be-roof-struct",
+      "rk-safety-risk",
+      "EXPOSES CREWS TO"
+    ],
+    [
+      "be-curtainwall",
+      "rk-supply-chain",
+      "DEPENDS ON FABRICATION FOR"
+    ],
+    [
+      "be-curtainwall",
+      "rk-design-risk",
+      "TOLERANCES CHALLENGED BY"
+    ],
+    [
+      "be-windows",
+      "rk-schedule-float",
+      "ERODES"
+    ],
+    [
+      "be-panels",
+      "rk-labor-risk",
+      "REQUIRES SKILLED CREW FOR"
+    ],
+    [
+      "be-amb",
+      "rk-residual-risk",
+      "DETERIORATES INTO"
+    ],
+    [
+      "be-roof-mem",
+      "rk-risk-trigger",
+      "PUNCTURED BY"
+    ],
+    [
+      "be-flashing",
+      "rk-const-execution",
+      "FAILS UNDER"
+    ],
+    [
+      "be-ductwork",
+      "rk-coord-risk",
+      "COLLIDES WITH"
+    ],
+    [
+      "be-ahu",
+      "rk-supply-chain",
+      "BACKORDERED UNDER"
+    ],
+    [
+      "be-hvac-ctrl",
+      "rk-design-risk",
+      "MISCONFIGURED UNDER"
+    ],
+    [
+      "be-tab",
+      "rk-schedule-buffer",
+      "EXTENDS INTO"
+    ],
+    [
+      "be-dom-water",
+      "rk-const-execution",
+      "PRESSURE-TESTED UNDER"
+    ],
+    [
+      "be-waste-vent",
+      "rk-reg-permit-risk",
+      "CODE-REVIEWED UNDER"
+    ],
+    [
+      "be-gas-pipe",
+      "rk-safety-risk",
+      "RUPTURES UNDER"
+    ],
+    [
+      "be-power-dist",
+      "rk-safety-risk",
+      "ARC-FLASHES UNDER"
+    ],
+    [
+      "be-conduit",
+      "rk-coord-risk",
+      "CONFLICTS WITH"
+    ],
+    [
+      "be-emerg-pwr",
+      "rk-reg-permit-risk",
+      "MANDATED BY"
+    ],
+    [
+      "be-grounding",
+      "rk-insurance-requir",
+      "STIPULATED BY"
+    ],
+    [
+      "be-sprink-main",
+      "rk-reg-permit-risk",
+      "CERTIFIED UNDER"
+    ],
+    [
+      "be-fa",
+      "rk-mitigation-actio",
+      "ACTIVATES"
+    ],
+    [
+      "be-fire-pump",
+      "rk-risk-score",
+      "DOWNGRADES"
+    ],
+    [
+      "be-elev-car",
+      "rk-schedule-risk",
+      "HOLDS CRITICAL PATH IN"
+    ],
+    [
+      "be-elev-mach",
+      "rk-supply-chain",
+      "LONG-LEAD UNDER"
+    ],
+    [
+      "be-drywall",
+      "rk-schedule-risk",
+      "SEQUENCED BY"
+    ],
+    [
+      "be-paint",
+      "rk-residual-risk",
+      "REVEALS"
+    ],
+    [
+      "be-tile",
+      "rk-const-execution",
+      "FRACTURES UNDER"
+    ],
+    [
+      "be-casework",
+      "rk-supply-chain",
+      "DELAYED BY"
+    ],
+    [
+      "be-bas",
+      "rk-coord-risk",
+      "INTEGRATES ACROSS"
+    ],
+    [
+      "be-fencing",
+      "rk-safety-risk",
+      "SECURES AGAINST"
+    ],
+    [
+      "be-site-elec",
+      "rk-risk-allocation",
+      "SPLIT ACROSS"
+    ]
+  ],
+  "verbGlossary": {
+    "ACTIVATES": "{source} triggers a protective response when {target} event occurs (e.g., fire alarm activates mitigation action by initiating evacuation sequence)",
+    "AGGRAVATES": "{source} activity worsens an existing environmental or site condition (e.g., dewatering aggravates environmental {target} by discharging contaminated groundwater)",
+    "ARC-FLASHES UNDER": "{source} creates arc-flash hazard during energized work, posing safety {target} (e.g., power distribution arc-flashes under safety risk during panel terminations)",
+    "AWAITS DELIVERY FOR": "{source} installation is blocked pending material arrival, exposing the project to supply chain {target} (e.g., water main awaits delivery for long-lead pipe)",
+    "BACKORDERED UNDER": "{source} equipment is unavailable from manufacturers, creating supply chain {target} (e.g., air handling units backordered under supply chain risk from global shortages)",
+    "BEARS LOAD PER": "{source} is sized and designed to carry structural loads, inheriting design {target} if calculations are wrong (e.g., shallow foundation bears load per design risk assumptions)",
+    "CERTIFIED UNDER": "{source} must receive third-party certification or authority approval before occupancy (e.g., sprinkler mains certified under regulatory and permit {target} for fire marshal sign-off)",
+    "CLASHES WITH": "{source} physically conflicts with another system in the 3D model or field, creating coordination {target} (e.g., beams clash with MEP runs in ceiling plenum)",
+    "CODE-REVIEWED UNDER": "{source} must satisfy plumbing, mechanical, or building code before inspection sign-off (e.g., waste and vent code-reviewed under regulatory and permit {target})",
+    "COLLIDES WITH": "{source} occupies the same spatial zone as another system, forcing field rework (e.g., ductwork collides with structural members, creating coordination {target})",
+    "CONCEALS": "{source} covers prior work, making latent defects undetectable after placement (e.g., backfill conceals geotechnical {target} by burying soil conditions)",
+    "CONCENTRATES": "{source} focuses a disproportionate share of project cost or {target} into a single scope area (e.g., deep foundations concentrate risk exposure in early phases)",
+    "CONFLICTS WITH": "{source} routing competes for the same pathway or space as other systems (e.g., conduit conflicts with ductwork in coordination {target} zones)",
+    "CRACKS UNDER": "{source} develops physical failure when subjected to {target} conditions such as settlement or thermal movement (e.g., slab on grade cracks under differential settlement triggers)",
+    "DELAYED BY": "{source} cannot be installed on time because a supply chain event has pushed delivery out (e.g., casework delayed by supply chain {target} from custom millwork lead times)",
+    "DELAYS DUE TO": "{source} installation is held up because {target} condition materializes (e.g., deep foundations delayed due to schedule risk from unexpected refusal)",
+    "DEPENDS ON FABRICATION FOR": "{source} requires off-site manufacturing with long lead times, creating supply chain dependency (e.g., curtain wall depends on fabrication for custom extrusions)",
+    "DETERIORATES INTO": "{source} degrades over time if improperly installed, converting a latent defect into {target} (e.g., air barrier deteriorates into residual risk if laps are unsealed)",
+    "DIVERTS RUNOFF PER": "{source} channels water away from the site to meet environmental compliance (e.g., storm drainage diverts runoff per environmental {target} controls)",
+    "DOWNGRADES": "{source} installation reduces the assessed severity of {target} (e.g., fire pump downgrades risk score for fire suppression adequacy)",
+    "ENCOUNTERS": "{source} directly contacts or disturbs a subsurface condition, surfacing a geotechnical {target} (e.g., excavation encounters unknown soil or rock)",
+    "ERECTED UNDER": "{source} is assembled at height or under load, with installation governed by execution {target} controls (e.g., columns erected under construction execution risk protocols)",
+    "ERODES": "{source} delay or rework chips away at available float in the project schedule (e.g., late window deliveries erode schedule float)",
+    "EXPOSES CREWS TO": "{source} installation puts workers in proximity to fall, struck-by, or other jobsite hazards (e.g., roof structure exposes crews to fall safety {target})",
+    "EXTENDS INTO": "{source} activity overruns its planned duration and spills into schedule reserve time (e.g., TAB extends into schedule buffer when systems do not balance)",
+    "FAILS UNDER": "{source} does not perform as intended when subjected to construction-phase stresses or weather (e.g., flashing fails under construction execution from improper lapping)",
+    "FRACTURES UNDER": "{source} breaks or chips during or after installation due to improper substrate preparation or loading (e.g., floor tile fractures under construction execution from uneven substrate)",
+    "GATES": "{source} controls the start of downstream work, making it a schedule bottleneck (e.g., floor slabs gate interior rough-in trades)",
+    "HOLDS CRITICAL PATH IN": "{source} sits on the critical path and its delay directly extends the project completion date (e.g., elevator car holds critical path in schedule {target})",
+    "INTEGRATES ACROSS": "{source} must coordinate with multiple other systems and trades, concentrating coordination {target} at the integration point (e.g., building automation integrates across HVAC, lighting, and fire alarm, creating coordination risk at system boundaries)",
+    "INSPECTED UNDER": "{source} must pass regulatory inspection before it can be covered or put into service (e.g., sanitary sewer inspected under regulatory permit requirements)",
+    "INTRODUCES": "{source} brings a new category of hazard onto the project (e.g., gas service introduces safety {target} from flammable material on site)",
+    "LONG-LEAD UNDER": "{source} requires extended procurement lead time, making it vulnerable to supply chain disruption (e.g., elevator machinery is long-lead under supply chain {target})",
+    "MANDATED BY": "{source} is required by code or authority having jurisdiction, not optional (e.g., emergency power mandated by regulatory and permit {target} for life safety)",
+    "MISALIGNS UNDER": "{source} fails to fit as designed when field conditions deviate from drawings (e.g., connections misalign under design {target} from tolerance stack-up)",
+    "MISCONFIGURED UNDER": "{source} is incorrectly specified or programmed due to incomplete design information (e.g., HVAC controls misconfigured under design {target} from late sequence of operations)",
+    "POSES": "{source} introduces a hazard to workers during installation or construction (e.g., excavation poses safety {target} from trench collapse)",
+    "PRESSURE-TESTED UNDER": "{source} must pass a field test before concealment, with failure triggering execution {target} (e.g., domestic water pressure-tested under construction execution risk protocol)",
+    "PUNCTURED BY": "{source} is physically damaged by other trades working on or through it, triggering {target} event (e.g., roof membrane punctured by mechanical penetrations)",
+    "REQUIRES CLEARANCE FROM": "{source} cannot proceed until a regulatory or permit authority grants approval (e.g., dewatering requires clearance from permit authority for discharge)",
+    "REQUIRES SKILLED CREW FOR": "{source} installation demands specialized trade labor that may be in short supply (e.g., precast panels require skilled crew for rigging and setting)",
+    "REVEALS": "{source} work uncovers previously hidden defects in underlying systems (e.g., paint reveals residual {target} from drywall finishing defects)",
+    "RUPTURES UNDER": "{source} fails catastrophically, creating an immediate safety hazard on the jobsite (e.g., gas piping ruptures under safety {target} from excavation damage)",
+    "SAFEGUARDS AGAINST": "{source} is installed specifically to prevent or reduce an environmental or site {target} (e.g., erosion control safeguards against stormwater environmental risk)",
+    "SEALS AGAINST": "{source} provides a protective barrier that prevents moisture or environmental intrusion, reducing residual {target} (e.g., below-grade waterproofing seals against residual water intrusion risk)",
+    "SECURES AGAINST": "{source} provides physical protection that reduces a safety hazard on site (e.g., fencing secures against safety {target} from unauthorized site access)",
+    "SEQUENCED BY": "{source} installation order is dictated by schedule dependencies that carry {target} if disrupted (e.g., drywall sequenced by schedule risk after MEP rough-in)",
+    "SPLIT ACROSS": "{source} scope is divided among multiple responsible parties, creating {target} allocation complexity (e.g., site electrical split across risk allocation between GC and utility company)",
+    "STIPULATED BY": "{source} installation standards are specified as a condition of project insurance coverage (e.g., grounding stipulated by insurance requirement for lightning protection)",
+    "TOLERANCES CHALLENGED BY": "{source} has tight dimensional requirements that are jeopardized when design details are incomplete or conflicting (e.g., curtain wall tolerances challenged by design {target} in embed locations)"
+  }
+}

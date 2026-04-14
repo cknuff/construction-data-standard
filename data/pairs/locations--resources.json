@@ -1,0 +1,301 @@
+{
+  "source": "locations",
+  "target": "resources",
+  "edges": [
+    [
+      "loc-project-site",
+      "res-laborer",
+      "MOBILIZES"
+    ],
+    [
+      "loc-project-site",
+      "res-safety",
+      "STATIONS"
+    ],
+    [
+      "loc-project-site",
+      "res-crane",
+      "RIGS AT"
+    ],
+    [
+      "loc-project-site",
+      "res-earthmover",
+      "STAGES"
+    ],
+    [
+      "loc-project-site",
+      "mat-site",
+      "STOCKPILES"
+    ],
+    [
+      "loc-building",
+      "res-ironworker",
+      "HOUSES"
+    ],
+    [
+      "loc-building",
+      "mat-steel",
+      "RECEIVES"
+    ],
+    [
+      "loc-exterior-zone",
+      "res-compaction",
+      "COMPACTS WITH"
+    ],
+    [
+      "loc-laydown-staging",
+      "res-mat-handle",
+      "STAGES"
+    ],
+    [
+      "loc-laydown-staging",
+      "mat-lumber",
+      "STOCKPILES"
+    ],
+    [
+      "loc-temp-facility",
+      "res-temp-util",
+      "POWERS"
+    ],
+    [
+      "loc-right-way",
+      "res-hauling",
+      "ROUTES"
+    ],
+    [
+      "loc-floor-level",
+      "res-concrete",
+      "POURS WITH"
+    ],
+    [
+      "loc-floor-level",
+      "res-electrician",
+      "ROUGHS IN"
+    ],
+    [
+      "loc-floor-level",
+      "res-drywall",
+      "FRAMES WITH"
+    ],
+    [
+      "loc-floor-level",
+      "mat-rebar",
+      "PLACES"
+    ],
+    [
+      "loc-floor-level",
+      "mat-framing",
+      "INSTALLS"
+    ],
+    [
+      "loc-floor-level",
+      "res-access",
+      "LIFTS WITH"
+    ],
+    [
+      "loc-below-grade",
+      "res-waterproofer",
+      "SEALS WITH"
+    ],
+    [
+      "loc-below-grade",
+      "res-piling",
+      "DRIVES WITH"
+    ],
+    [
+      "loc-below-grade",
+      "mat-waterproof",
+      "APPLIES"
+    ],
+    [
+      "loc-roof-level",
+      "res-roofer",
+      "DECKS WITH"
+    ],
+    [
+      "loc-roof-level",
+      "mat-roofing",
+      "INSTALLS"
+    ],
+    [
+      "loc-zone-wing",
+      "res-qc",
+      "INSPECTS WITH"
+    ],
+    [
+      "loc-core-shaft",
+      "res-elevator",
+      "INSTALLS IN"
+    ],
+    [
+      "loc-core-shaft",
+      "res-sprinkler",
+      "RISERS IN"
+    ],
+    [
+      "loc-ceiling-plenum",
+      "res-sheetmetal",
+      "RUNS DUCT IN"
+    ],
+    [
+      "loc-ceiling-plenum",
+      "res-lowvolt",
+      "PULLS CABLE IN"
+    ],
+    [
+      "loc-ceiling-plenum",
+      "res-insulator",
+      "WRAPS IN"
+    ],
+    [
+      "loc-room-space",
+      "res-ceiling",
+      "GRIDS WITH"
+    ],
+    [
+      "loc-room-space",
+      "mat-flooring",
+      "LAYS"
+    ],
+    [
+      "loc-room-space",
+      "mat-lighting",
+      "FIXTURES WITH"
+    ],
+    [
+      "loc-room-space",
+      "mat-doors",
+      "HANGS"
+    ],
+    [
+      "loc-functional-area",
+      "mat-hvac-equip",
+      "SERVES"
+    ],
+    [
+      "loc-wet-area",
+      "res-plumber",
+      "TRIMS WITH"
+    ],
+    [
+      "loc-wet-area",
+      "mat-plumbing",
+      "PIPES WITH"
+    ],
+    [
+      "loc-wall-surface",
+      "res-mason",
+      "LAYS WITH"
+    ],
+    [
+      "loc-wall-surface",
+      "res-glazier",
+      "GLAZES WITH"
+    ],
+    [
+      "loc-wall-surface",
+      "mat-glass",
+      "CURTAINS WITH"
+    ],
+    [
+      "loc-equip-location",
+      "res-cxa",
+      "COMMISSIONS AT"
+    ],
+    [
+      "loc-penetration-open",
+      "res-fireproofer",
+      "SEALS WITH"
+    ],
+    [
+      "loc-penetration-open",
+      "mat-thermal",
+      "FIRESTOPS WITH"
+    ],
+    [
+      "loc-fire-smoke",
+      "mat-fp",
+      "SAFEGUARDS WITH"
+    ],
+    [
+      "loc-work-zone-phase",
+      "res-carpenter",
+      "DEPLOYS"
+    ],
+    [
+      "loc-cx-zone",
+      "res-cxa",
+      "VERIFIES WITH"
+    ],
+    [
+      "loc-grid-line",
+      "res-survey-inst",
+      "LAYS OUT WITH"
+    ],
+    [
+      "loc-defect-density",
+      "res-qc",
+      "QUANTIFIED BY"
+    ],
+    [
+      "loc-safety-incident",
+      "res-safety",
+      "QUANTIFIED BY"
+    ],
+    [
+      "loc-firestopping-def",
+      "res-fireproofer",
+      "QUANTIFIED BY"
+    ],
+    [
+      "loc-floor-completion",
+      "res-floor",
+      "QUANTIFIED BY"
+    ]
+  ],
+  "verbGlossary": {
+    "MOBILIZES": "{source} brings {target} or worker on-site for the duration of project work at that area",
+    "STATIONS": "{source} is the permanent post for a safety or supervisory {target} throughout the project",
+    "RIGS AT": "Heavy lift {target} is erected and anchored at a specific site or staging position",
+    "STAGES": "{source} or {target}s are pre-positioned in a laydown area or exterior zone before installation",
+    "STOCKPILES": "Bulk {target}s are stored at a staging area or site location awaiting distribution to work areas",
+    "HOUSES": "{source} envelope contains and shelters {target}s working inside it",
+    "RECEIVES": "{source} accepts inbound {target}s delivered for installation within that area",
+    "COMPACTS WITH": "{source} is densified to specification using compaction {target}",
+    "POWERS": "{source}is served by temporary utility connections for power, water, or heat",
+    "ROUTES": "Right-of-way corridor directs hauling {target} along a defined path to and from the site",
+    "POURS WITH": "{source} or below-grade level receives cast-in-place concrete placed by concrete {target}s",
+    "ROUGHS IN": "{source} level receives first-fix mechanical or electrical distribution installed by {target}",
+    "FRAMES WITH": "{source} level receives metal stud or wood framing erected by the drywall or carpentry {target}",
+    "PLACES": "{source} level receives reinforcing steel or concrete deposited in its final structural position",
+    "INSTALLS": "{source} receives {target} or assembly permanently fixed in place",
+    "LIFTS WITH": "{source} level uses access {target} such as scissor lifts or scaffolding to reach overhead work",
+    "SEALS WITH": "{source} is made watertight or firestopped by a specialty {target}",
+    "DRIVES WITH": "{source} receives deep foundation elements installed by piling {target}",
+    "APPLIES": "{source} receives a liquid or sheet membrane waterproofing application",
+    "DECKS WITH": "{source}level receives roofing system installed by the roofing {target}",
+    "INSPECTS WITH": "{source} or wing is walked by QC inspector to verify workmanship against specifications",
+    "INSTALLS IN": "{source}receives a vertical system such as an elevator cab installed by {target}",
+    "RISERS IN": "{source}receives vertical fire protection piping run by sprinkler fitters",
+    "RUNS DUCT IN": "{source} receives HVAC ductwork fabricated and hung by the sheet metal {target}",
+    "PULLS CABLE IN": "{source} receives low voltage or data cabling pulled by the low voltage {target}",
+    "WRAPS IN": "{source} receives insulation applied by the insulation {target}",
+    "GRIDS WITH": "{source} or space receives suspended ceiling grid and tile installed by the ceiling {target}",
+    "LAYS": "{source} receives flooring {target} laid and adhered to the substrate",
+    "FIXTURES WITH": "{source} receives lighting {target}s trimmed out and connected",
+    "HANGS": "{source} receives doors hung in their frames with specified hardware",
+    "SERVES": "{source}area is conditioned by HVAC {target} sized and ducted to serve that space",
+    "TRIMS WITH": "{source}area receives finish plumbing trim including faucets, {target}s, and drains installed by plumbers",
+    "PIPES WITH": "{source}area receives plumbing {target} and waste piping rough-in",
+    "LAYS WITH": "{source}receives masonry units laid by masons in courses to design height",
+    "GLAZES WITH": "{source}receives glass panels or curtain wall units installed by glaziers",
+    "CURTAINS WITH": "{source}receives glass and aluminum curtain wall assembly",
+    "COMMISSIONS AT": "{source} location undergoes functional testing led by the commissioning agent",
+    "FIRESTOPS WITH": "{source}receives rated fire-stop {target} packed and sealed to specification",
+    "SAFEGUARDS WITH": "{source} is lined with fire protection {target}s to maintain its rated barrier",
+    "DEPLOYS": "{source} area directs {target} labor to active installation areas for the current work window",
+    "VERIFIES WITH": "{source}testing led by the commissioning agent",
+    "LAYS OUT WITH": "{source} line intersection is established on the deck using survey instruments",
+    "QUANTIFIED BY": "{source}-based standard measure is calculated using data from {target} record"
+  }
+}

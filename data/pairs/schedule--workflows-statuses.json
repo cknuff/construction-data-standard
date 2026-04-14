@@ -1,0 +1,208 @@
+{
+  "source": "schedule",
+  "target": "workflows-statuses",
+  "edges": [
+    [
+      "sch-baseline-schedul",
+      "ws-draft",
+      "ORIGINATES IN"
+    ],
+    [
+      "sch-baseline-schedul",
+      "ws-submitted",
+      "SUBMITTED AT"
+    ],
+    [
+      "sch-baseline-schedul",
+      "ws-approved",
+      "ACCEPTED UPON"
+    ],
+    [
+      "sch-baseline-schedul",
+      "ws-rejected",
+      "RETURNED TO"
+    ],
+    [
+      "sch-baseline-schedul",
+      "ws-sequential-appr",
+      "ROUTES THROUGH"
+    ],
+    [
+      "sch-schedule-update",
+      "ws-submitted",
+      "SUBMITTED AT"
+    ],
+    [
+      "sch-schedule-update",
+      "ws-under-review",
+      "HELD DURING"
+    ],
+    [
+      "sch-schedule-update",
+      "ws-approved",
+      "ACCEPTED UPON"
+    ],
+    [
+      "sch-schedule-update",
+      "ws-revise-resubmit",
+      "RETURNED TO"
+    ],
+    [
+      "sch-schedule-update",
+      "ws-review-respond",
+      "FOLLOWS"
+    ],
+    [
+      "sch-look-ahead",
+      "ws-progress",
+      "ISSUED DURING"
+    ],
+    [
+      "sch-look-ahead",
+      "ws-ball-court",
+      "ASSIGNED VIA"
+    ],
+    [
+      "sch-look-ahead",
+      "ws-due-date",
+      "BOUND BY"
+    ],
+    [
+      "sch-recovery-schedul",
+      "ws-open",
+      "TRIGGERED AT"
+    ],
+    [
+      "sch-recovery-schedul",
+      "ws-approved",
+      "ACCEPTED UPON"
+    ],
+    [
+      "sch-recovery-schedul",
+      "ws-appr-chain",
+      "ROUTES THROUGH"
+    ],
+    [
+      "sch-time-extension",
+      "ws-pending",
+      "AWAITS"
+    ],
+    [
+      "sch-time-extension",
+      "ws-approved",
+      "GRANTED UPON"
+    ],
+    [
+      "sch-time-extension",
+      "ws-rejected",
+      "DENIED AT"
+    ],
+    [
+      "sch-time-extension",
+      "ws-submit-approve",
+      "FOLLOWS"
+    ],
+    [
+      "sch-milestone",
+      "ws-closed",
+      "COMPLETED AT"
+    ],
+    [
+      "sch-milestone",
+      "ws-overdue",
+      "ESCALATES TO"
+    ],
+    [
+      "sch-detail-activity",
+      "ws-progress",
+      "ADVANCES TO"
+    ],
+    [
+      "sch-detail-activity",
+      "ws-closed",
+      "COMPLETED AT"
+    ],
+    [
+      "sch-schedule-constra",
+      "ws-hold",
+      "IMPOSES"
+    ],
+    [
+      "sch-schedule-constra",
+      "ws-approved",
+      "RELEASED UPON"
+    ],
+    [
+      "sch-acceleration",
+      "ws-approved",
+      "AUTHORIZED UPON"
+    ],
+    [
+      "sch-acceleration",
+      "ws-appr-chain",
+      "ROUTES THROUGH"
+    ],
+    [
+      "sch-schedule-chg",
+      "ws-workflow-step",
+      "LOGGED AT"
+    ],
+    [
+      "sch-schedule-chg",
+      "ws-status-dwell",
+      "MEASURED BY"
+    ],
+    [
+      "sch-as-built",
+      "ws-closed",
+      "FINALIZED AT"
+    ],
+    [
+      "sch-milestone-adhere",
+      "ws-overdue-rate",
+      "CORRELATED WITH"
+    ],
+    [
+      "sch-schedule-health",
+      "ws-workflow-complet",
+      "CORRELATED WITH"
+    ],
+    [
+      "sch-float-erosion",
+      "ws-status-dwell",
+      "MEASURED BY"
+    ],
+    [
+      "sch-percent-plan",
+      "ws-ball-court-aging",
+      "TRACKED BY"
+    ]
+  ],
+  "verbGlossary": {
+    "ORIGINATES IN": "{source} is first created in {target}, typically as an editable draft before formal review begins.",
+    "SUBMITTED AT": "{source} is formally transmitted for owner or stakeholder review at {target}.",
+    "ACCEPTED UPON": "{source} is formally accepted and becomes the governing project timeline when {target} is reached.",
+    "RETURNED TO": "{source} is sent back to the contractor for correction after failing review at {target}.",
+    "ROUTES THROUGH": "{source} passes through {target} chain or workflow pattern as part of its review lifecycle.",
+    "HELD DURING": "{source} is paused at {target} while reviewers evaluate logic, durations, and resource allocations.",
+    "FOLLOWS": "{source} adheres to this standard {target} pattern from submission through disposition.",
+    "ISSUED DURING": "{source}schedule is distributed to field teams while the project is actively in {target}.",
+    "ASSIGNED VIA": "{source} deliverable is routed to a responsible party through {target}.",
+    "BOUND BY": "{source} is constrained by {target} component, such as a contractual submission deadline.",
+    "TRIGGERED AT": "{source}schedule is initiated when the project enters {target}, signaling the need for corrective action.",
+    "AWAITS": "{source} is queued and waiting for action at {target}; no progress until the reviewer acts.",
+    "GRANTED UPON": "{source} is formally awarded and the contract completion date is adjusted when {target} is reached.",
+    "DENIED AT": "{source} is refused at {target} and the original contract dates remain in force.",
+    "COMPLETED AT": "The milestone or activity reaches this terminal {target} when its scope of work is finished in the field.",
+    "ESCALATES TO": "{source} item automatically transitions to {target} when its required date passes without completion.",
+    "ADVANCES TO": "{source} transitions forward into {target} as field work progresses.",
+    "IMPOSES": "{source} forces this hold {target} on successor activities until the constraint date or condition is satisfied.",
+    "RELEASED UPON": "{source}constraint on successor activities is removed when {target} is reached, allowing work to proceed.",
+    "AUTHORIZED UPON": "{source}is formally approved and additional resources or overtime can be mobilized at {target}.",
+    "LOGGED AT": "{source} change is recorded at {target}, creating an audit trail of revisions to logic, dates, or durations.",
+    "FINALIZED AT": "{source}schedule is locked at this terminal {target}, becoming the permanent record of actual construction sequence.",
+    "MEASURED BY": "{source} metric is quantified using {target} performance measure.",
+    "CORRELATED WITH": "{source} KPI is cross-referenced against {target} metric to identify process-driven schedule impacts.",
+    "TRACKED BY": "{source} metric is monitored over time using {target} KPI."
+  }
+}

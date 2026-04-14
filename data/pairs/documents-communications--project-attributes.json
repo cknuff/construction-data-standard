@@ -1,0 +1,291 @@
+{
+  "source": "documents-communications",
+  "target": "project-attributes",
+  "edges": [
+    [
+      "doc-req-info-rfi",
+      "pa-project-type",
+      "SEGMENTED BY"
+    ],
+    [
+      "doc-req-info-rfi",
+      "pa-total-value-band",
+      "SEGMENTED BY"
+    ],
+    [
+      "doc-req-info-rfi",
+      "pa-dlvy-method",
+      "INFLUENCED BY"
+    ],
+    [
+      "doc-rfi-response",
+      "pa-dlvy-method",
+      "ROUTED BY"
+    ],
+    [
+      "doc-rfi-volume",
+      "pa-project-type",
+      "BENCHMARKED BY"
+    ],
+    [
+      "doc-rfi-response-2",
+      "pa-dlvy-method",
+      "SEGMENTED BY"
+    ],
+    [
+      "doc-rfi-response-2",
+      "pa-total-value-band",
+      "BENCHMARKED BY"
+    ],
+    [
+      "doc-submittal",
+      "pa-project-type",
+      "SEGMENTED BY"
+    ],
+    [
+      "doc-submittal",
+      "pa-specialty-system",
+      "DRIVEN BY"
+    ],
+    [
+      "doc-submittal-respon",
+      "pa-dlvy-method",
+      "ROUTED BY"
+    ],
+    [
+      "doc-shop-drawing",
+      "pa-modular-prefab",
+      "DRIVEN BY"
+    ],
+    [
+      "doc-product-data",
+      "pa-leed-certificati",
+      "REQUIRED BY"
+    ],
+    [
+      "doc-submittal-cycle",
+      "pa-total-value-band",
+      "BENCHMARKED BY"
+    ],
+    [
+      "doc-submittal-reject",
+      "pa-fast-track",
+      "INFLUENCED BY"
+    ],
+    [
+      "doc-drawing-set",
+      "pa-bim-requirement",
+      "SHAPED BY"
+    ],
+    [
+      "doc-drawing-revision",
+      "pa-bim-requirement",
+      "TRIGGERED BY"
+    ],
+    [
+      "doc-drawing-revision",
+      "pa-fast-track",
+      "ACCELERATED BY"
+    ],
+    [
+      "doc-drawing-revision-2",
+      "pa-project-type",
+      "SEGMENTED BY"
+    ],
+    [
+      "doc-specification-se",
+      "pa-project-type",
+      "SCOPED BY"
+    ],
+    [
+      "doc-addendum",
+      "pa-bid-type",
+      "ISSUED DURING"
+    ],
+    [
+      "doc-bulletin-archite",
+      "pa-project-type",
+      "SEGMENTED BY"
+    ],
+    [
+      "doc-correspondence",
+      "pa-dlvy-method",
+      "SHAPED BY"
+    ],
+    [
+      "doc-correspondence-r",
+      "pa-number-subcontra",
+      "SCALED BY"
+    ],
+    [
+      "doc-notice-delay",
+      "pa-climate-zone",
+      "INFLUENCED BY"
+    ],
+    [
+      "doc-notice-delay",
+      "pa-site-constraints",
+      "DRIVEN BY"
+    ],
+    [
+      "doc-chg-directive",
+      "pa-contract-type",
+      "GOVERNED BY"
+    ],
+    [
+      "doc-daily-log-2",
+      "pa-gc-cm-firm",
+      "BENCHMARKED BY"
+    ],
+    [
+      "doc-daily-report",
+      "pa-peak-workforce",
+      "SCALED BY"
+    ],
+    [
+      "doc-daily-log-note",
+      "pa-project-type",
+      "SEGMENTED BY"
+    ],
+    [
+      "doc-punch-list-as",
+      "pa-gross-building",
+      "SCALED BY"
+    ],
+    [
+      "doc-as-built-docs",
+      "pa-bim-requirement",
+      "REQUIRED BY"
+    ],
+    [
+      "doc-o-m-manual",
+      "pa-specialty-system",
+      "DRIVEN BY"
+    ],
+    [
+      "doc-warranty-docs",
+      "pa-contract-type",
+      "GOVERNED BY"
+    ],
+    [
+      "doc-meeting",
+      "pa-phased-const",
+      "MULTIPLIED BY"
+    ],
+    [
+      "doc-meeting-minutes",
+      "pa-dlvy-method",
+      "STRUCTURED BY"
+    ],
+    [
+      "doc-safety-plan-site",
+      "pa-occupancy-group",
+      "TAILORED TO"
+    ],
+    [
+      "doc-photo",
+      "pa-percent-complete",
+      "DOCUMENTS"
+    ],
+    [
+      "doc-lien-waiver",
+      "pa-prevailing-wage",
+      "GOVERNED BY"
+    ],
+    [
+      "doc-req-info-rfi",
+      "pa-decision-speed",
+      "BOTTLENECKS"
+    ],
+    [
+      "doc-req-info-rfi",
+      "pa-information-gaps",
+      "SURFACES"
+    ],
+    [
+      "doc-rfi-response",
+      "pa-decision-speed",
+      "UNBLOCKS"
+    ],
+    [
+      "doc-rfi-response-2",
+      "pa-decision-speed",
+      "MEASURES"
+    ],
+    [
+      "doc-rfi-volume",
+      "pa-information-gaps",
+      "QUANTIFIES"
+    ],
+    [
+      "doc-submittal",
+      "pa-admin-burden",
+      "CONTRIBUTES TO"
+    ],
+    [
+      "doc-submittal",
+      "pa-decision-speed",
+      "GATES"
+    ],
+    [
+      "doc-submittal-respon",
+      "pa-decision-speed",
+      "UNBLOCKS"
+    ],
+    [
+      "doc-submittal-cycle",
+      "pa-decision-speed",
+      "MEASURES"
+    ],
+    [
+      "doc-submittal-reject",
+      "pa-information-gaps",
+      "INDICATES"
+    ],
+    [
+      "doc-correspondence",
+      "pa-admin-burden",
+      "CONTRIBUTES TO"
+    ],
+    [
+      "doc-correspondence-r",
+      "pa-decision-speed",
+      "MEASURES"
+    ],
+    [
+      "doc-daily-report",
+      "pa-admin-burden",
+      "CONTRIBUTES TO"
+    ],
+    [
+      "doc-lien-waiver",
+      "pa-admin-burden",
+      "CONTRIBUTES TO"
+    ]
+  ],
+  "verbGlossary": {
+    "SEGMENTED BY": "{source} metric or record is broken down by {target} attribute for comparative analysis across project types, sizes, or methods",
+    "BENCHMARKED BY": "{source} performance metric is compared across projects grouped by {target} to establish norms and identify outliers",
+    "INFLUENCED BY": "{source} volume, frequency, or outcome is affected by {target} attribute without being solely determined by it",
+    "TRIGGERED BY": "{source} revision is initiated because {target} attribute creates conditions requiring design changes",
+    "SHAPED BY": "{source} format, content, or volume is determined by {target} delivery method's communication requirements",
+    "SCALED BY": "{source} volume or metric scales proportionally with {target} (e.g., more subcontractors means more correspondence)",
+    "DRIVEN BY": "{source} is generated primarily because of {target} attribute's scope or constraint conditions",
+    "GOVERNED BY": "{source} issuance and handling follows procedures determined by {target} type's terms and provisions",
+    "REQUIRED BY": "{source} deliverable is mandated because {target} attribute specifies it as a contractual or certification requirement",
+    "MULTIPLIED BY": "{source} frequency increases proportionally when {target} applies (e.g., phased construction requires separate meetings per phase)",
+    "TAILORED TO": "{source} content is customized based on {target} specific requirements and hazard profile",
+    "ROUTED BY": "{source} review and approval path is determined by the target delivery method's organizational structure",
+    "ACCELERATED BY": "{source} revision pace increases because {target} compresses the design-construction overlap",
+    "SCOPED BY": "{source} breadth and detail level is defined by {target} type's complexity requirements",
+    "ISSUED DURING": "{source} is issued within the procurement phase defined by {target} attribute",
+    "STRUCTURED BY": "{source} organization and agenda follow the communication patterns of the target delivery method",
+    "DOCUMENTS": "{source}record captures the state of work reflected by {target} completion attribute",
+    "COMPLETED BY": "{source} completion timeline is determined by {target} completion milestone attribute",
+    "BOTTLENECKS": "{source} process creates a dependency that slows {target} -- work cannot proceed until {source} is resolved, making it a critical path constraint",
+    "SURFACES": "{source} process reveals the existence of {target} by making missing or conflicting information visible through formal documentation",
+    "UNBLOCKS": "{source} response removes a constraint on {target} by providing the information or approval needed for work to proceed",
+    "GATES": "{source} process must complete before downstream work can begin, creating a mandatory checkpoint that affects {target}",
+    "QUANTIFIES": "{source} metric provides a numerical measure of {target} that can be tracked, benchmarked, and improved over time"
+  }
+}

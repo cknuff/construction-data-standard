@@ -1,0 +1,328 @@
+{
+  "source": "financial-instruments",
+  "target": "schedule",
+  "edges": [
+    [
+      "fi-budget-line-item",
+      "sch-cost-loading",
+      "COST-LOADED ON"
+    ],
+    [
+      "fi-cost-code",
+      "sch-detail-activity",
+      "MAPPED TO"
+    ],
+    [
+      "fi-wbs-code",
+      "sch-summary-activity",
+      "ALIGNED WITH"
+    ],
+    [
+      "fi-project-budget",
+      "sch-baseline-schedul",
+      "BASELINED AGAINST"
+    ],
+    [
+      "fi-project-budget",
+      "sch-milestone",
+      "PHASED BY"
+    ],
+    [
+      "fi-budget-line-item",
+      "sch-detail-activity",
+      "ALLOCATED TO"
+    ],
+    [
+      "fi-budget-line-item",
+      "sch-milestone",
+      "EARNED AT"
+    ],
+    [
+      "fi-commit-subcontra",
+      "sch-detail-activity",
+      "COMMITTED DURING"
+    ],
+    [
+      "fi-commit-subcontra",
+      "sch-look-ahead",
+      "MOBILIZED PER"
+    ],
+    [
+      "fi-commit-purchase",
+      "sch-lag-lead-time",
+      "PROCURED WITHIN"
+    ],
+    [
+      "fi-commit-purchase",
+      "sch-milestone",
+      "DELIVERED BY"
+    ],
+    [
+      "fi-commit-line-item",
+      "sch-cost-loading",
+      "SPREAD ACROSS"
+    ],
+    [
+      "fi-commit-line-item",
+      "sch-duration-progres",
+      "BILLED OVER"
+    ],
+    [
+      "fi-chg-event-ce",
+      "sch-time-impact",
+      "ASSESSED VIA"
+    ],
+    [
+      "fi-chg-event-ce",
+      "sch-critical-path",
+      "IMPACTS"
+    ],
+    [
+      "fi-chg-event-ce",
+      "sch-schedule-chg",
+      "TRIGGERS"
+    ],
+    [
+      "fi-chg-event-line",
+      "sch-detail-activity",
+      "PRICED AGAINST"
+    ],
+    [
+      "fi-pot-chg-order",
+      "sch-time-extension",
+      "REQUESTS"
+    ],
+    [
+      "fi-commit-chg-order",
+      "sch-schedule-update",
+      "INCORPORATED IN"
+    ],
+    [
+      "fi-commit-chg-order",
+      "sch-delay-class",
+      "CAUSED BY"
+    ],
+    [
+      "fi-cco-line-item",
+      "sch-detail-activity",
+      "CHARGED TO"
+    ],
+    [
+      "fi-owner-chg-order",
+      "sch-time-extension",
+      "GRANTS"
+    ],
+    [
+      "fi-owner-chg-order",
+      "sch-milestone",
+      "EXTENDS"
+    ],
+    [
+      "fi-budget-mod",
+      "sch-schedule-update",
+      "REALLOCATED DURING"
+    ],
+    [
+      "fi-budget-mod",
+      "sch-recovery-schedul",
+      "FUNDED BY"
+    ],
+    [
+      "fi-direct-cost",
+      "sch-data-date",
+      "RECORDED AT"
+    ],
+    [
+      "fi-direct-cost",
+      "sch-detail-activity",
+      "INCURRED DURING"
+    ],
+    [
+      "fi-direct-cost-line",
+      "sch-duration-progres",
+      "ACCRUED OVER"
+    ],
+    [
+      "fi-owner-invoice",
+      "sch-data-date",
+      "BILLED AT"
+    ],
+    [
+      "fi-owner-invoice",
+      "sch-milestone",
+      "INVOICED AT"
+    ],
+    [
+      "fi-sub-invoice",
+      "sch-duration-progres",
+      "MEASURED THROUGH"
+    ],
+    [
+      "fi-retainage",
+      "sch-milestone",
+      "RELEASED AT"
+    ],
+    [
+      "fi-payment",
+      "sch-data-date",
+      "DISBURSED AT"
+    ],
+    [
+      "fi-lien-waiver",
+      "sch-milestone",
+      "CLEARED AT"
+    ],
+    [
+      "fi-schedule-values",
+      "sch-detail-activity",
+      "DECOMPOSED INTO"
+    ],
+    [
+      "fi-allowance",
+      "sch-float-slack",
+      "CONSUMED DURING"
+    ],
+    [
+      "fi-contingency",
+      "sch-critical-path",
+      "RESERVED FOR"
+    ],
+    [
+      "fi-contingency",
+      "sch-acceleration",
+      "FUNDS"
+    ],
+    [
+      "fi-cost-forecast",
+      "sch-earned-schedule",
+      "FORECASTS FROM"
+    ],
+    [
+      "fi-cost-forecast",
+      "sch-calculated-dates",
+      "PROJECTED TO"
+    ],
+    [
+      "fi-cash-flow",
+      "sch-cost-loading",
+      "CASH-FLOWED PER"
+    ],
+    [
+      "fi-cash-flow",
+      "sch-baseline-dates",
+      "PROFILED AGAINST"
+    ],
+    [
+      "fi-cash-flow",
+      "sch-look-ahead",
+      "UPDATED FROM"
+    ],
+    [
+      "fi-budget-variance",
+      "sch-data-date",
+      "MEASURED AT"
+    ],
+    [
+      "fi-cost-growth",
+      "sch-schedule-update",
+      "TRACKED PER"
+    ],
+    [
+      "fi-cost-perf-index",
+      "sch-earned-schedule",
+      "INTEGRATED WITH"
+    ],
+    [
+      "fi-committed-cost",
+      "sch-baseline-schedul",
+      "BENCHMARKED AGAINST"
+    ],
+    [
+      "fi-chg-order-rate",
+      "sch-duration-progres",
+      "NORMALIZED OVER"
+    ],
+    [
+      "fi-contingency-burn",
+      "sch-critical-path",
+      "ACCELERATED BY"
+    ],
+    [
+      "fi-estimate-at",
+      "sch-as-built",
+      "VALIDATED AGAINST"
+    ],
+    [
+      "fi-margin-fade",
+      "sch-schedule-update",
+      "TRACKED PER"
+    ],
+    [
+      "sch-detail-activity",
+      "fi-commit-chg-order",
+      "TRIGGERS COST CHANGE ON"
+    ],
+    [
+      "fi-commit-chg-order",
+      "sch-critical-path",
+      "IMPACTS"
+    ],
+    [
+      "fi-chg-event-ce",
+      "sch-time-extension",
+      "JUSTIFIES"
+    ]
+  ],
+  "verbGlossary": {
+    "COST-LOADED ON": "{source} amounts distributed (loaded) onto {target} activities to create a time-phased cost baseline",
+    "MAPPED TO": "{source} code structure linked to a corresponding {target} element for cost-schedule traceability",
+    "ALIGNED WITH": "{source} hierarchy synchronized between the cost breakdown and {target} breakdown so they share common structure",
+    "BASELINED AGAINST": "Project budget frozen in tandem with the approved {target} to form the performance measurement baseline",
+    "PHASED BY": "{source}budget distributed across {target}s to establish planned spending gates",
+    "ALLOCATED TO": "{source} dollars assigned to specific {target} activities for earned value tracking",
+    "EARNED AT": "{source} value credited as earned when the associated {target} is completed",
+    "COMMITTED DURING": "Subcontract or purchase order executed during {target}d work period, locking in cost",
+    "MOBILIZED PER": "{source}activated according to the look-ahead {target} window",
+    "PROCURED WITHIN": "Purchase order placed within the lead-time window required by {target} logic",
+    "DELIVERED BY": "{source}delivery tied to {target} date that gates downstream work",
+    "SPREAD ACROSS": "{source} value distributed over the duration of cost-loaded {target} activities",
+    "BILLED OVER": "{source} invoiced progressively as {target} duration and progress advance",
+    "ASSESSED VIA": "{source} {target} impact evaluated through a time impact analysis",
+    "IMPACTS": "{source} causes a shift in {target}, affecting project completion",
+    "TRIGGERS": "{source} initiates a tracked {target} change requiring re-sequencing or re-duration",
+    "PRICED AGAINST": "{source} cost estimated relative to the affected {target} resources and duration",
+    "REQUESTS": "{source}formally requests additional contract time via a time extension",
+    "INCORPORATED IN": "Approved commitment change order folded into the next {target} with revised durations or logic",
+    "CAUSED BY": "{source} traces its origin to a classified {target} delay",
+    "CHARGED TO": "{source} cost posted against the specific {target} where the extra work occurs",
+    "GRANTS": "{source}formally approves additional contract time tied to an approved time extension",
+    "EXTENDS": "Owner change order pushes a contractual milestone date forward",
+    "REALLOCATED DURING": "{source} redistributes dollars between cost codes during {target} cycle",
+    "FUNDED BY": "Recovery {target} acceleration work paid for through a budget modification or contingency draw",
+    "RECORDED AT": "{source} transaction posted as of {target}'s data date for period-correct reporting",
+    "INCURRED DURING": "{source} recognized in the period when the corresponding {target} was in progress",
+    "ACCRUED OVER": "{source} accumulated proportionally across {target} duration and percent complete",
+    "BILLED AT": "{source}submitted on or keyed to {target} data date for pay-period alignment",
+    "INVOICED AT": "{source}submitted upon reaching a billing {target}",
+    "MEASURED THROUGH": "{source}verified against {target} percent complete for the work period",
+    "RELEASED AT": "{source}released upon achieving a contractual {target}",
+    "DISBURSED AT": "{source} issued as of {target} data date, aligning cash outflow with project progress",
+    "CLEARED AT": "{source}confirmed at {target} that gates the next payment",
+    "DECOMPOSED INTO": "{source} of values broken down to match individual {target} activities for progress billing",
+    "CONSUMED DURING": "Allowance dollars drawn down as {target} is consumed and scope uncertainty is resolved",
+    "RESERVED FOR": "{source} dollars held against critical-path risk items that may require additional cost",
+    "FUNDS": "{source} budget used to pay for {target} acceleration measures (overtime, added crews, resequencing)",
+    "FORECASTS FROM": "{source} (EAC) derived from earned {target} performance data to project final cost",
+    "PROJECTED TO": "{source} mapped to calculated {target} dates to determine when remaining spend will occur",
+    "CASH-FLOWED PER": "{source}projection generated from the cost-loaded {target} to show period-by-period spend",
+    "PROFILED AGAINST": "Cash flow S-curve plotted against {target} dates to compare planned vs actual spend timing",
+    "UPDATED FROM": "{source}projection refreshed using the latest look-ahead {target} for near-term accuracy",
+    "MEASURED AT": "{source} variance calculated as of {target} data date for period-end reporting",
+    "TRACKED PER": "Cost growth percentage recalculated each {target} cycle to show trend over time",
+    "INTEGRATED WITH": "CPI combined with earned {target} SPI to form a unified cost-schedule performance view",
+    "BENCHMARKED AGAINST": "{source}cost compared to the original {target} budget to detect over-commitment",
+    "NORMALIZED OVER": "{source} rate expressed per unit of {target} duration to enable cross-project comparison",
+    "ACCELERATED BY": "{source} burn rate increases when critical-path delays force premium-cost recovery actions",
+    "VALIDATED AGAINST": "{source}checked against the as-built {target} actual durations and costs"
+  }
+}

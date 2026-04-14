@@ -1,0 +1,368 @@
+{
+  "source": "building-elements",
+  "target": "contracts-procurement",
+  "edges": [
+    [
+      "be-deep-fdn",
+      "cp-subcontract",
+      "PROCURED VIA"
+    ],
+    [
+      "be-excav",
+      "cp-bid-package",
+      "BUNDLED INTO"
+    ],
+    [
+      "be-curtainwall",
+      "cp-req-proposal",
+      "SOLICITED THROUGH"
+    ],
+    [
+      "be-columns",
+      "cp-scope-work",
+      "DELINEATED IN"
+    ],
+    [
+      "be-roof-mem",
+      "cp-warranty",
+      "WARRANTED UNDER"
+    ],
+    [
+      "be-ahu",
+      "cp-purchase-order",
+      "FURNISHED UNDER"
+    ],
+    [
+      "be-sprink-main",
+      "cp-subcontract",
+      "CONTRACTED FOR"
+    ],
+    [
+      "be-elev-car",
+      "cp-master-service",
+      "MAINTAINED UNDER"
+    ],
+    [
+      "be-ductwork",
+      "cp-bid-package",
+      "SCOPED IN"
+    ],
+    [
+      "be-panels",
+      "cp-proposal-bid",
+      "PRICED IN"
+    ],
+    [
+      "be-power-dist",
+      "cp-award-notice",
+      "AWARDED UNDER"
+    ],
+    [
+      "be-sog",
+      "cp-allowance",
+      "CARRIED AS"
+    ],
+    [
+      "be-paving",
+      "cp-bid-evaluation",
+      "LEVELED ACROSS"
+    ],
+    [
+      "be-slabs",
+      "cp-gen-cond",
+      "GOVERNED BY"
+    ],
+    [
+      "be-bg-wp",
+      "cp-scope-work",
+      "SPECIFIED IN"
+    ],
+    [
+      "be-lighting",
+      "cp-purchase-order",
+      "ORDERED THROUGH"
+    ],
+    [
+      "be-drywall",
+      "cp-subcontract",
+      "ASSIGNED UNDER"
+    ],
+    [
+      "be-paint",
+      "cp-retainage-terms",
+      "RETAINED AGAINST"
+    ],
+    [
+      "be-tile",
+      "cp-substantial-comp",
+      "INSPECTED AT"
+    ],
+    [
+      "be-landscape",
+      "cp-final-completion",
+      "CLOSED OUT AT"
+    ],
+    [
+      "be-hvac-ctrl",
+      "cp-req-qualificatio",
+      "QUALIFIED THROUGH"
+    ],
+    [
+      "be-data",
+      "cp-prequalification",
+      "VETTED VIA"
+    ],
+    [
+      "be-fire-pump",
+      "cp-perf-bond",
+      "BONDED UNDER"
+    ],
+    [
+      "be-grounding",
+      "cp-insurance-cert",
+      "INSURED UNDER"
+    ],
+    [
+      "be-windows",
+      "cp-liquidated-damag",
+      "PENALIZED FOR DELAY OF"
+    ],
+    [
+      "be-masonry-v",
+      "cp-bid-coverage",
+      "MEASURED AGAINST"
+    ],
+    [
+      "be-dom-water",
+      "cp-prevailing-wage",
+      "SUBJECT TO"
+    ],
+    [
+      "be-gas-svc",
+      "cp-scope-work",
+      "INCLUDED IN"
+    ],
+    [
+      "be-beams",
+      "cp-bid-package",
+      "PACKAGED IN"
+    ],
+    [
+      "be-connections",
+      "cp-prime-contract",
+      "OBLIGATED UNDER"
+    ],
+    [
+      "be-roof-struct",
+      "cp-builders-risk",
+      "COVERED BY"
+    ],
+    [
+      "be-stairs",
+      "cp-subcontract",
+      "SUBLET UNDER"
+    ],
+    [
+      "be-cooling",
+      "cp-purchase-order",
+      "REQUISITIONED VIA"
+    ],
+    [
+      "be-heating",
+      "cp-allowance",
+      "PROVISIONED UNDER"
+    ],
+    [
+      "be-plumb-fix",
+      "cp-purchase-order",
+      "PROCURED UNDER"
+    ],
+    [
+      "be-int-doors",
+      "cp-bid-package",
+      "BID AS PART OF"
+    ],
+    [
+      "be-casework",
+      "cp-req-proposal",
+      "SHOPPED VIA"
+    ],
+    [
+      "be-countertop",
+      "cp-proposal-bid",
+      "QUOTED IN"
+    ],
+    [
+      "be-fa",
+      "cp-req-qualificatio",
+      "SCREENED THROUGH"
+    ],
+    [
+      "be-security",
+      "cp-master-service",
+      "SERVICED UNDER"
+    ],
+    [
+      "be-act",
+      "cp-subcontract",
+      "INSTALLED UNDER"
+    ],
+    [
+      "be-carpet",
+      "cp-scope-work",
+      "QUANTIFIED IN"
+    ],
+    [
+      "be-ext-doors",
+      "cp-purchase-order",
+      "SOURCED THROUGH"
+    ],
+    [
+      "be-water-main",
+      "cp-bid-package",
+      "SOLICITED IN"
+    ],
+    [
+      "be-sanitary",
+      "cp-subcontract",
+      "PERFORMED UNDER"
+    ],
+    [
+      "be-storm",
+      "cp-gen-cond",
+      "REGULATED UNDER"
+    ],
+    [
+      "be-misc-metals",
+      "cp-bid-evaluation",
+      "COMPARED ACROSS"
+    ],
+    [
+      "be-amb",
+      "cp-warranty",
+      "GUARANTEED UNDER"
+    ],
+    [
+      "be-flashing",
+      "cp-closeout-doc",
+      "DOCUMENTED IN"
+    ],
+    [
+      "be-roof-drain",
+      "cp-scope-work",
+      "DETAILED IN"
+    ],
+    [
+      "be-skylights",
+      "cp-chg-order-rate",
+      "TRACKED VIA"
+    ],
+    [
+      "be-sprink-head",
+      "cp-insurance-comp",
+      "VERIFIED UNDER"
+    ],
+    [
+      "be-bas",
+      "cp-subcontract",
+      "COMMISSIONED UNDER"
+    ],
+    [
+      "be-elev-mach",
+      "cp-perf-bond",
+      "SECURED UNDER"
+    ],
+    [
+      "be-fencing",
+      "cp-allowance",
+      "ALLOCATED UNDER"
+    ],
+    [
+      "be-site-light",
+      "cp-purchase-order",
+      "SPECIFIED ON"
+    ],
+    [
+      "be-dewater",
+      "cp-subcontract",
+      "MOBILIZED UNDER"
+    ],
+    [
+      "be-erosion",
+      "cp-gen-cond",
+      "MANDATED UNDER"
+    ],
+    [
+      "be-signage",
+      "cp-final-completion",
+      "DELIVERED AT"
+    ],
+    [
+      "be-backfill",
+      "cp-prime-contract",
+      "INCLUDED UNDER"
+    ]
+  ],
+  "verbGlossary": {
+    "PROCURED VIA": "{source} obtained through {target} such as a subcontract or purchase order",
+    "BUNDLED INTO": "{source} grouped with related scope items into a single {target} for competitive pricing",
+    "SOLICITED THROUGH": "{source} whose installation or fabrication is formally requested through {target} or solicitation process",
+    "DELINEATED IN": "{source} whose technical requirements, quantities, and installation methods are explicitly defined within {target}",
+    "WARRANTED UNDER": "{source} whose material and workmanship defects are covered by {target}",
+    "FURNISHED UNDER": "{source} delivered and supplied under {target} for owner-furnished or contractor-furnished items",
+    "CONTRACTED FOR": "{source} whose installation is the primary trade scope of {target}",
+    "MAINTAINED UNDER": "{source} whose ongoing service, maintenance, or callback obligations are governed by {target}",
+    "SCOPED IN": "{source} whose trade division and installation requirements are defined within {target}",
+    "PRICED IN": "{source} whose unit and lump-sum costs are itemized within a contractor's proposal or {target}",
+    "AWARDED UNDER": "{source} whose installation scope is formally assigned to a contractor through {target}",
+    "ASSIGNED UNDER": "{source} whose trade scope is delegated to {target}or via a subcontract agreement",
+    "CARRIED AS": "{source} whose cost is held as {target} allowance rather than a fixed lump sum until design is finalized",
+    "LEVELED ACROSS": "{source} whose competing bids are normalized and compared during {target} for scope and price alignment",
+    "GOVERNED BY": "{source} whose installation standards, tolerances, and acceptance criteria are dictated by {target}",
+    "SPECIFIED IN": "{source} whose material properties, performance standards, and installation details are documented in {target}",
+    "ORDERED THROUGH": "{source} purchased and tracked through {target} with a manufacturer or distributor",
+    "RETAINED AGAINST": "{source} whose progress payments are subject to {target} holdback until completion milestones are met",
+    "INSPECTED AT": "{source} whose installed quality is verified as a condition of reaching {target}",
+    "CLOSED OUT AT": "{source} whose punch list items, as-builts, and warranties must be delivered to achieve {target}",
+    "QUALIFIED THROUGH": "{source} whose installer must demonstrate trade competency through a request for qualification process",
+    "VETTED VIA": "{source} whose prospective installers are evaluated through {target} for safety and capacity",
+    "BONDED UNDER": "{source} whose installation is financially guaranteed by {target} against contractor default",
+    "INSURED UNDER": "{source} whose installer must provide proof of adequate {target} coverage via certificate",
+    "PENALIZED FOR DELAY OF": "{source} whose late delivery or installation triggers liquidated damages under {target}",
+    "MEASURED AGAINST": "{source} whose trade scope is used to calculate bid coverage rate across {target}s",
+    "SUBJECT TO": "{source} whose installation labor must comply with {target} requirements on public projects",
+    "INCLUDED IN": "{source} whose scope is explicitly listed within contract documents such as {target}",
+    "PACKAGED IN": "{source} assembled into {target} alongside related structural or architectural scope items",
+    "OBLIGATED UNDER": "{source} whose completion is {target} of the prime contract between owner and GC",
+    "COVERED BY": "{source} protected against physical loss or damage during construction under {target} insurance policy",
+    "SUBLET UNDER": "{source} whose installation is delegated to a specialty {target}or via a subcontract agreement",
+    "REQUISITIONED VIA": "{source} formally requested and procured through {target} with specified delivery dates",
+    "PROVISIONED UNDER": "{source} whose cost is set aside as {target} allowance pending final selection or design completion",
+    "PROCURED UNDER": "{source} whose materials are acquired through {target} with a vendor or supplier",
+    "BID AS PART OF": "{source} included as a line item within a larger {target} covering multiple related elements",
+    "SHOPPED VIA": "{source} whose fabrication or supply is competitively sourced through a request for proposal to multiple vendors",
+    "QUOTED IN": "{source} whose material and labor costs are itemized in a vendor or {target}or proposal",
+    "SCREENED THROUGH": "{source} whose prospective installer must pass a formal request for qualification before bidding",
+    "SERVICED UNDER": "{source} whose ongoing monitoring, maintenance, or support is governed by {target}",
+    "INSTALLED UNDER": "{source} whose physical installation is performed under the terms of {target}",
+    "QUANTIFIED IN": "{source} whose material takeoff quantities and unit rates are enumerated in {target}",
+    "SOURCED THROUGH": "{source} whose materials are procured from a specific supplier via {target}",
+    "SOLICITED IN": "{source} whose installation scope is included in {target} distributed to prospective bidders",
+    "PERFORMED UNDER": "{source} whose installation work is executed under the terms and conditions of {target}",
+    "REGULATED UNDER": "{source} whose installation must comply with project-wide standards established in {target}",
+    "COMPARED ACROSS": "{source} whose competing bids are analyzed side-by-side during {target} for cost and scope alignment",
+    "GUARANTEED UNDER": "{source} whose long-term performance is backed by a manufacturer or installer {target}",
+    "DOCUMENTED IN": "{source} whose as-built conditions, test results, and certifications are compiled in the closeout document package",
+    "DETAILED IN": "{source} whose routing, sizing, and connection points are thoroughly described in {target}",
+    "TRACKED VIA": "{source} whose scope modifications are monitored as part of the project's {target} rate metric",
+    "VERIFIED UNDER": "{source} whose installer's {target} compliance is confirmed as part of the project insurance compliance rate",
+    "COMMISSIONED UNDER": "{source} whose functional performance testing and acceptance is required under {target}",
+    "SECURED UNDER": "{source} whose installation is financially backed by {target} to protect against contractor failure",
+    "ALLOCATED UNDER": "{source} whose budget is reserved as {target} allowance for future scope definition",
+    "SPECIFIED ON": "{source} whose make, model, and specifications are listed on {target} for procurement",
+    "MOBILIZED UNDER": "{source} whose specialty equipment and crew are deployed under {target} for time-sensitive work",
+    "MANDATED UNDER": "{source} whose installation methods or environmental controls are required by {target}",
+    "DELIVERED AT": "{source} whose final installation and acceptance occur as a condition of {target}",
+    "INCLUDED UNDER": "{source} whose scope falls within the obligations of {target} between owner and general contractor"
+  }
+}

@@ -1,0 +1,308 @@
+{
+  "source": "documents-communications",
+  "target": "permits-regulatory",
+  "edges": [
+    [
+      "doc-drawing-set",
+      "pr-building-departm",
+      "SUBMITTED TO"
+    ],
+    [
+      "doc-drawing-set",
+      "pr-fire-marshal",
+      "ROUTED TO"
+    ],
+    [
+      "doc-drawing-set",
+      "pr-building-permit",
+      "ACCOMPANIES"
+    ],
+    [
+      "doc-drawing-revision",
+      "pr-building-departm",
+      "RESUBMITTED TO"
+    ],
+    [
+      "doc-drawing-revision",
+      "pr-ahj-insp",
+      "SUPERSEDES PLANS FOR"
+    ],
+    [
+      "doc-specification-se",
+      "pr-building-departm",
+      "REFERENCES CODE FOR"
+    ],
+    [
+      "doc-specification-se",
+      "pr-health-departmen",
+      "ADDRESSES REQUIREMENTS OF"
+    ],
+    [
+      "doc-addendum",
+      "pr-permit-applicati",
+      "AMENDS"
+    ],
+    [
+      "doc-bulletin-archite",
+      "pr-building-permit",
+      "MODIFIES SCOPE OF"
+    ],
+    [
+      "doc-req-info-rfi",
+      "pr-building-departm",
+      "CLARIFIES COMMENTS FROM"
+    ],
+    [
+      "doc-req-info-rfi",
+      "pr-fire-marshal",
+      "RESOLVES COMMENTS FROM"
+    ],
+    [
+      "doc-rfi-response",
+      "pr-ahj-insp",
+      "SATISFIES CORRECTIONS FOR"
+    ],
+    [
+      "doc-submittal",
+      "pr-special-insp",
+      "PROVIDES MIX DESIGN FOR"
+    ],
+    [
+      "doc-submittal",
+      "pr-trade-permit",
+      "EVIDENCES COMPLIANCE FOR"
+    ],
+    [
+      "doc-submittal-respon",
+      "pr-building-departm",
+      "CONFIRMS APPROVAL BY"
+    ],
+    [
+      "doc-shop-drawing",
+      "pr-fire-marshal",
+      "DETAILS LAYOUT FOR"
+    ],
+    [
+      "doc-product-data",
+      "pr-health-departmen",
+      "CERTIFIES MATERIALS FOR"
+    ],
+    [
+      "doc-product-data",
+      "pr-third-party",
+      "FURNISHES SPECS FOR"
+    ],
+    [
+      "doc-sample-submittal",
+      "pr-special-insp",
+      "PROVIDES SPECIMENS FOR"
+    ],
+    [
+      "doc-transmittal",
+      "pr-permit-applicati",
+      "PACKAGES"
+    ],
+    [
+      "doc-correspondence",
+      "pr-zoning-appr",
+      "REQUESTS DETERMINATION FROM"
+    ],
+    [
+      "doc-notice-delay",
+      "pr-reg-hold",
+      "DOCUMENTS IMPACT OF"
+    ],
+    [
+      "doc-chg-directive",
+      "pr-renovation-alter",
+      "TRIGGERS AMENDMENT TO"
+    ],
+    [
+      "doc-meeting-minutes",
+      "pr-permit-status",
+      "RECORDS STATUS OF"
+    ],
+    [
+      "doc-meeting",
+      "pr-insp-scheduling",
+      "COORDINATES"
+    ],
+    [
+      "doc-daily-report",
+      "pr-ahj-insp",
+      "LOGS OUTCOME OF"
+    ],
+    [
+      "doc-daily-log-note",
+      "pr-osha-notificatio",
+      "RECORDS INCIDENT FOR"
+    ],
+    [
+      "doc-site-instruction",
+      "pr-site-safety-plan",
+      "IMPLEMENTS"
+    ],
+    [
+      "doc-plan-revision",
+      "pr-building-permit",
+      "REQUIRES REVISION TO"
+    ],
+    [
+      "doc-photo",
+      "pr-ahj-insp",
+      "DOCUMENTS CONDITIONS FOR"
+    ],
+    [
+      "doc-photo",
+      "pr-special-insp",
+      "CAPTURES PLACEMENT FOR"
+    ],
+    [
+      "doc-video",
+      "pr-third-party",
+      "RECORDS TESTING FOR"
+    ],
+    [
+      "doc-permit-applicati",
+      "pr-permit-applicati",
+      "INITIATES"
+    ],
+    [
+      "doc-permit-applicati",
+      "pr-demolition-permi",
+      "FILES FOR"
+    ],
+    [
+      "doc-cert-insurance",
+      "pr-permit-applicati",
+      "ATTACHES TO"
+    ],
+    [
+      "doc-cert-insurance",
+      "pr-labor-comp",
+      "VERIFIES COVERAGE FOR"
+    ],
+    [
+      "doc-safety-plan-site",
+      "pr-site-safety-plan",
+      "FORMALIZES"
+    ],
+    [
+      "doc-safety-plan-site",
+      "pr-osha-notificatio",
+      "SUPPORTS FILING OF"
+    ],
+    [
+      "doc-swppp-enviro",
+      "pr-enviro-permit",
+      "FULFILLS"
+    ],
+    [
+      "doc-swppp-enviro",
+      "pr-stormwater-permi",
+      "SATISFIES"
+    ],
+    [
+      "doc-punch-list-as",
+      "pr-cert-occupancy",
+      "CLEARS DEFICIENCIES FOR"
+    ],
+    [
+      "doc-as-built-docs",
+      "pr-cert-completion",
+      "SUBSTANTIATES"
+    ],
+    [
+      "doc-as-built-docs",
+      "pr-comp-doc",
+      "CONTRIBUTES TO"
+    ],
+    [
+      "doc-o-m-manual",
+      "pr-cert-occupancy",
+      "DELIVERS TURNOVER FOR"
+    ],
+    [
+      "doc-warranty-docs",
+      "pr-letter-comp",
+      "BACKS"
+    ],
+    [
+      "doc-action-plan",
+      "pr-ahj-insp",
+      "REMEDIATES FAILURES FROM"
+    ],
+    [
+      "doc-action-plan-line",
+      "pr-insp-scheduling",
+      "SCHEDULES REINSPECTION VIA"
+    ],
+    [
+      "doc-form-proforma",
+      "pr-permit-applicati",
+      "STANDARDIZES"
+    ],
+    [
+      "doc-lien-waiver",
+      "pr-cert-completion",
+      "CLEARS ENCUMBRANCE FOR"
+    ],
+    [
+      "doc-req-proposal-rfp",
+      "pr-trade-permit",
+      "SCOPES WORK REQUIRING"
+    ]
+  ],
+  "verbGlossary": {
+    "ACCOMPANIES": "{source} is bundled with {target} submission as a required attachment (e.g., drawing set accompanies building permit application).",
+    "ADDRESSES REQUIREMENTS OF": "{source} content directly responds to {target} code requirements (e.g., specification section addresses health department plumbing code requirements).",
+    "AMENDS": "{source} formally modifies a previously filed permit application or submission (e.g., addendum amends {target} application package after bid-phase changes).",
+    "ATTACHES TO": "{source} is appended as supporting evidence to a permit filing (e.g., certificate of insurance attaches to {target} application as proof of coverage).",
+    "BACKS": "{source} provides contractual backing or guarantee referenced by a regulatory {target} (e.g., warranty documentation backs the letter of compliance).",
+    "CAPTURES PLACEMENT FOR": "{source}record shows material or reinforcement positioning required by a special inspection (e.g., photo captures rebar placement for structural special inspection).",
+    "CERTIFIES MATERIALS FOR": "{source} provides manufacturer certification that materials meet regulatory standards (e.g., product data certifies fixture materials for health department approval).",
+    "CLARIFIES COMMENTS FROM": "{source} seeks clarification on review comments issued by a regulatory plan reviewer (e.g., RFI clarifies building department plan review redline comments).",
+    "CLEARS DEFICIENCIES FOR": "{source}document demonstrates all outstanding items are resolved, enabling {target} issuance (e.g., completed punch list clears deficiencies for certificate of occupancy).",
+    "CLEARS ENCUMBRANCE FOR": "{source}release document removes a legal hold that would otherwise block a regulatory {target} (e.g., lien waiver clears encumbrance for certificate of completion).",
+    "CONFIRMS APPROVAL BY": "{source} response documents that a regulatory reviewer has accepted the submission (e.g., submittal response confirms approval by the building department plan reviewer).",
+    "CONTRIBUTES TO": "{source} feeds into the overall completeness score of a regulatory compliance measure (e.g., as-built documentation contributes to compliance document completeness).",
+    "COORDINATES": "{source} or communication aligns schedules between the project team and a regulatory process (e.g., OAC meeting coordinates inspection scheduling with {target}).",
+    "DETAILS LAYOUT FOR": "{source} provides precise spatial arrangement required by a regulatory reviewer (e.g., shop drawing details fire sprinkler layout for {target} review).",
+    "DOCUMENTS CONDITIONS FOR": "{source}record captures site conditions relevant to {target} (e.g., photo documents exposed framing conditions for AHJ inspection).",
+    "DOCUMENTS IMPACT OF": "{source} formally records the schedule or cost consequences of a regulatory action (e.g., notice of delay documents impact of a regulatory hold on the project).",
+    "EVIDENCES COMPLIANCE FOR": "{source} demonstrates that proposed materials or methods meet {target} requirements (e.g., submittal evidences code compliance for trade permit issuance).",
+    "FILES FOR": "{source} formally initiates the application process for a specific {target} type (e.g., permit application document files for a demolition permit).",
+    "FORMALIZES": "{source} converts a {target} into a binding project-specific plan (e.g., safety plan document formalizes the site safety plan requirement).",
+    "FULFILLS": "{source} satisfies the full regulatory requirement of {target} (e.g., SWPPP document fulfills the environmental permit requirement).",
+    "FURNISHES SPECS FOR": "{source} provides technical specifications needed by an independent testing or inspection entity (e.g., product data furnishes specs for third-party testing).",
+    "IMPLEMENTS": "{source}plan into day-to-day practice on site (e.g., site instruction implements site safety plan protocols for a specific work activity).",
+    "INITIATES": "{source} formally starts {target} lifecycle process (e.g., permit application document initiates the permit application workflow).",
+    "LOGS OUTCOME OF": "{source}records the result of {target} event (e.g., daily report logs the outcome of an AHJ inspection visit).",
+    "MODIFIES SCOPE OF": "{source} changes the permitted scope of work, potentially requiring {target} revision (e.g., ASI modifies scope covered by the building permit).",
+    "PACKAGES": "{source} organizes and delivers a set of documents for a regulatory submission (e.g., transmittal packages {target} application documents for submission to the AHJ).",
+    "PROVIDES MIX DESIGN FOR": "{source} furnishes concrete or material mix proportions required by a special inspection (e.g., submittal provides concrete mix design for structural special inspection).",
+    "PROVIDES SPECIMENS FOR": "{source} submittal delivers physical material specimens required for special inspection testing (e.g., sample submittal provides mortar specimens for masonry special inspection).",
+    "RECORDS INCIDENT FOR": "{source}captures a safety or environmental event that may trigger a regulatory notification (e.g., daily log note records a safety incident for OSHA notification).",
+    "RECORDS STATUS OF": "{source} capture the current state of a permit or regulatory process (e.g., meeting minutes record {target} status discussed at the OAC meeting).",
+    "RECORDS TESTING FOR": "{source}captures the execution of a test procedure required by a third-party inspector (e.g., video records load testing for third-party structural testing).",
+    "REFERENCES CODE FOR": "{source} cites specific {target} sections applicable to a regulatory review (e.g., specification section references fire code for building department plan review).",
+    "REMEDIATES FAILURES FROM": "{source} prescribes corrective measures to address deficiencies found during {target} (e.g., action plan remediates failures identified during an AHJ inspection).",
+    "REQUESTS DETERMINATION FROM": "{source} asks {target} to issue a formal ruling or interpretation (e.g., correspondence requests a zoning determination from the planning department).",
+    "REQUIRES REVISION TO": "Plan change triggers the need to amend an already-issued {target} (e.g., plan revision notice requires revision to the building permit to reflect design changes).",
+    "RESOLVES COMMENTS FROM": "{source} addresses open review comments from a regulatory reviewer (e.g., RFI resolves {target} review comments on the egress plan).",
+    "RESUBMITTED TO": "{source}document is sent back to {target} for re-review after initial comments (e.g., drawing revision is resubmitted to building department plan review).",
+    "ROUTED TO": "{source} is directed to a specific regulatory reviewer for discipline-specific review (e.g., drawing set is routed to {target} for fire and life safety review).",
+    "SATISFIES": "{source} meets the full {target} of a specific permit (e.g., SWPPP document satisfies the stormwater permit requirement).",
+    "SATISFIES CORRECTIONS FOR": "{source} resolves correction items noted during {target} (e.g., RFI response satisfies corrections required after an AHJ inspection).",
+    "SCHEDULES REINSPECTION VIA": "Task line item arranges a follow-up {target} after corrective work (e.g., action plan task schedules reinspection via the inspection scheduling process).",
+    "SCOPES WORK REQUIRING": "{source}defines the extent of work that will need a specific {target} type (e.g., RFP scopes mechanical work requiring a trade permit).",
+    "STANDARDIZES": "{source}establishes a consistent format for a regulatory process (e.g., proforma form standardizes {target} application submission format).",
+    "SUBMITTED TO": "{source} is formally delivered to {target} for official review (e.g., drawing set is submitted to the building department for plan review).",
+    "SUBSTANTIATES": "{source} provides the evidentiary basis for issuing a regulatory {target} (e.g., as-built documentation substantiates the certificate of completion).",
+    "SUPPORTS FILING OF": "{source} provides required background material for a regulatory notification (e.g., safety plan supports the filing of an OSHA notification).",
+    "SUPERSEDES PLANS FOR": "{source}approved plans referenced by {target} (e.g., drawing revision supersedes the approved plans used during an AHJ inspection).",
+    "TRIGGERS AMENDMENT TO": "{source}required modification to an existing {target} (e.g., change directive triggers amendment to a renovation/alteration permit).",
+    "DELIVERS TURNOVER FOR": "{source}document delivers required operational information as a condition of {target} (e.g., O&M manual delivers turnover documentation for certificate of occupancy).",
+    "VERIFIES COVERAGE FOR": "{source}document confirms required coverage levels for a labor or safety compliance requirement (e.g., COI verifies workers' comp coverage for labor compliance)."
+  }
+}

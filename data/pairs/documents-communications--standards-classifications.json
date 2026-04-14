@@ -1,0 +1,299 @@
+{
+  "source": "documents-communications",
+  "target": "standards-classifications",
+  "edges": [
+    [
+      "doc-specification-se",
+      "sc-specification-se",
+      "IMPLEMENTS"
+    ],
+    [
+      "doc-drawing-set",
+      "sc-masterformat",
+      "INDEXED BY"
+    ],
+    [
+      "doc-drawing-sheet",
+      "sc-uniformat",
+      "KEYED TO"
+    ],
+    [
+      "doc-drawing-sheet",
+      "sc-ifc-class",
+      "TAGGED TO"
+    ],
+    [
+      "doc-drawing-revision",
+      "sc-specification-se",
+      "REVISES PER"
+    ],
+    [
+      "doc-addendum",
+      "sc-specification-se",
+      "AMENDS"
+    ],
+    [
+      "doc-bulletin-archite",
+      "sc-specification-se",
+      "SUPPLEMENTS"
+    ],
+    [
+      "doc-req-info-rfi",
+      "sc-specification-se",
+      "CLARIFIES"
+    ],
+    [
+      "doc-rfi-response",
+      "sc-specification-se",
+      "INTERPRETS"
+    ],
+    [
+      "doc-req-proposal-rfp",
+      "sc-std-cost-code",
+      "SCOPED BY"
+    ],
+    [
+      "doc-req-proposal-rfp",
+      "sc-dlvy-method",
+      "STRUCTURED PER"
+    ],
+    [
+      "doc-submittal",
+      "sc-specification-se",
+      "REQUIRED BY"
+    ],
+    [
+      "doc-submittal-respon",
+      "sc-specification-se",
+      "EVALUATED AGAINST"
+    ],
+    [
+      "doc-shop-drawing",
+      "sc-specification-se",
+      "FABRICATED PER"
+    ],
+    [
+      "doc-product-data",
+      "sc-masterformat",
+      "FILED UNDER"
+    ],
+    [
+      "doc-correspondence",
+      "sc-aia-contract",
+      "FORMATTED PER"
+    ],
+    [
+      "doc-transmittal",
+      "sc-aia-contract",
+      "DELIVERED PER"
+    ],
+    [
+      "doc-notice-delay",
+      "sc-aia-contract",
+      "SERVED PER"
+    ],
+    [
+      "doc-chg-directive",
+      "sc-aia-contract",
+      "ISSUED PER"
+    ],
+    [
+      "doc-chg-directive",
+      "sc-budget-code",
+      "CHARGED TO"
+    ],
+    [
+      "doc-meeting",
+      "sc-aia-contract",
+      "CONVENED PER"
+    ],
+    [
+      "doc-daily-report",
+      "sc-osha-recordkeepi",
+      "LOGGED PER"
+    ],
+    [
+      "doc-daily-log-note",
+      "sc-osha-hazard",
+      "REPORTS ON"
+    ],
+    [
+      "doc-site-instruction",
+      "sc-specification-se",
+      "DIRECTS PER"
+    ],
+    [
+      "doc-phone-call-log",
+      "sc-ansi-injury",
+      "DOCUMENTED PER"
+    ],
+    [
+      "doc-plan-revision",
+      "sc-masterformat",
+      "REISSUED UNDER"
+    ],
+    [
+      "doc-action-plan",
+      "sc-osha-hazard",
+      "REMEDIATES UNDER"
+    ],
+    [
+      "doc-action-plan-line",
+      "sc-std-cost-code",
+      "CHARGED TO"
+    ],
+    [
+      "doc-project-task",
+      "sc-wbs-code",
+      "ASSIGNED UNDER"
+    ],
+    [
+      "doc-photo",
+      "sc-omniclass",
+      "CATALOGED BY"
+    ],
+    [
+      "doc-permit-applicati",
+      "sc-international-bu",
+      "GOVERNED BY"
+    ],
+    [
+      "doc-permit-applicati",
+      "sc-ada-accessibilit",
+      "REVIEWED AGAINST"
+    ],
+    [
+      "doc-cert-insurance",
+      "sc-aia-contract",
+      "FURNISHED PER"
+    ],
+    [
+      "doc-form-proforma",
+      "sc-nfpa-stds",
+      "STRUCTURED PER"
+    ],
+    [
+      "doc-safety-plan-site",
+      "sc-osha-hazard",
+      "ADDRESSES"
+    ],
+    [
+      "doc-swppp-enviro",
+      "sc-leed-certificati",
+      "SUPPORTS"
+    ],
+    [
+      "doc-swppp-enviro",
+      "sc-resilience-net",
+      "VERIFIED AGAINST"
+    ],
+    [
+      "doc-punch-list-as",
+      "sc-masterformat",
+      "ORGANIZED BY"
+    ],
+    [
+      "doc-as-built-docs",
+      "sc-uniformat",
+      "KEYED TO"
+    ],
+    [
+      "doc-o-m-manual",
+      "sc-energy-code-stds",
+      "DOCUMENTS COMPLIANCE WITH"
+    ],
+    [
+      "doc-o-m-manual",
+      "sc-well-building",
+      "SUPPORTS"
+    ],
+    [
+      "doc-warranty-docs",
+      "sc-specification-se",
+      "WARRANTED PER"
+    ],
+    [
+      "doc-lien-waiver",
+      "sc-aia-contract",
+      "EXECUTED PER"
+    ],
+    [
+      "doc-rfi-volume",
+      "sc-specification-se-2",
+      "SEGMENTED BY"
+    ],
+    [
+      "doc-submittal-reject",
+      "sc-masterformat-map",
+      "SEGMENTED BY"
+    ],
+    [
+      "doc-submittal-cycle",
+      "sc-aace-cost",
+      "BENCHMARKED TO"
+    ],
+    [
+      "doc-drawing-revision-2",
+      "sc-wbs-adoption",
+      "BENCHMARKED TO"
+    ],
+    [
+      "doc-daily-log-2",
+      "sc-safety-class",
+      "SEGMENTED BY"
+    ],
+    [
+      "doc-correspondence-r",
+      "sc-cost-code",
+      "BENCHMARKED TO"
+    ],
+    [
+      "doc-rfi-response-2",
+      "sc-certification-ad",
+      "BENCHMARKED TO"
+    ]
+  ],
+  "verbGlossary": {
+    "ORGANIZED BY": "{source} structure follows {target} system's division and section hierarchy (e.g., specifications organized by MasterFormat divisions, punch lists sorted by trade division)",
+    "IMPLEMENTS": "{source} document implements the requirements defined in {target} corresponding section",
+    "INDEXED BY": "{source} sheets are indexed and numbered according to {target} division structure",
+    "KEYED TO": "{source} or as-built document is cross-referenced to {target} classification for consistent building-system identification",
+    "TAGGED TO": "{source} is linked to {target}ification for interoperability with BIM-based document management",
+    "REVISES PER": "{source} is issued to address changes scoped within {target} requirements",
+    "AMENDS": "{source} formally modifies {target} requirements before contract execution",
+    "SUPPLEMENTS": "Architect's supplemental instruction adds detail or clarification to {target} during construction",
+    "CLARIFIES": "{source} seeks clarification on ambiguous or conflicting requirements within {target}",
+    "INTERPRETS": "{source} provides the designer's interpretation of {target} intent",
+    "SCOPED BY": "{source}is defined using {target} code list to ensure bids align with the budget structure",
+    "STRUCTURED PER": "{source} or request is structured to follow the categories or delivery-method conventions defined by {target}",
+    "REQUIRED BY": "{source} is mandated by {target}, which lists it as a required pre-installation deliverable",
+    "EVALUATED AGAINST": "{source} review assesses the proposed product or method against {target} acceptance criteria",
+    "FABRICATED PER": "{source} shows fabrication details that must conform to {target} material and workmanship standards",
+    "FILED UNDER": "{source} is filed and tracked under {target} division for organized retrieval (e.g., product data filed under MasterFormat division)",
+    "VERIFIED AGAINST": "{source} or document is checked against {target} acceptance criteria through independent verification",
+    "FORMATTED PER": "Project correspondence follows the notice and communication protocols defined in {target} documents",
+    "DELIVERED PER": "{source} is prepared and sent following the delivery procedures specified in {target} documents",
+    "SERVED PER": "{source} of delay is formally served following the contractual notice requirements in {target} provisions",
+    "ISSUED PER": "{source}is issued following the procedures defined in {target} document provisions",
+    "CHARGED TO": "Cost from a directive or task is allocated to a budget code or cost code in {target} for financial tracking",
+    "CONVENED PER": "{source} is held at the frequency and format required by {target} document provisions (e.g., OAC meetings per AIA A201)",
+    "LOGGED PER": "{source}is documented following {target} recordkeeping requirements (e.g., daily report logged per OSHA 1904 format)",
+    "REPORTS ON": "{source} note describes a field condition that relates to a hazard or category defined in {target} classification",
+    "DIRECTS PER": "{source} directs field work in accordance with {target} installation requirements",
+    "DOCUMENTED PER": "{source} is captured following {target} documentation requirements (e.g., phone call log documenting an injury per ANSI classification)",
+    "REISSUED UNDER": "{source} is reissued and tracked under the affected {target} to notify impacted trades",
+    "REMEDIATES UNDER": "{source} addresses a finding classified under {target} hazard category",
+    "ASSIGNED UNDER": "{source} is assigned under {target} code for work breakdown and progress tracking",
+    "CATALOGED BY": "{source} is cataloged using {target} taxonomy for searchable visual documentation of building elements",
+    "GOVERNED BY": "{source}is dictated by the requirements of {target} code or fire standard",
+    "REVIEWED AGAINST": "{source}is reviewed for compliance against {target}",
+    "FURNISHED PER": "{source}of insurance is furnished as required by {target} document's insurance provisions",
+    "ADDRESSES": "{source}plan identifies and mitigates hazards defined in {target} categories",
+    "SUPPORTS": "{source}document provides evidence supporting {target}",
+    "DOCUMENTS COMPLIANCE WITH": "O&M manual includes documentation proving the installed systems comply with {target} performance requirements",
+    "WARRANTED PER": "{source}documentation guarantees materials and workmanship per {target} warranty provisions",
+    "EXECUTED PER": "{source}is executed following the procedures and format specified in {target} documents",
+    "SEGMENTED BY": "{source} metric is broken down by {target} to identify which specification areas or trades drive the most activity",
+    "BENCHMARKED TO": "{source} metric is compared against {target} adoption rate or industry baseline to assess documentation maturity"
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "source": "contracts-procurement",
+  "target": "locations",
+  "edges": [
+    [
+      "cp-subcontract",
+      "loc-building",
+      "ASSIGNED TO"
+    ],
+    [
+      "cp-subcontract",
+      "loc-floor-level",
+      "SCOPED TO"
+    ],
+    [
+      "cp-purchase-order",
+      "loc-laydown-staging",
+      "DELIVERED TO"
+    ],
+    [
+      "cp-scope-work",
+      "loc-zone-wing",
+      "BOUNDED BY"
+    ],
+    [
+      "cp-scope-work",
+      "loc-exterior-zone",
+      "BOUNDED BY"
+    ],
+    [
+      "cp-bid-package",
+      "loc-building",
+      "DELINEATED BY"
+    ],
+    [
+      "cp-bid-package",
+      "loc-floor-level",
+      "DELINEATED BY"
+    ],
+    [
+      "cp-warranty",
+      "loc-room-space",
+      "COVERS"
+    ],
+    [
+      "cp-warranty",
+      "loc-functional-area",
+      "COVERS"
+    ],
+    [
+      "cp-substantial-comp",
+      "loc-floor-level",
+      "CERTIFIED FOR"
+    ],
+    [
+      "cp-substantial-comp",
+      "loc-building",
+      "CERTIFIED FOR"
+    ],
+    [
+      "cp-final-completion",
+      "loc-project-site",
+      "ACCEPTED AT"
+    ],
+    [
+      "cp-insurance-cert",
+      "loc-project-site",
+      "COVERS"
+    ],
+    [
+      "cp-builders-risk",
+      "loc-temp-facility",
+      "EXTENDS TO"
+    ],
+    [
+      "cp-liquidated-damag",
+      "loc-work-zone-phase",
+      "ASSESSED PER"
+    ],
+    [
+      "cp-closeout-doc",
+      "loc-cx-zone",
+      "SUBMITTED FOR"
+    ],
+    [
+      "cp-bid-coverage",
+      "loc-building",
+      "SEGMENTED BY"
+    ],
+    [
+      "cp-award-cycle-time",
+      "loc-floor-level",
+      "SEGMENTED BY"
+    ],
+    [
+      "cp-prevailing-wage",
+      "loc-project-site",
+      "ENFORCED AT"
+    ],
+    [
+      "cp-perf-bond",
+      "loc-project-site",
+      "SECURED FOR"
+    ]
+  ],
+  "verbGlossary": {
+    "ASSIGNED TO": "{source} instrument is allocated to {target} within the project (e.g., subcontract assigned to Building A)",
+    "SCOPED TO": "{source} work scope is limited to {target} or level within the building",
+    "DELIVERED TO": "{source} materials are shipped to a designated laydown or {target} on site",
+    "BOUNDED BY": "{source} is geographically limited to {target}, wing, or exterior area of the project",
+    "DELINEATED BY": "{source} scope is organized and separated by {target} or floor to define clear work boundaries for bidders",
+    "COVERS": "{source} instrument (warranty, insurance) provides coverage for {target} or functional area",
+    "CERTIFIED FOR": "{source} is officially certified for {target} or building, enabling partial occupancy or turnover",
+    "ACCEPTED AT": "Final completion acceptance occurs at the project {target} level, confirming all contractual obligations are met",
+    "EXTENDS TO": "{source} insurance coverage extends to temporary facilities, trailers, and stored materials on {target}",
+    "ASSESSED PER": "{source} are calculated per work {target} or phase area when that zone misses its contractual completion date",
+    "SUBMITTED FOR": "{source} is assembled and submitted for a specific commissioning {target}",
+    "SEGMENTED BY": "{source} is broken down by {target} or floor for comparative analysis across project locations",
+    "ENFORCED AT": "{source} requirements are enforced at the project {target} level per jurisdictional labor regulations",
+    "SECURED FOR": "{source} secures the project {target}, guaranteeing contractual obligations will be fulfilled at that location"
+  }
+}

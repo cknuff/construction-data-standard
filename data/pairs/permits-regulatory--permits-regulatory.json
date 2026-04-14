@@ -1,0 +1,243 @@
+{
+  "source": "permits-regulatory",
+  "target": "permits-regulatory",
+  "edges": [
+    [
+      "pr-zoning-appr",
+      "pr-building-permit",
+      "PREREQUISITE FOR"
+    ],
+    [
+      "pr-zoning-appr",
+      "pr-variance-special",
+      "MAY REQUIRE"
+    ],
+    [
+      "pr-variance-special",
+      "pr-zoning-appr",
+      "GRANTS RELIEF FROM"
+    ],
+    [
+      "pr-building-departm",
+      "pr-building-permit",
+      "APPROVES ISSUANCE OF"
+    ],
+    [
+      "pr-building-departm",
+      "pr-trade-permit",
+      "APPROVES ISSUANCE OF"
+    ],
+    [
+      "pr-fire-marshal",
+      "pr-building-permit",
+      "CONCURRENT REVIEW FOR"
+    ],
+    [
+      "pr-fire-marshal",
+      "pr-cert-occupancy",
+      "SIGN-OFF REQUIRED FOR"
+    ],
+    [
+      "pr-health-departmen",
+      "pr-cert-occupancy",
+      "SIGN-OFF REQUIRED FOR"
+    ],
+    [
+      "pr-permit-applicati",
+      "pr-building-departm",
+      "INITIATES"
+    ],
+    [
+      "pr-permit-applicati",
+      "pr-permit-status",
+      "CREATES"
+    ],
+    [
+      "pr-building-permit",
+      "pr-trade-permit",
+      "AUTHORIZES"
+    ],
+    [
+      "pr-building-permit",
+      "pr-ahj-insp",
+      "TRIGGERS SEQUENCE OF"
+    ],
+    [
+      "pr-building-permit",
+      "pr-cert-occupancy",
+      "CLOSED BY"
+    ],
+    [
+      "pr-demolition-permi",
+      "pr-building-permit",
+      "PRECEDES"
+    ],
+    [
+      "pr-demolition-permi",
+      "pr-enviro-permit",
+      "REQUIRES CLEARANCE FROM"
+    ],
+    [
+      "pr-enviro-permit",
+      "pr-stormwater-permi",
+      "GOVERNS"
+    ],
+    [
+      "pr-renovation-alter",
+      "pr-building-departm",
+      "SCOPE CLASSIFIED BY"
+    ],
+    [
+      "pr-temp-structures",
+      "pr-special-insp",
+      "SUBJECT TO"
+    ],
+    [
+      "pr-street-right-way",
+      "pr-utility-connecti",
+      "ENABLES ACCESS FOR"
+    ],
+    [
+      "pr-utility-connecti",
+      "pr-cert-occupancy",
+      "REQUIRED FOR"
+    ],
+    [
+      "pr-trade-permit",
+      "pr-ahj-insp",
+      "TRIGGERS"
+    ],
+    [
+      "pr-ahj-insp",
+      "pr-cert-occupancy",
+      "ACCUMULATES TOWARD"
+    ],
+    [
+      "pr-ahj-insp",
+      "pr-insp-scheduling",
+      "COORDINATED VIA"
+    ],
+    [
+      "pr-special-insp",
+      "pr-letter-comp",
+      "PRODUCES"
+    ],
+    [
+      "pr-special-insp",
+      "pr-insp-scheduling",
+      "COORDINATED VIA"
+    ],
+    [
+      "pr-third-party",
+      "pr-letter-comp",
+      "PRODUCES"
+    ],
+    [
+      "pr-letter-comp",
+      "pr-cert-occupancy",
+      "REQUIRED FOR"
+    ],
+    [
+      "pr-temp-cert",
+      "pr-cert-occupancy",
+      "CONVERTS TO"
+    ],
+    [
+      "pr-cert-completion",
+      "pr-demolition-permi",
+      "CLOSES OUT"
+    ],
+    [
+      "pr-osha-notificatio",
+      "pr-site-safety-plan",
+      "REFERENCES"
+    ],
+    [
+      "pr-site-safety-plan",
+      "pr-building-permit",
+      "REQUIRED ALONGSIDE"
+    ],
+    [
+      "pr-labor-comp",
+      "pr-permit-applicati",
+      "DOCUMENTED IN"
+    ],
+    [
+      "pr-permit-status",
+      "pr-reg-hold",
+      "ESCALATES TO"
+    ],
+    [
+      "pr-permit-status",
+      "pr-open-permit",
+      "MEASURED BY"
+    ],
+    [
+      "pr-permit-cycle",
+      "pr-permit-applicati",
+      "MEASURES DURATION OF"
+    ],
+    [
+      "pr-insp-pass-rate",
+      "pr-ahj-insp",
+      "MEASURES QUALITY OF"
+    ],
+    [
+      "pr-reg-hold",
+      "pr-permit-status",
+      "SUSPENDS"
+    ],
+    [
+      "pr-open-permit",
+      "pr-cert-occupancy",
+      "BLOCKS"
+    ],
+    [
+      "pr-comp-doc",
+      "pr-letter-comp",
+      "TRACKS RECEIPT OF"
+    ],
+    [
+      "pr-permit-renewal",
+      "pr-permit-status",
+      "EXTENDS"
+    ]
+  ],
+  "verbGlossary": {
+    "PREREQUISITE FOR": "{source}must be obtained before a construction {target} can be accepted by the building department.",
+    "MAY REQUIRE": "{source}may require an additional relief or exception process when the project does not meet standard requirements (e.g., {target} may require a variance).",
+    "GRANTS RELIEF FROM": "A variance or special exception provides formal relief from specific requirements of {source}, allowing the project to proceed despite non-compliance.",
+    "APPROVES ISSUANCE OF": "A plan review authority completes its {target} review and approves the issuance of a construction or trade permit.",
+    "CONCURRENT REVIEW FOR": "{source}review runs in parallel with the building department review for the same {target}, both must approve before issuance.",
+    "SIGN-OFF REQUIRED FOR": "{source} written sign-off is a hard prerequisite before {target} can be issued (e.g., fire marshal sign-off for CO).",
+    "INITIATES": "{source} submission formally starts the review process at {target}.",
+    "CREATES": "{target}, once accepted, creates a trackable permit status record in the regulatory system.",
+    "AUTHORIZES": "A primary {target} authorizes the issuance of subordinate trade-specific permits within its approved scope of work.",
+    "TRIGGERS SEQUENCE OF": "Issuance of {target} triggers a required sequence of milestone inspections that must be passed throughout construction.",
+    "CLOSED BY": "{source} lifecycle is formally closed when {target} is issued, confirming all conditions of approval have been met.",
+    "PRECEDES": "One {target} must be obtained and its authorized work completed before a subsequent permit can be issued (e.g., demolition before new construction).",
+    "REQUIRES CLEARANCE FROM": "{target} for work involving hazardous materials or environmental impact requires clearance from an environmental regulatory authority before issuance.",
+    "GOVERNS": "A higher-level {target} establishes the regulatory framework and compliance requirements that a subordinate site permit must satisfy.",
+    "ENABLES ACCESS FOR": "A right-of-way or street {target} enables physical access to public infrastructure needed for a utility connection permit's scope of work.",
+    "REQUIRED FOR": "{source}, inspection result, or compliance letter is a hard prerequisite that must be completed before {target} or approval can be issued.",
+    "TRIGGERS": "Issuance of {target} triggers the requirement for trade-specific inspections at rough-in and final stages.",
+    "ACCUMULATES TOWARD": "{source}inspection accumulates toward the complete set of approvals required before {target} can be issued.",
+    "COORDINATED VIA": "{source}inspections by regulatory authorities and special inspectors are scheduled and sequenced through the inspection scheduling process.",
+    "PRODUCES": "An inspection or testing process produces a formal compliance letter or report documenting that work meets {target}s.",
+    "CONVERTS TO": "A temporary {target} converts to a full certificate once all outstanding conditions are completed and verified.",
+    "CLOSES OUT": "{target} formally closes out and finalizes the permit for work that does not involve building occupancy.",
+    "REFERENCES": "A regulatory notification or filing references the project safety plan as supporting documentation for the hazardous operation.",
+    "REQUIRED ALONGSIDE": "{source}document must be submitted alongside the primary {target} as a condition of approval.",
+    "DOCUMENTED IN": "{source}requirements and certifications are documented within {target} package for public or regulated projects.",
+    "ESCALATES TO": "{target} status issue (expired permit, failed inspection, stop-work order) escalates to a formal regulatory hold that pauses construction.",
+    "MEASURED BY": "{target} status attribute is quantified by a standard measure that tracks its lifecycle duration or aging.",
+    "MEASURES DURATION OF": "{source}measures the elapsed duration from application submission to final disposition of {target}.",
+    "MEASURES QUALITY OF": "{source}measures the first-attempt success rate of {target} process, indicating field work quality.",
+    "SUSPENDS": "A regulatory hold suspends the active status of {target}, halting authorized work until the hold is resolved.",
+    "BLOCKS": "{source}issuance of {target} because outstanding inspections or conditions remain incomplete.",
+    "TRACKS RECEIPT OF": "{source}document completeness metric tracks the receipt and verification status of required compliance letters and reports.",
+    "EXTENDS": "{target} renewal extends the validity period of an expiring permit, reflected as a status change in the permit tracking system.",
+    "SCOPE CLASSIFIED BY": "A renovation or alteration {target} scope is classified by the building department to determine whether full code compliance or limited-area compliance applies.",
+    "SUBJECT TO": "A temporary structures {target} is subject to special inspection requirements for structural adequacy and public safety of the temporary installation."
+  }
+}

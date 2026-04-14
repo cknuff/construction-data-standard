@@ -1,0 +1,232 @@
+{
+  "source": "contracts-procurement",
+  "target": "project-attributes",
+  "edges": [
+    [
+      "cp-prime-contract",
+      "pa-contract-value",
+      "ESTABLISHES"
+    ],
+    [
+      "cp-prime-contract",
+      "pa-dlvy-method",
+      "STRUCTURED BY"
+    ],
+    [
+      "cp-prime-contract",
+      "pa-contract-type",
+      "STRUCTURED BY"
+    ],
+    [
+      "cp-prime-contract",
+      "pa-planned-completi",
+      "BINDS TO"
+    ],
+    [
+      "cp-subcontract",
+      "pa-prevailing-wage",
+      "GOVERNED BY"
+    ],
+    [
+      "cp-subcontract",
+      "pa-union-open-shop",
+      "GOVERNED BY"
+    ],
+    [
+      "cp-subcontract",
+      "pa-number-subcontra",
+      "COUNTED TOWARD"
+    ],
+    [
+      "cp-subcontract",
+      "pa-total-value-band",
+      "SEGMENTED BY"
+    ],
+    [
+      "cp-purchase-order",
+      "pa-modular-prefab",
+      "PROCURED FOR"
+    ],
+    [
+      "cp-master-service",
+      "pa-program-type",
+      "STRUCTURED BY"
+    ],
+    [
+      "cp-bid-package",
+      "pa-bid-type",
+      "STRUCTURED BY"
+    ],
+    [
+      "cp-bid-package",
+      "pa-project-type",
+      "SEGMENTED BY"
+    ],
+    [
+      "cp-proposal-bid",
+      "pa-total-value-band",
+      "SCALED BY"
+    ],
+    [
+      "cp-bid-evaluation",
+      "pa-bid-type",
+      "GOVERNED BY"
+    ],
+    [
+      "cp-award-notice",
+      "pa-preconstruction",
+      "SCHEDULED WITHIN"
+    ],
+    [
+      "cp-scope-work",
+      "pa-specialty-system",
+      "SPECIFIES"
+    ],
+    [
+      "cp-scope-work",
+      "pa-self-performed",
+      "DELINEATES"
+    ],
+    [
+      "cp-gen-cond",
+      "pa-contract-type",
+      "GOVERNED BY"
+    ],
+    [
+      "cp-retainage-terms",
+      "pa-contract-value",
+      "WITHHELD AGAINST"
+    ],
+    [
+      "cp-liquidated-damag",
+      "pa-planned-completi",
+      "TRIGGERED BY"
+    ],
+    [
+      "cp-allowance",
+      "pa-contingency-budg",
+      "BUDGETED WITHIN"
+    ],
+    [
+      "cp-perf-bond",
+      "pa-bonding-requirem",
+      "SATISFIES"
+    ],
+    [
+      "cp-payment-bond",
+      "pa-bonding-requirem",
+      "SATISFIES"
+    ],
+    [
+      "cp-bid-bond",
+      "pa-bid-type",
+      "REQUIRED BY"
+    ],
+    [
+      "cp-insurance-cert",
+      "pa-project-type",
+      "TAILORED TO"
+    ],
+    [
+      "cp-builders-risk",
+      "pa-estimated-value",
+      "SCALED BY"
+    ],
+    [
+      "cp-prevailing-wage",
+      "pa-prevailing-wage",
+      "CERTIFIES FOR"
+    ],
+    [
+      "cp-diversity-dbe",
+      "pa-owner-type",
+      "REQUIRED BY"
+    ],
+    [
+      "cp-warranty",
+      "pa-final-cost-at",
+      "ENCUMBERED WITHIN"
+    ],
+    [
+      "cp-substantial-comp",
+      "pa-actual-completio",
+      "ESTABLISHES"
+    ],
+    [
+      "cp-final-completion",
+      "pa-actual-duration",
+      "CLOSES"
+    ],
+    [
+      "cp-chg-order-rate",
+      "pa-chg-order-rate",
+      "BENCHMARKED AGAINST"
+    ],
+    [
+      "cp-award-cycle-time",
+      "pa-preconstruction",
+      "MEASURED WITHIN"
+    ],
+    [
+      "cp-bid-coverage",
+      "pa-bid-type",
+      "SEGMENTED BY"
+    ],
+    [
+      "cp-average-bidders",
+      "pa-project-type",
+      "SEGMENTED BY"
+    ],
+    [
+      "cp-sub-retention",
+      "pa-gc-cm-firm",
+      "BENCHMARKED AGAINST"
+    ],
+    [
+      "cp-subcontract",
+      "pa-admin-burden",
+      "CONTRIBUTES TO"
+    ],
+    [
+      "cp-insurance-cert",
+      "pa-admin-burden",
+      "CONTRIBUTES TO"
+    ],
+    [
+      "cp-insurance-comp",
+      "pa-risk-reduction",
+      "MEASURES"
+    ],
+    [
+      "cp-retainage-terms",
+      "pa-profit-protection",
+      "CONSTRAINS"
+    ]
+  ],
+  "verbGlossary": {
+    "ESTABLISHES": "{source} instrument sets the definitive value for the target project attribute (e.g., prime contract establishes {target} value)",
+    "STRUCTURED BY": "{source} instrument or procurement record is organized according to {target}, or bid type attribute",
+    "GOVERNED BY": "{source} instrument must comply with {target} labor, regulatory, or contractual attribute",
+    "COUNTED TOWARD": "{source} instance contributes to the numeric total captured in {target} attribute (e.g., each subcontract counted toward subcontractor count)",
+    "SEGMENTED BY": "{source} or record is broken down by {target} attribute for comparative analysis",
+    "PROCURED FOR": "{source} is issued specifically to fulfill {target} scope attribute (e.g., PO procured for modular/prefab content)",
+    "SCALED BY": "{source} or insurance value scales proportionally with {target} financial attribute",
+    "SCHEDULED WITHIN": "{source} milestone falls within {target} preconstruction duration timeframe",
+    "SPECIFIES": "{source} scope document defines the work captured in {target} scope attribute",
+    "DELINEATES": "{source} explicitly separates self-performed from subcontracted work as captured by {target}",
+    "WITHHELD AGAINST": "{source} terms define holdback amounts calculated from {target} value attribute",
+    "TRIGGERED BY": "{source} penalty clause activates based on {target} schedule attribute",
+    "BUDGETED WITHIN": "{source} allowance is financially allocated within {target} contingency budget attribute",
+    "SATISFIES": "Surety instrument fulfills {target} bonding requirement",
+    "REQUIRED BY": "{source} document is mandated because {target} attribute triggers a requirement",
+    "TAILORED TO": "{source}coverage is customized based on {target} type's risk profile",
+    "CERTIFIES FOR": "{source}document formally attests to {target} labor attribute",
+    "ENCUMBERED WITHIN": "{source} obligation is financially captured within {target} cost attribute",
+    "CLOSES": "{source}formally ends the period measured by {target} duration attribute",
+    "BENCHMARKED AGAINST": "{source} is compared to {target}-level attribute for performance benchmarking",
+    "MEASURED WITHIN": "{source} cycle time metric falls within {target} duration attribute",
+    "BINDS TO": "{source} instrument commits the parties to {target} schedule attribute as a contractual obligation",
+    "CONTRIBUTES TO": "{source} contractual requirement adds to {target} by requiring ongoing tracking, documentation, and compliance verification throughout the project",
+    "CONSTRAINS": "{source} contractual terms limit {target} by defining cash flow rules that affect when and how much money is available"
+  }
+}

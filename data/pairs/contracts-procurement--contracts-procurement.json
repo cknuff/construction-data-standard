@@ -1,0 +1,323 @@
+{
+  "source": "contracts-procurement",
+  "target": "contracts-procurement",
+  "edges": [
+    [
+      "cp-prequalification",
+      "cp-req-qualificatio",
+      "SCREENS FOR"
+    ],
+    [
+      "cp-prequalification",
+      "cp-bid-package",
+      "QUALIFIES BIDDERS FOR"
+    ],
+    [
+      "cp-req-qualificatio",
+      "cp-req-proposal",
+      "SHORTLISTS FOR"
+    ],
+    [
+      "cp-req-proposal",
+      "cp-bid-package",
+      "SOLICITS PRICING FOR"
+    ],
+    [
+      "cp-bid-package",
+      "cp-proposal-bid",
+      "SOLICITS"
+    ],
+    [
+      "cp-proposal-bid",
+      "cp-bid-evaluation",
+      "EVALUATED IN"
+    ],
+    [
+      "cp-bid-evaluation",
+      "cp-award-notice",
+      "RECOMMENDS"
+    ],
+    [
+      "cp-award-notice",
+      "cp-subcontract",
+      "EXECUTES"
+    ],
+    [
+      "cp-award-notice",
+      "cp-purchase-order",
+      "EXECUTES"
+    ],
+    [
+      "cp-prime-contract",
+      "cp-subcontract",
+      "FLOWS DOWN TO"
+    ],
+    [
+      "cp-prime-contract",
+      "cp-purchase-order",
+      "FLOWS DOWN TO"
+    ],
+    [
+      "cp-prime-contract",
+      "cp-gen-cond",
+      "INCORPORATES"
+    ],
+    [
+      "cp-master-service",
+      "cp-subcontract",
+      "GOVERNS"
+    ],
+    [
+      "cp-master-service",
+      "cp-purchase-order",
+      "GOVERNS"
+    ],
+    [
+      "cp-subcontract",
+      "cp-scope-work",
+      "DEFINED BY"
+    ],
+    [
+      "cp-subcontract",
+      "cp-gen-cond",
+      "BOUND BY"
+    ],
+    [
+      "cp-subcontract",
+      "cp-retainage-terms",
+      "SUBJECT TO"
+    ],
+    [
+      "cp-subcontract",
+      "cp-liquidated-damag",
+      "SUBJECT TO"
+    ],
+    [
+      "cp-subcontract",
+      "cp-allowance",
+      "INCLUDES"
+    ],
+    [
+      "cp-purchase-order",
+      "cp-scope-work",
+      "REFERENCES"
+    ],
+    [
+      "cp-scope-work",
+      "cp-bid-package",
+      "DEFINES"
+    ],
+    [
+      "cp-gen-cond",
+      "cp-retainage-terms",
+      "ESTABLISHES"
+    ],
+    [
+      "cp-gen-cond",
+      "cp-liquidated-damag",
+      "ESTABLISHES"
+    ],
+    [
+      "cp-gen-cond",
+      "cp-insurance-cert",
+      "REQUIRES"
+    ],
+    [
+      "cp-gen-cond",
+      "cp-prevailing-wage",
+      "MANDATES"
+    ],
+    [
+      "cp-gen-cond",
+      "cp-warranty",
+      "SPECIFIES"
+    ],
+    [
+      "cp-bid-bond",
+      "cp-proposal-bid",
+      "ACCOMPANIES"
+    ],
+    [
+      "cp-perf-bond",
+      "cp-subcontract",
+      "GUARANTEES COMPLETION OF"
+    ],
+    [
+      "cp-payment-bond",
+      "cp-subcontract",
+      "SECURES PAYMENT ON"
+    ],
+    [
+      "cp-insurance-cert",
+      "cp-prequalification",
+      "VERIFIED DURING"
+    ],
+    [
+      "cp-insurance-cert",
+      "cp-subcontract",
+      "REQUIRED FOR"
+    ],
+    [
+      "cp-builders-risk",
+      "cp-prime-contract",
+      "INSURES UNDER"
+    ],
+    [
+      "cp-substantial-comp",
+      "cp-retainage-terms",
+      "TRIGGERS RELEASE UNDER"
+    ],
+    [
+      "cp-substantial-comp",
+      "cp-warranty",
+      "STARTS"
+    ],
+    [
+      "cp-substantial-comp",
+      "cp-final-completion",
+      "PRECEDES"
+    ],
+    [
+      "cp-final-completion",
+      "cp-closeout-doc",
+      "REQUIRES"
+    ],
+    [
+      "cp-final-completion",
+      "cp-retainage-terms",
+      "TRIGGERS FINAL RELEASE UNDER"
+    ],
+    [
+      "cp-final-completion",
+      "cp-warranty",
+      "CONFIRMS"
+    ],
+    [
+      "cp-closeout-doc",
+      "cp-warranty",
+      "INCLUDES"
+    ],
+    [
+      "cp-closeout-doc",
+      "cp-prevailing-wage",
+      "INCLUDES"
+    ],
+    [
+      "cp-closeout-doc",
+      "cp-diversity-dbe",
+      "INCLUDES"
+    ],
+    [
+      "cp-prevailing-wage",
+      "cp-subcontract",
+      "APPLIES TO"
+    ],
+    [
+      "cp-diversity-dbe",
+      "cp-prequalification",
+      "TRACKED DURING"
+    ],
+    [
+      "cp-bid-coverage",
+      "cp-bid-package",
+      "MEASURES COMPETITIVENESS OF"
+    ],
+    [
+      "cp-average-bidders",
+      "cp-bid-package",
+      "MEASURES DEPTH OF"
+    ],
+    [
+      "cp-award-cycle-time",
+      "cp-award-notice",
+      "MEASURES SPEED OF"
+    ],
+    [
+      "cp-insurance-comp",
+      "cp-insurance-cert",
+      "MEASURES COMPLIANCE OF"
+    ],
+    [
+      "cp-chg-order-rate",
+      "cp-subcontract",
+      "BENCHMARKS"
+    ],
+    [
+      "cp-chg-order-rate",
+      "cp-prime-contract",
+      "BENCHMARKS"
+    ],
+    [
+      "cp-sub-retention",
+      "cp-prequalification",
+      "INFORMS"
+    ],
+    [
+      "cp-prequalification",
+      "cp-req-proposal",
+      "QUALIFIES BIDDERS FOR"
+    ],
+    [
+      "cp-insurance-cert",
+      "cp-scope-work",
+      "VALIDATES COVERAGE FOR"
+    ],
+    [
+      "cp-req-proposal",
+      "cp-scope-work",
+      "DEFINES"
+    ],
+    [
+      "cp-scope-work",
+      "cp-proposal-bid",
+      "DRIVES"
+    ],
+    [
+      "cp-proposal-bid",
+      "cp-prime-contract",
+      "AWARDED AS"
+    ]
+  ],
+  "verbGlossary": {
+    "ACCOMPANIES": "{source}is submitted alongside a bid as a guarantee of the bidder's intent to honor their price",
+    "APPLIES TO": "{source}requirement applies to {target} on public or regulated work",
+    "BENCHMARKS": "{source}measure benchmarks the performance or cost growth of {target} instrument",
+    "BOUND BY": "{target} is legally bound by the general conditions and administrative terms",
+    "CONFIRMS": "{target} confirms that all warranty obligations and deliverables are in place",
+    "DEFINED BY": "{target} work is defined by a detailed scope of work exhibit",
+    "DEFINES": "{target} exhibit defines the technical content of a bid package for solicitation",
+    "ESTABLISHES": "{target} establish the specific contract terms and requirements that govern the project",
+    "EVALUATED IN": "{source}is evaluated in the bid leveling and comparison process",
+    "EXECUTES": "{source} or notice to proceed results in the execution of {target} instrument",
+    "FLOWS DOWN TO": "{target} terms, conditions, and obligations flow down to subordinate contracts",
+    "GOVERNS": "{target} governs the commercial terms of individual contracts issued under it",
+    "GUARANTEES COMPLETION OF": "{target} guarantees that the contractor will complete the contracted scope of work",
+    "INCLUDES": "{target} or document package includes a specific exhibit, term, or certification",
+    "INCORPORATES": "{source}formally incorporates a set of terms or exhibits by reference",
+    "INFORMS": "A measure or metric informs a procurement decision or evaluation process",
+    "INSURES UNDER": "{target} policy provides property damage coverage under the prime contract",
+    "MANDATES": "{target} mandate a specific compliance requirement on all contracted parties",
+    "MEASURES COMPETITIVENESS OF": "{source} the competitive coverage of procurement across {target}s",
+    "MEASURES COMPLIANCE OF": "{source} the rate of compliance for {target}",
+    "MEASURES DEPTH OF": "{source} the depth of market competition on a procurement package",
+    "MEASURES SPEED OF": "{source} the elapsed time efficiency of a procurement milestone",
+    "PRECEDES": "{source}must be achieved before the next milestone can occur",
+    "QUALIFIES BIDDERS FOR": "{target} vets contractors and determines who is eligible to bid on a package",
+    "RECOMMENDS": "{target} process recommends a contractor for award and notice to proceed",
+    "REFERENCES": "{target} references another document or exhibit without full incorporation",
+    "REQUIRED FOR": "A document or certification is required for {target} instrument to be valid or active",
+    "REQUIRES": "{source}requires the completion or delivery of a specific document or action",
+    "SCREENS FOR": "{target} or RFQ process screens contractors for eligibility on a specific solicitation",
+    "SECURES PAYMENT ON": "{source} secures the obligation to pay subcontractors and suppliers on {target}",
+    "SHORTLISTS FOR": "{target} process shortlists qualified contractors who will be invited to submit proposals",
+    "SOLICITS": "{target} solicits competitive proposals from qualified contractors",
+    "SOLICITS PRICING FOR": "{target} solicits detailed pricing and approach for a specific bid package scope",
+    "SPECIFIES": "{target} specify the warranty duration and obligations for contracted work",
+    "STARTS": "{target} starts the warranty period for the contracted scope of work",
+    "SUBJECT TO": "{target} is subject to a specific financial or schedule term",
+    "TRACKED DURING": "{source}is tracked during the procurement evaluation process",
+    "TRIGGERS FINAL RELEASE UNDER": "{source}triggers the final release of withheld retainage under {target} terms",
+    "TRIGGERS RELEASE UNDER": "{source} triggers the initial release of retainage under {target} terms",
+    "VERIFIED DURING": "{source}is verified during {target} screening process"
+  }
+}

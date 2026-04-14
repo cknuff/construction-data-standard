@@ -1,0 +1,242 @@
+{
+  "source": "contracts-procurement",
+  "target": "workflows-statuses",
+  "edges": [
+    [
+      "cp-prequalification",
+      "ws-under-review",
+      "EVALUATED DURING"
+    ],
+    [
+      "cp-prequalification",
+      "ws-approved",
+      "QUALIFIES UPON"
+    ],
+    [
+      "cp-bid-package",
+      "ws-draft",
+      "ASSEMBLED IN"
+    ],
+    [
+      "cp-req-qualificatio",
+      "ws-dist-list",
+      "DISTRIBUTED VIA"
+    ],
+    [
+      "cp-req-proposal",
+      "ws-open",
+      "SOLICITS AT"
+    ],
+    [
+      "cp-proposal-bid",
+      "ws-submitted",
+      "SUBMITTED AT"
+    ],
+    [
+      "cp-proposal-bid",
+      "ws-overdue",
+      "ESCALATES TO"
+    ],
+    [
+      "cp-bid-evaluation",
+      "ws-parallel-review",
+      "LEVELED VIA"
+    ],
+    [
+      "cp-bid-evaluation",
+      "ws-ball-court",
+      "ASSIGNED VIA"
+    ],
+    [
+      "cp-award-notice",
+      "ws-approved",
+      "EXECUTED UPON"
+    ],
+    [
+      "cp-award-notice",
+      "ws-e-signature-req",
+      "CERTIFIES VIA"
+    ],
+    [
+      "cp-subcontract",
+      "ws-void",
+      "VOIDED TO"
+    ],
+    [
+      "cp-subcontract",
+      "ws-multi-stage",
+      "ROUTES THROUGH"
+    ],
+    [
+      "cp-purchase-order",
+      "ws-submit-approve",
+      "FOLLOWS"
+    ],
+    [
+      "cp-prime-contract",
+      "ws-sequential-appr",
+      "ROUTES THROUGH"
+    ],
+    [
+      "cp-prime-contract",
+      "ws-e-signature-ball",
+      "COUNTERSIGNED VIA"
+    ],
+    [
+      "cp-master-service",
+      "ws-approved",
+      "EXECUTED UPON"
+    ],
+    [
+      "cp-scope-work",
+      "ws-review-respond",
+      "NEGOTIATED VIA"
+    ],
+    [
+      "cp-gen-cond",
+      "ws-approved",
+      "LOCKED UPON"
+    ],
+    [
+      "cp-retainage-terms",
+      "ws-hold",
+      "WITHHELD DURING"
+    ],
+    [
+      "cp-liquidated-damag",
+      "ws-overdue",
+      "TRIGGERED BY"
+    ],
+    [
+      "cp-allowance",
+      "ws-cost-stage",
+      "CONSUMED DURING"
+    ],
+    [
+      "cp-bid-bond",
+      "ws-submitted",
+      "FURNISHED AT"
+    ],
+    [
+      "cp-perf-bond",
+      "ws-closed",
+      "RELEASED AT"
+    ],
+    [
+      "cp-payment-bond",
+      "ws-approved",
+      "ISSUED UPON"
+    ],
+    [
+      "cp-insurance-cert",
+      "ws-approved",
+      "VERIFIED UPON"
+    ],
+    [
+      "cp-builders-risk",
+      "ws-approved",
+      "BOUND UPON"
+    ],
+    [
+      "cp-warranty",
+      "ws-due-date",
+      "BOUND BY"
+    ],
+    [
+      "cp-substantial-comp",
+      "ws-ready-review",
+      "INSPECTED AT"
+    ],
+    [
+      "cp-substantial-comp",
+      "ws-deficient",
+      "REJECTED AT"
+    ],
+    [
+      "cp-final-completion",
+      "ws-closed",
+      "FINALIZES AT"
+    ],
+    [
+      "cp-prevailing-wage",
+      "ws-approved",
+      "CERTIFIED UPON"
+    ],
+    [
+      "cp-diversity-dbe",
+      "ws-submitted",
+      "FURNISHED AT"
+    ],
+    [
+      "cp-closeout-doc",
+      "ws-create-close",
+      "FOLLOWS"
+    ],
+    [
+      "cp-bid-coverage",
+      "ws-overdue-rate",
+      "MEASURED BY"
+    ],
+    [
+      "cp-average-bidders",
+      "ws-workflow-complet",
+      "TRACKED BY"
+    ],
+    [
+      "cp-award-cycle-time",
+      "ws-average-appr",
+      "MEASURED BY"
+    ],
+    [
+      "cp-insurance-comp",
+      "ws-overdue-rate",
+      "BENCHMARKED AGAINST"
+    ],
+    [
+      "cp-chg-order-rate",
+      "ws-first-pass-appr",
+      "CORRELATED WITH"
+    ],
+    [
+      "cp-sub-retention",
+      "ws-escalation-rate",
+      "CORRELATED WITH"
+    ]
+  ],
+  "verbGlossary": {
+    "EVALUATED DURING": "{source}document undergoes scoring, comparison, or qualification assessment during this review {target}.",
+    "QUALIFIES UPON": "The vendor or contractor achieves qualified {target} when this approval is granted.",
+    "ASSEMBLED IN": "{source} or contract document is compiled and organized while in this draft {target}.",
+    "DISTRIBUTED VIA": "{source} is sent to prospective bidders or respondents through this distribution {target}.",
+    "SOLICITS AT": "{source}is opened and made available to bidders at {target}.",
+    "SUBMITTED AT": "{source}document or instrument is formally submitted for consideration at {target}.",
+    "ESCALATES TO": "{source} automatically transitions to {target} when deadlines are missed.",
+    "LEVELED VIA": "{source}are normalized and compared on equal terms using this parallel review pattern.",
+    "ASSIGNED VIA": "{source} is routed to a responsible party through {target}.",
+    "EXECUTED UPON": "{source} becomes a binding contractual commitment when {target} is reached.",
+    "CERTIFIES VIA": "{source} obtains formal certification or authentication through {target}.",
+    "VOIDED TO": "{source} is canceled and moved to void {target}, removing it from active contractual tracking.",
+    "ROUTES THROUGH": "{source} passes through {target} pattern or approval chain as part of its lifecycle processing.",
+    "FOLLOWS": "{source} adheres to this standard {target} pattern from initiation through completion.",
+    "COUNTERSIGNED VIA": "{source}receives the required counter-party signature through this e-signature {target}.",
+    "NEGOTIATED VIA": "{source} terms are discussed and modified through this review-and-respond {target} pattern.",
+    "LOCKED UPON": "{source}document's terms become read-only once {target} is reached, preventing further edits.",
+    "WITHHELD DURING": "{source} funds are held back from payment while {target} remains in this held status.",
+    "TRIGGERED BY": "{source} are activated when the project reaches this overdue or delinquent {target}.",
+    "CONSUMED DURING": "{source} or contingency funds are drawn down against actual costs during this financial stage.",
+    "FURNISHED AT": "The bond, certificate, or compliance document is provided by the contractor at this submission {target}.",
+    "RELEASED AT": "{source}are disbursed when the project or instrument reaches this terminal {target}.",
+    "ISSUED UPON": "{source} is formally released or sent to recipients when {target} is reached.",
+    "VERIFIED UPON": "{source}document is confirmed as valid and current when {target} is reached.",
+    "BOUND UPON": "The insurance policy becomes effective and binds coverage to the project when {target} is reached.",
+    "BOUND BY": "{source} is constrained by {target} component, such as a contractual due date or deadline.",
+    "INSPECTED AT": "{source}is physically reviewed and assessed for completeness at this ready-for-review {target}.",
+    "REJECTED AT": "{source}is denied due to outstanding deficiencies found at this disposition {target}.",
+    "FINALIZES AT": "The contract reaches its terminal {target}, completing all obligations and closing the record.",
+    "CERTIFIED UPON": "The milestone, completion, or compliance document is formally certified at {target}.",
+    "MEASURED BY": "{source} is quantified using {target} performance measure.",
+    "TRACKED BY": "{source} is monitored over time using {target} KPI.",
+    "BENCHMARKED AGAINST": "{source}rate is compared against {target} efficiency metric to assess performance.",
+    "CORRELATED WITH": "{source} is analyzed in relation to {target} measure to identify trends."
+  }
+}

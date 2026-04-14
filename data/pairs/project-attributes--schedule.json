@@ -1,0 +1,219 @@
+{
+  "source": "project-attributes",
+  "target": "schedule",
+  "edges": [
+    [
+      "pa-planned-start",
+      "sch-baseline-dates",
+      "ANCHORS"
+    ],
+    [
+      "pa-planned-completi",
+      "sch-milestone",
+      "ANCHORS"
+    ],
+    [
+      "pa-planned-completi",
+      "sch-baseline-dates",
+      "ANCHORS"
+    ],
+    [
+      "pa-planned-duration",
+      "sch-baseline-schedul",
+      "BOUNDS"
+    ],
+    [
+      "pa-actual-start",
+      "sch-data-date",
+      "VALIDATES"
+    ],
+    [
+      "pa-actual-duration",
+      "sch-as-built",
+      "RECORDED IN"
+    ],
+    [
+      "pa-actual-completio",
+      "sch-as-built",
+      "RECORDED IN"
+    ],
+    [
+      "pa-season-start",
+      "sch-work-calendar",
+      "CONFIGURES"
+    ],
+    [
+      "pa-climate-zone",
+      "sch-work-calendar",
+      "CONFIGURES"
+    ],
+    [
+      "pa-fast-track",
+      "sch-lag-lead-time",
+      "COMPRESSES"
+    ],
+    [
+      "pa-fast-track",
+      "sch-critical-path",
+      "COMPRESSES"
+    ],
+    [
+      "pa-fast-track",
+      "sch-float-slack",
+      "COMPRESSES"
+    ],
+    [
+      "pa-phased-const",
+      "sch-summary-activity",
+      "PARTITIONS"
+    ],
+    [
+      "pa-phased-const",
+      "sch-milestone",
+      "PARTITIONS"
+    ],
+    [
+      "pa-schedule-growth",
+      "sch-float-erosion",
+      "CORRELATED WITH"
+    ],
+    [
+      "pa-schedule-growth",
+      "sch-schedule-perf",
+      "CORRELATED WITH"
+    ],
+    [
+      "pa-earned-value-spi",
+      "sch-schedule-perf",
+      "REPORTED AS"
+    ],
+    [
+      "pa-percent-complete",
+      "sch-earned-schedule",
+      "TRACKED BY"
+    ],
+    [
+      "pa-current-phase",
+      "sch-look-ahead",
+      "SCOPES"
+    ],
+    [
+      "pa-project-type",
+      "sch-critical-activit",
+      "SEGMENTS"
+    ],
+    [
+      "pa-project-type",
+      "sch-schedule-health",
+      "SEGMENTS"
+    ],
+    [
+      "pa-total-value-band",
+      "sch-schedule-health",
+      "SEGMENTS"
+    ],
+    [
+      "pa-dlvy-method",
+      "sch-dependency-class",
+      "SHAPES"
+    ],
+    [
+      "pa-dlvy-method",
+      "sch-schedule-levels",
+      "SHAPES"
+    ],
+    [
+      "pa-contract-type",
+      "sch-schedule-constra",
+      "SHAPES"
+    ],
+    [
+      "pa-modular-prefab",
+      "sch-detail-activity",
+      "INTRODUCES"
+    ],
+    [
+      "pa-modular-prefab",
+      "sch-lag-lead-time",
+      "INTRODUCES"
+    ],
+    [
+      "pa-bim-requirement",
+      "sch-4d-5d-bim",
+      "ENABLES"
+    ],
+    [
+      "pa-specialty-system",
+      "sch-detail-activity",
+      "EXPANDS"
+    ],
+    [
+      "pa-number-subcontra",
+      "sch-logic-density",
+      "SCALES"
+    ],
+    [
+      "pa-gross-building",
+      "sch-labor-loading",
+      "SCALES"
+    ],
+    [
+      "pa-site-constraints",
+      "sch-schedule-constra",
+      "IMPOSES"
+    ],
+    [
+      "pa-preconstruction",
+      "sch-baseline-schedul",
+      "PRECEDES"
+    ],
+    [
+      "pa-occupied-during",
+      "sch-schedule-constra",
+      "IMPOSES"
+    ],
+    [
+      "pa-region",
+      "sch-work-calendar",
+      "CONFIGURES"
+    ],
+    [
+      "pa-decision-speed",
+      "sch-schedule-update",
+      "REFLECTED IN"
+    ],
+    [
+      "pa-decision-speed",
+      "sch-delay-predict",
+      "FORECASTED BY"
+    ],
+    [
+      "pa-risk-reduction",
+      "sch-schedule-health",
+      "REFLECTED IN"
+    ]
+  ],
+  "verbGlossary": {
+    "ANCHORS": "{source} date attribute fixes the start or end point of {target} element (e.g., planned start date anchors baseline dates, planned completion anchors a milestone)",
+    "BOUNDS": "{source} duration attribute sets the overall time envelope for {target} (e.g., planned duration bounds the baseline schedule)",
+    "VALIDATES": "{source} actual date attribute confirms the accuracy of {target} data date (e.g., actual start date validates data date alignment)",
+    "RECORDED IN": "{source} actual date or duration attribute is captured within {target} (e.g., actual duration and completion recorded in as-built schedule)",
+    "CONFIGURES": "{source} seasonal, climate, or regional attribute determines {target} calendar settings (e.g., season of start configures work calendar for weather-related non-work days)",
+    "COMPRESSES": "{source} fast-track attribute reduces durations and buffers in {target} logic (e.g., fast-track compresses lag times, critical path, and available float)",
+    "PARTITIONS": "{source} phasing attribute divides {target} elements into distinct construction phases (e.g., phased construction partitions summary activities and milestones)",
+    "CORRELATED WITH": "{source} schedule variance metric shows statistical relationship with {target} performance metric (e.g., schedule growth correlated with float erosion rate)",
+    "REPORTED AS": "{source} earned value attribute is surfaced as {target} performance metric (e.g., SPI reported as schedule performance index)",
+    "TRACKED BY": "{source} completion percentage is monitored using {target} methodology (e.g., percent complete tracked by earned schedule)",
+    "SCOPES": "{source} phase attribute defines the time window for {target} (e.g., current phase scopes the look-ahead schedule)",
+    "SEGMENTS": "{source} subdivides {target} metric for comparative analysis (e.g., project type segments critical activity ratio and schedule health score across building types)",
+    "SHAPES": "{source} delivery or contract attribute influences the structure of {target} relationships or levels (e.g., delivery method shapes dependency classification and schedule levels)",
+    "INTRODUCES": "{source} attribute creates new target {target} activities or logic not present in conventional construction (e.g., modular/prefab introduces off-site fabrication activities and lead times)",
+    "ENABLES": "{source} technology attribute makes the target advanced scheduling method feasible (e.g., BIM requirement enables 4D/5D BIM scheduling)",
+    "EXPANDS": "{source} attribute increases the number of target {target} detail activities (e.g., specialty systems expand the count of detail activities for commissioning)",
+    "SCALES": "{source} size attribute proportionally increases {target} resource loading or logic complexity (e.g., gross building area scales labor loading)",
+    "IMPOSES": "{source} constraint attribute adds {target} restrictions (e.g., site constraints and occupied-during impose schedule constraints on work hours and access)",
+    "PRECEDES": "{source} preconstruction duration attribute establishes the time period before {target} construction schedule begins",
+    "REFLECTED IN": "{source} outcome manifests in {target} -- when {source} is poor, {target} shows the downstream impact through delays and revisions",
+    "FORECASTED BY": "{source} outcome trajectory is predicted by {target} model, enabling proactive intervention before {source} deteriorates further"
+  }
+}

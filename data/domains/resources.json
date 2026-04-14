@@ -1,0 +1,330 @@
+{
+  "domain": "resources",
+  "name": "Resources",
+  "color": "#ce93d8",
+  "categories": [
+    {
+      "name": "Trades",
+      "color": "#ce93d8",
+      "nodes": [
+        {
+          "id": "res-laborer",
+          "name": "General Laborer",
+          "desc": "General construction labor across all project phases — site prep through closeout. Lifecycle: mobilize → work → demobilize. Sub-specialties include site laborers (earthwork, erosion control, flagging), interior laborers (cleanup, protection, material movement during finishes), and demolition workers (selective/structural demo, hazmat abatement). Typically the largest headcount on early-phase daily logs. Decision authority: superintendent."
+        },
+        {
+          "id": "res-carpenter",
+          "name": "Carpenter",
+          "desc": "Rough and finish carpentry — one of the most versatile trades on any project. Rough carpenters build formwork, shoring, blocking, backing, and temporary structures during foundations and structural phases. Finish carpenters install doors, frames, hardware, trim, and casework during interiors. Millworkers handle custom paneling and specialty wood on high-end projects. Often two different subcontractors for rough vs. finish work."
+        },
+        {
+          "id": "res-concrete",
+          "name": "Concrete Worker",
+          "desc": "All concrete forming, placing, and finishing — from foundations through elevated slabs. Sub-specialties: concrete finishers (screeding, finishing, curing flatwork), formwork carpenters (construction and stripping), and post-tension specialists (strand placement, stressing, grouting on PT structures). Production measured in CY placed per day. Pour records in daily logs are a strong signal."
+        },
+        {
+          "id": "res-ironworker",
+          "name": "Ironworker",
+          "desc": "Steel erection and reinforcing — structural steel columns, beams, and deck plus reinforcing bar placement. Sub-specialties: structural steel erectors (bolting, plumbing, decking), welders (certified structural and misc welding), rebar installers (tying, splicing, cage assembly), and riggers/signal persons (crane rigging, heavy lifts). Production measured in tons erected per day. Critical path trade during structure phase."
+        },
+        {
+          "id": "res-mason",
+          "name": "Mason",
+          "desc": "All unit masonry — brick, block, and stone. Sub-specialties: bricklayers (face brick, thin brick veneer), block layers (CMU walls, backup walls, elevator shafts), and stone masons (natural and manufactured stone for exterior veneer and interior lobbies). Weather-sensitive — production depends on temperature and moisture. Measured in SF of wall face per day."
+        },
+        {
+          "id": "res-roofer",
+          "name": "Roofer",
+          "desc": "All roofing work — membrane, metal, and built-up systems. Sub-specialties: membrane roofers (TPO, PVC, EPDM, BUR, modified bitumen) and metal roofers/sheet metal workers (standing seam, metal panels, copings, flashing). Highly weather-sensitive — daily log delays frequently reference roofing holds. Manufacturer warranty submittals are a key deliverable. Critical path on most projects."
+        },
+        {
+          "id": "res-glazier",
+          "name": "Glazier",
+          "desc": "All glass and curtain wall work — unitized and stick-built curtain wall systems, punch windows, storefronts, entrances, and skylights. Highly specialized — usually one sub for the full building envelope scope. Unitized systems are fabricated off-site and installed as complete units. Long lead time for fabrication. Often critical path on high-rise projects."
+        },
+        {
+          "id": "res-waterproofer",
+          "name": "Waterproofer",
+          "desc": "Below-grade and above-grade moisture protection — foundation membranes, air/vapor barriers, and joint sealants. Sub-specialties: below-grade waterproofers (fluid-applied, sheet membrane, bentonite), air/vapor barrier installers (building wrap, fluid-applied, self-adhered), and caulkers/sealant applicators (joint sealants, expansion joints, firestopping). Failure leads to long-term moisture intrusion — a top rework driver."
+        },
+        {
+          "id": "res-drywall",
+          "name": "Drywall Hanger",
+          "desc": "Hang and finish gypsum board — drywall hanging, taping and finishing, sanding, specialty boards (moisture/abuse/fire-rated), patching around MEP. Above-ceiling inspection must happen BEFORE drywall closes the ceiling. Gate: drywall complete — walls ready for finishes. Duration: 3-5%."
+        },
+        {
+          "id": "res-painter",
+          "name": "Painter",
+          "desc": "All painting and coating work — interior and exterior. Sub-specialties: interior painters (walls, ceilings, trim, doors), exterior painters (elastomeric, high-performance coatings), and specialty coatings applicators (epoxy floors, intumescent fireproofing, anti-graffiti). One of the last trades during finishes. Punch items frequently reference paint touch-ups."
+        },
+        {
+          "id": "res-floor",
+          "name": "Floor Installer",
+          "desc": "All flooring installation — tile, carpet, resilient, hardwood, and specialty. Sub-specialties: tile setters (ceramic, porcelain, natural stone), carpet/resilient installers (carpet, LVT, VCT, sheet vinyl, rubber), and hardwood/specialty floor installers (hardwood, terrazzo, polished concrete, resinous). Often multiple flooring subs per project. Late-phase — substrate moisture is a common delay driver."
+        },
+        {
+          "id": "res-ceiling",
+          "name": "Ceiling Installer",
+          "desc": "Ceiling systems — acoustic grid-and-tile and specialty ceilings. Sub-specialties: acoustic ceiling installers (grid, lay-in tile, tegular) and specialty ceiling installers (wood, metal, stretch, linear, cloud ceilings). Sometimes combined with drywall sub. Follows MEP rough-in above ceiling."
+        },
+        {
+          "id": "res-insulator",
+          "name": "Insulation Installer",
+          "desc": "Thermal and acoustic insulation — building envelope and mechanical systems. Sub-specialties: building insulation (batt, rigid, spray foam, blown-in for walls and roof) and mechanical insulation (pipe and duct insulation, jacketing). Mechanical insulation is a distinct specialty — often under the HVAC sub's scope."
+        },
+        {
+          "id": "res-fireproofer",
+          "name": "Fireproofer",
+          "desc": "Fire protection of structural elements and through-penetrations. Sub-specialties: spray fireproofers (SFRM on structural steel — follows steel erection, critical path) and firestoppers (through-penetration and perimeter fire barrier — inspection-critical, MEP coordination-heavy). Required for fire-rated assemblies."
+        },
+        {
+          "id": "res-plumber",
+          "name": "Plumber",
+          "desc": "All plumbing and piping — domestic water, waste, vent, gas, and specialty process piping. Sub-specialties: plumbers (domestic water and DWV), steamfitters/HVAC pipefitters (chilled water, hot water, steam, refrigerant), medical gas installers (healthcare projects — separate certification), and process pipefitters (lab, industrial, clean room). On site from underground rough-in through fixture trim."
+        },
+        {
+          "id": "res-sheetmetal",
+          "name": "HVAC / Sheet Metal",
+          "desc": "All HVAC ductwork and equipment — fabrication, installation, and commissioning. Sub-specialties: sheet metal workers (duct fabrication and installation), HVAC equipment installers (AHUs, RTUs, chillers, boilers, VRF), test and balance technicians (air and water balancing — required for closeout), and controls technicians (BAS/BMS programming, sensor installation). Often the largest MEP sub by contract value."
+        },
+        {
+          "id": "res-electrician",
+          "name": "Electrician",
+          "desc": "All electrical work — power distribution, lighting, fire alarm, and site electrical. Sub-specialties: power electricians (service entrance, distribution, branch circuits, devices), lighting electricians (fixture installation, controls, emergency), fire alarm electricians (FA devices, wiring, panels, programming), and site electricians (underground ductbank, site lighting, utility connections). On site from underground through punch."
+        },
+        {
+          "id": "res-sprinkler",
+          "name": "Sprinkler Fitter",
+          "desc": "All fire suppression piping — wet, dry, pre-action, deluge, and specialty systems. Sub-specialties: wet system installers (mains, branches, heads for standard wet pipe) and specialty system installers (dry, pre-action, deluge, clean agent, kitchen hood). Separate union and licensing from plumbers. Coordinates closely with structure (hangers) and ceilings (head locations)."
+        },
+        {
+          "id": "res-elevator",
+          "name": "Elevator Mechanic",
+          "desc": "All elevator and vertical transportation work — traction, hydraulic, MRL, escalators, and moving walks. Typically proprietary — one manufacturer's installer per project. Long lead time for equipment. Temporary construction elevator (hoist) is a separate scope from permanent elevators."
+        },
+        {
+          "id": "res-lowvolt",
+          "name": "Low Voltage Tech",
+          "desc": "All low voltage and technology systems — data/telecom, security, AV, and fire alarm. Sub-specialties: data/telecom installers (structured cabling, fiber, racks), security installers (cameras, access control, intrusion), AV installers (audio, video, conferencing), and fire alarm installers (system design, installation, programming). Often multiple specialty subs per project."
+        },
+        {
+          "id": "res-operator",
+          "name": "Equipment Operator",
+          "desc": "Operation of construction equipment — earthmoving, cranes, and material handling. Sub-specialties: heavy equipment operators (excavators, dozers, loaders, graders, scrapers), crane operators (tower and mobile cranes — separately licensed), and forklift/telehandler operators. Crane operators require specific NCCCO certification. Equipment production rates drive earthwork and structural schedules."
+        },
+        {
+          "id": "res-surveyor",
+          "name": "Surveyor",
+          "desc": "Survey and layout — establishing control points, building layout, grade verification, and as-built documentation. Uses total stations, GPS/GNSS, robotic instruments, and increasingly drones for progress documentation. First on site and last to leave. Layout accuracy directly affects every subsequent trade."
+        },
+        {
+          "id": "res-safety",
+          "name": "Safety Professional",
+          "desc": "Safety management and compliance — hazard identification, incident investigation, OSHA compliance, and safety training. Typically a full-time role on projects above a threshold size. Generates safety observations, manages toolbox talks, and oversees PPE compliance. Decision authority on stop-work conditions."
+        },
+        {
+          "id": "res-qc",
+          "name": "QC Inspector",
+          "desc": "Dedicated quality professional responsible for QA/QC across the project — inspection coordination, deficiency tracking, specification compliance, material testing coordination, non-conformance management. Consumes specifications, approved submittals, test reports, inspection results. Produces inspection reports, NCRs, deficiency logs, quality metrics. Active from Construction through Closeout. Decision authority: Medium — can reject non-conforming work; requires corrective action."
+        },
+        {
+          "id": "res-cxa",
+          "name": "Commissioning Agent",
+          "desc": "Building systems commissioning — functional performance testing of MEP systems before owner occupancy. Increasingly required by code (IECC, ASHRAE 189.1) and LEED. Independent from installing contractors. Tests integrated system performance, not just individual equipment. Lifecycle: pre-functional checks → startup → TAB → integrated testing → performance verification."
+        }
+      ]
+    },
+    {
+      "name": "Equipment",
+      "color": "#4dd0e1",
+      "nodes": [
+        {
+          "id": "res-crane",
+          "name": "Crane",
+          "desc": "Lifting equipment for vertical construction — tower cranes, mobile cranes, and overhead gantry systems. Tower cranes: hammerhead (fixed jib, high-rise), luffing (variable radius, tight urban sites), and self-erecting (low/mid-rise). Mobile cranes: truck-mounted (steel picks, equipment setting), crawler (heavy lifts, piling), and all-terrain. Crane erection and dismantling are major schedule milestones. Crane capacity and reach govern structural sequencing."
+        },
+        {
+          "id": "res-earthmover",
+          "name": "Earthmoving Equip",
+          "desc": "Excavation, grading, and site preparation equipment. Types: track excavators (primary dig — bulk and detail), mini excavators (confined spaces, utilities), long-reach excavators (deep cuts), wheel loaders (material handling, stockpile), skid steers (compact, versatile with attachments), backhoes (combined loader/excavator for utilities), dozers (grading, pushing), graders (fine grading, road building), and trenchers (narrow utility trenching). GPS machine guidance increasingly standard."
+        },
+        {
+          "id": "res-conc-equip",
+          "name": "Concrete Equip",
+          "desc": "Concrete placement and finishing equipment — pumps, mixers, vibrators, and saws. Boom pumps (truck-mounted, for elevated pours), line pumps (ground-level, for slabs and foundations), mixer trucks (ready-mix delivery), concrete vibrators (internal consolidation), and concrete saws (flat, wall, and wire saws for cutting and demo). Pump selection depends on placement distance and elevation. Pour volume per day drives equipment sizing."
+        },
+        {
+          "id": "res-mat-handle",
+          "name": "Material Handling",
+          "desc": "Equipment for moving materials on site — forklifts, telehandlers, conveyors, and hoists. Rough terrain forklifts (outdoor material handling), warehouse forklifts (indoor staging), telehandlers (variable-reach telescopic handler — most common material handling on site), and conveyors/hoists (material conveyors, trash chutes). Telehandlers are on every project. Material handling efficiency directly affects trade productivity."
+        },
+        {
+          "id": "res-access",
+          "name": "Access Equipment",
+          "desc": "Equipment for elevated work access — boom lifts, scissor lifts, personnel hoists, and scaffolding. Boom lifts: articulating (around obstacles) and telescopic (maximum reach). Scissor lifts: vertical platform for interior/exterior work — most common access during MEP rough-in. Personnel/material hoists: temporary construction elevators — schedule-critical on high-rise. Scaffolding: tubular frame, modular system, mast climbing, and swing stages for facade work."
+        },
+        {
+          "id": "res-compaction",
+          "name": "Compaction Equip",
+          "desc": "Soil and base compaction equipment — rollers, plate compactors, and rammers. Vibratory rollers (smooth drum or padfoot for large areas), plate compactors (walk-behind for trench backfill and confined areas), and pneumatic rollers (multi-tire for asphalt). Compaction equipment selection depends on soil type and lift thickness. Proof rolling and compaction testing are quality checkpoints."
+        },
+        {
+          "id": "res-piling",
+          "name": "Piling Equip",
+          "desc": "Pile driving and drilling equipment including pile hammers, auger rigs, and vibratory drivers used for deep foundation installation."
+        },
+        {
+          "id": "res-hauling",
+          "name": "Hauling Equip",
+          "desc": "Transport equipment — dump trucks, flatbeds, and water trucks. Dump trucks (on/off-site material hauling for earthwork and demo), flatbed trucks (material delivery and transport), and water trucks (dust control, compaction moisture). Hauling volume drives earthwork cost. Cycle time (load, haul, dump, return) is the key production metric."
+        },
+        {
+          "id": "res-temp-util",
+          "name": "Temporary Utilities",
+          "desc": "Temporary site services during construction — power, compressed air, heating, lighting, and dewatering. Generators/temp power (before permanent electrical service), air compressors (pneumatic tools, testing, blowdown), heaters/temp heat (cold-weather concrete curing, winter enclosures), light towers (site lighting for early/late shifts), and dewatering pumps (groundwater control during excavation). Duration on site varies from mobilization to permanent service connection."
+        },
+        {
+          "id": "res-welding",
+          "name": "Welding Equip",
+          "desc": "Welding machines, cutting torches, and related equipment for structural steel connections, pipe welding, and metal fabrication on site."
+        },
+        {
+          "id": "res-survey-inst",
+          "name": "Survey Instruments",
+          "desc": "Total stations, GPS receivers, laser levels, and robotic instruments used for site layout, control surveys, and as-built verification."
+        }
+      ]
+    },
+    {
+      "name": "Materials",
+      "color": "#ff8a65",
+      "nodes": [
+        {
+          "id": "mat-concrete",
+          "name": "Concrete",
+          "desc": "All cast-in-place and precast concrete — the most common structural material in construction. Types: ready-mix concrete (normal weight, lightweight, high-strength, SCC, fiber-reinforced), precast structural (hollow core plank, double tees, beams, columns), precast architectural (panels, trim, ornamentation), concrete accessories (formwork, ties, chairs, embeds, anchors, waterstops), and admixtures/curing compounds. Mix design submittals are a key deliverable. Pour records tracked in daily logs."
+        },
+        {
+          "id": "mat-rebar",
+          "name": "Rebar",
+          "desc": "All concrete reinforcement — deformed bars, welded wire, post-tensioning, and mechanical couplers. Rebar (#3 through #18 deformed bars, epoxy coated), welded wire fabric (WWF/WWR for slabs), post-tensioning (PT strand, anchors, ducts, grout — specialty sub), and couplers/splices (mechanical rebar couplers, threaded inserts). Rebar shop drawings are standard submittals. Tonnage and placement rate drive schedule."
+        },
+        {
+          "id": "mat-steel",
+          "name": "Structural Steel",
+          "desc": "Erect the steel frame including columns, beams, girders, metal deck, and shear studs — connection bolting/welding, plumbing and aligning. Tower crane operations dominate logistics. Fall protection is the primary safety concern. Gate: steel topped out (last piece set). Duration: 10-15%."
+        },
+        {
+          "id": "mat-lumber",
+          "name": "Lumber & Wood",
+          "desc": "All wood and composite products — dimensional lumber, engineered wood, and sheathing. Dimensional lumber (studs, joists, blocking, plates), engineered wood (LVL, glulam, TJI, CLT, PSL), and sheathing/panels (plywood, OSB, cementitious board). Engineered wood products require submittals. Mass timber (CLT, glulam) is a growing structural system. Less formal submittal requirements than steel or concrete for conventional framing."
+        },
+        {
+          "id": "mat-masonry",
+          "name": "Masonry",
+          "desc": "All unit masonry — CMU, face brick, natural stone, manufactured stone, and accessories. CMU (standard, lightweight, split face, ground face), face brick (modular, queen, king, thin brick), natural stone (limestone, granite, marble, sandstone, slate), manufactured stone (cast stone, cultured stone, adhered veneer), mortar and grout (Type S, N, M), and accessories (ties, anchors, reinforcing, flashing, weeps, lintels). Color and pattern submittals are standard. Weather-sensitive installation."
+        },
+        {
+          "id": "mat-roofing",
+          "name": "Roofing Materials",
+          "desc": "All roofing materials — membrane, metal, built-up, and accessories. Single-ply membrane (TPO, PVC, EPDM), built-up/modified bitumen (BUR, SBS, APP), metal roofing (standing seam, corrugated, architectural panels), insulation (polyiso, EPS, XPS, cover board), and accessories (fasteners, adhesive, walkway pads, snow guards, drains). Manufacturer warranty submittals are a key deliverable — warranty requirements drive material and installation specifications."
+        },
+        {
+          "id": "mat-waterproof",
+          "name": "Waterproofing",
+          "desc": "All roofing materials — membrane, metal, built-up, and accessories. Single-ply membrane (TPO, PVC, EPDM), built-up/modified bitumen (BUR, SBS, APP), metal roofing (standing seam, corrugated, architectural panels), insulation (polyiso, EPS, XPS, cover board), and accessories (fasteners, adhesive, walkway pads, snow guards, drains). Manufacturer warranty submittals are a key deliverable — warranty requirements drive material and installation specifications."
+        },
+        {
+          "id": "mat-thermal",
+          "name": "Thermal & Fire Prot",
+          "desc": "Insulation and fireproofing materials — building insulation, spray fireproofing, and firestopping. Building insulation (batt, rigid board, spray foam, blown-in — energy code driven), spray fireproofing (SFRM — cementitious and intumescent on structural steel), and firestopping (through-penetration, perimeter, and joint firestopping). Spray fireproofing follows steel erection and is critical path. Firestopping is inspection-critical — one of the most common inspection findings."
+        },
+        {
+          "id": "mat-glass",
+          "name": "Glass & Glazing",
+          "desc": "All glass and glazing systems — curtain wall, windows, storefronts, skylights, and insulating glass units. Curtain wall systems (unitized and stick-built aluminum/glass facades), windows (aluminum, vinyl, wood — operable and fixed), storefronts and entrances (aluminum storefront, entrance doors, ADA), skylights (unit, ridge, pyramid, smoke vents), and IGUs (tempered, laminated, low-E, tinted, spandrel). Performance specs (U-factor, SHGC, VLT) drive selection. Major shop drawing submittals."
+        },
+        {
+          "id": "mat-doors",
+          "name": "Doors & Hardware",
+          "desc": "Install door slabs and finish hardware — door hanging, hinges, closers, locksets, pulls, keying, access control coordination, fire-rated door labeling. Top-3 punch item category on every project type. Gate: all doors hung and hardware operational. Duration: 2-3%."
+        },
+        {
+          "id": "mat-framing",
+          "name": "Framing & Gypsum",
+          "desc": "Metal framing and gypsum board — the backbone of interior partitions. Metal studs and track (light-gauge steel framing, deflection track, furring), gypsum board (regular, moisture-resistant, fire-rated, abuse-resistant, shaftliner), and plaster/stucco (traditional plaster, EIFS, synthetic stucco). Specialty boards (moisture, abuse, fire, shaftliner) require submittals. Gypsum board quantities are among the largest material volumes on any interior project."
+        },
+        {
+          "id": "mat-ceiling",
+          "name": "Ceiling Materials",
+          "desc": "All ceiling systems — acoustic grid-and-tile and specialty ceilings. Acoustic ceilings (suspension grid, lay-in tile, tegular) and specialty ceilings (wood, metal, stretch, linear, open cell, cloud ceilings). Acoustic tile selection affects NRC ratings and aesthetics. Specialty ceilings are increasingly common in commercial lobbies and open office areas. Ceiling installation cannot begin until above-ceiling MEP is inspected and approved."
+        },
+        {
+          "id": "mat-flooring",
+          "name": "Flooring Materials",
+          "desc": "All flooring materials — tile, carpet, resilient, hardwood, stone, and resinous/specialty. Ceramic/porcelain tile (floor and wall tile, mosaics), carpet (broadloom, modular tile), resilient flooring (LVT, VCT, sheet vinyl, rubber, linoleum), hardwood (solid, engineered, prefinished), stone (marble, granite, terrazzo, slate), and resinous/specialty (epoxy, urethane, MMA, polished concrete, stained). Substrate moisture content must meet ASTM F2170 before resilient and wood installation."
+        },
+        {
+          "id": "mat-paint",
+          "name": "Paint Materials",
+          "desc": "Paints, primers, stains, sealers, and coatings for interior and exterior surfaces including walls, ceilings, trim, and specialty finishes."
+        },
+        {
+          "id": "mat-specialties",
+          "name": "Specialties",
+          "desc": "Division 10 specialties — toilet accessories, signage, fire protection specialties, wall/corner protection, and lockers/storage. Toilet accessories (partitions, grab bars, dispensers, mirrors), signage (interior/exterior, ADA, wayfinding), fire protection specialties (extinguishers, cabinets, blankets), wall and corner protection (corner guards, wall protection, handrails), and lockers/storage (lockers, shelving, mail boxes). Small individual scopes but numerous SKUs across a project."
+        },
+        {
+          "id": "mat-casework",
+          "name": "Casework Materials",
+          "desc": "Cabinets, countertops, shelving, and millwork materials for kitchens, bathrooms, laboratories, and storage areas."
+        },
+        {
+          "id": "mat-plumbing",
+          "name": "Plumbing Materials",
+          "desc": "All plumbing piping, fittings, and fixtures. Pipe: domestic water (copper, PEX, CPVC, stainless), waste/vent (cast iron, PVC, ABS, no-hub), valves and fittings (gate, ball, check, PRV, backflow preventers), and hangers/supports. Fixtures: water closets and urinals, lavatories and sinks, faucets and trim, carriers and supports, water heaters (tank, tankless, heat pump), and specialty fixtures (drinking fountains, eyewash, emergency showers). Every fixture requires a model-specific submittal."
+        },
+        {
+          "id": "mat-hvac-dist",
+          "name": "HVAC Duct Materials",
+          "desc": "Sheet metal ductwork, flexible duct, duct insulation, fittings, dampers, and diffusers for air distribution systems."
+        },
+        {
+          "id": "mat-hvac-equip",
+          "name": "HVAC Equipment",
+          "desc": "Major HVAC equipment and building automation controls. Equipment: air handling units (central station AHUs, make-up air), rooftop units (packaged RTUs, DX cooling), split systems/VRF/heat pumps, chillers (air-cooled, water-cooled), cooling towers, boilers/furnaces, HVAC pumps (chilled water, hot water, condenser), and terminal units (VAV boxes, fan coils, unit heaters). Controls: thermostats/sensors, actuators/valves, DDC controllers, BAS panels. Major equipment submittals are early critical path."
+        },
+        {
+          "id": "mat-elec",
+          "name": "Electrical Wire",
+          "desc": "Conductors, cables, conduit, and wiring devices including copper wire, aluminum feeders, and fiber optic cable for power and data distribution."
+        },
+        {
+          "id": "mat-lighting",
+          "name": "Lighting Fixtures",
+          "desc": "All light fixtures and controls — interior, exterior, emergency, and controls. Interior fixtures (troffers, downlights, pendants, linear, decorative), exterior fixtures (site, facade, parking, landscape lighting), emergency and exit (emergency battery units, exit signs, egress lighting — code-required), and lighting controls (dimmers, occupancy sensors, daylight harvesting, relay panels). Lighting submittals are among the highest volume on any project — every fixture type requires approval."
+        },
+        {
+          "id": "mat-fp",
+          "name": "Fire Prot Materials",
+          "desc": "Fire protection piping, sprinkler heads, valves, hangers, and fire suppression system components."
+        },
+        {
+          "id": "mat-lv",
+          "name": "Low Voltage Cable",
+          "desc": "Communication cables, data cabling, security wiring, and control system cables for building automation and technology systems."
+        },
+        {
+          "id": "mat-site",
+          "name": "Site Materials",
+          "desc": "Aggregates, soil, asphalt, concrete, pavers, and landscape materials used for sitework, paving, and exterior improvements."
+        },
+        {
+          "id": "mat-elevator",
+          "name": "Elevator Materials",
+          "desc": "Elevator cabs, hoistway equipment, guide rails, controllers, and associated components for vertical transportation systems."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,217 @@
+{
+  "source": "models-bim",
+  "target": "quality-safety-records",
+  "edges": [
+    [
+      "bim-3d-building-info",
+      "qsr-quality-observat",
+      "LOCATES"
+    ],
+    [
+      "bim-3d-building-info",
+      "qsr-punch-item",
+      "PINPOINTS"
+    ],
+    [
+      "bim-3d-building-info",
+      "qsr-non-conformance",
+      "REFERENCES"
+    ],
+    [
+      "bim-3d-building-info",
+      "qsr-coord-issue",
+      "SPAWNS"
+    ],
+    [
+      "bim-federated-model",
+      "qsr-coord-issue",
+      "SURFACES"
+    ],
+    [
+      "bim-federated-model",
+      "qsr-coord-issue-2",
+      "EXPOSES"
+    ],
+    [
+      "bim-model-element",
+      "qsr-insp-item",
+      "MAPS TO"
+    ],
+    [
+      "bim-model-element",
+      "qsr-punch-item-issue",
+      "TAGS"
+    ],
+    [
+      "bim-model-element",
+      "qsr-observation",
+      "ANCHORS"
+    ],
+    [
+      "bim-clash-detection",
+      "qsr-coord-issue",
+      "TRIGGERS"
+    ],
+    [
+      "bim-clash-detection",
+      "qsr-corrective-actio",
+      "INITIATES"
+    ],
+    [
+      "bim-clash-detection",
+      "qsr-action-plan",
+      "PROMPTS"
+    ],
+    [
+      "bim-coord-issue",
+      "qsr-coord-issue",
+      "ESCALATES TO"
+    ],
+    [
+      "bim-coord-issue",
+      "qsr-coord-issue-2",
+      "ESCALATES TO"
+    ],
+    [
+      "bim-bim-coord",
+      "qsr-action-plan-line",
+      "ASSIGNS"
+    ],
+    [
+      "bim-point-cloud",
+      "qsr-quality-observat",
+      "VALIDATES"
+    ],
+    [
+      "bim-point-cloud",
+      "qsr-non-conformance",
+      "DETECTS"
+    ],
+    [
+      "bim-as-built-model",
+      "qsr-punch-item",
+      "IDENTIFIES"
+    ],
+    [
+      "bim-as-built-model",
+      "qsr-deficiency-notic",
+      "GENERATES"
+    ],
+    [
+      "bim-as-built-model",
+      "qsr-insp",
+      "BENCHMARKS"
+    ],
+    [
+      "bim-drone-capture",
+      "qsr-safety-observati",
+      "FLAGS"
+    ],
+    [
+      "bim-drone-capture",
+      "qsr-enviro-cx",
+      "DOCUMENTS"
+    ],
+    [
+      "bim-360-photo",
+      "qsr-punch-item-2",
+      "VERIFIES"
+    ],
+    [
+      "bim-360-photo",
+      "qsr-safety-observati",
+      "RECORDS"
+    ],
+    [
+      "bim-const-photo",
+      "qsr-incident-record",
+      "EVIDENCES"
+    ],
+    [
+      "bim-const-photo",
+      "qsr-observation",
+      "SUBSTANTIATES"
+    ],
+    [
+      "bim-digital-twin",
+      "qsr-system-perf-test",
+      "MONITORS"
+    ],
+    [
+      "bim-digital-twin",
+      "qsr-safety-violation",
+      "ALERTS"
+    ],
+    [
+      "bim-model-properties",
+      "qsr-mat-test-report",
+      "SPECIFIES"
+    ],
+    [
+      "bim-model-properties",
+      "qsr-scheduled-insp",
+      "SCOPES"
+    ],
+    [
+      "bim-model-properties",
+      "qsr-third-party",
+      "INFORMS"
+    ],
+    [
+      "bim-model-based",
+      "qsr-insp-item",
+      "ILLUSTRATES"
+    ],
+    [
+      "bim-coord-issue-2",
+      "qsr-observation-dens",
+      "CORRELATES WITH"
+    ],
+    [
+      "bim-clash-resolution",
+      "qsr-deficiency-rate",
+      "PREDICTS"
+    ],
+    [
+      "bim-photo-docs-rate",
+      "qsr-insp-pass-rate",
+      "INFLUENCES"
+    ]
+  ],
+  "verbGlossary": {
+    "LOCATES": "{source} provides spatial coordinates to place a quality or {target} at a specific building location",
+    "PINPOINTS": "{source} geometry identifies the exact element and location where {target} deficiency exists",
+    "REFERENCES": "Quality or {target} links back to a specific model view or element for traceability",
+    "SPAWNS": "A condition visible in {target} creates a new coordination issue record",
+    "SURFACES": "{source}that become coordination issue records",
+    "EXPOSES": "{source}of trade models reveals design-related clashes logged as coordination issues",
+    "MAPS TO": "{source}is linked to a specific {target} checklist item for field verification",
+    "TAGS": "{source} is associated with a categorized {target} so deficiencies trace to specific assemblies",
+    "ANCHORS": "{source} provides the spatial and descriptive context for a field {target}",
+    "TRIGGERS": "{source}produces a formal coordination issue or {target}",
+    "INITIATES": "{source} {target} starts a corrective action workflow to resolve the conflict",
+    "PROMPTS": "{source}of an action plan with assigned tasks and deadlines",
+    "ESCALATES TO": "{source} coordination issue is promoted to a formal quality or safety coordination record when unresolved",
+    "ASSIGNS": "{source} coordination meeting allocates specific action plan tasks to responsible parties",
+    "VALIDATES": "{source} data is compared to design intent to confirm or reject installation quality",
+    "DETECTS": "{source}that are logged as {target} reports",
+    "IDENTIFIES": "As-built model comparison reveals installed conditions that require punch list items",
+    "GENERATES": "{source}produces a formal {target} notice for the responsible trade",
+    "BENCHMARKS": "{source}provides the baseline geometry for field {target} acceptance criteria",
+    "FLAGS": "Drone aerial imagery highlights {target} or condition requiring an observation record",
+    "DOCUMENTS": "{source}capture provides visual evidence attached to an environmental or commissioning {target}",
+    "VERIFIES": "{source}provides visual confirmation that {target} has been properly resolved",
+    "RECORDS": "{source}captures the field condition referenced by {target}",
+    "EVIDENCES": "{source}supporting evidence attached to an {target} record",
+    "SUBSTANTIATES": "Construction photograph corroborates the finding described in a field observation",
+    "MONITORS": "Digital twin streams real-time system data used to evaluate performance test results",
+    "ALERTS": "{source}triggers {target} when operating conditions exceed thresholds",
+    "SPECIFIES": "{source} parameters define the material grades and tolerances that material test reports must verify",
+    "SCOPES": "{source} properties determine which elements require scheduled inspections and at what project stage",
+    "INFORMS": "{source} data provides the engineering parameters a third-party inspector needs for evaluation",
+    "ILLUSTRATES": "{source}-based drawing provides the visual reference an inspector uses to evaluate line items",
+    "CORRELATES WITH": "{source} density metric tracks alongside {target} density to reveal quality patterns",
+    "PREDICTS": "{source}rates are a leading indicator of lower downstream {target} rates",
+    "INFLUENCES": "{source}documentation rates on a project improve {target} pass rates through accountability"
+  }
+}

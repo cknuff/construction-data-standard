@@ -1,0 +1,617 @@
+{
+  "source": "financial-instruments",
+  "target": "financial-instruments",
+  "edges": [
+    [
+      "fi-project-budget",
+      "fi-budget-line-item",
+      "DECOMPOSES INTO"
+    ],
+    [
+      "fi-project-budget",
+      "fi-contingency",
+      "RESERVES"
+    ],
+    [
+      "fi-project-budget",
+      "fi-allowance",
+      "PROVISIONS"
+    ],
+    [
+      "fi-project-budget",
+      "fi-cost-forecast",
+      "BASELINED BY"
+    ],
+    [
+      "fi-project-budget",
+      "fi-cash-flow",
+      "PROJECTED THROUGH"
+    ],
+    [
+      "fi-budget-line-item",
+      "fi-cost-code",
+      "CATEGORIZED BY"
+    ],
+    [
+      "fi-budget-line-item",
+      "fi-wbs-code",
+      "SEGMENTED BY"
+    ],
+    [
+      "fi-budget-line-item",
+      "fi-budget-code",
+      "GROUPED BY"
+    ],
+    [
+      "fi-budget-line-item",
+      "fi-budget-variance",
+      "MEASURED BY"
+    ],
+    [
+      "fi-budget-mod",
+      "fi-budget-line-item",
+      "TRANSFERS BETWEEN"
+    ],
+    [
+      "fi-budget-mod",
+      "fi-contingency",
+      "DRAWS FROM"
+    ],
+    [
+      "fi-cost-code",
+      "fi-wbs-code",
+      "SUBDIVIDED BY"
+    ],
+    [
+      "fi-commit-subcontra",
+      "fi-commit-line-item",
+      "ITEMIZED INTO"
+    ],
+    [
+      "fi-commit-subcontra",
+      "fi-schedule-values",
+      "STRUCTURED BY"
+    ],
+    [
+      "fi-commit-subcontra",
+      "fi-sub-invoice",
+      "BILLED THROUGH"
+    ],
+    [
+      "fi-commit-subcontra",
+      "fi-retainage",
+      "WITHHOLDS"
+    ],
+    [
+      "fi-commit-subcontra",
+      "fi-budget-line-item",
+      "CHARGES AGAINST"
+    ],
+    [
+      "fi-commit-purchase",
+      "fi-commit-line-item",
+      "ITEMIZED INTO"
+    ],
+    [
+      "fi-commit-purchase",
+      "fi-budget-line-item",
+      "CHARGES AGAINST"
+    ],
+    [
+      "fi-commit-line-item",
+      "fi-cost-code",
+      "CODED TO"
+    ],
+    [
+      "fi-commit-line-item",
+      "fi-wbs-code",
+      "TAGGED WITH"
+    ],
+    [
+      "fi-chg-event-ce",
+      "fi-chg-event-line",
+      "BROKEN DOWN INTO"
+    ],
+    [
+      "fi-chg-event-ce",
+      "fi-pot-chg-order",
+      "ADVANCES TO"
+    ],
+    [
+      "fi-chg-event-ce",
+      "fi-commit-chg-order",
+      "MATURES INTO"
+    ],
+    [
+      "fi-chg-event-ce",
+      "fi-owner-chg-order",
+      "AGGREGATED INTO"
+    ],
+    [
+      "fi-chg-event-line",
+      "fi-cost-code",
+      "CODED TO"
+    ],
+    [
+      "fi-chg-event-line",
+      "fi-wbs-code",
+      "TAGGED WITH"
+    ],
+    [
+      "fi-pot-chg-order",
+      "fi-commit-chg-order",
+      "CONVERTS TO"
+    ],
+    [
+      "fi-pot-chg-order",
+      "fi-commit-subcontra",
+      "MODIFIES"
+    ],
+    [
+      "fi-commit-chg-order",
+      "fi-cco-line-item",
+      "BROKEN DOWN INTO"
+    ],
+    [
+      "fi-commit-chg-order",
+      "fi-commit-subcontra",
+      "REVISES"
+    ],
+    [
+      "fi-commit-chg-order",
+      "fi-commit-line-item",
+      "ADJUSTS"
+    ],
+    [
+      "fi-cco-line-item",
+      "fi-cost-code",
+      "CODED TO"
+    ],
+    [
+      "fi-cco-line-item",
+      "fi-wbs-code",
+      "TAGGED WITH"
+    ],
+    [
+      "fi-cco-line-item",
+      "fi-budget-line-item",
+      "IMPACTS"
+    ],
+    [
+      "fi-owner-chg-order",
+      "fi-schedule-values",
+      "AMENDS"
+    ],
+    [
+      "fi-owner-chg-order",
+      "fi-owner-invoice",
+      "BILLABLE THROUGH"
+    ],
+    [
+      "fi-owner-chg-order",
+      "fi-budget-mod",
+      "TRIGGERS"
+    ],
+    [
+      "fi-contingency",
+      "fi-chg-event-ce",
+      "FUNDS"
+    ],
+    [
+      "fi-contingency",
+      "fi-contingency-burn",
+      "MEASURED BY"
+    ],
+    [
+      "fi-allowance",
+      "fi-direct-cost",
+      "SPENT THROUGH"
+    ],
+    [
+      "fi-allowance",
+      "fi-commit-subcontra",
+      "COMMITTED VIA"
+    ],
+    [
+      "fi-direct-cost",
+      "fi-direct-cost-line",
+      "ITEMIZED INTO"
+    ],
+    [
+      "fi-direct-cost",
+      "fi-budget-line-item",
+      "CHARGES AGAINST"
+    ],
+    [
+      "fi-direct-cost-line",
+      "fi-cost-code",
+      "CODED TO"
+    ],
+    [
+      "fi-direct-cost-line",
+      "fi-wbs-code",
+      "TAGGED WITH"
+    ],
+    [
+      "fi-schedule-values",
+      "fi-owner-invoice",
+      "DRIVES"
+    ],
+    [
+      "fi-schedule-values",
+      "fi-sub-invoice",
+      "DRIVES"
+    ],
+    [
+      "fi-sub-invoice",
+      "fi-retainage",
+      "ACCRUES"
+    ],
+    [
+      "fi-sub-invoice",
+      "fi-payment",
+      "SETTLES THROUGH"
+    ],
+    [
+      "fi-sub-invoice",
+      "fi-invoice-processi",
+      "MEASURED BY"
+    ],
+    [
+      "fi-owner-invoice",
+      "fi-retainage",
+      "ACCRUES"
+    ],
+    [
+      "fi-owner-invoice",
+      "fi-payment",
+      "SETTLES THROUGH"
+    ],
+    [
+      "fi-owner-invoice",
+      "fi-cash-flow",
+      "FORECASTED IN"
+    ],
+    [
+      "fi-payment",
+      "fi-lien-waiver",
+      "REQUIRES"
+    ],
+    [
+      "fi-retainage",
+      "fi-payment",
+      "RELEASED THROUGH"
+    ],
+    [
+      "fi-cost-forecast",
+      "fi-estimate-at",
+      "PRODUCES"
+    ],
+    [
+      "fi-cost-forecast",
+      "fi-cost-perf-index",
+      "DERIVED FROM"
+    ],
+    [
+      "fi-cost-growth",
+      "fi-chg-order-rate",
+      "DRIVEN BY"
+    ],
+    [
+      "fi-cash-flow",
+      "fi-cash-flow-2",
+      "MEASURED BY"
+    ],
+    [
+      "fi-committed-cost",
+      "fi-commit-subcontra",
+      "SOURCED FROM"
+    ],
+    [
+      "fi-committed-cost",
+      "fi-commit-purchase",
+      "SOURCED FROM"
+    ],
+    [
+      "fi-profit",
+      "fi-cost-forecast",
+      "DERIVED FROM"
+    ],
+    [
+      "fi-profit",
+      "fi-margin-pct",
+      "EXPRESSED AS"
+    ],
+    [
+      "fi-margin-pct",
+      "fi-margin-fade",
+      "TRACKED OVER TIME BY"
+    ],
+    [
+      "fi-margin-fade",
+      "fi-cost-growth",
+      "DRIVEN BY"
+    ],
+    [
+      "fi-margin-fade",
+      "fi-chg-order-rate",
+      "ERODED BY"
+    ],
+    [
+      "fi-markup-pct",
+      "fi-commit-subcontra",
+      "APPLIED TO"
+    ],
+    [
+      "fi-markup-pct",
+      "fi-direct-cost",
+      "APPLIED TO"
+    ],
+    [
+      "fi-markup-pct",
+      "fi-profit",
+      "CONTRIBUTES TO"
+    ],
+    [
+      "fi-backlog",
+      "fi-commit-subcontra",
+      "SOURCED FROM"
+    ],
+    [
+      "fi-backlog",
+      "fi-profit",
+      "FUTURE SOURCE OF"
+    ],
+    [
+      "fi-win-rate",
+      "fi-backlog",
+      "FEEDS"
+    ],
+    [
+      "fi-win-rate",
+      "fi-margin-pct",
+      "TRADEOFF WITH"
+    ],
+    [
+      "fi-repeat-client",
+      "fi-win-rate",
+      "IMPROVES"
+    ],
+    [
+      "fi-repeat-client",
+      "fi-margin-pct",
+      "CORRELATES WITH"
+    ],
+    [
+      "fi-revenue-concentration",
+      "fi-backlog",
+      "RISK DIMENSION OF"
+    ],
+    [
+      "fi-cost-forecast",
+      "fi-profit",
+      "PROJECTS"
+    ],
+    [
+      "fi-cost-forecast",
+      "fi-margin-pct",
+      "PROJECTS"
+    ],
+    [
+      "fi-overhead-rate",
+      "fi-margin-pct",
+      "COMPRESSES"
+    ],
+    [
+      "fi-overhead-rate",
+      "fi-profit",
+      "REDUCES"
+    ],
+    [
+      "fi-dso",
+      "fi-cash-flow",
+      "CONSTRAINS"
+    ],
+    [
+      "fi-dso",
+      "fi-payment",
+      "MEASURES CYCLE TIME OF"
+    ],
+    [
+      "fi-dso",
+      "fi-owner-invoice",
+      "MEASURES COLLECTION OF"
+    ],
+    [
+      "fi-bonding-capacity",
+      "fi-backlog",
+      "CONSTRAINS"
+    ],
+    [
+      "fi-bonding-capacity",
+      "fi-commit-subcontra",
+      "SECURED BY"
+    ],
+    [
+      "fi-pm-workload",
+      "fi-margin-fade",
+      "LEADING INDICATOR OF"
+    ],
+    [
+      "fi-pm-workload",
+      "fi-chg-order-rate",
+      "LEADING INDICATOR OF"
+    ],
+    [
+      "fi-precon-hit-rate",
+      "fi-win-rate",
+      "COMPLEMENTS"
+    ],
+    [
+      "fi-precon-hit-rate",
+      "fi-backlog",
+      "FEEDS"
+    ],
+    [
+      "fi-precon-hit-rate",
+      "fi-margin-pct",
+      "IMPROVES"
+    ],
+    [
+      "fi-commit-subcontra",
+      "fi-chg-event-ce",
+      "GENERATES"
+    ],
+    [
+      "fi-commit-chg-order",
+      "fi-direct-cost",
+      "PARALLELS"
+    ],
+    [
+      "fi-direct-cost",
+      "fi-cost-forecast",
+      "FEEDS"
+    ],
+    [
+      "fi-commit-chg-order",
+      "fi-owner-chg-order",
+      "PARALLELS"
+    ],
+    [
+      "fi-owner-chg-order",
+      "fi-budget-line-item",
+      "AMENDS"
+    ],
+    [
+      "fi-chg-event-ce",
+      "fi-cost-forecast",
+      "FEEDS"
+    ],
+    [
+      "fi-chg-order-rate",
+      "fi-pm-workload",
+      "INCREASES"
+    ],
+    [
+      "fi-budget-line-item",
+      "fi-contingency",
+      "ALLOCATES RESERVE TO"
+    ],
+    [
+      "fi-commit-chg-order",
+      "fi-cost-growth",
+      "DRIVES"
+    ],
+    [
+      "fi-contingency",
+      "fi-commit-chg-order",
+      "FUNDS"
+    ],
+    [
+      "fi-project-budget",
+      "fi-win-rate",
+      "TRACKS"
+    ],
+    [
+      "fi-commit-chg-order",
+      "fi-budget-line-item",
+      "CHARGES AGAINST"
+    ],
+    [
+      "fi-budget-line-item",
+      "fi-cost-forecast",
+      "FEEDS"
+    ],
+    [
+      "fi-estimate",
+      "fi-project-budget",
+      "BECOMES"
+    ],
+    [
+      "fi-estimate",
+      "fi-budget-line-item",
+      "POPULATES"
+    ],
+    [
+      "fi-estimate",
+      "fi-cost-forecast",
+      "BASELINE FOR"
+    ],
+    [
+      "fi-estimate",
+      "fi-contingency",
+      "INCLUDES"
+    ],
+    [
+      "fi-estimate",
+      "fi-cost-code",
+      "PRICED BY"
+    ]
+  ],
+  "verbGlossary": {
+    "DECOMPOSES INTO": "Parent {target} breaks down into individual line items that allocate dollars to specific scopes of work",
+    "RESERVES": "{target} sets aside a contingency reserve for unforeseen costs not yet allocated to specific scope",
+    "PROVISIONS": "{target} includes an allowance amount for work that cannot be fully defined at contract execution",
+    "BASELINED BY": "{target} establishes the cost baseline that the forecast measures projected final cost against",
+    "PROJECTED THROUGH": "{target} total is time-phased into periodic cash inflows and outflows via cash flow projection",
+    "CATEGORIZED BY": "{source} {target} is classified under a cost code that identifies the type of work (e.g., Division 03 Concrete)",
+    "SEGMENTED BY": "{source} {target} is further divided by WBS code to track cost by phase, location, or building element",
+    "GROUPED BY": "{target} is tagged with a budget code for executive-level reporting rollups",
+    "MEASURED BY": "{source}'s performance is quantified by a standard metric or KPI",
+    "TRANSFERS BETWEEN": "{target} moves dollars from one budget line item to another without changing total project budget",
+    "DRAWS FROM": "{target} pulls funds from contingency reserve to cover approved scope changes",
+    "SUBDIVIDED BY": "{target} is further broken into WBS segments for building-element-level cost tracking within a trade",
+    "ITEMIZED INTO": "{source}is broken into cost-code-level detail rows for granular tracking",
+    "STRUCTURED BY": "{target} billing framework is defined by a schedule of values with discrete billable line items",
+    "BILLED THROUGH": "{source}bills against {target} via periodic invoices referencing the subcontract SOV",
+    "WITHHOLDS": "{target} specifies a retainage percentage held back from each progress payment until completion",
+    "CHARGES AGAINST": "{source} transaction posts actual cost against {target}, reducing available budget",
+    "CODED TO": "{target} is assigned a cost code that maps the expenditure to a specific trade or work category",
+    "TAGGED WITH": "{target} carries a WBS code that identifies the building element, phase, or location of the cost",
+    "BROKEN DOWN INTO": "{source}is decomposed into cost-code-level {target}s for budget alignment",
+    "ADVANCES TO": "{target} progresses to a potential change order that targets a specific subcontract for modification",
+    "MATURES INTO": "{target} lifecycle progresses to a formal commitment change order when the change is approved and priced",
+    "AGGREGATED INTO": "Multiple {target}s are combined into a single owner change order for prime contract modification",
+    "CONVERTS TO": "Potential {target} is approved and becomes a formal commitment change order modifying the subcontract",
+    "MODIFIES": "Potential {target} proposes a modification to the scope and cost of an existing commitment",
+    "REVISES": "Approved {target} change order updates the committed amount on the parent subcontract or purchase order",
+    "ADJUSTS": "{target} change order modifies the dollar amount on existing commitment line items",
+    "IMPACTS": "CCO {target} changes the committed cost charged to a budget line item, affecting variance and forecast",
+    "AMENDS": "Owner {target} adds new line items or modifies existing amounts on the schedule of values",
+    "BILLABLE THROUGH": "Approved owner {target} scope becomes eligible for billing through subsequent pay applications",
+    "TRIGGERS": "Owner {target} approval triggers a budget modification to reallocate funds across budget lines",
+    "FUNDS": "{target} reserve provides the funding source for approved change events that exceed original budget",
+    "SPENT THROUGH": "{source} is consumed vi{target}s or commitments as undefined scope is clarified and priced",
+    "COMMITTED VIA": "{source}are locked into a formal subcontract when the undefined scope is defined and awarded",
+    "DRIVES": "{target} line items determine the billing amounts on each periodic invoice or pay application",
+    "ACCRUES": "Each {target} billing cycle adds to the cumulative retainage balance withheld from earned payments",
+    "SETTLES THROUGH": "Approved {target} amount is disbursed to the payee via a payment transaction after processing",
+    "FORECASTED IN": "Owner {target} amounts and timing are projected in the cash flow model for draw scheduling",
+    "REQUIRES": "Each {target} transaction requires an executed lien waiver before funds are released",
+    "RELEASED THROUGH": "Accumulated {target} is disbursed via a payment at substantial or final completion milestones",
+    "PRODUCES": "{target} calculation generates the estimate at completion variance metric each reporting period",
+    "DERIVED FROM": "{target} uses the cost performance index as an efficiency multiplier in EAC projections",
+    "DRIVEN BY": "{source}cost growth percentage is substantially influenced by the cumulative {target} rate",
+    "SOURCED FROM": "{source}cost metric aggregates the total contract value from subcontracts and purchase orders",
+    "EXPRESSED AS": "{source} absolute dollar amount is converted to {target} percentage for normalization and benchmarking",
+    "TRACKED OVER TIME BY": "{source} is monitored across reporting periods by {target} to detect erosion trends",
+    "ERODED BY": "{source} is diminished when {target} increases — each unrecovered change reduces projected profit",
+    "APPLIED TO": "{source} percentage is added on top of {target} cost to determine the billing or sell price",
+    "CONTRIBUTES TO": "{source} markup revenue flows through to {target} when actual costs stay within estimates",
+    "FUTURE SOURCE OF": "{source} represents unearned contract value that will generate {target} as work is completed",
+    "FEEDS": "Higher {source} produces more contract wins that build {target} over time",
+    "TRADEOFF WITH": "{source} and {target} have an inverse relationship — aggressive pricing wins more work at lower margins",
+    "IMPROVES": "Higher {source} reduces pursuit cost and increases {target} because repeat clients require less competitive bidding",
+    "CORRELATES WITH": "{source} and {target} tend to move together — repeat clients typically produce more predictable margins",
+    "RISK DIMENSION OF": "{source} measures the portfolio diversification risk embedded in {target} composition",
+    "PROJECTS": "{source} forward-looking estimate determines the projected {target} at completion",
+    "COMPRESSES": "Higher {source} directly reduces {target} by consuming revenue before it reaches profit",
+    "REDUCES": "{source} non-project costs reduce {target} dollar amount available to the company",
+    "CONSTRAINS": "{source} limitation restricts {target} capacity or growth potential",
+    "MEASURES CYCLE TIME OF": "{source} quantifies the elapsed time from {target} initiation to completion",
+    "MEASURES COLLECTION OF": "{source} tracks the average collection period from {target} submission to cash receipt",
+    "SECURED BY": "{source} surety bond secures the contractor's performance obligation on {target}",
+    "LEADING INDICATOR OF": "Rising {source} predicts future deterioration in {target} within 30–60 days",
+    "COMPLEMENTS": "{source} and {target} measure different stages of the same business development pipeline"
+  }
+}

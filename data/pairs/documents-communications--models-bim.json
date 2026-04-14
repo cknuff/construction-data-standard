@@ -1,0 +1,288 @@
+{
+  "source": "documents-communications",
+  "target": "models-bim",
+  "edges": [
+    [
+      "doc-drawing-set",
+      "bim-3d-building-info",
+      "EXTRACTED FROM"
+    ],
+    [
+      "doc-drawing-sheet",
+      "bim-model-based",
+      "GENERATED FROM"
+    ],
+    [
+      "doc-drawing-revision",
+      "bim-3d-building-info",
+      "REDLINED AGAINST"
+    ],
+    [
+      "doc-drawing-revision",
+      "bim-drawing-revision",
+      "COUNTED TOWARD"
+    ],
+    [
+      "doc-specification-se",
+      "bim-model-properties",
+      "CONSTRAINS"
+    ],
+    [
+      "doc-specification-se",
+      "bim-level-developmen",
+      "PRESCRIBES"
+    ],
+    [
+      "doc-addendum",
+      "bim-3d-building-info",
+      "AMENDS"
+    ],
+    [
+      "doc-bulletin-archite",
+      "bim-federated-model",
+      "REVISES"
+    ],
+    [
+      "doc-req-info-rfi",
+      "bim-coord-issue",
+      "ORIGINATES FROM"
+    ],
+    [
+      "doc-req-info-rfi",
+      "bim-3d-building-info",
+      "CLARIFIES"
+    ],
+    [
+      "doc-rfi-response",
+      "bim-model-element",
+      "RESOLVES DETAIL FOR"
+    ],
+    [
+      "doc-rfi-response",
+      "bim-coord-issue-3",
+      "ACCELERATES"
+    ],
+    [
+      "doc-submittal",
+      "bim-model-properties",
+      "VALIDATES"
+    ],
+    [
+      "doc-submittal",
+      "bim-quantity-takeoff",
+      "CONFIRMS QUANTITIES IN"
+    ],
+    [
+      "doc-submittal-respon",
+      "bim-level-developmen",
+      "APPROVES DETAIL FOR"
+    ],
+    [
+      "doc-shop-drawing",
+      "bim-3d-building-info",
+      "FABRICATION-CHECKED AGAINST"
+    ],
+    [
+      "doc-shop-drawing",
+      "bim-model-element",
+      "DETAILS"
+    ],
+    [
+      "doc-product-data",
+      "bim-model-properties",
+      "POPULATES"
+    ],
+    [
+      "doc-sample-submittal",
+      "bim-model-element",
+      "SPECIFIES FINISH FOR"
+    ],
+    [
+      "doc-submittal-reject",
+      "bim-clash-resolution",
+      "CORRELATES WITH"
+    ],
+    [
+      "doc-correspondence",
+      "bim-coord-issue",
+      "ESCALATES"
+    ],
+    [
+      "doc-transmittal",
+      "bim-federated-model",
+      "DELIVERS"
+    ],
+    [
+      "doc-notice-delay",
+      "bim-4d-model",
+      "IMPACTS SEQUENCE IN"
+    ],
+    [
+      "doc-chg-directive",
+      "bim-5d-model-cost",
+      "REPRICES"
+    ],
+    [
+      "doc-meeting-minutes",
+      "bim-bim-coord",
+      "RECORDS DECISIONS FROM"
+    ],
+    [
+      "doc-meeting",
+      "bim-clash-detection",
+      "REVIEWS RESULTS OF"
+    ],
+    [
+      "doc-daily-report",
+      "bim-4d-model",
+      "TRACKS PROGRESS AGAINST"
+    ],
+    [
+      "doc-daily-log-note",
+      "bim-const-photo",
+      "CROSS-REFERENCES"
+    ],
+    [
+      "doc-site-instruction",
+      "bim-model-element",
+      "DIRECTS INSTALL OF"
+    ],
+    [
+      "doc-plan-revision",
+      "bim-model-based",
+      "SUPERSEDES"
+    ],
+    [
+      "doc-action-plan",
+      "bim-coord-issue",
+      "ASSIGNS RESOLUTION FOR"
+    ],
+    [
+      "doc-action-plan-line",
+      "bim-clash-detection",
+      "REMEDIATES"
+    ],
+    [
+      "doc-project-task",
+      "bim-bim-coord",
+      "SCHEDULED FOR"
+    ],
+    [
+      "doc-photo",
+      "bim-360-photo",
+      "SUPPLEMENTS"
+    ],
+    [
+      "doc-photo",
+      "bim-point-cloud",
+      "FIELD-VALIDATES"
+    ],
+    [
+      "doc-video",
+      "bim-drone-capture",
+      "AUGMENTS"
+    ],
+    [
+      "doc-punch-list-as",
+      "bim-as-built-model",
+      "CLOSES OUT AGAINST"
+    ],
+    [
+      "doc-as-built-docs",
+      "bim-as-built-model",
+      "COMPILED INTO"
+    ],
+    [
+      "doc-o-m-manual",
+      "bim-digital-twin",
+      "FEEDS"
+    ],
+    [
+      "doc-warranty-docs",
+      "bim-model-element",
+      "WARRANTS"
+    ],
+    [
+      "doc-permit-applicati",
+      "bim-3d-building-info",
+      "REFERENCES"
+    ],
+    [
+      "doc-safety-plan-site",
+      "bim-federated-model",
+      "ZONES WITHIN"
+    ],
+    [
+      "doc-rfi-volume",
+      "bim-coord-issue-2",
+      "BENCHMARKS AGAINST"
+    ],
+    [
+      "doc-submittal-cycle",
+      "bim-bim-coord-2",
+      "INFLUENCES"
+    ],
+    [
+      "doc-drawing-revision-2",
+      "bim-drawing-revision",
+      "MIRRORS"
+    ],
+    [
+      "doc-drawing-revision",
+      "bim-4d-model",
+      "UPDATES"
+    ],
+    [
+      "doc-specification-se",
+      "bim-quantity-takeoff",
+      "QUANTIFIED BY"
+    ]
+  ],
+  "verbGlossary": {
+    "EXTRACTED FROM": "{source} produced by exporting views and sheets from the 3D BIM {target}",
+    "GENERATED FROM": "{source} auto-generated from {target}-based view or section cut",
+    "REDLINED AGAINST": "{source} marked up by comparing to the current state of {target}",
+    "COUNTED TOWARD": "Each drawing revision increments {target}-level revision frequency metric",
+    "CONSTRAINS": "{source} defines material and performance requirements that {target} properties must satisfy",
+    "PRESCRIBES": "{source} mandates the level of development required for {target} elements at each project phase",
+    "AMENDS": "{source} formally modifies design intent already captured in {target}",
+    "REVISES": "{source}triggers updates to the federated coordination {target}",
+    "ORIGINATES FROM": "{source} raised because a coordination issue in {target} needs design clarification",
+    "CLARIFIES": "{source} seeks interpretation of ambiguous geometry or data within {target}",
+    "RESOLVES DETAIL FOR": "{source} provides the missing information needed to complete {target} element's definition",
+    "ACCELERATES": "A timely RFI response shortens {target} resolution cycle",
+    "VALIDATES": "{source} confirms that proposed materials and equipment match {target}-specified properties",
+    "CONFIRMS QUANTITIES IN": "{source} verifies manufacturer quantities against {target}-based takeoff counts",
+    "APPROVES DETAIL FOR": "{source} review sign-off authorizes advancing the element to its next {target}",
+    "FABRICATION-CHECKED AGAINST": "{source} dimensions and connections verified against the source BIM geometry",
+    "DETAILS": "{source} provides fabrication-level detail for a specific {target} element",
+    "POPULATES": "{source} submittal supplies manufacturer specs that fill in {target} parameter fields",
+    "SPECIFIES FINISH FOR": "{source} submittal defines color, texture, or material finish applied to {target} element",
+    "CORRELATES WITH": "{source} rejection rate trends alongside clash resolution throughput as coordination indicators",
+    "ESCALATES": "{source} raises an unresolved {target} for senior decision-making",
+    "DELIVERS": "{source} formally routes {target} files or exported views to project stakeholders",
+    "IMPACTS SEQUENCE IN": "{source} of delay shifts activity dates within the schedule-linked 4D simulation",
+    "REPRICES": "{source}triggers cost re-estimation in the 5D {target}",
+    "RECORDS DECISIONS FROM": "{source} capture resolutions and action items from a BIM coordination session",
+    "REVIEWS RESULTS OF": "Project meeting agenda includes walk-through of automated {target} findings",
+    "TRACKS PROGRESS AGAINST": "{source} compares actual field progress to planned sequences in {target}",
+    "CROSS-REFERENCES": "{source} note links narrative field observations to corresponding construction photographs",
+    "DIRECTS INSTALL OF": "{source} tells the crew how to install or adjust a specific {target} element in the field",
+    "SUPERSEDES": "{source} issued {target}-based drawing with a newer version",
+    "ASSIGNS RESOLUTION FOR": "{source} designates a responsible party and deadline for {target} fix",
+    "REMEDIATES": "{source} line item prescribes the corrective step to eliminate a detected clash",
+    "SCHEDULED FOR": "Project task placed on the agenda for the next BIM coordination meeting",
+    "SUPPLEMENTS": "Site photograph adds visual context alongside a 360-degree spherical capture",
+    "FIELD-VALIDATES": "{source} taken on site confirms as-installed conditions against {target} data",
+    "AUGMENTS": "{source}provides additional aerial context beyond a single drone capture frame",
+    "CLOSES OUT AGAINST": "{source}verified and signed off by comparing to the as-built {target}",
+    "COMPILED INTO": "{source}documentation collected and merged into the final as-built {target} record",
+    "FEEDS": "O&M manual content loaded into the digital twin for ongoing facility operations reference",
+    "WARRANTS": "{source}documentation attaches manufacturer guarantee coverage to the installed {target} element",
+    "REFERENCES": "Permit application cites {target} views as supporting evidence for code compliance",
+    "ZONES WITHIN": "{source}plan maps restricted and hazard zones onto the spatial layout of {target}",
+    "BENCHMARKS AGAINST": "{source} volume density compared to {target} density to gauge design completeness",
+    "INFLUENCES": "{source} cycle time affects the overall BIM coordination adoption score for the project",
+    "MIRRORS": "{source} frequency in {target} log tracks in parallel with model-side revision counts"
+  }
+}

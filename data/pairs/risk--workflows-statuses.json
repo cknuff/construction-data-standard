@@ -1,0 +1,193 @@
+{
+  "source": "risk",
+  "target": "workflows-statuses",
+  "edges": [
+    [
+      "rk-risk",
+      "ws-open",
+      "LOGGED AT"
+    ],
+    [
+      "rk-risk",
+      "ws-progress",
+      "TRACKED THROUGH"
+    ],
+    [
+      "rk-risk",
+      "ws-closed",
+      "RETIRED AT"
+    ],
+    [
+      "rk-risk-register",
+      "ws-draft",
+      "ORIGINATES IN"
+    ],
+    [
+      "rk-risk-register",
+      "ws-approved",
+      "BASELINED UPON"
+    ],
+    [
+      "rk-risk-register",
+      "ws-under-review",
+      "ASSESSED DURING"
+    ],
+    [
+      "rk-risk-trigger",
+      "ws-open",
+      "ACTIVATES AT"
+    ],
+    [
+      "rk-risk-trigger",
+      "ws-escalation",
+      "ESCALATES VIA"
+    ],
+    [
+      "rk-risk-owner",
+      "ws-ball-court",
+      "ASSIGNED VIA"
+    ],
+    [
+      "rk-likelihood-asses",
+      "ws-under-review",
+      "EVALUATED DURING"
+    ],
+    [
+      "rk-impact-assessmen",
+      "ws-under-review",
+      "EVALUATED DURING"
+    ],
+    [
+      "rk-risk-score",
+      "ws-approved",
+      "LOCKED UPON"
+    ],
+    [
+      "rk-risk-response",
+      "ws-pending",
+      "AWAITS"
+    ],
+    [
+      "rk-risk-response",
+      "ws-approved",
+      "AUTHORIZED UPON"
+    ],
+    [
+      "rk-mitigation-actio",
+      "ws-open",
+      "INITIATED AT"
+    ],
+    [
+      "rk-mitigation-actio",
+      "ws-progress",
+      "EXECUTED THROUGH"
+    ],
+    [
+      "rk-mitigation-actio",
+      "ws-closed",
+      "VERIFIED AT"
+    ],
+    [
+      "rk-mitigation-actio",
+      "ws-overdue",
+      "ESCALATES TO"
+    ],
+    [
+      "rk-mitigation-actio",
+      "ws-due-date",
+      "BOUND BY"
+    ],
+    [
+      "rk-contingency-rese",
+      "ws-approved",
+      "RELEASED UPON"
+    ],
+    [
+      "rk-contingency-rese",
+      "ws-appr-chain",
+      "ROUTES THROUGH"
+    ],
+    [
+      "rk-contingency-rese",
+      "ws-budget-stage",
+      "RESERVED DURING"
+    ],
+    [
+      "rk-residual-risk",
+      "ws-closed",
+      "DOCUMENTED AT"
+    ],
+    [
+      "rk-safety-risk",
+      "ws-deficient",
+      "FLAGGED AT"
+    ],
+    [
+      "rk-safety-risk",
+      "ws-inspect-disposit",
+      "DISPOSITIONED VIA"
+    ],
+    [
+      "rk-insurance-requir",
+      "ws-submitted",
+      "SUBMITTED AT"
+    ],
+    [
+      "rk-insurance-requir",
+      "ws-approved",
+      "CERTIFIED UPON"
+    ],
+    [
+      "rk-surety-bond",
+      "ws-e-signature-req",
+      "CERTIFIES VIA"
+    ],
+    [
+      "rk-risk-exposure",
+      "ws-cost-stage",
+      "COMPUTED AT"
+    ],
+    [
+      "rk-incident-rate",
+      "ws-workflow-complet",
+      "TRACKED BY"
+    ],
+    [
+      "rk-risk-mitigation",
+      "ws-overdue-rate",
+      "MEASURED BY"
+    ]
+  ],
+  "verbGlossary": {
+    "LOGGED AT": "{source} is formally recorded and entered into the system at this lifecycle {target}, creating the initial tracking record.",
+    "TRACKED THROUGH": "{source}is actively monitored and updated as it moves through this in-progress {target} during the project.",
+    "RETIRED AT": "{source}is formally closed out and archived when it reaches this terminal {target}, no longer requiring active monitoring.",
+    "ORIGINATES IN": "{source} is first created in this editable draft {target} before formal review begins.",
+    "BASELINED UPON": "{source} is locked as the official project baseline when {target} is reached.",
+    "ASSESSED DURING": "{source} or assessment is actively evaluated and scored while held at this review {target}.",
+    "ACTIVATES AT": "The risk {target} fires and the associated risk becomes active when conditions move it to this open status.",
+    "ESCALATES VIA": "{source}is automatically elevated to senior project leadership through this escalation {target} when thresholds are breached.",
+    "ASSIGNED VIA": "{source}is designated through {target} routing mechanism.",
+    "EVALUATED DURING": "{source}is performed and scored while {target} is held at this review status.",
+    "LOCKED UPON": "{source} becomes read-only and official once {target} is reached, preventing further adjustment.",
+    "AWAITS": "{source} is queued and waiting for action at {target}; no execution until someone acts.",
+    "AUTHORIZED UPON": "{source} is formally approved for execution when {target} is reached.",
+    "INITIATED AT": "{source} is first opened and assigned at {target}, beginning the remediation effort.",
+    "EXECUTED THROUGH": "{source} is actively being carried out on the jobsite while in this in-progress {target}.",
+    "VERIFIED AT": "{source} is confirmed complete and effective when it reaches this closed {target} after field verification.",
+    "ESCALATES TO": "{source} automatically transitions to {target} when its deadline or threshold is exceeded.",
+    "BOUND BY": "{source} is constrained by this due date, establishing a contractual or schedule deadline for completion.",
+    "RELEASED UPON": "{source} funds are disbursed from the reserve when {target} is achieved by the draw request.",
+    "ROUTES THROUGH": "{source} passes through {target} chain or workflow pattern as part of its lifecycle processing.",
+    "RESERVED DURING": "{source} funds are set aside and allocated to the project budget during this financial planning stage.",
+    "DOCUMENTED AT": "{source}is formally recorded when the response reaches this closed {target}.",
+    "FLAGGED AT": "{source}is identified and marked when a field inspection produces this deficient {target}.",
+    "DISPOSITIONED VIA": "{source}is evaluated and given a formal pass/fail determination through this inspection {target} pattern.",
+    "SUBMITTED AT": "{source}requirement documentation is formally submitted for review at {target}.",
+    "CERTIFIED UPON": "{source}requirement is verified as meeting contractual coverage thresholds when {target} is granted.",
+    "CERTIFIES VIA": "The surety bond obtains formal authentication and binding execution through {target}.",
+    "COMPUTED AT": "{source} is calculated at this specific {target} or financial stage as data becomes available.",
+    "TRACKED BY": "{source} is monitored over time using {target} performance indicator.",
+    "MEASURED BY": "{source} is quantified using {target}-derived performance measure."
+  }
+}

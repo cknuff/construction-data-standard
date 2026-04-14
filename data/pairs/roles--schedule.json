@@ -1,0 +1,236 @@
+{
+  "source": "roles",
+  "target": "schedule",
+  "edges": [
+    [
+      "rl-scheduler-projec",
+      "sch-baseline-schedul",
+      "BUILDS"
+    ],
+    [
+      "rl-scheduler-projec",
+      "sch-critical-path",
+      "CALCULATES"
+    ],
+    [
+      "rl-scheduler-projec",
+      "sch-schedule-update",
+      "PUBLISHES"
+    ],
+    [
+      "rl-scheduler-projec",
+      "sch-float-slack",
+      "MONITORS"
+    ],
+    [
+      "rl-scheduler-projec",
+      "sch-time-impact",
+      "PERFORMS"
+    ],
+    [
+      "rl-project-manager",
+      "sch-look-ahead",
+      "REVIEWS"
+    ],
+    [
+      "rl-project-manager",
+      "sch-milestone",
+      "TRACKS"
+    ],
+    [
+      "rl-project-manager",
+      "sch-schedule-update",
+      "APPROVES"
+    ],
+    [
+      "rl-project-manager",
+      "sch-recovery-schedul",
+      "DIRECTS"
+    ],
+    [
+      "rl-super",
+      "sch-look-ahead",
+      "COORDINATES"
+    ],
+    [
+      "rl-super",
+      "sch-detail-activity",
+      "SEQUENCES"
+    ],
+    [
+      "rl-super",
+      "sch-labor-loading",
+      "STAFFS"
+    ],
+    [
+      "rl-assistant-super",
+      "sch-duration-progres",
+      "REPORTS"
+    ],
+    [
+      "rl-assistant-super",
+      "sch-last-planner",
+      "FACILITATES"
+    ],
+    [
+      "rl-foreman-gen",
+      "sch-detail-activity",
+      "EXECUTES"
+    ],
+    [
+      "rl-foreman-gen",
+      "sch-takt-time",
+      "PACES"
+    ],
+    [
+      "rl-project-engineer",
+      "sch-schedule-chg",
+      "LOGS"
+    ],
+    [
+      "rl-project-engineer",
+      "sch-delay-class",
+      "DOCUMENTS"
+    ],
+    [
+      "rl-project-engineer",
+      "sch-time-extension",
+      "PREPARES"
+    ],
+    [
+      "rl-field-engineer",
+      "sch-data-date",
+      "UPDATES"
+    ],
+    [
+      "rl-preconstruction",
+      "sch-milestone",
+      "ESTABLISHES"
+    ],
+    [
+      "rl-preconstruction",
+      "sch-baseline-dates",
+      "SETS"
+    ],
+    [
+      "rl-estimator-chief",
+      "sch-cost-loading",
+      "LOADS"
+    ],
+    [
+      "rl-cost-engineer",
+      "sch-earned-schedule",
+      "ANALYZES"
+    ],
+    [
+      "rl-contract-adminis",
+      "sch-time-extension",
+      "EVALUATES"
+    ],
+    [
+      "rl-procure-manager",
+      "sch-lag-lead-time",
+      "SCHEDULES"
+    ],
+    [
+      "rl-procure-manager",
+      "sch-detail-activity",
+      "EXPEDITES"
+    ],
+    [
+      "rl-owner-s",
+      "sch-milestone",
+      "CERTIFIES"
+    ],
+    [
+      "rl-owner-s",
+      "sch-acceleration",
+      "AUTHORIZES"
+    ],
+    [
+      "rl-project-executiv",
+      "sch-schedule-health",
+      "BENCHMARKS"
+    ],
+    [
+      "rl-design-manager",
+      "sch-schedule-constra",
+      "IMPOSES"
+    ],
+    [
+      "rl-bim-manager-vdc",
+      "sch-4d-5d-bim",
+      "MODELS"
+    ],
+    [
+      "rl-safety-manager",
+      "sch-detail-activity",
+      "GATES"
+    ],
+    [
+      "rl-quality-manager",
+      "sch-milestone",
+      "INSPECTS"
+    ],
+    [
+      "rl-cx-agent-cxa",
+      "sch-as-built",
+      "VALIDATES"
+    ],
+    [
+      "rl-doc-controller",
+      "sch-baseline-schedul",
+      "ARCHIVES"
+    ],
+    [
+      "rl-pm-workload",
+      "sch-schedule-update",
+      "CORRELATES WITH"
+    ],
+    [
+      "rl-super-span",
+      "sch-look-ahead",
+      "CONSTRAINS"
+    ]
+  ],
+  "verbGlossary": {
+    "BUILDS": "Assembles {target} from scope documents, sequencing activities with logic ties and durations to produce the approved baseline",
+    "CALCULATES": "Runs the CPM forward and backward pass to determine {target} and identify controlling activities",
+    "PUBLISHES": "Issues the periodic {target} to all stakeholders after statusing activities and recalculating dates",
+    "MONITORS": "Watches {target} consumption on near-critical paths to detect emerging schedule risk before it reaches the critical path",
+    "PERFORMS": "Executes a time impact analysis by inserting a fragnet into the current {target} to quantify a change event's delay",
+    "REVIEWS": "Examines the rolling look-ahead {target} to confirm upcoming work is properly sequenced and resourced",
+    "TRACKS": "{source} against baseline targets to identify {target} slippage early",
+    "APPROVES": "{source} on each periodic {target} after verifying progress entries and logic changes are accurate",
+    "DIRECTS": "Initiates and oversees recovery {target} development when the project falls behind the baseline milestone dates",
+    "COORDINATES": "Aligns subcontractor and self-perform crews against the look-ahead {target} to eliminate conflicts in the field",
+    "SEQUENCES": "Orders detail activities in the field to reflect actual construction logic, crew flow, and site access constraints",
+    "STAFFS": "{source} to {target}d activities based on production rates and the look-ahead window",
+    "REPORTS": "Collects and enters actual start, finish, and remaining duration data for in-progress activities",
+    "FACILITATES": "{source}Planner pull-planning session where trade foremen make reliable weekly work commitments",
+    "EXECUTES": "{source}performs the work defined by detail activities within {target}d duration and sequence",
+    "PACES": "Maintains the takt time rhythm by completing repeatable work packages within the allocated cycle duration",
+    "LOGS": "Records {target} changes with cause codes and narrative to maintain a defensible change tracking record",
+    "DOCUMENTS": "Classifies delays by type (excusable, compensable, concurrent) and records contemporaneous evidence",
+    "PREPARES": "Drafts the time extension request with supporting {target} analysis to substantiate additional contract time",
+    "UPDATES": "Enters the current data date and statuses in-progress activities to reflect actual field conditions",
+    "ESTABLISHES": "Defines key project milestones during preconstruction that become contractual {target} commitments",
+    "SETS": "Fixes the baseline early and late dates that all future {target} performance will be measured against",
+    "LOADS": "{source} to {target} activities to produce the time-phased cost baseline and cash flow curve",
+    "ANALYZES": "Evaluates earned {target} metrics (SPI-t, TSPI) to forecast likely completion dates and schedule efficiency",
+    "EVALUATES": "{source}of a time extension request against contract terms and {target} evidence",
+    "SCHEDULES": "Plans procurement lead times and delivery dates to align material arrivals with {target}d activity start dates",
+    "EXPEDITES": "{source}of long-lead items to prevent downstream {target} delays",
+    "CERTIFIES": "Formally accepts milestone completions on behalf of the owner, enabling downstream {target} phases",
+    "AUTHORIZES": "{source} {target} acceleration measures such as overtime, added shifts, or re-sequencing at premium cost",
+    "BENCHMARKS": "Compares {target} health scores across the project portfolio to identify underperforming projects",
+    "IMPOSES": "{source} in {target}",
+    "MODELS": "Creates the 4D BIM model linking 3D elements to {target} activities for visual sequencing and clash detection",
+    "GATES": "Holds {target} activities from proceeding until required safety permits, inspections, or clearances are complete",
+    "INSPECTS": "Performs quality hold-point inspections at milestones before authorizing the next phase of work",
+    "VALIDATES": "Compares as-built {target} durations against commissioning test results to confirm system performance",
+    "ARCHIVES": "Stores each baseline and update version of {target} as a controlled document for audit and claims support",
+    "CORRELATES WITH": "PM workload index influences the thoroughness and timeliness of {target} review cycles",
+    "CONSTRAINS": "{source}of control limits how many concurrent look-ahead activities can be effectively managed"
+  }
+}

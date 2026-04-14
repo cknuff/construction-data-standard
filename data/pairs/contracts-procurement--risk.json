@@ -1,0 +1,217 @@
+{
+  "source": "contracts-procurement",
+  "target": "risk",
+  "edges": [
+    [
+      "cp-prequalification",
+      "rk-risk-score",
+      "SCREENS BY"
+    ],
+    [
+      "cp-prequalification",
+      "rk-const-execution",
+      "MITIGATES"
+    ],
+    [
+      "cp-prequalification",
+      "rk-safety-risk",
+      "SCREENS FOR"
+    ],
+    [
+      "cp-bid-package",
+      "rk-risk-allocation",
+      "DEFINES"
+    ],
+    [
+      "cp-bid-package",
+      "rk-design-risk",
+      "EXPOSES TO"
+    ],
+    [
+      "cp-bid-evaluation",
+      "rk-likelihood-asses",
+      "INFORMS"
+    ],
+    [
+      "cp-bid-evaluation",
+      "rk-financial-risk",
+      "SCREENS FOR"
+    ],
+    [
+      "cp-award-notice",
+      "rk-risk-owner",
+      "ASSIGNS"
+    ],
+    [
+      "cp-subcontract",
+      "rk-risk-allocation",
+      "TRANSFERS VIA"
+    ],
+    [
+      "cp-subcontract",
+      "rk-const-execution",
+      "TRANSFERS"
+    ],
+    [
+      "cp-subcontract",
+      "rk-labor-risk",
+      "TRANSFERS"
+    ],
+    [
+      "cp-purchase-order",
+      "rk-supply-chain",
+      "EXPOSES TO"
+    ],
+    [
+      "cp-purchase-order",
+      "rk-schedule-risk",
+      "EXPOSES TO"
+    ],
+    [
+      "cp-prime-contract",
+      "rk-risk-allocation",
+      "GOVERNS"
+    ],
+    [
+      "cp-prime-contract",
+      "rk-financial-risk",
+      "EXPOSES TO"
+    ],
+    [
+      "cp-scope-work",
+      "rk-design-risk",
+      "BOUNDS"
+    ],
+    [
+      "cp-scope-work",
+      "rk-coord-risk",
+      "EXPOSES TO"
+    ],
+    [
+      "cp-gen-cond",
+      "rk-risk-response",
+      "PRESCRIBES"
+    ],
+    [
+      "cp-retainage-terms",
+      "rk-residual-risk",
+      "HELD AGAINST"
+    ],
+    [
+      "cp-retainage-terms",
+      "rk-const-execution",
+      "MITIGATES"
+    ],
+    [
+      "cp-liquidated-damag",
+      "rk-schedule-risk",
+      "PENALIZES"
+    ],
+    [
+      "cp-liquidated-damag",
+      "rk-mitigation-actio",
+      "ENFORCES"
+    ],
+    [
+      "cp-allowance",
+      "rk-design-risk",
+      "ABSORBS"
+    ],
+    [
+      "cp-allowance",
+      "rk-geotechnical-ris",
+      "ABSORBS"
+    ],
+    [
+      "cp-bid-bond",
+      "rk-surety-bond",
+      "SECURES VIA"
+    ],
+    [
+      "cp-perf-bond",
+      "rk-surety-bond",
+      "SECURES VIA"
+    ],
+    [
+      "cp-perf-bond",
+      "rk-const-execution",
+      "BACKSTOPS"
+    ],
+    [
+      "cp-payment-bond",
+      "rk-financial-risk",
+      "BACKSTOPS"
+    ],
+    [
+      "cp-insurance-cert",
+      "rk-insurance-requir",
+      "SATISFIES"
+    ],
+    [
+      "cp-builders-risk",
+      "rk-enviro-risk",
+      "COVERS"
+    ],
+    [
+      "cp-builders-risk",
+      "rk-safety-risk",
+      "COVERS"
+    ],
+    [
+      "cp-warranty",
+      "rk-residual-risk",
+      "COVERS"
+    ],
+    [
+      "cp-substantial-comp",
+      "rk-risk-trigger",
+      "TRIGGERS"
+    ],
+    [
+      "cp-chg-order-rate",
+      "rk-chg-order-rate",
+      "MIRRORS"
+    ],
+    [
+      "cp-chg-order-rate",
+      "rk-coord-risk",
+      "SIGNALS"
+    ],
+    [
+      "cp-insurance-comp",
+      "rk-risk-mitigation",
+      "FEEDS"
+    ],
+    [
+      "cp-sub-retention",
+      "rk-labor-risk",
+      "SIGNALS"
+    ]
+  ],
+  "verbGlossary": {
+    "ABSORBS": "{source} provision provides a monetary cushion that absorbs cost impact when {target} materializes, preventing budget overrun (e.g., allowance absorbs design-risk scope gaps discovered after award)",
+    "ASSIGNS": "{source} action designates a responsible party who owns the associated {target} going forward (e.g., award notice assigns risk owner for the contracted scope)",
+    "BACKSTOPS": "{source}provides a financial guarantee that protects against {target} if the responsible party defaults (e.g., performance bond backstops construction execution risk if subcontractor abandons work)",
+    "BOUNDS": "{source} exhibit defines the limits within which {target} is contained, making scope clear and gaps identifiable (e.g., scope of work bounds design risk by specifying included and excluded items)",
+    "COVERS": "{source}provides financial protection for losses caused by a specific {target} (e.g., builders risk policy covers environmental risk damage to the structure during construction)",
+    "DEFINES": "{source} document establishes the contractual terms that determine how {target} is distributed among parties (e.g., bid package defines risk allocation between GC and subcontractors)",
+    "ENFORCES": "{source} penalty clause compels {target} by imposing financial consequences for risk events (e.g., liquidated damages clause enforces schedule mitigation by penalizing late delivery)",
+    "EXPOSES TO": "{source} instrument or procurement action creates vulnerability to {target} category through its structure or requirements (e.g., purchase order exposes project to supply chain risk when committing to a sole-source supplier)",
+    "FEEDS": "{source} provides input data to {target} assessment or tracking framework (e.g., insurance compliance rate feeds risk mitigation completion tracking)",
+    "GOVERNS": "{source} establishes the overarching {target} framework that controls how risk is allocated across all project parties (e.g., prime contract governs risk allocation between owner and general contractor)",
+    "HELD AGAINST": "{source} retention amount is withheld as security against {target} until obligations are fulfilled (e.g., retainage terms held against residual risk of incomplete punch list work)",
+    "INFORMS": "{source} data provides decision-making input to {target} assessment (e.g., bid evaluation results inform likelihood assessment of cost overrun based on bidder spread)",
+    "MITIGATES": "{source} or contractual mechanism reduces the probability or impact of {target} (e.g., prequalification mitigates construction execution risk by filtering out unqualified subcontractors)",
+    "MIRRORS": "{source} and {target} track the same underlying phenomenon from different perspectives (e.g., contract change order rate mirrors risk change order rate as leading indicator)",
+    "PENALIZES": "{source} clause imposes financial consequences when a specific {target} occurs, incentivizing prevention (e.g., liquidated damages penalize schedule risk by assessing daily charges for late completion)",
+    "PRESCRIBES": "{source} terms specify required {target} response procedures that parties must follow when risks materialize (e.g., general conditions prescribe risk response protocols for unforeseen site conditions)",
+    "SATISFIES": "{source}document fulfills a contractual risk transfer requirement (e.g., insurance certificate satisfies the insurance requirement specified in {target})",
+    "SCREENS BY": "{source} qualification process evaluates parties against {target} criteria before engagement (e.g., prequalification screens subcontractors by risk score based on safety record and financial stability)",
+    "SCREENS FOR": "{source} evaluation process specifically checks for exposure to {target} category (e.g., prequalification screens for safety risk by reviewing EMR and OSHA history)",
+    "SECURES VIA": "{source}provides bonded financial security through a surety bond mechanism (e.g., bid bond secures the owner via surety bond against bidder withdrawal)",
+    "SIGNALS": "{source} serves as an early warning indicator that {target} is emerging or worsening (e.g., declining subcontractor retention rate signals labor risk on future projects)",
+    "TRANSFERS": "{source} commitment moves {target} responsibility to another party through contractual obligation (e.g., subcontract transfers labor risk to the subcontractor for their crew)",
+    "TRANSFERS VIA": "{source} instrument serves as the contractual vehicle through which {target} is formally allocated to another party (e.g., subcontract transfers risk via risk allocation clauses in the agreement)",
+    "TRIGGERS": "{source} milestone or event activates {target} condition or response (e.g., substantial completion triggers risk transfer from contractor to owner for the completed portion)"
+  }
+}

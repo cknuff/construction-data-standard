@@ -1,0 +1,290 @@
+{
+  "source": "phases",
+  "target": "workflows-statuses",
+  "edges": [
+    [
+      "ph-design",
+      "ws-draft",
+      "ORIGINATES IN"
+    ],
+    [
+      "ph-design",
+      "ws-under-review",
+      "CIRCULATES THROUGH"
+    ],
+    [
+      "ph-design",
+      "ws-revise-resubmit",
+      "RETURNS TO"
+    ],
+    [
+      "ph-design",
+      "ws-parallel-review",
+      "ROUTES THROUGH"
+    ],
+    [
+      "ph-permit",
+      "ws-submitted",
+      "FILED AT"
+    ],
+    [
+      "ph-permit",
+      "ws-approved",
+      "CLEARED UPON"
+    ],
+    [
+      "ph-permit",
+      "ws-rejected",
+      "DENIED AT"
+    ],
+    [
+      "ph-permit",
+      "ws-sequential-appr",
+      "ROUTES THROUGH"
+    ],
+    [
+      "ph-estimating",
+      "ws-approved",
+      "LOCKED UPON"
+    ],
+    [
+      "ph-estimating",
+      "ws-budget-stage",
+      "ESTABLISHES"
+    ],
+    [
+      "ph-bidding",
+      "ws-submitted",
+      "TENDERED AT"
+    ],
+    [
+      "ph-bidding",
+      "ws-under-review",
+      "EVALUATED DURING"
+    ],
+    [
+      "ph-bidding",
+      "ws-approved",
+      "AWARDED UPON"
+    ],
+    [
+      "ph-bidding",
+      "ws-due-date",
+      "BOUND BY"
+    ],
+    [
+      "ph-submittals",
+      "ws-approved-as",
+      "CONDITIONALLY ACCEPTED AT"
+    ],
+    [
+      "ph-submittals",
+      "ws-revise-resubmit",
+      "RETURNS TO"
+    ],
+    [
+      "ph-submittals",
+      "ws-overdue",
+      "ESCALATES TO"
+    ],
+    [
+      "ph-submittals",
+      "ws-resubmission-rat",
+      "MEASURED BY"
+    ],
+    [
+      "ph-submittals",
+      "ws-ball-court",
+      "ASSIGNED VIA"
+    ],
+    [
+      "ph-fabrication",
+      "ws-progress",
+      "ADVANCES TO"
+    ],
+    [
+      "ph-fabrication",
+      "ws-hold",
+      "STALLED AT"
+    ],
+    [
+      "ph-delivery",
+      "ws-overdue",
+      "ESCALATES TO"
+    ],
+    [
+      "ph-site-setup",
+      "ws-open",
+      "INITIATES AT"
+    ],
+    [
+      "ph-safety-orient",
+      "ws-conforming",
+      "PASSES AT"
+    ],
+    [
+      "ph-safety-orient",
+      "ws-deficient",
+      "FAILS AT"
+    ],
+    [
+      "ph-foundations",
+      "ws-ready-review",
+      "SUBMITTED FOR"
+    ],
+    [
+      "ph-foundations",
+      "ws-inspect-disposit",
+      "VERIFIED THROUGH"
+    ],
+    [
+      "ph-steel",
+      "ws-conforming",
+      "PASSES AT"
+    ],
+    [
+      "ph-roofing",
+      "ws-inspect-disposit",
+      "VERIFIED THROUGH"
+    ],
+    [
+      "ph-abv-ceil",
+      "ws-review-respond",
+      "COORDINATED THROUGH"
+    ],
+    [
+      "ph-drywall",
+      "ws-ready-review",
+      "SUBMITTED FOR"
+    ],
+    [
+      "ph-flooring",
+      "ws-inspect-disposit",
+      "VERIFIED THROUGH"
+    ],
+    [
+      "ph-prefunc",
+      "ws-deficient",
+      "FAILS AT"
+    ],
+    [
+      "ph-startup",
+      "ws-progress",
+      "ADVANCES TO"
+    ],
+    [
+      "ph-tab",
+      "ws-conforming",
+      "PASSES AT"
+    ],
+    [
+      "ph-integrated",
+      "ws-workflow-step",
+      "SEQUENCED THROUGH"
+    ],
+    [
+      "ph-perf-ver",
+      "ws-approved",
+      "CERTIFIED UPON"
+    ],
+    [
+      "ph-perf-ver",
+      "ws-status-dwell",
+      "MEASURED BY"
+    ],
+    [
+      "ph-punch",
+      "ws-open",
+      "INITIATES AT"
+    ],
+    [
+      "ph-punch",
+      "ws-closed",
+      "COMPLETED AT"
+    ],
+    [
+      "ph-punch",
+      "ws-create-close",
+      "FOLLOWS"
+    ],
+    [
+      "ph-punch",
+      "ws-overdue-rate",
+      "MEASURED BY"
+    ],
+    [
+      "ph-final-insp",
+      "ws-inspect-disposit",
+      "VERIFIED THROUGH"
+    ],
+    [
+      "ph-asbuilt",
+      "ws-submitted",
+      "FILED AT"
+    ],
+    [
+      "ph-asbuilt",
+      "ws-submit-approve",
+      "FOLLOWS"
+    ],
+    [
+      "ph-contract-close",
+      "ws-closed",
+      "COMPLETED AT"
+    ],
+    [
+      "ph-contract-close",
+      "ws-workflow-complet",
+      "TRACKED BY"
+    ],
+    [
+      "ph-contract-close",
+      "ws-e-signature-req",
+      "CERTIFIES VIA"
+    ],
+    [
+      "ph-warranty",
+      "ws-due-date",
+      "BOUND BY"
+    ],
+    [
+      "ph-warranty",
+      "ws-escalation",
+      "TRIGGERS"
+    ]
+  ],
+  "verbGlossary": {
+    "ORIGINATES IN": "{source} begins its document or deliverable lifecycle in this draft {target} before any formal review.",
+    "CIRCULATES THROUGH": "{source} deliverables pass through this review {target} as reviewers examine and comment on the work product.",
+    "RETURNS TO": "{source} deliverable is sent back to {target} for correction when reviewers identify issues.",
+    "ROUTES THROUGH": "{source} follows {target} pattern as its deliverables move through the review and approval process.",
+    "FILED AT": "{source} deliverable is formally submitted or filed for record at {target}, initiating official review.",
+    "CLEARED UPON": "{source} regulatory or compliance gate is cleared when {target} is achieved, allowing construction to proceed.",
+    "DENIED AT": "{source} submission is rejected at {target}, requiring rework or additional documentation before resubmission.",
+    "LOCKED UPON": "{source} output values become fixed and read-only once {target} is reached.",
+    "ESTABLISHES": "{source} creates and sets the baseline values tracked in this financial {target} stage.",
+    "TENDERED AT": "{source}are formally submitted by subcontractors at {target} during the procurement phase.",
+    "EVALUATED DURING": "{source}are scored and compared during this review {target}.",
+    "AWARDED UPON": "{source}is awarded to the selected bidder when {target} is reached.",
+    "BOUND BY": "{source} is constrained by {target} component, such as a contractual or delivery deadline.",
+    "CONDITIONALLY ACCEPTED AT": "{source}submittal is accepted with notations or conditions that must be addressed during fabrication or installation.",
+    "ESCALATES TO": "{source} item automatically transitions to {target} when its deadline is missed.",
+    "MEASURED BY": "{source} {target} efficiency is quantified using this standard performance measure.",
+    "ASSIGNED VIA": "Responsibility for advancing {target} deliverable is routed to a specific party through this ball-in-court mechanism.",
+    "ADVANCES TO": "{source} transitions forward into this active {target} as field work progresses.",
+    "STALLED AT": "{source} is paused at this hold {target} due to material delays, weather, or other blocking conditions.",
+    "INITIATES AT": "{source} opens its first work items or tracking records at {target}, beginning active work.",
+    "SUBMITTED FOR": "{source} completed work is formally presented for field inspection at this ready-for-review {target}.",
+    "PASSES AT": "{source}inspected work meets requirements and receives this conforming disposition {target}.",
+    "FAILS AT": "{source}inspected work does not meet requirements and receives this deficient disposition {target}, requiring correction.",
+    "VERIFIED THROUGH": "{source} completed work is checked and verified through this field inspection {target} pattern.",
+    "COORDINATED THROUGH": "Multiple trades coordinate their work routing within {target} using this review-and-respond workflow pattern.",
+    "SEQUENCED THROUGH": "{source} progresses through discrete {target}s in a defined order to ensure systematic completion.",
+    "CERTIFIED UPON": "{source} performance results are formally certified and accepted at {target}.",
+    "COMPLETED AT": "{source} reaches its terminal closed {target}, indicating all work items and deliverables are finished.",
+    "FOLLOWS": "{source} adheres to this standard {target} pattern from initiation through completion.",
+    "TRACKED BY": "{source} overall progress toward completion is monitored using {target} KPI.",
+    "CERTIFIES VIA": "{source} obtains formal execution or authentication through {target}.",
+    "TRIGGERS": "{source} activates {target} escalation mechanism when issues arise that require elevated attention."
+  }
+}

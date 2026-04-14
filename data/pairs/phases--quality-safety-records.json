@@ -1,0 +1,428 @@
+{
+  "source": "phases",
+  "target": "quality-safety-records",
+  "edges": [
+    [
+      "ph-program",
+      "qsr-action-plan",
+      "DEFINES RISK MITIGATION FRAMEWORK FOR"
+    ],
+    [
+      "ph-design",
+      "qsr-coord-issue-2",
+      "SURFACES DESIGN CONFLICTS DURING"
+    ],
+    [
+      "ph-design",
+      "qsr-non-conformance",
+      "TRIGGERS SPEC DEVIATION AT"
+    ],
+    [
+      "ph-estimating",
+      "qsr-rework-cost",
+      "BUDGETS CONTINGENCY AGAINST"
+    ],
+    [
+      "ph-permit",
+      "qsr-scheduled-insp",
+      "ESTABLISHES INSPECTION MILESTONES FOR"
+    ],
+    [
+      "ph-permit",
+      "qsr-third-party",
+      "MANDATES SPECIAL TESTING AT"
+    ],
+    [
+      "ph-precon-plan",
+      "qsr-action-plan-line",
+      "ASSIGNS PRE-MOBILIZATION SAFETY TASKS VIA"
+    ],
+    [
+      "ph-bidding",
+      "qsr-dart-rate",
+      "QUALIFIES SUBCONTRACTORS BY"
+    ],
+    [
+      "ph-submittals",
+      "qsr-mat-test-report",
+      "REQUIRES MATERIAL CERTIFICATION VIA"
+    ],
+    [
+      "ph-submittals",
+      "qsr-quality-observat",
+      "VERIFIED THROUGH SHOP DRAWING REVIEW BY"
+    ],
+    [
+      "ph-fabrication",
+      "qsr-non-conformance",
+      "CATCHES FABRICATION DEFECTS AS"
+    ],
+    [
+      "ph-delivery",
+      "qsr-insp-item",
+      "CHECKED AT RECEIVING DOCK PER"
+    ],
+    [
+      "ph-delivery",
+      "qsr-deficiency-notic",
+      "REJECTS DAMAGED SHIPMENTS WITH"
+    ],
+    [
+      "ph-site-setup",
+      "qsr-safety-observati",
+      "ESTABLISHES BASELINE HAZARDS FOR"
+    ],
+    [
+      "ph-safety-orient",
+      "qsr-incident",
+      "REDUCES FIRST-WEEK INJURIES TRACKED BY"
+    ],
+    [
+      "ph-safety-orient",
+      "qsr-near-miss-ratio",
+      "CALIBRATES REPORTING CULTURE MEASURED BY"
+    ],
+    [
+      "ph-demo",
+      "qsr-safety-violation",
+      "EXPOSES ABATEMENT VIOLATIONS DURING"
+    ],
+    [
+      "ph-demo",
+      "qsr-incident-record",
+      "LOGS DEMOLITION HAZARD EVENTS AS"
+    ],
+    [
+      "ph-earthwork",
+      "qsr-third-party",
+      "REQUIRES COMPACTION TESTING BY"
+    ],
+    [
+      "ph-earthwork",
+      "qsr-mat-test-report",
+      "GENERATES SOIL DENSITY REPORTS AS"
+    ],
+    [
+      "ph-site-util",
+      "qsr-insp",
+      "INSPECTED BEFORE BACKFILL AT"
+    ],
+    [
+      "ph-foundations",
+      "qsr-observation",
+      "DOCUMENTED FOR CONCRETE PLACEMENT AS"
+    ],
+    [
+      "ph-slab",
+      "qsr-mat-test-report",
+      "TESTED FOR FLATNESS AND STRENGTH VIA"
+    ],
+    [
+      "ph-steel",
+      "qsr-safety-observati",
+      "FLAGGED FOR FALL HAZARDS DURING"
+    ],
+    [
+      "ph-steel",
+      "qsr-incident",
+      "RECORDS IRONWORKER INJURIES AT"
+    ],
+    [
+      "ph-elev-conc",
+      "qsr-insp-item",
+      "CHECKED FOR REBAR PLACEMENT AT"
+    ],
+    [
+      "ph-conc-frame",
+      "qsr-scheduled-insp",
+      "TRIGGERS PRE-POUR WALKTHROUGH AS"
+    ],
+    [
+      "ph-stairs",
+      "qsr-safety-violation",
+      "CITED FOR GUARDRAIL DEFICIENCIES AT"
+    ],
+    [
+      "ph-curtainwall",
+      "qsr-system-perf-test",
+      "TESTED FOR WATER INFILTRATION VIA"
+    ],
+    [
+      "ph-curtainwall",
+      "qsr-coord-issue",
+      "RAISES ANCHOR EMBED CONFLICTS AT"
+    ],
+    [
+      "ph-masonry",
+      "qsr-quality-observat",
+      "OBSERVED FOR MORTAR JOINT QUALITY DURING"
+    ],
+    [
+      "ph-barrier",
+      "qsr-insp",
+      "INSPECTED FOR CONTINUITY AT"
+    ],
+    [
+      "ph-roofing",
+      "qsr-system-perf-test",
+      "FLOOD TESTED FOR WATERTIGHTNESS AS"
+    ],
+    [
+      "ph-abv-ceil",
+      "qsr-coord-issue",
+      "IDENTIFIES MEP ROUTING CLASHES AT"
+    ],
+    [
+      "ph-hvac-dist",
+      "qsr-insp-item",
+      "VERIFIED FOR DUCT SEALING PER"
+    ],
+    [
+      "ph-plumb-ri",
+      "qsr-insp",
+      "PRESSURE TESTED BEFORE CONCEALMENT AT"
+    ],
+    [
+      "ph-elec-ri",
+      "qsr-safety-observati",
+      "FLAGGED FOR LOCKOUT-TAGOUT GAPS DURING"
+    ],
+    [
+      "ph-fp-ri",
+      "qsr-third-party",
+      "REQUIRES HYDROSTATIC TEST BY"
+    ],
+    [
+      "ph-lv-ri",
+      "qsr-quality-observat",
+      "CHECKED FOR CABLE PATHWAY SEPARATION AT"
+    ],
+    [
+      "ph-framing",
+      "qsr-insp-item",
+      "VERIFIED FOR STUD SPACING AND BLOCKING AT"
+    ],
+    [
+      "ph-drywall",
+      "qsr-punch-item-issue",
+      "GENERATES FINISH DEFECT ITEMS AT"
+    ],
+    [
+      "ph-ceil-grid",
+      "qsr-observation",
+      "WALKED FOR GRID ALIGNMENT AND INTEGRATION AS"
+    ],
+    [
+      "ph-ceilings",
+      "qsr-punch-item",
+      "SNAGGED FOR TILE SEATING AND EDGE CUTS AT"
+    ],
+    [
+      "ph-paint",
+      "qsr-punch-item",
+      "GENERATES HIGHEST PUNCH ITEM COUNT AT"
+    ],
+    [
+      "ph-paint",
+      "qsr-rework-cost",
+      "DRIVES FINISH REWORK COSTS MEASURED BY"
+    ],
+    [
+      "ph-flooring",
+      "qsr-punch-item-issue",
+      "PRODUCES ADHESION AND GAP DEFECTS AS"
+    ],
+    [
+      "ph-doors",
+      "qsr-punch-item",
+      "FLAGGED FOR HARDWARE FUNCTION DEFECTS AT"
+    ],
+    [
+      "ph-casework",
+      "qsr-deficiency-notic",
+      "NOTED FOR DIMENSIONAL TOLERANCE ISSUES WITH"
+    ],
+    [
+      "ph-hvac-trim",
+      "qsr-insp-item",
+      "VERIFIED FOR THERMOSTAT CALIBRATION AT"
+    ],
+    [
+      "ph-plumb-fix",
+      "qsr-punch-item",
+      "SNAGGED FOR LEAK AND ALIGNMENT ISSUES AT"
+    ],
+    [
+      "ph-elec-dev",
+      "qsr-insp-item",
+      "TESTED FOR CIRCUIT CONTINUITY AT"
+    ],
+    [
+      "ph-fa-dev",
+      "qsr-system-perf-test",
+      "ACCEPTANCE TESTED FOR ALARM RESPONSE VIA"
+    ],
+    [
+      "ph-lv-dev",
+      "qsr-insp",
+      "CERTIFIED FOR SIGNAL INTEGRITY AT"
+    ],
+    [
+      "ph-prefunc",
+      "qsr-enviro-cx",
+      "INITIATES COMMISSIONING OBSERVATIONS AT"
+    ],
+    [
+      "ph-startup",
+      "qsr-incident-witness",
+      "COLLECTS ENERGIZATION EVENT TESTIMONY AS"
+    ],
+    [
+      "ph-tab",
+      "qsr-system-perf-test",
+      "GENERATES AIRFLOW BALANCE REPORTS AS"
+    ],
+    [
+      "ph-tab",
+      "qsr-deficiency-rate",
+      "REVEALS SYSTEM IMBALANCE DEFICIENCY RATES AT"
+    ],
+    [
+      "ph-integrated",
+      "qsr-corrective-actio",
+      "SPAWNS INTERLOCK FAILURE CORRECTIONS FROM"
+    ],
+    [
+      "ph-perf-ver",
+      "qsr-action-plan-line",
+      "ASSIGNS OUTSTANDING DEFICIENCY TASKS FROM"
+    ],
+    [
+      "ph-punch",
+      "qsr-punch-item-2",
+      "DRIVES RESOLUTION TRACKING THROUGH"
+    ],
+    [
+      "ph-punch",
+      "qsr-punch-item-3",
+      "MEASURES CLOSEOUT READINESS VIA"
+    ],
+    [
+      "ph-punch",
+      "qsr-corrective-actio-2",
+      "BENCHMARKS TRADE RESPONSE TIME WITH"
+    ],
+    [
+      "ph-final-insp",
+      "qsr-insp-pass-rate",
+      "DETERMINES CERTIFICATE OF OCCUPANCY READINESS BY"
+    ],
+    [
+      "ph-asbuilt",
+      "qsr-observation-reso",
+      "CLOSES OPEN OBSERVATIONS FOR"
+    ],
+    [
+      "ph-contract-close",
+      "qsr-action-plan",
+      "VERIFIES ALL CORRECTIVE ACTIONS CLOSED AT"
+    ],
+    [
+      "ph-warranty",
+      "qsr-punch-item-2",
+      "REOPENS LATENT DEFECTS TRACKED AS"
+    ],
+    [
+      "ph-warranty",
+      "qsr-hazard-recurrenc",
+      "MONITORS POST-OCCUPANCY SAFETY WITH"
+    ],
+    [
+      "ph-seasonal-cx",
+      "qsr-system-perf-test",
+      "VALIDATES SEASONAL LOAD PERFORMANCE VIA"
+    ],
+    [
+      "ph-transition",
+      "qsr-corrective-actio",
+      "TRANSFERS OUTSTANDING ACTIONS DURING"
+    ],
+    [
+      "ph-training",
+      "qsr-total-recordable",
+      "ESTABLISHES OWNER SAFETY METRICS USING"
+    ]
+  ],
+  "verbGlossary": {
+    "DEFINES RISK MITIGATION FRAMEWORK FOR": "{source}establishes the project's risk mitigation approach, defining action plan structures for safety and quality management before design begins",
+    "SURFACES DESIGN CONFLICTS DURING": "{source} phase uncovers clashes or specification contradictions that are formally logged as coordination issues (e.g., architectural details conflicting with structural requirements identified during design review)",
+    "TRIGGERS SPEC DEVIATION AT": "{source} activity reveals a departure from the approved specification, resulting in {target} report (e.g., design changes during development that deviate from original spec sections)",
+    "BUDGETS CONTINGENCY AGAINST": "{source}allocates contingency reserves informed by historical rework cost percentages, using past project data to size the rework allowance in the budget",
+    "ESTABLISHES INSPECTION MILESTONES FOR": "{source}defines the required {target} hold points that the jurisdiction mandates before work can proceed (e.g., building permit conditions requiring foundation, framing, and final inspections)",
+    "MANDATES SPECIAL TESTING AT": "{source}require third-party or special inspections at specific construction milestones (e.g., structural steel moment connections requiring independent weld {target} per building code)",
+    "ASSIGNS PRE-MOBILIZATION SAFETY TASKS VIA": "{source}planning phase creates specific action plan line items for pre-mobilization safety activities such as {target} assessments, JSA development, and PPE procurement",
+    "QUALIFIES SUBCONTRACTORS BY": "Bidding and buyout phase uses DART rate history as a qualification criterion when evaluating subcontractor safety performance before awarding contracts",
+    "REQUIRES MATERIAL CERTIFICATION VIA": "Submittal review phase demands material test reports and certifications before materials are approved for installation (e.g., concrete mix design submittals requiring cylinder break reports)",
+    "VERIFIED THROUGH SHOP DRAWING REVIEW BY": "Submittal phase triggers {target}s when shop drawings are reviewed against design intent (e.g., structural steel connection details checked for specification compliance)",
+    "CATCHES FABRICATION DEFECTS AS": "{source}identifies workmanship or dimensional defects before delivery, resulting in {target} reports (e.g., precast panels failing tolerance checks at the fabrication yard)",
+    "CHECKED AT RECEIVING DOCK PER": "{source}delivery phase triggers {target} items when goods arrive on site, verifying quantity, condition, and specification compliance (e.g., checking reinforcing steel for mill cert match and damage)",
+    "REJECTS DAMAGED SHIPMENTS WITH": "{source}delivery phase generates {target} notices when received goods are damaged, incorrect, or out of specification (e.g., glazing units arriving with seal failures)",
+    "ESTABLISHES BASELINE HAZARDS FOR": "{source}setup phase generates initial {target}s documenting existing hazards before construction begins (e.g., overhead power lines, unstable adjacent structures, contaminated soil)",
+    "REDUCES FIRST-WEEK INJURIES TRACKED BY": "{source}rate of incidents during the critical first week of a worker's presence on site, with effectiveness measured through {target} records",
+    "CALIBRATES REPORTING CULTURE MEASURED BY": "{source}sets expectations for near-miss reporting, and the resulting reporting rate serves as a leading indicator of safety culture health",
+    "EXPOSES ABATEMENT VIOLATIONS DURING": "Demolition phase uncovers hazardous material conditions (asbestos, lead paint) that result in {target}s when abatement protocols are not followed",
+    "LOGS DEMOLITION HAZARD EVENTS AS": "{source}generates incident records when uncontrolled collapses, utility strikes, or other demolition-specific hazards cause {target}s",
+    "REQUIRES COMPACTION TESTING BY": "{source}requires third-party geotechnical inspections to verify soil compaction meets design specifications before foundation work proceeds (e.g., Proctor density tests at specified lifts)",
+    "GENERATES SOIL DENSITY REPORTS AS": "{source}produce material test reports documenting in-situ soil density, moisture content, and bearing capacity (e.g., nuclear density gauge readings at each compaction lift)",
+    "INSPECTED BEFORE BACKFILL AT": "{source}must pass {target} before being concealed by backfill operations (e.g., sewer line slope and bedding inspection prior to cover)",
+    "DOCUMENTED FOR CONCRETE PLACEMENT AS": "{source}are documented through observations recording concrete delivery, placement methods, temperature, and consolidation conditions",
+    "TESTED FOR FLATNESS AND STRENGTH VIA": "{source}generates material test reports for F-number floor flatness surveys and concrete cylinder break strength results",
+    "WALKED FOR GRID ALIGNMENT AND INTEGRATION AS": "{source}is walked and documented through observations verifying grid levelness, module alignment, and proper integration with light fixtures and diffusers",
+    "SNAGGED FOR TILE SEATING AND EDGE CUTS AT": "{source}generates punch items for acoustical tile seating problems, damaged tiles, misaligned patterns, and rough perimeter edge cuts",
+    "FLAGGED FOR FALL HAZARDS DURING": "{source}generates {target}s for fall protection gaps, unprotected edges, and inadequate tie-off points at elevation",
+    "RECORDS IRONWORKER INJURIES AT": "{source}captures {target} records for falls, struck-by events, and pinch-point injuries specific to steel erection activities",
+    "CHECKED FOR REBAR PLACEMENT AT": "{source}triggers {target} items verifying reinforcement position, cover, and lap splice lengths before deck pours",
+    "TRIGGERS PRE-POUR WALKTHROUGH AS": "{source}initiates scheduled inspections (pre-pour walkthroughs) to verify formwork, reinforcement, and embedded items before concrete placement",
+    "CITED FOR GUARDRAIL DEFICIENCIES AT": "{source}generates {target}s when temporary or permanent guardrails do not meet height, spacing, or load requirements",
+    "TESTED FOR WATER INFILTRATION VIA": "{source}triggers system performance tests (field water spray tests per AAMA 501.2 or chamber tests) to verify weathertightness",
+    "RAISES ANCHOR EMBED CONFLICTS AT": "{source}generates coordination issues when anchor embeds conflict with structural elements, slab edges, or other trades' work",
+    "OBSERVED FOR MORTAR JOINT QUALITY DURING": "{source}is monitored through {target}s checking mortar joint tooling, head joint filling, and bond pattern consistency",
+    "INSPECTED FOR CONTINUITY AT": "{source}requires {target} to verify membrane continuity at transitions, penetrations, and terminations before cladding conceals the work",
+    "FLOOD TESTED FOR WATERTIGHTNESS AS": "{source}generates system performance tests through flood testing (ponding water on completed roof sections) to verify membrane integrity",
+    "IDENTIFIES MEP ROUTING CLASHES AT": "{source}identifies spatial conflicts between HVAC ductwork, piping, conduit, and structural elements, logged as coordination issues",
+    "VERIFIED FOR DUCT SEALING PER": "{source}triggers {target} items verifying duct joint sealing, insulation, and pressure class compliance at accessible rough-in points",
+    "PRESSURE TESTED BEFORE CONCEALMENT AT": "{source}requires pressure testing (hydrostatic or pneumatic) and {target} before piping is concealed behind walls or above ceilings",
+    "FLAGGED FOR LOCKOUT-TAGOUT GAPS DURING": "{source}generates {target}s when lockout-tagout procedures are not followed during energized work or panel terminations",
+    "REQUIRES HYDROSTATIC TEST BY": "Fire protection rough-in phase requires third-party hydrostatic testing of sprinkler piping systems to verify joint integrity and system pressure capacity",
+    "CHECKED FOR CABLE PATHWAY SEPARATION AT": "{source}triggers {target}s verifying proper separation between low voltage and power cabling to prevent electromagnetic interference",
+    "VERIFIED FOR STUD SPACING AND BLOCKING AT": "{source}triggers {target} items checking stud spacing, bridging, backing for fixtures, and header sizes against framing plans",
+    "GENERATES FINISH DEFECT ITEMS AT": "{source}produces punch items for visible finish defects such as nail pops, joint banding, cracks, and corner bead imperfections",
+    "GENERATES HIGHEST PUNCH ITEM COUNT AT": "Paint and wall coatings phase consistently produces the largest volume of punch items across projects, covering touch-ups, drips, missed areas, and color inconsistencies",
+    "DRIVES FINISH REWORK COSTS MEASURED BY": "{source}is a primary driver of finish rework costs, tracked as a percentage of total project cost through the rework cost metric",
+    "PRODUCES ADHESION AND GAP DEFECTS AS": "{source}generates punch items categorized by issue type, including tile lippage, carpet seam gaps, VCT adhesion failures, and transition strip defects",
+    "FLAGGED FOR HARDWARE FUNCTION DEFECTS AT": "{source}generates punch items for closer adjustment, latch misalignment, threshold gaps, and ADA clearance violations",
+    "NOTED FOR DIMENSIONAL TOLERANCE ISSUES WITH": "{source}generates {target} notices when cabinets, countertops, or trim exceed allowable dimensional tolerances or reveal scribe gaps",
+    "VERIFIED FOR THERMOSTAT CALIBRATION AT": "{source}triggers {target} items verifying thermostat setpoint accuracy, sensor calibration, and control sequence response",
+    "SNAGGED FOR LEAK AND ALIGNMENT ISSUES AT": "{source}generates punch items for supply connection leaks, drain alignment problems, and fixture mounting defects",
+    "TESTED FOR CIRCUIT CONTINUITY AT": "{source}triggers {target} items verifying proper circuit identification, ground continuity, and device function at each outlet and switch",
+    "ACCEPTANCE TESTED FOR ALARM RESPONSE VIA": "Fire alarm device installation triggers system performance tests verifying detector sensitivity, notification appliance coverage, and annunciator panel communication",
+    "CERTIFIED FOR SIGNAL INTEGRITY AT": "{source}triggers inspections certifying cable performance (Cat6 certification, fiber light levels) and device functionality for data, AV, and security systems",
+    "INITIATES COMMISSIONING OBSERVATIONS AT": "{source}testing phase generates the first round of environmental and commissioning observations documenting equipment readiness and pre-start conditions",
+    "COLLECTS ENERGIZATION EVENT TESTIMONY AS": "{source}captures witness statements when energization-related {target}s occur, documenting the sequence of events for incident investigation",
+    "GENERATES AIRFLOW BALANCE REPORTS AS": "Testing, adjusting, and balancing phase produces system performance test reports documenting airflow rates, water flow rates, and sound levels at each terminal device",
+    "REVEALS SYSTEM IMBALANCE DEFICIENCY RATES AT": "{source}rate of systems failing to meet design airflow or hydronic balance criteria, measured as {target} rate across all tested terminals",
+    "SPAWNS INTERLOCK FAILURE CORRECTIONS FROM": "{source}testing phase identifies control sequence failures across interconnected systems (fire alarm to HVAC shutdown, BAS to lighting), generating corrective actions",
+    "ASSIGNS OUTSTANDING DEFICIENCY TASKS FROM": "Performance verification phase converts unresolved deficiencies into specific action plan line items with assigned responsible parties and deadlines",
+    "DRIVES RESOLUTION TRACKING THROUGH": "{source}is the primary driver of {target} resolution workflows, tracking each item from identification through correction and verification",
+    "MEASURES CLOSEOUT READINESS VIA": "Punch list phase uses punch item density (items per unit area or per system) to measure how close the project is to substantial completion",
+    "BENCHMARKS TRADE RESPONSE TIME WITH": "{source}measures each trade contractor's speed in resolving assigned punch items, benchmarked through {target} closure rate metric",
+    "DETERMINES CERTIFICATE OF OCCUPANCY READINESS BY": "{source} phase directly determines whether the project can receive a certificate of occupancy based on {target} pass rate across all required disciplines",
+    "CLOSES OPEN OBSERVATIONS FOR": "{source}documentation phase triggers closure of remaining open observations as field conditions are recorded and verified against installed conditions",
+    "VERIFIES ALL CORRECTIVE ACTIONS CLOSED AT": "{source}requires verification that every {target} and action plan has been completed and closed before final payment release",
+    "REOPENS LATENT DEFECTS TRACKED AS": "Warranty period phase resurfaces latent defects that were not apparent at substantial completion, tracked as punch item resolutions reopened under warranty provisions",
+    "MONITORS POST-OCCUPANCY SAFETY WITH": "{source}tracks recurring {target} patterns (e.g., slip hazards from settlement, mechanical room access issues) using the hazard recurrence rate metric",
+    "VALIDATES SEASONAL LOAD PERFORMANCE VIA": "{source}generates system performance tests verifying HVAC capacity and efficiency under actual heating and cooling load conditions across seasons",
+    "TRANSFERS OUTSTANDING ACTIONS DURING": "{source}transition phase formally transfers any remaining open corrective actions from the construction team to the owner's facility management team",
+    "ESTABLISHES OWNER SAFETY METRICS USING": "{source}sets up the baseline safety metrics (TRIR) that the facility management team will track during building operations"
+  }
+}

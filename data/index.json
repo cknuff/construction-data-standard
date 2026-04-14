@@ -1,0 +1,1033 @@
+{
+  "version": "v8",
+  "pairCount": 171,
+  "totalEdges": 8361,
+  "pairs": [
+    {
+      "key": "building-elements--building-elements",
+      "source": "building-elements",
+      "target": "building-elements",
+      "edges": 57
+    },
+    {
+      "key": "building-elements--contracts-procurement",
+      "source": "building-elements",
+      "target": "contracts-procurement",
+      "edges": 60
+    },
+    {
+      "key": "building-elements--documents-communications",
+      "source": "building-elements",
+      "target": "documents-communications",
+      "edges": 50
+    },
+    {
+      "key": "building-elements--field-operations",
+      "source": "building-elements",
+      "target": "field-operations",
+      "edges": 70
+    },
+    {
+      "key": "building-elements--financial-instruments",
+      "source": "building-elements",
+      "target": "financial-instruments",
+      "edges": 89
+    },
+    {
+      "key": "building-elements--locations",
+      "source": "building-elements",
+      "target": "locations",
+      "edges": 86
+    },
+    {
+      "key": "building-elements--models-bim",
+      "source": "building-elements",
+      "target": "models-bim",
+      "edges": 51
+    },
+    {
+      "key": "building-elements--organizations",
+      "source": "building-elements",
+      "target": "organizations",
+      "edges": 70
+    },
+    {
+      "key": "building-elements--permits-regulatory",
+      "source": "building-elements",
+      "target": "permits-regulatory",
+      "edges": 50
+    },
+    {
+      "key": "building-elements--phases",
+      "source": "building-elements",
+      "target": "phases",
+      "edges": 99
+    },
+    {
+      "key": "building-elements--project-attributes",
+      "source": "building-elements",
+      "target": "project-attributes",
+      "edges": 64
+    },
+    {
+      "key": "building-elements--quality-safety-records",
+      "source": "building-elements",
+      "target": "quality-safety-records",
+      "edges": 79
+    },
+    {
+      "key": "building-elements--resources",
+      "source": "building-elements",
+      "target": "resources",
+      "edges": 202
+    },
+    {
+      "key": "building-elements--risk",
+      "source": "building-elements",
+      "target": "risk",
+      "edges": 50
+    },
+    {
+      "key": "building-elements--roles",
+      "source": "building-elements",
+      "target": "roles",
+      "edges": 60
+    },
+    {
+      "key": "building-elements--schedule",
+      "source": "building-elements",
+      "target": "schedule",
+      "edges": 80
+    },
+    {
+      "key": "building-elements--standards-classifications",
+      "source": "building-elements",
+      "target": "standards-classifications",
+      "edges": 50
+    },
+    {
+      "key": "building-elements--workflows-statuses",
+      "source": "building-elements",
+      "target": "workflows-statuses",
+      "edges": 45
+    },
+    {
+      "key": "contracts-procurement--contracts-procurement",
+      "source": "contracts-procurement",
+      "target": "contracts-procurement",
+      "edges": 50
+    },
+    {
+      "key": "contracts-procurement--documents-communications",
+      "source": "contracts-procurement",
+      "target": "documents-communications",
+      "edges": 70
+    },
+    {
+      "key": "contracts-procurement--field-operations",
+      "source": "contracts-procurement",
+      "target": "field-operations",
+      "edges": 60
+    },
+    {
+      "key": "contracts-procurement--financial-instruments",
+      "source": "contracts-procurement",
+      "target": "financial-instruments",
+      "edges": 80
+    },
+    {
+      "key": "contracts-procurement--locations",
+      "source": "contracts-procurement",
+      "target": "locations",
+      "edges": 20
+    },
+    {
+      "key": "contracts-procurement--models-bim",
+      "source": "contracts-procurement",
+      "target": "models-bim",
+      "edges": 20
+    },
+    {
+      "key": "contracts-procurement--organizations",
+      "source": "contracts-procurement",
+      "target": "organizations",
+      "edges": 70
+    },
+    {
+      "key": "contracts-procurement--permits-regulatory",
+      "source": "contracts-procurement",
+      "target": "permits-regulatory",
+      "edges": 20
+    },
+    {
+      "key": "contracts-procurement--phases",
+      "source": "contracts-procurement",
+      "target": "phases",
+      "edges": 35
+    },
+    {
+      "key": "contracts-procurement--project-attributes",
+      "source": "contracts-procurement",
+      "target": "project-attributes",
+      "edges": 36
+    },
+    {
+      "key": "contracts-procurement--quality-safety-records",
+      "source": "contracts-procurement",
+      "target": "quality-safety-records",
+      "edges": 40
+    },
+    {
+      "key": "contracts-procurement--resources",
+      "source": "contracts-procurement",
+      "target": "resources",
+      "edges": 12
+    },
+    {
+      "key": "contracts-procurement--risk",
+      "source": "contracts-procurement",
+      "target": "risk",
+      "edges": 37
+    },
+    {
+      "key": "contracts-procurement--roles",
+      "source": "contracts-procurement",
+      "target": "roles",
+      "edges": 50
+    },
+    {
+      "key": "contracts-procurement--schedule",
+      "source": "contracts-procurement",
+      "target": "schedule",
+      "edges": 60
+    },
+    {
+      "key": "contracts-procurement--standards-classifications",
+      "source": "contracts-procurement",
+      "target": "standards-classifications",
+      "edges": 30
+    },
+    {
+      "key": "contracts-procurement--workflows-statuses",
+      "source": "contracts-procurement",
+      "target": "workflows-statuses",
+      "edges": 40
+    },
+    {
+      "key": "documents-communications--documents-communications",
+      "source": "documents-communications",
+      "target": "documents-communications",
+      "edges": 60
+    },
+    {
+      "key": "documents-communications--field-operations",
+      "source": "documents-communications",
+      "target": "field-operations",
+      "edges": 55
+    },
+    {
+      "key": "documents-communications--financial-instruments",
+      "source": "documents-communications",
+      "target": "financial-instruments",
+      "edges": 99
+    },
+    {
+      "key": "documents-communications--locations",
+      "source": "documents-communications",
+      "target": "locations",
+      "edges": 30
+    },
+    {
+      "key": "documents-communications--models-bim",
+      "source": "documents-communications",
+      "target": "models-bim",
+      "edges": 45
+    },
+    {
+      "key": "documents-communications--organizations",
+      "source": "documents-communications",
+      "target": "organizations",
+      "edges": 95
+    },
+    {
+      "key": "documents-communications--permits-regulatory",
+      "source": "documents-communications",
+      "target": "permits-regulatory",
+      "edges": 50
+    },
+    {
+      "key": "documents-communications--phases",
+      "source": "documents-communications",
+      "target": "phases",
+      "edges": 80
+    },
+    {
+      "key": "documents-communications--project-attributes",
+      "source": "documents-communications",
+      "target": "project-attributes",
+      "edges": 38
+    },
+    {
+      "key": "documents-communications--quality-safety-records",
+      "source": "documents-communications",
+      "target": "quality-safety-records",
+      "edges": 80
+    },
+    {
+      "key": "documents-communications--resources",
+      "source": "documents-communications",
+      "target": "resources",
+      "edges": 19
+    },
+    {
+      "key": "documents-communications--risk",
+      "source": "documents-communications",
+      "target": "risk",
+      "edges": 69
+    },
+    {
+      "key": "documents-communications--roles",
+      "source": "documents-communications",
+      "target": "roles",
+      "edges": 60
+    },
+    {
+      "key": "documents-communications--schedule",
+      "source": "documents-communications",
+      "target": "schedule",
+      "edges": 59
+    },
+    {
+      "key": "documents-communications--standards-classifications",
+      "source": "documents-communications",
+      "target": "standards-classifications",
+      "edges": 50
+    },
+    {
+      "key": "documents-communications--workflows-statuses",
+      "source": "documents-communications",
+      "target": "workflows-statuses",
+      "edges": 60
+    },
+    {
+      "key": "field-operations--field-operations",
+      "source": "field-operations",
+      "target": "field-operations",
+      "edges": 50
+    },
+    {
+      "key": "field-operations--financial-instruments",
+      "source": "field-operations",
+      "target": "financial-instruments",
+      "edges": 50
+    },
+    {
+      "key": "field-operations--locations",
+      "source": "field-operations",
+      "target": "locations",
+      "edges": 107
+    },
+    {
+      "key": "field-operations--models-bim",
+      "source": "field-operations",
+      "target": "models-bim",
+      "edges": 21
+    },
+    {
+      "key": "field-operations--organizations",
+      "source": "field-operations",
+      "target": "organizations",
+      "edges": 60
+    },
+    {
+      "key": "field-operations--permits-regulatory",
+      "source": "field-operations",
+      "target": "permits-regulatory",
+      "edges": 35
+    },
+    {
+      "key": "field-operations--phases",
+      "source": "field-operations",
+      "target": "phases",
+      "edges": 56
+    },
+    {
+      "key": "field-operations--project-attributes",
+      "source": "field-operations",
+      "target": "project-attributes",
+      "edges": 41
+    },
+    {
+      "key": "field-operations--quality-safety-records",
+      "source": "field-operations",
+      "target": "quality-safety-records",
+      "edges": 60
+    },
+    {
+      "key": "field-operations--resources",
+      "source": "field-operations",
+      "target": "resources",
+      "edges": 24
+    },
+    {
+      "key": "field-operations--risk",
+      "source": "field-operations",
+      "target": "risk",
+      "edges": 40
+    },
+    {
+      "key": "field-operations--roles",
+      "source": "field-operations",
+      "target": "roles",
+      "edges": 86
+    },
+    {
+      "key": "field-operations--schedule",
+      "source": "field-operations",
+      "target": "schedule",
+      "edges": 80
+    },
+    {
+      "key": "field-operations--standards-classifications",
+      "source": "field-operations",
+      "target": "standards-classifications",
+      "edges": 35
+    },
+    {
+      "key": "field-operations--workflows-statuses",
+      "source": "field-operations",
+      "target": "workflows-statuses",
+      "edges": 50
+    },
+    {
+      "key": "financial-instruments--financial-instruments",
+      "source": "financial-instruments",
+      "target": "financial-instruments",
+      "edges": 62
+    },
+    {
+      "key": "financial-instruments--locations",
+      "source": "financial-instruments",
+      "target": "locations",
+      "edges": 34
+    },
+    {
+      "key": "financial-instruments--models-bim",
+      "source": "financial-instruments",
+      "target": "models-bim",
+      "edges": 23
+    },
+    {
+      "key": "financial-instruments--organizations",
+      "source": "financial-instruments",
+      "target": "organizations",
+      "edges": 80
+    },
+    {
+      "key": "financial-instruments--permits-regulatory",
+      "source": "financial-instruments",
+      "target": "permits-regulatory",
+      "edges": 31
+    },
+    {
+      "key": "financial-instruments--phases",
+      "source": "financial-instruments",
+      "target": "phases",
+      "edges": 70
+    },
+    {
+      "key": "financial-instruments--project-attributes",
+      "source": "financial-instruments",
+      "target": "project-attributes",
+      "edges": 42
+    },
+    {
+      "key": "financial-instruments--quality-safety-records",
+      "source": "financial-instruments",
+      "target": "quality-safety-records",
+      "edges": 70
+    },
+    {
+      "key": "financial-instruments--resources",
+      "source": "financial-instruments",
+      "target": "resources",
+      "edges": 4
+    },
+    {
+      "key": "financial-instruments--risk",
+      "source": "financial-instruments",
+      "target": "risk",
+      "edges": 65
+    },
+    {
+      "key": "financial-instruments--roles",
+      "source": "financial-instruments",
+      "target": "roles",
+      "edges": 35
+    },
+    {
+      "key": "financial-instruments--schedule",
+      "source": "financial-instruments",
+      "target": "schedule",
+      "edges": 50
+    },
+    {
+      "key": "financial-instruments--standards-classifications",
+      "source": "financial-instruments",
+      "target": "standards-classifications",
+      "edges": 33
+    },
+    {
+      "key": "financial-instruments--workflows-statuses",
+      "source": "financial-instruments",
+      "target": "workflows-statuses",
+      "edges": 88
+    },
+    {
+      "key": "locations--locations",
+      "source": "locations",
+      "target": "locations",
+      "edges": 46
+    },
+    {
+      "key": "locations--models-bim",
+      "source": "locations",
+      "target": "models-bim",
+      "edges": 25
+    },
+    {
+      "key": "locations--organizations",
+      "source": "locations",
+      "target": "organizations",
+      "edges": 35
+    },
+    {
+      "key": "locations--permits-regulatory",
+      "source": "locations",
+      "target": "permits-regulatory",
+      "edges": 25
+    },
+    {
+      "key": "locations--phases",
+      "source": "locations",
+      "target": "phases",
+      "edges": 50
+    },
+    {
+      "key": "locations--project-attributes",
+      "source": "locations",
+      "target": "project-attributes",
+      "edges": 26
+    },
+    {
+      "key": "locations--quality-safety-records",
+      "source": "locations",
+      "target": "quality-safety-records",
+      "edges": 66
+    },
+    {
+      "key": "locations--resources",
+      "source": "locations",
+      "target": "resources",
+      "edges": 50
+    },
+    {
+      "key": "locations--risk",
+      "source": "locations",
+      "target": "risk",
+      "edges": 25
+    },
+    {
+      "key": "locations--roles",
+      "source": "locations",
+      "target": "roles",
+      "edges": 30
+    },
+    {
+      "key": "locations--schedule",
+      "source": "locations",
+      "target": "schedule",
+      "edges": 90
+    },
+    {
+      "key": "locations--standards-classifications",
+      "source": "locations",
+      "target": "standards-classifications",
+      "edges": 20
+    },
+    {
+      "key": "locations--workflows-statuses",
+      "source": "locations",
+      "target": "workflows-statuses",
+      "edges": 28
+    },
+    {
+      "key": "models-bim--models-bim",
+      "source": "models-bim",
+      "target": "models-bim",
+      "edges": 38
+    },
+    {
+      "key": "models-bim--organizations",
+      "source": "models-bim",
+      "target": "organizations",
+      "edges": 24
+    },
+    {
+      "key": "models-bim--permits-regulatory",
+      "source": "models-bim",
+      "target": "permits-regulatory",
+      "edges": 16
+    },
+    {
+      "key": "models-bim--phases",
+      "source": "models-bim",
+      "target": "phases",
+      "edges": 50
+    },
+    {
+      "key": "models-bim--project-attributes",
+      "source": "models-bim",
+      "target": "project-attributes",
+      "edges": 33
+    },
+    {
+      "key": "models-bim--quality-safety-records",
+      "source": "models-bim",
+      "target": "quality-safety-records",
+      "edges": 35
+    },
+    {
+      "key": "models-bim--resources",
+      "source": "models-bim",
+      "target": "resources",
+      "edges": 28
+    },
+    {
+      "key": "models-bim--risk",
+      "source": "models-bim",
+      "target": "risk",
+      "edges": 21
+    },
+    {
+      "key": "models-bim--roles",
+      "source": "models-bim",
+      "target": "roles",
+      "edges": 24
+    },
+    {
+      "key": "models-bim--schedule",
+      "source": "models-bim",
+      "target": "schedule",
+      "edges": 40
+    },
+    {
+      "key": "models-bim--standards-classifications",
+      "source": "models-bim",
+      "target": "standards-classifications",
+      "edges": 19
+    },
+    {
+      "key": "models-bim--workflows-statuses",
+      "source": "models-bim",
+      "target": "workflows-statuses",
+      "edges": 21
+    },
+    {
+      "key": "organizations--organizations",
+      "source": "organizations",
+      "target": "organizations",
+      "edges": 50
+    },
+    {
+      "key": "organizations--permits-regulatory",
+      "source": "organizations",
+      "target": "permits-regulatory",
+      "edges": 35
+    },
+    {
+      "key": "organizations--phases",
+      "source": "organizations",
+      "target": "phases",
+      "edges": 70
+    },
+    {
+      "key": "organizations--project-attributes",
+      "source": "organizations",
+      "target": "project-attributes",
+      "edges": 46
+    },
+    {
+      "key": "organizations--quality-safety-records",
+      "source": "organizations",
+      "target": "quality-safety-records",
+      "edges": 85
+    },
+    {
+      "key": "organizations--resources",
+      "source": "organizations",
+      "target": "resources",
+      "edges": 60
+    },
+    {
+      "key": "organizations--risk",
+      "source": "organizations",
+      "target": "risk",
+      "edges": 37
+    },
+    {
+      "key": "organizations--roles",
+      "source": "organizations",
+      "target": "roles",
+      "edges": 45
+    },
+    {
+      "key": "organizations--schedule",
+      "source": "organizations",
+      "target": "schedule",
+      "edges": 50
+    },
+    {
+      "key": "organizations--standards-classifications",
+      "source": "organizations",
+      "target": "standards-classifications",
+      "edges": 25
+    },
+    {
+      "key": "organizations--workflows-statuses",
+      "source": "organizations",
+      "target": "workflows-statuses",
+      "edges": 50
+    },
+    {
+      "key": "permits-regulatory--permits-regulatory",
+      "source": "permits-regulatory",
+      "target": "permits-regulatory",
+      "edges": 40
+    },
+    {
+      "key": "permits-regulatory--phases",
+      "source": "permits-regulatory",
+      "target": "phases",
+      "edges": 85
+    },
+    {
+      "key": "permits-regulatory--project-attributes",
+      "source": "permits-regulatory",
+      "target": "project-attributes",
+      "edges": 39
+    },
+    {
+      "key": "permits-regulatory--quality-safety-records",
+      "source": "permits-regulatory",
+      "target": "quality-safety-records",
+      "edges": 58
+    },
+    {
+      "key": "permits-regulatory--resources",
+      "source": "permits-regulatory",
+      "target": "resources",
+      "edges": 33
+    },
+    {
+      "key": "permits-regulatory--risk",
+      "source": "permits-regulatory",
+      "target": "risk",
+      "edges": 25
+    },
+    {
+      "key": "permits-regulatory--roles",
+      "source": "permits-regulatory",
+      "target": "roles",
+      "edges": 35
+    },
+    {
+      "key": "permits-regulatory--schedule",
+      "source": "permits-regulatory",
+      "target": "schedule",
+      "edges": 40
+    },
+    {
+      "key": "permits-regulatory--standards-classifications",
+      "source": "permits-regulatory",
+      "target": "standards-classifications",
+      "edges": 25
+    },
+    {
+      "key": "permits-regulatory--workflows-statuses",
+      "source": "permits-regulatory",
+      "target": "workflows-statuses",
+      "edges": 35
+    },
+    {
+      "key": "phases--phases",
+      "source": "phases",
+      "target": "phases",
+      "edges": 60
+    },
+    {
+      "key": "phases--project-attributes",
+      "source": "phases",
+      "target": "project-attributes",
+      "edges": 40
+    },
+    {
+      "key": "phases--quality-safety-records",
+      "source": "phases",
+      "target": "quality-safety-records",
+      "edges": 70
+    },
+    {
+      "key": "phases--resources",
+      "source": "phases",
+      "target": "resources",
+      "edges": 143
+    },
+    {
+      "key": "phases--risk",
+      "source": "phases",
+      "target": "risk",
+      "edges": 49
+    },
+    {
+      "key": "phases--roles",
+      "source": "phases",
+      "target": "roles",
+      "edges": 70
+    },
+    {
+      "key": "phases--schedule",
+      "source": "phases",
+      "target": "schedule",
+      "edges": 100
+    },
+    {
+      "key": "phases--standards-classifications",
+      "source": "phases",
+      "target": "standards-classifications",
+      "edges": 50
+    },
+    {
+      "key": "phases--workflows-statuses",
+      "source": "phases",
+      "target": "workflows-statuses",
+      "edges": 50
+    },
+    {
+      "key": "project-attributes--project-attributes",
+      "source": "project-attributes",
+      "target": "project-attributes",
+      "edges": 40
+    },
+    {
+      "key": "project-attributes--quality-safety-records",
+      "source": "project-attributes",
+      "target": "quality-safety-records",
+      "edges": 37
+    },
+    {
+      "key": "project-attributes--resources",
+      "source": "project-attributes",
+      "target": "resources",
+      "edges": 40
+    },
+    {
+      "key": "project-attributes--risk",
+      "source": "project-attributes",
+      "target": "risk",
+      "edges": 32
+    },
+    {
+      "key": "project-attributes--roles",
+      "source": "project-attributes",
+      "target": "roles",
+      "edges": 30
+    },
+    {
+      "key": "project-attributes--schedule",
+      "source": "project-attributes",
+      "target": "schedule",
+      "edges": 35
+    },
+    {
+      "key": "project-attributes--standards-classifications",
+      "source": "project-attributes",
+      "target": "standards-classifications",
+      "edges": 24
+    },
+    {
+      "key": "project-attributes--workflows-statuses",
+      "source": "project-attributes",
+      "target": "workflows-statuses",
+      "edges": 25
+    },
+    {
+      "key": "quality-safety-records--quality-safety-records",
+      "source": "quality-safety-records",
+      "target": "quality-safety-records",
+      "edges": 50
+    },
+    {
+      "key": "quality-safety-records--resources",
+      "source": "quality-safety-records",
+      "target": "resources",
+      "edges": 16
+    },
+    {
+      "key": "quality-safety-records--risk",
+      "source": "quality-safety-records",
+      "target": "risk",
+      "edges": 84
+    },
+    {
+      "key": "quality-safety-records--roles",
+      "source": "quality-safety-records",
+      "target": "roles",
+      "edges": 44
+    },
+    {
+      "key": "quality-safety-records--schedule",
+      "source": "quality-safety-records",
+      "target": "schedule",
+      "edges": 60
+    },
+    {
+      "key": "quality-safety-records--standards-classifications",
+      "source": "quality-safety-records",
+      "target": "standards-classifications",
+      "edges": 50
+    },
+    {
+      "key": "quality-safety-records--workflows-statuses",
+      "source": "quality-safety-records",
+      "target": "workflows-statuses",
+      "edges": 60
+    },
+    {
+      "key": "resources--resources",
+      "source": "resources",
+      "target": "resources",
+      "edges": 56
+    },
+    {
+      "key": "resources--risk",
+      "source": "resources",
+      "target": "risk",
+      "edges": 35
+    },
+    {
+      "key": "resources--roles",
+      "source": "resources",
+      "target": "roles",
+      "edges": 40
+    },
+    {
+      "key": "resources--schedule",
+      "source": "resources",
+      "target": "schedule",
+      "edges": 50
+    },
+    {
+      "key": "resources--standards-classifications",
+      "source": "resources",
+      "target": "standards-classifications",
+      "edges": 35
+    },
+    {
+      "key": "resources--workflows-statuses",
+      "source": "resources",
+      "target": "workflows-statuses",
+      "edges": 35
+    },
+    {
+      "key": "risk--risk",
+      "source": "risk",
+      "target": "risk",
+      "edges": 40
+    },
+    {
+      "key": "risk--roles",
+      "source": "risk",
+      "target": "roles",
+      "edges": 35
+    },
+    {
+      "key": "risk--schedule",
+      "source": "risk",
+      "target": "schedule",
+      "edges": 45
+    },
+    {
+      "key": "risk--standards-classifications",
+      "source": "risk",
+      "target": "standards-classifications",
+      "edges": 25
+    },
+    {
+      "key": "risk--workflows-statuses",
+      "source": "risk",
+      "target": "workflows-statuses",
+      "edges": 31
+    },
+    {
+      "key": "roles--roles",
+      "source": "roles",
+      "target": "roles",
+      "edges": 52
+    },
+    {
+      "key": "roles--schedule",
+      "source": "roles",
+      "target": "schedule",
+      "edges": 38
+    },
+    {
+      "key": "roles--standards-classifications",
+      "source": "roles",
+      "target": "standards-classifications",
+      "edges": 25
+    },
+    {
+      "key": "roles--workflows-statuses",
+      "source": "roles",
+      "target": "workflows-statuses",
+      "edges": 40
+    },
+    {
+      "key": "schedule--schedule",
+      "source": "schedule",
+      "target": "schedule",
+      "edges": 50
+    },
+    {
+      "key": "schedule--standards-classifications",
+      "source": "schedule",
+      "target": "standards-classifications",
+      "edges": 25
+    },
+    {
+      "key": "schedule--workflows-statuses",
+      "source": "schedule",
+      "target": "workflows-statuses",
+      "edges": 35
+    },
+    {
+      "key": "standards-classifications--standards-classifications",
+      "source": "standards-classifications",
+      "target": "standards-classifications",
+      "edges": 39
+    },
+    {
+      "key": "standards-classifications--workflows-statuses",
+      "source": "standards-classifications",
+      "target": "workflows-statuses",
+      "edges": 25
+    },
+    {
+      "key": "workflows-statuses--workflows-statuses",
+      "source": "workflows-statuses",
+      "target": "workflows-statuses",
+      "edges": 40
+    }
+  ]
+}
