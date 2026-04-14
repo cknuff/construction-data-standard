@@ -88,6 +88,7 @@ def build_domain_elements():
             common = row.get("Common Values", "").strip()
             coverage = row.get("Procore Coverage", "").strip()
             benchmark = row.get("Benchmarking Use", "").strip()
+            notes = row.get("Notes", "").strip()
 
             if not elem:
                 continue
@@ -119,8 +120,21 @@ def build_domain_elements():
             if coverage:
                 cov_short = coverage.split("—")[0].strip()[:30]
                 meta.append(cov_short)
+            if common:
+                cv_short = common.split(";")[0].strip()[:100]
+                meta.append(cv_short)
             if meta:
                 entry += f" [{' | '.join(meta)}]"
+
+            # Add Notes as compact sub-bullet (analytical context)
+            if notes:
+                if len(notes) > 200:
+                    cut = notes[:200].rfind(". ")
+                    if cut > 80:
+                        notes = notes[:cut+1]
+                    else:
+                        notes = notes[:200] + "..."
+                entry += f"\n  - {notes}"
 
             lines.append(entry)
 
