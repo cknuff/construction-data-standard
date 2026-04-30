@@ -481,6 +481,26 @@
       "fi-precon-hit-rate",
       "org-gen-contr-gc",
       "MEASURED BY"
+    ],
+    [
+      "org-sub-job",
+      "fi-project-budget",
+      "HAS_SUB_BUDGET"
+    ],
+    [
+      "fi-chg-event-ce",
+      "org-user",
+      "HELD_BY"
+    ],
+    [
+      "org-user",
+      "fi-commit-subcontra",
+      "REPRESENTS_VENDOR_FOR"
+    ],
+    [
+      "org-project-vendor",
+      "fi-commit-subcontra",
+      "PERFORMS_WORK_VIA"
     ]
   ],
   "verbGlossary": {

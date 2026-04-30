@@ -1,0 +1,169 @@
+{
+  "domain": "field-execution",
+  "name": "Field Execution",
+  "color": "#7e57c2",
+  "categories": [
+    {
+      "name": "Labor",
+      "color": "#9575cd",
+      "nodes": [
+        {
+          "id": "fe-project-employee",
+          "name": "Project Employee",
+          "procore": "workforce.project_employees",
+          "desc": "An employee assigned to a project. Resolves 'who is on this job'. Distinct from a generic employee \u2014 captures the project-specific assignment, role, and dates. Links to the standardized roles domain for project responsibility."
+        },
+        {
+          "id": "fe-labor-allocation",
+          "name": "Labor Allocation",
+          "procore": "workforce.labor_allocations",
+          "desc": "Planned or actual allocation of labor hours to a cost code, WBS, or scope. Links employees \u2192 cost codes \u2192 budget. The operational unit for labor planning. Variance between planned and actual allocation is a cost overrun signal."
+        },
+        {
+          "id": "fe-timecard",
+          "name": "Daily Timecard",
+          "procore": "workforce.daily_timecards_and_assignments",
+          "desc": "Actual hours worked by an employee on a day, against a project and cost code. The source of truth for labor cost. Pairs with production quantities to compute productivity. Overtime hours flagged separately."
+        },
+        {
+          "id": "fe-time-off",
+          "name": "Time Off",
+          "procore": "workforce.time_off",
+          "desc": "Approved leave or absence \u2014 affects available labor hours for planning. Tracks PTO, sick, holiday, jury duty. Reduces effective labor capacity for resource planning."
+        }
+      ]
+    },
+    {
+      "name": "Equipment Operations",
+      "color": "#7986cb",
+      "nodes": [
+        {
+          "id": "fe-equip-project-log",
+          "name": "Equipment Project Log",
+          "procore": "workforce.equipment_project_log",
+          "desc": "An equipment unit assigned to a project \u2014 start/end dates, ownership (owned vs rented), rate. Resolves 'what equipment is on site'. Drives equipment cost allocation and utilization tracking."
+        },
+        {
+          "id": "fe-equip-timecard",
+          "name": "Equipment Timecard",
+          "procore": "workforce.equipment_tc_entry",
+          "desc": "Hours an equipment unit operated on a project \u2014 drives equipment cost allocation. Pairs with equipment project log to compute utilization."
+        },
+        {
+          "id": "fe-equip-telematic",
+          "name": "Equipment Telematic",
+          "procore": "workforce.equipment_telematic",
+          "desc": "IoT data from equipment \u2014 load factor, idle time, fuel consumption, location, engine hours. Source for utilization and productivity analysis. Adoption is uneven \u2014 most projects don't have telematic-instrumented equipment."
+        },
+        {
+          "id": "fe-equip-maintenance",
+          "name": "Equipment Maintenance Record",
+          "procore": "workforce.maintenance_record",
+          "desc": "Maintenance history for an equipment unit \u2014 affects availability and lifecycle cost. Preventive vs reactive maintenance distinguishable. High maintenance cost signals end-of-life or misuse."
+        }
+      ]
+    },
+    {
+      "name": "Production",
+      "color": "#ab47bc",
+      "nodes": [
+        {
+          "id": "fe-production-quantity",
+          "name": "Production Quantity",
+          "procore": "workforce.change_event_production_quantities",
+          "desc": "Actual quantity of work installed against a cost code or scope \u2014 the 'what got built' measurement. Pairs with timecard hours to compute productivity (output \u00f7 input). Foundational measurement for field execution."
+        },
+        {
+          "id": "fe-budget-change-quantity",
+          "name": "Budget Change Production Quantity",
+          "procore": "workforce.budget_change_production_quantities",
+          "desc": "Production quantity tied to a budget change \u2014 tracks rework or scope adjustments at the field level. Distinguishes 'extra work installed' from 'original scope installed'."
+        },
+        {
+          "id": "fe-labor-productivity",
+          "name": "Labor & Equipment Productivity",
+          "procore": "workforce.labor_equipment_productivity",
+          "desc": "Derived metric: work installed \u00f7 labor or equipment hours. The fundamental measure of field execution. Compared to estimated productivity (from assemblies) to validate estimating accuracy and identify field underperformance."
+        },
+        {
+          "id": "fe-material-record",
+          "name": "Material Record",
+          "procore": "workforce.materials",
+          "desc": "Material on site \u2014 quantity, delivery date, cost code, supplier. Closes the loop on material consumption vs. estimate. Pairs with submittals (specs) and POs (commitment) to track full material lifecycle."
+        },
+        {
+          "id": "fe-productivity-code",
+          "name": "Field Productivity Code",
+          "procore": "workforce.field_productivity_code",
+          "desc": "Classification code applied to field productivity records \u2014 categorizes labor/equipment hours and installed quantities by type of work. Maps to Budget Code structure so productivity rolls up to budget for variance analysis. The bridge between operational productivity tracking and financial reporting."
+        }
+      ]
+    },
+    {
+      "name": "Standard Measures",
+      "color": "#9c27b0",
+      "nodes": [
+        {
+          "id": "fe-productivity-rate",
+          "name": "Productivity Rate",
+          "desc": "Output per labor hour, by trade and scope. Benchmark for estimating accuracy and field performance. Compared across crews, projects, and historical baselines. Core KPI for self-perform GCs.",
+          "concept_type": "derived-metric"
+        },
+        {
+          "id": "fe-equipment-utilization",
+          "name": "Equipment Utilization %",
+          "desc": "Hours equipment operated \u00f7 hours equipment on site. Signals over-fleeting (low utilization, idle cost) and bottlenecks (high utilization, capacity constraint).",
+          "concept_type": "derived-metric"
+        },
+        {
+          "id": "fe-labor-burn-rate",
+          "name": "Labor Burn Rate",
+          "desc": "Actual labor cost \u00f7 planned labor cost over time. Leading indicator of cost overrun on labor-heavy scopes. Trended weekly to project EAC.",
+          "concept_type": "derived-metric"
+        },
+        {
+          "id": "fe-overtime-rate",
+          "name": "Overtime Rate",
+          "desc": "OT hours \u00f7 total hours. High OT signals understaffing or schedule pressure. Sustained high OT correlates with safety incidents and quality issues \u2014 leading indicator for risk.",
+          "concept_type": "derived-metric"
+        }
+      ]
+    },
+    {
+      "name": "Advanced Work Packaging",
+      "color": "#7e57c2",
+      "nodes": [
+        {
+          "id": "fe-cwp",
+          "name": "Construction Work Package (CWP)",
+          "procore": "",
+          "desc": "A discrete, self-contained scope of construction work. Aligns engineering deliverables and material procurement to the construction sequence. CII AWP framework. Typically 6-8 week duration of work."
+        },
+        {
+          "id": "fe-ewp",
+          "name": "Engineering Work Package (EWP)",
+          "procore": "",
+          "desc": "Engineering deliverables aligned to a CWP \u2014 drawings, specs, vendor data needed to construct. EWP completion drives CWP readiness."
+        },
+        {
+          "id": "fe-iwp",
+          "name": "Installation Work Package (IWP)",
+          "procore": "",
+          "desc": "Field-level work package \u2014 typically 1 week of work for a crew. CWP broken into IWPs for daily/weekly execution. Made-ready process drives IWP release."
+        },
+        {
+          "id": "fe-pwp",
+          "name": "Path of Construction (POC)",
+          "procore": "",
+          "desc": "Sequenced visualization of all CWPs from foundations through commissioning. Drives the AWP plan."
+        },
+        {
+          "id": "fe-workface-planning",
+          "name": "Workface Planning",
+          "procore": "",
+          "desc": "Pre-execution preparation that ensures every IWP has all constraints removed: drawings, materials, equipment, labor, prerequisites. The made-ready check before work releases to the field."
+        }
+      ]
+    }
+  ]
+}

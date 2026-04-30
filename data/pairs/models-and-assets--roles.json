@@ -1,0 +1,152 @@
+{
+  "source": "models-and-assets",
+  "target": "roles",
+  "edges": [
+    [
+      "bim-3d-building-info",
+      "rl-bim-manager-vdc",
+      "MANAGED BY"
+    ],
+    [
+      "bim-3d-building-info",
+      "rl-design-manager",
+      "OVERSEEN BY"
+    ],
+    [
+      "bim-federated-model",
+      "rl-bim-manager-vdc",
+      "ASSEMBLED BY"
+    ],
+    [
+      "bim-federated-model",
+      "rl-project-engineer",
+      "REVIEWED BY"
+    ],
+    [
+      "bim-4d-model",
+      "rl-scheduler-projec",
+      "LINKED BY"
+    ],
+    [
+      "bim-5d-model-cost",
+      "rl-estimator-chief",
+      "POPULATED BY"
+    ],
+    [
+      "bim-5d-model-cost",
+      "rl-cost-engineer",
+      "VALIDATED BY"
+    ],
+    [
+      "bim-clash-detection",
+      "rl-bim-manager-vdc",
+      "RUN BY"
+    ],
+    [
+      "bim-coord-issue",
+      "rl-project-engineer",
+      "RESOLVED BY"
+    ],
+    [
+      "bim-coord-issue",
+      "rl-foreman-gen",
+      "IMPLEMENTED BY"
+    ],
+    [
+      "bim-bim-coord",
+      "rl-bim-manager-vdc",
+      "FACILITATED BY"
+    ],
+    [
+      "bim-bim-coord",
+      "rl-super",
+      "ATTENDED BY"
+    ],
+    [
+      "bim-quantity-takeoff",
+      "rl-estimator-chief",
+      "EXTRACTED BY"
+    ],
+    [
+      "bim-model-based",
+      "rl-field-engineer",
+      "ISSUED BY"
+    ],
+    [
+      "bim-model-based",
+      "rl-doc-controller",
+      "CONTROLLED BY"
+    ],
+    [
+      "bim-as-built-model",
+      "rl-quality-manager",
+      "VERIFIED BY"
+    ],
+    [
+      "bim-point-cloud",
+      "rl-field-engineer",
+      "PROCESSED BY"
+    ],
+    [
+      "bim-drone-capture",
+      "rl-super",
+      "REQUESTED BY"
+    ],
+    [
+      "bim-const-photo",
+      "rl-assistant-super",
+      "TAKEN BY"
+    ],
+    [
+      "bim-360-photo",
+      "rl-field-engineer",
+      "CAPTURED BY"
+    ],
+    [
+      "bim-digital-twin",
+      "rl-cx-agent-cxa",
+      "COMMISSIONED BY"
+    ],
+    [
+      "bim-digital-twin",
+      "rl-tech-manager",
+      "ADMINISTERED BY"
+    ],
+    [
+      "bim-level-developmen",
+      "rl-bim-manager-vdc",
+      "SPECIFIED BY"
+    ],
+    [
+      "bim-bim-coord-2",
+      "rl-project-executiv",
+      "REPORTED TO"
+    ]
+  ],
+  "verbGlossary": {
+    "MANAGED BY": "{source} is responsible for maintaining model standards, content, and updates",
+    "OVERSEEN BY": "{source} provides design oversight and approval of model content",
+    "ASSEMBLED BY": "{source} merges discipline models into the federated coordination model",
+    "REVIEWED BY": "{source} reviews model for constructability and coordination completeness",
+    "LINKED BY": "{source} links schedule activities to model elements for 4D simulation",
+    "POPULATED BY": "{source} enters cost data into model elements for 5D estimation",
+    "VALIDATED BY": "{source} checks model cost quantities against independent estimates",
+    "RUN BY": "{source} executes automated clash detection analyses on the federated model",
+    "RESOLVED BY": "{target} drives resolution of coordination issues identified in {source}",
+    "IMPLEMENTED BY": "{source} executes field corrections based on coordination issue resolutions",
+    "FACILITATED BY": "{source} leads BIM coordination meetings and tracks action items",
+    "ATTENDED BY": "{source} participates in coordination meetings to address field impacts",
+    "EXTRACTED BY": "{target} pulls material quantities from {source} for estimating",
+    "ISSUED BY": "{source} issues model-based drawings to the field for construction",
+    "CONTROLLED BY": "{source} manages drawing revisions, transmittals, and version control",
+    "VERIFIED BY": "{source} verifies as-built model accuracy against installed field conditions",
+    "PROCESSED BY": "{source} processes raw scan data into usable point cloud models",
+    "REQUESTED BY": "{source} initiates drone capture flights for progress or site documentation",
+    "TAKEN BY": "{source} captures construction photos documenting daily field conditions",
+    "CAPTURED BY": "{source} captures 360-degree photos for progress and quality documentation",
+    "COMMISSIONED BY": "{source} establishes and commissions the digital twin for operations handover",
+    "ADMINISTERED BY": "{source} manages the technology platform and integrations for the digital twin",
+    "SPECIFIED BY": "{source} defines the Level of Development requirements for each project phase",
+    "REPORTED TO": "{source} coordination adoption score reported to leadership for process tracking"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "source": "field-execution",
+  "target": "roles",
+  "edges": [
+    [
+      "fe-project-employee",
+      "rl-project-manager",
+      "PERFORMS_ROLE"
+    ]
+  ]
+}

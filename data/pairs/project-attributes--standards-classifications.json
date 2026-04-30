@@ -53,21 +53,6 @@
       "CLASSIFIED BY"
     ],
     [
-      "pa-project-type",
-      "sc-omniclass",
-      "CLASSIFIED BY"
-    ],
-    [
-      "pa-struct-system",
-      "sc-uniformat",
-      "CLASSIFIED BY"
-    ],
-    [
-      "pa-foundation-type",
-      "sc-uniformat",
-      "CLASSIFIED BY"
-    ],
-    [
       "pa-occupancy-group",
       "sc-international-bu",
       "DEFINED BY"
@@ -94,23 +79,8 @@
     ],
     [
       "pa-safety-incident",
-      "sc-osha-recordkeepi",
-      "REPORTED UNDER"
-    ],
-    [
-      "pa-safety-incident",
-      "sc-osha-hazard",
-      "CATEGORIZED BY"
-    ],
-    [
-      "pa-safety-incident",
       "sc-ansi-injury",
       "CATEGORIZED BY"
-    ],
-    [
-      "pa-project-type",
-      "sc-masterformat",
-      "SCOPED BY"
     ],
     [
       "pa-work-type",

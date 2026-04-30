@@ -251,6 +251,26 @@
       "org-sub-trade",
       "org-chg-order",
       "MEASURES"
+    ],
+    [
+      "org-address",
+      "org-user",
+      "BELONGS_TO"
+    ],
+    [
+      "org-project-user",
+      "org-user",
+      "GRANTS_PROJECT_ACCESS_TO"
+    ],
+    [
+      "org-project-role-membership",
+      "org-user",
+      "ASSIGNS_ROLE_TO"
+    ],
+    [
+      "org-project-role-membership",
+      "org-architect-record",
+      "MAY_BE_ROLE"
     ]
   ],
   "verbGlossary": {

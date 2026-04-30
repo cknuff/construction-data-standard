@@ -3,21 +3,6 @@
   "target": "standards-classifications",
   "edges": [
     [
-      "loc-building",
-      "sc-uniformat",
-      "ZONED BY"
-    ],
-    [
-      "loc-floor-level",
-      "sc-uniformat",
-      "DECOMPOSED BY"
-    ],
-    [
-      "loc-room-space",
-      "sc-omniclass",
-      "CLASSIFIED UNDER"
-    ],
-    [
       "loc-fire-smoke",
       "sc-nfpa-stds",
       "GOVERNED BY"
@@ -31,21 +16,6 @@
       "loc-penetration-open",
       "sc-nfpa-stds",
       "SEALED PER"
-    ],
-    [
-      "loc-project-site",
-      "sc-osha-hazard",
-      "SURVEYED FOR"
-    ],
-    [
-      "loc-exterior-zone",
-      "sc-osha-hazard",
-      "SURVEYED FOR"
-    ],
-    [
-      "loc-roof-level",
-      "sc-osha-hazard",
-      "POSTED PER"
     ],
     [
       "loc-wet-area",
@@ -66,11 +36,6 @@
       "loc-cx-zone",
       "sc-energy-code-stds",
       "TESTED PER"
-    ],
-    [
-      "loc-work-zone-phase",
-      "sc-masterformat",
-      "SCOPED BY"
     ],
     [
       "loc-equip-location",

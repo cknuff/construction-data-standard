@@ -3,66 +3,6 @@
   "target": "standards-classifications",
   "edges": [
     [
-      "be-deep-fdn",
-      "sc-masterformat",
-      "CLASSIFIED UNDER"
-    ],
-    [
-      "be-columns",
-      "sc-masterformat",
-      "CLASSIFIED UNDER"
-    ],
-    [
-      "be-curtainwall",
-      "sc-masterformat",
-      "CLASSIFIED UNDER"
-    ],
-    [
-      "be-ductwork",
-      "sc-masterformat",
-      "CLASSIFIED UNDER"
-    ],
-    [
-      "be-power-dist",
-      "sc-masterformat",
-      "CLASSIFIED UNDER"
-    ],
-    [
-      "be-drywall",
-      "sc-masterformat",
-      "CLASSIFIED UNDER"
-    ],
-    [
-      "be-deep-fdn",
-      "sc-uniformat",
-      "GROUPED BY"
-    ],
-    [
-      "be-columns",
-      "sc-uniformat",
-      "GROUPED BY"
-    ],
-    [
-      "be-curtainwall",
-      "sc-uniformat",
-      "GROUPED BY"
-    ],
-    [
-      "be-ductwork",
-      "sc-uniformat",
-      "GROUPED BY"
-    ],
-    [
-      "be-columns",
-      "sc-omniclass",
-      "CROSS-REFERENCED TO"
-    ],
-    [
-      "be-curtainwall",
-      "sc-omniclass",
-      "CROSS-REFERENCED TO"
-    ],
-    [
       "be-columns",
       "sc-ifc-class",
       "MODELED AS"
@@ -121,26 +61,6 @@
       "be-curtainwall",
       "sc-budget-code",
       "BUDGETED UNDER"
-    ],
-    [
-      "be-excav",
-      "sc-osha-hazard",
-      "REGULATED BY"
-    ],
-    [
-      "be-columns",
-      "sc-osha-hazard",
-      "REGULATED BY"
-    ],
-    [
-      "be-roof-struct",
-      "sc-osha-hazard",
-      "REGULATED BY"
-    ],
-    [
-      "be-power-dist",
-      "sc-osha-hazard",
-      "REGULATED BY"
     ],
     [
       "be-columns",
@@ -251,6 +171,146 @@
       "be-curtainwall",
       "sc-aace-cost",
       "ESTIMATED PER"
+    ],
+    [
+      "sc-mf-03",
+      "be-fdn-walls",
+      "CLASSIFIES"
+    ],
+    [
+      "sc-mf-03",
+      "be-deep-fdn",
+      "CLASSIFIES"
+    ],
+    [
+      "sc-mf-03",
+      "be-shallow-fdn",
+      "CLASSIFIES"
+    ],
+    [
+      "sc-mf-03",
+      "be-grade-beams",
+      "CLASSIFIES"
+    ],
+    [
+      "sc-mf-03",
+      "be-sog",
+      "CLASSIFIES"
+    ],
+    [
+      "sc-mf-03",
+      "be-columns",
+      "CLASSIFIES"
+    ],
+    [
+      "sc-mf-03",
+      "be-beams",
+      "CLASSIFIES"
+    ],
+    [
+      "sc-mf-03",
+      "be-slabs",
+      "CLASSIFIES"
+    ],
+    [
+      "sc-mf-04",
+      "be-masonry-v",
+      "CLASSIFIES"
+    ],
+    [
+      "sc-mf-05",
+      "be-columns",
+      "CLASSIFIES"
+    ],
+    [
+      "sc-mf-05",
+      "be-beams",
+      "CLASSIFIES"
+    ],
+    [
+      "sc-mf-05",
+      "be-roof-struct",
+      "CLASSIFIES"
+    ],
+    [
+      "sc-mf-05",
+      "be-connections",
+      "CLASSIFIES"
+    ],
+    [
+      "sc-mf-07",
+      "be-roof-struct",
+      "CLASSIFIES"
+    ],
+    [
+      "sc-mf-07",
+      "be-panels",
+      "CLASSIFIES"
+    ],
+    [
+      "sc-mf-08",
+      "be-windows",
+      "CLASSIFIES"
+    ],
+    [
+      "sc-mf-08",
+      "be-ext-doors",
+      "CLASSIFIES"
+    ],
+    [
+      "sc-mf-08",
+      "be-curtainwall",
+      "CLASSIFIES"
+    ],
+    [
+      "sc-mf-26",
+      "be-site-elec",
+      "CLASSIFIES"
+    ],
+    [
+      "sc-mf-31",
+      "be-excav",
+      "CLASSIFIES"
+    ],
+    [
+      "sc-mf-31",
+      "be-backfill",
+      "CLASSIFIES"
+    ],
+    [
+      "sc-mf-31",
+      "be-dewater",
+      "CLASSIFIES"
+    ],
+    [
+      "sc-mf-31",
+      "be-erosion",
+      "CLASSIFIES"
+    ],
+    [
+      "sc-mf-33",
+      "be-water-main",
+      "CLASSIFIES"
+    ],
+    [
+      "sc-mf-33",
+      "be-sanitary",
+      "CLASSIFIES"
+    ],
+    [
+      "sc-mf-33",
+      "be-storm",
+      "CLASSIFIES"
+    ],
+    [
+      "sc-mf-33",
+      "be-gas-svc",
+      "CLASSIFIES"
+    ],
+    [
+      "sc-mf-33",
+      "be-site-elec",
+      "CLASSIFIES"
     ]
   ],
   "verbGlossary": {

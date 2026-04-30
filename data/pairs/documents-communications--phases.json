@@ -401,6 +401,11 @@
       "doc-daily-log-2",
       "ph-seasonal-cx",
       "TRACKED THROUGH"
+    ],
+    [
+      "doc-lessons-learned",
+      "ph-contract-close",
+      "CAPTURED_AT"
     ]
   ],
   "verbGlossary": {

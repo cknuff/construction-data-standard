@@ -176,6 +176,11 @@
       "loc-safety-incident",
       "org-osha-safety",
       "REPORTED TO"
+    ],
+    [
+      "org-address",
+      "loc-project-site",
+      "LOCATES"
     ]
   ],
   "verbGlossary": {

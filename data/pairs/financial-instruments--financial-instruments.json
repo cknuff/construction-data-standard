@@ -546,6 +546,246 @@
       "fi-estimate",
       "fi-cost-code",
       "PRICED BY"
+    ],
+    [
+      "fi-estimate",
+      "fi-estimate-layer",
+      "HAS_COMPONENT"
+    ],
+    [
+      "fi-estimate-layer-group",
+      "fi-estimate-layer",
+      "CONTAINS"
+    ],
+    [
+      "fi-estimate-layer",
+      "fi-assembly",
+      "COMPOSED_OF"
+    ],
+    [
+      "fi-estimate-budget-item",
+      "fi-budget-line-item",
+      "BECOMES"
+    ],
+    [
+      "fi-estimate-adjustment",
+      "fi-estimate",
+      "ADJUSTS"
+    ],
+    [
+      "fi-owner-invoice",
+      "fi-pay-disbursement",
+      "GENERATES_OBLIGATION_FOR"
+    ],
+    [
+      "fi-pay-disbursement",
+      "fi-pay-beneficiary",
+      "PAYS_TO"
+    ],
+    [
+      "fi-pay-disbursement",
+      "fi-pay-requirement",
+      "GATED_BY"
+    ],
+    [
+      "fi-pay-disbursement",
+      "fi-lien-waiver",
+      "RELEASED_AFTER"
+    ],
+    [
+      "fi-pay-disbursement",
+      "fi-pay-subtier-waiver",
+      "RELEASED_AFTER"
+    ],
+    [
+      "fi-pay-manual-hold",
+      "fi-pay-disbursement",
+      "BLOCKS"
+    ],
+    [
+      "fi-pay-received",
+      "fi-owner-invoice",
+      "OFFSETS"
+    ],
+    [
+      "fi-pay-agreement",
+      "fi-commit-subcontra",
+      "DEFINES_TERMS_FOR"
+    ],
+    [
+      "fi-budget-change",
+      "fi-project-budget",
+      "RESTATES"
+    ],
+    [
+      "fi-prime-pco",
+      "fi-owner-chg-order",
+      "PRECEDES"
+    ],
+    [
+      "fi-rfq-quote",
+      "fi-chg-event-ce",
+      "PRICES"
+    ],
+    [
+      "fi-project-cost-code",
+      "fi-cost-code",
+      "INSTANCE_OF"
+    ],
+    [
+      "fi-commit-subcontra",
+      "fi-commit-subcontra",
+      "HAS_CONTRACT_TYPE_LUMP_SUM"
+    ],
+    [
+      "fi-commit-subcontra",
+      "fi-commit-subcontra",
+      "HAS_CONTRACT_TYPE_T_AND_M"
+    ],
+    [
+      "fi-commit-subcontra",
+      "fi-commit-subcontra",
+      "HAS_SUBTIER_COMMITMENT"
+    ],
+    [
+      "fi-pay-subtier-waiver",
+      "fi-commit-subcontra",
+      "WAIVES_LIEN_FOR_SUBTIER_OF"
+    ],
+    [
+      "fi-assembly",
+      "fi-cost-code",
+      "ASSIGNED_TO_COST_CODE"
+    ],
+    [
+      "fi-estimate",
+      "fi-estimating-project",
+      "BELONGS_TO"
+    ],
+    [
+      "fi-pay-disbursement",
+      "fi-commit-subcontra",
+      "PAYS_DOWN"
+    ],
+    [
+      "fi-pay-beneficiary",
+      "fi-commit-subcontra",
+      "BENEFICIARY_OF"
+    ],
+    [
+      "fi-pay-received",
+      "fi-project-budget",
+      "INFLOWS_TO"
+    ],
+    [
+      "fi-pay-requirement",
+      "fi-lien-waiver",
+      "REQUIRES"
+    ],
+    [
+      "fi-evm-ev",
+      "fi-evm-pv",
+      "MEASURED_AGAINST"
+    ],
+    [
+      "fi-evm-cv",
+      "fi-evm-ev",
+      "DERIVED_FROM"
+    ],
+    [
+      "fi-evm-cv",
+      "fi-evm-ac",
+      "DERIVED_FROM"
+    ],
+    [
+      "fi-evm-sv",
+      "fi-evm-ev",
+      "DERIVED_FROM"
+    ],
+    [
+      "fi-evm-sv",
+      "fi-evm-pv",
+      "DERIVED_FROM"
+    ],
+    [
+      "fi-evm-spi",
+      "fi-evm-ev",
+      "DERIVED_FROM"
+    ],
+    [
+      "fi-evm-spi",
+      "fi-evm-pv",
+      "DERIVED_FROM"
+    ],
+    [
+      "fi-evm-etc",
+      "fi-cost-forecast",
+      "COMPONENT_OF"
+    ],
+    [
+      "fi-evm-vac",
+      "fi-cost-forecast",
+      "DERIVED_FROM"
+    ],
+    [
+      "fi-evm-ac",
+      "fi-direct-cost",
+      "AGGREGATES"
+    ],
+    [
+      "fi-evm-pv",
+      "fi-project-budget",
+      "BASELINED_FROM"
+    ],
+    [
+      "fi-early-pay-enrollment",
+      "fi-early-pay-program",
+      "ENROLLS_IN"
+    ],
+    [
+      "fi-early-pay-enrollment",
+      "fi-commit-subcontra",
+      "ENROLLS"
+    ],
+    [
+      "fi-early-pay-program",
+      "fi-pay-disbursement",
+      "ACCELERATES"
+    ],
+    [
+      "fi-invoice-compliance",
+      "fi-sub-invoice",
+      "GATES"
+    ],
+    [
+      "fi-invoice-compliance",
+      "fi-pay-requirement",
+      "RESOLVES"
+    ],
+    [
+      "fi-prime-contract-payment",
+      "fi-pay-received",
+      "INSTANCE_OF"
+    ],
+    [
+      "fi-budget-forecast",
+      "fi-project-budget",
+      "FORECASTS"
+    ],
+    [
+      "fi-budget-forecast",
+      "fi-cost-forecast",
+      "TIME_DISTRIBUTES"
+    ],
+    [
+      "fi-budget-forecast",
+      "fi-cash-flow",
+      "INFORMS"
+    ],
+    [
+      "fi-materials-po",
+      "fi-commit-purchase",
+      "INSTANCE_OF"
     ]
   ],
   "verbGlossary": {
@@ -595,14 +835,14 @@
     "SOURCED FROM": "{source}cost metric aggregates the total contract value from subcontracts and purchase orders",
     "EXPRESSED AS": "{source} absolute dollar amount is converted to {target} percentage for normalization and benchmarking",
     "TRACKED OVER TIME BY": "{source} is monitored across reporting periods by {target} to detect erosion trends",
-    "ERODED BY": "{source} is diminished when {target} increases — each unrecovered change reduces projected profit",
+    "ERODED BY": "{source} is diminished when {target} increases \u2014 each unrecovered change reduces projected profit",
     "APPLIED TO": "{source} percentage is added on top of {target} cost to determine the billing or sell price",
     "CONTRIBUTES TO": "{source} markup revenue flows through to {target} when actual costs stay within estimates",
     "FUTURE SOURCE OF": "{source} represents unearned contract value that will generate {target} as work is completed",
     "FEEDS": "Higher {source} produces more contract wins that build {target} over time",
-    "TRADEOFF WITH": "{source} and {target} have an inverse relationship — aggressive pricing wins more work at lower margins",
+    "TRADEOFF WITH": "{source} and {target} have an inverse relationship \u2014 aggressive pricing wins more work at lower margins",
     "IMPROVES": "Higher {source} reduces pursuit cost and increases {target} because repeat clients require less competitive bidding",
-    "CORRELATES WITH": "{source} and {target} tend to move together — repeat clients typically produce more predictable margins",
+    "CORRELATES WITH": "{source} and {target} tend to move together \u2014 repeat clients typically produce more predictable margins",
     "RISK DIMENSION OF": "{source} measures the portfolio diversification risk embedded in {target} composition",
     "PROJECTS": "{source} forward-looking estimate determines the projected {target} at completion",
     "COMPRESSES": "Higher {source} directly reduces {target} by consuming revenue before it reaches profit",
@@ -611,7 +851,7 @@
     "MEASURES CYCLE TIME OF": "{source} quantifies the elapsed time from {target} initiation to completion",
     "MEASURES COLLECTION OF": "{source} tracks the average collection period from {target} submission to cash receipt",
     "SECURED BY": "{source} surety bond secures the contractor's performance obligation on {target}",
-    "LEADING INDICATOR OF": "Rising {source} predicts future deterioration in {target} within 30–60 days",
+    "LEADING INDICATOR OF": "Rising {source} predicts future deterioration in {target} within 30\u201360 days",
     "COMPLEMENTS": "{source} and {target} measure different stages of the same business development pipeline"
   }
 }

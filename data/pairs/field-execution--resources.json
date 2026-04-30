@@ -1,0 +1,16 @@
+{
+  "source": "field-execution",
+  "target": "resources",
+  "edges": [
+    [
+      "fe-equip-project-log",
+      "res-crane",
+      "INSTANCE_OF_TYPE"
+    ],
+    [
+      "fe-material-record",
+      "mat-concrete",
+      "INSTANCE_OF_TYPE"
+    ]
+  ]
+}

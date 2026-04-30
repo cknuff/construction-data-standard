@@ -1,0 +1,132 @@
+{
+  "source": "contracts-procurement",
+  "target": "models-and-assets",
+  "edges": [
+    [
+      "cp-bid-package",
+      "bim-quantity-takeoff",
+      "QUANTIFIED BY"
+    ],
+    [
+      "cp-proposal-bid",
+      "bim-quantity-takeoff",
+      "PRICED FROM"
+    ],
+    [
+      "cp-bid-evaluation",
+      "bim-quantity-takeoff",
+      "VALIDATED AGAINST"
+    ],
+    [
+      "cp-subcontract",
+      "bim-model-element",
+      "SCOPED TO"
+    ],
+    [
+      "cp-purchase-order",
+      "bim-model-element",
+      "PROCURES"
+    ],
+    [
+      "cp-scope-work",
+      "bim-model-element",
+      "DEFINED BY"
+    ],
+    [
+      "cp-subcontract",
+      "bim-3d-building-info",
+      "REFERENCED FROM"
+    ],
+    [
+      "cp-scope-work",
+      "bim-level-developmen",
+      "SPECIFIED AT"
+    ],
+    [
+      "cp-bid-package",
+      "bim-clash-detection",
+      "INFORMED BY"
+    ],
+    [
+      "cp-scope-work",
+      "bim-coord-issue",
+      "ADJUSTED FOR"
+    ],
+    [
+      "cp-substantial-comp",
+      "bim-as-built-model",
+      "VERIFIED AGAINST"
+    ],
+    [
+      "cp-closeout-doc",
+      "bim-as-built-model",
+      "DELIVERED WITH"
+    ],
+    [
+      "cp-warranty",
+      "bim-as-built-model",
+      "REFERENCED FROM"
+    ],
+    [
+      "cp-bid-package",
+      "bim-model-based",
+      "ISSUED WITH"
+    ],
+    [
+      "cp-req-proposal",
+      "bim-model-based",
+      "DISTRIBUTED WITH"
+    ],
+    [
+      "cp-subcontract",
+      "bim-bim-coord",
+      "OBLIGATED TO"
+    ],
+    [
+      "cp-award-cycle-time",
+      "bim-bim-coord-2",
+      "ACCELERATED BY"
+    ],
+    [
+      "cp-chg-order-rate",
+      "bim-coord-issue-2",
+      "CORRELATED WITH"
+    ],
+    [
+      "cp-insurance-cert",
+      "bim-drone-capture",
+      "DOCUMENTED BY"
+    ],
+    [
+      "cp-bid-package",
+      "bim-4d-model",
+      "SEQUENCED BY"
+    ],
+    [
+      "asset",
+      "cp-warranty",
+      "HAS_WARRANTY"
+    ]
+  ],
+  "verbGlossary": {
+    "QUANTIFIED BY": "{source} quantities are derived from {target}-based quantity takeoffs rather than manual measurement",
+    "PRICED FROM": "{source}is based on quantities extracted from {target} takeoff",
+    "VALIDATED AGAINST": "{source} compares submitted quantities and pricing to {target} takeoff to identify discrepancies",
+    "SCOPED TO": "{source} work scope is defined by specific {target} elements assigned to that trade contractor",
+    "PROCURES": "{source} acquires materials or equipment corresponding to specific elements in the building {target}",
+    "DEFINED BY": "{source} boundaries are defined by {target} elements included in the contractor's package",
+    "REFERENCED FROM": "{source} instrument references the 3D building information model as part of {target} documents",
+    "SPECIFIED AT": "{source} requires {target} elements to be developed to a minimum level of development (LOD) for fabrication or coordination",
+    "INFORMED BY": "{source} scope is refined based on {target} results that reveal coordination requirements between trades",
+    "ADJUSTED FOR": "{source} is modified to address {target}s identified during BIM review sessions",
+    "VERIFIED AGAINST": "{source} is confirmed by comparing installed conditions to the as-built {target}",
+    "DELIVERED WITH": "{source}document package includes the as-built {target} as a required deliverable",
+    "ISSUED WITH": "{source} is distributed with {target}-based drawings as part of the bidding documents",
+    "DISTRIBUTED WITH": "Request for proposal includes {target}-based drawings for bidders to review and price from",
+    "OBLIGATED TO": "{source} requires the trade contractor to participate in BIM coordination meetings as a contractual obligation",
+    "ACCELERATED BY": "{source} cycle time is shortened when BIM coordination adoption provides clearer scope and fewer ambiguities",
+    "CORRELATED WITH": "{source} change order rate is analyzed relative to {target} density to assess design coordination effectiveness",
+    "DOCUMENTED BY": "{source} requirements are verified through drone-captured site condition documentation",
+    "SEQUENCED BY": "{source} phasing and procurement timing follows {target} construction sequence"
+  }
+}

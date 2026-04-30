@@ -1,0 +1,268 @@
+{
+  "source": "models-and-assets",
+  "target": "models-and-assets",
+  "edges": [
+    [
+      "bim-3d-building-info",
+      "bim-federated-model",
+      "AGGREGATED INTO"
+    ],
+    [
+      "bim-3d-building-info",
+      "bim-model-element",
+      "COMPOSED OF"
+    ],
+    [
+      "bim-3d-building-info",
+      "bim-model-based",
+      "GENERATES"
+    ],
+    [
+      "bim-3d-building-info",
+      "bim-4d-model",
+      "EXTENDS INTO"
+    ],
+    [
+      "bim-3d-building-info",
+      "bim-5d-model-cost",
+      "EXTENDS INTO"
+    ],
+    [
+      "bim-3d-building-info",
+      "bim-as-built-model",
+      "EVOLVES INTO"
+    ],
+    [
+      "bim-federated-model",
+      "bim-clash-detection",
+      "ANALYZED BY"
+    ],
+    [
+      "bim-federated-model",
+      "bim-bim-coord",
+      "REVIEWED IN"
+    ],
+    [
+      "bim-federated-model",
+      "bim-4d-model",
+      "LINKED TO"
+    ],
+    [
+      "bim-clash-detection",
+      "bim-coord-issue",
+      "GENERATES"
+    ],
+    [
+      "bim-coord-issue",
+      "bim-bim-coord",
+      "RESOLVED IN"
+    ],
+    [
+      "bim-bim-coord",
+      "bim-federated-model",
+      "UPDATES"
+    ],
+    [
+      "bim-model-element",
+      "bim-level-developmen",
+      "GOVERNED BY"
+    ],
+    [
+      "bim-model-element",
+      "bim-model-properties",
+      "CARRIES"
+    ],
+    [
+      "bim-model-element",
+      "bim-quantity-takeoff",
+      "EXTRACTED FOR"
+    ],
+    [
+      "bim-model-element",
+      "bim-clash-detection",
+      "TESTED IN"
+    ],
+    [
+      "bim-level-developmen",
+      "bim-quantity-takeoff",
+      "GATES RELIABILITY OF"
+    ],
+    [
+      "bim-level-developmen",
+      "bim-model-properties",
+      "DEFINES COMPLETENESS OF"
+    ],
+    [
+      "bim-level-developmen",
+      "bim-model-based",
+      "GATES EXTRACTION OF"
+    ],
+    [
+      "bim-quantity-takeoff",
+      "bim-5d-model-cost",
+      "FEEDS"
+    ],
+    [
+      "bim-point-cloud",
+      "bim-as-built-model",
+      "INFORMS"
+    ],
+    [
+      "bim-point-cloud",
+      "bim-3d-building-info",
+      "COMPARED AGAINST"
+    ],
+    [
+      "bim-point-cloud",
+      "bim-digital-twin",
+      "CALIBRATES"
+    ],
+    [
+      "bim-360-photo",
+      "bim-const-photo",
+      "SUPPLEMENTS"
+    ],
+    [
+      "bim-drone-capture",
+      "bim-point-cloud",
+      "PRODUCES"
+    ],
+    [
+      "bim-drone-capture",
+      "bim-const-photo",
+      "SUPPLEMENTS"
+    ],
+    [
+      "bim-as-built-model",
+      "bim-digital-twin",
+      "TRANSITIONS INTO"
+    ],
+    [
+      "bim-as-built-model",
+      "bim-model-properties",
+      "FINALIZES"
+    ],
+    [
+      "bim-model-based",
+      "bim-drawing-revision",
+      "MEASURED BY"
+    ],
+    [
+      "bim-coord-issue",
+      "bim-coord-issue-2",
+      "MEASURED BY"
+    ],
+    [
+      "bim-coord-issue",
+      "bim-coord-issue-3",
+      "MEASURED BY"
+    ],
+    [
+      "bim-clash-detection",
+      "bim-clash-resolution",
+      "MEASURED BY"
+    ],
+    [
+      "bim-const-photo",
+      "bim-photo-docs-rate",
+      "MEASURED BY"
+    ],
+    [
+      "bim-bim-coord",
+      "bim-bim-coord-2",
+      "MEASURED BY"
+    ],
+    [
+      "bim-digital-twin",
+      "bim-model-properties",
+      "CONSUMES"
+    ],
+    [
+      "bim-5d-model-cost",
+      "bim-model-properties",
+      "REFERENCES"
+    ],
+    [
+      "bim-model-based",
+      "bim-federated-model",
+      "DERIVED FROM"
+    ],
+    [
+      "bim-coord-issue",
+      "bim-model-based",
+      "TRIGGERS REVISION OF"
+    ],
+    [
+      "bim-bim-coord",
+      "bim-clash-detection",
+      "REVIEWS"
+    ],
+    [
+      "bim-coord-issue",
+      "bim-3d-building-info",
+      "RESOLVED IN"
+    ],
+    [
+      "bim-4d-model",
+      "bim-quantity-takeoff",
+      "EXTRACTS"
+    ],
+    [
+      "asset",
+      "asset-attachment",
+      "HAS_ATTACHMENT"
+    ],
+    [
+      "asset",
+      "asset-custom-field",
+      "HAS_CUSTOM_FIELD"
+    ],
+    [
+      "asset",
+      "asset-bim-link",
+      "HAS_BIM_REPRESENTATION"
+    ],
+    [
+      "asset-bim-link",
+      "bim-model-element",
+      "REFERENCES"
+    ],
+    [
+      "bim-model-element",
+      "asset",
+      "REPRESENTS"
+    ]
+  ],
+  "verbGlossary": {
+    "AGGREGATED INTO": "{source}s are combined into a federated assembly for multi-trade coordination and review",
+    "COMPOSED OF": "{target} is made up of discrete model elements, each representing a physical building component with geometry and data",
+    "GENERATES": "{source} or detection process produces a downstream artifact such as a drawing, {target}, or report",
+    "EXTENDS INTO": "{target} is enriched with an additional dimension (time or cost) to create a 4D or 5D model variant",
+    "EVOLVES INTO": "{source} is progressively updated with as-built field data to become the final {target}",
+    "ANALYZED BY": "{target} is run through automated clash detection software to identify spatial conflicts between disciplines",
+    "REVIEWED IN": "{target} or set of coordination issues is examined and discussed during a BIM coordination meeting",
+    "LINKED TO": "{target} is associated with schedule data to enable 4D construction sequence visualization",
+    "RESOLVED IN": "{target} or clash is discussed and closed out during a BIM coordination meeting",
+    "UPDATES": "Decisions made in a coordination meeting drive changes back into {target} or discipline models",
+    "GOVERNED BY": "{source}of {target} element is controlled by its assigned Level of Development specification",
+    "CARRIES": "{target} element holds non-geometric property data (manufacturer, fire rating, performance specs) as attached parameters",
+    "EXTRACTED FOR": "{target} element geometry and type data are pulled out of the model to produce quantity takeoffs for estimating",
+    "TESTED IN": "{target} elements from different disciplines are checked for spatial conflicts during automated clash detection runs",
+    "GATES RELIABILITY OF": "{source} specification determines whether quantity takeoff data extracted from {target} is trustworthy at a given phase",
+    "DEFINES COMPLETENESS OF": "{source} specification dictates which {target} properties and parameters must be populated at each project milestone",
+    "GATES EXTRACTION OF": "{source} specification determines whether {target} is mature enough to produce reliable model-based drawings",
+    "FEEDS": "{source} data flows into {target} to drive quantity-based estimating and cost visualization",
+    "INFORMS": "{source} data provides as-built geometry that is used to update or verify {target}",
+    "COMPARED AGAINST": "{source} of field conditions is overlaid on {target} to identify deviations and verify installation accuracy",
+    "CALIBRATES": "{target} or scan data grounds a digital twin in verified spatial reality rather than design-intent geometry",
+    "SUPPLEMENTS": "{source}documentation method provides additional coverage or perspective alongside another capture method",
+    "PRODUCES": "{source}generate {target} datasets from aerial capture",
+    "TRANSITIONS INTO": "{source} becomes the geometric and data foundation for a living digital twin during facility handover",
+    "FINALIZES": "{source} locks {target} properties to their verified installed values during closeout",
+    "MEASURED BY": "{source}is quantified by an associated standard metric that tracks its volume, rate, or effectiveness",
+    "CONSUMES": "A digital twin ingests {target} property data to power operational analytics, maintenance scheduling, and space management",
+    "REFERENCES": "{target} reads model properties such as material type and assembly data to associate unit costs with elements",
+    "DERIVED FROM": "{target}-based drawings are extracted as 2D views from the federated 3D model environment",
+    "TRIGGERS REVISION OF": "{source} resolution requires updates to affected {target}-based drawings to reflect the design change"
+  }
+}

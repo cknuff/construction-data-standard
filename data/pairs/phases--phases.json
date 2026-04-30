@@ -301,6 +301,31 @@
       "ph-seasonal-cx",
       "ph-transition",
       "FEEDS"
+    ],
+    [
+      "ph-fel-1",
+      "ph-program",
+      "INFORMS"
+    ],
+    [
+      "ph-fel-2",
+      "ph-design",
+      "INFORMS"
+    ],
+    [
+      "ph-fel-3",
+      "ph-precon-plan",
+      "INFORMS"
+    ],
+    [
+      "ph-fel-3",
+      "ph-fel-2",
+      "FOLLOWS"
+    ],
+    [
+      "ph-fel-2",
+      "ph-fel-1",
+      "FOLLOWS"
     ]
   ],
   "verbGlossary": {

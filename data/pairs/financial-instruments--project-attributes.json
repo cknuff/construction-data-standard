@@ -346,6 +346,16 @@
       "fi-lien-waiver",
       "pa-admin-burden",
       "CONTRIBUTES TO"
+    ],
+    [
+      "fi-estimating-project",
+      "pa-project-status",
+      "TRACKED_BY"
+    ],
+    [
+      "fi-estimating-project",
+      "pa-project-status",
+      "BECOMES_PROJECT"
     ]
   ],
   "verbGlossary": {

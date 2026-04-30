@@ -3,26 +3,6 @@
   "target": "standards-classifications",
   "edges": [
     [
-      "fi-cost-code",
-      "sc-masterformat",
-      "MAPPED TO"
-    ],
-    [
-      "fi-budget-line-item",
-      "sc-masterformat",
-      "ORGANIZED BY"
-    ],
-    [
-      "fi-direct-cost-line",
-      "sc-masterformat",
-      "CLASSIFIED UNDER"
-    ],
-    [
-      "fi-commit-line-item",
-      "sc-masterformat",
-      "CLASSIFIED UNDER"
-    ],
-    [
       "fi-wbs-code",
       "sc-wbs-code",
       "STRUCTURED PER"
@@ -66,16 +46,6 @@
       "fi-commit-line-item",
       "sc-specification-se",
       "REFERENCED AGAINST"
-    ],
-    [
-      "fi-schedule-values",
-      "sc-uniformat",
-      "BROKEN DOWN BY"
-    ],
-    [
-      "fi-budget-line-item",
-      "sc-uniformat",
-      "TAGGED TO"
     ],
     [
       "fi-commit-subcontra",

@@ -1,0 +1,160 @@
+{
+  "source": "locations",
+  "target": "models-and-assets",
+  "edges": [
+    [
+      "loc-building",
+      "bim-3d-building-info",
+      "MODELED IN"
+    ],
+    [
+      "loc-floor-level",
+      "bim-3d-building-info",
+      "MODELED IN"
+    ],
+    [
+      "loc-below-grade",
+      "bim-3d-building-info",
+      "MODELED IN"
+    ],
+    [
+      "loc-project-site",
+      "bim-federated-model",
+      "ASSEMBLED INTO"
+    ],
+    [
+      "loc-floor-level",
+      "bim-4d-model",
+      "SEQUENCED IN"
+    ],
+    [
+      "loc-work-zone-phase",
+      "bim-4d-model",
+      "SEQUENCED IN"
+    ],
+    [
+      "loc-room-space",
+      "bim-5d-model-cost",
+      "PRICED IN"
+    ],
+    [
+      "loc-ceiling-plenum",
+      "bim-as-built-model",
+      "VERIFIED AGAINST"
+    ],
+    [
+      "loc-room-space",
+      "bim-model-element",
+      "BOUNDED BY"
+    ],
+    [
+      "loc-core-shaft",
+      "bim-model-element",
+      "BOUNDED BY"
+    ],
+    [
+      "loc-grid-line",
+      "bim-model-properties",
+      "REFERENCED IN"
+    ],
+    [
+      "loc-ceiling-plenum",
+      "bim-clash-detection",
+      "TESTED FOR CLASH IN"
+    ],
+    [
+      "loc-penetration-open",
+      "bim-clash-detection",
+      "TESTED FOR CLASH IN"
+    ],
+    [
+      "loc-penetration-open",
+      "bim-coord-issue",
+      "GENERATES"
+    ],
+    [
+      "loc-project-site",
+      "bim-drone-capture",
+      "SURVEYED BY"
+    ],
+    [
+      "loc-roof-level",
+      "bim-drone-capture",
+      "SURVEYED BY"
+    ],
+    [
+      "loc-functional-area",
+      "bim-360-photo",
+      "CAPTURED BY"
+    ],
+    [
+      "loc-building",
+      "bim-point-cloud",
+      "SCANNED BY"
+    ],
+    [
+      "loc-equip-location",
+      "bim-digital-twin",
+      "MONITORED VIA"
+    ],
+    [
+      "loc-cx-zone",
+      "bim-digital-twin",
+      "MONITORED VIA"
+    ],
+    [
+      "loc-wall-surface",
+      "bim-const-photo",
+      "DOCUMENTED BY"
+    ],
+    [
+      "loc-fire-smoke",
+      "bim-model-based",
+      "DEPICTED ON"
+    ],
+    [
+      "loc-floor-level",
+      "bim-model-based",
+      "DEPICTED ON"
+    ],
+    [
+      "loc-room-space",
+      "bim-quantity-takeoff",
+      "MEASURED BY"
+    ],
+    [
+      "loc-defect-density",
+      "bim-coord-issue-2",
+      "CORRELATES WITH"
+    ],
+    [
+      "asset",
+      "loc-room-space",
+      "INSTALLED_AT"
+    ],
+    [
+      "asset",
+      "loc-floor-level",
+      "INSTALLED_AT"
+    ]
+  ],
+  "verbGlossary": {
+    "MODELED IN": "{source} geometry and spatial boundaries authored inside a BIM {target}",
+    "ASSEMBLED INTO": "{source} serves as an organizing container within a federated multi-discipline {target}",
+    "SEQUENCED IN": "{source} tied to a construction sequence phase within a 4D schedule-linked {target}",
+    "PRICED IN": "{source}-based cost allocations extracted from a 5D {target}",
+    "VERIFIED AGAINST": "As-built conditions at {target} compared to the record model for accuracy",
+    "BOUNDED BY": "{source} extent defined by enclosing {target} elements such as walls, slabs, and ceilings",
+    "REFERENCED IN": "{source} identifier stored as a parameter or property within {target} element data",
+    "TESTED FOR CLASH IN": "Elements within {target} checked for spatial interference via automated clash detection",
+    "GENERATES": "{source}produces {target}s requiring resolution",
+    "SURVEYED BY": "{source} condition captured via drone aerial imagery for progress or earthwork tracking",
+    "CAPTURED BY": "{source} condition recorded within a 360-degree spherical photo walkthrough",
+    "SCANNED BY": "{source} geometry captured as point-cloud data via laser scanning",
+    "MONITORED VIA": "{source} systems and equipment streamed to a digital twin for operational tracking",
+    "DOCUMENTED BY": "{source} installation progress recorded with a construction photograph",
+    "DEPICTED ON": "{source} boundaries and annotations shown on {target}-based drawing or plan sheet",
+    "MEASURED BY": "{source} area, volume, or perimeter extracted through quantity takeoff from {target}",
+    "CORRELATES WITH": "{source}-based metric statistically linked to {target}-based coordination metric"
+  }
+}

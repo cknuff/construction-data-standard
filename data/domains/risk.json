@@ -10,27 +10,37 @@
         {
           "id": "rk-risk",
           "name": "Risk",
-          "desc": "An identified potential event or condition that could affect project objectives — the fundamental unit of risk management. Defined by source (what causes it), trigger (what signals it), consequence (what it affects), and owner (who manages it). Risks exist along a spectrum from known-known (identified and quantified) to unknown-unknown (emergent). In construction, most risks are known but unmanaged — the gap is process, not knowledge."
+          "desc": "An identified potential event or condition that could affect project objectives \u2014 the fundamental unit of risk management. Defined by source (what causes it), trigger (what signals it), consequence (what it affects), and owner (who manages it). Risks exist along a spectrum from known-known (identified and quantified) to unknown-unknown (emergent). In construction, most risks are known but unmanaged \u2014 the gap is process, not knowledge.",
+          "derivation": "Generic risk concept. Procore does NOT have a native risk register feature in the gold layer. Ontology represents the framework; data is computed from project signals (see risk-category nodes).",
+          "concept_type": "framework-or-feature-gap"
         },
         {
           "id": "rk-risk-register",
           "name": "Risk Register",
-          "desc": "A project-level inventory of all identified risks — the master document that tracks risk identification, assessment, response, and status throughout the project lifecycle. Maintained from preconstruction through closeout. Typically a spreadsheet with columns for description, category, likelihood, impact, score, owner, response, status, and trigger."
+          "desc": "A project-level inventory of all identified risks \u2014 the master document that tracks risk identification, assessment, response, and status throughout the project lifecycle. Maintained from preconstruction through closeout. Typically a spreadsheet with columns for description, category, likelihood, impact, score, owner, response, status, and trigger.",
+          "derivation": "ONTOLOGY-PROPOSED CONCEPT \u2014 Procore feature gap. A formal log of identified risks per project. Currently absent in Procore data model. Could be modeled as a custom tool or built as enrichment view rolling up the risk-category intelligence scores.",
+          "concept_type": "framework-or-feature-gap"
         },
         {
           "id": "rk-risk-category",
           "name": "Risk Category",
-          "desc": "A classification that groups risks by their source or nature — the organizing principle for a risk register. Categories are typically defined at the company or program level and applied consistently across projects."
+          "desc": "A classification that groups risks by their source or nature \u2014 the organizing principle for a risk register. Categories are typically defined at the company or program level and applied consistently across projects.",
+          "derivation": "Classification of risk by type. See rk-design-risk through rk-coord-risk for the 11 categories. Each category is computed as an intelligence enrichment.",
+          "concept_type": "framework-or-feature-gap"
         },
         {
           "id": "rk-risk-trigger",
           "name": "Risk Trigger",
-          "desc": "An observable condition or event that signals a risk is materializing — the early warning system. Triggers convert abstract risks into actionable alerts. In construction, triggers are often embedded in daily operations data: an RFI surge signals design risk, a submittal delay signals supply chain risk, recurring safety observations signal hazard risk."
+          "desc": "An observable condition or event that signals a risk is materializing \u2014 the early warning system. Triggers convert abstract risks into actionable alerts. In construction, triggers are often embedded in daily operations data: an RFI surge signals design risk, a submittal delay signals supply chain risk, recurring safety observations signal hazard risk.",
+          "derivation": "ONTOLOGY-PROPOSED \u2014 event or condition that activates a risk. Examples: weather forecast, schedule milestone slip, change order approval. Not stored as discrete entities in Procore; would require a triggering rule engine.",
+          "concept_type": "framework-or-feature-gap"
         },
         {
           "id": "rk-risk-owner",
           "name": "Risk Owner",
-          "desc": "The person or party responsible for monitoring a risk and executing the response plan — accountability for risk management. In construction, risk ownership follows contractual responsibility: the GC owns means-and-methods risk, the architect owns design risk, the owner owns market/financing risk, subcontractors own trade-specific execution risk."
+          "desc": "The person or party responsible for monitoring a risk and executing the response plan \u2014 accountability for risk management. In construction, risk ownership follows contractual responsibility: the GC owns means-and-methods risk, the architect owns design risk, the owner owns market/financing risk, subcontractors own trade-specific execution risk.",
+          "derivation": "ONTOLOGY-PROPOSED \u2014 person responsible for tracking and mitigating a risk. Could derive from project_role_memberships filtered to risk-related roles, but currently not tracked as a structured field per risk.",
+          "concept_type": "framework-or-feature-gap"
         }
       ]
     },
@@ -41,22 +51,30 @@
         {
           "id": "rk-likelihood-asses",
           "name": "Likelihood Assessment",
-          "desc": "The evaluation of probability that a risk event will occur — qualitative (High/Medium/Low) or quantitative (percentage, frequency). In construction, likelihood is often estimated from historical data: how often has this happened on similar projects? OSHA incident rates, change order frequency, weather patterns, and subcontractor performance history all inform likelihood."
+          "desc": "The evaluation of probability that a risk event will occur \u2014 qualitative (High/Medium/Low) or quantitative (percentage, frequency). In construction, likelihood is often estimated from historical data: how often has this happened on similar projects? OSHA incident rates, change order frequency, weather patterns, and subcontractor performance history all inform likelihood.",
+          "derivation": "Probability of a risk materializing. Numeric (0-1) or ordinal (Low/Med/High). Standard risk management concept \u2014 not stored in Procore raw data; computed from historical base rates per risk category.",
+          "concept_type": "framework-or-feature-gap"
         },
         {
           "id": "rk-impact-assessmen",
           "name": "Impact Assessment",
-          "desc": "The evaluation of consequence severity if a risk materializes — measured across one or more dimensions: cost, schedule, quality, safety, reputation. Impact is the 'so what' of risk — a likely event with negligible impact is low priority, while an unlikely event with catastrophic impact (structural failure, fatality) demands active management regardless of probability."
+          "desc": "The evaluation of consequence severity if a risk materializes \u2014 measured across one or more dimensions: cost, schedule, quality, safety, reputation. Impact is the 'so what' of risk \u2014 a likely event with negligible impact is low priority, while an unlikely event with catastrophic impact (structural failure, fatality) demands active management regardless of probability.",
+          "derivation": "Magnitude of consequence if risk materializes \u2014 typically in $ or days. Standard concept. Computed from impact severity buckets per risk category.",
+          "concept_type": "framework-or-feature-gap"
         },
         {
           "id": "rk-risk-score",
           "name": "Risk Score",
-          "desc": "The combined measure of likelihood × impact that determines risk priority — the basis for triage and resource allocation. Typically displayed as a number (1–25 on a 5×5 matrix) or color (red/amber/green). In construction, risk scores drive which risks get contingency, which get mitigation plans, and which are accepted and monitored."
+          "desc": "The combined measure of likelihood \u00d7 impact that determines risk priority \u2014 the basis for triage and resource allocation. Typically displayed as a number (1\u201325 on a 5\u00d75 matrix) or color (red/amber/green). In construction, risk scores drive which risks get contingency, which get mitigation plans, and which are accepted and monitored.",
+          "derivation": "Likelihood \u00d7 Impact = risk score. Composite metric. Aggregates across all risk categories per project. DERIVED from the 11 category-level intelligence scores.",
+          "concept_type": "framework-or-feature-gap"
         },
         {
           "id": "rk-risk-matrix",
           "name": "Risk Matrix",
-          "desc": "A visual grid that plots risks by likelihood (y-axis) and impact (x-axis) — the standard tool for risk prioritization. Typically 3×3 or 5×5 with color-coded zones (green = accept, amber = mitigate, red = escalate). The matrix is a communication tool — it makes risk priorities visible to the project team and stakeholders."
+          "desc": "A visual grid that plots risks by likelihood (y-axis) and impact (x-axis) \u2014 the standard tool for risk prioritization. Typically 3\u00d73 or 5\u00d75 with color-coded zones (green = accept, amber = mitigate, red = escalate). The matrix is a communication tool \u2014 it makes risk priorities visible to the project team and stakeholders.",
+          "derivation": "ONTOLOGY-PROPOSED \u2014 visualization framework. Plot of likelihood \u00d7 impact for ranked risks. Not stored data; derived from risk-score per category.",
+          "concept_type": "framework-or-feature-gap"
         }
       ]
     },
@@ -67,27 +85,35 @@
         {
           "id": "rk-risk-response",
           "name": "Risk Response Type",
-          "desc": "The strategic approach to managing an identified risk — the four fundamental options. Each risk in the register should have an assigned response type that determines the nature of the mitigation plan."
+          "desc": "The strategic approach to managing an identified risk \u2014 the four fundamental options. Each risk in the register should have an assigned response type that determines the nature of the mitigation plan.",
+          "derivation": "Avoid / Mitigate / Transfer / Accept. Standard PMI risk response taxonomy. Not stored in Procore data. Linked to mitigation action + contingency reserve + insurance / surety transfer mechanisms.",
+          "concept_type": "framework-or-feature-gap"
         },
         {
           "id": "rk-mitigation-actio",
           "name": "Mitigation Action",
-          "desc": "A specific planned action to reduce the likelihood or impact of an identified risk — the operational response. Mitigation actions have owners, due dates, status, and cost. Examples: early procurement for supply chain risk, additional shoring for geotechnical risk, design review for coordination risk, safety training for hazard risk."
+          "desc": "A specific planned action to reduce the likelihood or impact of an identified risk \u2014 the operational response. Mitigation actions have owners, due dates, status, and cost. Examples: early procurement for supply chain risk, additional shoring for geotechnical risk, design review for coordination risk, safety training for hazard risk.",
+          "derivation": "Concrete action to reduce risk. Could partially derive from action_plan + corrective_action records, filtered to risk-related action plans. Not natively risk-tagged in Procore.",
+          "concept_type": "framework-or-feature-gap"
         },
         {
           "id": "rk-contingency-rese",
           "name": "Contingency Reserve",
-          "desc": "A budget allocation held in reserve for identified risks — financial buffer against cost uncertainty. Contingency is typically 3-10% of project cost depending on project complexity and phase (higher in early phases, drawn down as risks are resolved or materialized). Distinct from allowances (placeholder for undefined scope) and management reserve (for unknown-unknowns)."
+          "desc": "A budget allocation held in reserve for identified risks \u2014 financial buffer against cost uncertainty. Contingency is typically 3-10% of project cost depending on project complexity and phase (higher in early phases, drawn down as risks are resolved or materialized). Distinct from allowances (placeholder for undefined scope) and management reserve (for unknown-unknowns).",
+          "derivation": "finance.budget_line_items WHERE description matches 'contingency' OR cost_code is contingency-typed. SUM of remaining contingency = total - drawn against."
         },
         {
           "id": "rk-schedule-buffer",
           "name": "Schedule Buffer",
-          "desc": "Time reserves built into the project schedule to absorb schedule risk — the temporal equivalent of contingency reserve. Buffers may be explicit (milestone buffers between phases) or implicit (float in non-critical paths). Critical Chain Project Management (CCPM) formalizes buffer management."
+          "desc": "Time reserves built into the project schedule to absorb schedule risk \u2014 the temporal equivalent of contingency reserve. Buffers may be explicit (milestone buffers between phases) or implicit (float in non-critical paths). Critical Chain Project Management (CCPM) formalizes buffer management.",
+          "derivation": "Schedule float / slack on critical-path activities \u2014 derived from project_management.scheduling_activity where total_float > 0. Schedule buffer = sum of float days not yet consumed."
         },
         {
           "id": "rk-residual-risk",
           "name": "Residual Risk",
-          "desc": "The remaining risk exposure after mitigation actions are applied — the risk that persists despite response efforts. Residual risk may be accepted, monitored, or require additional response. It is the actual exposure the project carries, not the initial identified exposure."
+          "desc": "The remaining risk exposure after mitigation actions are applied \u2014 the risk that persists despite response efforts. Residual risk may be accepted, monitored, or require additional response. It is the actual exposure the project carries, not the initial identified exposure.",
+          "derivation": "Risk remaining after mitigation. Computed: (initial risk score) \u2212 (mitigation effectiveness).",
+          "concept_type": "framework-or-feature-gap"
         }
       ]
     },
@@ -98,57 +124,79 @@
         {
           "id": "rk-design-risk",
           "name": "Design Risk",
-          "desc": "Risk arising from incomplete, conflicting, or evolving design — the most common source of change orders in construction. Design risk manifests as RFIs (clarification needed), design changes (revisions), coordination conflicts (clashes between disciplines), and scope growth (owner-driven additions). Design risk is highest in design-bid-build delivery and lowest in design-build."
+          "desc": "Risk arising from incomplete, conflicting, or evolving design \u2014 the most common source of change orders in construction. Design risk manifests as RFIs (clarification needed), design changes (revisions), coordination conflicts (clashes between disciplines), and scope growth (owner-driven additions). Design risk is highest in design-bid-build delivery and lowest in design-build.",
+          "derivation": "INTELLIGENCE ENRICHMENT \u2014 composite design risk score per project. Inputs: (a) RFI density (rfis open and overdue per $1M), (b) design-related change_reason CE/CCO total, (c) drawing revision frequency (drawing_revisions per month), (d) coordination_issue density, (e) submittal rejection rate. Weights tuned via historical correlation to final cost growth. High score = design instability driving downstream rework.",
+          "concept_type": "intelligence-enrichment"
         },
         {
           "id": "rk-const-execution",
           "name": "Construction Execution Risk",
-          "desc": "Risk from means and methods, productivity, sequencing, and trade coordination — the risk of building it wrong or slow. Includes rework (built incorrectly, must redo), productivity loss (slower than planned), sequencing errors (wrong order), and coordination failures (trades interfering with each other). Owned primarily by the GC and subcontractors."
+          "desc": "Risk from means and methods, productivity, sequencing, and trade coordination \u2014 the risk of building it wrong or slow. Includes rework (built incorrectly, must redo), productivity loss (slower than planned), sequencing errors (wrong order), and coordination failures (trades interfering with each other). Owned primarily by the GC and subcontractors.",
+          "derivation": "INTELLIGENCE ENRICHMENT \u2014 composite construction execution risk. Inputs: (a) punch item density per project, (b) observation density (Quality + Safety), (c) labor productivity vs estimated, (d) schedule task slip rate (finish_variance > 0), (e) NCR / deficiency rate. High score = field execution problems compounding.",
+          "concept_type": "intelligence-enrichment"
         },
         {
           "id": "rk-financial-risk",
           "name": "Financial Risk",
-          "desc": "Risk of cost overruns, cash flow problems, payment disputes, or contractor default — the money risks. Includes budget variance (actual > plan), cash flow gaps (invoices outpacing payments), subcontractor financial health (inability to complete), and owner funding risk (delayed payments or financing failures)."
+          "desc": "Risk of cost overruns, cash flow problems, payment disputes, or contractor default \u2014 the money risks. Includes budget variance (actual > plan), cash flow gaps (invoices outpacing payments), subcontractor financial health (inability to complete), and owner funding risk (delayed payments or financing failures).",
+          "derivation": "INTELLIGENCE ENRICHMENT \u2014 composite financial risk score. Inputs: (a) cost growth velocity (cost growth % per month), (b) GMP utilization rate (cost forecast / GMP cap), (c) open change exposure (CEs not yet committed), (d) contingency burn rate, (e) payment cycle / aging on subs (DSO equivalent). Composite weighted by stage of project.",
+          "concept_type": "intelligence-enrichment"
         },
         {
           "id": "rk-schedule-risk",
           "name": "Schedule Risk",
-          "desc": "Risk of delays and timeline overruns from any cause — weather, permits, material delivery, labor shortages, design changes, differing site conditions. Schedule risk compounds: a 2-week delay to one trade can cascade into months of impact through downstream dependencies. Critical path analysis identifies which risks have the most schedule exposure."
+          "desc": "Risk of delays and timeline overruns from any cause \u2014 weather, permits, material delivery, labor shortages, design changes, differing site conditions. Schedule risk compounds: a 2-week delay to one trade can cascade into months of impact through downstream dependencies. Critical path analysis identifies which risks have the most schedule exposure.",
+          "derivation": "INTELLIGENCE ENRICHMENT \u2014 composite schedule risk score. Inputs: (a) critical-path slip in days, (b) schedule float erosion rate, (c) open submittal aging on critical path activities, (d) material delay days last 90d (daily_log_delay.delay_type='Material'), (e) RFI cycle time vs schedule lookahead. High score = end-date slip imminent.",
+          "concept_type": "intelligence-enrichment"
         },
         {
           "id": "rk-safety-risk",
           "name": "Safety Risk",
-          "desc": "Risk of injuries, fatalities, and safety incidents — the most regulated and consequential risk category. Safety risk is measured by incident rates (TRIR, DART, EMR), managed through hazard identification and mitigation, and regulated by OSHA. In construction, the 'Fatal Four' (falls, struck-by, electrocution, caught-in/between) account for most fatalities."
+          "desc": "Risk of injuries, fatalities, and safety incidents \u2014 the most regulated and consequential risk category. Safety risk is measured by incident rates (TRIR, DART, EMR), managed through hazard identification and mitigation, and regulated by OSHA. In construction, the 'Fatal Four' (falls, struck-by, electrocution, caught-in/between) account for most fatalities.",
+          "derivation": "INTELLIGENCE ENRICHMENT \u2014 composite safety risk score. Inputs: (a) recurring hazard count (hazard_name appearing 2+ weeks in last 90d), (b) TRIR trend (3-month rolling), (c) near-miss ratio, (d) safety observation density per work-hour, (e) overtime rate (high OT correlates with incidents). Aligns to OSHA Focus Four for category-level scoring.",
+          "concept_type": "intelligence-enrichment"
         },
         {
           "id": "rk-enviro-risk",
           "name": "Environmental Risk",
-          "desc": "Risk from contamination, hazardous materials, spills, weather events, and environmental compliance — both site-condition risk (what's already there) and operational risk (what the project creates). Includes asbestos/lead discovery, soil contamination, stormwater violations, and environmental incidents."
+          "desc": "Risk from contamination, hazardous materials, spills, weather events, and environmental compliance \u2014 both site-condition risk (what's already there) and operational risk (what the project creates). Includes asbestos/lead discovery, soil contamination, stormwater violations, and environmental incidents.",
+          "derivation": "INTELLIGENCE ENRICHMENT \u2014 composite environmental risk. Inputs: (a) SWPPP compliance check rate, (b) environmental observation count (observation.category='Environmental'), (c) hazmat-typed safety violations, (d) erosion control cost code activity vs site disturbance area. Triggers: heavy rain forecast + active earthwork.",
+          "concept_type": "intelligence-enrichment"
         },
         {
           "id": "rk-reg-permit-risk",
           "name": "Regulatory and Permit Risk",
-          "desc": "Risk from permitting delays, code changes, inspection failures, and regulatory enforcement — the risk that authorities block or delay work. Includes building permit delays, failed AHJ inspections, zoning issues, utility connection delays, and code interpretation disputes."
+          "desc": "Risk from permitting delays, code changes, inspection failures, and regulatory enforcement \u2014 the risk that authorities block or delay work. Includes building permit delays, failed AHJ inspections, zoning issues, utility connection delays, and code interpretation disputes.",
+          "derivation": "INTELLIGENCE ENRICHMENT \u2014 regulatory/permit risk. Inputs: (a) permits in pending status (where permit data exists), (b) AHJ inspection failure rate, (c) permit expiration approaching with active work, (d) code consultant RFI volume. High risk = work proceeding ahead of permits, or permits delayed past schedule need.",
+          "concept_type": "intelligence-enrichment"
         },
         {
           "id": "rk-supply-chain",
           "name": "Supply Chain Risk",
-          "desc": "Risk from material shortages, delivery delays, price escalation, and sole-source dependencies — the risk that what you need isn't available when you need it. Amplified by global supply chain disruptions, long-lead procurement, and just-in-time delivery practices common in construction."
+          "desc": "Risk from material shortages, delivery delays, price escalation, and sole-source dependencies \u2014 the risk that what you need isn't available when you need it. Amplified by global supply chain disruptions, long-lead procurement, and just-in-time delivery practices common in construction.",
+          "derivation": "INTELLIGENCE ENRICHMENT \u2014 supply chain risk. Inputs: (a) material_delay_count last 90d (daily_log_delay='Material'), (b) submittal overdue count, (c) long-lead items unresolved (commit_purchase delivery dates past), (d) vendor reliability (vendor's historical material delay record). High score = upcoming work blocked by material availability.",
+          "concept_type": "intelligence-enrichment"
         },
         {
           "id": "rk-geotechnical-ris",
           "name": "Geotechnical Risk",
-          "desc": "Risk from unforeseen subsurface conditions — the most unpredictable risk in construction. Includes unexpected soil conditions, groundwater, contamination, underground utilities, and rock. Geotechnical risk is highest on renovation, infrastructure, and greenfield sites without adequate investigation. Differing site conditions claims are among the most litigated in construction."
+          "desc": "Risk from unforeseen subsurface conditions \u2014 the most unpredictable risk in construction. Includes unexpected soil conditions, groundwater, contamination, underground utilities, and rock. Geotechnical risk is highest on renovation, infrastructure, and greenfield sites without adequate investigation. Differing site conditions claims are among the most litigated in construction.",
+          "derivation": "INTELLIGENCE ENRICHMENT \u2014 geotechnical risk. Inputs: (a) unforeseen condition CE volume (change_reason='unforeseen_conditions'), (b) earthwork CO rate vs original budget for Division 31, (c) dewatering cost above plan, (d) borehole vs as-encountered conditions discrepancy (where geotechnical data exists). High score = subsurface surprises driving cost.",
+          "concept_type": "intelligence-enrichment"
         },
         {
           "id": "rk-labor-risk",
           "name": "Labor Risk",
-          "desc": "Risk from workforce availability, productivity variance, jurisdictional disputes, and labor relations — the people risk. Includes skilled labor shortages, productivity below plan, trade jurisdictional conflicts, union actions, and key-person dependency. Labor risk is structural in construction due to the aging workforce and project-based employment model."
+          "desc": "Risk from workforce availability, productivity variance, jurisdictional disputes, and labor relations \u2014 the people risk. Includes skilled labor shortages, productivity below plan, trade jurisdictional conflicts, union actions, and key-person dependency. Labor risk is structural in construction due to the aging workforce and project-based employment model.",
+          "derivation": "INTELLIGENCE ENRICHMENT \u2014 labor risk. Inputs: (a) overtime rate trending up, (b) crew turnover (project_employees churn), (c) skill mix mismatch (trade-hours estimated vs actual), (d) workforce shortage signals (open positions, planned vs actual headcount from labor_allocations). High score = labor unable to keep pace with schedule.",
+          "concept_type": "intelligence-enrichment"
         },
         {
           "id": "rk-coord-risk",
           "name": "Coordination Risk",
-          "desc": "Risk from trade interference, design conflicts, and inadequate planning — the risk that parallel workstreams collide. Includes spatial conflicts (two trades in the same space), temporal conflicts (wrong sequence), and information conflicts (outdated drawings). BIM coordination and pull planning are the primary mitigation tools."
+          "desc": "Risk from trade interference, design conflicts, and inadequate planning \u2014 the risk that parallel workstreams collide. Includes spatial conflicts (two trades in the same space), temporal conflicts (wrong sequence), and information conflicts (outdated drawings). BIM coordination and pull planning are the primary mitigation tools.",
+          "derivation": "INTELLIGENCE ENRICHMENT \u2014 coordination risk. Inputs: (a) coordination_issue density, (b) RFI cycle time on MEP / above-ceiling RFIs, (c) clash count from BIM (when models-and-assets data exists), (d) design-change CCO rate. High score = MEP / interdisciplinary coordination breaking down.",
+          "concept_type": "intelligence-enrichment"
         }
       ]
     },
@@ -159,17 +207,20 @@
         {
           "id": "rk-insurance-requir",
           "name": "Insurance Requirement",
-          "desc": "The contractual obligation for project participants to carry specific insurance coverages — the financial backstop for risk transfer. Standard requirements include General Liability, Workers' Compensation, Umbrella/Excess, Builders Risk, Professional Liability (for designers), and Pollution coverage. Insurance compliance is tracked at both company and project levels."
+          "desc": "The contractual obligation for project participants to carry specific insurance coverages \u2014 the financial backstop for risk transfer. Standard requirements include General Liability, Workers' Compensation, Umbrella/Excess, Builders Risk, Professional Liability (for designers), and Pollution coverage. Insurance compliance is tracked at both company and project levels.",
+          "derivation": "See contracts-procurement: cp-insurance-cert. Insurance certificates required per commitment."
         },
         {
           "id": "rk-surety-bond",
           "name": "Surety Bond",
-          "desc": "A three-party guarantee that a contractor will fulfill contractual obligations — bid bonds (guarantee bid price), performance bonds (guarantee completion), and payment bonds (guarantee subcontractor/supplier payment). Required on all federal projects (Miller Act) and most public projects. Less common on private work."
+          "desc": "A three-party guarantee that a contractor will fulfill contractual obligations \u2014 bid bonds (guarantee bid price), performance bonds (guarantee completion), and payment bonds (guarantee subcontractor/supplier payment). Required on all federal projects (Miller Act) and most public projects. Less common on private work.",
+          "derivation": "See contracts-procurement: cp-perf-bond, cp-payment-bond. Bonds issued per commitment."
         },
         {
           "id": "rk-risk-allocation",
           "name": "Risk Allocation",
-          "desc": "The contractual assignment of specific risks to parties — who bears the consequence when a risk materializes. Risk allocation is defined in contract terms and varies by delivery method. Design-bid-build allocates design risk to the owner/architect; design-build shifts it to the contractor. Differing site conditions, force majeure, and schedule liquidated damages are common allocation provisions."
+          "desc": "The contractual assignment of specific risks to parties \u2014 who bears the consequence when a risk materializes. Risk allocation is defined in contract terms and varies by delivery method. Design-bid-build allocates design risk to the owner/architect; design-build shifts it to the contractor. Differing site conditions, force majeure, and schedule liquidated damages are common allocation provisions.",
+          "derivation": "Derived from contract type (cp-ct-* nodes). Stipulated Sum allocates more risk to contractor; Cost Plus allocates more to owner. The contract type IS the risk allocation choice."
         }
       ]
     },
@@ -180,22 +231,22 @@
         {
           "id": "rk-risk-exposure",
           "name": "Risk Exposure Value",
-          "desc": "Total financial exposure from identified risks — sum of (likelihood × cost impact) across all risks in the register. Provides a single number representing the project's aggregate risk in dollar terms. Used to justify contingency levels and prioritize mitigation spending."
+          "desc": "Total financial exposure from identified risks \u2014 sum of (likelihood \u00d7 cost impact) across all risks in the register. Provides a single number representing the project's aggregate risk in dollar terms. Used to justify contingency levels and prioritize mitigation spending."
         },
         {
           "id": "rk-incident-rate",
           "name": "Incident Rate (TRIR)",
-          "desc": "Total Recordable Incident Rate — the standard OSHA safety metric. Formula: (number of recordable incidents × 200,000) / total hours worked. Measures overall safety risk realization. DART rate (Days Away, Restricted, or Transferred) is the severity-weighted variant."
+          "desc": "Total Recordable Incident Rate \u2014 the standard OSHA safety metric. Formula: (number of recordable incidents \u00d7 200,000) / total hours worked. Measures overall safety risk realization. DART rate (Days Away, Restricted, or Transferred) is the severity-weighted variant."
         },
         {
           "id": "rk-risk-mitigation",
           "name": "Risk Mitigation Completion Rate",
-          "desc": "Percentage of planned mitigation actions completed on time — measures the effectiveness of risk response execution. Formula: completed actions / total planned actions. Tracks whether the team is actually doing what they planned to manage risk."
+          "desc": "Percentage of planned mitigation actions completed on time \u2014 measures the effectiveness of risk response execution. Formula: completed actions / total planned actions. Tracks whether the team is actually doing what they planned to manage risk."
         },
         {
           "id": "rk-schedule-float",
           "name": "Schedule Float Erosion",
-          "desc": "Rate at which total float is consumed across the project schedule — a leading indicator of schedule risk. Formula: (baseline total float - current total float) / baseline total float. Rapid float erosion signals that the schedule is tightening and risk of delay is increasing."
+          "desc": "Rate at which total float is consumed across the project schedule \u2014 a leading indicator of schedule risk. Formula: (baseline total float - current total float) / baseline total float. Rapid float erosion signals that the schedule is tightening and risk of delay is increasing."
         }
       ]
     }

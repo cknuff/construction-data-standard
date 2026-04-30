@@ -8,19 +8,9 @@
       "AUTHORS"
     ],
     [
-      "org-specifications-w",
-      "sc-masterformat",
-      "DRAFTS PER"
-    ],
-    [
       "org-struct-engineer",
       "sc-international-bu",
       "DESIGNS TO"
-    ],
-    [
-      "org-mep-engineer",
-      "sc-uniformat",
-      "CLASSIFIES BY"
     ],
     [
       "org-fire-prot",
@@ -58,11 +48,6 @@
       "INVOICES AGAINST"
     ],
     [
-      "org-sub-trade",
-      "sc-masterformat",
-      "SCOPED UNDER"
-    ],
-    [
       "org-building-departm",
       "sc-international-bu",
       "ENFORCES"
@@ -71,16 +56,6 @@
       "org-fire-marshal",
       "sc-nfpa-stds",
       "ENFORCES"
-    ],
-    [
-      "org-osha-safety",
-      "sc-osha-hazard",
-      "ENFORCES"
-    ],
-    [
-      "org-osha-safety",
-      "sc-osha-recordkeepi",
-      "MANDATES"
     ],
     [
       "org-mat-testing-lab",

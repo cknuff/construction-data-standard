@@ -286,6 +286,66 @@
       "be-paving",
       "be-sidewalks",
       "ABUTS"
+    ],
+    [
+      "be-reinf-element",
+      "be-reinf-bar",
+      "PARENT_OF"
+    ],
+    [
+      "be-reinf-element",
+      "be-reinf-mesh",
+      "PARENT_OF"
+    ],
+    [
+      "be-reinf-element",
+      "be-tendon",
+      "PARENT_OF"
+    ],
+    [
+      "be-tendon",
+      "be-tendon-anchor",
+      "TERMINATED_BY"
+    ],
+    [
+      "be-tendon",
+      "be-tendon-conduit",
+      "RUNS_THROUGH"
+    ],
+    [
+      "be-reinf-bar",
+      "be-slabs",
+      "REINFORCES"
+    ],
+    [
+      "be-reinf-bar",
+      "be-columns",
+      "REINFORCES"
+    ],
+    [
+      "be-reinf-bar",
+      "be-beams",
+      "REINFORCES"
+    ],
+    [
+      "be-reinf-bar",
+      "be-fdn-walls",
+      "REINFORCES"
+    ],
+    [
+      "be-reinf-bar",
+      "be-deep-fdn",
+      "REINFORCES"
+    ],
+    [
+      "be-reinf-mesh",
+      "be-sog",
+      "REINFORCES"
+    ],
+    [
+      "be-tendon",
+      "be-slabs",
+      "PRESTRESSES"
     ]
   ],
   "verbGlossary": {

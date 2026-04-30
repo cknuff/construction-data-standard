@@ -251,6 +251,11 @@
       "be-hvac-ctrl",
       "pr-third-party",
       "SEQUENCE VERIFIED BY"
+    ],
+    [
+      "pr-permit",
+      "be-fdn-walls",
+      "AUTHORIZES_CONSTRUCTION_OF"
     ]
   ],
   "verbGlossary": {

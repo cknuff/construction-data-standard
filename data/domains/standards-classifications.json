@@ -8,32 +8,27 @@
       "color": "#5a9f92",
       "nodes": [
         {
-          "id": "sc-masterformat",
-          "name": "MasterFormat",
-          "desc": "The 50-division classification system published by CSI/CSC that organizes construction costs and specifications by type of work. The single most important standard for cross-company financial data comparison. Divisions map directly to building systems: Division 03 = Concrete → Foundations + Structural Frame, Division 26 = Electrical → Electrical system. Used for cost codes, specification sections, and bid packages. Three levels: division (2-digit), section (4-digit), subsection (6-digit). The UCDM's primary Rosetta Stone between company-specific codes and universal categories."
-        },
-        {
           "id": "sc-specification-se",
           "name": "Specification Section",
-          "desc": "A numbered section within a project's technical specifications organized by MasterFormat — defines quality standards, materials, methods, and acceptance criteria for a specific scope of work. Specification sections are the contractual quality standard against which work is inspected and accepted. Each section maps to a MasterFormat number (e.g., 03 30 00 Cast-in-Place Concrete, 09 29 00 Gypsum Board). Sections govern submittals (what must be submitted for approval) and inspections (what must pass).",
+          "desc": "A numbered section within a project's technical specifications organized by MasterFormat \u2014 defines quality standards, materials, methods, and acceptance criteria for a specific scope of work. Specification sections are the contractual quality standard against which work is inspected and accepted. Each section maps to a MasterFormat number (e.g., 03 30 00 Cast-in-Place Concrete, 09 29 00 Gypsum Board). Sections govern submittals (what must be submitted for approval) and inspections (what must pass).",
           "procore": "project_management.specification_sections"
         },
         {
           "id": "sc-std-cost-code",
           "name": "Standard Cost Code List",
-          "desc": "A company-standard or industry-standard template of cost codes used to set up new projects — ensures consistency across an organization's project portfolio. Companies may maintain multiple lists for different project types. Standard lists enable cross-project comparison within a company. The UCDM maps company lists to MasterFormat for cross-company comparison.",
+          "desc": "A company-standard or industry-standard template of cost codes used to set up new projects \u2014 ensures consistency across an organization's project portfolio. Companies may maintain multiple lists for different project types. Standard lists enable cross-project comparison within a company. The UCDM maps company lists to MasterFormat for cross-company comparison.",
           "procore": "finance.cost_code_lists"
         },
         {
           "id": "sc-wbs-code",
           "name": "WBS Code Structure",
-          "desc": "Work Breakdown Structure code templates that provide a second dimension of cost classification beyond cost codes — segments costs by phase, location, category, or other company-defined dimension. WBS codes add granularity within a cost code: cost code 03 30 00 (Concrete) + WBS 'Foundation' vs. WBS 'Elevated Slab'. Key WBS values like 'Rework' and 'Warranty' are signals for rework cost detection. Adoption varies widely.",
+          "desc": "Work Breakdown Structure code templates that provide a second dimension of cost classification beyond cost codes \u2014 segments costs by phase, location, category, or other company-defined dimension. WBS codes add granularity within a cost code: cost code 03 30 00 (Concrete) + WBS 'Foundation' vs. WBS 'Elevated Slab'. Key WBS values like 'Rework' and 'Warranty' are signals for rework cost detection. Adoption varies widely.",
           "procore": "finance.wbs_codes"
         },
         {
           "id": "sc-budget-code",
           "name": "Budget Code Structure",
-          "desc": "Company-specific grouping codes applied to budget line items for executive reporting — distinct from cost codes (transactional) and WBS codes (segmentation). Budget codes group budget lines into roll-up categories (Structure, Enclosure, MEP, General Conditions, Contingency). Less standardized than cost codes but valuable for executive dashboards and portfolio views.",
+          "desc": "Company-specific grouping codes applied to budget line items for executive reporting \u2014 distinct from cost codes (transactional) and WBS codes (segmentation). Budget codes group budget lines into roll-up categories (Structure, Enclosure, MEP, General Conditions, Contingency). Less standardized than cost codes but valuable for executive dashboards and portfolio views.",
           "procore": "finance.budget_codes"
         }
       ]
@@ -43,19 +38,21 @@
       "color": "#6b9797",
       "nodes": [
         {
+          "id": "sc-ifc-class",
+          "name": "IFC Classification (buildingSMART)",
+          "desc": "Industry Foundation Classes \u2014 an open data standard for BIM that defines entity types, properties, and relationships for all building elements. IFC entities (IfcWall, IfcDoor, IfcDuctSegment, etc.) provide a machine-readable classification of building elements that complements UniFormat and MasterFormat. Used for BIM coordination, clash detection, and digital twin integration."
+        },
+        {
           "id": "sc-uniformat",
-          "name": "UniFormat",
-          "desc": "A building element classification system that organizes construction by functional systems rather than by product type — the complement to MasterFormat. While MasterFormat classifies by WHAT is installed (materials, products), UniFormat classifies by WHAT IT DOES (function, system). Used for conceptual estimating, systems-level cost analysis, and facility lifecycle management. Levels: Level 1 (Major Group Elements: A Substructure, B Shell, C Interiors, D Services), Level 2, Level 3."
+          "name": "UniFormat II",
+          "procore": "",
+          "desc": "ASTM-published functional element classification for buildings (E1557). Used in early-design conceptual cost estimating where elements drive cost before specifications exist. 22 main groups (A10 Foundations through G50 Other Site). Largely redundant with MasterFormat for vertical construction execution \u2014 kept as meta-reference."
         },
         {
           "id": "sc-omniclass",
           "name": "OmniClass",
-          "desc": "A comprehensive classification system covering ALL construction entities — buildings, spaces, elements, products, phases, disciplines, and more. Organized in 15 tables covering different facets of construction (Table 21: Elements, Table 22: Work Results, Table 23: Products, Table 31: Phases, Table 33: Disciplines, Table 34: Organizational Roles). Designed as a unifying framework for BIM and facility management. Rarely used directly in field operations but important for data interoperability."
-        },
-        {
-          "id": "sc-ifc-class",
-          "name": "IFC Classification (buildingSMART)",
-          "desc": "Industry Foundation Classes — an open data standard for BIM that defines entity types, properties, and relationships for all building elements. IFC entities (IfcWall, IfcDoor, IfcDuctSegment, etc.) provide a machine-readable classification of building elements that complements UniFormat and MasterFormat. Used for BIM coordination, clash detection, and digital twin integration."
+          "procore": "",
+          "desc": "Holistic 15-table classification spanning the full facility lifecycle. Tables 21 (Elements) and 22 (Work Results) align to UniFormat and MasterFormat respectively. Kept as meta-reference because most tables aren't used day-to-day in construction project management."
         }
       ]
     },
@@ -64,19 +61,9 @@
       "color": "#7c8e9d",
       "nodes": [
         {
-          "id": "sc-osha-hazard",
-          "name": "OSHA Hazard Categories",
-          "desc": "Standardized safety hazard types defined by OSHA for construction — the Focus Four hazards (Fall, Struck By, Electrical, Caught In/Between) plus additional categories. These categories align directly with observation.hazard_name in Procore — an OSHA-aligned structured taxonomy with 16 types having 50+ companies each. The primary classification for safety observation analysis and recurrence tracking."
-        },
-        {
-          "id": "sc-osha-recordkeepi",
-          "name": "OSHA Recordkeeping Classification",
-          "desc": "The OSHA system for classifying workplace injuries and illnesses by severity — determines which incidents are 'recordable' and drive TRIR and DART rate calculations. Recordable = medical treatment beyond first aid, restricted duty, days away from work, or fatality. The classification directly determines a company's safety metrics for prequalification."
-        },
-        {
           "id": "sc-ansi-injury",
           "name": "ANSI Injury Classification",
-          "desc": "The ANSI/BLS system for classifying injuries by nature (laceration, fracture, sprain), body part (hand, back, knee), and cause (fall, struck by, overexertion) — provides detailed injury taxonomy for pattern analysis. More granular than OSHA recordkeeping which only classifies severity. Used for root cause analysis and targeted prevention programs."
+          "desc": "The ANSI/BLS system for classifying injuries by nature (laceration, fracture, sprain), body part (hand, back, knee), and cause (fall, struck by, overexertion) \u2014 provides detailed injury taxonomy for pattern analysis. More granular than OSHA recordkeeping which only classifies severity. Used for root cause analysis and targeted prevention programs."
         }
       ]
     },
@@ -87,22 +74,22 @@
         {
           "id": "sc-international-bu",
           "name": "International Building Code (IBC)",
-          "desc": "The model building code adopted (with local amendments) by most US jurisdictions — governs structural design, fire safety, egress, accessibility, and building system requirements. IBC classification determines construction type (Type I–V), occupancy group (A, B, E, H, I, M, R, S, U), and fire rating requirements. These classifications directly affect project cost, schedule, and building system requirements. Updated on a 3-year cycle."
+          "desc": "The model building code adopted (with local amendments) by most US jurisdictions \u2014 governs structural design, fire safety, egress, accessibility, and building system requirements. IBC classification determines construction type (Type I\u2013V), occupancy group (A, B, E, H, I, M, R, S, U), and fire rating requirements. These classifications directly affect project cost, schedule, and building system requirements. Updated on a 3-year cycle."
         },
         {
           "id": "sc-nfpa-stds",
           "name": "NFPA Standards",
-          "desc": "National Fire Protection Association standards governing fire protection, life safety, and electrical systems — the technical basis for fire code requirements. NFPA 13 (sprinklers), NFPA 72 (fire alarm), NFPA 101 (Life Safety Code), and NEC/NFPA 70 (electrical) are the most impactful on construction. NFPA standards define system design criteria, installation methods, testing requirements, and inspection frequencies."
+          "desc": "National Fire Protection Association standards governing fire protection, life safety, and electrical systems \u2014 the technical basis for fire code requirements. NFPA 13 (sprinklers), NFPA 72 (fire alarm), NFPA 101 (Life Safety Code), and NEC/NFPA 70 (electrical) are the most impactful on construction. NFPA standards define system design criteria, installation methods, testing requirements, and inspection frequencies."
         },
         {
           "id": "sc-ada-accessibilit",
           "name": "ADA / Accessibility Standards",
-          "desc": "Americans with Disabilities Act Accessibility Guidelines (ADAAG) and ICC A117.1 — govern accessible design requirements for public and commercial buildings. Affects door widths, ramp slopes, restroom layouts, signage, elevator requirements, and path of travel clearances. Compliance is both a legal requirement and a project completion condition. Accessibility violations are common punch list items."
+          "desc": "Americans with Disabilities Act Accessibility Guidelines (ADAAG) and ICC A117.1 \u2014 govern accessible design requirements for public and commercial buildings. Affects door widths, ramp slopes, restroom layouts, signage, elevator requirements, and path of travel clearances. Compliance is both a legal requirement and a project completion condition. Accessibility violations are common punch list items."
         },
         {
           "id": "sc-energy-code-stds",
           "name": "Energy Code Standards",
-          "desc": "Energy conservation codes (IECC, ASHRAE 90.1) and above-code programs — govern building envelope performance, HVAC efficiency, lighting power density, and renewable energy requirements. Energy code compliance affects construction cost (insulation, glazing performance, equipment efficiency) and requires specific testing and commissioning. Increasingly stringent with each code cycle."
+          "desc": "Energy conservation codes (IECC, ASHRAE 90.1) and above-code programs \u2014 govern building envelope performance, HVAC efficiency, lighting power density, and renewable energy requirements. Energy code compliance affects construction cost (insulation, glazing performance, equipment efficiency) and requires specific testing and commissioning. Increasingly stringent with each code cycle."
         }
       ]
     },
@@ -113,17 +100,17 @@
         {
           "id": "sc-leed-certificati",
           "name": "LEED Certification",
-          "desc": "Leadership in Energy and Environmental Design — the most widely recognized green building certification system. Point-based system across categories: Sustainable Sites, Water Efficiency, Energy & Atmosphere, Materials & Resources, Indoor Environmental Quality, Innovation. Certification levels: Certified (40–49 pts), Silver (50–59), Gold (60–79), Platinum (80+). LEED requirements affect material selection, construction waste management, commissioning scope, and documentation."
+          "desc": "Leadership in Energy and Environmental Design \u2014 the most widely recognized green building certification system. Point-based system across categories: Sustainable Sites, Water Efficiency, Energy & Atmosphere, Materials & Resources, Indoor Environmental Quality, Innovation. Certification levels: Certified (40\u201349 pts), Silver (50\u201359), Gold (60\u201379), Platinum (80+). LEED requirements affect material selection, construction waste management, commissioning scope, and documentation."
         },
         {
           "id": "sc-well-building",
           "name": "WELL Building Standard",
-          "desc": "A performance-based standard focused on occupant health and wellness — covers air, water, nourishment, light, fitness, comfort, and mind. Less common than LEED but growing rapidly, especially in commercial office and healthcare. WELL requirements affect HVAC design (air quality), lighting design (circadian), and finishes (low-VOC materials). Requires ongoing performance testing."
+          "desc": "A performance-based standard focused on occupant health and wellness \u2014 covers air, water, nourishment, light, fitness, comfort, and mind. Less common than LEED but growing rapidly, especially in commercial office and healthcare. WELL requirements affect HVAC design (air quality), lighting design (circadian), and finishes (low-VOC materials). Requires ongoing performance testing."
         },
         {
           "id": "sc-resilience-net",
           "name": "Resilience & Net Zero Standards",
-          "desc": "Emerging standards for climate resilience (RELi, FORTIFIED) and net-zero energy/carbon performance — increasingly required by institutional owners and government agencies. Resilience standards address flood, wind, seismic, and wildfire hazards. Net-zero standards require energy production to equal or exceed consumption. Both drive building system design decisions and construction scope."
+          "desc": "Emerging standards for climate resilience (RELi, FORTIFIED) and net-zero energy/carbon performance \u2014 increasingly required by institutional owners and government agencies. Resilience standards address flood, wind, seismic, and wildfire hazards. Net-zero standards require energy production to equal or exceed consumption. Both drive building system design decisions and construction scope."
         }
       ]
     },
@@ -134,7 +121,7 @@
         {
           "id": "sc-aia-contract",
           "name": "AIA Contract Documents",
-          "desc": "The American Institute of Architects standard contract document series — the most widely used contract forms in US construction. Key documents: A101 (Owner-Contractor, Stipulated Sum), A201 (General Conditions), A401 (Contractor-Sub), G-series (administrative forms: G701 Change Order, G702 Pay Application, G704 Certificate of Substantial Completion). AIA documents define roles, responsibilities, and workflows that directly shape how financial instruments, documents, and quality records flow."
+          "desc": "The American Institute of Architects standard contract document series \u2014 the most widely used contract forms in US construction. Key documents: A101 (Owner-Contractor, Stipulated Sum), A201 (General Conditions), A401 (Contractor-Sub), G-series (administrative forms: G701 Change Order, G702 Pay Application, G704 Certificate of Substantial Completion). AIA documents define roles, responsibilities, and workflows that directly shape how financial instruments, documents, and quality records flow."
         },
         {
           "id": "sc-dlvy-method",
@@ -144,7 +131,7 @@
         {
           "id": "sc-aace-cost",
           "name": "AACE Cost Engineering Standards",
-          "desc": "The Association for the Advancement of Cost Engineering recommended practices — define cost estimating, scheduling, and project controls methodologies. Key standards: 18R-97 (Cost Estimate Classification), 10S-90 (Cost Engineering), EVMS practices. AACE standards provide the methodology framework for financial metrics (EAC, CPI, SPI) and cost classification (estimate classes 1–5)."
+          "desc": "The Association for the Advancement of Cost Engineering recommended practices \u2014 define cost estimating, scheduling, and project controls methodologies. Key standards: 18R-97 (Cost Estimate Classification), 10S-90 (Cost Engineering), EVMS practices. AACE standards provide the methodology framework for financial metrics (EAC, CPI, SPI) and cost classification (estimate classes 1\u20135)."
         }
       ]
     },
@@ -155,32 +142,374 @@
         {
           "id": "sc-cost-code",
           "name": "Cost Code Standardization Rate",
-          "desc": "Percentage of a company's projects using a consistent standard cost code list — measures data readiness for cross-project benchmarking. Formula: Projects with Standard Cost Codes / Total Projects × 100. Companies with < 50% standardization have unreliable cross-project financial data. Cost code standardization is the prerequisite for all financial benchmarking."
+          "desc": "Percentage of a company's projects using a consistent standard cost code list \u2014 measures data readiness for cross-project benchmarking. Formula: Projects with Standard Cost Codes / Total Projects \u00d7 100. Companies with < 50% standardization have unreliable cross-project financial data. Cost code standardization is the prerequisite for all financial benchmarking.",
+          "concept_type": "derived-metric"
         },
         {
           "id": "sc-masterformat-map",
           "name": "MasterFormat Mapping Coverage",
-          "desc": "Percentage of a company's cost codes that map to recognized MasterFormat divisions — measures the degree to which company codes can be normalized for cross-company comparison. Formula: Cost Codes with Valid MasterFormat Mapping / Total Cost Codes × 100. Some codes (General Conditions, Overhead, Fee) don't map to MasterFormat building systems."
+          "desc": "Percentage of a company's cost codes that map to recognized MasterFormat divisions \u2014 measures the degree to which company codes can be normalized for cross-company comparison. Formula: Cost Codes with Valid MasterFormat Mapping / Total Cost Codes \u00d7 100. Some codes (General Conditions, Overhead, Fee) don't map to MasterFormat building systems.",
+          "concept_type": "derived-metric"
         },
         {
           "id": "sc-specification-se-2",
           "name": "Specification Section Coverage",
-          "desc": "Percentage of project specification sections entered as structured data vs. remaining as PDF uploads — measures the quality of specification cross-referencing for submittals and RFIs. Formula: Structured Spec Sections / Estimated Total Sections × 100."
+          "desc": "Percentage of project specification sections entered as structured data vs. remaining as PDF uploads \u2014 measures the quality of specification cross-referencing for submittals and RFIs. Formula: Structured Spec Sections / Estimated Total Sections \u00d7 100.",
+          "concept_type": "derived-metric"
         },
         {
           "id": "sc-safety-class",
           "name": "Safety Classification Completeness",
-          "desc": "Percentage of safety observations with a structured hazard_name classification — measures the quality of safety data for OSHA hazard analysis. Formula: Observations with hazard_name / Total Safety Observations × 100. Currently 55% populated across the portfolio — a significant enrichment opportunity."
+          "desc": "Percentage of safety observations with a structured hazard_name classification \u2014 measures the quality of safety data for OSHA hazard analysis. Formula: Observations with hazard_name / Total Safety Observations \u00d7 100. Currently 55% populated across the portfolio \u2014 a significant enrichment opportunity.",
+          "concept_type": "derived-metric"
         },
         {
           "id": "sc-wbs-adoption",
           "name": "WBS Adoption Rate",
-          "desc": "Percentage of projects or companies using WBS codes for cost segmentation — measures the depth of financial data granularity available for building-element-level benchmarking. Formula: Projects with WBS Codes / Total Financial Projects × 100."
+          "desc": "Percentage of projects or companies using WBS codes for cost segmentation \u2014 measures the depth of financial data granularity available for building-element-level benchmarking. Formula: Projects with WBS Codes / Total Financial Projects \u00d7 100.",
+          "concept_type": "derived-metric"
         },
         {
           "id": "sc-certification-ad",
           "name": "Certification Adoption Rate",
-          "desc": "Percentage of projects pursuing third-party certification (LEED, WELL, FORTIFIED, etc.) — measures the market penetration of green building and performance standards. Formula: Certified or Pursuing Projects / Total Projects × 100. Can be segmented by certification type, level, and project type."
+          "desc": "Percentage of projects pursuing third-party certification (LEED, WELL, FORTIFIED, etc.) \u2014 measures the market penetration of green building and performance standards. Formula: Certified or Pursuing Projects / Total Projects \u00d7 100. Can be segmented by certification type, level, and project type.",
+          "concept_type": "derived-metric"
+        }
+      ]
+    },
+    {
+      "name": "MasterFormat 2024 Divisions",
+      "color": "#90a4ae",
+      "nodes": [
+        {
+          "id": "sc-mf-00",
+          "name": "Division 00 \u2014 Procurement and Contracting Requirements",
+          "procore": "",
+          "desc": "Bidding, contracting, and contract documents \u2014 the procurement-side of the project file. Includes bid forms, instructions to bidders, contract forms. CSI MasterFormat 2024 Division 00."
+        },
+        {
+          "id": "sc-mf-01",
+          "name": "Division 01 \u2014 General Requirements",
+          "procore": "",
+          "desc": "Project-wide administrative and procedural requirements \u2014 submittals, meetings, schedules, quality control, safety, temporary facilities. The 'general conditions' for the work. CSI MasterFormat 2024 Division 01."
+        },
+        {
+          "id": "sc-mf-02",
+          "name": "Division 02 \u2014 Existing Conditions",
+          "procore": "",
+          "desc": "Site investigation, demolition, hazmat abatement, structure relocation. Work performed before new construction starts. CSI MasterFormat 2024 Division 02."
+        },
+        {
+          "id": "sc-mf-03",
+          "name": "Division 03 \u2014 Concrete",
+          "procore": "",
+          "desc": "Cast-in-place, precast, post-tensioned concrete. Includes formwork, reinforcement, mixes, finishes, curing. Foundations, columns, beams, slabs, walls map here. CSI MasterFormat 2024 Division 03."
+        },
+        {
+          "id": "sc-mf-04",
+          "name": "Division 04 \u2014 Masonry",
+          "procore": "",
+          "desc": "Unit masonry (CMU, brick, stone), mortar, anchors, accessories. Veneers, structural masonry walls, chimneys. CSI MasterFormat 2024 Division 04."
+        },
+        {
+          "id": "sc-mf-05",
+          "name": "Division 05 \u2014 Metals",
+          "procore": "",
+          "desc": "Structural steel, light-gauge framing, metal decking, miscellaneous metals, ornamental metals. CSI MasterFormat 2024 Division 05."
+        },
+        {
+          "id": "sc-mf-06",
+          "name": "Division 06 \u2014 Wood, Plastics, and Composites",
+          "procore": "",
+          "desc": "Rough carpentry, finish carpentry, architectural woodwork, plastic and composite fabrications. CSI MasterFormat 2024 Division 06."
+        },
+        {
+          "id": "sc-mf-07",
+          "name": "Division 07 \u2014 Thermal and Moisture Protection",
+          "procore": "",
+          "desc": "Waterproofing, dampproofing, insulation, roofing, siding, fire-stopping, joint sealants. CSI MasterFormat 2024 Division 07."
+        },
+        {
+          "id": "sc-mf-08",
+          "name": "Division 08 \u2014 Openings",
+          "procore": "",
+          "desc": "Doors (wood, hollow metal, aluminum), windows, glazing, hardware, storefronts, curtain walls, skylights. CSI MasterFormat 2024 Division 08."
+        },
+        {
+          "id": "sc-mf-09",
+          "name": "Division 09 \u2014 Finishes",
+          "procore": "",
+          "desc": "Plaster, gypsum board, tiling, terrazzo, acoustical, flooring, wall finishes, paint, wallcoverings. CSI MasterFormat 2024 Division 09."
+        },
+        {
+          "id": "sc-mf-10",
+          "name": "Division 10 \u2014 Specialties",
+          "procore": "",
+          "desc": "Toilet partitions, lockers, fire extinguishers, signage, identifying devices, operable partitions. CSI MasterFormat 2024 Division 10."
+        },
+        {
+          "id": "sc-mf-11",
+          "name": "Division 11 \u2014 Equipment",
+          "procore": "",
+          "desc": "Permanent equipment installed by GC \u2014 kitchen, laboratory, athletic, theatrical, medical, library, vault, vending. CSI MasterFormat 2024 Division 11."
+        },
+        {
+          "id": "sc-mf-12",
+          "name": "Division 12 \u2014 Furnishings",
+          "procore": "",
+          "desc": "Window treatments, casework, furnishings, rugs and mats, multiple seating. CSI MasterFormat 2024 Division 12."
+        },
+        {
+          "id": "sc-mf-13",
+          "name": "Division 13 \u2014 Special Construction",
+          "procore": "",
+          "desc": "Pre-engineered structures, swimming pools, ice rinks, kennels, pre-engineered fabric structures. CSI MasterFormat 2024 Division 13."
+        },
+        {
+          "id": "sc-mf-14",
+          "name": "Division 14 \u2014 Conveying Equipment",
+          "procore": "",
+          "desc": "Elevators, escalators, moving walks, dumbwaiters, lifts, hoists, cranes. CSI MasterFormat 2024 Division 14."
+        },
+        {
+          "id": "sc-mf-21",
+          "name": "Division 21 \u2014 Fire Suppression",
+          "procore": "",
+          "desc": "Fire pumps, sprinkler systems, standpipes, fire-extinguishing systems. CSI MasterFormat 2024 Division 21."
+        },
+        {
+          "id": "sc-mf-22",
+          "name": "Division 22 \u2014 Plumbing",
+          "procore": "",
+          "desc": "Plumbing piping, fixtures, equipment, water heaters, drainage. CSI MasterFormat 2024 Division 22."
+        },
+        {
+          "id": "sc-mf-23",
+          "name": "Division 23 \u2014 HVAC",
+          "procore": "",
+          "desc": "Heating, ventilating, air conditioning \u2014 boilers, chillers, air handlers, ducts, terminal units, controls. CSI MasterFormat 2024 Division 23."
+        },
+        {
+          "id": "sc-mf-25",
+          "name": "Division 25 \u2014 Integrated Automation",
+          "procore": "",
+          "desc": "Building automation systems \u2014 controls, instrumentation, integrated facility management. CSI MasterFormat 2024 Division 25."
+        },
+        {
+          "id": "sc-mf-26",
+          "name": "Division 26 \u2014 Electrical",
+          "procore": "",
+          "desc": "Service entrance, distribution, lighting, branch circuits, motors, generators. CSI MasterFormat 2024 Division 26."
+        },
+        {
+          "id": "sc-mf-27",
+          "name": "Division 27 \u2014 Communications",
+          "procore": "",
+          "desc": "Voice/data, structured cabling, audio-video, distributed antenna, communication systems. CSI MasterFormat 2024 Division 27."
+        },
+        {
+          "id": "sc-mf-28",
+          "name": "Division 28 \u2014 Electronic Safety and Security",
+          "procore": "",
+          "desc": "Access control, video surveillance, intrusion detection, fire alarm, mass notification. CSI MasterFormat 2024 Division 28."
+        },
+        {
+          "id": "sc-mf-31",
+          "name": "Division 31 \u2014 Earthwork",
+          "procore": "",
+          "desc": "Excavation, fill, grading, soil treatments, shoring, dewatering, erosion control. CSI MasterFormat 2024 Division 31."
+        },
+        {
+          "id": "sc-mf-32",
+          "name": "Division 32 \u2014 Exterior Improvements",
+          "procore": "",
+          "desc": "Paving, curbs, walkways, fences, walls, planting, irrigation, site furnishings. CSI MasterFormat 2024 Division 32."
+        },
+        {
+          "id": "sc-mf-33",
+          "name": "Division 33 \u2014 Utilities",
+          "procore": "",
+          "desc": "Water, sanitary sewer, storm drainage, gas, electrical site distribution, communications site. CSI MasterFormat 2024 Division 33."
+        }
+      ]
+    },
+    {
+      "name": "OSHA 29 CFR 1926 Subparts",
+      "color": "#ef9a9a",
+      "nodes": [
+        {
+          "id": "sc-osha-subpart-c",
+          "name": "Subpart C \u2014 General Safety and Health Provisions",
+          "procore": "",
+          "desc": "Foundation requirements \u2014 competent person, training, recordkeeping, accident prevention programs. OSHA construction industry standard 29 CFR 1926 Subpart C."
+        },
+        {
+          "id": "sc-osha-subpart-d",
+          "name": "Subpart D \u2014 Occupational Health and Environmental Controls",
+          "procore": "",
+          "desc": "Medical services, first aid, sanitation, ventilation, illumination, noise. OSHA construction industry standard 29 CFR 1926 Subpart D."
+        },
+        {
+          "id": "sc-osha-subpart-e",
+          "name": "Subpart E \u2014 Personal Protective and Life Saving Equipment",
+          "procore": "",
+          "desc": "PPE for head, eye, foot, hearing, fall protection. Employer responsibility to provide. OSHA construction industry standard 29 CFR 1926 Subpart E."
+        },
+        {
+          "id": "sc-osha-subpart-f",
+          "name": "Subpart F \u2014 Fire Protection and Prevention",
+          "procore": "",
+          "desc": "Firefighting equipment, flammable liquids, hazardous materials storage. OSHA construction industry standard 29 CFR 1926 Subpart F."
+        },
+        {
+          "id": "sc-osha-subpart-g",
+          "name": "Subpart G \u2014 Signs, Signals, and Barricades",
+          "procore": "",
+          "desc": "Traffic control signs, signals, barricades. MUTCD compliance for road work. OSHA construction industry standard 29 CFR 1926 Subpart G."
+        },
+        {
+          "id": "sc-osha-subpart-h",
+          "name": "Subpart H \u2014 Materials Handling, Storage, Use, and Disposal",
+          "procore": "",
+          "desc": "Material storage, rigging, handling. Disposal of waste materials. OSHA construction industry standard 29 CFR 1926 Subpart H."
+        },
+        {
+          "id": "sc-osha-subpart-i",
+          "name": "Subpart I \u2014 Tools \u2014 Hand and Power",
+          "procore": "",
+          "desc": "Hand-tool safety, power-tool requirements, abrasive wheels. OSHA construction industry standard 29 CFR 1926 Subpart I."
+        },
+        {
+          "id": "sc-osha-subpart-j",
+          "name": "Subpart J \u2014 Welding and Cutting",
+          "procore": "",
+          "desc": "Gas welding/cutting, arc welding, fire prevention during hot work. OSHA construction industry standard 29 CFR 1926 Subpart J."
+        },
+        {
+          "id": "sc-osha-subpart-k",
+          "name": "Subpart K \u2014 Electrical",
+          "procore": "",
+          "desc": "Electrical installation safety, lockout/tagout, GFCI requirements. OSHA construction industry standard 29 CFR 1926 Subpart K."
+        },
+        {
+          "id": "sc-osha-subpart-l",
+          "name": "Subpart L \u2014 Scaffolds",
+          "procore": "",
+          "desc": "Scaffold design, erection, dismantling. One of the top OSHA citation categories. OSHA construction industry standard 29 CFR 1926 Subpart L."
+        },
+        {
+          "id": "sc-osha-subpart-m",
+          "name": "Subpart M \u2014 Fall Protection",
+          "procore": "",
+          "desc": "Duty to provide fall protection at 6 feet; guardrails, safety nets, personal fall arrest systems. The single most-cited OSHA standard year over year. OSHA construction industry standard 29 CFR 1926 Subpart M."
+        },
+        {
+          "id": "sc-osha-subpart-n",
+          "name": "Subpart N \u2014 Cranes, Derricks, Hoists, Elevators, and Conveyors",
+          "procore": "",
+          "desc": "Crane operator certification, signal person requirements, inspection. OSHA construction industry standard 29 CFR 1926 Subpart N."
+        },
+        {
+          "id": "sc-osha-subpart-o",
+          "name": "Subpart O \u2014 Motor Vehicles, Mechanized Equipment, and Marine Operations",
+          "procore": "",
+          "desc": "Vehicle safety, equipment operation, marine ops. OSHA construction industry standard 29 CFR 1926 Subpart O."
+        },
+        {
+          "id": "sc-osha-subpart-p",
+          "name": "Subpart P \u2014 Excavations",
+          "procore": "",
+          "desc": "Cave-in protection, trench shoring, sloping/benching, competent person inspection. OSHA construction industry standard 29 CFR 1926 Subpart P."
+        },
+        {
+          "id": "sc-osha-subpart-q",
+          "name": "Subpart Q \u2014 Concrete and Masonry Construction",
+          "procore": "",
+          "desc": "Formwork, shoring, post-tensioning, lift-slab construction. OSHA construction industry standard 29 CFR 1926 Subpart Q."
+        },
+        {
+          "id": "sc-osha-subpart-r",
+          "name": "Subpart R \u2014 Steel Erection",
+          "procore": "",
+          "desc": "Bolting, decking, fall protection during steel erection. OSHA construction industry standard 29 CFR 1926 Subpart R."
+        },
+        {
+          "id": "sc-osha-subpart-t",
+          "name": "Subpart T \u2014 Demolition",
+          "procore": "",
+          "desc": "Pre-demolition survey, mechanical demolition, manual demolition, chutes. OSHA construction industry standard 29 CFR 1926 Subpart T."
+        },
+        {
+          "id": "sc-osha-subpart-v",
+          "name": "Subpart V \u2014 Electric Power Transmission and Distribution",
+          "procore": "",
+          "desc": "Line work, substations, energized work practices. OSHA construction industry standard 29 CFR 1926 Subpart V."
+        },
+        {
+          "id": "sc-osha-subpart-w",
+          "name": "Subpart W \u2014 Rollover Protective Structures; Overhead Protection",
+          "procore": "",
+          "desc": "ROPS, FOPS for construction equipment. OSHA construction industry standard 29 CFR 1926 Subpart W."
+        },
+        {
+          "id": "sc-osha-subpart-x",
+          "name": "Subpart X \u2014 Stairways and Ladders",
+          "procore": "",
+          "desc": "Stair rail systems, ladder design, fixed ladders. OSHA construction industry standard 29 CFR 1926 Subpart X."
+        },
+        {
+          "id": "sc-osha-subpart-z",
+          "name": "Subpart Z \u2014 Toxic and Hazardous Substances",
+          "procore": "",
+          "desc": "Lead, asbestos, silica, hazardous chemicals. Cross-references 29 CFR 1910 standards. OSHA construction industry standard 29 CFR 1926 Subpart Z."
+        }
+      ]
+    },
+    {
+      "name": "CII Best Practices",
+      "color": "#7986cb",
+      "nodes": [
+        {
+          "id": "sc-cii-constructability",
+          "name": "Constructability",
+          "procore": "",
+          "desc": "Integration of construction knowledge into the planning, design, procurement, and field operations of a project. CII identifies 25+ constructability concepts. Front-end deployment correlates strongly with execution success. Construction Industry Institute (CII) Best Practice."
+        },
+        {
+          "id": "sc-cii-front-end-planning",
+          "name": "Front-End Planning",
+          "procore": "",
+          "desc": "Comprehensive process for defining the project before authorization. CII research: $1 in front-end planning yields $1.50-$3.00 in execution savings. Single highest-ROI best practice. Construction Industry Institute (CII) Best Practice."
+        },
+        {
+          "id": "sc-cii-zat",
+          "name": "Zero Accident Techniques",
+          "procore": "",
+          "desc": "CII-defined safety best practices: pre-task planning, behavioral observation, safety perception surveys, JSA. Mature ZAT correlates with ~50% lower TRIR vs. industry average. Construction Industry Institute (CII) Best Practice."
+        },
+        {
+          "id": "sc-cii-awp",
+          "name": "Advanced Work Packaging",
+          "procore": "",
+          "desc": "Integrated planning approach that aligns engineering, procurement, and construction at the work package level. Construction-driven sequence drives engineering and procurement timing. Construction Industry Institute (CII) Best Practice."
+        },
+        {
+          "id": "sc-cii-modularization",
+          "name": "Modularization",
+          "procore": "",
+          "desc": "Off-site fabrication of project components for site assembly. CII research shows 10-25% schedule compression and improved safety on suitable projects. Construction Industry Institute (CII) Best Practice."
+        }
+      ]
+    },
+    {
+      "name": "PDRI Frameworks (CII)",
+      "color": "#9fa8da",
+      "nodes": [
+        {
+          "id": "sc-cii-pdri-bldg",
+          "name": "Project Definition Rating Index (PDRI)",
+          "procore": "",
+          "desc": "CII scoring framework for scope-definition completeness at the FEL 3 gate. Three published variants \u2014 Buildings (64 elements), Industrial Projects (70 elements), and Infrastructure \u2014 applied based on project type. Score <200 = well-defined; <500 = acceptable; >500 = at risk. Used at gate reviews to authorize project advancement."
         }
       ]
     }

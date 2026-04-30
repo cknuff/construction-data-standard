@@ -10,28 +10,32 @@
         {
           "id": "rl-owner-s",
           "name": "Owner's Representative",
-          "desc": "Owner's on-site or dedicated agent who makes decisions on the owner's behalf — design review, scope decisions, change authorization, acceptance of work, dispute resolution, stakeholder management. Consumes budget reports, schedule updates, change requests, pay applications. Produces change authorizations, design approvals, acceptance letters, field directives. Active across all phases from conception through warranty. Decision authority: High — authorized to make binding decisions for owner on scope, cost, and schedule."
+          "desc": "Owner's on-site or dedicated agent who makes decisions on the owner's behalf \u2014 design review, scope decisions, change authorization, acceptance of work, dispute resolution, stakeholder management. Consumes budget reports, schedule updates, change requests, pay applications. Produces change authorizations, design approvals, acceptance letters, field directives. Active across all phases from conception through warranty. Decision authority: High \u2014 authorized to make binding decisions for owner on scope, cost, and schedule.",
+          "derivation": "core.project_role_memberships WHERE role_name ~= 'Owner's Representative' (case-insensitive). Aggregate by project_id, user_id."
         },
         {
           "id": "rl-project-executiv",
           "name": "Project Executive",
-          "desc": "Senior leader overseeing a project or group of projects for the GC or CM — portfolio oversight, client relationship, risk escalation, financial performance, resource allocation, contract negotiations. Consumes monthly financial reports, schedule summaries, risk registers. Produces executive summaries, escalation decisions, resource commitments. Active across all phases with higher involvement during procurement and major milestones. Decision authority: High — approves GMP, major change orders, staffing."
+          "desc": "Senior leader overseeing a project or group of projects for the GC or CM \u2014 portfolio oversight, client relationship, risk escalation, financial performance, resource allocation, contract negotiations. Consumes monthly financial reports, schedule summaries, risk registers. Produces executive summaries, escalation decisions, resource commitments. Active across all phases with higher involvement during procurement and major milestones. Decision authority: High \u2014 approves GMP, major change orders, staffing.",
+          "derivation": "core.project_role_memberships WHERE role_name ~= 'Project Executive' (case-insensitive). Aggregate by project_id, user_id."
         },
         {
           "id": "rl-project-manager",
           "name": "Project Manager",
-          "desc": "Day-to-day leader of the project — owns schedule, budget, and subcontractor management. Consumes daily reports, budget/schedule updates, RFIs, submittals, change events, pay applications. Produces monthly reports, budget forecasts, schedule updates, meeting minutes, change order packages. Active from Procurement through Closeout. Decision authority: Medium-High — manages budget and schedule; recommends changes; escalates major issues to PE.",
-          "procore": "core.project_role_memberships"
+          "desc": "Day-to-day leader of the project \u2014 owns schedule, budget, and subcontractor management. Consumes daily reports, budget/schedule updates, RFIs, submittals, change events, pay applications. Produces monthly reports, budget forecasts, schedule updates, meeting minutes, change order packages. Active from Procurement through Closeout. Decision authority: Medium-High \u2014 manages budget and schedule; recommends changes; escalates major issues to PE.",
+          "derivation": "core.project_role_memberships WHERE role_name ~= 'Project Manager' (case-insensitive). Aggregate by project_id, user_id."
         },
         {
           "id": "rl-assistant-projec",
           "name": "Assistant Project Manager",
-          "desc": "Supports PM with day-to-day management — often assigned specific scope areas or administrative functions. Manages submittal tracking, RFI coordination, subcontract administration, insurance tracking, meeting coordination, document control. Active from Procurement through Closeout. Decision authority: Low-Medium — executes PM decisions; manages defined scope areas; limited authorization for minor changes."
+          "desc": "Supports PM with day-to-day management \u2014 often assigned specific scope areas or administrative functions. Manages submittal tracking, RFI coordination, subcontract administration, insurance tracking, meeting coordination, document control. Active from Procurement through Closeout. Decision authority: Low-Medium \u2014 executes PM decisions; manages defined scope areas; limited authorization for minor changes.",
+          "derivation": "core.project_role_memberships WHERE role_name ~= 'Assistant Project Manager' (case-insensitive). Aggregate by project_id, user_id."
         },
         {
           "id": "rl-design-manager",
           "name": "Design Manager",
-          "desc": "Manages the design process and design team coordination for the GC or owner — design review, constructability review, design schedule management, value engineering. Primarily a design-build or CM at Risk role. Active during Preconstruction; extends into Construction for design-build. Decision authority: Medium — recommends design decisions; manages design consultants; does not stamp drawings."
+          "desc": "Manages the design process and design team coordination for the GC or owner \u2014 design review, constructability review, design schedule management, value engineering. Primarily a design-build or CM at Risk role. Active during Preconstruction; extends into Construction for design-build. Decision authority: Medium \u2014 recommends design decisions; manages design consultants; does not stamp drawings.",
+          "derivation": "core.project_role_memberships WHERE role_name ~= 'Design Manager' (case-insensitive). Aggregate by project_id, user_id."
         }
       ]
     },
@@ -42,38 +46,164 @@
         {
           "id": "rl-super",
           "name": "Superintendent",
-          "desc": "Senior field leader responsible for day-to-day construction operations — trade coordination, schedule enforcement, quality oversight, safety enforcement, site logistics, daily reporting. Consumes lookaheads, daily logs, inspection schedules, safety reports, coordination notes, drawing sets. Produces daily reports, coordination schedules, field directives, site logistics plans. Active from Construction through Closeout. Decision authority: Medium-High — controls site access, work sequence, schedule priorities; can stop unsafe work.",
-          "procore": "core.project_role_memberships"
+          "desc": "Senior field leader responsible for day-to-day construction operations \u2014 trade coordination, schedule enforcement, quality oversight, safety enforcement, site logistics, daily reporting. Consumes lookaheads, daily logs, inspection schedules, safety reports, coordination notes, drawing sets. Produces daily reports, coordination schedules, field directives, site logistics plans. Active from Construction through Closeout. Decision authority: Medium-High \u2014 controls site access, work sequence, schedule priorities; can stop unsafe work.",
+          "derivation": "core.project_role_memberships WHERE role_name ~= 'Superintendent' (case-insensitive). Aggregate by project_id, user_id."
         },
         {
           "id": "rl-assistant-super",
           "name": "Assistant Superintendent",
-          "desc": "Supports superintendent with field coordination — often assigned to specific building areas or trades. Manages area-specific trade coordination, daily documentation, inspection coordination, material tracking, quality walks. Active from Construction through Closeout. Decision authority: Low-Medium — manages assigned area; escalates issues to superintendent."
+          "desc": "Supports superintendent with field coordination \u2014 often assigned to specific building areas or trades. Manages area-specific trade coordination, daily documentation, inspection coordination, material tracking, quality walks. Active from Construction through Closeout. Decision authority: Low-Medium \u2014 manages assigned area; escalates issues to superintendent.",
+          "derivation": "core.project_role_memberships WHERE role_name ~= 'Assistant Superintendent' (case-insensitive). Aggregate by project_id, user_id."
         },
         {
           "id": "rl-project-engineer",
           "name": "Project Engineer",
-          "desc": "Technical field support — manages engineering and documentation aspects of field work. Drafts RFIs, coordinates submittals, tracks as-builts, reviews shop drawings, tracks quantities, solves technical problems. Bridge between office (PM team) and field (super team). Active from Construction through Closeout. Decision authority: Low — identifies issues and proposes solutions; does not authorize changes."
+          "desc": "Technical field support \u2014 manages engineering and documentation aspects of field work. Drafts RFIs, coordinates submittals, tracks as-builts, reviews shop drawings, tracks quantities, solves technical problems. Bridge between office (PM team) and field (super team). Active from Construction through Closeout. Decision authority: Low \u2014 identifies issues and proposes solutions; does not authorize changes.",
+          "derivation": "core.project_role_memberships WHERE role_name ~= 'Project Engineer' (case-insensitive). Aggregate by project_id, user_id."
         },
         {
           "id": "rl-field-engineer",
           "name": "Field Engineer",
-          "desc": "Entry-level field position focused on surveying, layout, and construction documentation — concrete placement monitoring, quantity verification, material receiving, photo documentation. Starting point for most construction careers. Active during Construction. Decision authority: Low — executes technical tasks under supervision; flags discrepancies."
+          "desc": "Entry-level field position focused on surveying, layout, and construction documentation \u2014 concrete placement monitoring, quantity verification, material receiving, photo documentation. Starting point for most construction careers. Active during Construction. Decision authority: Low \u2014 executes technical tasks under supervision; flags discrepancies.",
+          "derivation": "core.project_role_memberships WHERE role_name ~= 'Field Engineer' (case-insensitive). Aggregate by project_id, user_id."
         },
         {
           "id": "rl-foreman-gen",
           "name": "Foreman / General Foreman",
-          "desc": "Trade-specific field leader who manages a crew of 4-20 workers on a daily basis — daily work assignments, material coordination, quality of installed work, safety compliance, productivity. The link between management and craft workers. Active from Construction through Closeout. Decision authority: Low — manages own crew's daily work; escalates to super or PM."
+          "desc": "Trade-specific field leader who manages a crew of 4-20 workers on a daily basis \u2014 daily work assignments, material coordination, quality of installed work, safety compliance, productivity. The link between management and craft workers. Active from Construction through Closeout. Decision authority: Low \u2014 manages own crew's daily work; escalates to super or PM.",
+          "derivation": "core.project_role_memberships WHERE role_name ~= 'Foreman / General Foreman' (case-insensitive). Aggregate by project_id, user_id."
         },
         {
-          "id": "rl-journeyman-craft",
-          "name": "Journeyman / Craft Worker",
-          "desc": "Skilled tradesperson who performs the physical construction work — licensed or certified in their trade. Installs trade-specific work per drawings and specs, maintains quality workmanship, complies with safety procedures. The people who actually build the building. Active during Construction. Decision authority: None — executes work as directed; reports unsafe conditions."
+          "id": "rl-laborer",
+          "name": "General Laborer",
+          "desc": "Performs general construction labor \u2014 cleanup, material handling, traffic control, site preparation, flagging, demolition support. Entry-level position requiring minimal specialized training. Active during Construction.",
+          "derivation": "Two sources: (a) core.project_vendors.trade matches keywords: general laborer; (b) workforce.job_titles + workforce.project_employees for self-perform crews. Aggregate vendor counts and headcount by trade keyword."
+        },
+        {
+          "id": "rl-carpenter",
+          "name": "Carpenter",
+          "desc": "Builds and installs wood and metal framing, formwork, blocking, backing, doors, hardware, casework, and finish carpentry. One of the most versatile trades on site. Active during Construction through Finishes.",
+          "derivation": "Two sources: (a) core.project_vendors.trade matches keywords: carpenter; (b) workforce.job_titles + workforce.project_employees for self-perform crews. Aggregate vendor counts and headcount by trade keyword."
+        },
+        {
+          "id": "rl-concrete-worker",
+          "name": "Concrete Worker",
+          "desc": "Places, finishes, and cures concrete \u2014 formwork assembly, rebar tying, concrete placement, finishing (bull float, trowel, broom), and curing. Active from Foundations through Structure.",
+          "derivation": "Two sources: (a) core.project_vendors.trade matches keywords: concrete worker, concrete finisher, cement mason; (b) workforce.job_titles + workforce.project_employees for self-perform crews. Aggregate vendor counts and headcount by trade keyword."
+        },
+        {
+          "id": "rl-ironworker",
+          "name": "Ironworker",
+          "desc": "Erects structural steel, reinforcing steel, and miscellaneous metals \u2014 steel erection, welding, bolting, rebar placement, metal decking. Active during Structure phase.",
+          "derivation": "Two sources: (a) core.project_vendors.trade matches keywords: ironworker, structural steel, rebar installer; (b) workforce.job_titles + workforce.project_employees for self-perform crews. Aggregate vendor counts and headcount by trade keyword."
+        },
+        {
+          "id": "rl-mason",
+          "name": "Mason",
+          "desc": "Lays brick, block, stone, and masonry units \u2014 structural and veneer masonry, mortar mixing, grouting, reinforcing. Active during Enclosure phase.",
+          "derivation": "Two sources: (a) core.project_vendors.trade matches keywords: mason, bricklayer, blocklayer; (b) workforce.job_titles + workforce.project_employees for self-perform crews. Aggregate vendor counts and headcount by trade keyword."
+        },
+        {
+          "id": "rl-roofer",
+          "name": "Roofer",
+          "desc": "Installs roofing systems \u2014 membrane application, metal roofing, shingle installation, flashing, and sheet metal work. Active during Enclosure phase.",
+          "derivation": "Two sources: (a) core.project_vendors.trade matches keywords: roofer, roofing; (b) workforce.job_titles + workforce.project_employees for self-perform crews. Aggregate vendor counts and headcount by trade keyword."
+        },
+        {
+          "id": "rl-glazier",
+          "name": "Glazier",
+          "desc": "Installs glass, windows, storefronts, and curtain wall systems \u2014 aluminum framing, glass setting, sealant application. Active during Enclosure phase.",
+          "derivation": "Two sources: (a) core.project_vendors.trade matches keywords: glazier, glass installer; (b) workforce.job_titles + workforce.project_employees for self-perform crews. Aggregate vendor counts and headcount by trade keyword."
+        },
+        {
+          "id": "rl-waterproofer",
+          "name": "Waterproofer",
+          "desc": "Applies waterproofing membranes, dampproofing, air barriers, and joint sealants \u2014 below-grade and above-grade waterproofing systems. Active during Enclosure phase.",
+          "derivation": "Two sources: (a) core.project_vendors.trade matches keywords: waterproofer, dampproofing; (b) workforce.job_titles + workforce.project_employees for self-perform crews. Aggregate vendor counts and headcount by trade keyword."
+        },
+        {
+          "id": "rl-drywall-worker",
+          "name": "Drywall Installer",
+          "desc": "Frames metal studs, hangs drywall, tapes, and finishes \u2014 interior wall and ceiling framing, board hanging, joint compound application, sanding. Active during Interiors phase.",
+          "derivation": "Two sources: (a) core.project_vendors.trade matches keywords: drywall, gypsum installer, taper; (b) workforce.job_titles + workforce.project_employees for self-perform crews. Aggregate vendor counts and headcount by trade keyword."
+        },
+        {
+          "id": "rl-painter",
+          "name": "Painter",
+          "desc": "Applies paint, stain, wall coverings, and specialty coatings \u2014 surface preparation, priming, finish coats, touch-up. Active during Finishes phase.",
+          "derivation": "Two sources: (a) core.project_vendors.trade matches keywords: painter; (b) workforce.job_titles + workforce.project_employees for self-perform crews. Aggregate vendor counts and headcount by trade keyword."
+        },
+        {
+          "id": "rl-floor-installer",
+          "name": "Floor Installer",
+          "desc": "Installs flooring systems \u2014 carpet, VCT, LVT, hardwood, epoxy, polished concrete, tile. Includes substrate preparation. Active during Finishes phase.",
+          "derivation": "Two sources: (a) core.project_vendors.trade matches keywords: floor installer, flooring, tile setter; (b) workforce.job_titles + workforce.project_employees for self-perform crews. Aggregate vendor counts and headcount by trade keyword."
+        },
+        {
+          "id": "rl-ceiling-installer",
+          "name": "Ceiling Installer",
+          "desc": "Installs suspended acoustical ceiling grid and tile systems. Often performed by drywall trade. Active during Interiors/Finishes phase.",
+          "derivation": "Two sources: (a) core.project_vendors.trade matches keywords: ceiling installer, ACT installer; (b) workforce.job_titles + workforce.project_employees for self-perform crews. Aggregate vendor counts and headcount by trade keyword."
+        },
+        {
+          "id": "rl-insulator",
+          "name": "Insulation Installer",
+          "desc": "Installs mechanical pipe insulation, duct insulation, building insulation, and spray-applied fireproofing. Active during MEP rough-in and Enclosure phases.",
+          "derivation": "Two sources: (a) core.project_vendors.trade matches keywords: insulator, insulation installer; (b) workforce.job_titles + workforce.project_employees for self-perform crews. Aggregate vendor counts and headcount by trade keyword."
+        },
+        {
+          "id": "rl-plumber",
+          "name": "Plumber",
+          "desc": "Installs domestic water, sanitary waste, storm drainage, gas piping, and plumbing fixtures. Active from underground rough-in through fixture installation.",
+          "derivation": "Two sources: (a) core.project_vendors.trade matches keywords: plumber, plumbing; (b) workforce.job_titles + workforce.project_employees for self-perform crews. Aggregate vendor counts and headcount by trade keyword."
+        },
+        {
+          "id": "rl-hvac-worker",
+          "name": "HVAC / Sheet Metal Worker",
+          "desc": "Fabricates and installs ductwork, piping, equipment, and HVAC controls. Includes sheet metal layout, duct installation, pipe fitting, and equipment setting. Active during MEP rough-in through Commissioning.",
+          "derivation": "Two sources: (a) core.project_vendors.trade matches keywords: HVAC, sheet metal, mechanical, fitter; (b) workforce.job_titles + workforce.project_employees for self-perform crews. Aggregate vendor counts and headcount by trade keyword."
+        },
+        {
+          "id": "rl-electrician",
+          "name": "Electrician",
+          "desc": "Installs electrical power distribution, branch wiring, lighting, fire alarm, and controls \u2014 conduit, wire pulling, terminations, panel work, fixture installation. Active from underground rough-in through Commissioning.",
+          "derivation": "Two sources: (a) core.project_vendors.trade matches keywords: electrician, electrical; (b) workforce.job_titles + workforce.project_employees for self-perform crews. Aggregate vendor counts and headcount by trade keyword."
+        },
+        {
+          "id": "rl-sprinkler-fitter",
+          "name": "Sprinkler Fitter",
+          "desc": "Installs fire sprinkler, standpipe, and fire suppression systems \u2014 pipe installation, head placement, system testing. Active during MEP rough-in through Commissioning.",
+          "derivation": "Two sources: (a) core.project_vendors.trade matches keywords: sprinkler fitter, fire protection; (b) workforce.job_titles + workforce.project_employees for self-perform crews. Aggregate vendor counts and headcount by trade keyword."
+        },
+        {
+          "id": "rl-elevator-mechanic",
+          "name": "Elevator Mechanic",
+          "desc": "Installs elevator systems \u2014 guide rails, cab, motor, controls, and safety devices. Highly specialized trade. Active from Structure through Commissioning.",
+          "derivation": "Two sources: (a) core.project_vendors.trade matches keywords: elevator mechanic, elevator installer; (b) workforce.job_titles + workforce.project_employees for self-perform crews. Aggregate vendor counts and headcount by trade keyword."
+        },
+        {
+          "id": "rl-lowvolt-tech",
+          "name": "Low Voltage Technician",
+          "desc": "Installs data/telecom cabling, security systems, AV systems, and building automation \u2014 conduit, cable tray, cable pulling, terminations, testing. Active during MEP rough-in through Commissioning.",
+          "derivation": "Two sources: (a) core.project_vendors.trade matches keywords: low voltage, tele/data, security tech; (b) workforce.job_titles + workforce.project_employees for self-perform crews. Aggregate vendor counts and headcount by trade keyword."
+        },
+        {
+          "id": "rl-operator",
+          "name": "Equipment Operator",
+          "desc": "Operates heavy construction equipment \u2014 excavators, cranes, loaders, dozers, forklifts. Requires specific certifications per equipment type. Active primarily during Sitework and Structure phases.",
+          "derivation": "Two sources: (a) core.project_vendors.trade matches keywords: equipment operator, heavy equipment; (b) workforce.job_titles + workforce.project_employees for self-perform crews. Aggregate vendor counts and headcount by trade keyword."
+        },
+        {
+          "id": "rl-surveyor",
+          "name": "Surveyor",
+          "desc": "Performs construction layout and survey \u2014 building layout, elevation control, as-built surveys, boundary verification. Active from Sitework through Structure.",
+          "derivation": "Two sources: (a) core.project_vendors.trade matches keywords: surveyor; (b) workforce.job_titles + workforce.project_employees for self-perform crews. Aggregate vendor counts and headcount by trade keyword."
         },
         {
           "id": "rl-apprentice",
           "name": "Apprentice",
-          "desc": "Trades worker in training — learning under journeyman supervision as part of a formal 3-5 year program. Performs assigned tasks, attends trade school, progresses toward journeyman status. Active during Construction. Decision authority: None — works under direct journeyman supervision. Apprentice-to-journeyman ratio is regulated."
+          "desc": "Trades worker in training \u2014 learning under journeyman supervision as part of a formal 3-5 year program. Performs assigned tasks, attends trade school, progresses toward journeyman status. Active during Construction. Apprentice-to-journeyman ratio is regulated.",
+          "derivation": "Two sources: (a) core.project_vendors.trade matches keywords: apprentice (any trade); (b) workforce.job_titles + workforce.project_employees for self-perform crews. Aggregate vendor counts and headcount by trade keyword."
         }
       ]
     },
@@ -84,17 +214,20 @@
         {
           "id": "rl-safety-manager",
           "name": "Safety Manager / Safety Director",
-          "desc": "Dedicated safety professional responsible for the project's or company's safety program — site inspections, incident investigation, OSHA compliance, safety training, subcontractor safety oversight. Consumes OSHA regulations, safety plans, incident reports, observation reports, EMR data. Produces safety metrics (TRIR, DART, EMR), corrective actions, training records. Active primarily during Construction; extends into Preconstruction for planning. Decision authority: Medium — can stop unsafe work immediately; recommends corrective actions."
+          "desc": "Dedicated safety professional responsible for the project's or company's safety program \u2014 site inspections, incident investigation, OSHA compliance, safety training, subcontractor safety oversight. Consumes OSHA regulations, safety plans, incident reports, observation reports, EMR data. Produces safety metrics (TRIR, DART, EMR), corrective actions, training records. Active primarily during Construction; extends into Preconstruction for planning. Decision authority: Medium \u2014 can stop unsafe work immediately; recommends corrective actions.",
+          "derivation": "core.project_role_memberships WHERE role_name ~= 'Safety Manager / Safety Director' (case-insensitive). Aggregate by project_id, user_id."
         },
         {
           "id": "rl-safety-officer",
           "name": "Safety Officer / Safety Coordinator",
-          "desc": "Field-level safety personnel conducting daily site safety activities — safety walks, toolbox talks, new worker orientation, PPE compliance, housekeeping inspections, near-miss documentation. Boots-on-the-ground safety presence. Active during Construction. Decision authority: Low-Medium — can stop unsafe work; reports to safety manager."
+          "desc": "Field-level safety personnel conducting daily site safety activities \u2014 safety walks, toolbox talks, new worker orientation, PPE compliance, housekeeping inspections, near-miss documentation. Boots-on-the-ground safety presence. Active during Construction. Decision authority: Low-Medium \u2014 can stop unsafe work; reports to safety manager.",
+          "derivation": "core.project_role_memberships WHERE role_name ~= 'Safety Officer / Safety Coordinator' (case-insensitive). Aggregate by project_id, user_id."
         },
         {
           "id": "rl-quality-manager",
           "name": "Quality Manager / QC Inspector",
-          "desc": "Dedicated quality professional responsible for QA/QC across the project — inspection coordination, deficiency tracking, specification compliance, material testing coordination, non-conformance management. Consumes specifications, approved submittals, test reports, inspection results. Produces inspection reports, NCRs, deficiency logs, quality metrics. Active from Construction through Closeout. Decision authority: Medium — can reject non-conforming work; requires corrective action."
+          "desc": "Dedicated quality professional responsible for QA/QC across the project \u2014 inspection coordination, deficiency tracking, specification compliance, material testing coordination, non-conformance management. Consumes specifications, approved submittals, test reports, inspection results. Produces inspection reports, NCRs, deficiency logs, quality metrics. Active from Construction through Closeout. Decision authority: Medium \u2014 can reject non-conforming work; requires corrective action.",
+          "derivation": "core.project_role_memberships WHERE role_name ~= 'Quality Manager / QC Inspector' (case-insensitive). Aggregate by project_id, user_id."
         }
       ]
     },
@@ -105,12 +238,14 @@
         {
           "id": "rl-estimator-chief",
           "name": "Estimator / Chief Estimator",
-          "desc": "Develops cost estimates from conceptual through detailed pricing — quantity takeoff, unit pricing, subcontractor bid solicitation and leveling, risk pricing, GMP development, value engineering. Consumes drawings, specifications, bid documents, historical cost data, subcontractor bids. Produces cost estimates, bid proposals, GMP packages, VE logs, bid tabulations. Active during Preconstruction. Decision authority: Medium — cost opinions inform major decisions; recommends contingency levels."
+          "desc": "Develops cost estimates from conceptual through detailed pricing \u2014 quantity takeoff, unit pricing, subcontractor bid solicitation and leveling, risk pricing, GMP development, value engineering. Consumes drawings, specifications, bid documents, historical cost data, subcontractor bids. Produces cost estimates, bid proposals, GMP packages, VE logs, bid tabulations. Active during Preconstruction. Decision authority: Medium \u2014 cost opinions inform major decisions; recommends contingency levels.",
+          "derivation": "core.project_role_memberships WHERE role_name ~= 'Estimator / Chief Estimator' (case-insensitive). Aggregate by project_id, user_id."
         },
         {
           "id": "rl-preconstruction",
           "name": "Preconstruction Manager",
-          "desc": "Leads the preconstruction effort — coordinates estimating, scheduling, constructability, client presentations, GMP negotiation, value engineering facilitation, risk assessment, subcontractor prequalification. Active during Preconstruction. Decision authority: Medium-High — leads GMP development; recommends scope and budget decisions; negotiates with owner."
+          "desc": "Leads the preconstruction effort \u2014 coordinates estimating, scheduling, constructability, client presentations, GMP negotiation, value engineering facilitation, risk assessment, subcontractor prequalification. Active during Preconstruction. Decision authority: Medium-High \u2014 leads GMP development; recommends scope and budget decisions; negotiates with owner.",
+          "derivation": "core.project_role_memberships WHERE role_name ~= 'Preconstruction Manager' (case-insensitive). Aggregate by project_id, user_id."
         }
       ]
     },
@@ -121,17 +256,20 @@
         {
           "id": "rl-scheduler-projec",
           "name": "Scheduler / Project Controls Manager",
-          "desc": "Manages the project schedule and schedule-related analytics — schedule development, updates, critical path analysis, delay analysis, resource loading, earned value management, schedule risk assessment. Active across all phases from preconstruction through closeout. Decision authority: Medium — schedule analysis informs decisions but does not authorize them; provides forensic basis for claims."
+          "desc": "Manages the project schedule and schedule-related analytics \u2014 schedule development, updates, critical path analysis, delay analysis, resource loading, earned value management, schedule risk assessment. Active across all phases from preconstruction through closeout. Decision authority: Medium \u2014 schedule analysis informs decisions but does not authorize them; provides forensic basis for claims.",
+          "derivation": "core.project_role_memberships WHERE role_name ~= 'Scheduler / Project Controls Manager' (case-insensitive). Aggregate by project_id, user_id."
         },
         {
           "id": "rl-doc-controller",
           "name": "Document Controller",
-          "desc": "Manages the project document management system — document numbering, drawing distribution, revision control, submittal routing, RFI routing, transmittal management, archiving. Active across all phases. Decision authority: Low — manages process and routing; does not make content decisions."
+          "desc": "Manages the project document management system \u2014 document numbering, drawing distribution, revision control, submittal routing, RFI routing, transmittal management, archiving. Active across all phases. Decision authority: Low \u2014 manages process and routing; does not make content decisions.",
+          "derivation": "core.project_role_memberships WHERE role_name ~= 'Document Controller' (case-insensitive). Aggregate by project_id, user_id."
         },
         {
           "id": "rl-cost-engineer",
           "name": "Cost Engineer / Cost Analyst",
-          "desc": "Tracks and forecasts project costs — cost tracking, forecast updates, change order impact analysis, cash flow projections, earned value analysis, budget variance reporting. More common on large projects ($50M+). Active from Procurement through Closeout. Decision authority: Low-Medium — provides financial analysis; recommends cost actions; does not authorize expenditures."
+          "desc": "Tracks and forecasts project costs \u2014 cost tracking, forecast updates, change order impact analysis, cash flow projections, earned value analysis, budget variance reporting. More common on large projects ($50M+). Active from Procurement through Closeout. Decision authority: Low-Medium \u2014 provides financial analysis; recommends cost actions; does not authorize expenditures.",
+          "derivation": "core.project_role_memberships WHERE role_name ~= 'Cost Engineer / Cost Analyst' (case-insensitive). Aggregate by project_id, user_id."
         }
       ]
     },
@@ -142,12 +280,14 @@
         {
           "id": "rl-bim-manager-vdc",
           "name": "BIM Manager / VDC Coordinator",
-          "desc": "Manages the building information model and virtual design and construction processes — BIM execution plan, model management, clash detection, trade coordination, 4D scheduling, quantity extraction, reality capture management. Bridges design and construction. Active from Preconstruction through Closeout. Decision authority: Medium — drives coordination decisions; model is the authority for spatial coordination."
+          "desc": "Manages the building information model and virtual design and construction processes \u2014 BIM execution plan, model management, clash detection, trade coordination, 4D scheduling, quantity extraction, reality capture management. Bridges design and construction. Active from Preconstruction through Closeout. Decision authority: Medium \u2014 drives coordination decisions; model is the authority for spatial coordination.",
+          "derivation": "core.project_role_memberships WHERE role_name ~= 'BIM Manager / VDC Coordinator' (case-insensitive). Aggregate by project_id, user_id."
         },
         {
           "id": "rl-tech-manager",
           "name": "Technology Manager",
-          "desc": "Manages project technology infrastructure — software deployment, mobile device management, network infrastructure, system integration, data management, user training. Increasingly important as construction becomes more technology-dependent. Active across all phases. Decision authority: Low — enables technology; does not make construction decisions."
+          "desc": "Manages project technology infrastructure \u2014 software deployment, mobile device management, network infrastructure, system integration, data management, user training. Increasingly important as construction becomes more technology-dependent. Active across all phases. Decision authority: Low \u2014 enables technology; does not make construction decisions.",
+          "derivation": "core.project_role_memberships WHERE role_name ~= 'Technology Manager' (case-insensitive). Aggregate by project_id, user_id."
         }
       ]
     },
@@ -158,12 +298,14 @@
         {
           "id": "rl-procure-manager",
           "name": "Procurement Manager",
-          "desc": "Manages the procurement process from bid solicitation through contract execution — bid package development, bid solicitation, bid leveling, scope review, contract negotiation, insurance and bonding verification. Active from Preconstruction through Procurement; extends into Construction for POs. Decision authority: Medium — recommends awards; negotiates contracts; does not authorize commitments without PM/PE approval."
+          "desc": "Manages the procurement process from bid solicitation through contract execution \u2014 bid package development, bid solicitation, bid leveling, scope review, contract negotiation, insurance and bonding verification. Active from Preconstruction through Procurement; extends into Construction for POs. Decision authority: Medium \u2014 recommends awards; negotiates contracts; does not authorize commitments without PM/PE approval.",
+          "derivation": "core.project_role_memberships WHERE role_name ~= 'Procurement Manager' (case-insensitive). Aggregate by project_id, user_id."
         },
         {
           "id": "rl-contract-adminis",
           "name": "Contract Administrator",
-          "desc": "Manages contract compliance and commercial processes after execution — change order processing, pay application review, lien waiver collection, insurance certificate tracking, retainage management. Active from Construction through Closeout. Decision authority: Low-Medium — processes commercial transactions; ensures compliance; does not authorize scope or cost changes."
+          "desc": "Manages contract compliance and commercial processes after execution \u2014 change order processing, pay application review, lien waiver collection, insurance certificate tracking, retainage management. Active from Construction through Closeout. Decision authority: Low-Medium \u2014 processes commercial transactions; ensures compliance; does not authorize scope or cost changes.",
+          "derivation": "core.project_role_memberships WHERE role_name ~= 'Contract Administrator' (case-insensitive). Aggregate by project_id, user_id."
         }
       ]
     },
@@ -174,12 +316,14 @@
         {
           "id": "rl-cx-agent-cxa",
           "name": "Commissioning Agent (CxA)",
-          "desc": "Independent professional who verifies building systems perform as designed — commissioning plan development, pre-functional testing, functional performance testing, deficiency tracking, seasonal testing, final report. Not part of design or construction team. Active from Construction through Post-Construction (seasonal). Decision authority: Medium — identifies deficiencies and requires correction; does not authorize design changes or additional cost."
+          "desc": "Independent professional who verifies building systems perform as designed \u2014 commissioning plan development, pre-functional testing, functional performance testing, deficiency tracking, seasonal testing, final report. Not part of design or construction team. Active from Construction through Post-Construction (seasonal). Decision authority: Medium \u2014 identifies deficiencies and requires correction; does not authorize design changes or additional cost.",
+          "derivation": "core.project_role_memberships WHERE role_name ~= 'Commissioning Agent' (case-insensitive). Aggregate by project_id, user_id."
         },
         {
           "id": "rl-tab-technician",
           "name": "TAB Technician",
-          "desc": "Testing, Adjusting, and Balancing technician who measures and adjusts air and water flow rates to design values — air system balancing, hydronic balancing, sound and vibration measurement. TAB firm independence from MEP contractor is important for objectivity. Active during Commissioning phase. Decision authority: Low — measures and adjusts to design values; reports deficiencies; does not redesign systems."
+          "desc": "Testing, Adjusting, and Balancing technician who measures and adjusts air and water flow rates to design values \u2014 air system balancing, hydronic balancing, sound and vibration measurement. TAB firm independence from MEP contractor is important for objectivity. Active during Commissioning phase. Decision authority: Low \u2014 measures and adjusts to design values; reports deficiencies; does not redesign systems.",
+          "derivation": "core.project_role_memberships WHERE role_name ~= 'TAB Technician' (case-insensitive). Aggregate by project_id, user_id."
         }
       ]
     },
@@ -190,12 +334,14 @@
         {
           "id": "rl-office-manager",
           "name": "Office Manager / Project Admin",
-          "desc": "Manages the project office and administrative operations — office operations, filing, correspondence management, meeting scheduling, visitor management, event coordination. Active across all phases. Decision authority: Low — supports project operations; does not make construction or commercial decisions."
+          "desc": "Manages the project office and administrative operations \u2014 office operations, filing, correspondence management, meeting scheduling, visitor management, event coordination. Active across all phases. Decision authority: Low \u2014 supports project operations; does not make construction or commercial decisions.",
+          "derivation": "core.project_role_memberships WHERE role_name ~= 'Office Manager / Project Admin' (case-insensitive). Aggregate by project_id, user_id."
         },
         {
           "id": "rl-accountant-finan",
           "name": "Accountant / Financial Analyst",
-          "desc": "Manages project financial transactions and reporting — invoice processing, pay application processing, job cost tracking, financial reporting, audit support, tax compliance. Company-level role supporting multiple projects. Active across all phases. Decision authority: Low — processes financial data; does not authorize expenditures (PM/PE authorize)."
+          "desc": "Manages project financial transactions and reporting \u2014 invoice processing, pay application processing, job cost tracking, financial reporting, audit support, tax compliance. Company-level role supporting multiple projects. Active across all phases. Decision authority: Low \u2014 processes financial data; does not authorize expenditures (PM/PE authorize).",
+          "derivation": "core.project_role_memberships WHERE role_name ~= 'Accountant / Financial Analyst' (case-insensitive). Aggregate by project_id, user_id."
         }
       ]
     },
@@ -206,27 +352,32 @@
         {
           "id": "rl-staffing-ratio",
           "name": "Staffing Ratio",
-          "desc": "Ratio of management staff (PM, super, PE, APM) to project value or subcontractor count — indicates project resourcing adequacy. Calculated as management headcount / project value band or management headcount / active subcontractor count."
+          "desc": "Ratio of management staff (PM, super, PE, APM) to project value or subcontractor count \u2014 indicates project resourcing adequacy. Calculated as management headcount / project value band or management headcount / active subcontractor count.",
+          "concept_type": "derived-metric"
         },
         {
           "id": "rl-role-coverage",
           "name": "Role Coverage Rate",
-          "desc": "Percentage of key project roles filled at any point in the project timeline — filled roles / required roles × 100. Tracks gaps in project team staffing that create risk."
+          "desc": "Percentage of key project roles filled at any point in the project timeline \u2014 filled roles / required roles \u00d7 100. Tracks gaps in project team staffing that create risk.",
+          "concept_type": "derived-metric"
         },
         {
           "id": "rl-pm-workload",
           "name": "PM Workload Index",
-          "desc": "Number of active projects per project manager — indicates workload balance and risk of attention dilution. Calculated from PM role assignments across the active project portfolio."
+          "desc": "Number of active projects per project manager \u2014 indicates workload balance and risk of attention dilution. Calculated from PM role assignments across the active project portfolio.",
+          "concept_type": "derived-metric"
         },
         {
           "id": "rl-super-span",
           "name": "Superintendent Span of Control",
-          "desc": "Number of active subcontractors and direct reports managed by a single superintendent — indicates field coordination burden. Calculated from active vendor count and crew headcount per superintendent."
+          "desc": "Number of active subcontractors and direct reports managed by a single superintendent \u2014 indicates field coordination burden. Calculated from active vendor count and crew headcount per superintendent.",
+          "concept_type": "derived-metric"
         },
         {
           "id": "rl-safety-staffing",
           "name": "Safety Staffing Ratio",
-          "desc": "Ratio of dedicated safety personnel to total workforce — safety staff headcount / peak daily workforce × 100. Indicates safety program investment and correlates with incident rates."
+          "desc": "Ratio of dedicated safety personnel to total workforce \u2014 safety staff headcount / peak daily workforce \u00d7 100. Indicates safety program investment and correlates with incident rates.",
+          "concept_type": "derived-metric"
         }
       ]
     }

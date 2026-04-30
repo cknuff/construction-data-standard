@@ -10,22 +10,26 @@
         {
           "id": "be-excav",
           "name": "Excavation & Shoring",
-          "desc": "Bulk and detailed excavation, sheeting, shoring, and underpinning. Typical trades: equipment operators, general laborers. Often the first major activity on site — schedule and cost overruns here cascade through the project."
+          "desc": "Bulk and detailed excavation, sheeting, shoring, and underpinning. Typical trades: equipment operators, general laborers. Often the first major activity on site \u2014 schedule and cost overruns here cascade through the project.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '31 23 16'; description matches: excavation, shoring, lagging, soldier piles"
         },
         {
           "id": "be-backfill",
           "name": "Backfill & Grading",
-          "desc": "Structural fill, fine grading, compaction, and subgrade preparation. Equipment-heavy — dozers, loaders, compactors. Quality depends on compaction testing (typically third-party geotechnical)."
+          "desc": "Structural fill, fine grading, compaction, and subgrade preparation. Equipment-heavy \u2014 dozers, loaders, compactors. Quality depends on compaction testing (typically third-party geotechnical).",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '31 23 23'; description matches: backfill, fill, compaction, grading"
         },
         {
           "id": "be-dewater",
           "name": "Dewatering",
-          "desc": "Wellpoints, sump pumps, and groundwater control during construction. Triggered by water table conditions — not present on every project. Can become a major unplanned cost if unexpected."
+          "desc": "Wellpoints, sump pumps, and groundwater control during construction. Triggered by water table conditions \u2014 not present on every project. Can become a major unplanned cost if unexpected.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '31 23 19'; description matches: dewatering, well points, sump"
         },
         {
           "id": "be-erosion",
           "name": "Erosion Control",
-          "desc": "Temporary and permanent measures to prevent soil erosion and sediment runoff during construction, including silt fencing, erosion blankets, and hydroseeding."
+          "desc": "Temporary and permanent measures to prevent soil erosion and sediment runoff during construction, including silt fencing, erosion blankets, and hydroseeding.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '31 25 00'; description matches: erosion control, silt fence, SWPPP"
         }
       ]
     },
@@ -36,32 +40,38 @@
         {
           "id": "be-deep-fdn",
           "name": "Deep Foundations",
-          "desc": "Driven piles, drilled shafts, caissons, micropiles, and helical piers. Requires specialized subcontractors and equipment. Production rates (piles per day) are a key schedule driver. Trades: pile drivers, equipment operators."
+          "desc": "Driven piles, drilled shafts, caissons, micropiles, and helical piers. Requires specialized subcontractors and equipment. Production rates (piles per day) are a key schedule driver. Trades: pile drivers, equipment operators.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '31 62 00 / 03 30 00'; description matches: drilled piers, micropiles, augercast piles, caissons"
         },
         {
           "id": "be-shallow-fdn",
           "name": "Shallow Foundations",
-          "desc": "Spread footings, strip footings, mat foundations, and pier pads. Concrete and formwork are the primary cost drivers. Trades: concrete workers, carpenters (formwork). Pour records track volume and placement."
+          "desc": "Spread footings, strip footings, mat foundations, and pier pads. Concrete and formwork are the primary cost drivers. Trades: concrete workers, carpenters (formwork). Pour records track volume and placement.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '03 30 00'; description matches: spread footings, mat foundation, isolated footings"
         },
         {
           "id": "be-fdn-walls",
           "name": "Foundation Walls",
-          "desc": "Cast-in-place or precast foundation walls and retaining walls. Formwork complexity drives cost. Waterproofing is a critical follow-on trade. Trades: concrete workers, carpenters."
+          "desc": "Cast-in-place or precast foundation walls and retaining walls. Formwork complexity drives cost. Waterproofing is a critical follow-on trade. Trades: concrete workers, carpenters.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '03 30 00'; description matches: foundation walls, basement walls, retaining walls"
         },
         {
           "id": "be-grade-beams",
           "name": "Grade Beams",
-          "desc": "Reinforced concrete beams connecting foundation elements at or below grade. Transfer loads between piles/piers. Trades: concrete workers, carpenters."
+          "desc": "Reinforced concrete beams connecting foundation elements at or below grade. Transfer loads between piles/piers. Trades: concrete workers, carpenters.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '03 30 00'; description matches: grade beams, pile caps"
         },
         {
           "id": "be-sog",
           "name": "Slab on Grade",
-          "desc": "Ground-supported concrete floor slabs with vapor barriers and joint sealants. Includes reinforcement (rebar, WWF, fiber). Quality depends on subgrade prep and finishing. Trades: concrete workers."
+          "desc": "Ground-supported concrete floor slabs with vapor barriers and joint sealants. Includes reinforcement (rebar, WWF, fiber). Quality depends on subgrade prep and finishing. Trades: concrete workers.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '03 30 00'; description matches: slab on grade, SOG, ground floor slab"
         },
         {
           "id": "be-bg-wp",
           "name": "Below-Grade Waterproofing",
-          "desc": "Foundation waterproofing membranes, dampproofing, underslab vapor barriers, and drainage boards. Failure leads to long-term moisture intrusion. Trades: specialty waterproofing applicators."
+          "desc": "Foundation waterproofing membranes, dampproofing, underslab vapor barriers, and drainage boards. Failure leads to long-term moisture intrusion. Trades: specialty waterproofing applicators.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '07 10 00'; description matches: below-grade waterproofing, dampproofing, blindside waterproofing"
         }
       ]
     },
@@ -72,27 +82,32 @@
         {
           "id": "be-water-main",
           "name": "Water Main",
-          "desc": "Underground domestic and fire water supply piping from street to building. Requires coordination with municipality. Trades: plumbers/pipefitters, equipment operators."
+          "desc": "Underground domestic and fire water supply piping from street to building. Requires coordination with municipality. Trades: plumbers/pipefitters, equipment operators.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '33 11 00'; description matches: water main, water service, water distribution"
         },
         {
           "id": "be-sanitary",
           "name": "Sanitary Sewer",
-          "desc": "Underground sanitary waste piping from building to main, with manholes and cleanouts. Gravity-driven — slope is critical. Trades: plumbers/pipefitters, equipment operators."
+          "desc": "Underground sanitary waste piping from building to main, with manholes and cleanouts. Gravity-driven \u2014 slope is critical. Trades: plumbers/pipefitters, equipment operators.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '33 30 00'; description matches: sanitary sewer, sewer line, sanitary main"
         },
         {
           "id": "be-storm",
           "name": "Storm Drainage",
-          "desc": "Underground storm water piping, catch basins, and retention/detention systems. Sized by hydrological analysis. Subject to local stormwater regulations. Trades: plumbers/pipefitters, equipment operators."
+          "desc": "Underground storm water piping, catch basins, and retention/detention systems. Sized by hydrological analysis. Subject to local stormwater regulations. Trades: plumbers/pipefitters, equipment operators.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '33 40 00'; description matches: storm drainage, storm sewer, catch basin"
         },
         {
           "id": "be-gas-svc",
           "name": "Gas Service",
-          "desc": "Underground gas piping from meter to building. Small scope on most projects but requires specialty inspection. Trades: plumbers/pipefitters."
+          "desc": "Underground gas piping from meter to building. Small scope on most projects but requires specialty inspection. Trades: plumbers/pipefitters.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '33 51 00'; description matches: gas service, natural gas main"
         },
         {
           "id": "be-site-elec",
           "name": "Site Electrical",
-          "desc": "Underground electrical and telecom conduit banks, manholes, and handholes. Coordinates with power company. Trades: electricians, equipment operators."
+          "desc": "Underground electrical and telecom conduit banks, manholes, and handholes. Coordinates with power company. Trades: electricians, equipment operators.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '33 70 00'; description matches: site electrical, site lighting power, exterior power distribution"
         }
       ]
     },
@@ -103,37 +118,44 @@
         {
           "id": "be-columns",
           "name": "Columns",
-          "desc": "Steel or concrete vertical load-bearing members. Steel columns: W-shapes, HSS, pipe. Concrete columns: CIP with rebar cages, formwork. Trades: ironworkers (steel), concrete workers (concrete). Critical path activity."
+          "desc": "Steel or concrete vertical load-bearing members. Steel columns: W-shapes, HSS, pipe. Concrete columns: CIP with rebar cages, formwork. Trades: ironworkers (steel), concrete workers (concrete). Critical path activity.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '03 30 00 + 05 12 00'; description matches: columns, concrete columns, structural steel columns"
         },
         {
           "id": "be-beams",
           "name": "Beams & Girders",
-          "desc": "Steel or concrete horizontal spanning members. Steel: W-shapes, built-up sections. Concrete: CIP or precast. Camber and deflection are key design parameters. Trades: ironworkers, concrete workers."
+          "desc": "Steel or concrete horizontal spanning members. Steel: W-shapes, built-up sections. Concrete: CIP or precast. Camber and deflection are key design parameters. Trades: ironworkers, concrete workers.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '03 30 00 + 05 12 00'; description matches: beams, girders, structural beams"
         },
         {
           "id": "be-slabs",
           "name": "Floor Slabs & Deck",
-          "desc": "Concrete floor slabs on grade and elevated composite or concrete deck systems forming the horizontal structure of each level."
+          "desc": "Concrete floor slabs on grade and elevated composite or concrete deck systems forming the horizontal structure of each level.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '03 30 00 + 05 31 00'; description matches: elevated slabs, structural slab, deck, composite deck, metal deck"
         },
         {
           "id": "be-roof-struct",
           "name": "Roof Structure",
-          "desc": "Steel or concrete roof framing — long-span joists, trusses, and moment frames. Trades: ironworkers. Often governs crane duration and pick sequence."
+          "desc": "Steel or concrete roof framing \u2014 long-span joists, trusses, and moment frames. Trades: ironworkers. Often governs crane duration and pick sequence.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '05 12 00 + 06 17 00'; description matches: roof framing, roof joists, roof trusses, glulam"
         },
         {
           "id": "be-connections",
           "name": "Connections & Embeds",
-          "desc": "Bolted and welded connections, embed plates, anchor bolts, and base plates. Connection design generates heavy RFI activity — a leading indicator of structural complexity. Trades: ironworkers."
+          "desc": "Bolted and welded connections, embed plates, anchor bolts, and base plates. Connection design generates heavy RFI activity \u2014 a leading indicator of structural complexity. Trades: ironworkers.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '05 50 00'; description matches: connections, embeds, anchors, baseplates"
         },
         {
           "id": "be-stairs",
           "name": "Stairs & Ramps",
-          "desc": "Cast-in-place or steel stairs and structural ramps, with handrails. Both temporary and permanent stairs. Punch items frequently reference stairs and railings. Trades: ironworkers, concrete workers."
+          "desc": "Cast-in-place or steel stairs and structural ramps, with handrails. Both temporary and permanent stairs. Punch items frequently reference stairs and railings. Trades: ironworkers, concrete workers.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '03 30 00 + 05 51 00'; description matches: stairs, ramps, stair stringers, metal stairs"
         },
         {
           "id": "be-misc-metals",
           "name": "Misc Metals",
-          "desc": "Miscellaneous and ornamental metals including handrails, guardrails, bollards, ladders, gratings, and steel supports not part of the primary structure."
+          "desc": "Miscellaneous and ornamental metals including handrails, guardrails, bollards, ladders, gratings, and steel supports not part of the primary structure.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '05 50 00'; description matches: misc metals, miscellaneous fabrications, ladders, railings"
         }
       ]
     },
@@ -144,37 +166,44 @@
         {
           "id": "be-curtainwall",
           "name": "Curtain Wall",
-          "desc": "Aluminum-framed glass curtain wall systems — unitized or stick-built. High RFI and coordination issue activity (MEP penetrations, structural anchors). Major submittal packages. Trades: glaziers, curtain wall installers."
+          "desc": "Aluminum-framed glass curtain wall systems \u2014 unitized or stick-built. High RFI and coordination issue activity (MEP penetrations, structural anchors). Major submittal packages. Trades: glaziers, curtain wall installers.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '08 44 00'; description matches: curtain wall, glass curtain wall, structural glazing"
         },
         {
           "id": "be-windows",
           "name": "Windows",
-          "desc": "Punched window units in opaque wall systems. Product submittals drive procurement timeline. Trades: glaziers."
+          "desc": "Punched window units in opaque wall systems. Product submittals drive procurement timeline. Trades: glaziers.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '08 50 00'; description matches: windows, glazing, fenestration"
         },
         {
           "id": "be-ext-doors",
           "name": "Exterior Doors",
-          "desc": "Entrance doors, storefronts, revolving doors, overhead doors, and service doors. Door hardware drives complexity. Trades: glaziers (storefronts), carpenters (hollow metal). Doors are one of the highest punch item categories."
+          "desc": "Entrance doors, storefronts, revolving doors, overhead doors, and service doors. Door hardware drives complexity. Trades: glaziers (storefronts), carpenters (hollow metal). Doors are one of the highest punch item categories.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '08 10 00'; description matches: exterior doors, hollow metal doors, storefront doors"
         },
         {
           "id": "be-masonry-v",
           "name": "Masonry Veneer",
-          "desc": "All unit masonry — brick, block, and stone. Sub-specialties: bricklayers (face brick, thin brick veneer), block layers (CMU walls, backup walls, elevator shafts), and stone masons (natural and manufactured stone for exterior veneer and interior lobbies). Weather-sensitive — production depends on temperature and moisture. Measured in SF of wall face per day."
+          "desc": "All unit masonry \u2014 brick, block, and stone. Sub-specialties: bricklayers (face brick, thin brick veneer), block layers (CMU walls, backup walls, elevator shafts), and stone masons (natural and manufactured stone for exterior veneer and interior lobbies). Weather-sensitive \u2014 production depends on temperature and moisture. Measured in SF of wall face per day.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '04 20 00'; description matches: masonry veneer, brick veneer, stone veneer, CMU veneer"
         },
         {
           "id": "be-panels",
           "name": "Precast / Metal Panels",
-          "desc": "Architectural precast concrete, insulated metal panels (IMP), ACM panels, and terra cotta. Panel layout coordination with structure and MEP is critical. Trades: ironworkers (erection), specialty installers."
+          "desc": "Architectural precast concrete, insulated metal panels (IMP), ACM panels, and terra cotta. Panel layout coordination with structure and MEP is critical. Trades: ironworkers (erection), specialty installers.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '07 42 00 / 03 45 00'; description matches: metal panels, precast panels, architectural precast, MCM panels"
         },
         {
           "id": "be-amb",
           "name": "Air & Moisture Barrier",
-          "desc": "Fluid-applied or sheet membrane air/vapor barriers on exterior sheathing. Performance-critical — failures here cause long-term moisture damage. Third-party inspection is common. Trades: specialty applicators."
+          "desc": "Fluid-applied or sheet membrane air/vapor barriers on exterior sheathing. Performance-critical \u2014 failures here cause long-term moisture damage. Third-party inspection is common. Trades: specialty applicators.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '07 25 00'; description matches: air barrier, moisture barrier, weather barrier"
         },
         {
           "id": "be-ext-insul",
           "name": "Exterior Insulation",
-          "desc": "Continuous insulation (CI) on exterior walls — mineral wool, rigid foam, or spray foam. Energy code compliance driver. Trades: specialty installers, general laborers."
+          "desc": "Continuous insulation (CI) on exterior walls \u2014 mineral wool, rigid foam, or spray foam. Energy code compliance driver. Trades: specialty installers, general laborers.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '07 21 00'; description matches: exterior insulation, EIFS, continuous insulation"
         }
       ]
     },
@@ -185,27 +214,32 @@
         {
           "id": "be-roof-mem",
           "name": "Roof Membrane",
-          "desc": "Single-ply (TPO, PVC, EPDM), built-up, or modified bitumen roofing membranes. Warranty is a key deliverable — manufacturer requirements drive installation quality. Trades: roofers."
+          "desc": "Single-ply (TPO, PVC, EPDM), built-up, or modified bitumen roofing membranes. Warranty is a key deliverable \u2014 manufacturer requirements drive installation quality. Trades: roofers.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '07 50 00'; description matches: roof membrane, TPO, EPDM, modified bitumen, built-up roofing"
         },
         {
           "id": "be-roof-insul",
           "name": "Roof Insulation",
-          "desc": "Rigid insulation and tapered systems for drainage, with cover boards. Tapered layout is a design coordination item. Trades: roofers."
+          "desc": "Rigid insulation and tapered systems for drainage, with cover boards. Tapered layout is a design coordination item. Trades: roofers.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '07 22 00'; description matches: roof insulation, rigid insulation, polyiso, tapered insulation"
         },
         {
           "id": "be-flashing",
           "name": "Flashing",
-          "desc": "Roof edge metal, copings, counterflashing, reglets, gutters, and downspouts. Flashing failures are a top source of roof leaks. Trades: roofers, sheet metal workers."
+          "desc": "Roof edge metal, copings, counterflashing, reglets, gutters, and downspouts. Flashing failures are a top source of roof leaks. Trades: roofers, sheet metal workers.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '07 62 00'; description matches: flashing, counter flashing, edge metal, copings"
         },
         {
           "id": "be-roof-drain",
           "name": "Roof Drainage",
-          "desc": "Interior roof drains, scuppers, overflow drains, and conductor piping. Cross-trade coordination — roofer installs drain bodies, plumber runs pipe. Design drives structural loads (ponding)."
+          "desc": "Interior roof drains, scuppers, overflow drains, and conductor piping. Cross-trade coordination \u2014 roofer installs drain bodies, plumber runs pipe. Design drives structural loads (ponding).",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '07 71 00 / 22 14 00'; description matches: roof drainage, scupper, roof drain, downspout"
         },
         {
           "id": "be-skylights",
           "name": "Skylights",
-          "desc": "Unit skylights, smoke vents, and roof access hatches. Small scope but high defect rate per unit — curb flashing is a common failure point. Trades: glaziers, specialty installers."
+          "desc": "Unit skylights, smoke vents, and roof access hatches. Small scope but high defect rate per unit \u2014 curb flashing is a common failure point. Trades: glaziers, specialty installers.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '08 60 00'; description matches: skylights, roof glazing, smoke vents"
         }
       ]
     },
@@ -216,42 +250,50 @@
         {
           "id": "be-ductwork",
           "name": "Ductwork",
-          "desc": "Supply, return, and exhaust ductwork — sheet metal, flex, and fittings. Routing coordination with other MEP systems drives schedule. Trades: HVAC/sheet metal workers."
+          "desc": "Supply, return, and exhaust ductwork \u2014 sheet metal, flex, and fittings. Routing coordination with other MEP systems drives schedule. Trades: HVAC/sheet metal workers.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '23 30 00'; description matches: ductwork, sheet metal, HVAC duct, ducting"
         },
         {
           "id": "be-hvac-pipe",
           "name": "HVAC Piping",
-          "desc": "Chilled water, hot water, condenser water, and refrigerant piping with insulation. Pipe sizing and routing are key RFI topics. Trades: pipefitters."
+          "desc": "Chilled water, hot water, condenser water, and refrigerant piping with insulation. Pipe sizing and routing are key RFI topics. Trades: pipefitters.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '23 20 00'; description matches: HVAC piping, hydronic piping, refrigerant piping"
         },
         {
           "id": "be-ahu",
           "name": "Air Handling Equip",
-          "desc": "AHUs, RTUs, fan coil units, VAV boxes, and exhaust fans. Major submittals — equipment delivery is a key scheduling milestone. Trades: HVAC mechanics."
+          "desc": "AHUs, RTUs, fan coil units, VAV boxes, and exhaust fans. Major submittals \u2014 equipment delivery is a key scheduling milestone. Trades: HVAC mechanics.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '23 70 00'; description matches: air handling unit, AHU, RTU, rooftop unit"
         },
         {
           "id": "be-heating",
           "name": "Heating Equipment",
-          "desc": "Boilers, unit heaters, radiant heating, and heat exchangers. Seasonal dependency — heating system must be operational for winter work. Trades: HVAC mechanics."
+          "desc": "Boilers, unit heaters, radiant heating, and heat exchangers. Seasonal dependency \u2014 heating system must be operational for winter work. Trades: HVAC mechanics.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '23 50 00 / 23 80 00'; description matches: boilers, furnaces, heating equipment, hot water heaters"
         },
         {
           "id": "be-cooling",
           "name": "Cooling Equipment",
-          "desc": "Chillers, cooling towers, condensing units, and split systems. Heaviest and most expensive MEP equipment — rigging and crane logistics are critical. Trades: HVAC mechanics."
+          "desc": "Chillers, cooling towers, condensing units, and split systems. Heaviest and most expensive MEP equipment \u2014 rigging and crane logistics are critical. Trades: HVAC mechanics.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '23 60 00 / 23 80 00'; description matches: chillers, cooling tower, cooling equipment, AC units, condensers"
         },
         {
           "id": "be-duct-insul",
           "name": "Duct Insulation",
-          "desc": "Thermal and acoustic insulation on ductwork. Required by energy code on exposed supply and return duct. Trades: insulators."
+          "desc": "Thermal and acoustic insulation on ductwork. Required by energy code on exposed supply and return duct. Trades: insulators.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '23 07 00'; description matches: duct insulation, HVAC insulation"
         },
         {
           "id": "be-hvac-ctrl",
           "name": "HVAC Controls",
-          "desc": "DDC controls, thermostats, sensors, damper actuators, and building automation system (BAS) programming. Controls/commissioning generates heavy RFI and punch item activity. Trades: controls technicians, HVAC mechanics."
+          "desc": "DDC controls, thermostats, sensors, damper actuators, and building automation system (BAS) programming. Controls/commissioning generates heavy RFI and punch item activity. Trades: controls technicians, HVAC mechanics.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '23 09 00 / 25 30 00'; description matches: HVAC controls, BAS controls, DDC, thermostats"
         },
         {
           "id": "be-tab",
           "name": "TAB",
-          "desc": "Testing, Adjusting, and Balancing technician who measures and adjusts air and water flow rates to design values — air system balancing, hydronic balancing, sound and vibration measurement. TAB firm independence from MEP contractor is important for objectivity. Active during Commissioning phase. Decision authority: Low — measures and adjusts to design values; reports deficiencies; does not redesign systems."
+          "desc": "Testing, Adjusting, and Balancing technician who measures and adjusts air and water flow rates to design values \u2014 air system balancing, hydronic balancing, sound and vibration measurement. TAB firm independence from MEP contractor is important for objectivity. Active during Commissioning phase. Decision authority: Low \u2014 measures and adjusts to design values; reports deficiencies; does not redesign systems.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '23 05 93'; description matches: TAB, testing adjusting balancing, air balancing"
         }
       ]
     },
@@ -262,37 +304,44 @@
         {
           "id": "be-dom-water",
           "name": "Domestic Water",
-          "desc": "Hot and cold water distribution piping, valves, hangers, and insulation. Leak testing is a key milestone. Trades: plumbers/pipefitters."
+          "desc": "Hot and cold water distribution piping, valves, hangers, and insulation. Leak testing is a key milestone. Trades: plumbers/pipefitters.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '22 11 00'; description matches: domestic water, potable water, hot/cold water lines"
         },
         {
           "id": "be-waste-vent",
           "name": "Waste & Vent",
-          "desc": "DWV piping, cleanouts, floor drains, and traps. Gravity-driven — slope is critical and generates RFIs for routing in tight ceilings. Trades: plumbers/pipefitters."
+          "desc": "DWV piping, cleanouts, floor drains, and traps. Gravity-driven \u2014 slope is critical and generates RFIs for routing in tight ceilings. Trades: plumbers/pipefitters.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '22 13 00'; description matches: waste, vent, sanitary piping, DWV"
         },
         {
           "id": "be-int-storm",
           "name": "Interior Storm Drain",
-          "desc": "Interior roof drain leaders, area drains, and conductor piping. Connects roof drainage to underground storm system. Trades: plumbers/pipefitters."
+          "desc": "Interior roof drain leaders, area drains, and conductor piping. Connects roof drainage to underground storm system. Trades: plumbers/pipefitters.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '22 14 00'; description matches: interior storm drain, roof drain piping"
         },
         {
           "id": "be-gas-pipe",
           "name": "Gas Piping",
-          "desc": "Interior natural gas distribution to equipment — boilers, water heaters, kitchen equipment. Requires pressure testing and inspection. Trades: plumbers/pipefitters."
+          "desc": "Interior natural gas distribution to equipment \u2014 boilers, water heaters, kitchen equipment. Requires pressure testing and inspection. Trades: plumbers/pipefitters.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '22 11 23'; description matches: gas piping, natural gas, propane piping"
         },
         {
           "id": "be-plumb-fix",
           "name": "Plumbing Fixtures",
-          "desc": "Toilets, urinals, sinks, faucets, drinking fountains, and floor drains. High submittal activity (product approvals) and very high punch item rates — plumbing fixtures are a top punch category. Trades: plumbers."
+          "desc": "Toilets, urinals, sinks, faucets, drinking fountains, and floor drains. High submittal activity (product approvals) and very high punch item rates \u2014 plumbing fixtures are a top punch category. Trades: plumbers.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '22 40 00'; description matches: plumbing fixtures, water closets, lavatories, sinks"
         },
         {
           "id": "be-water-htr",
           "name": "Water Heaters",
-          "desc": "Domestic water heating — tanks, tankless, and heat pump water heaters. Small scope but affects hot water distribution design. Trades: plumbers."
+          "desc": "Domestic water heating \u2014 tanks, tankless, and heat pump water heaters. Small scope but affects hot water distribution design. Trades: plumbers.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '22 30 00'; description matches: water heaters, hot water generators, tankless heaters"
         },
         {
           "id": "be-pipe-insul",
           "name": "Pipe Insulation",
-          "desc": "Thermal insulation on plumbing piping. Required by energy code on hot water and chilled supply lines. Trades: insulators."
+          "desc": "Thermal insulation on plumbing piping. Required by energy code on hot water and chilled supply lines. Trades: insulators.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '22 07 00'; description matches: pipe insulation, plumbing insulation"
         }
       ]
     },
@@ -303,32 +352,38 @@
         {
           "id": "be-power-dist",
           "name": "Power Distribution",
-          "desc": "Main switchgear, distribution panels, transformers, bus duct, and feeders. Major submittals with long lead times — procurement timing is critical. Trades: electricians."
+          "desc": "Main switchgear, distribution panels, transformers, bus duct, and feeders. Major submittals with long lead times \u2014 procurement timing is critical. Trades: electricians.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '26 20 00'; description matches: power distribution, switchgear, panelboards, transformers"
         },
         {
           "id": "be-branch",
           "name": "Branch Wiring",
-          "desc": "Outlets, switches, junction boxes, home runs, and branch circuits. Highest-volume electrical work. Punch items for cover plates and device alignment are top closeout issues. Trades: electricians."
+          "desc": "Outlets, switches, junction boxes, home runs, and branch circuits. Highest-volume electrical work. Punch items for cover plates and device alignment are top closeout issues. Trades: electricians.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '26 27 00'; description matches: branch wiring, branch circuit, receptacles wiring"
         },
         {
           "id": "be-conduit",
           "name": "Conduit & Raceways",
-          "desc": "EMT, rigid, PVC conduit, cable tray, and wireways. Routing coordination with other MEP systems is a major schedule driver. Trades: electricians."
+          "desc": "EMT, rigid, PVC conduit, cable tray, and wireways. Routing coordination with other MEP systems is a major schedule driver. Trades: electricians.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '26 05 33'; description matches: conduit, raceway, EMT, rigid conduit"
         },
         {
           "id": "be-lighting",
           "name": "Lighting",
-          "desc": "All light fixtures and controls — interior, exterior, emergency, and controls. Interior fixtures (troffers, downlights, pendants, linear, decorative), exterior fixtures (site, facade, parking, landscape lighting), emergency and exit (emergency battery units, exit signs, egress lighting — code-required), and lighting controls (dimmers, occupancy sensors, daylight harvesting, relay panels). Lighting submittals are among the highest volume on any project — every fixture type requires approval."
+          "desc": "All light fixtures and controls \u2014 interior, exterior, emergency, and controls. Interior fixtures (troffers, downlights, pendants, linear, decorative), exterior fixtures (site, facade, parking, landscape lighting), emergency and exit (emergency battery units, exit signs, egress lighting \u2014 code-required), and lighting controls (dimmers, occupancy sensors, daylight harvesting, relay panels). Lighting submittals are among the highest volume on any project \u2014 every fixture type requires approval.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '26 50 00'; description matches: lighting, light fixtures, luminaires"
         },
         {
           "id": "be-emerg-pwr",
           "name": "Emergency Power",
-          "desc": "Emergency and standby power systems including generators, transfer switches, UPS systems, and associated distribution for life safety and critical loads."
+          "desc": "Emergency and standby power systems including generators, transfer switches, UPS systems, and associated distribution for life safety and critical loads.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '26 30 00'; description matches: emergency power, generator, UPS, ATS"
         },
         {
           "id": "be-grounding",
           "name": "Grounding",
-          "desc": "Building grounding system, lightning rods, and bonding. Code-required; tested during construction. Small scope. Trades: electricians."
+          "desc": "Building grounding system, lightning rods, and bonding. Code-required; tested during construction. Small scope. Trades: electricians.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '26 05 26'; description matches: grounding, bonding, ground rods"
         }
       ]
     },
@@ -339,27 +394,32 @@
         {
           "id": "be-sprink-main",
           "name": "Sprinkler Mains",
-          "desc": "Fire sprinkler distribution piping — mains, cross-mains, and branch lines with seismic bracing. Head layout coordination with ceilings and MEP is a top coordination issue. Trades: sprinkler fitters."
+          "desc": "Fire sprinkler distribution piping \u2014 mains, cross-mains, and branch lines with seismic bracing. Head layout coordination with ceilings and MEP is a top coordination issue. Trades: sprinkler fitters.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '21 11 00'; description matches: sprinkler main, fire main, fire suppression piping"
         },
         {
           "id": "be-sprink-head",
           "name": "Sprinkler Heads",
-          "desc": "Pendant, upright, sidewall, and concealed sprinkler heads. Very high punch item rate — concealed head cover plates are a top closeout item. Trades: sprinkler fitters."
+          "desc": "Pendant, upright, sidewall, and concealed sprinkler heads. Very high punch item rate \u2014 concealed head cover plates are a top closeout item. Trades: sprinkler fitters.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '21 13 00'; description matches: sprinkler head, sprinkler, fire suppression head"
         },
         {
           "id": "be-standpipe",
           "name": "Standpipes",
-          "desc": "Standpipe risers, hose valves, and fire department connections (FDC). Required for buildings above certain heights. Flow testing is a code requirement. Trades: sprinkler fitters."
+          "desc": "Standpipe risers, hose valves, and fire department connections (FDC). Required for buildings above certain heights. Flow testing is a code requirement. Trades: sprinkler fitters.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '21 12 00'; description matches: standpipe, fire department connection"
         },
         {
           "id": "be-fire-pump",
           "name": "Fire Pump",
-          "desc": "Fire pump, jockey pump, controller, and test header. Required when municipal water pressure is insufficient. Acceptance testing is code-required. Trades: sprinkler fitters, electricians."
+          "desc": "Fire pump, jockey pump, controller, and test header. Required when municipal water pressure is insufficient. Acceptance testing is code-required. Trades: sprinkler fitters, electricians.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '21 30 00'; description matches: fire pump, jockey pump, fire pump skid"
         },
         {
           "id": "be-fa",
           "name": "Fire Alarm",
-          "desc": "Install visible fire alarm devices — smoke/heat detectors, pull stations, horn/strobes, duct detectors, device addressing, panel programming. Device placement must match approved fire alarm drawings. Gate: devices complete — ready for acceptance testing. Duration: 1-2%."
+          "desc": "Install visible fire alarm devices \u2014 smoke/heat detectors, pull stations, horn/strobes, duct detectors, device addressing, panel programming. Device placement must match approved fire alarm drawings. Gate: devices complete \u2014 ready for acceptance testing. Duration: 1-2%.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '28 31 00'; description matches: fire alarm, FA panel, smoke detector, pull station"
         }
       ]
     },
@@ -370,27 +430,32 @@
         {
           "id": "be-data",
           "name": "Data / Telecom",
-          "desc": "Cat6/fiber optic cabling, patch panels, racks, and telecom rooms. Pathway coordination with electrical. Trades: low-voltage technicians."
+          "desc": "Cat6/fiber optic cabling, patch panels, racks, and telecom rooms. Pathway coordination with electrical. Trades: low-voltage technicians.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '27 10 00 / 27 20 00'; description matches: data, telecom, structured cabling, voice/data"
         },
         {
           "id": "be-security",
           "name": "Security Systems",
-          "desc": "CCTV cameras, access control (card readers, controllers), and intrusion detection. Integrates with door hardware — coordination signal. Trades: low-voltage technicians."
+          "desc": "CCTV cameras, access control (card readers, controllers), and intrusion detection. Integrates with door hardware \u2014 coordination signal. Trades: low-voltage technicians.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '28 20 00'; description matches: security, access control, video surveillance, intrusion"
         },
         {
           "id": "be-av",
           "name": "Audio / Visual",
-          "desc": "AV systems — displays, speakers, distributed audio, and conference room systems. Often owner-furnished / contractor-installed (OFCI). Trades: low-voltage technicians."
+          "desc": "AV systems \u2014 displays, speakers, distributed audio, and conference room systems. Often owner-furnished / contractor-installed (OFCI). Trades: low-voltage technicians.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '27 40 00'; description matches: audio visual, AV, sound system"
         },
         {
           "id": "be-bas",
           "name": "Building Automation",
-          "desc": "A distinct structure within the project site — the primary vertical container for constructed space. Multi-building projects separate records by structure. Single-building projects still carry one Building node for hierarchy consistency. Children: Floor/Level, Core/Shaft. Systems: structural frame, exterior enclosure, roofing, elevators, building-level HVAC and electrical."
+          "desc": "Building Automation System (BAS/BMS) \u2014 centralized control system that monitors and manages HVAC, lighting, fire/life safety, security, and other building systems. Integrates sensors, controllers, and actuators via communication protocols (BACnet, Modbus, LonWorks). Active from MEP rough-in through operations. Key integration point for commissioning and ongoing facility management.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '25 30 00'; description matches: BAS, building automation, integrated automation"
         },
         {
           "id": "be-specialty-sys",
           "name": "Specialty Systems",
-          "desc": "Nurse call, intercom, paging, distributed antenna (DAS), and clock systems. Project-type dependent — nurse call for healthcare, DAS for large buildings. Trades: low-voltage technicians."
+          "desc": "Nurse call, intercom, paging, distributed antenna (DAS), and clock systems. Project-type dependent \u2014 nurse call for healthcare, DAS for large buildings. Trades: low-voltage technicians.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '13 00 00'; description matches: specialty systems, special construction, special equipment"
         }
       ]
     },
@@ -401,72 +466,86 @@
         {
           "id": "be-studs",
           "name": "Metal Stud Framing",
-          "desc": "Interior metal stud partitions, soffits, and bulkhead framing with blocking. Layout accuracy drives downstream finish quality. Trades: drywall hangers."
+          "desc": "Interior metal stud partitions, soffits, and bulkhead framing with blocking. Layout accuracy drives downstream finish quality. Trades: drywall hangers.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '09 22 00'; description matches: metal studs, light gauge framing, drywall framing"
         },
         {
           "id": "be-drywall",
           "name": "Drywall",
-          "desc": "Hang and finish gypsum board — drywall hanging, taping and finishing, sanding, specialty boards (moisture/abuse/fire-rated), patching around MEP. Above-ceiling inspection must happen BEFORE drywall closes the ceiling. Gate: drywall complete — walls ready for finishes. Duration: 3-5%."
+          "desc": "Hang and finish gypsum board \u2014 drywall hanging, taping and finishing, sanding, specialty boards (moisture/abuse/fire-rated), patching around MEP. Above-ceiling inspection must happen BEFORE drywall closes the ceiling. Gate: drywall complete \u2014 walls ready for finishes. Duration: 3-5%.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '09 29 00'; description matches: drywall, gypsum board, GWB"
         },
         {
           "id": "be-int-doors",
           "name": "Interior Doors",
-          "desc": "Interior hollow metal and wood doors, frames, and finish hardware (hinges, closers, locks, pulls). Hardware sets are complex submittals. Doors/hardware is consistently a top 3 punch item category. Trades: carpenters."
+          "desc": "Interior hollow metal and wood doors, frames, and finish hardware (hinges, closers, locks, pulls). Hardware sets are complex submittals. Doors/hardware is consistently a top 3 punch item category. Trades: carpenters.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '08 14 00'; description matches: interior doors, wood doors"
         },
         {
           "id": "be-act",
           "name": "Acoustic Ceilings",
-          "desc": "Suspended acoustic ceiling grid and tile systems. Layout coordination with lighting, sprinklers, and diffusers. Trades: ceiling installers."
+          "desc": "Suspended acoustic ceiling grid and tile systems. Layout coordination with lighting, sprinklers, and diffusers. Trades: ceiling installers.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '09 51 00'; description matches: acoustic ceiling, ACT, suspended ceiling"
         },
         {
           "id": "be-dw-ceil",
           "name": "Drywall Ceilings",
-          "desc": "Hang and finish gypsum board — drywall hanging, taping and finishing, sanding, specialty boards (moisture/abuse/fire-rated), patching around MEP. Above-ceiling inspection must happen BEFORE drywall closes the ceiling. Gate: drywall complete — walls ready for finishes. Duration: 3-5%."
+          "desc": "Hang and finish gypsum board \u2014 drywall hanging, taping and finishing, sanding, specialty boards (moisture/abuse/fire-rated), patching around MEP. Above-ceiling inspection must happen BEFORE drywall closes the ceiling. Gate: drywall complete \u2014 walls ready for finishes. Duration: 3-5%.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '09 29 00'; description matches: drywall ceiling, gyp ceiling"
         },
         {
           "id": "be-paint",
           "name": "Paint & Coatings",
-          "desc": "All painting and coating products — interior paint, exterior coatings, specialty coatings, primers, and wall coverings. Interior paint (latex, acrylic for walls, ceilings, trim), exterior paint and coatings (elastomeric, acrylic, high-performance), specialty coatings (epoxy, urethane, anti-graffiti, antimicrobial), primers and sealers (metal primer, wood sealer, block filler), and wall coverings (vinyl, fabric, FRP panels). Paint schedules are a standard submittal."
+          "desc": "All painting and coating products \u2014 interior paint, exterior coatings, specialty coatings, primers, and wall coverings. Interior paint (latex, acrylic for walls, ceilings, trim), exterior paint and coatings (elastomeric, acrylic, high-performance), specialty coatings (epoxy, urethane, anti-graffiti, antimicrobial), primers and sealers (metal primer, wood sealer, block filler), and wall coverings (vinyl, fabric, FRP panels). Paint schedules are a standard submittal.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '09 91 00'; description matches: paint, painting, coatings"
         },
         {
           "id": "be-wallcover",
           "name": "Wallcovering",
-          "desc": "Vinyl wallcovering, specialty wall finishes, and wall protection (corner guards, crash rails). Common in healthcare and hospitality. Trades: painters, specialty installers."
+          "desc": "Vinyl wallcovering, specialty wall finishes, and wall protection (corner guards, crash rails). Common in healthcare and hospitality. Trades: painters, specialty installers.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '09 72 00'; description matches: wallcovering, vinyl wall covering"
         },
         {
           "id": "be-tile",
           "name": "Floor Tile",
-          "desc": "Ceramic, porcelain, and natural stone tile for floors and walls — including setting materials and grout. Cracked tiles, grout, and lippage are common punch items. Trades: tile setters."
+          "desc": "Ceramic, porcelain, and natural stone tile for floors and walls \u2014 including setting materials and grout. Cracked tiles, grout, and lippage are common punch items. Trades: tile setters.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '09 30 00'; description matches: tile, ceramic tile, porcelain tile, mosaic"
         },
         {
           "id": "be-carpet",
           "name": "Carpet & Resilient",
-          "desc": "Carpet (broadloom, tile), VCT, LVT, rubber, and sheet vinyl with resilient base. Seams, transitions, and base are frequent closeout items. Trades: floor installers."
+          "desc": "Carpet (broadloom, tile), VCT, LVT, rubber, and sheet vinyl with resilient base. Seams, transitions, and base are frequent closeout items. Trades: floor installers.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '09 65 00 / 09 68 00'; description matches: carpet, resilient flooring, VCT, LVT"
         },
         {
           "id": "be-spec-floor",
           "name": "Specialty Flooring",
-          "desc": "Polished concrete, epoxy, terrazzo, and resinous flooring. Project-type dependent — common in industrial, healthcare, and education. Trades: specialty installers."
+          "desc": "Polished concrete, epoxy, terrazzo, and resinous flooring. Project-type dependent \u2014 common in industrial, healthcare, and education. Trades: specialty installers.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '09 60 00'; description matches: specialty flooring, sports floor, raised floor"
         },
         {
           "id": "be-casework",
           "name": "Casework",
-          "desc": "Cabinets, countertops, shelving, built-in furniture, and wood trim (base/crown molding). High punch item rate — scratches, chips, alignment, and door adjustment. Trades: carpenters."
+          "desc": "Cabinets, countertops, shelving, built-in furniture, and wood trim (base/crown molding). High punch item rate \u2014 scratches, chips, alignment, and door adjustment. Trades: carpenters.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '06 41 00 / 12 30 00'; description matches: casework, millwork, cabinetry"
         },
         {
           "id": "be-countertop",
           "name": "Countertops",
-          "desc": "Solid surface, stone, quartz, and plastic laminate countertops. Templated after casework installation — template-to-install cycle is a schedule constraint. Trades: specialty installers."
+          "desc": "Solid surface, stone, quartz, and plastic laminate countertops. Templated after casework installation \u2014 template-to-install cycle is a schedule constraint. Trades: specialty installers.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '12 36 00'; description matches: countertops, solid surface, quartz, granite"
         },
         {
           "id": "be-toilet-acc",
           "name": "Toilet Accessories",
-          "desc": "Toilet partitions, accessories (paper holders, grab bars, soap dispensers), mirrors, and signage. High punch item rate — installation alignment, missing items, and damage. Trades: carpenters, general laborers."
+          "desc": "Toilet partitions, accessories (paper holders, grab bars, soap dispensers), mirrors, and signage. High punch item rate \u2014 installation alignment, missing items, and damage. Trades: carpenters, general laborers.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '10 28 00'; description matches: toilet accessories, partitions, grab bars"
         },
         {
           "id": "be-signage",
           "name": "Signage",
-          "desc": "Room signs, directional signs, code-required signs, and ADA signage. Late-project scope — often last items installed before occupancy. Trades: specialty installers."
+          "desc": "Room signs, directional signs, code-required signs, and ADA signage. Late-project scope \u2014 often last items installed before occupancy. Trades: specialty installers.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '10 14 00'; description matches: signage, signs, wayfinding"
         }
       ]
     },
@@ -477,12 +556,14 @@
         {
           "id": "be-elev-car",
           "name": "Elevator Car",
-          "desc": "Passenger, service, and freight elevator cars — hoistway doors, cab finishes, and controls. Elevator installation is a major scheduling milestone. Long lead time item. Trades: elevator mechanics."
+          "desc": "Passenger, service, and freight elevator cars \u2014 hoistway doors, cab finishes, and controls. Elevator installation is a major scheduling milestone. Long lead time item. Trades: elevator mechanics.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '14 24 00'; description matches: elevator car, cab, elevator interior"
         },
         {
           "id": "be-elev-mach",
           "name": "Elevator Machinery",
-          "desc": "Traction machines, hydraulic units, motor controllers, and dispatching systems. Acceptance testing/inspection by authority having jurisdiction (AHJ) is required. Trades: elevator mechanics."
+          "desc": "Traction machines, hydraulic units, motor controllers, and dispatching systems. Acceptance testing/inspection by authority having jurisdiction (AHJ) is required. Trades: elevator mechanics.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '14 21 00'; description matches: elevator machinery, hoist, motor, controller"
         }
       ]
     },
@@ -493,27 +574,80 @@
         {
           "id": "be-paving",
           "name": "Paving",
-          "desc": "Asphalt and concrete paving for parking lots, access roads, and loading areas. Temperature-sensitive installation (asphalt). Trades: equipment operators, general laborers."
+          "desc": "Asphalt and concrete paving for parking lots, access roads, and loading areas. Temperature-sensitive installation (asphalt). Trades: equipment operators, general laborers.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '32 12 00 / 32 13 00'; description matches: paving, asphalt paving, concrete paving"
         },
         {
           "id": "be-sidewalks",
           "name": "Sidewalks",
-          "desc": "Concrete sidewalks, curbs, gutters, ADA ramps, and pavers. ADA compliance is a common observation and punch item trigger. Trades: concrete workers."
+          "desc": "Concrete sidewalks, curbs, gutters, ADA ramps, and pavers. ADA compliance is a common observation and punch item trigger. Trades: concrete workers.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '32 13 13'; description matches: sidewalks, walks, pedestrian paving"
         },
         {
           "id": "be-landscape",
           "name": "Landscaping",
-          "desc": "Trees, shrubs, ground cover, turf, and irrigation systems. Usually one of the last exterior scopes. Plant survival warranty (typically 1 year) extends beyond project completion. Trades: landscape contractors."
+          "desc": "Trees, shrubs, ground cover, turf, and irrigation systems. Usually one of the last exterior scopes. Plant survival warranty (typically 1 year) extends beyond project completion. Trades: landscape contractors.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '32 90 00'; description matches: landscape, landscaping, planting, irrigation"
         },
         {
           "id": "be-site-light",
           "name": "Site Lighting",
-          "desc": "Parking lot and pathway lighting — poles, bollard lights, and site electrical. Coordinates with site electrical underground. Trades: electricians."
+          "desc": "Parking lot and pathway lighting \u2014 poles, bollard lights, and site electrical. Coordinates with site electrical underground. Trades: electricians.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '33 71 00'; description matches: site lighting, exterior lighting, parking lot lighting"
         },
         {
           "id": "be-fencing",
           "name": "Fencing",
-          "desc": "Chain link, ornamental, and security fencing with gates and barriers. Small scope on most projects. Trades: fence contractors."
+          "desc": "Chain link, ornamental, and security fencing with gates and barriers. Small scope on most projects. Trades: fence contractors.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '32 31 00'; description matches: fencing, fence, gate"
+        }
+      ]
+    },
+    {
+      "name": "Reinforcement",
+      "color": "#66bb6a",
+      "nodes": [
+        {
+          "id": "be-reinf-element",
+          "name": "Reinforcing Element",
+          "procore": "",
+          "desc": "Generic parent for steel reinforcement embedded in concrete. IFC: IfcReinforcingElement. Provides tensile strength to concrete (which is weak in tension).",
+          "derivation": "finance.cost_codes WHERE MasterFormat division 03 20 00 (Concrete Reinforcing). Parent concept."
+        },
+        {
+          "id": "be-reinf-bar",
+          "name": "Reinforcing Bar (Rebar)",
+          "procore": "",
+          "desc": "Deformed steel bar embedded in concrete. IFC: IfcReinforcingBar. Sized #3 through #18 in US conventions. Quantities tracked by weight (lbs/tons) and length, drives reinforcement schedule.",
+          "derivation": "finance.cost_codes WHERE MasterFormat 03 21 00 (Reinforcing Steel). Filter cost code descriptions for 'rebar' / 'reinforcing bar' / '#3-#11'."
+        },
+        {
+          "id": "be-reinf-mesh",
+          "name": "Reinforcing Mesh",
+          "procore": "",
+          "desc": "Welded wire fabric used in slabs, walls, pavements. IFC: IfcReinforcingMesh. Lighter alternative to bar reinforcement for distributed loading.",
+          "derivation": "finance.cost_codes WHERE MasterFormat 03 22 00 (Welded Wire Reinforcement). Filter descriptions for 'mesh' / 'WWF' / 'welded wire'."
+        },
+        {
+          "id": "be-tendon",
+          "name": "Tendon",
+          "procore": "",
+          "desc": "Pre- or post-tensioned steel cable in concrete \u2014 provides active compression. IFC: IfcTendon. Used in long-span beams, parking garages, post-tensioned slabs.",
+          "derivation": "finance.cost_codes WHERE MasterFormat 03 38 00 (Post-Tensioned Concrete). Filter descriptions for 'tendon' / 'PT' / 'post-tensioning'."
+        },
+        {
+          "id": "be-tendon-anchor",
+          "name": "Tendon Anchor",
+          "procore": "",
+          "desc": "End fitting that locks tendon stress into the concrete. IFC: IfcTendonAnchor. Critical durability and inspection point.",
+          "derivation": "finance.cost_codes WHERE MasterFormat 03 38 00 + description contains 'anchor' / 'anchorage' / 'live end' / 'dead end'."
+        },
+        {
+          "id": "be-tendon-conduit",
+          "name": "Tendon Conduit",
+          "procore": "",
+          "desc": "Sheathing through which a tendon runs \u2014 protects from corrosion and allows post-tensioning. IFC: IfcTendonConduit.",
+          "derivation": "finance.cost_codes WHERE MasterFormat 03 38 00 + description contains 'conduit' / 'duct' / 'sheathing'."
         }
       ]
     }

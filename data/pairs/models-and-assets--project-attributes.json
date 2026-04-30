@@ -1,0 +1,200 @@
+{
+  "source": "models-and-assets",
+  "target": "project-attributes",
+  "edges": [
+    [
+      "bim-3d-building-info",
+      "pa-bim-requirement",
+      "FULFILLS"
+    ],
+    [
+      "bim-3d-building-info",
+      "pa-project-type",
+      "SEGMENTED BY"
+    ],
+    [
+      "bim-3d-building-info",
+      "pa-gross-building",
+      "MODELED FROM"
+    ],
+    [
+      "bim-federated-model",
+      "pa-bim-requirement",
+      "FULFILLS"
+    ],
+    [
+      "bim-federated-model",
+      "pa-number-subcontra",
+      "COORDINATED ACROSS"
+    ],
+    [
+      "bim-4d-model",
+      "pa-planned-duration",
+      "VISUALIZES"
+    ],
+    [
+      "bim-4d-model",
+      "pa-phased-const",
+      "SEQUENCED BY"
+    ],
+    [
+      "bim-5d-model-cost",
+      "pa-hard-cost",
+      "ESTIMATED FROM"
+    ],
+    [
+      "bim-5d-model-cost",
+      "pa-cost-per-sf",
+      "CALCULATED INTO"
+    ],
+    [
+      "bim-as-built-model",
+      "pa-actual-completio",
+      "DELIVERED AT"
+    ],
+    [
+      "bim-quantity-takeoff",
+      "pa-estimated-value",
+      "INFORMS"
+    ],
+    [
+      "bim-quantity-takeoff",
+      "pa-gross-building",
+      "EXTRACTED FROM"
+    ],
+    [
+      "bim-model-element",
+      "pa-struct-system",
+      "REPRESENTS"
+    ],
+    [
+      "bim-model-element",
+      "pa-project-type",
+      "SEGMENTED BY"
+    ],
+    [
+      "bim-level-developmen",
+      "pa-current-phase",
+      "PROGRESSED WITH"
+    ],
+    [
+      "bim-level-developmen",
+      "pa-dlvy-method",
+      "GOVERNED BY"
+    ],
+    [
+      "bim-model-properties",
+      "pa-energy-code",
+      "VALIDATED AGAINST"
+    ],
+    [
+      "bim-clash-detection",
+      "pa-rfi-density",
+      "REDUCES"
+    ],
+    [
+      "bim-clash-detection",
+      "pa-specialty-system",
+      "CONCENTRATED IN"
+    ],
+    [
+      "bim-coord-issue",
+      "pa-specialty-system",
+      "FLAGGED WITHIN"
+    ],
+    [
+      "bim-coord-issue",
+      "pa-project-type",
+      "SEGMENTED BY"
+    ],
+    [
+      "bim-bim-coord",
+      "pa-number-subcontra",
+      "SCALED BY"
+    ],
+    [
+      "bim-point-cloud",
+      "pa-percent-complete",
+      "VERIFIED AGAINST"
+    ],
+    [
+      "bim-point-cloud",
+      "pa-new-vs-existing",
+      "CAPTURED FOR"
+    ],
+    [
+      "bim-360-photo",
+      "pa-percent-complete",
+      "VERIFIED AGAINST"
+    ],
+    [
+      "bim-drone-capture",
+      "pa-site-area",
+      "SCALED BY"
+    ],
+    [
+      "bim-const-photo",
+      "pa-percent-complete",
+      "DOCUMENTS"
+    ],
+    [
+      "bim-model-based",
+      "pa-bim-requirement",
+      "PRODUCED FROM"
+    ],
+    [
+      "bim-digital-twin",
+      "pa-net-zero-target",
+      "MONITORED FOR"
+    ],
+    [
+      "bim-coord-issue-2",
+      "pa-rfi-density",
+      "CORRELATED WITH"
+    ],
+    [
+      "bim-coord-issue-3",
+      "pa-project-type",
+      "BENCHMARKED BY"
+    ],
+    [
+      "bim-clash-resolution",
+      "pa-project-type",
+      "BENCHMARKED BY"
+    ],
+    [
+      "bim-bim-coord-2",
+      "pa-bim-requirement",
+      "SCORED AGAINST"
+    ]
+  ],
+  "verbGlossary": {
+    "FULFILLS": "{source} deliverable satisfies {target} BIM requirement attribute",
+    "SEGMENTED BY": "{source} record or metric is broken down by {target} attribute for cross-project comparative analysis",
+    "MODELED FROM": "{source} represents the physical scope defined by {target} dimension attribute",
+    "COORDINATED ACROSS": "Federated BIM model integrates discipline models from the number of trades reflected in {target}or count attribute",
+    "VISUALIZES": "{source} provides a visual representation of {target} duration attribute over time as a construction sequence",
+    "SEQUENCED BY": "{source} 4D simulation is organized according to {target}d construction attribute's work zones",
+    "ESTIMATED FROM": "{source} cost data produces {target} hard cost attribute through quantity-based estimation",
+    "CALCULATED INTO": "{source} cost quantities are divided by area to produce {target} attribute",
+    "DELIVERED AT": "{source} as-built model is handed over at the milestone defined by {target} completion attribute",
+    "INFORMS": "{source} output provides data that shapes {target} financial estimate",
+    "EXTRACTED FROM": "{source} quantities are used to calculate {target} dimension attribute",
+    "REPRESENTS": "{source} depicts {target} structural system attribute in 3D geometry",
+    "PROGRESSED WITH": "{source} level of development advances in alignment with {target} phase attribute",
+    "GOVERNED BY": "{source} deliverable requirements are dictated by the target delivery method's contractual BIM standards",
+    "VALIDATED AGAINST": "{source} properties are checked against {target} performance requirements",
+    "REDUCES": "{source} coordination effort decreases {target} issue density metric by resolving conflicts before construction",
+    "CONCENTRATED IN": "{source} detection findings cluster within {target} specialty system scope areas",
+    "FLAGGED WITHIN": "{source} coordination issue is identified within the scope of {target} specialty system attribute",
+    "SCALED BY": "{source} activity volume scales proportionally with {target} attribute (e.g., coordination meetings scale with subcontractor count)",
+    "VERIFIED AGAINST": "{source}capture data is compared to {target} completion attribute for progress verification",
+    "CAPTURED FOR": "{source}capture scan is performed because {target} scope attribute requires existing condition documentation",
+    "DOCUMENTS": "{source}record captures construction progress reflected by {target} completion attribute",
+    "PRODUCED FROM": "{source}-based drawing is generated from BIM data that satisfies {target} requirement attribute",
+    "MONITORED FOR": "{source}tracks building performance against {target}",
+    "CORRELATED WITH": "{source} coordination metric shows statistical relationship to {target} issue density attribute",
+    "BENCHMARKED BY": "{source} performance metric is compared across projects grouped by {target} to identify norms",
+    "SCORED AGAINST": "{source} adoption metric is evaluated relative to {target} BIM requirement attribute"
+  }
+}

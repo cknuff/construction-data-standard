@@ -4,16 +4,6 @@
   "edges": [
     [
       "rl-safety-manager",
-      "sc-osha-hazard",
-      "ADMINISTERS"
-    ],
-    [
-      "rl-safety-officer",
-      "sc-osha-recordkeepi",
-      "LOGS PER"
-    ],
-    [
-      "rl-safety-manager",
       "sc-ansi-injury",
       "CLASSIFIES UNDER"
     ],
@@ -21,11 +11,6 @@
       "rl-quality-manager",
       "sc-specification-se",
       "INSPECTS AGAINST"
-    ],
-    [
-      "rl-quality-manager",
-      "sc-masterformat",
-      "ORGANIZES BY"
     ],
     [
       "rl-project-manager",
@@ -48,21 +33,6 @@
       "BENCHMARKS TO"
     ],
     [
-      "rl-estimator-chief",
-      "sc-masterformat",
-      "ESTIMATES BY"
-    ],
-    [
-      "rl-estimator-chief",
-      "sc-uniformat",
-      "QUANTIFIES BY"
-    ],
-    [
-      "rl-super",
-      "sc-osha-hazard",
-      "ENFORCES"
-    ],
-    [
       "rl-super",
       "sc-nfpa-stds",
       "ENFORCES"
@@ -76,11 +46,6 @@
       "rl-bim-manager-vdc",
       "sc-ifc-class",
       "MODELS UNDER"
-    ],
-    [
-      "rl-bim-manager-vdc",
-      "sc-omniclass",
-      "TAGS TO"
     ],
     [
       "rl-contract-adminis",

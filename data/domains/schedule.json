@@ -10,35 +10,38 @@
         {
           "id": "sch-detail-activity",
           "name": "Detail Activity",
-          "desc": "The lowest-level schedulable work item — has its own duration, logic ties, resources, and cost assignment. The fundamental unit of CPM scheduling. Typical duration 5-20 working days; activities exceeding 20 days indicate insufficient detail. Includes Level of Effort (LOE) for time-dependent items (supervision, general conditions, temporary facilities) that span a period regardless of work accomplished.",
+          "desc": "The lowest-level schedulable work item \u2014 has its own duration, logic ties, resources, and cost assignment. The fundamental unit of CPM scheduling. Typical duration 5-20 working days; activities exceeding 20 days indicate insufficient detail. Includes Level of Effort (LOE) for time-dependent items (supervision, general conditions, temporary facilities) that span a period regardless of work accomplished.",
           "procore": "project_management.schedule_task"
         },
         {
           "id": "sch-summary-activity",
           "name": "Summary Activity & WBS",
-          "desc": "Roll-up activity that aggregates child activities into a single bar — no independent duration or resources. Used for Work Breakdown Structure nodes, phase summaries, and area roll-ups. Hammock activities span between two other activities and recalculate automatically. Summary and WBS nodes organize the schedule hierarchy for filtering, reporting, and executive communication.",
+          "desc": "Roll-up activity that aggregates child activities into a single bar \u2014 no independent duration or resources. Used for Work Breakdown Structure nodes, phase summaries, and area roll-ups. Hammock activities span between two other activities and recalculate automatically. Summary and WBS nodes organize the schedule hierarchy for filtering, reporting, and executive communication.",
           "procore": "project_management.schedule_task"
         },
         {
           "id": "sch-milestone",
           "name": "Milestone",
-          "desc": "Zero-duration marker representing a key event — start milestone or finish milestone. Contractual milestones carry liquidated damages. Interim milestones (dry-in, permanent power, certificate of occupancy) are schedule gates that trigger downstream work. The primary communication tool between owner and contractor for schedule status.",
+          "desc": "Zero-duration marker representing a key event \u2014 start milestone or finish milestone. Contractual milestones carry liquidated damages. Interim milestones (dry-in, permanent power, certificate of occupancy) are schedule gates that trigger downstream work. The primary communication tool between owner and contractor for schedule status.",
           "procore": "project_management.schedule_task"
         },
         {
           "id": "sch-activity-identif",
           "name": "Activity Identification",
-          "desc": "The naming and coding conventions that make activities findable, filterable, and analyzable. Activity ID follows a coding convention encoding phase/area/trade (e.g., A1000, 03-EL-0100). Activity Name should describe scope, location, and trade (e.g., 'Install Ductwork - Floor 3 Zone A'). Consistent identification enables automated analysis and NLP-based activity classification across projects."
+          "desc": "The naming and coding conventions that make activities findable, filterable, and analyzable. Activity ID follows a coding convention encoding phase/area/trade (e.g., A1000, 03-EL-0100). Activity Name should describe scope, location, and trade (e.g., 'Install Ductwork - Floor 3 Zone A'). Consistent identification enables automated analysis and NLP-based activity classification across projects.",
+          "derivation": "scheduling_activity.activity_id, name, task_code. Identification fields per activity."
         },
         {
           "id": "sch-duration-progres",
           "name": "Duration & Progress",
-          "desc": "The time dimension of an activity — original duration (planned at baseline), remaining duration (days left from data date), actual start/finish dates, and percent complete. Duration types: Fixed Duration (most common — adding crew doesn't proportionally reduce time), Fixed Units (resource-driven), Physical % Complete (quantity-based — most reliable for earned value). Progress tracking method determines earned value accuracy."
+          "desc": "The time dimension of an activity \u2014 original duration (planned at baseline), remaining duration (days left from data date), actual start/finish dates, and percent complete. Duration types: Fixed Duration (most common \u2014 adding crew doesn't proportionally reduce time), Fixed Units (resource-driven), Physical % Complete (quantity-based \u2014 most reliable for earned value). Progress tracking method determines earned value accuracy.",
+          "derivation": "scheduling_activity.duration, percent_complete, actual_start_date, actual_finish_date."
         },
         {
           "id": "sch-activity-codes",
           "name": "Activity Codes",
-          "desc": "Classification codes assigned to activities for grouping, filtering, sorting, and reporting — the dimensional analysis framework for schedule data. Common codes: Trade (electrical, mechanical), Area/Zone (Building A Floor 3), Phase (foundations, structure), Responsibility (GC, sub name), CSI Division. Code completeness determines what analytics are possible."
+          "desc": "Classification codes assigned to activities for grouping, filtering, sorting, and reporting \u2014 the dimensional analysis framework for schedule data. Common codes: Trade (electrical, mechanical), Area/Zone (Building A Floor 3), Phase (foundations, structure), Responsibility (GC, sub name), CSI Division. Code completeness determines what analytics are possible.",
+          "derivation": "scheduling_activity activity codes (WBS path, area code, trade code) \u2014 typically as fields or related table."
         }
       ]
     },
@@ -49,27 +52,34 @@
         {
           "id": "sch-relationship-typ",
           "name": "Relationship Type",
-          "desc": "The logical connection between two activities that drives the CPM calculation. Four types: Finish-to-Start (FS, most common, ~80-90% of ties), Start-to-Start (SS, overlapping work), Finish-to-Finish (FF, activities ending together), Start-to-Finish (SF, rarely used, often error). SS+FF pairs represent parallel work sequences. Relationship type ratios are a core schedule quality metric — specifications often require >80% FS."
+          "desc": "The logical connection between two activities that drives the CPM calculation. Four types: Finish-to-Start (FS, most common, ~80-90% of ties), Start-to-Start (SS, overlapping work), Finish-to-Finish (FF, activities ending together), Start-to-Finish (SF, rarely used, often error). SS+FF pairs represent parallel work sequences. Relationship type ratios are a core schedule quality metric \u2014 specifications often require >80% FS.",
+          "derivation": "scheduling_relationship.relation_type \u2014 values: FS (finish-to-start), SS, FF, SF."
         },
         {
           "id": "sch-lag-lead-time",
           "name": "Lag & Lead Time",
-          "desc": "Time offset on a logical relationship — positive lag represents waiting time (concrete cure 7-28 days, submittal review 14-21 days, coating dry 1-3 days). Negative lag (lead) represents overlap — many specifications prohibit entirely. Lag should represent real waiting time with documented justification. Excessive lag can hide float and distort the critical path. Lag used to manipulate float is a common schedule gaming tactic."
+          "desc": "Time offset on a logical relationship \u2014 positive lag represents waiting time (concrete cure 7-28 days, submittal review 14-21 days, coating dry 1-3 days). Negative lag (lead) represents overlap \u2014 many specifications prohibit entirely. Lag should represent real waiting time with documented justification. Excessive lag can hide float and distort the critical path. Lag used to manipulate float is a common schedule gaming tactic.",
+          "derivation": "scheduling_relationship.lag \u2014 positive = lag (delay), negative = lead (overlap), in days."
         },
         {
           "id": "sch-dependency-class",
           "name": "Dependency Classification",
-          "desc": "Categorization of why two activities are linked — determines which relationships can change during delay analysis. Mandatory (hard logic): physical or contractual requirement (foundation before structure). Discretionary (soft logic): preferred sequence based on practice or resources (east wing before west). External: driven by events outside the team's control (permits, utility connections, owner-furnished items)."
+          "desc": "Categorization of why two activities are linked \u2014 determines which relationships can change during delay analysis. Mandatory (hard logic): physical or contractual requirement (foundation before structure). Discretionary (soft logic): preferred sequence based on practice or resources (east wing before west). External: driven by events outside the team's control (permits, utility connections, owner-furnished items).",
+          "derivation": "DERIVED from scheduling_relationship \u2014 categorize by hard (mandatory), soft (preferential), external, resource."
         },
         {
           "id": "sch-open-ends",
           "name": "Open Ends",
-          "desc": "Activities missing predecessors (open start) or successors (open finish) — logic gaps that distort CPM calculations. Only the project start and finish milestones should have open ends. Open starts can begin on the data date regardless of logic. Open finishes don't drive anything downstream. Both cause unreliable float and critical path results."
+          "desc": "Activities missing predecessors (open start) or successors (open finish) \u2014 logic gaps that distort CPM calculations. Only the project start and finish milestones should have open ends. Open starts can begin on the data date regardless of logic. Open finishes don't drive anything downstream. Both cause unreliable float and critical path results.",
+          "derivation": "INTELLIGENCE ENRICHMENT \u2014 activities with no predecessor or successor. Open-ended activities create logic gaps. Count = activities WHERE no row in scheduling_relationship as either source or target. DCMA target: \u2264 5%.",
+          "concept_type": "intelligence-enrichment"
         },
         {
           "id": "sch-logic-density",
           "name": "Logic Density & Redundancy",
-          "desc": "Schedule connectedness measured by relationship-to-activity ratio. Logic density healthy range: 1.5-2.5 relationships per activity. Below 1.2 means loosely connected (CPM unreliable). Above 3.0 may indicate over-constraining. Redundant logic: relationships that don't affect calculations because another path already controls dates — not harmful but adds noise and reduces readability."
+          "desc": "Schedule connectedness measured by relationship-to-activity ratio. Logic density healthy range: 1.5-2.5 relationships per activity. Below 1.2 means loosely connected (CPM unreliable). Above 3.0 may indicate over-constraining. Redundant logic: relationships that don't affect calculations because another path already controls dates \u2014 not harmful but adds noise and reduces readability.",
+          "derivation": "INTELLIGENCE ENRICHMENT \u2014 schedule logic density. Total logic links / total activities. Healthy schedules typically 1.5-2.0 links per activity. Low = missing logic; very high = over-constrained. From scheduling_relationship table.",
+          "concept_type": "intelligence-enrichment"
         }
       ]
     },
@@ -80,28 +90,32 @@
         {
           "id": "sch-work-calendar",
           "name": "Work Calendar",
-          "desc": "Definition of working days and hours that drives duration-to-date conversion in the CPM. Standard 5-day (Mon-Fri, default), 6-day (adds Saturday, +17% capacity), 7-day (continuous — for cure time and critical path compression), weather-adjusted (anticipated non-work days by season/region), and holiday calendars. Calendar assignment must match activity type — cure time on a 5-day calendar adds phantom non-work weekends.",
+          "desc": "Definition of working days and hours that drives duration-to-date conversion in the CPM. Standard 5-day (Mon-Fri, default), 6-day (adds Saturday, +17% capacity), 7-day (continuous \u2014 for cure time and critical path compression), weather-adjusted (anticipated non-work days by season/region), and holiday calendars. Calendar assignment must match activity type \u2014 cure time on a 5-day calendar adds phantom non-work weekends.",
           "procore": "project_management.schedule_calendar_item"
         },
         {
           "id": "sch-schedule-constra",
           "name": "Schedule Constraint",
-          "desc": "Date override on an activity that restricts CPM calculation — from permissive (ASAP, the default) to absolute (Must Start/Finish On). Every non-default constraint should have documented justification. High constraint ratios indicate date-driven rather than logic-driven scheduling, producing unreliable float and critical path results."
+          "desc": "Date override on an activity that restricts CPM calculation \u2014 from permissive (ASAP, the default) to absolute (Must Start/Finish On). Every non-default constraint should have documented justification. High constraint ratios indicate date-driven rather than logic-driven scheduling, producing unreliable float and critical path results.",
+          "derivation": "scheduling_activity constraint type and constraint date \u2014 start no earlier than, finish no later than, etc."
         },
         {
           "id": "sch-calculated-dates",
           "name": "Calculated Dates",
-          "desc": "Dates produced by the CPM forward and backward pass calculations. Early Start/Early Finish: earliest possible dates from forward pass through logic and calendars. Late Start/Late Finish: latest dates from backward pass without delaying the project. The difference (LS-ES or LF-EF) is Total Float. These are calculated outputs that respond to logic, durations, calendars, and constraints — not manual inputs."
+          "desc": "Dates produced by the CPM forward and backward pass calculations. Early Start/Early Finish: earliest possible dates from forward pass through logic and calendars. Late Start/Late Finish: latest dates from backward pass without delaying the project. The difference (LS-ES or LF-EF) is Total Float. These are calculated outputs that respond to logic, durations, calendars, and constraints \u2014 not manual inputs.",
+          "derivation": "scheduling_activity early_start, early_finish, late_start, late_finish \u2014 outputs of CPM forward+backward pass."
         },
         {
           "id": "sch-data-date",
           "name": "Data Date",
-          "desc": "The status date of the schedule update — divides past from future. All progress is recorded as-of the data date. Activities with actual start after the data date or remaining work before it are out-of-sequence. Typically month-end or contractual cut-off. Data date advancement is the heartbeat of schedule management — each monthly update advances it and recalculates the network."
+          "desc": "The status date of the schedule update \u2014 divides past from future. All progress is recorded as-of the data date. Activities with actual start after the data date or remaining work before it are out-of-sequence. Typically month-end or contractual cut-off. Data date advancement is the heartbeat of schedule management \u2014 each monthly update advances it and recalculates the network.",
+          "derivation": "scheduling_activity reporting data_date / status_date \u2014 the snapshot anchor for current schedule."
         },
         {
           "id": "sch-baseline-dates",
           "name": "Baseline Dates",
-          "desc": "The approved planned dates from the baseline schedule — the 'as-planned' reference against which all performance is measured. Original baseline (BL0) is the contractual reference submitted 30-90 days after NTP. Re-baselines (BL1, BL2) reflect approved scope changes. All variance analysis references a specific baseline. Baseline dates are immutable once approved."
+          "desc": "The approved planned dates from the baseline schedule \u2014 the 'as-planned' reference against which all performance is measured. Original baseline (BL0) is the contractual reference submitted 30-90 days after NTP. Re-baselines (BL1, BL2) reflect approved scope changes. All variance analysis references a specific baseline. Baseline dates are immutable once approved.",
+          "derivation": "scheduling_activity baseline_start_date, baseline_finish_date \u2014 preserved baseline for variance."
         }
       ]
     },
@@ -112,22 +126,30 @@
         {
           "id": "sch-float-slack",
           "name": "Float / Slack",
-          "desc": "Calendar days an activity can be delayed without downstream or project-level impact. Total Float: delay without delaying project completion (LF-EF). Free Float: delay without delaying any immediate successor. Negative Float: the schedule exceeds the completion date — the project is projected late. Float distribution (histogram of TF values across all activities) is a key schedule health indicator."
+          "desc": "Calendar days an activity can be delayed without downstream or project-level impact. Total Float: delay without delaying project completion (LF-EF). Free Float: delay without delaying any immediate successor. Negative Float: the schedule exceeds the completion date \u2014 the project is projected late. Float distribution (histogram of TF values across all activities) is a key schedule health indicator.",
+          "derivation": "INTELLIGENCE ENRICHMENT \u2014 total float per activity. Computed: late_finish - early_finish. Aggregates: total project float, % of activities with float < 5 days (high risk).",
+          "concept_type": "intelligence-enrichment"
         },
         {
           "id": "sch-critical-path",
           "name": "Critical Path",
-          "desc": "The longest continuous chain of activities and relationships determining minimum project duration — zero or least total float. Typically 10-15% of activities are critical on a well-built schedule. The critical path shifts over the project life: early (foundations/structure), mid (MEP/enclosure), late (finishes/commissioning). Near-critical paths (within 10-20 working day threshold) are at risk of becoming critical."
+          "desc": "The longest continuous chain of activities and relationships determining minimum project duration \u2014 zero or least total float. Typically 10-15% of activities are critical on a well-built schedule. The critical path shifts over the project life: early (foundations/structure), mid (MEP/enclosure), late (finishes/commissioning). Near-critical paths (within 10-20 working day threshold) are at risk of becoming critical.",
+          "derivation": "INTELLIGENCE ENRICHMENT \u2014 set of activities forming the longest dependency path through the schedule. Computed via CPM forward+backward pass on scheduling_activity + scheduling_relationship. Activities with total_float = 0 are on the critical path. Re-computed on each schedule update.",
+          "concept_type": "intelligence-enrichment"
         },
         {
           "id": "sch-path-analysis",
           "name": "Path Analysis Methods",
-          "desc": "Advanced techniques for tracing schedule logic beyond simple total float. Longest Path: traces driving relationships backward from project finish — more reliable than TF=0 when constraints distort float. Driving Relationships: the specific predecessor tie controlling each activity's early dates (not all predecessors drive). Path convergence: where multiple logic chains merge, increasing delay sensitivity."
+          "desc": "Advanced techniques for tracing schedule logic beyond simple total float. Longest Path: traces driving relationships backward from project finish \u2014 more reliable than TF=0 when constraints distort float. Driving Relationships: the specific predecessor tie controlling each activity's early dates (not all predecessors drive). Path convergence: where multiple logic chains merge, increasing delay sensitivity.",
+          "derivation": "METHODOLOGY \u2014 multiple-path analysis (top 5 critical paths, near-critical paths). Computed by CPM tool, not stored in raw data.",
+          "concept_type": "framework-or-methodology"
         },
         {
           "id": "sch-earned-schedule",
           "name": "Earned Schedule",
-          "desc": "Time-based earned value method — measures schedule performance in time units instead of cost units. ES = the time at which current earned value should have been achieved per baseline. SPI(t) = ES / Actual Time. Unlike traditional SPI (EV/PV) which converges to 1.0 at project end masking late delivery, ES-based SPI(t) remains accurate throughout. Growing adoption as the state-of-the-art schedule performance measurement."
+          "desc": "Time-based earned value method \u2014 measures schedule performance in time units instead of cost units. ES = the time at which current earned value should have been achieved per baseline. SPI(t) = ES / Actual Time. Unlike traditional SPI (EV/PV) which converges to 1.0 at project end masking late delivery, ES-based SPI(t) remains accurate throughout. Growing adoption as the state-of-the-art schedule performance measurement.",
+          "derivation": "INTELLIGENCE ENRICHMENT \u2014 time-based EVM analog. ES(t) = the time at which the planned value equals the current earned value. Formulas: SV(t) = ES - AT, SPI(t) = ES / AT. Computed from scheduling_activity percent_complete + baseline. More accurate than dollar SV near completion.",
+          "concept_type": "intelligence-enrichment"
         }
       ]
     },
@@ -138,29 +160,32 @@
         {
           "id": "sch-baseline-schedul",
           "name": "Baseline Schedule",
-          "desc": "The approved planned schedule against which all performance is measured — the contractual 'as-planned' reference. Original Baseline (BL0) submitted 30-90 days after NTP per typical specifications with 2-4 review cycles. Re-baselines (BL1, BL2) approved only for scope changes. What-if schedules test scenarios without affecting the live schedule. Baseline review checks specification compliance."
+          "desc": "The approved planned schedule against which all performance is measured \u2014 the contractual 'as-planned' reference. Original Baseline (BL0) submitted 30-90 days after NTP per typical specifications with 2-4 review cycles. Re-baselines (BL1, BL2) approved only for scope changes. What-if schedules test scenarios without affecting the live schedule. Baseline review checks specification compliance.",
+          "procore": "project_management.schedule_task"
         },
         {
           "id": "sch-schedule-update",
           "name": "Schedule Update",
-          "desc": "The periodic progress recording and schedule recalculation cycle — the primary schedule management process. Monthly standard (bi-weekly on fast-track). Each update: advance data date, record actual dates, update remaining durations, adjust logic, recalculate CPM. Accompanied by a written narrative (2-10 pages) explaining what changed and why. Logic changes and out-of-sequence progress should be documented.",
+          "desc": "The periodic progress recording and schedule recalculation cycle \u2014 the primary schedule management process. Monthly standard (bi-weekly on fast-track). Each update: advance data date, record actual dates, update remaining durations, adjust logic, recalculate CPM. Accompanied by a written narrative (2-10 pages) explaining what changed and why. Logic changes and out-of-sequence progress should be documented.",
           "procore": "project_management.schedule_task_changes"
         },
         {
           "id": "sch-look-ahead",
           "name": "Look-Ahead Schedule",
-          "desc": "Rolling short-term schedule showing daily/weekly detail for the next 3-6 weeks — the superintendent's primary planning tool. Three-week: daily detail for crew assignments, material deliveries, inspections. Six-week: weekly detail for coordination and procurement. Updated weekly in coordination meetings. More detailed than the CPM schedule — bridges the formal schedule to field execution.",
+          "desc": "Rolling short-term schedule showing daily/weekly detail for the next 3-6 weeks \u2014 the superintendent's primary planning tool. Three-week: daily detail for crew assignments, material deliveries, inspections. Six-week: weekly detail for coordination and procurement. Updated weekly in coordination meetings. More detailed than the CPM schedule \u2014 bridges the formal schedule to field execution.",
           "procore": "project_management.schedule_lookahead"
         },
         {
           "id": "sch-recovery-schedul",
           "name": "Recovery Schedule",
-          "desc": "Plan to recover lost time and return to the contractual completion date after a delay. Required when negative float exceeds a contract threshold (often 10-20 days). Must show specific recovery actions: overtime, added crews, resequencing, prefabrication, additional shifts. Compressed durations without documented justification are not accepted by owners or courts."
+          "desc": "Plan to recover lost time and return to the contractual completion date after a delay. Required when negative float exceeds a contract threshold (often 10-20 days). Must show specific recovery actions: overtime, added crews, resequencing, prefabrication, additional shifts. Compressed durations without documented justification are not accepted by owners or courts.",
+          "derivation": "DERIVED \u2014 a schedule update with revised dates aimed at restoring baseline finish. Detected by schedule_task_changes with reason indicating recovery."
         },
         {
           "id": "sch-as-built",
           "name": "As-Built Schedule",
-          "desc": "Final schedule reflecting actual dates for all activities — the factual record of how construction actually progressed. All activities have actual start and actual finish with no remaining duration. Quality depends entirely on consistent monthly updating throughout the project. Required closeout deliverable and the primary evidence in delay disputes."
+          "desc": "Final schedule reflecting actual dates for all activities \u2014 the factual record of how construction actually progressed. All activities have actual start and actual finish with no remaining duration. Quality depends entirely on consistent monthly updating throughout the project. Required closeout deliverable and the primary evidence in delay disputes.",
+          "derivation": "DERIVED \u2014 final schedule snapshot at project close. scheduling_activity at actual_finish_date for all completed work."
         }
       ]
     },
@@ -171,22 +196,26 @@
         {
           "id": "sch-labor-loading",
           "name": "Labor Loading",
-          "desc": "Trade-specific labor hours assigned to schedule activities — drives manpower histograms, workforce planning, and crew optimization. Shows when each trade peaks and valleys over the project. Essential for site logistics (parking, laydown, temporary facilities). Resource-loaded schedules connect the time model to the workforce — without them, the schedule has no resource constraints."
+          "desc": "Trade-specific labor hours assigned to schedule activities \u2014 drives manpower histograms, workforce planning, and crew optimization. Shows when each trade peaks and valleys over the project. Essential for site logistics (parking, laydown, temporary facilities). Resource-loaded schedules connect the time model to the workforce \u2014 without them, the schedule has no resource constraints.",
+          "derivation": "DERIVED \u2014 labor hours per activity. Joins scheduling_activity to workforce.labor_allocations by cost_code or activity_id."
         },
         {
           "id": "sch-equip-loading",
           "name": "Equipment Loading",
-          "desc": "Major equipment utilization assigned to schedule activities — identifies mobilization timing, utilization gaps, and equipment-driven constraints. Tower crane is the most impactful — crane time allocation drives structural and enclosure sequences. Equipment moves between projects create inter-project constraints not visible within a single project schedule."
+          "desc": "Major equipment utilization assigned to schedule activities \u2014 identifies mobilization timing, utilization gaps, and equipment-driven constraints. Tower crane is the most impactful \u2014 crane time allocation drives structural and enclosure sequences. Equipment moves between projects create inter-project constraints not visible within a single project schedule.",
+          "derivation": "DERIVED \u2014 equipment hours per activity. Joins scheduling_activity to workforce.equipment_project_log."
         },
         {
           "id": "sch-cost-loading",
           "name": "Cost Loading & Cash Flow",
-          "desc": "Dollar values distributed across schedule activities for earned value measurement and cash flow projection. Activity cost = labor + material + equipment + subcontract. Produces the S-curve (cumulative planned vs. actual cost over time) — the universal progress visualization. Early-loaded curves (front-loading pay applications) vs. realistic distribution is a common owner concern."
+          "desc": "Dollar values distributed across schedule activities for earned value measurement and cash flow projection. Activity cost = labor + material + equipment + subcontract. Produces the S-curve (cumulative planned vs. actual cost over time) \u2014 the universal progress visualization. Early-loaded curves (front-loading pay applications) vs. realistic distribution is a common owner concern.",
+          "derivation": "DERIVED \u2014 cost per activity / per day. Joins scheduling_activity to budget_line_items via cost_code/WBS. Used for cash flow."
         },
         {
           "id": "sch-resource-levelin",
           "name": "Resource Leveling",
-          "desc": "Adjusting activity timing within available float to smooth resource demand — avoid peaks and valleys without extending the project. Manual leveling (scheduler judgment) preferred in construction over auto-leveling (often produces impractical sequences). Uses free float to shift non-critical activities without affecting the critical path."
+          "desc": "Adjusting activity timing within available float to smooth resource demand \u2014 avoid peaks and valleys without extending the project. Manual leveling (scheduler judgment) preferred in construction over auto-leveling (often produces impractical sequences). Uses free float to shift non-critical activities without affecting the critical path.",
+          "derivation": "DERIVED \u2014 adjusted activity dates after resolving resource conflicts. Comparison of unleveled vs leveled CPM output."
         }
       ]
     },
@@ -197,27 +226,34 @@
         {
           "id": "sch-delay-class",
           "name": "Delay Classification",
-          "desc": "Categorization of delays by cause and remedy — determines entitlement to time extension and/or compensation. Excusable Compensable: owner-caused, time + money (design errors, late owner items). Excusable Non-Compensable: neither party at fault, time only (weather, force majeure). Non-Excusable: contractor-caused, no relief, may trigger liquidated damages. Concurrent: overlapping independent delays — most disputed. Pacing: intentional slowdown because another delay makes original pace unnecessary."
+          "desc": "Categorization of delays by cause and remedy \u2014 determines entitlement to time extension and/or compensation. Excusable Compensable: owner-caused, time + money (design errors, late owner items). Excusable Non-Compensable: neither party at fault, time only (weather, force majeure). Non-Excusable: contractor-caused, no relief, may trigger liquidated damages. Concurrent: overlapping independent delays \u2014 most disputed. Pacing: intentional slowdown because another delay makes original pace unnecessary.",
+          "derivation": "scheduling_activity / schedule_task_changes reason field \u2014 categorized: weather, owner-directed, design, third-party."
         },
         {
           "id": "sch-time-impact",
           "name": "Time Impact Analysis",
-          "desc": "The gold standard prospective delay analysis method — inserts a fragnet (delay event network of 3-20 activities) into the updated schedule at the time of impact and compares before/after CPM results. Requires: valid updated schedule at the time of delay, fragnet representing the delay event, and before/after comparison. Quality depends entirely on schedule update quality. Most accepted method in US construction."
+          "desc": "The gold standard prospective delay analysis method \u2014 inserts a fragnet (delay event network of 3-20 activities) into the updated schedule at the time of impact and compares before/after CPM results. Requires: valid updated schedule at the time of delay, fragnet representing the delay event, and before/after comparison. Quality depends entirely on schedule update quality. Most accepted method in US construction.",
+          "derivation": "INTELLIGENCE ENRICHMENT \u2014 Time Impact Analysis (TIA) on a delay event. Insert hypothetical delay activity, re-run CPM, compare new completion vs baseline. Used for change order schedule justification. Computed on demand per delay event.",
+          "concept_type": "intelligence-enrichment"
         },
         {
           "id": "sch-retrospective-de",
           "name": "Retrospective Delay Analysis",
-          "desc": "After-the-fact methods comparing planned vs. actual schedules. As-Planned vs. As-Built: simplest, compares BL0 to actual dates, shows variance but not causation. Collapsed As-Built (But-For): removes delay events from as-built to show what would have happened — favored by claimants but criticized as speculative. Windows Analysis: period-by-period analysis, most thorough and defensible but very labor-intensive."
+          "desc": "After-the-fact methods comparing planned vs. actual schedules. As-Planned vs. As-Built: simplest, compares BL0 to actual dates, shows variance but not causation. Collapsed As-Built (But-For): removes delay events from as-built to show what would have happened \u2014 favored by claimants but criticized as speculative. Windows Analysis: period-by-period analysis, most thorough and defensible but very labor-intensive.",
+          "derivation": "INTELLIGENCE ENRICHMENT \u2014 Windows / As-Planned vs As-Built / Collapsed As-Built methods. Apportions delay to causes by comparing schedule snapshots. Inputs: schedule_task_changes history (when_at, reason), daily_log_delay attribution, change_event linkages.",
+          "concept_type": "intelligence-enrichment"
         },
         {
           "id": "sch-time-extension",
           "name": "Time Extension Request",
-          "desc": "Formal written request for additional contract time due to an excusable delay event. Must be submitted within the contract notice period (typically 7-21 days). Requires: delay description, critical path impact demonstration, and supporting documentation. Timely notice is critical — many contracts bar late claims. Links to change events for cost impact when delay is also compensable."
+          "desc": "Formal written request for additional contract time due to an excusable delay event. Must be submitted within the contract notice period (typically 7-21 days). Requires: delay description, critical path impact demonstration, and supporting documentation. Timely notice is critical \u2014 many contracts bar late claims. Links to change events for cost impact when delay is also compensable.",
+          "derivation": "Change order with schedule impact. finance.change_events / commitment_change_orders WHERE schedule_impact_value > 0."
         },
         {
           "id": "sch-acceleration",
           "name": "Acceleration",
-          "desc": "Direction (explicit or constructive) to complete work faster than the adjusted contractual schedule. Explicit: written owner directive with cost reimbursement. Constructive: owner denies justified time extension but insists on original completion date, forcing contractor to accelerate at own cost — a major claim category. Methods: overtime, added crews, resequencing, prefabrication, additional shifts."
+          "desc": "Direction (explicit or constructive) to complete work faster than the adjusted contractual schedule. Explicit: written owner directive with cost reimbursement. Constructive: owner denies justified time extension but insists on original completion date, forcing contractor to accelerate at own cost \u2014 a major claim category. Methods: overtime, added crews, resequencing, prefabrication, additional shifts.",
+          "derivation": "DERIVED \u2014 schedule compression to recover time. Detected by reduction in activity duration with corresponding cost increase (overtime, additional crews)."
         }
       ]
     },
@@ -228,17 +264,23 @@
         {
           "id": "sch-dcma-14-point",
           "name": "DCMA 14-Point Assessment",
-          "desc": "Defense Contract Management Agency schedule assessment framework — 14 checks covering logic, durations, float, constraints, relationships, resources, and critical path. Originally military but now the most widely recognized schedule health framework in commercial construction. Checks 1-9 universally applicable. Checks 10-14 require more mature scheduling. Passing 11+ out of 14 = healthy."
+          "desc": "Defense Contract Management Agency schedule assessment framework \u2014 14 checks covering logic, durations, float, constraints, relationships, resources, and critical path. Originally military but now the most widely recognized schedule health framework in commercial construction. Checks 1-9 universally applicable. Checks 10-14 require more mature scheduling. Passing 11+ out of 14 = healthy.",
+          "derivation": "INTELLIGENCE ENRICHMENT \u2014 DCMA 14-point schedule assessment. Programmatic check of schedule quality across 14 criteria (logic, leads, lags, relationship types, hard constraints, float, float negative, high duration, invalid dates, resource loading, missed tasks, critical path test, CPLI, BEI). Each computed from scheduling_activity + scheduling_relationship.",
+          "concept_type": "intelligence-enrichment"
         },
         {
           "id": "sch-specification-co",
           "name": "Specification Compliance",
-          "desc": "Contract-specific schedule requirements that must be met for baseline approval and ongoing updates. Activity duration limits (typically 15-20 working day max), relationship type ratios (FS >80-90%), calendar assignment rules (cure on 7-day, work on 5/6-day), constraint limits (<5% non-ASAP), open end prohibitions. Non-compliant schedules are rejected in review."
+          "desc": "Contract-specific schedule requirements that must be met for baseline approval and ongoing updates. Activity duration limits (typically 15-20 working day max), relationship type ratios (FS >80-90%), calendar assignment rules (cure on 7-day, work on 5/6-day), constraint limits (<5% non-ASAP), open end prohibitions. Non-compliant schedules are rejected in review.",
+          "derivation": "INTELLIGENCE ENRICHMENT \u2014 schedule specification compliance. Owner contract spec compliance check: submittal frequency, update intervals, level of detail, narrative completeness. Composite check against contract requirements.",
+          "concept_type": "intelligence-enrichment"
         },
         {
           "id": "sch-critical-path-2",
           "name": "Critical Path Length Index",
-          "desc": "(Critical path remaining duration + total float) / critical path remaining duration — a single-number predictor of schedule outcome. CPLI > 1.0: buffer exists. CPLI = 1.0: no buffer. CPLI < 1.0: project will finish late without recovery. CPLI < 0.95 is a strong predictor of missing the completion date. Simple to calculate, powerful for executive reporting and trend analysis."
+          "desc": "(Critical path remaining duration + total float) / critical path remaining duration \u2014 a single-number predictor of schedule outcome. CPLI > 1.0: buffer exists. CPLI = 1.0: no buffer. CPLI < 1.0: project will finish late without recovery. CPLI < 0.95 is a strong predictor of missing the completion date. Simple to calculate, powerful for executive reporting and trend analysis.",
+          "derivation": "INTELLIGENCE ENRICHMENT \u2014 Critical Path Length Index (CPLI). Formula: (project length + total CP float) / project length. CPLI \u2248 1.0 means schedule is on track; CPLI < 1.0 means recovery needed. Computed from scheduling_activity duration + finish variance.",
+          "concept_type": "intelligence-enrichment"
         }
       ]
     },
@@ -249,22 +291,28 @@
         {
           "id": "sch-schedule-levels",
           "name": "Schedule Levels",
-          "desc": "The hierarchy of schedule detail — from executive summary to daily work plan. Master/Summary: 50-200 activities, phase milestones, the owner's view. Detailed CPM: 500-5000+ activities, full logic-driven network, the contractual schedule of record for performance measurement and delay analysis. Daily Work Plan: crew-level assignments for today's work. Each level should mathematically trace to the one above it."
+          "desc": "The hierarchy of schedule detail \u2014 from executive summary to daily work plan. Master/Summary: 50-200 activities, phase milestones, the owner's view. Detailed CPM: 500-5000+ activities, full logic-driven network, the contractual schedule of record for performance measurement and delay analysis. Daily Work Plan: crew-level assignments for today's work. Each level should mathematically trace to the one above it.",
+          "derivation": "See sch-level-1 through sch-level-5 (already derived). This is the parent concept.",
+          "concept_type": "framework-or-methodology"
         },
         {
           "id": "sch-cpm-tool",
           "name": "CPM Tool Integration",
-          "desc": "Importing the detailed schedule from the authoring tool (P6, MS Project, Asta) into the project management platform. The schedule is authored externally and consumed broadly. Import via XER/XML/MPP format. Source activity ID maps to platform task ID for ongoing synchronization. Regular re-sync required after monthly updates."
+          "desc": "Importing the detailed schedule from the authoring tool (P6, MS Project, Asta) into the project management platform. The schedule is authored externally and consumed broadly. Import via XER/XML/MPP format. Source activity ID maps to platform task ID for ongoing synchronization. Regular re-sync required after monthly updates.",
+          "derivation": "FRAMEWORK \u2014 external CPM tool integration (P6, MS Project, Smartsheet). Procore Schedule tool consumes/produces XER/MPP imports. Not a data field per se.",
+          "concept_type": "framework-or-methodology"
         },
         {
           "id": "sch-schedule-field",
           "name": "Schedule-to-Field Linkage",
-          "desc": "Connecting CPM activities to field data — daily logs, inspections, RFIs — to validate progress and identify discrepancies between planned and actual execution. The gap between CPM and field reality is the central problem in construction scheduling. Most schedulers update from verbal reports. Systems connecting the planned schedule to daily logs provide independent validation — where project management platforms add value beyond standalone scheduling tools."
+          "desc": "Connecting CPM activities to field data \u2014 daily logs, inspections, RFIs \u2014 to validate progress and identify discrepancies between planned and actual execution. The gap between CPM and field reality is the central problem in construction scheduling. Most schedulers update from verbal reports. Systems connecting the planned schedule to daily logs provide independent validation \u2014 where project management platforms add value beyond standalone scheduling tools.",
+          "derivation": "FRAMEWORK \u2014 link between schedule activities and field execution. Implemented via scheduling_activity.cost_code linkage to daily reporting.",
+          "concept_type": "framework-or-methodology"
         },
         {
           "id": "sch-schedule-chg",
           "name": "Schedule Change Tracking",
-          "desc": "Timestamped record of every change to every schedule activity — capturing old values, new values, author, timestamp, and reason. Critical evidence in delay disputes: who changed what and when. Change frequency per activity identifies unstable areas. Change justification quality indicates scheduling discipline. Includes field-initiated schedule update requests where subcontractors propose changes for scheduler review.",
+          "desc": "Timestamped record of every change to every schedule activity \u2014 capturing old values, new values, author, timestamp, and reason. Critical evidence in delay disputes: who changed what and when. Change frequency per activity identifies unstable areas. Change justification quality indicates scheduling discipline. Includes field-initiated schedule update requests where subcontractors propose changes for scheduler review.",
           "procore": "project_management.schedule_task_changes"
         }
       ]
@@ -276,22 +324,30 @@
         {
           "id": "sch-last-planner",
           "name": "Last Planner System",
-          "desc": "Collaborative scheduling methodology where the people doing the work make reliable promises. Pull Planning: trades work backward from milestones to identify handoffs and constraints. Make-Ready Planning: clearing constraints (materials, info, prerequisite work, space) before scheduling work. Percent Plan Complete (PPC): tasks completed as committed / tasks committed — the core reliability metric. Reasons for Non-Completion: root cause tracking of missed commitments."
+          "desc": "Collaborative scheduling methodology where the people doing the work make reliable promises. Pull Planning: trades work backward from milestones to identify handoffs and constraints. Make-Ready Planning: clearing constraints (materials, info, prerequisite work, space) before scheduling work. Percent Plan Complete (PPC): tasks completed as committed / tasks committed \u2014 the core reliability metric. Reasons for Non-Completion: root cause tracking of missed commitments.",
+          "derivation": "METHODOLOGY (Lean Construction Institute) \u2014 uses lookahead + weekly work plan + made-ready process. Implemented through schedule_lookahead_task. PPC is the primary metric (see sch-percent-plan).",
+          "concept_type": "framework-or-methodology"
         },
         {
           "id": "sch-takt-time",
           "name": "Takt Time Planning",
-          "desc": "Fixed-rhythm scheduling where each trade moves through zones at the same pace — manufacturing flow applied to construction. Takt time = available time / number of zones. All trades match the same rhythm. Train/wagon scheduling: trades move like train cars through zones in fixed sequence at fixed intervals. Exposes bottleneck trades immediately — if one trade can't match the takt, the whole flow stops."
+          "desc": "Fixed-rhythm scheduling where each trade moves through zones at the same pace \u2014 manufacturing flow applied to construction. Takt time = available time / number of zones. All trades match the same rhythm. Train/wagon scheduling: trades move like train cars through zones in fixed sequence at fixed intervals. Exposes bottleneck trades immediately \u2014 if one trade can't match the takt, the whole flow stops.",
+          "derivation": "METHODOLOGY \u2014 Lean construction takt planning: rhythm-based scheduling, fixed-duration zones. Detected by repetitive activities with consistent durations across zones.",
+          "concept_type": "framework-or-methodology"
         },
         {
           "id": "sch-linear-schedulin",
           "name": "Linear Scheduling",
-          "desc": "Scheduling methods for repetitive or linear work where location is the primary axis. Line of Balance (LOB): graphical method showing production rate across identical units — each trade plotted as a line with slope = production rate. Time-Distance Diagram: for linear infrastructure (roads, tunnels, pipelines) with distance as the primary axis. Standard for repetitive work but not well-supported in traditional CPM tools."
+          "desc": "Scheduling methods for repetitive or linear work where location is the primary axis. Line of Balance (LOB): graphical method showing production rate across identical units \u2014 each trade plotted as a line with slope = production rate. Time-Distance Diagram: for linear infrastructure (roads, tunnels, pipelines) with distance as the primary axis. Standard for repetitive work but not well-supported in traditional CPM tools.",
+          "derivation": "METHODOLOGY \u2014 linear scheduling for repetitive/linear work (highways, tunnels, high-rise floors). Activity location vs time plot. Less common in Procore \u2014 typically authored externally.",
+          "concept_type": "framework-or-methodology"
         },
         {
           "id": "sch-4d-5d-bim",
           "name": "4D/5D BIM Scheduling",
-          "desc": "Linking 3D BIM model elements to CPM schedule activities for visual construction sequence simulation (4D) and adding cost data for time-phased cost visualization (5D). Animation shows construction progression over time. Powerful for communicating sequence to non-schedule audiences. Requires maintained links between model, schedule, and cost — high effort but high communication value."
+          "desc": "Linking 3D BIM model elements to CPM schedule activities for visual construction sequence simulation (4D) and adding cost data for time-phased cost visualization (5D). Animation shows construction progression over time. Powerful for communicating sequence to non-schedule audiences. Requires maintained links between model, schedule, and cost \u2014 high effort but high communication value.",
+          "derivation": "METHODOLOGY \u2014 schedule and cost linked to BIM model. Bridges scheduling_activity to bim-model-element via cost code or location. See models-and-assets domain.",
+          "concept_type": "framework-or-methodology"
         }
       ]
     },
@@ -302,42 +358,58 @@
         {
           "id": "sch-schedule-perf",
           "name": "Schedule Performance Index",
-          "desc": "Earned value / planned value — the primary schedule efficiency metric. Traditional SPI = EV/PV (cost-based, converges to 1.0 at project end, masking late delivery). Earned Schedule SPI(t) = ES/AT (time-based, remains accurate throughout). Calculation: SPI = cumulative EV / cumulative PV at data date. SPI(t) is the recommended variant for construction."
+          "desc": "Earned value / planned value \u2014 the primary schedule efficiency metric. Traditional SPI = EV/PV (cost-based, converges to 1.0 at project end, masking late delivery). Earned Schedule SPI(t) = ES/AT (time-based, remains accurate throughout). Calculation: SPI = cumulative EV / cumulative PV at data date. SPI(t) is the recommended variant for construction.",
+          "derivation": "DERIVED \u2014 Schedule Performance Index. EV / PV (formula). See fi-evm-spi for paired metric. Computed from scheduling_activity + budget_line_items.",
+          "concept_type": "intelligence-enrichment"
         },
         {
           "id": "sch-baseline-executi",
           "name": "Baseline Execution Index",
-          "desc": "Activities completed on or before baseline finish date / total activities completed in the period — measures execution discipline. Simpler and more intuitive than SPI. Calculation: BEI = activities finishing ≤ BL finish / all activities finishing in period."
+          "desc": "Activities completed on or before baseline finish date / total activities completed in the period \u2014 measures execution discipline. Simpler and more intuitive than SPI. Calculation: BEI = activities finishing \u2264 BL finish / all activities finishing in period.",
+          "derivation": "INTELLIGENCE ENRICHMENT \u2014 Baseline Execution Index (BEI). Cumulative tasks completed / cumulative tasks scheduled to be complete by data date. BEI \u2248 1.0 = on plan. < 1.0 = behind. From scheduling_activity status.",
+          "concept_type": "intelligence-enrichment"
         },
         {
           "id": "sch-float-erosion",
           "name": "Float Erosion Rate",
-          "desc": "Rate of total float decrease across schedule updates — reveals whether the schedule is tightening faster than planned work completion. Calculation: average TF change per update period or % of activities losing float period-over-period. Accelerating float erosion is a leading indicator of critical path expansion."
+          "desc": "Rate of total float decrease across schedule updates \u2014 reveals whether the schedule is tightening faster than planned work completion. Calculation: average TF change per update period or % of activities losing float period-over-period. Accelerating float erosion is a leading indicator of critical path expansion.",
+          "derivation": "INTELLIGENCE ENRICHMENT \u2014 rate at which float is being consumed over time. Compare current float per critical-near activity vs baseline float. Erosion velocity = (baseline float - current float) / weeks elapsed. High erosion = schedule risk rising.",
+          "concept_type": "intelligence-enrichment"
         },
         {
           "id": "sch-milestone-adhere",
           "name": "Milestone Adherence Rate",
-          "desc": "Milestones completed on or before their baseline date / total milestones due to date — a high-level schedule health KPI. Focuses on key events rather than all activities. More meaningful to owners and executives than SPI or float analysis."
+          "desc": "Milestones completed on or before their baseline date / total milestones due to date \u2014 a high-level schedule health KPI. Focuses on key events rather than all activities. More meaningful to owners and executives than SPI or float analysis.",
+          "derivation": "INTELLIGENCE ENRICHMENT \u2014 milestone adherence rate. # milestones met on/before baseline / total milestones. Derived from scheduling_activity WHERE is_milestone = TRUE.",
+          "concept_type": "intelligence-enrichment"
         },
         {
           "id": "sch-critical-activit",
           "name": "Critical Activity Ratio",
-          "desc": "Percentage of remaining activities that are critical (TF ≤ 0) — measures how much of the schedule is at risk of delay. Calculation: critical activities / total remaining activities. Rising ratio indicates schedule deterioration as parallel paths converge and recovery room shrinks."
+          "desc": "Percentage of remaining activities that are critical (TF \u2264 0) \u2014 measures how much of the schedule is at risk of delay. Calculation: critical activities / total remaining activities. Rising ratio indicates schedule deterioration as parallel paths converge and recovery room shrinks.",
+          "derivation": "INTELLIGENCE ENRICHMENT \u2014 % of activities on critical path. High % (>20%) often signals over-constrained schedule. Derived from total_float = 0 activity count / total activity count.",
+          "concept_type": "intelligence-enrichment"
         },
         {
           "id": "sch-percent-plan",
           "name": "Percent Plan Complete",
-          "desc": "Percentage of weekly commitments completed as planned — the core lean scheduling metric from the Last Planner System. Calculation: PPC = tasks completed as committed / tasks committed. Measures workflow reliability, not schedule progress. A project can be on schedule with low PPC (luck) or behind with high PPC (reliable but slow)."
+          "desc": "Percentage of weekly commitments completed as planned \u2014 the core lean scheduling metric from the Last Planner System. Calculation: PPC = tasks completed as committed / tasks committed. Measures workflow reliability, not schedule progress. A project can be on schedule with low PPC (luck) or behind with high PPC (reliable but slow).",
+          "derivation": "INTELLIGENCE ENRICHMENT \u2014 Percent Plan Complete (PPC). Lean construction metric. % of weekly committed tasks actually completed. Inputs: schedule_lookahead_task with planned vs actual completion. PPC > 80% = stable; < 60% = unreliable planning.",
+          "concept_type": "intelligence-enrichment"
         },
         {
           "id": "sch-out-sequence",
           "name": "Out-of-Sequence Rate",
-          "desc": "Activities with progress that violates their logical predecessors / total in-progress activities — indicates schedule-to-field alignment. Calculation: out-of-sequence activities / total in-progress. High rate means the field is working in a different order than the schedule shows."
+          "desc": "Activities with progress that violates their logical predecessors / total in-progress activities \u2014 indicates schedule-to-field alignment. Calculation: out-of-sequence activities / total in-progress. High rate means the field is working in a different order than the schedule shows.",
+          "derivation": "INTELLIGENCE ENRICHMENT \u2014 out-of-sequence work rate. % of activities started before predecessors complete (per scheduling_relationship). High rate = logic violations, often masking real schedule issues.",
+          "concept_type": "intelligence-enrichment"
         },
         {
           "id": "sch-schedule-health",
           "name": "Schedule Health Score",
-          "desc": "Composite metric aggregating multiple quality indicators into a single score — typically based on DCMA 14-Point Assessment. Each check is binary pass/fail; total pass count produces the health score. Enables non-schedulers to understand schedule quality at a glance. Can be automated from imported schedule data for continuous monitoring."
+          "desc": "Composite metric aggregating multiple quality indicators into a single score \u2014 typically based on DCMA 14-Point Assessment. Each check is binary pass/fail; total pass count produces the health score. Enables non-schedulers to understand schedule quality at a glance. Can be automated from imported schedule data for continuous monitoring.",
+          "derivation": "INTELLIGENCE ENRICHMENT \u2014 composite schedule health score per project. Combines: CPLI, SPI(t), float erosion rate, missing logic %, % critical activities, baseline preservation. Single-number health indicator for executive dashboard.",
+          "concept_type": "intelligence-enrichment"
         }
       ]
     },
@@ -348,8 +420,74 @@
         {
           "id": "sch-delay-predict",
           "name": "Schedule Delay Prediction",
-          "procore": "project_management.daily_log_delay",
-          "desc": "Predicts schedule delay risk using leading indicators from daily log delay records and schedule task change patterns. Primary signal: daily_log_delay frequency and duration by type (Weather, Material, Owner Directive, Existing Conditions, etc.) with structured delay_type classification. Secondary signal: schedule_task_changes tracking actual-start and actual-finish date movements across successive schedule updates — identifies activities slipping before they hit the critical path. Combined model: projects with above-median delay frequency in months 1-3 show higher likelihood of milestone slip. Segmented by delay type, project type, and season for regional and temporal pattern detection."
+          "desc": "Predicts schedule delay risk using leading indicators from daily log delay records and schedule task change patterns. Primary signal: daily_log_delay frequency and duration by type (Weather, Material, Owner Directive, Existing Conditions, etc.) with structured delay_type classification. Secondary signal: schedule_task_changes tracking actual-start and actual-finish date movements across successive schedule updates \u2014 identifies activities slipping before they hit the critical path. Combined model: projects with above-median delay frequency in months 1-3 show higher likelihood of milestone slip. Segmented by delay type, project type, and season for regional and temporal pattern detection.",
+          "derivation": "INTELLIGENCE ENRICHMENT \u2014 predictive schedule delay. Inputs: float erosion velocity, RFI cycle time vs lookahead, submittal aging on critical activities, material delay signals, productivity vs estimate. Predicts likely completion date variance over next 30/60/90 days.",
+          "concept_type": "intelligence-enrichment"
+        }
+      ]
+    },
+    {
+      "name": "Schedule Atoms",
+      "color": "#ff8a65",
+      "nodes": [
+        {
+          "id": "sc-activity",
+          "name": "Schedule Activity",
+          "procore": "project_management.scheduling_activity",
+          "desc": "The atomic unit of a schedule \u2014 a single task with start, end, duration, predecessors, percent complete. The schedule domain currently models high-level concepts (Master Schedule, Milestone) but not the atom. Required for any granular scheduling reasoning. CPM analysis happens at the activity level."
+        }
+      ]
+    },
+    {
+      "name": "Short-Interval Planning",
+      "color": "#ffab91",
+      "nodes": [
+        {
+          "id": "sc-lookahead-task",
+          "name": "Lookahead Task",
+          "procore": "project_management.schedule_lookahead_task",
+          "desc": "A task in a 3-week or 4-week lookahead \u2014 how superintendents actually plan day-to-day work. Distinct from the master schedule (longer-range). Lean construction pull-planning happens at this level. Tasks are made-ready by clearing constraints."
+        }
+      ]
+    },
+    {
+      "name": "Schedule Levels",
+      "color": "#ff9966",
+      "nodes": [
+        {
+          "id": "sch-level-1",
+          "name": "Level 1 \u2014 Executive Summary Schedule",
+          "procore": "",
+          "desc": "Highest-level schedule view. Major milestones, key dates, single-page summary for executive stakeholders. AGC standard schedule level. Typically 10-25 lines.",
+          "derivation": "Project schedule with COUNT(scheduling_activity) BETWEEN 10 AND 25. Executive summary level."
+        },
+        {
+          "id": "sch-level-2",
+          "name": "Level 2 \u2014 Project Master Schedule",
+          "procore": "",
+          "desc": "Project-wide schedule showing major phases and milestones. Used for project-level reporting and high-level coordination. Typically 50-200 lines.",
+          "derivation": "Project schedule with COUNT(scheduling_activity) BETWEEN 50 AND 200. Project master schedule."
+        },
+        {
+          "id": "sch-level-3",
+          "name": "Level 3 \u2014 Control Schedule",
+          "procore": "",
+          "desc": "Detailed-enough schedule for project controls \u2014 earned value, progress measurement, change tracking. Typically 500-2,000 lines. The default schedule level for active project management.",
+          "derivation": "Project schedule with COUNT(scheduling_activity) BETWEEN 500 AND 2,000. Default control schedule."
+        },
+        {
+          "id": "sch-level-4",
+          "name": "Level 4 \u2014 Detailed Activity Schedule",
+          "procore": "",
+          "desc": "CPM-quality detailed schedule \u2014 every activity, full logic, resource loading. Typically 5,000+ lines. Used for critical-path analysis and schedule optimization.",
+          "derivation": "Project schedule with COUNT(scheduling_activity) > 5,000. CPM-quality detailed schedule."
+        },
+        {
+          "id": "sch-level-5",
+          "name": "Level 5 \u2014 Workface / Daily Schedule",
+          "procore": "",
+          "desc": "Crew-level daily and short-interval schedule. Aligns to lookahead planning and AWP installation work packages. Drives field execution.",
+          "derivation": "schedule_lookahead_task records (typically 1-week or 3-week windows). Workface / daily level."
         }
       ]
     }

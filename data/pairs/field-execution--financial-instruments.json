@@ -1,0 +1,51 @@
+{
+  "source": "field-execution",
+  "target": "financial-instruments",
+  "edges": [
+    [
+      "fe-timecard",
+      "fi-cost-code",
+      "CHARGED_TO"
+    ],
+    [
+      "fe-labor-allocation",
+      "fi-cost-code",
+      "PLANS_FOR"
+    ],
+    [
+      "fe-production-quantity",
+      "fi-budget-line-item",
+      "REPORTS_AGAINST"
+    ],
+    [
+      "fe-budget-change-quantity",
+      "fi-budget-change",
+      "TIES_TO"
+    ],
+    [
+      "fe-material-record",
+      "fi-commit-purchase",
+      "FULFILLS"
+    ],
+    [
+      "fe-production-quantity",
+      "fi-cost-code",
+      "MEASURED_AGAINST"
+    ],
+    [
+      "fi-materials-po",
+      "fe-material-record",
+      "ORDERS"
+    ],
+    [
+      "fe-productivity-code",
+      "fi-budget-code",
+      "MAPS_TO"
+    ],
+    [
+      "fe-productivity-code",
+      "fi-cost-code",
+      "ALIGNED_WITH"
+    ]
+  ]
+}

@@ -476,6 +476,16 @@
       "doc-correspondence-r",
       "org-gen-contr-gc",
       "MEASURED FOR"
+    ],
+    [
+      "doc-req-info-rfi",
+      "org-user",
+      "HELD_BY"
+    ],
+    [
+      "doc-submittal",
+      "org-user",
+      "HELD_BY"
     ]
   ],
   "verbGlossary": {

@@ -231,6 +231,26 @@
       "org-chg-order",
       "pa-chg-order-rate",
       "BENCHMARKED AGAINST"
+    ],
+    [
+      "org-user",
+      "pa-project-status",
+      "HAS_ACCESS_TO"
+    ],
+    [
+      "org-sub-job",
+      "pa-project-status",
+      "ROLLS_UP_TO"
+    ],
+    [
+      "org-project-user",
+      "pa-project-status",
+      "ACCESS_TO"
+    ],
+    [
+      "org-project-role-membership",
+      "pa-architect-record",
+      "ASSIGNS"
     ]
   ],
   "verbGlossary": {

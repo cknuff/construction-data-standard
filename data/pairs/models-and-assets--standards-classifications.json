@@ -1,0 +1,98 @@
+{
+  "source": "models-and-assets",
+  "target": "standards-classifications",
+  "edges": [
+    [
+      "bim-model-element",
+      "sc-ifc-class",
+      "CLASSIFIED BY"
+    ],
+    [
+      "bim-3d-building-info",
+      "sc-ifc-class",
+      "EXPORTED USING"
+    ],
+    [
+      "bim-3d-building-info",
+      "sc-international-bu",
+      "CHECKED AGAINST"
+    ],
+    [
+      "bim-3d-building-info",
+      "sc-nfpa-stds",
+      "CHECKED AGAINST"
+    ],
+    [
+      "bim-3d-building-info",
+      "sc-ada-accessibilit",
+      "CHECKED AGAINST"
+    ],
+    [
+      "bim-3d-building-info",
+      "sc-energy-code-stds",
+      "CHECKED AGAINST"
+    ],
+    [
+      "bim-5d-model-cost",
+      "sc-std-cost-code",
+      "ALIGNED TO"
+    ],
+    [
+      "bim-5d-model-cost",
+      "sc-wbs-code",
+      "STRUCTURED BY"
+    ],
+    [
+      "bim-quantity-takeoff",
+      "sc-specification-se",
+      "REFERENCED AGAINST"
+    ],
+    [
+      "bim-model-properties",
+      "sc-specification-se",
+      "VALIDATED AGAINST"
+    ],
+    [
+      "bim-level-developmen",
+      "sc-aia-contract",
+      "DEFINED PER"
+    ],
+    [
+      "bim-digital-twin",
+      "sc-leed-certificati",
+      "TRACKS COMPLIANCE WITH"
+    ],
+    [
+      "bim-digital-twin",
+      "sc-well-building",
+      "TRACKS COMPLIANCE WITH"
+    ],
+    [
+      "bim-federated-model",
+      "sc-ifc-class",
+      "EXCHANGED VIA"
+    ],
+    [
+      "bim-model-based",
+      "sc-specification-se",
+      "ANNOTATED PER"
+    ]
+  ],
+  "verbGlossary": {
+    "CLASSIFIED BY": "{source} assigned {target} classification code for interoperability",
+    "MAPPED TO": "{source} mapped to UniFormat assembly {target} for benchmarking",
+    "TAGGED WITH": "{source} tagged with {target} entries for cross-system identification",
+    "EXPORTED USING": "{source} exported in IFC format using buildingSMART {target} schema",
+    "CHECKED AGAINST": "{source} geometry and properties checked against building code or standard requirements",
+    "CODED BY": "{source} elements coded using {target} and section numbers",
+    "ALIGNED TO": "{source} cost data aligned to the project standard cost code list",
+    "STRUCTURED BY": "{source} cost breakdown structured by the project WBS code hierarchy",
+    "ORGANIZED BY": "{source} results organized by {target}s for estimating",
+    "REFERENCED AGAINST": "Takeoff quantities cross-referenced against {target} requirements",
+    "VALIDATED AGAINST": "{source} properties validated against {target} performance requirements",
+    "DEFINED PER": "Level of Development milestones defined per AIA contract document requirements",
+    "TRACKS COMPLIANCE WITH": "{source}monitors ongoing building performance against certification standards",
+    "EXCHANGED VIA": "{source} exchanged between disciplines using {target} open standard format",
+    "ANNOTATED PER": "{source}-based drawings annotated with {target} references"
+  }
+}

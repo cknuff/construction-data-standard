@@ -1,0 +1,26 @@
+{
+  "source": "field-execution",
+  "target": "standards-classifications",
+  "edges": [
+    [
+      "sc-cii-awp",
+      "fe-cwp",
+      "DEFINES"
+    ],
+    [
+      "sc-cii-awp",
+      "fe-ewp",
+      "DEFINES"
+    ],
+    [
+      "sc-cii-awp",
+      "fe-iwp",
+      "DEFINES"
+    ],
+    [
+      "sc-cii-awp",
+      "fe-workface-planning",
+      "DEFINES"
+    ]
+  ]
+}

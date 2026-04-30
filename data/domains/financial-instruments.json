@@ -10,8 +10,8 @@
         {
           "id": "fi-estimate",
           "name": "Estimate",
-          "procore": "finance.budget_line_items",
-          "desc": "The priced scope of work produced during preconstruction — a cost opinion that quantifies what the project will cost before a budget is set. Types: conceptual (order-of-magnitude from SF cost), schematic (assemblies-level), detailed (line-item takeoff by cost code). Lifecycle: Conceptual → Schematic → Detailed → Bid Basis → Award → Becomes Budget. The estimate is the GC's primary preconstruction deliverable. It feeds directly into proposals/bids (contracts-procurement) and, upon award, becomes the project budget baseline. Key properties: total estimated cost, cost per SF, contingency %, markup, fee, general conditions. Estimate vs. actual cost at completion is the fundamental measure of preconstruction accuracy. In Procore, the estimate typically becomes the initial budget line items — there is no separate 'estimate' object, but the original budget snapshot represents the estimate baseline."
+          "procore": "preconstruction.estimates",
+          "desc": "The priced scope of work produced during preconstruction \u2014 a cost opinion that quantifies what the project will cost before a budget is set. Types: conceptual (order-of-magnitude from SF cost), schematic (assemblies-level), detailed (line-item takeoff by cost code). Lifecycle: Conceptual \u2192 Schematic \u2192 Detailed \u2192 Bid Basis \u2192 Award \u2192 Becomes Budget. The estimate is the GC's primary preconstruction deliverable. It feeds directly into proposals/bids (contracts-procurement) and, upon award, becomes the project budget baseline. Key properties: total estimated cost, cost per SF, contingency %, markup, fee, general conditions. Estimate vs. actual cost at completion is the fundamental measure of preconstruction accuracy. In Procore, the estimate typically becomes the initial budget line items \u2014 there is no separate 'estimate' object, but the original budget snapshot represents the estimate baseline."
         },
         {
           "id": "fi-project-budget",
@@ -23,7 +23,7 @@
           "id": "fi-budget-line-item",
           "name": "Budget Line Item",
           "procore": "finance.budget_line_items",
-          "desc": "An individual row in the project budget \u2014 allocates a specific dollar amount to a specific cost code or scope of work. Lifecycle: Created \u2192 Active \u2192 Modified (via budget modifications and change orders) \u2192 Closed. Key properties: amount (original), amount (revised), cost code, WBS code, budget code, committed cost, direct cost, projected cost, variance. Budget line item amount = PLANNED allocation, NOT actual cost. Actual cost = committed cost + direct cost + approved changes. Variance = budget amount \u2212 (committed + direct + approved changes). Projected cost includes pending changes. Every financial transaction ties back to a budget line item via cost code."
+          "desc": "An individual row in the project budget \u2014 allocates a specific dollar amount to a specific cost code or scope of work. Lifecycle: Created \u2192 Active \u2192 Modified (via budget modifications and change orders) \u2192 Closed. Key properties: amount (original), amount (revised), cost code, WBS code, budget code, committed cost, direct cost, projected cost, variance. Budget line item amount = PLANNED allocation, NOT actual cost. Actual cost = committed cost + direct cost + approved changes. Variance = budget amount \u2212 (committed + direct + approved changes). Projected cost includes pending changes. Every financial transaction ties back to a budget line item via cost code. COLUMN NAME RULES: finance.budget_line_items has NO revised_budget_amount column. Only original_budget_amount exists. Revised budget = original_budget_amount + sum of applicable finance.budget_modifications.transfer_amount entries against that line item."
         },
         {
           "id": "fi-cost-code",
@@ -35,13 +35,19 @@
           "id": "fi-wbs-code",
           "name": "WBS Code",
           "procore": "finance.wbs_codes",
-          "desc": "Work Breakdown Structure code that adds a second dimension to cost classification \u2014 segments cost within a cost code by phase, location, or category. Example: cost code 03 30 00 (Cast-in-Place Concrete) + WBS 'Foundation' vs. WBS 'Elevated Slab'. Enables building-element-level cost tracking within a single cost code. WBS 'Rework' or 'Warranty' segments are signals for rework cost detection. Downstream: all financial line items that reference WBS."
+          "desc": "Work Breakdown Structure code that adds a second dimension to cost classification \u2014 segments cost within a cost code by phase, location, or category. Example: cost code 03 30 00 (Cast-in-Place Concrete) + WBS 'Foundation' vs. WBS 'Elevated Slab'. Enables building-element-level cost tracking within a single cost code. WBS 'Rework' or 'Warranty' segments are signals for rework cost detection. Downstream: all financial line items that reference WBS. COLUMN NAME RULES: finance.wbs_codes uses cost_code (NOT code) and cost_code_name (NOT description). Other useful columns: wbs_code_flat_code and wbs_code_flat_name for the full WBS path. The wbs_code_id is the FK key on line item tables."
         },
         {
           "id": "fi-budget-code",
           "name": "Budget Code",
           "procore": "finance.budget_codes",
           "desc": "A grouping code applied to budget line items for reporting and categorization \u2014 distinct from cost codes. Key properties: code, description, project-specific or company-standard. Budget codes are a REPORTING overlay, not a transactional code. They group budget lines for executive summaries (e.g., 'Structure', 'Enclosure', 'MEP', 'General Conditions', 'Contingency'). Budget codes with values like 'Rework' or 'Warranty' are signals for rework cost detection."
+        },
+        {
+          "id": "fi-project-cost-code",
+          "name": "Project Cost Code",
+          "procore": "finance.project_cost_codes",
+          "desc": "Project-specific instance of a cost code \u2014 a project may use a customized version of the company-standard cost code list. Without this, cross-project benchmarks are noisy because 'cost code 03 30 00' may mean different scopes on different jobs."
         }
       ]
     },
@@ -66,6 +72,12 @@
           "name": "Commitment Line Item",
           "procore": "finance.commitment_line_items",
           "desc": "A cost-code-level detail row within a commitment \u2014 breaks the total commitment into budget-aligned allocations. Key properties: cost code, WBS code, description, amount, commitment reference. Created with the commitment, modified by CCOs, closed with the commitment. The sum of commitment line items by cost code = committed cost on corresponding budget line items. Line item descriptions are a rich NLP signal for cost categorization. Upstream: parent commitment. Downstream: budget line items (as committed cost), CCO line items."
+        },
+        {
+          "id": "fi-materials-po",
+          "name": "Materials Purchase Order",
+          "procore": "workforce.materials_purchase_order",
+          "desc": "Bridge between materials data (workforce.materials) and commitments (purchase orders). Tracks which materials were sourced via which PO. Useful for material lifecycle traceability \u2014 from estimate to PO to delivery to install."
         }
       ]
     },
@@ -114,6 +126,18 @@
           "name": "Budget Modification",
           "procore": "finance.budget_modifications",
           "desc": "An internal budget transfer or adjustment \u2014 moves money between budget line items without changing the total budget. Lifecycle: Created \u2192 Approved \u2192 Posted. Key properties: from line item, to line item, transfer_amount (NOT 'amount'), notes (NOT 'description'), direct wbs_code_id. Budget modifications are INTERNAL \u2014 they move money between budget lines, not in or out of the project. Modifications TO rework-coded lines signal that actual rework exceeded planned budget \u2014 the amount is a budget adjustment, not a standalone cost transaction. Upstream/downstream: budget line items (source and destination)."
+        },
+        {
+          "id": "fi-budget-change",
+          "name": "Budget Change",
+          "procore": "finance.budget_changes",
+          "desc": "A formal budget revision \u2014 distinct from budget modifications (modifications adjust line allocations within the existing total; changes formally restate the budget). Tracks scope-driven budget restatements that go through approval workflow."
+        },
+        {
+          "id": "fi-prime-pco",
+          "name": "Prime Contract Potential Change Order",
+          "procore": "finance.prime_contract_potential_change_orders",
+          "desc": "The owner-side equivalent of a CPCO \u2014 the prime contract change in pre-approved state. Distinct lifecycle from sub-side. Links upstream from CE/RFI to the eventual Prime CO. Important for owner negotiation."
         }
       ]
     },
@@ -125,13 +149,13 @@
           "id": "fi-direct-cost",
           "name": "Direct Cost",
           "procore": "finance.direct_costs",
-          "desc": "A non-commitment expenditure \u2014 costs that don't flow through a subcontract or purchase order. Includes GC self-performed labor, small material purchases, equipment rental, T&M charges, reimbursables. Lifecycle: Created \u2192 Approved \u2192 Paid. Key properties: vendor (optional), description, amount, cost code, WBS code, date, invoice number. Direct costs charge against budget line items but bypass the commitment/invoice workflow. Upstream: budget line items (budgeted amount). Downstream: direct cost line items, budget line items (as actual direct cost)."
+          "desc": "A non-commitment expenditure \u2014 costs that don't flow through a subcontract or purchase order. Includes GC self-performed labor, small material purchases, equipment rental, T&M charges, reimbursables. Lifecycle: Created \u2192 Approved \u2192 Paid. Key properties: vendor (optional), description, amount, cost code, WBS code, date, invoice number. Direct costs charge against budget line items but bypass the commitment/invoice workflow. Upstream: budget line items (budgeted amount). Downstream: direct cost line items, budget line items (as actual direct cost). COLUMN NAME RULE: finance.direct_cost_line_items uses approved_total_amount (DECIMAL) for the cost column, NOT amount. Other cost columns: non_draft_total_amount (includes pending), manual_amount (raw entered value). There is no \"amount\" column on this table."
         },
         {
           "id": "fi-direct-cost-line",
           "name": "Direct Cost Line Item",
           "procore": "finance.direct_cost_line_items",
-          "desc": "A cost-code-level detail row within a direct cost \u2014 enables granular cost tracking for non-commitment expenses. Key properties: cost code, WBS code, description, amount, direct cost reference. Provides the same cost-code-level granularity as commitment and change order line items. Description and WBS code are NLP signals for cost categorization. WBS-coded rework direct costs = $399M across the portfolio."
+          "desc": "A cost-code-level detail row within a direct cost \u2014 enables granular cost tracking for non-commitment expenses. Key properties: cost code, WBS code, description, amount, direct cost reference. Provides the same cost-code-level granularity as commitment and change order line items. Description and WBS code are NLP signals for cost categorization. WBS-coded rework direct costs = $399M across the portfolio. COLUMN NAME RULE: finance.direct_cost_line_items uses approved_total_amount (DECIMAL) for the cost column, NOT amount. Other cost columns: non_draft_total_amount (includes pending), manual_amount (raw entered value). There is no \"amount\" column on this table."
         }
       ]
     },
@@ -154,7 +178,8 @@
         {
           "id": "fi-retainage",
           "name": "Retainage",
-          "desc": "Funds withheld from progress payments as security for completion of work \u2014 released at substantial completion or final completion. Lifecycle: Accumulating (during construction) \u2192 Partial Release (at substantial completion) \u2192 Full Release (at final completion). Key properties: retainage held (cumulative), retainage released, retainage rate (%), release conditions. Retainage is NOT a cost \u2014 it's a withheld portion of earned payment. Typical rate: 5\u201310%. Release triggers: substantial completion (reduce to 50%), final completion (release remainder). Retainage held from subs should approximately equal retainage held from owner. Upstream: owner invoices, subcontractor invoices. Downstream: payment, lien waiver."
+          "desc": "Funds withheld from progress payments as security for completion of work \u2014 released at substantial completion or final completion. Lifecycle: Accumulating (during construction) \u2192 Partial Release (at substantial completion) \u2192 Full Release (at final completion). Key properties: retainage held (cumulative), retainage released, retainage rate (%), release conditions. Retainage is NOT a cost \u2014 it's a withheld portion of earned payment. Typical rate: 5\u201310%. Release triggers: substantial completion (reduce to 50%), final completion (release remainder). Retainage held from subs should approximately equal retainage held from owner. Upstream: owner invoices, subcontractor invoices. Downstream: payment, lien waiver.",
+          "procore": "finance.subcontractor_invoices"
         },
         {
           "id": "fi-payment",
@@ -167,6 +192,72 @@
           "name": "Lien Waiver",
           "procore": "finance.payments_lien_waivers",
           "desc": "A legal document in which a party waives their right to file a mechanic's lien against the property \u2014 exchanged with each payment. Four types: conditional progress (with invoice), unconditional progress (when payment clears), conditional final (with final invoice), unconditional final (with final payment). Collection from all tiers of subcontractors required before owner makes final payment to GC. Upstream: payment. Downstream: none \u2014 terminal document."
+        },
+        {
+          "id": "fi-pay-disbursement",
+          "name": "Payment Disbursement",
+          "procore": "finance.payments_disbursements",
+          "desc": "The actual money movement \u2014 when funds leave the GC and reach a subcontractor or supplier. Distinct from invoice approval (approval \u2260 payment). Source of truth for cash outflow timing and lien risk closure."
+        },
+        {
+          "id": "fi-pay-beneficiary",
+          "name": "Payment Beneficiary",
+          "procore": "finance.payments_beneficiaries",
+          "desc": "The party receiving payment \u2014 usually a subcontractor, sometimes a supplier or subtier. Resolves who actually got paid. Key for audit, lien, and 1099/tax reporting."
+        },
+        {
+          "id": "fi-pay-agreement",
+          "name": "Payment Agreement",
+          "procore": "finance.payments_agreements",
+          "desc": "Terms of payment for a commitment \u2014 net days, retainage release schedule, ACH vs check, early-pay discount. Drives cash flow timing and predictability."
+        },
+        {
+          "id": "fi-pay-subtier-waiver",
+          "name": "Subtier Lien Waiver",
+          "procore": "finance.payments_subtier_waivers",
+          "desc": "A lien waiver from a subcontractor's subcontractor (subtier) \u2014 required to release payment to the prime sub. Closes the lien-risk chain. Construction-specific concept generic AI doesn't have."
+        },
+        {
+          "id": "fi-pay-manual-hold",
+          "name": "Manual Payment Hold",
+          "procore": "finance.payments_manual_holds",
+          "desc": "A payment intentionally held \u2014 for missing waivers, performance issues, disputes. Signals operational or contract issues. Pairs with pay requirements to explain payment delays."
+        },
+        {
+          "id": "fi-pay-requirement",
+          "name": "Pay Requirement",
+          "procore": "finance.payments_requirements",
+          "desc": "A compliance item required before payment is released \u2014 insurance current, lien waiver received, executed CO, schedule of values updated. Drives the gating logic between invoice approval and disbursement."
+        },
+        {
+          "id": "fi-pay-received",
+          "name": "Payment Received",
+          "procore": "finance.payments_received",
+          "desc": "Money received from the owner \u2014 paired with pay applications. Cash inflow side of the project. Distinct from approved pay applications (apps approved \u2260 cash received). Cash position = received - disbursed."
+        },
+        {
+          "id": "fi-early-pay-program",
+          "name": "Early Pay Program",
+          "procore": "finance.early_pay_program",
+          "desc": "A financing program offered to subcontractors that lets them get paid early in exchange for a discount. Procore Pay product capability. Distinct from manual hold/pay disbursement."
+        },
+        {
+          "id": "fi-early-pay-enrollment",
+          "name": "Early Pay Program Enrollment",
+          "procore": "finance.early_pay_program_enrollment",
+          "desc": "A subcontractor's enrollment record in an Early Pay Program \u2014 the opt-in by a vendor to participate, with their elected discount terms."
+        },
+        {
+          "id": "fi-invoice-compliance",
+          "name": "Invoice Compliance",
+          "procore": "finance.invoice_compliance",
+          "desc": "Compliance state of an invoice against project-required documents (insurance current, lien waiver received, executed change order). Distinct from generic Pay Requirement \u2014 Invoice Compliance is the per-invoice resolution of those requirements."
+        },
+        {
+          "id": "fi-prime-contract-payment",
+          "name": "Prime Contract Payment",
+          "procore": "finance.prime_contract_payments",
+          "desc": "Payment received from the owner against a prime contract \u2014 the inflow side of the project. Distinct from `Payment Received` which is the generic concept; this is specifically the prime-contract payment record. Key for cash-position reasoning."
         }
       ]
     },
@@ -177,7 +268,8 @@
         {
           "id": "fi-schedule-values",
           "name": "Schedule of Values (SOV)",
-          "desc": "A cost breakdown of a contract that defines the billing structure \u2014 line items represent discrete portions of work that can be billed as completed. Lifecycle: Created (with contract) \u2192 Active (updated each billing cycle) \u2192 Complete (100% billed). Key properties: line item number, description, scheduled value, percent complete, previous billing, current billing, balance to finish. The SOV is a BILLING structure, not a cost structure \u2014 SOV line items may not align with cost code line items. Percent complete by SOV line drives monthly billing. Front-loading (billing more early) is a common practice that distorts true percent complete. Upstream: commitments. Downstream: subcontractor invoices, owner invoices."
+          "desc": "A cost breakdown of a contract that defines the billing structure \u2014 line items represent discrete portions of work that can be billed as completed. Lifecycle: Created (with contract) \u2192 Active (updated each billing cycle) \u2192 Complete (100% billed). Key properties: line item number, description, scheduled value, percent complete, previous billing, current billing, balance to finish. The SOV is a BILLING structure, not a cost structure \u2014 SOV line items may not align with cost code line items. Percent complete by SOV line drives monthly billing. Front-loading (billing more early) is a common practice that distorts true percent complete. Upstream: commitments. Downstream: subcontractor invoices, owner invoices.",
+          "procore": "finance.subcontractor_sov"
         },
         {
           "id": "fi-allowance",
@@ -205,6 +297,12 @@
           "id": "fi-cash-flow",
           "name": "Cash Flow Projection",
           "desc": "A time-phased projection of money in (owner payments) and money out (sub payments, direct costs) \u2014 shows when cash is needed. Updated monthly. Key properties: period, projected income, projected outflow, net cash position, cumulative cash position. GCs typically pay subs after receiving owner payment (pay-when-paid). Positive cash flow depends on billing ahead of payment obligations. Front-loaded SOVs improve early cash flow. Retainage creates a cash drag until release. Can be projected by building system \u2014 envelope peaks during enclosure phase, MEP peaks during rough-in."
+        },
+        {
+          "id": "fi-budget-forecast",
+          "name": "Budget Forecast",
+          "procore": "finance.budget_forecasts",
+          "desc": "A point-in-time projection of budget consumption against time. Distinct from Estimate at Completion (EAC, the total cost forecast) \u2014 Budget Forecast is the time-distributed projection. Used for cash flow planning."
         }
       ]
     },
@@ -215,12 +313,14 @@
         {
           "id": "fi-budget-variance",
           "name": "Budget Variance",
-          "desc": "The difference between budgeted cost and actual cost (committed + direct + approved changes) at any point in time. Formula: Budget Amount \u2212 (Committed Cost + Direct Cost + Approved Changes). Can be computed per cost code, per building system, or at project level. Negative variance = over budget. The most fundamental financial KPI in construction."
+          "desc": "The difference between budgeted cost and actual cost (committed + direct + approved changes) at any point in time. Formula: Budget Amount \u2212 (Committed Cost + Direct Cost + Approved Changes). Can be computed per cost code, per building system, or at project level. Negative variance = over budget. The most fundamental financial KPI in construction.",
+          "concept_type": "derived-metric"
         },
         {
           "id": "fi-cost-growth",
           "name": "Cost Growth %",
-          "desc": "The percentage increase from original budget to final cost. Formula: (Final Cost \u2212 Original Budget) / Original Budget \u00d7 100. Measures total cost escalation including all changes, direct costs, and adjustments. Distinct from change order rate \u2014 cost growth includes ALL cost increases, not just formal changes."
+          "desc": "The percentage increase from original budget to final cost. Formula: (Final Cost \u2212 Original Budget) / Original Budget \u00d7 100. Measures total cost escalation including all changes, direct costs, and adjustments. Distinct from change order rate \u2014 cost growth includes ALL cost increases, not just formal changes.",
+          "concept_type": "derived-metric"
         },
         {
           "id": "fi-cost-perf-index",
@@ -235,7 +335,8 @@
         {
           "id": "fi-chg-order-rate",
           "name": "Change Order Rate",
-          "desc": "Ratio of total change order value to original contract value. Formula: SUM(CO_value) / original_contract_value. Higher rate = more scope change, design issues, or unforeseen conditions."
+          "desc": "Ratio of total change order value to original contract value. Formula: SUM(CO_value) / original_contract_value. Higher rate = more scope change, design issues, or unforeseen conditions.",
+          "concept_type": "derived-metric"
         },
         {
           "id": "fi-contingency-burn",
@@ -245,7 +346,8 @@
         {
           "id": "fi-invoice-processi",
           "name": "Invoice Processing Time",
-          "desc": "The elapsed time from invoice submission to approval. Formula: Approval Date \u2212 Submission Date (in business days). Measures administrative efficiency and cash flow impact. Long processing times strain subcontractor relationships and signal workflow bottlenecks."
+          "desc": "The elapsed time from invoice submission to approval. Formula: Approval Date \u2212 Submission Date (in business days). Measures administrative efficiency and cash flow impact. Long processing times strain subcontractor relationships and signal workflow bottlenecks.",
+          "concept_type": "derived-metric"
         },
         {
           "id": "fi-cash-flow-2",
@@ -255,7 +357,8 @@
         {
           "id": "fi-estimate-at",
           "name": "Estimate at Completion Variance",
-          "desc": "The difference between the projected final cost (EAC) and the original budget. Formula: EAC \u2212 Original Budget. Tracks how the projected final cost evolves over time. Early EAC variance is a leading indicator of final cost growth."
+          "desc": "The difference between the projected final cost (EAC) and the original budget. Formula: EAC \u2212 Original Budget. Tracks how the projected final cost evolves over time. Early EAC variance is a leading indicator of final cost growth.",
+          "concept_type": "derived-metric"
         }
       ]
     },
@@ -266,67 +369,69 @@
         {
           "id": "fi-profit",
           "name": "Profit",
-          "desc": "The absolute dollar difference between project revenue (contract value + approved owner changes) and total project cost (committed + direct + indirect). Formula: Total Revenue − Total Cost. The fundamental financial outcome for any project. Can be projected (estimated profit at completion) or actual (final profit at closeout). Projected profit = Contract Value + Approved Owner COs − EAC. Profit is tracked at the project level and aggregated across portfolios for company-level P&L reporting."
+          "desc": "The absolute dollar difference between project revenue (contract value + approved owner changes) and total project cost (committed + direct + indirect). Formula: Total Revenue \u2212 Total Cost. The fundamental financial outcome for any project. Can be projected (estimated profit at completion) or actual (final profit at closeout). Projected profit = Contract Value + Approved Owner COs \u2212 EAC. Profit is tracked at the project level and aggregated across portfolios for company-level P&L reporting."
         },
         {
           "id": "fi-margin-pct",
           "name": "Project Margin %",
-          "desc": "The percentage of revenue retained as profit after all costs. Formula: (Revenue − Total Cost) / Revenue × 100. THE executive financial metric — every GC and CM tracks margin by project. Typical ranges: GCs 2–8%, CM-at-risk 3–6%, design-build 5–12%, specialty contractors 8–20%. Margin is computed at multiple stages: bid margin (estimated at proposal), projected margin (current EAC-based), and final margin (actual at closeout). Declining projected margin over project life = margin fade."
+          "desc": "The percentage of revenue retained as profit after all costs. Formula: (Revenue \u2212 Total Cost) / Revenue \u00d7 100. THE executive financial metric \u2014 every GC and CM tracks margin by project. Typical ranges: GCs 2\u20138%, CM-at-risk 3\u20136%, design-build 5\u201312%, specialty contractors 8\u201320%. Margin is computed at multiple stages: bid margin (estimated at proposal), projected margin (current EAC-based), and final margin (actual at closeout). Declining projected margin over project life = margin fade.",
+          "concept_type": "derived-metric"
         },
         {
           "id": "fi-margin-fade",
           "name": "Margin Fade",
-          "desc": "The change in projected margin from original estimate to current projection or final outcome. Formula: Current Projected Margin % − Original Bid Margin %. Negative fade = margin erosion (the most common pattern in construction). Typical fade: 1–3 percentage points on well-managed projects, 5+ points on troubled projects. Root causes: scope creep not captured in change orders, cost overruns, schedule delays increasing general conditions, unrecovered back-charges. THE leading indicator of project financial health — early fade signals downstream problems."
+          "desc": "The change in projected margin from original estimate to current projection or final outcome. Formula: Current Projected Margin % \u2212 Original Bid Margin %. Negative fade = margin erosion (the most common pattern in construction). Typical fade: 1\u20133 percentage points on well-managed projects, 5+ points on troubled projects. Root causes: scope creep not captured in change orders, cost overruns, schedule delays increasing general conditions, unrecovered back-charges. THE leading indicator of project financial health \u2014 early fade signals downstream problems.",
+          "concept_type": "derived-metric"
         },
         {
           "id": "fi-markup-pct",
           "name": "Fee / Markup %",
-          "desc": "The contractual percentage added on top of cost to arrive at a billing or sell price. Applies differently by contract type: lump sum (markup baked into bid, not visible), cost-plus (explicit fee % on top of actual cost, typically 5–15%), T&M (explicit markup on labor and materials, governed by contract terms). For GC/CM firms, markup covers overhead + profit. For change orders, markup rates are usually pre-negotiated in the contract (often 10% OH + 10% profit on self-performed, 5% on sub work). Markup on sub COs is a common dispute point."
+          "desc": "The contractual percentage added on top of cost to arrive at a billing or sell price. Applies differently by contract type: lump sum (markup baked into bid, not visible), cost-plus (explicit fee % on top of actual cost, typically 5\u201315%), T&M (explicit markup on labor and materials, governed by contract terms). For GC/CM firms, markup covers overhead + profit. For change orders, markup rates are usually pre-negotiated in the contract (often 10% OH + 10% profit on self-performed, 5% on sub work). Markup on sub COs is a common dispute point."
         },
         {
           "id": "fi-backlog",
           "name": "Backlog",
-          "desc": "The total remaining revenue under contract that has not yet been earned — the unfinished portion of all active contracts. Formula: SUM(Contract Value − Earned Revenue) across all active projects. THE top-line health metric for construction companies — represents future revenue visibility. Backlog-to-revenue ratio indicates how many months/years of work are secured. Healthy GCs target 12–18 months of backlog. Declining backlog signals a sales pipeline problem. Backlog is typically reported by sector, region, and project type for portfolio planning."
+          "desc": "The total remaining revenue under contract that has not yet been earned \u2014 the unfinished portion of all active contracts. Formula: SUM(Contract Value \u2212 Earned Revenue) across all active projects. THE top-line health metric for construction companies \u2014 represents future revenue visibility. Backlog-to-revenue ratio indicates how many months/years of work are secured. Healthy GCs target 12\u201318 months of backlog. Declining backlog signals a sales pipeline problem. Backlog is typically reported by sector, region, and project type for portfolio planning."
         },
         {
           "id": "fi-win-rate",
           "name": "Win Rate",
-          "desc": "The percentage of bids or proposals that result in a contract award. Formula: Contracts Won / Total Bids Submitted × 100. Typical ranges: GCs 15–30% on competitive bids, 40–60% on negotiated work, higher on repeat clients. Tracked by sector, project type, owner type, and bid size. Low win rates may indicate pricing too high, wrong market fit, or weak precon effort. Very high win rates may indicate leaving money on the table. Cross-referenced with margin to understand the win-rate-to-margin tradeoff."
+          "desc": "The percentage of bids or proposals that result in a contract award. Formula: Contracts Won / Total Bids Submitted \u00d7 100. Typical ranges: GCs 15\u201330% on competitive bids, 40\u201360% on negotiated work, higher on repeat clients. Tracked by sector, project type, owner type, and bid size. Low win rates may indicate pricing too high, wrong market fit, or weak precon effort. Very high win rates may indicate leaving money on the table. Cross-referenced with margin to understand the win-rate-to-margin tradeoff."
         },
         {
           "id": "fi-revenue-concentration",
           "name": "Revenue Concentration",
-          "desc": "The distribution of revenue across clients, sectors, or project types — measures portfolio risk from over-dependence. Formula: Top N clients as % of total revenue. Healthy companies target no single client above 15–20% of annual revenue. High concentration creates existential risk — losing one client collapses the business. Also applies to sector concentration (all healthcare, all multifamily) and geographic concentration. The inverse is diversification — tracked as Herfindahl index or simpler top-3/top-5 metrics."
+          "desc": "The distribution of revenue across clients, sectors, or project types \u2014 measures portfolio risk from over-dependence. Formula: Top N clients as % of total revenue. Healthy companies target no single client above 15\u201320% of annual revenue. High concentration creates existential risk \u2014 losing one client collapses the business. Also applies to sector concentration (all healthcare, all multifamily) and geographic concentration. The inverse is diversification \u2014 tracked as Herfindahl index or simpler top-3/top-5 metrics."
         },
         {
           "id": "fi-repeat-client",
           "name": "Repeat Client Rate",
-          "desc": "The percentage of revenue or projects from clients who have previously contracted with the company. Formula: Revenue from Repeat Clients / Total Revenue × 100. Industry benchmark: top-performing GCs derive 60–80% of revenue from repeat clients. Repeat clients have lower pursuit cost, shorter sales cycles, and more predictable margins. Declining repeat rate signals client satisfaction problems or market shift. Linked to project outcomes — companies that deliver well earn repeat business."
+          "desc": "The percentage of revenue or projects from clients who have previously contracted with the company. Formula: Revenue from Repeat Clients / Total Revenue \u00d7 100. Industry benchmark: top-performing GCs derive 60\u201380% of revenue from repeat clients. Repeat clients have lower pursuit cost, shorter sales cycles, and more predictable margins. Declining repeat rate signals client satisfaction problems or market shift. Linked to project outcomes \u2014 companies that deliver well earn repeat business."
         },
         {
           "id": "fi-overhead-rate",
           "name": "Overhead Rate",
-          "desc": "General and administrative (G&A) cost as a percentage of revenue — measures operational efficiency. Formula: Total G&A / Total Revenue × 100. Includes home office staff, insurance, rent, IT, accounting, marketing, and other non-project costs. Top-quartile GCs run 5–8%, average 8–12%, struggling firms 15%+. Rising overhead rate without revenue growth signals bloat. Directly compresses margin — every point of overhead is a point off profit. Tracked monthly against budget. Can be decomposed: office overhead vs. project general conditions (jobsite trailer, temp facilities, project staff)."
+          "desc": "General and administrative (G&A) cost as a percentage of revenue \u2014 measures operational efficiency. Formula: Total G&A / Total Revenue \u00d7 100. Includes home office staff, insurance, rent, IT, accounting, marketing, and other non-project costs. Top-quartile GCs run 5\u20138%, average 8\u201312%, struggling firms 15%+. Rising overhead rate without revenue growth signals bloat. Directly compresses margin \u2014 every point of overhead is a point off profit. Tracked monthly against budget. Can be decomposed: office overhead vs. project general conditions (jobsite trailer, temp facilities, project staff)."
         },
         {
           "id": "fi-dso",
           "name": "Days Sales Outstanding (DSO)",
-          "desc": "The average number of days to collect payment after invoicing — measures cash cycle efficiency. Formula: (Accounts Receivable / Total Revenue) × 365. Construction DSO is notoriously long: 60–90 days typical, 120+ days on government or large institutional projects. High DSO creates cash strain — GCs must float subcontractor payments while waiting for owner payment. Retainage amplifies the problem (5–10% held for months). DSO by client identifies slow payers. Improving DSO by even 10 days on a $100M revenue company frees ~$2.7M in working capital."
+          "desc": "The average number of days to collect payment after invoicing \u2014 measures cash cycle efficiency. Formula: (Accounts Receivable / Total Revenue) \u00d7 365. Construction DSO is notoriously long: 60\u201390 days typical, 120+ days on government or large institutional projects. High DSO creates cash strain \u2014 GCs must float subcontractor payments while waiting for owner payment. Retainage amplifies the problem (5\u201310% held for months). DSO by client identifies slow payers. Improving DSO by even 10 days on a $100M revenue company frees ~$2.7M in working capital."
         },
         {
           "id": "fi-bonding-capacity",
           "name": "Bonding Capacity Utilization",
-          "desc": "The percentage of a contractor's surety bonding capacity currently committed to active projects. Formula: Total Bonded Work in Progress / Total Bonding Program × 100. Bonding capacity is set by the surety based on working capital, net worth, cash flow, and track record. Typical programs: 5–20× net worth. At 70–80% utilization, the surety starts restricting new bonds — the contractor cannot pursue bonded work. THE growth constraint for mid-size contractors. Losing bonding capacity (through losses, cash problems, or failed projects) can be company-ending."
+          "desc": "The percentage of a contractor's surety bonding capacity currently committed to active projects. Formula: Total Bonded Work in Progress / Total Bonding Program \u00d7 100. Bonding capacity is set by the surety based on working capital, net worth, cash flow, and track record. Typical programs: 5\u201320\u00d7 net worth. At 70\u201380% utilization, the surety starts restricting new bonds \u2014 the contractor cannot pursue bonded work. THE growth constraint for mid-size contractors. Losing bonding capacity (through losses, cash problems, or failed projects) can be company-ending."
         },
         {
           "id": "fi-pm-workload",
           "name": "PM Workload / Capacity",
-          "desc": "The number and total value of active projects assigned per project manager — measures resource allocation risk. No standard formula, but common metrics: projects per PM, total value per PM, elements managed (RFIs + submittals + COs) per PM. Overloaded PMs (5+ active projects or $50M+ value) show measurably worse outcomes: higher RFI response times, more missed inspections, slower CO processing, lower client satisfaction. A leading indicator — when PM workload spikes, project quality follows 30–60 days later. Cross-referenced with project health scores to identify capacity-driven risk."
+          "desc": "The number and total value of active projects assigned per project manager \u2014 measures resource allocation risk. No standard formula, but common metrics: projects per PM, total value per PM, elements managed (RFIs + submittals + COs) per PM. Overloaded PMs (5+ active projects or $50M+ value) show measurably worse outcomes: higher RFI response times, more missed inspections, slower CO processing, lower client satisfaction. A leading indicator \u2014 when PM workload spikes, project quality follows 30\u201360 days later. Cross-referenced with project health scores to identify capacity-driven risk."
         },
         {
           "id": "fi-precon-hit-rate",
           "name": "Preconstruction Hit Rate",
-          "desc": "The conversion rate from preconstruction engagement to awarded contract. Formula: Contracts Awarded from Precon / Total Precon Engagements × 100. Distinct from win rate (which measures competitive bids) — precon hit rate measures the value of early engagement. Fee-based precon that converts at 60–80% is high-value. Precon that never converts is sunk cost. Tracked by client type, sector, and precon team lead. Rising hit rate validates the precon investment; declining rate signals misalignment between precon capabilities and market demand."
+          "desc": "The conversion rate from preconstruction engagement to awarded contract. Formula: Contracts Awarded from Precon / Total Precon Engagements \u00d7 100. Distinct from win rate (which measures competitive bids) \u2014 precon hit rate measures the value of early engagement. Fee-based precon that converts at 60\u201380% is high-value. Precon that never converts is sunk cost. Tracked by client type, sector, and precon team lead. Rising hit rate validates the precon investment; declining rate signals misalignment between precon capabilities and market demand."
         }
       ]
     },
@@ -337,20 +442,133 @@
         {
           "id": "fi-rework-cost",
           "name": "Rework Cost Detection",
-          "procore": "finance.change_events",
           "desc": "Cross-domain analytical pattern that detects rework costs across three independent financial surfaces: (1) contract changes via change_events and commitment_change_orders filtered by rework-related change_reason codes, deduplicated using GREATEST(CE, CCO) since change events become commitment change orders through the same lifecycle; (2) direct costs filtered by rework WBS codes and description keywords; (3) budget modifications to rework-coded budget lines. Four signal layers feed detection: backcharges (structured cost codes), observations (leading indicators with 63% correlation and 28-day lead time), punch items (trailing indicators at closeout), and daily log notes (field activity signals). Tiered output: Tier 1 activity-only signals (65% of companies), Tier 2 partial cost attribution (15%), Tier 3 full cost model (20%). Benchmarks segmented by project type, value band, state, and company size."
         },
         {
           "id": "fi-design-change",
           "name": "Design-Related Change Cost",
-          "procore": "finance.change_events",
           "desc": "Measures the financial impact of design-related changes across the project lifecycle using seven signal surfaces. Primary: change_events filtered by change_reason containing design-related codes (design_development and custom variants). Secondary: commitment_change_orders with independent change_reason. Supporting signals: RFI predicted_topic (ML-classified taxonomy of 176 topics), daily log compound signals (design + schedule keywords in same note), observation-to-CE origin path, and coordination issues linked to RFIs. Median company shows 26.4% of change event value attributed to design causes. CE-to-CCO conversion ratio tracks how design changes flow into subcontractor commitments."
         },
         {
           "id": "fi-trade-co-exposure",
           "name": "Trade-Specific CO Exposure",
-          "procore": "finance.commitment_change_orders",
           "desc": "Aggregates commitment change order value by trade partner to identify which subcontractors carry the most change order exposure on a project or across a portfolio. Uses commitment_change_orders grouped by the parent commitment vendor, segmented by change_reason to distinguish owner-directed changes from contractor-caused changes. Enables trade-level risk assessment: a mechanical subcontractor with 15% CO rate vs. industry median of 8% signals scope definition problems or execution issues. Cross-referenced with project_vendors for trade classification and observation/punch item data for quality correlation."
+        }
+      ]
+    },
+    {
+      "name": "Estimating Detail",
+      "color": "#e85a4a",
+      "nodes": [
+        {
+          "id": "fi-estimating-project",
+          "name": "Estimating Project",
+          "procore": "preconstruction.estimating_projects",
+          "desc": "The preconstruction-side project record \u2014 exists before the operational project. Carries the estimate, bid pipeline, and award lifecycle. Links to the operational Project upon award. Key properties: pursuit status, win probability, estimating phase, target award date."
+        },
+        {
+          "id": "fi-estimate-layer-group",
+          "name": "Estimate Layer Group",
+          "procore": "preconstruction.estimate_layer_groups",
+          "desc": "A grouping of estimate layers \u2014 typically by trade, system, or phase. Enables hierarchical estimate structure. Maps to MasterFormat divisions or company-defined groupings."
+        },
+        {
+          "id": "fi-estimate-layer",
+          "name": "Estimate Layer",
+          "procore": "preconstruction.estimate_layers",
+          "desc": "A single line in an estimate \u2014 material, labor, equipment, or assembly entry with quantity, unit cost, total. The atomic unit of the estimate. Estimate accuracy (estimate vs actual) measured at the layer level. Upstream: estimate layer group, assembly. Downstream: estimate budget items."
+        },
+        {
+          "id": "fi-estimate-budget-item",
+          "name": "Estimate Budget Item",
+          "procore": "preconstruction.estimate_budget_item",
+          "desc": "A budget-aligned grouping of estimate layers \u2014 translates estimate detail into budget line items at award. The bridge between estimating structure and operational budget structure. Upstream: estimate layers, cost codes. Downstream: budget line items (post-award)."
+        },
+        {
+          "id": "fi-estimate-adjustment",
+          "name": "Estimate Adjustment",
+          "procore": "preconstruction.estimate_adjustment",
+          "desc": "A change to the estimate after initial creation \u2014 markup, fee, contingency, allowance. Tracks estimate evolution before award. Distinct from change events (which adjust an executed budget). Key properties: adjustment type, amount, reason."
+        },
+        {
+          "id": "fi-assembly",
+          "name": "Assembly",
+          "procore": "preconstruction.assembly_part",
+          "desc": "A reusable kit of materials, labor, and equipment used in estimating \u2014 e.g., '1 SF of CMU wall = 1 block + 0.05 hr mason labor + mortar'. Productivity unit for estimating. Pairs with field execution production quantities to validate estimating accuracy."
+        }
+      ]
+    },
+    {
+      "name": "Procurement & Vendor Management",
+      "color": "#e85a4a",
+      "nodes": [
+        {
+          "id": "fi-rfq-quote",
+          "name": "RFQ Quote",
+          "procore": "finance.request_for_quote_quotes",
+          "desc": "Vendor quote in response to a Request for Quote \u2014 used during change pricing. Captures pricing competition for changes that go out to bid. Preconstruction-adjacent: similar mechanics to bidding but applied mid-project."
+        }
+      ]
+    },
+    {
+      "name": "Earned Value Management",
+      "color": "#ff7043",
+      "nodes": [
+        {
+          "id": "fi-evm-pv",
+          "name": "Planned Value (PV / BCWS)",
+          "procore": "",
+          "desc": "Earned Value Management: Budgeted Cost of Work Scheduled \u2014 what should have been spent by now per the baseline. The 'plan' baseline against which earned value and actual cost are measured.",
+          "derivation": "SUM(finance.budget_line_items.original_amount) for the period; baseline-distributed."
+        },
+        {
+          "id": "fi-evm-ev",
+          "name": "Earned Value (EV / BCWP)",
+          "procore": "",
+          "desc": "Budgeted Cost of Work Performed \u2014 the budgeted dollar value of work actually completed. EV is the foundational EVM measure: how much work has been accomplished, valued at the original budget rate.",
+          "derivation": "budget \u00d7 % complete from project_management.schedule_task.percent_complete (rolled up to project)."
+        },
+        {
+          "id": "fi-evm-ac",
+          "name": "Actual Cost (AC / ACWP)",
+          "procore": "",
+          "desc": "Actual Cost of Work Performed \u2014 what's actually been spent on completed work. Direct cost data from accounting.",
+          "derivation": "SUM(finance.direct_cost_line_items.amount) + SUM(finance.commitment_change_orders.grand_total filtered to approved) for completed work."
+        },
+        {
+          "id": "fi-evm-cv",
+          "name": "Cost Variance (CV)",
+          "procore": "",
+          "desc": "EV \u2212 AC. Positive CV = under budget; negative = over budget. Snapshot variance at a point in time.",
+          "derivation": "EV - AC (Earned Value minus Actual Cost). Pure formula."
+        },
+        {
+          "id": "fi-evm-sv",
+          "name": "Schedule Variance (SV)",
+          "procore": "",
+          "desc": "EV \u2212 PV (in dollars). Positive SV = ahead of schedule; negative = behind. Note: SV in dollars converges to zero at completion regardless of actual schedule outcome \u2014 use SPI for true schedule performance.",
+          "derivation": "EV - PV (Earned Value minus Planned Value). Pure formula."
+        },
+        {
+          "id": "fi-evm-spi",
+          "name": "Schedule Performance Index (SPI)",
+          "procore": "",
+          "desc": "EV / PV. SPI = 1.0 means on schedule; <1.0 means behind. Dimensionless ratio. Most useful EVM metric for forecasting.",
+          "derivation": "EV / PV. Pure formula. Most useful EVM metric for forecasting."
+        },
+        {
+          "id": "fi-evm-etc",
+          "name": "Estimate to Complete (ETC)",
+          "procore": "",
+          "desc": "Forecast of remaining work cost from data date to project completion. Distinct from EAC (total at completion) \u2014 ETC is the remaining-work portion. ETC = EAC \u2212 AC.",
+          "derivation": "EAC - AC. Where EAC = Estimate at Completion (already modeled as fi-cost-forecast)."
+        },
+        {
+          "id": "fi-evm-vac",
+          "name": "Variance at Completion (VAC)",
+          "procore": "",
+          "desc": "Budget at Completion (BAC) \u2212 Estimate at Completion (EAC). Forecast of total project cost variance \u2014 what we'll be over/under at the end.",
+          "derivation": "BAC - EAC. Where BAC = SUM(finance.budget_line_items.revised_amount) and EAC = fi-cost-forecast."
         }
       ]
     }

@@ -10,127 +10,152 @@
         {
           "id": "res-laborer",
           "name": "General Laborer",
-          "desc": "General construction labor across all project phases — site prep through closeout. Lifecycle: mobilize → work → demobilize. Sub-specialties include site laborers (earthwork, erosion control, flagging), interior laborers (cleanup, protection, material movement during finishes), and demolition workers (selective/structural demo, hazmat abatement). Typically the largest headcount on early-phase daily logs. Decision authority: superintendent."
+          "desc": "General construction labor across all project phases \u2014 site prep through closeout. Lifecycle: mobilize \u2192 work \u2192 demobilize. Sub-specialties include site laborers (earthwork, erosion control, flagging), interior laborers (cleanup, protection, material movement during finishes), and demolition workers (selective/structural demo, hazmat abatement). Typically the largest headcount on early-phase daily logs. Decision authority: superintendent.",
+          "derivation": "Three sources: (a) core.project_vendors.trade matches 'general laborer, common labor'; (b) workforce.job_titles for self-perform; (c) workforce.labor_allocations rolled up by trade. Indicates trade *type* used on a project (vs. role-instance which is one worker)."
         },
         {
           "id": "res-carpenter",
           "name": "Carpenter",
-          "desc": "Rough and finish carpentry — one of the most versatile trades on any project. Rough carpenters build formwork, shoring, blocking, backing, and temporary structures during foundations and structural phases. Finish carpenters install doors, frames, hardware, trim, and casework during interiors. Millworkers handle custom paneling and specialty wood on high-end projects. Often two different subcontractors for rough vs. finish work."
+          "desc": "Rough and finish carpentry \u2014 one of the most versatile trades on any project. Rough carpenters build formwork, shoring, blocking, backing, and temporary structures during foundations and structural phases. Finish carpenters install doors, frames, hardware, trim, and casework during interiors. Millworkers handle custom paneling and specialty wood on high-end projects. Often two different subcontractors for rough vs. finish work.",
+          "derivation": "Three sources: (a) core.project_vendors.trade matches 'carpenter, carpentry'; (b) workforce.job_titles for self-perform; (c) workforce.labor_allocations rolled up by trade. Indicates trade *type* used on a project (vs. role-instance which is one worker)."
         },
         {
           "id": "res-concrete",
           "name": "Concrete Worker",
-          "desc": "All concrete forming, placing, and finishing — from foundations through elevated slabs. Sub-specialties: concrete finishers (screeding, finishing, curing flatwork), formwork carpenters (construction and stripping), and post-tension specialists (strand placement, stressing, grouting on PT structures). Production measured in CY placed per day. Pour records in daily logs are a strong signal."
+          "desc": "All concrete forming, placing, and finishing \u2014 from foundations through elevated slabs. Sub-specialties: concrete finishers (screeding, finishing, curing flatwork), formwork carpenters (construction and stripping), and post-tension specialists (strand placement, stressing, grouting on PT structures). Production measured in CY placed per day. Pour records in daily logs are a strong signal.",
+          "derivation": "Three sources: (a) core.project_vendors.trade matches 'concrete worker, concrete finisher, cement mason'; (b) workforce.job_titles for self-perform; (c) workforce.labor_allocations rolled up by trade. Indicates trade *type* used on a project (vs. role-instance which is one worker)."
         },
         {
           "id": "res-ironworker",
           "name": "Ironworker",
-          "desc": "Steel erection and reinforcing — structural steel columns, beams, and deck plus reinforcing bar placement. Sub-specialties: structural steel erectors (bolting, plumbing, decking), welders (certified structural and misc welding), rebar installers (tying, splicing, cage assembly), and riggers/signal persons (crane rigging, heavy lifts). Production measured in tons erected per day. Critical path trade during structure phase."
+          "desc": "Steel erection and reinforcing \u2014 structural steel columns, beams, and deck plus reinforcing bar placement. Sub-specialties: structural steel erectors (bolting, plumbing, decking), welders (certified structural and misc welding), rebar installers (tying, splicing, cage assembly), and riggers/signal persons (crane rigging, heavy lifts). Production measured in tons erected per day. Critical path trade during structure phase.",
+          "derivation": "Three sources: (a) core.project_vendors.trade matches 'ironworker, structural steel, rebar installer'; (b) workforce.job_titles for self-perform; (c) workforce.labor_allocations rolled up by trade. Indicates trade *type* used on a project (vs. role-instance which is one worker)."
         },
         {
           "id": "res-mason",
           "name": "Mason",
-          "desc": "All unit masonry — brick, block, and stone. Sub-specialties: bricklayers (face brick, thin brick veneer), block layers (CMU walls, backup walls, elevator shafts), and stone masons (natural and manufactured stone for exterior veneer and interior lobbies). Weather-sensitive — production depends on temperature and moisture. Measured in SF of wall face per day."
+          "desc": "All unit masonry \u2014 brick, block, and stone. Sub-specialties: bricklayers (face brick, thin brick veneer), block layers (CMU walls, backup walls, elevator shafts), and stone masons (natural and manufactured stone for exterior veneer and interior lobbies). Weather-sensitive \u2014 production depends on temperature and moisture. Measured in SF of wall face per day.",
+          "derivation": "Three sources: (a) core.project_vendors.trade matches 'mason, bricklayer, blocklayer'; (b) workforce.job_titles for self-perform; (c) workforce.labor_allocations rolled up by trade. Indicates trade *type* used on a project (vs. role-instance which is one worker)."
         },
         {
           "id": "res-roofer",
           "name": "Roofer",
-          "desc": "All roofing work — membrane, metal, and built-up systems. Sub-specialties: membrane roofers (TPO, PVC, EPDM, BUR, modified bitumen) and metal roofers/sheet metal workers (standing seam, metal panels, copings, flashing). Highly weather-sensitive — daily log delays frequently reference roofing holds. Manufacturer warranty submittals are a key deliverable. Critical path on most projects."
+          "desc": "All roofing work \u2014 membrane, metal, and built-up systems. Sub-specialties: membrane roofers (TPO, PVC, EPDM, BUR, modified bitumen) and metal roofers/sheet metal workers (standing seam, metal panels, copings, flashing). Highly weather-sensitive \u2014 daily log delays frequently reference roofing holds. Manufacturer warranty submittals are a key deliverable. Critical path on most projects.",
+          "derivation": "Three sources: (a) core.project_vendors.trade matches 'roofer, roofing'; (b) workforce.job_titles for self-perform; (c) workforce.labor_allocations rolled up by trade. Indicates trade *type* used on a project (vs. role-instance which is one worker)."
         },
         {
           "id": "res-glazier",
           "name": "Glazier",
-          "desc": "All glass and curtain wall work — unitized and stick-built curtain wall systems, punch windows, storefronts, entrances, and skylights. Highly specialized — usually one sub for the full building envelope scope. Unitized systems are fabricated off-site and installed as complete units. Long lead time for fabrication. Often critical path on high-rise projects."
+          "desc": "All glass and curtain wall work \u2014 unitized and stick-built curtain wall systems, punch windows, storefronts, entrances, and skylights. Highly specialized \u2014 usually one sub for the full building envelope scope. Unitized systems are fabricated off-site and installed as complete units. Long lead time for fabrication. Often critical path on high-rise projects.",
+          "derivation": "Three sources: (a) core.project_vendors.trade matches 'glazier, glass installer, glazing'; (b) workforce.job_titles for self-perform; (c) workforce.labor_allocations rolled up by trade. Indicates trade *type* used on a project (vs. role-instance which is one worker)."
         },
         {
           "id": "res-waterproofer",
           "name": "Waterproofer",
-          "desc": "Below-grade and above-grade moisture protection — foundation membranes, air/vapor barriers, and joint sealants. Sub-specialties: below-grade waterproofers (fluid-applied, sheet membrane, bentonite), air/vapor barrier installers (building wrap, fluid-applied, self-adhered), and caulkers/sealant applicators (joint sealants, expansion joints, firestopping). Failure leads to long-term moisture intrusion — a top rework driver."
+          "desc": "Below-grade and above-grade moisture protection \u2014 foundation membranes, air/vapor barriers, and joint sealants. Sub-specialties: below-grade waterproofers (fluid-applied, sheet membrane, bentonite), air/vapor barrier installers (building wrap, fluid-applied, self-adhered), and caulkers/sealant applicators (joint sealants, expansion joints, firestopping). Failure leads to long-term moisture intrusion \u2014 a top rework driver.",
+          "derivation": "Three sources: (a) core.project_vendors.trade matches 'waterproofer, dampproofing'; (b) workforce.job_titles for self-perform; (c) workforce.labor_allocations rolled up by trade. Indicates trade *type* used on a project (vs. role-instance which is one worker)."
         },
         {
           "id": "res-drywall",
           "name": "Drywall Hanger",
-          "desc": "Hang and finish gypsum board — drywall hanging, taping and finishing, sanding, specialty boards (moisture/abuse/fire-rated), patching around MEP. Above-ceiling inspection must happen BEFORE drywall closes the ceiling. Gate: drywall complete — walls ready for finishes. Duration: 3-5%."
+          "desc": "Hang and finish gypsum board \u2014 drywall hanging, taping and finishing, sanding, specialty boards (moisture/abuse/fire-rated), patching around MEP. Above-ceiling inspection must happen BEFORE drywall closes the ceiling. Gate: drywall complete \u2014 walls ready for finishes. Duration: 3-5%.",
+          "derivation": "Three sources: (a) core.project_vendors.trade matches 'drywall, gypsum installer, taper'; (b) workforce.job_titles for self-perform; (c) workforce.labor_allocations rolled up by trade. Indicates trade *type* used on a project (vs. role-instance which is one worker)."
         },
         {
           "id": "res-painter",
           "name": "Painter",
-          "desc": "All painting and coating work — interior and exterior. Sub-specialties: interior painters (walls, ceilings, trim, doors), exterior painters (elastomeric, high-performance coatings), and specialty coatings applicators (epoxy floors, intumescent fireproofing, anti-graffiti). One of the last trades during finishes. Punch items frequently reference paint touch-ups."
+          "desc": "All painting and coating work \u2014 interior and exterior. Sub-specialties: interior painters (walls, ceilings, trim, doors), exterior painters (elastomeric, high-performance coatings), and specialty coatings applicators (epoxy floors, intumescent fireproofing, anti-graffiti). One of the last trades during finishes. Punch items frequently reference paint touch-ups.",
+          "derivation": "Three sources: (a) core.project_vendors.trade matches 'painter, painting'; (b) workforce.job_titles for self-perform; (c) workforce.labor_allocations rolled up by trade. Indicates trade *type* used on a project (vs. role-instance which is one worker)."
         },
         {
           "id": "res-floor",
           "name": "Floor Installer",
-          "desc": "All flooring installation — tile, carpet, resilient, hardwood, and specialty. Sub-specialties: tile setters (ceramic, porcelain, natural stone), carpet/resilient installers (carpet, LVT, VCT, sheet vinyl, rubber), and hardwood/specialty floor installers (hardwood, terrazzo, polished concrete, resinous). Often multiple flooring subs per project. Late-phase — substrate moisture is a common delay driver."
+          "desc": "All flooring installation \u2014 tile, carpet, resilient, hardwood, and specialty. Sub-specialties: tile setters (ceramic, porcelain, natural stone), carpet/resilient installers (carpet, LVT, VCT, sheet vinyl, rubber), and hardwood/specialty floor installers (hardwood, terrazzo, polished concrete, resinous). Often multiple flooring subs per project. Late-phase \u2014 substrate moisture is a common delay driver.",
+          "derivation": "Three sources: (a) core.project_vendors.trade matches 'floor installer, flooring, tile setter'; (b) workforce.job_titles for self-perform; (c) workforce.labor_allocations rolled up by trade. Indicates trade *type* used on a project (vs. role-instance which is one worker)."
         },
         {
           "id": "res-ceiling",
           "name": "Ceiling Installer",
-          "desc": "Ceiling systems — acoustic grid-and-tile and specialty ceilings. Sub-specialties: acoustic ceiling installers (grid, lay-in tile, tegular) and specialty ceiling installers (wood, metal, stretch, linear, cloud ceilings). Sometimes combined with drywall sub. Follows MEP rough-in above ceiling."
+          "desc": "Ceiling systems \u2014 acoustic grid-and-tile and specialty ceilings. Sub-specialties: acoustic ceiling installers (grid, lay-in tile, tegular) and specialty ceiling installers (wood, metal, stretch, linear, cloud ceilings). Sometimes combined with drywall sub. Follows MEP rough-in above ceiling.",
+          "derivation": "Three sources: (a) core.project_vendors.trade matches 'ceiling installer, ACT installer'; (b) workforce.job_titles for self-perform; (c) workforce.labor_allocations rolled up by trade. Indicates trade *type* used on a project (vs. role-instance which is one worker)."
         },
         {
           "id": "res-insulator",
           "name": "Insulation Installer",
-          "desc": "Thermal and acoustic insulation — building envelope and mechanical systems. Sub-specialties: building insulation (batt, rigid, spray foam, blown-in for walls and roof) and mechanical insulation (pipe and duct insulation, jacketing). Mechanical insulation is a distinct specialty — often under the HVAC sub's scope."
+          "desc": "Thermal and acoustic insulation \u2014 building envelope and mechanical systems. Sub-specialties: building insulation (batt, rigid, spray foam, blown-in for walls and roof) and mechanical insulation (pipe and duct insulation, jacketing). Mechanical insulation is a distinct specialty \u2014 often under the HVAC sub's scope.",
+          "derivation": "Three sources: (a) core.project_vendors.trade matches 'insulator, insulation installer'; (b) workforce.job_titles for self-perform; (c) workforce.labor_allocations rolled up by trade. Indicates trade *type* used on a project (vs. role-instance which is one worker)."
         },
         {
           "id": "res-fireproofer",
           "name": "Fireproofer",
-          "desc": "Fire protection of structural elements and through-penetrations. Sub-specialties: spray fireproofers (SFRM on structural steel — follows steel erection, critical path) and firestoppers (through-penetration and perimeter fire barrier — inspection-critical, MEP coordination-heavy). Required for fire-rated assemblies."
+          "desc": "Fire protection of structural elements and through-penetrations. Sub-specialties: spray fireproofers (SFRM on structural steel \u2014 follows steel erection, critical path) and firestoppers (through-penetration and perimeter fire barrier \u2014 inspection-critical, MEP coordination-heavy). Required for fire-rated assemblies.",
+          "derivation": "Three sources: (a) core.project_vendors.trade matches 'fireproofer, spray-applied fireproofing, intumescent'; (b) workforce.job_titles for self-perform; (c) workforce.labor_allocations rolled up by trade. Indicates trade *type* used on a project (vs. role-instance which is one worker)."
         },
         {
           "id": "res-plumber",
           "name": "Plumber",
-          "desc": "All plumbing and piping — domestic water, waste, vent, gas, and specialty process piping. Sub-specialties: plumbers (domestic water and DWV), steamfitters/HVAC pipefitters (chilled water, hot water, steam, refrigerant), medical gas installers (healthcare projects — separate certification), and process pipefitters (lab, industrial, clean room). On site from underground rough-in through fixture trim."
+          "desc": "All plumbing and piping \u2014 domestic water, waste, vent, gas, and specialty process piping. Sub-specialties: plumbers (domestic water and DWV), steamfitters/HVAC pipefitters (chilled water, hot water, steam, refrigerant), medical gas installers (healthcare projects \u2014 separate certification), and process pipefitters (lab, industrial, clean room). On site from underground rough-in through fixture trim.",
+          "derivation": "Three sources: (a) core.project_vendors.trade matches 'plumber, plumbing'; (b) workforce.job_titles for self-perform; (c) workforce.labor_allocations rolled up by trade. Indicates trade *type* used on a project (vs. role-instance which is one worker)."
         },
         {
           "id": "res-sheetmetal",
           "name": "HVAC / Sheet Metal",
-          "desc": "All HVAC ductwork and equipment — fabrication, installation, and commissioning. Sub-specialties: sheet metal workers (duct fabrication and installation), HVAC equipment installers (AHUs, RTUs, chillers, boilers, VRF), test and balance technicians (air and water balancing — required for closeout), and controls technicians (BAS/BMS programming, sensor installation). Often the largest MEP sub by contract value."
+          "desc": "All HVAC ductwork and equipment \u2014 fabrication, installation, and commissioning. Sub-specialties: sheet metal workers (duct fabrication and installation), HVAC equipment installers (AHUs, RTUs, chillers, boilers, VRF), test and balance technicians (air and water balancing \u2014 required for closeout), and controls technicians (BAS/BMS programming, sensor installation). Often the largest MEP sub by contract value.",
+          "derivation": "Three sources: (a) core.project_vendors.trade matches 'HVAC, sheet metal, mechanical, fitter'; (b) workforce.job_titles for self-perform; (c) workforce.labor_allocations rolled up by trade. Indicates trade *type* used on a project (vs. role-instance which is one worker)."
         },
         {
           "id": "res-electrician",
           "name": "Electrician",
-          "desc": "All electrical work — power distribution, lighting, fire alarm, and site electrical. Sub-specialties: power electricians (service entrance, distribution, branch circuits, devices), lighting electricians (fixture installation, controls, emergency), fire alarm electricians (FA devices, wiring, panels, programming), and site electricians (underground ductbank, site lighting, utility connections). On site from underground through punch."
+          "desc": "All electrical work \u2014 power distribution, lighting, fire alarm, and site electrical. Sub-specialties: power electricians (service entrance, distribution, branch circuits, devices), lighting electricians (fixture installation, controls, emergency), fire alarm electricians (FA devices, wiring, panels, programming), and site electricians (underground ductbank, site lighting, utility connections). On site from underground through punch.",
+          "derivation": "Three sources: (a) core.project_vendors.trade matches 'electrician, electrical'; (b) workforce.job_titles for self-perform; (c) workforce.labor_allocations rolled up by trade. Indicates trade *type* used on a project (vs. role-instance which is one worker)."
         },
         {
           "id": "res-sprinkler",
           "name": "Sprinkler Fitter",
-          "desc": "All fire suppression piping — wet, dry, pre-action, deluge, and specialty systems. Sub-specialties: wet system installers (mains, branches, heads for standard wet pipe) and specialty system installers (dry, pre-action, deluge, clean agent, kitchen hood). Separate union and licensing from plumbers. Coordinates closely with structure (hangers) and ceilings (head locations)."
+          "desc": "All fire suppression piping \u2014 wet, dry, pre-action, deluge, and specialty systems. Sub-specialties: wet system installers (mains, branches, heads for standard wet pipe) and specialty system installers (dry, pre-action, deluge, clean agent, kitchen hood). Separate union and licensing from plumbers. Coordinates closely with structure (hangers) and ceilings (head locations).",
+          "derivation": "Three sources: (a) core.project_vendors.trade matches 'sprinkler fitter, fire protection, fire sprinkler'; (b) workforce.job_titles for self-perform; (c) workforce.labor_allocations rolled up by trade. Indicates trade *type* used on a project (vs. role-instance which is one worker)."
         },
         {
           "id": "res-elevator",
           "name": "Elevator Mechanic",
-          "desc": "All elevator and vertical transportation work — traction, hydraulic, MRL, escalators, and moving walks. Typically proprietary — one manufacturer's installer per project. Long lead time for equipment. Temporary construction elevator (hoist) is a separate scope from permanent elevators."
+          "desc": "All elevator and vertical transportation work \u2014 traction, hydraulic, MRL, escalators, and moving walks. Typically proprietary \u2014 one manufacturer's installer per project. Long lead time for equipment. Temporary construction elevator (hoist) is a separate scope from permanent elevators.",
+          "derivation": "Three sources: (a) core.project_vendors.trade matches 'elevator mechanic, elevator installer'; (b) workforce.job_titles for self-perform; (c) workforce.labor_allocations rolled up by trade. Indicates trade *type* used on a project (vs. role-instance which is one worker)."
         },
         {
           "id": "res-lowvolt",
           "name": "Low Voltage Tech",
-          "desc": "All low voltage and technology systems — data/telecom, security, AV, and fire alarm. Sub-specialties: data/telecom installers (structured cabling, fiber, racks), security installers (cameras, access control, intrusion), AV installers (audio, video, conferencing), and fire alarm installers (system design, installation, programming). Often multiple specialty subs per project."
+          "desc": "All low voltage and technology systems \u2014 data/telecom, security, AV, and fire alarm. Sub-specialties: data/telecom installers (structured cabling, fiber, racks), security installers (cameras, access control, intrusion), AV installers (audio, video, conferencing), and fire alarm installers (system design, installation, programming). Often multiple specialty subs per project.",
+          "derivation": "Three sources: (a) core.project_vendors.trade matches 'low voltage, tele/data, security tech'; (b) workforce.job_titles for self-perform; (c) workforce.labor_allocations rolled up by trade. Indicates trade *type* used on a project (vs. role-instance which is one worker)."
         },
         {
           "id": "res-operator",
           "name": "Equipment Operator",
-          "desc": "Operation of construction equipment — earthmoving, cranes, and material handling. Sub-specialties: heavy equipment operators (excavators, dozers, loaders, graders, scrapers), crane operators (tower and mobile cranes — separately licensed), and forklift/telehandler operators. Crane operators require specific NCCCO certification. Equipment production rates drive earthwork and structural schedules."
+          "desc": "Operation of construction equipment \u2014 earthmoving, cranes, and material handling. Sub-specialties: heavy equipment operators (excavators, dozers, loaders, graders, scrapers), crane operators (tower and mobile cranes \u2014 separately licensed), and forklift/telehandler operators. Crane operators require specific NCCCO certification. Equipment production rates drive earthwork and structural schedules.",
+          "derivation": "Three sources: (a) core.project_vendors.trade matches 'equipment operator, heavy equipment operator'; (b) workforce.job_titles for self-perform; (c) workforce.labor_allocations rolled up by trade. Indicates trade *type* used on a project (vs. role-instance which is one worker)."
         },
         {
           "id": "res-surveyor",
           "name": "Surveyor",
-          "desc": "Survey and layout — establishing control points, building layout, grade verification, and as-built documentation. Uses total stations, GPS/GNSS, robotic instruments, and increasingly drones for progress documentation. First on site and last to leave. Layout accuracy directly affects every subsequent trade."
+          "desc": "Survey and layout \u2014 establishing control points, building layout, grade verification, and as-built documentation. Uses total stations, GPS/GNSS, robotic instruments, and increasingly drones for progress documentation. First on site and last to leave. Layout accuracy directly affects every subsequent trade.",
+          "derivation": "Three sources: (a) core.project_vendors.trade matches 'surveyor, layout'; (b) workforce.job_titles for self-perform; (c) workforce.labor_allocations rolled up by trade. Indicates trade *type* used on a project (vs. role-instance which is one worker)."
         },
         {
           "id": "res-safety",
           "name": "Safety Professional",
-          "desc": "Safety management and compliance — hazard identification, incident investigation, OSHA compliance, and safety training. Typically a full-time role on projects above a threshold size. Generates safety observations, manages toolbox talks, and oversees PPE compliance. Decision authority on stop-work conditions."
+          "desc": "Safety management and compliance \u2014 hazard identification, incident investigation, OSHA compliance, and safety training. Typically a full-time role on projects above a threshold size. Generates safety observations, manages toolbox talks, and oversees PPE compliance. Decision authority on stop-work conditions.",
+          "derivation": "Three sources: (a) core.project_vendors.trade matches 'safety, safety professional'; (b) workforce.job_titles for self-perform; (c) workforce.labor_allocations rolled up by trade. Indicates trade *type* used on a project (vs. role-instance which is one worker)."
         },
         {
           "id": "res-qc",
           "name": "QC Inspector",
-          "desc": "Dedicated quality professional responsible for QA/QC across the project — inspection coordination, deficiency tracking, specification compliance, material testing coordination, non-conformance management. Consumes specifications, approved submittals, test reports, inspection results. Produces inspection reports, NCRs, deficiency logs, quality metrics. Active from Construction through Closeout. Decision authority: Medium — can reject non-conforming work; requires corrective action."
+          "desc": "Dedicated quality professional responsible for QA/QC across the project \u2014 inspection coordination, deficiency tracking, specification compliance, material testing coordination, non-conformance management. Consumes specifications, approved submittals, test reports, inspection results. Produces inspection reports, NCRs, deficiency logs, quality metrics. Active from Construction through Closeout. Decision authority: Medium \u2014 can reject non-conforming work; requires corrective action.",
+          "derivation": "Three sources: (a) core.project_vendors.trade matches 'QC, quality control inspector'; (b) workforce.job_titles for self-perform; (c) workforce.labor_allocations rolled up by trade. Indicates trade *type* used on a project (vs. role-instance which is one worker)."
         },
         {
           "id": "res-cxa",
           "name": "Commissioning Agent",
-          "desc": "Building systems commissioning — functional performance testing of MEP systems before owner occupancy. Increasingly required by code (IECC, ASHRAE 189.1) and LEED. Independent from installing contractors. Tests integrated system performance, not just individual equipment. Lifecycle: pre-functional checks → startup → TAB → integrated testing → performance verification."
+          "desc": "Building systems commissioning \u2014 functional performance testing of MEP systems before owner occupancy. Increasingly required by code (IECC, ASHRAE 189.1) and LEED. Independent from installing contractors. Tests integrated system performance, not just individual equipment. Lifecycle: pre-functional checks \u2192 startup \u2192 TAB \u2192 integrated testing \u2192 performance verification.",
+          "derivation": "Three sources: (a) core.project_vendors.trade matches 'commissioning, commissioning agent'; (b) workforce.job_titles for self-perform; (c) workforce.labor_allocations rolled up by trade. Indicates trade *type* used on a project (vs. role-instance which is one worker)."
         }
       ]
     },
@@ -141,57 +166,68 @@
         {
           "id": "res-crane",
           "name": "Crane",
-          "desc": "Lifting equipment for vertical construction — tower cranes, mobile cranes, and overhead gantry systems. Tower cranes: hammerhead (fixed jib, high-rise), luffing (variable radius, tight urban sites), and self-erecting (low/mid-rise). Mobile cranes: truck-mounted (steel picks, equipment setting), crawler (heavy lifts, piling), and all-terrain. Crane erection and dismantling are major schedule milestones. Crane capacity and reach govern structural sequencing."
+          "desc": "Lifting equipment for vertical construction \u2014 tower cranes, mobile cranes, and overhead gantry systems. Tower cranes: hammerhead (fixed jib, high-rise), luffing (variable radius, tight urban sites), and self-erecting (low/mid-rise). Mobile cranes: truck-mounted (steel picks, equipment setting), crawler (heavy lifts, piling), and all-terrain. Crane erection and dismantling are major schedule milestones. Crane capacity and reach govern structural sequencing.",
+          "derivation": "workforce.equipment_project_log filtered to equipment matching: crane, tower crane, mobile crane. Aggregate by project. Combine with workforce.equipment_tc_entry for hours of operation."
         },
         {
           "id": "res-earthmover",
           "name": "Earthmoving Equip",
-          "desc": "Excavation, grading, and site preparation equipment. Types: track excavators (primary dig — bulk and detail), mini excavators (confined spaces, utilities), long-reach excavators (deep cuts), wheel loaders (material handling, stockpile), skid steers (compact, versatile with attachments), backhoes (combined loader/excavator for utilities), dozers (grading, pushing), graders (fine grading, road building), and trenchers (narrow utility trenching). GPS machine guidance increasingly standard."
+          "desc": "Excavation, grading, and site preparation equipment. Types: track excavators (primary dig \u2014 bulk and detail), mini excavators (confined spaces, utilities), long-reach excavators (deep cuts), wheel loaders (material handling, stockpile), skid steers (compact, versatile with attachments), backhoes (combined loader/excavator for utilities), dozers (grading, pushing), graders (fine grading, road building), and trenchers (narrow utility trenching). GPS machine guidance increasingly standard.",
+          "derivation": "workforce.equipment_project_log filtered to equipment matching: excavator, dozer, loader, scraper. Aggregate by project. Combine with workforce.equipment_tc_entry for hours of operation."
         },
         {
           "id": "res-conc-equip",
           "name": "Concrete Equip",
-          "desc": "Concrete placement and finishing equipment — pumps, mixers, vibrators, and saws. Boom pumps (truck-mounted, for elevated pours), line pumps (ground-level, for slabs and foundations), mixer trucks (ready-mix delivery), concrete vibrators (internal consolidation), and concrete saws (flat, wall, and wire saws for cutting and demo). Pump selection depends on placement distance and elevation. Pour volume per day drives equipment sizing."
+          "desc": "Concrete placement and finishing equipment \u2014 pumps, mixers, vibrators, and saws. Boom pumps (truck-mounted, for elevated pours), line pumps (ground-level, for slabs and foundations), mixer trucks (ready-mix delivery), concrete vibrators (internal consolidation), and concrete saws (flat, wall, and wire saws for cutting and demo). Pump selection depends on placement distance and elevation. Pour volume per day drives equipment sizing.",
+          "derivation": "workforce.equipment_project_log filtered to equipment matching: concrete pump, concrete truck, mixer. Aggregate by project. Combine with workforce.equipment_tc_entry for hours of operation."
         },
         {
           "id": "res-mat-handle",
           "name": "Material Handling",
-          "desc": "Equipment for moving materials on site — forklifts, telehandlers, conveyors, and hoists. Rough terrain forklifts (outdoor material handling), warehouse forklifts (indoor staging), telehandlers (variable-reach telescopic handler — most common material handling on site), and conveyors/hoists (material conveyors, trash chutes). Telehandlers are on every project. Material handling efficiency directly affects trade productivity."
+          "desc": "Equipment for moving materials on site \u2014 forklifts, telehandlers, conveyors, and hoists. Rough terrain forklifts (outdoor material handling), warehouse forklifts (indoor staging), telehandlers (variable-reach telescopic handler \u2014 most common material handling on site), and conveyors/hoists (material conveyors, trash chutes). Telehandlers are on every project. Material handling efficiency directly affects trade productivity.",
+          "derivation": "workforce.equipment_project_log filtered to equipment matching: forklift, telehandler, material lift. Aggregate by project. Combine with workforce.equipment_tc_entry for hours of operation."
         },
         {
           "id": "res-access",
           "name": "Access Equipment",
-          "desc": "Equipment for elevated work access — boom lifts, scissor lifts, personnel hoists, and scaffolding. Boom lifts: articulating (around obstacles) and telescopic (maximum reach). Scissor lifts: vertical platform for interior/exterior work — most common access during MEP rough-in. Personnel/material hoists: temporary construction elevators — schedule-critical on high-rise. Scaffolding: tubular frame, modular system, mast climbing, and swing stages for facade work."
+          "desc": "Equipment for elevated work access \u2014 boom lifts, scissor lifts, personnel hoists, and scaffolding. Boom lifts: articulating (around obstacles) and telescopic (maximum reach). Scissor lifts: vertical platform for interior/exterior work \u2014 most common access during MEP rough-in. Personnel/material hoists: temporary construction elevators \u2014 schedule-critical on high-rise. Scaffolding: tubular frame, modular system, mast climbing, and swing stages for facade work.",
+          "derivation": "workforce.equipment_project_log filtered to equipment matching: scissor lift, boom lift, scaffold, swing stage. Aggregate by project. Combine with workforce.equipment_tc_entry for hours of operation."
         },
         {
           "id": "res-compaction",
           "name": "Compaction Equip",
-          "desc": "Soil and base compaction equipment — rollers, plate compactors, and rammers. Vibratory rollers (smooth drum or padfoot for large areas), plate compactors (walk-behind for trench backfill and confined areas), and pneumatic rollers (multi-tire for asphalt). Compaction equipment selection depends on soil type and lift thickness. Proof rolling and compaction testing are quality checkpoints."
+          "desc": "Soil and base compaction equipment \u2014 rollers, plate compactors, and rammers. Vibratory rollers (smooth drum or padfoot for large areas), plate compactors (walk-behind for trench backfill and confined areas), and pneumatic rollers (multi-tire for asphalt). Compaction equipment selection depends on soil type and lift thickness. Proof rolling and compaction testing are quality checkpoints.",
+          "derivation": "workforce.equipment_project_log filtered to equipment matching: roller, compactor, plate compactor. Aggregate by project. Combine with workforce.equipment_tc_entry for hours of operation."
         },
         {
           "id": "res-piling",
           "name": "Piling Equip",
-          "desc": "Pile driving and drilling equipment including pile hammers, auger rigs, and vibratory drivers used for deep foundation installation."
+          "desc": "Pile driving and drilling equipment including pile hammers, auger rigs, and vibratory drivers used for deep foundation installation.",
+          "derivation": "workforce.equipment_project_log filtered to equipment matching: pile driver, drilling rig, auger. Aggregate by project. Combine with workforce.equipment_tc_entry for hours of operation."
         },
         {
           "id": "res-hauling",
           "name": "Hauling Equip",
-          "desc": "Transport equipment — dump trucks, flatbeds, and water trucks. Dump trucks (on/off-site material hauling for earthwork and demo), flatbed trucks (material delivery and transport), and water trucks (dust control, compaction moisture). Hauling volume drives earthwork cost. Cycle time (load, haul, dump, return) is the key production metric."
+          "desc": "Transport equipment \u2014 dump trucks, flatbeds, and water trucks. Dump trucks (on/off-site material hauling for earthwork and demo), flatbed trucks (material delivery and transport), and water trucks (dust control, compaction moisture). Hauling volume drives earthwork cost. Cycle time (load, haul, dump, return) is the key production metric.",
+          "derivation": "workforce.equipment_project_log filtered to equipment matching: dump truck, hauling truck. Aggregate by project. Combine with workforce.equipment_tc_entry for hours of operation."
         },
         {
           "id": "res-temp-util",
           "name": "Temporary Utilities",
-          "desc": "Temporary site services during construction — power, compressed air, heating, lighting, and dewatering. Generators/temp power (before permanent electrical service), air compressors (pneumatic tools, testing, blowdown), heaters/temp heat (cold-weather concrete curing, winter enclosures), light towers (site lighting for early/late shifts), and dewatering pumps (groundwater control during excavation). Duration on site varies from mobilization to permanent service connection."
+          "desc": "Temporary site services during construction \u2014 power, compressed air, heating, lighting, and dewatering. Generators/temp power (before permanent electrical service), air compressors (pneumatic tools, testing, blowdown), heaters/temp heat (cold-weather concrete curing, winter enclosures), light towers (site lighting for early/late shifts), and dewatering pumps (groundwater control during excavation). Duration on site varies from mobilization to permanent service connection.",
+          "derivation": "workforce.equipment_project_log filtered to equipment matching: generator, light tower, temporary power. Aggregate by project. Combine with workforce.equipment_tc_entry for hours of operation."
         },
         {
           "id": "res-welding",
           "name": "Welding Equip",
-          "desc": "Welding machines, cutting torches, and related equipment for structural steel connections, pipe welding, and metal fabrication on site."
+          "desc": "Welding machines, cutting torches, and related equipment for structural steel connections, pipe welding, and metal fabrication on site.",
+          "derivation": "workforce.equipment_project_log filtered to equipment matching: welder, welding machine, plasma cutter. Aggregate by project. Combine with workforce.equipment_tc_entry for hours of operation."
         },
         {
           "id": "res-survey-inst",
           "name": "Survey Instruments",
-          "desc": "Total stations, GPS receivers, laser levels, and robotic instruments used for site layout, control surveys, and as-built verification."
+          "desc": "Total stations, GPS receivers, laser levels, and robotic instruments used for site layout, control surveys, and as-built verification.",
+          "derivation": "workforce.equipment_project_log filtered to equipment matching: total station, GPS receiver, laser. Aggregate by project. Combine with workforce.equipment_tc_entry for hours of operation."
         }
       ]
     },
@@ -202,127 +238,152 @@
         {
           "id": "mat-concrete",
           "name": "Concrete",
-          "desc": "All cast-in-place and precast concrete — the most common structural material in construction. Types: ready-mix concrete (normal weight, lightweight, high-strength, SCC, fiber-reinforced), precast structural (hollow core plank, double tees, beams, columns), precast architectural (panels, trim, ornamentation), concrete accessories (formwork, ties, chairs, embeds, anchors, waterstops), and admixtures/curing compounds. Mix design submittals are a key deliverable. Pour records tracked in daily logs."
+          "desc": "All cast-in-place and precast concrete \u2014 the most common structural material in construction. Types: ready-mix concrete (normal weight, lightweight, high-strength, SCC, fiber-reinforced), precast structural (hollow core plank, double tees, beams, columns), precast architectural (panels, trim, ornamentation), concrete accessories (formwork, ties, chairs, embeds, anchors, waterstops), and admixtures/curing compounds. Mix design submittals are a key deliverable. Pour records tracked in daily logs.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '03 30 00 / 03 31 00' AND description matches: concrete, ready-mix, cement. Combine with workforce.materials for delivered material records and finance.commit_purchase for procurement."
         },
         {
           "id": "mat-rebar",
           "name": "Rebar",
-          "desc": "All concrete reinforcement — deformed bars, welded wire, post-tensioning, and mechanical couplers. Rebar (#3 through #18 deformed bars, epoxy coated), welded wire fabric (WWF/WWR for slabs), post-tensioning (PT strand, anchors, ducts, grout — specialty sub), and couplers/splices (mechanical rebar couplers, threaded inserts). Rebar shop drawings are standard submittals. Tonnage and placement rate drive schedule."
+          "desc": "All concrete reinforcement \u2014 deformed bars, welded wire, post-tensioning, and mechanical couplers. Rebar (#3 through #18 deformed bars, epoxy coated), welded wire fabric (WWF/WWR for slabs), post-tensioning (PT strand, anchors, ducts, grout \u2014 specialty sub), and couplers/splices (mechanical rebar couplers, threaded inserts). Rebar shop drawings are standard submittals. Tonnage and placement rate drive schedule.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '03 21 00' AND description matches: rebar, reinforcing steel, reinforcement. Combine with workforce.materials for delivered material records and finance.commit_purchase for procurement."
         },
         {
           "id": "mat-steel",
           "name": "Structural Steel",
-          "desc": "Erect the steel frame including columns, beams, girders, metal deck, and shear studs — connection bolting/welding, plumbing and aligning. Tower crane operations dominate logistics. Fall protection is the primary safety concern. Gate: steel topped out (last piece set). Duration: 10-15%."
+          "desc": "All structural steel materials \u2014 wide-flange beams, columns, HSS tubes, angles, channels, plates, connection hardware, and metal decking. Includes reinforcing steel (rebar), welding consumables, and miscellaneous metals.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '05 12 00' AND description matches: structural steel, steel beam, steel column, W-shape. Combine with workforce.materials for delivered material records and finance.commit_purchase for procurement."
         },
         {
           "id": "mat-lumber",
           "name": "Lumber & Wood",
-          "desc": "All wood and composite products — dimensional lumber, engineered wood, and sheathing. Dimensional lumber (studs, joists, blocking, plates), engineered wood (LVL, glulam, TJI, CLT, PSL), and sheathing/panels (plywood, OSB, cementitious board). Engineered wood products require submittals. Mass timber (CLT, glulam) is a growing structural system. Less formal submittal requirements than steel or concrete for conventional framing."
+          "desc": "All wood and composite products \u2014 dimensional lumber, engineered wood, and sheathing. Dimensional lumber (studs, joists, blocking, plates), engineered wood (LVL, glulam, TJI, CLT, PSL), and sheathing/panels (plywood, OSB, cementitious board). Engineered wood products require submittals. Mass timber (CLT, glulam) is a growing structural system. Less formal submittal requirements than steel or concrete for conventional framing.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '06 10 00' AND description matches: lumber, framing lumber, wood, plywood. Combine with workforce.materials for delivered material records and finance.commit_purchase for procurement."
         },
         {
           "id": "mat-masonry",
           "name": "Masonry",
-          "desc": "All unit masonry — CMU, face brick, natural stone, manufactured stone, and accessories. CMU (standard, lightweight, split face, ground face), face brick (modular, queen, king, thin brick), natural stone (limestone, granite, marble, sandstone, slate), manufactured stone (cast stone, cultured stone, adhered veneer), mortar and grout (Type S, N, M), and accessories (ties, anchors, reinforcing, flashing, weeps, lintels). Color and pattern submittals are standard. Weather-sensitive installation."
+          "desc": "All unit masonry \u2014 CMU, face brick, natural stone, manufactured stone, and accessories. CMU (standard, lightweight, split face, ground face), face brick (modular, queen, king, thin brick), natural stone (limestone, granite, marble, sandstone, slate), manufactured stone (cast stone, cultured stone, adhered veneer), mortar and grout (Type S, N, M), and accessories (ties, anchors, reinforcing, flashing, weeps, lintels). Color and pattern submittals are standard. Weather-sensitive installation.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '04 20 00' AND description matches: masonry, CMU, brick, block, stone. Combine with workforce.materials for delivered material records and finance.commit_purchase for procurement."
         },
         {
           "id": "mat-roofing",
           "name": "Roofing Materials",
-          "desc": "All roofing materials — membrane, metal, built-up, and accessories. Single-ply membrane (TPO, PVC, EPDM), built-up/modified bitumen (BUR, SBS, APP), metal roofing (standing seam, corrugated, architectural panels), insulation (polyiso, EPS, XPS, cover board), and accessories (fasteners, adhesive, walkway pads, snow guards, drains). Manufacturer warranty submittals are a key deliverable — warranty requirements drive material and installation specifications."
+          "desc": "All roofing materials \u2014 membrane, metal, built-up, and accessories. Single-ply membrane (TPO, PVC, EPDM), built-up/modified bitumen (BUR, SBS, APP), metal roofing (standing seam, corrugated, architectural panels), insulation (polyiso, EPS, XPS, cover board), and accessories (fasteners, adhesive, walkway pads, snow guards, drains). Manufacturer warranty submittals are a key deliverable \u2014 warranty requirements drive material and installation specifications.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '07 50 00' AND description matches: roofing, TPO, EPDM, modified bitumen, BUR. Combine with workforce.materials for delivered material records and finance.commit_purchase for procurement."
         },
         {
           "id": "mat-waterproof",
           "name": "Waterproofing",
-          "desc": "All roofing materials — membrane, metal, built-up, and accessories. Single-ply membrane (TPO, PVC, EPDM), built-up/modified bitumen (BUR, SBS, APP), metal roofing (standing seam, corrugated, architectural panels), insulation (polyiso, EPS, XPS, cover board), and accessories (fasteners, adhesive, walkway pads, snow guards, drains). Manufacturer warranty submittals are a key deliverable — warranty requirements drive material and installation specifications."
+          "desc": "All waterproofing materials \u2014 below-grade membranes, sheet and fluid-applied waterproofing, dampproofing, air/vapor barriers, joint sealants, and waterstops. Includes bentonite, bituminous, and synthetic membrane systems.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '07 10 00' AND description matches: waterproofing, dampproofing. Combine with workforce.materials for delivered material records and finance.commit_purchase for procurement."
         },
         {
           "id": "mat-thermal",
           "name": "Thermal & Fire Prot",
-          "desc": "Insulation and fireproofing materials — building insulation, spray fireproofing, and firestopping. Building insulation (batt, rigid board, spray foam, blown-in — energy code driven), spray fireproofing (SFRM — cementitious and intumescent on structural steel), and firestopping (through-penetration, perimeter, and joint firestopping). Spray fireproofing follows steel erection and is critical path. Firestopping is inspection-critical — one of the most common inspection findings."
+          "desc": "Insulation and fireproofing materials \u2014 building insulation, spray fireproofing, and firestopping. Building insulation (batt, rigid board, spray foam, blown-in \u2014 energy code driven), spray fireproofing (SFRM \u2014 cementitious and intumescent on structural steel), and firestopping (through-penetration, perimeter, and joint firestopping). Spray fireproofing follows steel erection and is critical path. Firestopping is inspection-critical \u2014 one of the most common inspection findings.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '07 21 00 / 07 80 00' AND description matches: insulation, thermal insulation, fire protection, fireproofing. Combine with workforce.materials for delivered material records and finance.commit_purchase for procurement."
         },
         {
           "id": "mat-glass",
           "name": "Glass & Glazing",
-          "desc": "All glass and glazing systems — curtain wall, windows, storefronts, skylights, and insulating glass units. Curtain wall systems (unitized and stick-built aluminum/glass facades), windows (aluminum, vinyl, wood — operable and fixed), storefronts and entrances (aluminum storefront, entrance doors, ADA), skylights (unit, ridge, pyramid, smoke vents), and IGUs (tempered, laminated, low-E, tinted, spandrel). Performance specs (U-factor, SHGC, VLT) drive selection. Major shop drawing submittals."
+          "desc": "All glass and glazing systems \u2014 curtain wall, windows, storefronts, skylights, and insulating glass units. Curtain wall systems (unitized and stick-built aluminum/glass facades), windows (aluminum, vinyl, wood \u2014 operable and fixed), storefronts and entrances (aluminum storefront, entrance doors, ADA), skylights (unit, ridge, pyramid, smoke vents), and IGUs (tempered, laminated, low-E, tinted, spandrel). Performance specs (U-factor, SHGC, VLT) drive selection. Major shop drawing submittals.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '08 80 00' AND description matches: glass, glazing, IGU. Combine with workforce.materials for delivered material records and finance.commit_purchase for procurement."
         },
         {
           "id": "mat-doors",
           "name": "Doors & Hardware",
-          "desc": "Install door slabs and finish hardware — door hanging, hinges, closers, locksets, pulls, keying, access control coordination, fire-rated door labeling. Top-3 punch item category on every project type. Gate: all doors hung and hardware operational. Duration: 2-3%."
+          "desc": "All door and hardware materials \u2014 hollow metal frames, wood doors, aluminum storefront doors, fire-rated door assemblies, finish hardware (hinges, locksets, closers, panic devices), and access control hardware. Includes overhead/rolling doors and specialty doors.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '08 10 00 / 08 14 00 / 08 70 00' AND description matches: doors, hardware, hinges, locks. Combine with workforce.materials for delivered material records and finance.commit_purchase for procurement."
         },
         {
           "id": "mat-framing",
           "name": "Framing & Gypsum",
-          "desc": "Metal framing and gypsum board — the backbone of interior partitions. Metal studs and track (light-gauge steel framing, deflection track, furring), gypsum board (regular, moisture-resistant, fire-rated, abuse-resistant, shaftliner), and plaster/stucco (traditional plaster, EIFS, synthetic stucco). Specialty boards (moisture, abuse, fire, shaftliner) require submittals. Gypsum board quantities are among the largest material volumes on any interior project."
+          "desc": "Metal framing and gypsum board \u2014 the backbone of interior partitions. Metal studs and track (light-gauge steel framing, deflection track, furring), gypsum board (regular, moisture-resistant, fire-rated, abuse-resistant, shaftliner), and plaster/stucco (traditional plaster, EIFS, synthetic stucco). Specialty boards (moisture, abuse, fire, shaftliner) require submittals. Gypsum board quantities are among the largest material volumes on any interior project.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '09 22 00 / 09 29 00' AND description matches: metal stud, gypsum board, drywall, framing. Combine with workforce.materials for delivered material records and finance.commit_purchase for procurement."
         },
         {
           "id": "mat-ceiling",
           "name": "Ceiling Materials",
-          "desc": "All ceiling systems — acoustic grid-and-tile and specialty ceilings. Acoustic ceilings (suspension grid, lay-in tile, tegular) and specialty ceilings (wood, metal, stretch, linear, open cell, cloud ceilings). Acoustic tile selection affects NRC ratings and aesthetics. Specialty ceilings are increasingly common in commercial lobbies and open office areas. Ceiling installation cannot begin until above-ceiling MEP is inspected and approved."
+          "desc": "All ceiling systems \u2014 acoustic grid-and-tile and specialty ceilings. Acoustic ceilings (suspension grid, lay-in tile, tegular) and specialty ceilings (wood, metal, stretch, linear, open cell, cloud ceilings). Acoustic tile selection affects NRC ratings and aesthetics. Specialty ceilings are increasingly common in commercial lobbies and open office areas. Ceiling installation cannot begin until above-ceiling MEP is inspected and approved.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '09 51 00 / 09 53 00' AND description matches: acoustic tile, ACT, suspended ceiling grid. Combine with workforce.materials for delivered material records and finance.commit_purchase for procurement."
         },
         {
           "id": "mat-flooring",
           "name": "Flooring Materials",
-          "desc": "All flooring materials — tile, carpet, resilient, hardwood, stone, and resinous/specialty. Ceramic/porcelain tile (floor and wall tile, mosaics), carpet (broadloom, modular tile), resilient flooring (LVT, VCT, sheet vinyl, rubber, linoleum), hardwood (solid, engineered, prefinished), stone (marble, granite, terrazzo, slate), and resinous/specialty (epoxy, urethane, MMA, polished concrete, stained). Substrate moisture content must meet ASTM F2170 before resilient and wood installation."
+          "desc": "All flooring materials \u2014 tile, carpet, resilient, hardwood, stone, and resinous/specialty. Ceramic/porcelain tile (floor and wall tile, mosaics), carpet (broadloom, modular tile), resilient flooring (LVT, VCT, sheet vinyl, rubber, linoleum), hardwood (solid, engineered, prefinished), stone (marble, granite, terrazzo, slate), and resinous/specialty (epoxy, urethane, MMA, polished concrete, stained). Substrate moisture content must meet ASTM F2170 before resilient and wood installation.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '09 60 00 / 09 65 00 / 09 68 00' AND description matches: carpet, VCT, LVT, tile, hardwood, vinyl. Combine with workforce.materials for delivered material records and finance.commit_purchase for procurement."
         },
         {
           "id": "mat-paint",
           "name": "Paint Materials",
-          "desc": "Paints, primers, stains, sealers, and coatings for interior and exterior surfaces including walls, ceilings, trim, and specialty finishes."
+          "desc": "Paints, primers, stains, sealers, and coatings for interior and exterior surfaces including walls, ceilings, trim, and specialty finishes.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '09 91 00' AND description matches: paint, primer, coatings. Combine with workforce.materials for delivered material records and finance.commit_purchase for procurement."
         },
         {
           "id": "mat-specialties",
           "name": "Specialties",
-          "desc": "Division 10 specialties — toilet accessories, signage, fire protection specialties, wall/corner protection, and lockers/storage. Toilet accessories (partitions, grab bars, dispensers, mirrors), signage (interior/exterior, ADA, wayfinding), fire protection specialties (extinguishers, cabinets, blankets), wall and corner protection (corner guards, wall protection, handrails), and lockers/storage (lockers, shelving, mail boxes). Small individual scopes but numerous SKUs across a project."
+          "desc": "Division 10 specialties \u2014 toilet accessories, signage, fire protection specialties, wall/corner protection, and lockers/storage. Toilet accessories (partitions, grab bars, dispensers, mirrors), signage (interior/exterior, ADA, wayfinding), fire protection specialties (extinguishers, cabinets, blankets), wall and corner protection (corner guards, wall protection, handrails), and lockers/storage (lockers, shelving, mail boxes). Small individual scopes but numerous SKUs across a project.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '10 00 00' AND description matches: toilet partitions, lockers, signage, accessories. Combine with workforce.materials for delivered material records and finance.commit_purchase for procurement."
         },
         {
           "id": "mat-casework",
           "name": "Casework Materials",
-          "desc": "Cabinets, countertops, shelving, and millwork materials for kitchens, bathrooms, laboratories, and storage areas."
+          "desc": "Cabinets, countertops, shelving, and millwork materials for kitchens, bathrooms, laboratories, and storage areas.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '06 41 00 / 12 30 00' AND description matches: casework, millwork, cabinets. Combine with workforce.materials for delivered material records and finance.commit_purchase for procurement."
         },
         {
           "id": "mat-plumbing",
           "name": "Plumbing Materials",
-          "desc": "All plumbing piping, fittings, and fixtures. Pipe: domestic water (copper, PEX, CPVC, stainless), waste/vent (cast iron, PVC, ABS, no-hub), valves and fittings (gate, ball, check, PRV, backflow preventers), and hangers/supports. Fixtures: water closets and urinals, lavatories and sinks, faucets and trim, carriers and supports, water heaters (tank, tankless, heat pump), and specialty fixtures (drinking fountains, eyewash, emergency showers). Every fixture requires a model-specific submittal."
+          "desc": "All plumbing piping, fittings, and fixtures. Pipe: domestic water (copper, PEX, CPVC, stainless), waste/vent (cast iron, PVC, ABS, no-hub), valves and fittings (gate, ball, check, PRV, backflow preventers), and hangers/supports. Fixtures: water closets and urinals, lavatories and sinks, faucets and trim, carriers and supports, water heaters (tank, tankless, heat pump), and specialty fixtures (drinking fountains, eyewash, emergency showers). Every fixture requires a model-specific submittal.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '22 11 00 / 22 13 00 / 22 40 00' AND description matches: plumbing fixtures, plumbing pipe, valves. Combine with workforce.materials for delivered material records and finance.commit_purchase for procurement."
         },
         {
           "id": "mat-hvac-dist",
           "name": "HVAC Duct Materials",
-          "desc": "Sheet metal ductwork, flexible duct, duct insulation, fittings, dampers, and diffusers for air distribution systems."
+          "desc": "Sheet metal ductwork, flexible duct, duct insulation, fittings, dampers, and diffusers for air distribution systems.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '23 30 00 / 23 31 00' AND description matches: ductwork, sheet metal, ductwork accessories. Combine with workforce.materials for delivered material records and finance.commit_purchase for procurement."
         },
         {
           "id": "mat-hvac-equip",
           "name": "HVAC Equipment",
-          "desc": "Major HVAC equipment and building automation controls. Equipment: air handling units (central station AHUs, make-up air), rooftop units (packaged RTUs, DX cooling), split systems/VRF/heat pumps, chillers (air-cooled, water-cooled), cooling towers, boilers/furnaces, HVAC pumps (chilled water, hot water, condenser), and terminal units (VAV boxes, fan coils, unit heaters). Controls: thermostats/sensors, actuators/valves, DDC controllers, BAS panels. Major equipment submittals are early critical path."
+          "desc": "Major HVAC equipment and building automation controls. Equipment: air handling units (central station AHUs, make-up air), rooftop units (packaged RTUs, DX cooling), split systems/VRF/heat pumps, chillers (air-cooled, water-cooled), cooling towers, boilers/furnaces, HVAC pumps (chilled water, hot water, condenser), and terminal units (VAV boxes, fan coils, unit heaters). Controls: thermostats/sensors, actuators/valves, DDC controllers, BAS panels. Major equipment submittals are early critical path.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '23 50 00 / 23 60 00 / 23 70 00' AND description matches: AHU, RTU, chiller, boiler, condenser. Combine with workforce.materials for delivered material records and finance.commit_purchase for procurement."
         },
         {
           "id": "mat-elec",
           "name": "Electrical Wire",
-          "desc": "Conductors, cables, conduit, and wiring devices including copper wire, aluminum feeders, and fiber optic cable for power and data distribution."
+          "desc": "Conductors, cables, conduit, and wiring devices including copper wire, aluminum feeders, and fiber optic cable for power and data distribution.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '26 05 00 / 26 27 00' AND description matches: wire, conductor, cable, building wire. Combine with workforce.materials for delivered material records and finance.commit_purchase for procurement."
         },
         {
           "id": "mat-lighting",
           "name": "Lighting Fixtures",
-          "desc": "All light fixtures and controls — interior, exterior, emergency, and controls. Interior fixtures (troffers, downlights, pendants, linear, decorative), exterior fixtures (site, facade, parking, landscape lighting), emergency and exit (emergency battery units, exit signs, egress lighting — code-required), and lighting controls (dimmers, occupancy sensors, daylight harvesting, relay panels). Lighting submittals are among the highest volume on any project — every fixture type requires approval."
+          "desc": "All light fixtures and controls \u2014 interior, exterior, emergency, and controls. Interior fixtures (troffers, downlights, pendants, linear, decorative), exterior fixtures (site, facade, parking, landscape lighting), emergency and exit (emergency battery units, exit signs, egress lighting \u2014 code-required), and lighting controls (dimmers, occupancy sensors, daylight harvesting, relay panels). Lighting submittals are among the highest volume on any project \u2014 every fixture type requires approval.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '26 50 00' AND description matches: lighting fixtures, luminaires, lamps. Combine with workforce.materials for delivered material records and finance.commit_purchase for procurement."
         },
         {
           "id": "mat-fp",
           "name": "Fire Prot Materials",
-          "desc": "Fire protection piping, sprinkler heads, valves, hangers, and fire suppression system components."
+          "desc": "Fire protection piping, sprinkler heads, valves, hangers, and fire suppression system components.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '21 13 00' AND description matches: sprinkler heads, fire protection piping, fittings. Combine with workforce.materials for delivered material records and finance.commit_purchase for procurement."
         },
         {
           "id": "mat-lv",
           "name": "Low Voltage Cable",
-          "desc": "Communication cables, data cabling, security wiring, and control system cables for building automation and technology systems."
+          "desc": "Communication cables, data cabling, security wiring, and control system cables for building automation and technology systems.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '27 10 00 / 27 20 00' AND description matches: data cable, fiber, Cat 6, voice cable. Combine with workforce.materials for delivered material records and finance.commit_purchase for procurement."
         },
         {
           "id": "mat-site",
           "name": "Site Materials",
-          "desc": "Aggregates, soil, asphalt, concrete, pavers, and landscape materials used for sitework, paving, and exterior improvements."
+          "desc": "Aggregates, soil, asphalt, concrete, pavers, and landscape materials used for sitework, paving, and exterior improvements.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '31 00 00 / 32 00 00' AND description matches: aggregate, gravel, soil, site materials. Combine with workforce.materials for delivered material records and finance.commit_purchase for procurement."
         },
         {
           "id": "mat-elevator",
           "name": "Elevator Materials",
-          "desc": "Elevator cabs, hoistway equipment, guide rails, controllers, and associated components for vertical transportation systems."
+          "desc": "Elevator cabs, hoistway equipment, guide rails, controllers, and associated components for vertical transportation systems.",
+          "derivation": "finance.cost_codes WHERE MasterFormat division ~= '14 00 00' AND description matches: elevator equipment, elevator car, hoist. Combine with workforce.materials for delivered material records and finance.commit_purchase for procurement."
         }
       ]
     }

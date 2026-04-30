@@ -3,31 +3,6 @@
   "target": "standards-classifications",
   "edges": [
     [
-      "fo-safety-violation",
-      "sc-osha-hazard",
-      "CITED FOR"
-    ],
-    [
-      "fo-accident-log",
-      "sc-osha-hazard",
-      "CLASSIFIED UNDER"
-    ],
-    [
-      "fo-daily-log-insp",
-      "sc-osha-hazard",
-      "INSPECTED AGAINST"
-    ],
-    [
-      "fo-accident-log",
-      "sc-osha-recordkeepi",
-      "LOGGED PER"
-    ],
-    [
-      "fo-safety-violation",
-      "sc-osha-recordkeepi",
-      "DOCUMENTED PER"
-    ],
-    [
       "fo-accident-log",
       "sc-ansi-injury",
       "CODED BY"
@@ -66,26 +41,6 @@
       "fo-equip-log-entry",
       "sc-energy-code-stds",
       "MONITORED PER"
-    ],
-    [
-      "fo-manpower-log",
-      "sc-masterformat",
-      "ORGANIZED BY"
-    ],
-    [
-      "fo-productivity-log",
-      "sc-masterformat",
-      "SEGMENTED BY"
-    ],
-    [
-      "fo-quantity-log",
-      "sc-masterformat",
-      "CLASSIFIED UNDER"
-    ],
-    [
-      "fo-scheduled-work",
-      "sc-masterformat",
-      "ORGANIZED BY"
     ],
     [
       "fo-timecard-entry",

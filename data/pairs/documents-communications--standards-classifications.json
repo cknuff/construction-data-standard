@@ -8,16 +8,6 @@
       "IMPLEMENTS"
     ],
     [
-      "doc-drawing-set",
-      "sc-masterformat",
-      "INDEXED BY"
-    ],
-    [
-      "doc-drawing-sheet",
-      "sc-uniformat",
-      "KEYED TO"
-    ],
-    [
       "doc-drawing-sheet",
       "sc-ifc-class",
       "TAGGED TO"
@@ -73,11 +63,6 @@
       "FABRICATED PER"
     ],
     [
-      "doc-product-data",
-      "sc-masterformat",
-      "FILED UNDER"
-    ],
-    [
       "doc-correspondence",
       "sc-aia-contract",
       "FORMATTED PER"
@@ -108,16 +93,6 @@
       "CONVENED PER"
     ],
     [
-      "doc-daily-report",
-      "sc-osha-recordkeepi",
-      "LOGGED PER"
-    ],
-    [
-      "doc-daily-log-note",
-      "sc-osha-hazard",
-      "REPORTS ON"
-    ],
-    [
       "doc-site-instruction",
       "sc-specification-se",
       "DIRECTS PER"
@@ -128,16 +103,6 @@
       "DOCUMENTED PER"
     ],
     [
-      "doc-plan-revision",
-      "sc-masterformat",
-      "REISSUED UNDER"
-    ],
-    [
-      "doc-action-plan",
-      "sc-osha-hazard",
-      "REMEDIATES UNDER"
-    ],
-    [
       "doc-action-plan-line",
       "sc-std-cost-code",
       "CHARGED TO"
@@ -146,11 +111,6 @@
       "doc-project-task",
       "sc-wbs-code",
       "ASSIGNED UNDER"
-    ],
-    [
-      "doc-photo",
-      "sc-omniclass",
-      "CATALOGED BY"
     ],
     [
       "doc-permit-applicati",
@@ -173,11 +133,6 @@
       "STRUCTURED PER"
     ],
     [
-      "doc-safety-plan-site",
-      "sc-osha-hazard",
-      "ADDRESSES"
-    ],
-    [
       "doc-swppp-enviro",
       "sc-leed-certificati",
       "SUPPORTS"
@@ -186,16 +141,6 @@
       "doc-swppp-enviro",
       "sc-resilience-net",
       "VERIFIED AGAINST"
-    ],
-    [
-      "doc-punch-list-as",
-      "sc-masterformat",
-      "ORGANIZED BY"
-    ],
-    [
-      "doc-as-built-docs",
-      "sc-uniformat",
-      "KEYED TO"
     ],
     [
       "doc-o-m-manual",
@@ -251,6 +196,11 @@
       "doc-rfi-response-2",
       "sc-certification-ad",
       "BENCHMARKED TO"
+    ],
+    [
+      "doc-specification",
+      "sc-specification-se",
+      "ORGANIZED_BY"
     ]
   ],
   "verbGlossary": {

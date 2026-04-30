@@ -176,6 +176,11 @@
       "cp-chg-order-rate",
       "ph-contract-close",
       "MEASURED AT"
+    ],
+    [
+      "cp-pm-dbb",
+      "ph-bidding",
+      "USES_PHASE"
     ]
   ],
   "verbGlossary": {

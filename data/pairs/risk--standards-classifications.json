@@ -3,31 +3,6 @@
   "target": "standards-classifications",
   "edges": [
     [
-      "rk-safety-risk",
-      "sc-osha-hazard",
-      "CLASSIFIED UNDER"
-    ],
-    [
-      "rk-risk-category",
-      "sc-osha-hazard",
-      "MAPPED TO"
-    ],
-    [
-      "rk-incident-rate",
-      "sc-osha-recordkeepi",
-      "REPORTED PER"
-    ],
-    [
-      "rk-safety-risk",
-      "sc-osha-recordkeepi",
-      "LOGGED PER"
-    ],
-    [
-      "rk-mitigation-actio",
-      "sc-osha-hazard",
-      "REMEDIATES UNDER"
-    ],
-    [
       "rk-risk",
       "sc-ansi-injury",
       "CODED BY"
@@ -61,16 +36,6 @@
       "rk-design-risk",
       "sc-specification-se",
       "SCOPED BY"
-    ],
-    [
-      "rk-const-execution",
-      "sc-masterformat",
-      "CLASSIFIED UNDER"
-    ],
-    [
-      "rk-coord-risk",
-      "sc-omniclass",
-      "CLASSIFIED UNDER"
     ],
     [
       "rk-financial-risk",

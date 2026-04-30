@@ -10,12 +10,14 @@
         {
           "id": "doc-drawing-set",
           "name": "Drawing Set",
-          "desc": "Complete package of design documents issued for a project phase — architectural, structural, MEP, civil, landscape sheets organized by discipline and numbered by convention. Issued at milestones (SD, DD, CD, IFC, As-Built). Each set supersedes the prior issue. The authoritative record of design intent."
+          "desc": "Complete package of design documents issued for a project phase \u2014 architectural, structural, MEP, civil, landscape sheets organized by discipline and numbered by convention. Issued at milestones (SD, DD, CD, IFC, As-Built). Each set supersedes the prior issue. The authoritative record of design intent.",
+          "procore": "project_management.drawing_revision"
         },
         {
           "id": "doc-drawing-sheet",
           "name": "Drawing Sheet",
-          "desc": "Individual sheet within a drawing set — identified by discipline prefix and sheet number (e.g., S-301, M-201, A-102). Contains plan views, sections, details, schedules, and notes for a specific scope. Sheets carry a revision block tracking issue dates and revision descriptions."
+          "desc": "Individual sheet within a drawing set \u2014 identified by discipline prefix and sheet number (e.g., S-301, M-201, A-102). Contains plan views, sections, details, schedules, and notes for a specific scope. Sheets carry a revision block tracking issue dates and revision descriptions.",
+          "procore": "project_management.drawing_attachment"
         },
         {
           "id": "doc-drawing-revision",
@@ -24,20 +26,14 @@
           "procore": "project_management.drawing_revision"
         },
         {
-          "id": "doc-specification-se",
-          "name": "Specification Section",
-          "desc": "A numbered section within a project's technical specifications organized by MasterFormat — defines quality standards, materials, methods, and acceptance criteria for a specific scope of work. Specification sections are the contractual quality standard against which work is inspected and accepted. Each section maps to a MasterFormat number (e.g., 03 30 00 Cast-in-Place Concrete, 09 29 00 Gypsum Board). Sections govern submittals (what must be submitted for approval) and inspections (what must pass).",
-          "procore": "project_management.specification_sections"
-        },
-        {
           "id": "doc-addendum",
           "name": "Addendum",
-          "desc": "Formal modification to bidding or contract documents issued before contract execution — changes drawings, specs, or bid conditions. Numbered sequentially (Addendum 1, 2, 3). Issued during bidding to address errors, respond to bidder questions, or modify scope. All bidders must acknowledge receipt. After contract execution, changes become ASIs or change orders instead."
+          "desc": "Formal modification to bidding or contract documents issued before contract execution \u2014 changes drawings, specs, or bid conditions. Numbered sequentially (Addendum 1, 2, 3). Issued during bidding to address errors, respond to bidder questions, or modify scope. All bidders must acknowledge receipt. After contract execution, changes become ASIs or change orders instead."
         },
         {
           "id": "doc-bulletin-archite",
           "name": "Bulletin / Architect's Supplemental Instruction (ASI)",
-          "desc": "Post-contract design clarification or minor change issued by the architect that does not change the contract sum or time. ASIs modify drawings or specs to clarify intent, correct minor errors, or adjust details. If the change affects cost or schedule, it should be a change order, not an ASI — disputes over this boundary generate claims."
+          "desc": "Post-contract design clarification or minor change issued by the architect that does not change the contract sum or time. ASIs modify drawings or specs to clarify intent, correct minor errors, or adjust details. If the change affects cost or schedule, it should be a change order, not an ASI \u2014 disputes over this boundary generate claims."
         }
       ]
     },
@@ -48,19 +44,19 @@
         {
           "id": "doc-req-info-rfi",
           "name": "Request for Information (RFI)",
-          "desc": "Formal question from the contractor to the design team requesting clarification on drawings, specs, or design intent. RFIs have a structured lifecycle: initiated → assigned → responded → closed/accepted. Each RFI identifies the requesting party, assigned responder (typically architect or engineer of record), drawing/spec reference, due date, and cost/schedule impact flags. The answer becomes a binding project document.",
+          "desc": "Formal question from the contractor to the design team requesting clarification on drawings, specs, or design intent. RFIs have a structured lifecycle: initiated \u2192 assigned \u2192 responded \u2192 closed/accepted. Each RFI identifies the requesting party, assigned responder (typically architect or engineer of record), drawing/spec reference, due date, and cost/schedule impact flags. The answer becomes a binding project document.",
           "procore": "project_management.rfis"
         },
         {
           "id": "doc-rfi-response",
           "name": "RFI Response",
-          "desc": "Formal answer to an RFI from the design team — provides the clarification, direction, or decision requested. May include supplementary sketches, revised details, or references to existing drawings. Response status (official vs. preliminary) affects contractual weight. Multiple responses may occur on a single RFI if follow-up is needed.",
+          "desc": "Formal answer to an RFI from the design team \u2014 provides the clarification, direction, or decision requested. May include supplementary sketches, revised details, or references to existing drawings. Response status (official vs. preliminary) affects contractual weight. Multiple responses may occur on a single RFI if follow-up is needed.",
           "procore": "project_management.rfi_responses"
         },
         {
           "id": "doc-req-proposal-rfp",
           "name": "Request for Proposal (RFP) / Pricing Request",
-          "desc": "Formal request from GC to subcontractor or supplier for pricing on a change, additional work, or alternate scope. Not the same as a bid-phase RFP — this is a construction-phase pricing exercise. Includes scope description, affected drawings/specs, and requested response date. The returned proposal becomes a cost input to the change management process.",
+          "desc": "Formal request from GC to subcontractor or supplier for pricing on a change, additional work, or alternate scope. Not the same as a bid-phase RFP \u2014 this is a construction-phase pricing exercise. Includes scope description, affected drawings/specs, and requested response date. The returned proposal becomes a cost input to the change management process.",
           "procore": "finance.request_for_quotes"
         }
       ]
@@ -72,28 +68,28 @@
         {
           "id": "doc-submittal",
           "name": "Submittal",
-          "desc": "Formal submission of product data, shop drawings, samples, or other documentation to the design team for review and approval before procurement or installation. Every specified material requires a submittal. Submittals have a structured workflow: created → submitted → under review → approved/rejected/revise & resubmit. Ball-in-court tracking identifies the current responsible party. Submittal titles describe the specific product or material.",
+          "desc": "Formal submission of product data, shop drawings, samples, or other documentation to the design team for review and approval before procurement or installation. Every specified material requires a submittal. Submittals have a structured workflow: created \u2192 submitted \u2192 under review \u2192 approved/rejected/revise & resubmit. Ball-in-court tracking identifies the current responsible party. Submittal titles describe the specific product or material.",
           "procore": "project_management.submittals"
         },
         {
           "id": "doc-submittal-respon",
           "name": "Submittal Response / Review",
-          "desc": "The design team's review action on a submittal — approve, approve as noted, reject, or revise and resubmit. Reviewer markups on shop drawings are binding design modifications. 'Approved as Noted' is the most common disposition — the notes become part of the contract documents. The review cycle (submit → review → resubmit if needed → re-review) can take 2-6 weeks per round."
+          "desc": "The design team's review action on a submittal \u2014 approve, approve as noted, reject, or revise and resubmit. Reviewer markups on shop drawings are binding design modifications. 'Approved as Noted' is the most common disposition \u2014 the notes become part of the contract documents. The review cycle (submit \u2192 review \u2192 resubmit if needed \u2192 re-review) can take 2-6 weeks per round."
         },
         {
           "id": "doc-shop-drawing",
           "name": "Shop Drawing",
-          "desc": "A subcontractor-prepared or fabricator-prepared detailed drawing showing dimensions, connections, materials, and fabrication details for their specific scope — submitted for design team review. Shop drawings translate design intent into constructable details. Steel connections, curtain wall anchoring, precast panel layouts, and MEP coordination drawings are among the most complex and schedule-critical."
+          "desc": "A subcontractor-prepared or fabricator-prepared detailed drawing showing dimensions, connections, materials, and fabrication details for their specific scope \u2014 submitted for design team review. Shop drawings translate design intent into constructable details. Steel connections, curtain wall anchoring, precast panel layouts, and MEP coordination drawings are among the most complex and schedule-critical."
         },
         {
           "id": "doc-product-data",
           "name": "Product Data Submittal",
-          "desc": "Manufacturer's published literature, cut sheets, performance data, and test reports submitted to demonstrate that a specific product meets specification requirements. Less complex than shop drawings but higher volume — every specified product needs a product data submittal. Submittal includes model numbers, finishes, dimensions, and performance ratings."
+          "desc": "Manufacturer's published literature, cut sheets, performance data, and test reports submitted to demonstrate that a specific product meets specification requirements. Less complex than shop drawings but higher volume \u2014 every specified product needs a product data submittal. Submittal includes model numbers, finishes, dimensions, and performance ratings."
         },
         {
           "id": "doc-sample-submittal",
           "name": "Sample Submittal",
-          "desc": "Physical material sample submitted for design team review and approval — colors, textures, finishes, and material quality. Includes mockup panels, paint samples, flooring tiles, stone selections, hardware finishes. Physical samples must be delivered and reviewed in person, adding logistics complexity. Approved samples become the standard for field acceptance."
+          "desc": "Physical material sample submitted for design team review and approval \u2014 colors, textures, finishes, and material quality. Includes mockup panels, paint samples, flooring tiles, stone selections, hardware finishes. Physical samples must be delivered and reviewed in person, adding logistics complexity. Approved samples become the standard for field acceptance."
         }
       ]
     },
@@ -104,23 +100,24 @@
         {
           "id": "doc-correspondence",
           "name": "Correspondence",
-          "desc": "Formal written communication between project parties — letters, emails tracked as project records, and notices that require acknowledgment or response. Correspondence types are configurable per project (letters, notices, memos, transmittals). Each has sender, recipient(s), date, subject, and response tracking. Used for contractual notifications, design directives, schedule notices, and claims documentation.",
+          "desc": "Formal written communication between project parties \u2014 letters, emails tracked as project records, and notices that require acknowledgment or response. Correspondence types are configurable per project (letters, notices, memos, transmittals). Each has sender, recipient(s), date, subject, and response tracking. Used for contractual notifications, design directives, schedule notices, and claims documentation.",
           "procore": "project_management.correspondences"
         },
         {
           "id": "doc-transmittal",
           "name": "Transmittal",
-          "desc": "Cover document accompanying a package of drawings, specifications, submittals, or other documents sent between parties. Records what was sent, to whom, when, and for what purpose (for review, for approval, for information, for construction). The transmittal itself is not the content — it's the record of transmission. Increasingly replaced by digital distribution but still required on many projects."
+          "desc": "Cover document accompanying a package of drawings, specifications, submittals, or other documents sent between parties. Records what was sent, to whom, when, and for what purpose (for review, for approval, for information, for construction). The transmittal itself is not the content \u2014 it's the record of transmission. Increasingly replaced by digital distribution but still required on many projects.",
+          "procore": "project_management.correspondences"
         },
         {
           "id": "doc-notice-delay",
           "name": "Notice of Delay",
-          "desc": "Formal written notification that a delay event has occurred or is anticipated — required by most contracts within a specified timeframe (often 7-14 days) to preserve delay claim rights. Must identify the cause, affected activities, anticipated duration, and responsible party. Failure to provide timely notice can waive the right to a time extension or delay damages."
+          "desc": "Formal written notification that a delay event has occurred or is anticipated \u2014 required by most contracts within a specified timeframe (often 7-14 days) to preserve delay claim rights. Must identify the cause, affected activities, anticipated duration, and responsible party. Failure to provide timely notice can waive the right to a time extension or delay damages."
         },
         {
           "id": "doc-chg-directive",
           "name": "Change Directive / Construction Change Directive (CCD)",
-          "desc": "Owner-issued directive requiring the contractor to proceed with changed work before the cost and time impact is agreed upon. Used when urgency prevents waiting for a negotiated change order. The contractor must proceed but preserves the right to dispute cost and time later. This is NOT a change order — it's a unilateral directive."
+          "desc": "Owner-issued directive requiring the contractor to proceed with changed work before the cost and time impact is agreed upon. Used when urgency prevents waiting for a negotiated change order. The contractor must proceed but preserves the right to dispute cost and time later. This is NOT a change order \u2014 it's a unilateral directive."
         }
       ]
     },
@@ -137,7 +134,7 @@
         {
           "id": "doc-meeting-minutes",
           "name": "Meeting Minutes / Meeting Item",
-          "desc": "Individual agenda item or action item within a meeting — captures topic, discussion, responsible party, due date, and status. Meeting items carry forward between meetings (rolling action item log). Items can be categorized by topic (schedule, budget, safety, quality, design). The meeting minutes document is the formal record of what was discussed and decided.",
+          "desc": "Individual agenda item or action item within a meeting \u2014 captures topic, discussion, responsible party, due date, and status. Meeting items carry forward between meetings (rolling action item log). Items can be categorized by topic (schedule, budget, safety, quality, design). The meeting minutes document is the formal record of what was discussed and decided.",
           "procore": "project_management.meeting_item"
         }
       ]
@@ -147,34 +144,10 @@
       "color": "#576ebe",
       "nodes": [
         {
-          "id": "doc-daily-report",
-          "name": "Daily Report / Daily Log",
-          "desc": "Comprehensive daily site record compiled by the superintendent or project engineer — combines weather, manpower, equipment, deliveries, visitors, delays, notes, safety violations, and work performed into a single daily project narrative. The daily report is the legal record of what happened on site each day. In a dispute, daily reports are the most-referenced project document.",
-          "procore": "project_management.daily_log_completion"
-        },
-        {
-          "id": "doc-daily-log-note",
-          "name": "Daily Log Note",
-          "desc": "Free-text field observation entered as part of the daily log — captures site conditions, work progress, issues, coordination problems, or any noteworthy event that doesn't fit structured log categories. Notes may be flagged as issue days. Attachments (photos) can be linked. Notes are the unstructured narrative complement to the structured log sections.",
-          "procore": "project_management.daily_log_note"
-        },
-        {
           "id": "doc-site-instruction",
           "name": "Site Instruction",
-          "desc": "Written directive from the GC superintendent or project manager to a subcontractor or crew — directs specific field action. Site instructions address means and methods, sequence changes, safety corrections, or quality requirements. They are NOT design changes (those come from the architect via ASI). Site instructions are GC-to-sub directives.",
+          "desc": "Written directive from the GC superintendent or project manager to a subcontractor or crew \u2014 directs specific field action. Site instructions address means and methods, sequence changes, safety corrections, or quality requirements. They are NOT design changes (those come from the architect via ASI). Site instructions are GC-to-sub directives.",
           "procore": "project_management.site_instructions"
-        },
-        {
-          "id": "doc-phone-call-log",
-          "name": "Phone Call Log",
-          "desc": "Record of field phone calls tracked as part of the daily log — documents who called whom, subject, and outcome. Captures communications that don't have a formal paper trail. Historically important for documenting verbal directions and commitments on construction sites.",
-          "procore": "project_management.daily_log_phone_call"
-        },
-        {
-          "id": "doc-plan-revision",
-          "name": "Plan Revision Notice",
-          "desc": "Field-level record that a new drawing revision has been received and acknowledged on the jobsite. Ensures the construction team is working from current documents. Tracked in the daily log as a notification event — which drawings were updated, when received, and who was notified.",
-          "procore": "project_management.daily_log_plan_revision"
         }
       ]
     },
@@ -183,21 +156,9 @@
       "color": "#6865c4",
       "nodes": [
         {
-          "id": "doc-action-plan",
-          "name": "Action Plan",
-          "desc": "A structured set of tasks created in response to quality or safety findings — groups related corrective actions into a trackable plan with assignees, due dates, and approval workflows. Key properties: title, status, assignees, due dates, approval workflow. Action plans aggregate individual tasks (line items) that may reference observations, punch items, inspections, or incidents as source records. Lifecycle: Created → In Progress → Under Review → Approved → Closed.",
-          "procore": "project_management.action_plan"
-        },
-        {
-          "id": "doc-action-plan-line",
-          "name": "Action Plan Line Item (Task)",
-          "desc": "An individual task within an action plan — the atomic unit of remediation work. Key properties: description, assignee, due date, status, linked record (the source observation, punch item, or incident that triggered this task). The action_plan_line_item_record linkage connects tasks to their source issues, creating traceability from finding to resolution.",
-          "procore": "project_management.action_plan_line_item"
-        },
-        {
           "id": "doc-project-task",
           "name": "Project Task",
-          "desc": "General-purpose task tracked at the project level — not tied to an action plan. Used for ad-hoc work items, reminders, and assignments that don't fit the formal action plan structure. Lighter weight than action plan tasks but less structured.",
+          "desc": "General-purpose task tracked at the project level \u2014 not tied to an action plan. Used for ad-hoc work items, reminders, and assignments that don't fit the formal action plan structure. Lighter weight than action plan tasks but less structured.",
           "procore": "project_management.task"
         }
       ]
@@ -226,19 +187,13 @@
         {
           "id": "doc-permit-applicati",
           "name": "Permit Application / Building Permit Record",
-          "desc": "Documentation submitted to and received from regulatory authorities — building permit applications, permit issuance records, permit conditions, and inspection cards. Tracks permit status from application through issuance. Critical path item — construction cannot start without a building permit."
+          "desc": "Documentation submitted to and received from regulatory authorities \u2014 building permit applications, permit issuance records, permit conditions, and inspection cards. Tracks permit status from application through issuance. Critical path item \u2014 construction cannot start without a building permit."
         },
         {
           "id": "doc-cert-insurance",
           "name": "Certificate of Insurance (COI)",
-          "desc": "Proof of insurance coverage provided by a subcontractor, vendor, or other project party — verifies they meet the contractual insurance requirements (general liability, workers' comp, auto, umbrella, builders risk). COI collection and compliance tracking is a major administrative task on every project. Missing or expired COIs can prevent a sub from working on site.",
+          "desc": "Proof of insurance coverage provided by a subcontractor, vendor, or other project party \u2014 verifies they meet the contractual insurance requirements (general liability, workers' comp, auto, umbrella, builders risk). COI collection and compliance tracking is a major administrative task on every project. Missing or expired COIs can prevent a sub from working on site.",
           "procore": "core.project_vendor_insurances"
-        },
-        {
-          "id": "doc-lien-waiver",
-          "name": "Lien Waiver",
-          "desc": "A legal document in which a party waives their right to file a mechanic's lien against the property — exchanged with each payment. Four types: conditional progress (with invoice), unconditional progress (when payment clears), conditional final (with final invoice), unconditional final (with final payment). Collection from all tiers of subcontractors required before owner makes final payment to GC. Upstream: payment. Downstream: none — terminal document.",
-          "procore": "finance.payments_lien_waivers"
         },
         {
           "id": "doc-safety-plan-site",
@@ -248,7 +203,7 @@
         {
           "id": "doc-swppp-enviro",
           "name": "SWPPP / Environmental Compliance Document",
-          "desc": "Stormwater Pollution Prevention Plan and related environmental compliance documentation — required by EPA and state environmental agencies for construction sites disturbing 1+ acre of soil. Documents erosion and sediment control measures, inspection schedules, and corrective actions. Updated throughout construction as site conditions change."
+          "desc": "Stormwater Pollution Prevention Plan and related environmental compliance documentation \u2014 required by EPA and state environmental agencies for construction sites disturbing 1+ acre of soil. Documents erosion and sediment control measures, inspection schedules, and corrective actions. Updated throughout construction as site conditions change."
         }
       ]
     },
@@ -259,17 +214,17 @@
         {
           "id": "doc-punch-list-as",
           "name": "Punch List (as Document)",
-          "desc": "Formal list of deficiencies and incomplete work items that must be corrected before the owner accepts the project — compiled during substantial completion walkthrough. While individual punch items are tracked as Quality & Safety Records, the punch list as a compiled document is a contractual deliverable. The list is walked with the owner, architect, and GC."
+          "desc": "Formal list of deficiencies and incomplete work items that must be corrected before the owner accepts the project \u2014 compiled during substantial completion walkthrough. While individual punch items are tracked as Quality & Safety Records, the punch list as a compiled document is a contractual deliverable. The list is walked with the owner, architect, and GC."
         },
         {
           "id": "doc-as-built-docs",
           "name": "As-Built Documentation",
-          "desc": "Compile record documents reflecting actual constructed conditions — as-built drawing markup, O&M manual compilation, warranty compilation, spare parts and attic stock delivery, equipment data sheets. Contractually required — final payment often withheld until complete. Gate: record documents delivered and accepted. Duration: 1-2%."
+          "desc": "Compile record documents reflecting actual constructed conditions \u2014 as-built drawing markup, O&M manual compilation, warranty compilation, spare parts and attic stock delivery, equipment data sheets. Contractually required \u2014 final payment often withheld until complete. Gate: record documents delivered and accepted. Duration: 1-2%."
         },
         {
           "id": "doc-o-m-manual",
           "name": "O&M Manual (Operations & Maintenance)",
-          "desc": "Compiled documentation of all installed equipment and systems — manufacturer manuals, maintenance schedules, warranty information, spare parts lists, and operating procedures. Required closeout deliverable for building handover. Organized by building system (HVAC, electrical, plumbing, fire protection, etc.). The owner's reference for facility operations."
+          "desc": "Compiled documentation of all installed equipment and systems \u2014 manufacturer manuals, maintenance schedules, warranty information, spare parts lists, and operating procedures. Required closeout deliverable for building handover. Organized by building system (HVAC, electrical, plumbing, fire protection, etc.). The owner's reference for facility operations."
         },
         {
           "id": "doc-warranty-docs",
@@ -285,13 +240,13 @@
         {
           "id": "doc-form-proforma",
           "name": "Form / ProForma Form",
-          "desc": "Configurable structured form for data collection — checklists, inspection templates, safety forms, quality records, or any project-specific data collection need. Forms have defined fields (text, select, date, number, checkbox) with validation rules and workflow routing. Procore's form system (including ProForma/Jira Forms integration) enables project teams to create custom structured data capture without code.",
+          "desc": "Configurable structured form for data collection \u2014 checklists, inspection templates, safety forms, quality records, or any project-specific data collection need. Forms have defined fields (text, select, date, number, checkbox) with validation rules and workflow routing. Procore's form system (including ProForma/Jira Forms integration) enables project teams to create custom structured data capture without code.",
           "procore": "project_management.form"
         },
         {
           "id": "doc-daily-log",
           "name": "Daily Log Template",
-          "desc": "Configurable template defining which daily log sections are required for a project — determines which daily log tables are populated. Template configuration controls whether manpower, equipment, deliveries, delays, visitors, safety violations, and other sections are mandatory, optional, or hidden. Template standardization across a company ensures consistent daily reporting."
+          "desc": "Configurable template defining which daily log sections are required for a project \u2014 determines which daily log tables are populated. Template configuration controls whether manpower, equipment, deliveries, delays, visitors, safety violations, and other sections are mandatory, optional, or hidden. Template standardization across a company ensures consistent daily reporting."
         }
       ]
     },
@@ -302,32 +257,32 @@
         {
           "id": "doc-rfi-response-2",
           "name": "RFI Response Time",
-          "desc": "Average elapsed time from RFI issuance to final response — measures design team responsiveness and information flow efficiency. Formula: Response Date − Issue Date (in calendar or business days). Long RFI response times are a leading indicator of schedule delays and design coordination problems. Can be segmented by discipline, responsible party, and project phase."
+          "desc": "Average elapsed time from RFI issuance to final response \u2014 measures design team responsiveness and information flow efficiency. Formula: Response Date \u2212 Issue Date (in calendar or business days). Long RFI response times are a leading indicator of schedule delays and design coordination problems. Can be segmented by discipline, responsible party, and project phase."
         },
         {
           "id": "doc-rfi-volume",
           "name": "RFI Volume Density",
-          "desc": "Total RFI count relative to project size — measures design completeness and coordination quality. Formula: Total RFIs / Project Value (per $M) or Total RFIs / Project SF. High RFI density suggests incomplete design documents or poor coordination. Can be segmented by discipline and project phase."
+          "desc": "Total RFI count relative to project size \u2014 measures design completeness and coordination quality. Formula: Total RFIs / Project Value (per $M) or Total RFIs / Project SF. High RFI density suggests incomplete design documents or poor coordination. Can be segmented by discipline and project phase."
         },
         {
           "id": "doc-submittal-cycle",
           "name": "Submittal Cycle Time",
-          "desc": "Average days from submittal submission to final approval — calculated per submittal, then aggregated by trade, spec section, or phase. Longer cycles delay procurement and fabrication start."
+          "desc": "Average days from submittal submission to final approval \u2014 calculated per submittal, then aggregated by trade, spec section, or phase. Longer cycles delay procurement and fabrication start."
         },
         {
           "id": "doc-submittal-reject",
           "name": "Submittal Rejection Rate",
-          "desc": "Percentage of submittals rejected or returned for revision on first review — measures submittal preparation quality and design coordination. Formula: (Rejected + Revise & Resubmit) / Total Submittals × 100. High rejection rate increases cycle time and delays procurement."
+          "desc": "Percentage of submittals rejected or returned for revision on first review \u2014 measures submittal preparation quality and design coordination. Formula: (Rejected + Revise & Resubmit) / Total Submittals \u00d7 100. High rejection rate increases cycle time and delays procurement."
         },
         {
           "id": "doc-drawing-revision-2",
           "name": "Drawing Revision Frequency",
-          "desc": "Number of drawing revisions issued per drawing set per month — measures design stability and churn. High revision frequency late in the project signals design instability and increases rework risk. Calculated: COUNT(drawing_revisions) / COUNT(DISTINCT drawing sets) / months. Segmented by discipline and project phase."
+          "desc": "Number of drawing revisions issued per drawing set per month \u2014 measures design stability and churn. High revision frequency late in the project signals design instability and increases rework risk. Calculated: COUNT(drawing_revisions) / COUNT(DISTINCT drawing sets) / months. Segmented by discipline and project phase."
         },
         {
           "id": "doc-correspondence-r",
           "name": "Correspondence Response Time",
-          "desc": "Average elapsed time from correspondence issuance to response — measures communication efficiency between project parties. Formula: Response Date − Issue Date (in business days). Tracks formal communications (owner directives, architect supplemental instructions, notices, letters)."
+          "desc": "Average elapsed time from correspondence issuance to response \u2014 measures communication efficiency between project parties. Formula: Response Date \u2212 Issue Date (in business days). Tracks formal communications (owner directives, architect supplemental instructions, notices, letters)."
         }
       ]
     },
@@ -338,8 +293,37 @@
         {
           "id": "doc-rfi-cost",
           "name": "RFI Cost Impact",
-          "procore": "project_management.rfis",
           "desc": "Traces the financial impact of RFIs from creation through change event resolution. Primary path: change_events with origin_type = 'Rfi::Header' (307K CEs linked to RFIs) provides direct cost attribution from information requests to budget impact. RFI cost_impact field (values: tbd, yes_unknown, no_impact, yes_known, n_a) provides early signal before formal change events exist. RFI predicted_topic (ML-classified, 176 topics, 91% populated) enables cost attribution by subject area without NLP. High-cost RFI topics by project type reveal which design coordination gaps generate the most financial exposure. Average RFI-to-CE conversion rate and dollar impact by topic area enable predictive cost modeling."
+        }
+      ]
+    },
+    {
+      "name": "Knowledge Management",
+      "color": "#90caf9",
+      "nodes": [
+        {
+          "id": "doc-lessons-learned",
+          "name": "Lessons Learned Document",
+          "procore": "",
+          "desc": "Captured project insight for organizational reuse. CII Best Practice: systematic capture during execution, analysis at closeout, dissemination to other projects. Mature programs reduce repeat issues 40%+."
+        }
+      ]
+    },
+    {
+      "name": "Documents",
+      "color": "#90caf9",
+      "nodes": [
+        {
+          "id": "doc-document-management",
+          "name": "Document Management",
+          "procore": "project_management.document_management",
+          "desc": "The Document Management tool \u2014 central repository for project drawings, specs, and other documents. Distinct from individual document types (RFI, Submittal, etc.) \u2014 this is the underlying storage and access-control layer for all project documents."
+        },
+        {
+          "id": "doc-specification",
+          "name": "Specification (Document)",
+          "procore": "project_management.specification_sections",
+          "desc": "A specification document \u2014 written technical requirements for materials, workmanship, and methods. Organized into specification sections per CSI MasterFormat. Distinct from MasterFormat (the standard) \u2014 this is the project-specific document instance produced by the design team."
         }
       ]
     }

@@ -2,62 +2,291 @@
   "source": "project-attributes",
   "target": "project-attributes",
   "edges": [
-    ["pa-project-type", "pa-project-subtype", "CLASSIFIES INTO"],
-    ["pa-project-type", "pa-dlvy-method", "CONSTRAINS SELECTION OF"],
-    ["pa-project-type", "pa-occupancy-group", "DETERMINES"],
-    ["pa-project-type", "pa-cost-per-sf", "ESTABLISHES RANGE FOR"],
-    ["pa-project-type", "pa-specialty-system", "DICTATES SCOPE OF"],
-    ["pa-sector", "pa-bid-type", "CONSTRAINS SELECTION OF"],
-    ["pa-sector", "pa-bonding-requirem", "MANDATES"],
-    ["pa-sector", "pa-prevailing-wage", "TRIGGERS"],
-    ["pa-work-type", "pa-chg-order-rate", "ESTABLISHES BASELINE FOR"],
-    ["pa-program-type", "pa-project-type", "GROUPS"],
-    ["pa-address", "pa-zip-postal-code", "RESOLVES TO"],
-    ["pa-state-province", "pa-region", "ROLLS UP TO"],
-    ["pa-zip-postal-code", "pa-climate-zone", "MAPS TO"],
-    ["pa-zip-postal-code", "pa-seismic-design", "MAPS TO"],
-    ["pa-climate-zone", "pa-energy-code", "CALIBRATES REQUIREMENTS OF"],
-    ["pa-estimated-value", "pa-total-value-band", "BUCKETS INTO"],
-    ["pa-contract-value", "pa-cost-growth", "DENOMINATES"],
-    ["pa-final-cost-at", "pa-cost-growth", "YIELDS"],
-    ["pa-hard-cost", "pa-cost-per-sf", "NORMALIZES INTO"],
-    ["pa-gross-building", "pa-cost-per-sf", "NORMALIZES INTO"],
-    ["pa-contract-type", "pa-contingency-budg", "SIZES"],
-    ["pa-planned-start", "pa-actual-start", "BASELINE FOR"],
-    ["pa-planned-completi", "pa-actual-completio", "BASELINE FOR"],
-    ["pa-planned-duration", "pa-schedule-growth", "DENOMINATES"],
-    ["pa-actual-duration", "pa-schedule-growth", "YIELDS"],
-    ["pa-actual-start", "pa-season-start", "DERIVES"],
-    ["pa-dlvy-method", "pa-contract-type", "PAIRS WITH"],
-    ["pa-dlvy-method", "pa-fast-track", "ENABLES"],
-    ["pa-dlvy-method", "pa-preconstruction", "SHAPES DURATION OF"],
-    ["pa-building-height", "pa-const-type", "CONSTRAINS"],
-    ["pa-occupancy-group", "pa-fire-sprinkler", "TRIGGERS"],
-    ["pa-building-code", "pa-energy-code", "INCORPORATES"],
-    ["pa-fast-track", "pa-rfi-density", "INFLATES"],
-    ["pa-fast-track", "pa-chg-order-rate", "INFLATES"],
-    ["pa-modular-prefab", "pa-peak-workforce", "REDUCES"],
-    ["pa-earned-value-cpi", "pa-cost-growth", "PREDICTS"],
-    ["pa-earned-value-spi", "pa-schedule-growth", "PREDICTS"],
-    ["pa-current-phase", "pa-percent-complete", "APPROXIMATES"],
-    ["pa-chg-order-rate", "pa-cost-growth", "CONTRIBUTES TO"],
-    ["pa-total-value-band", "pa-number-subcontra", "SCALES"],
-    ["pa-number-subcontra", "pa-admin-burden", "INCREASES"],
-    ["pa-rfi-density", "pa-information-gaps", "INDICATES"],
-    ["pa-rfi-density", "pa-decision-speed", "DEGRADES"],
-    ["pa-cost-growth", "pa-margin-protection", "ERODES"],
-    ["pa-cost-growth", "pa-profit-protection", "ERODES"],
-    ["pa-schedule-growth", "pa-margin-protection", "ERODES"],
-    ["pa-chg-order-rate", "pa-admin-burden", "INCREASES"],
-    ["pa-chg-order-rate", "pa-margin-protection", "THREATENS"],
-    ["pa-fast-track", "pa-information-gaps", "AMPLIFIES"],
-    ["pa-fast-track", "pa-decision-speed", "STRESSES"],
-    ["pa-health-score", "pa-risk-reduction", "QUANTIFIES"],
-    ["pa-earned-value-cpi", "pa-margin-protection", "SIGNALS"],
-    ["pa-earned-value-spi", "pa-decision-speed", "SIGNALS"],
-    ["pa-safety-incident", "pa-risk-reduction", "MEASURES"],
-    ["pa-submittal-appr", "pa-decision-speed", "REFLECTS"],
-    ["pa-submittal-appr", "pa-information-gaps", "REFLECTS"]
+    [
+      "pa-project-type",
+      "pa-project-subtype",
+      "CLASSIFIES INTO"
+    ],
+    [
+      "pa-project-type",
+      "pa-dlvy-method",
+      "CONSTRAINS SELECTION OF"
+    ],
+    [
+      "pa-project-type",
+      "pa-occupancy-group",
+      "DETERMINES"
+    ],
+    [
+      "pa-project-type",
+      "pa-cost-per-sf",
+      "ESTABLISHES RANGE FOR"
+    ],
+    [
+      "pa-project-type",
+      "pa-specialty-system",
+      "DICTATES SCOPE OF"
+    ],
+    [
+      "pa-sector",
+      "pa-bid-type",
+      "CONSTRAINS SELECTION OF"
+    ],
+    [
+      "pa-sector",
+      "pa-bonding-requirem",
+      "MANDATES"
+    ],
+    [
+      "pa-sector",
+      "pa-prevailing-wage",
+      "TRIGGERS"
+    ],
+    [
+      "pa-work-type",
+      "pa-chg-order-rate",
+      "ESTABLISHES BASELINE FOR"
+    ],
+    [
+      "pa-program-type",
+      "pa-project-type",
+      "GROUPS"
+    ],
+    [
+      "pa-address",
+      "pa-zip-postal-code",
+      "RESOLVES TO"
+    ],
+    [
+      "pa-state-province",
+      "pa-region",
+      "ROLLS UP TO"
+    ],
+    [
+      "pa-zip-postal-code",
+      "pa-climate-zone",
+      "MAPS TO"
+    ],
+    [
+      "pa-zip-postal-code",
+      "pa-seismic-design",
+      "MAPS TO"
+    ],
+    [
+      "pa-climate-zone",
+      "pa-energy-code",
+      "CALIBRATES REQUIREMENTS OF"
+    ],
+    [
+      "pa-estimated-value",
+      "pa-total-value-band",
+      "BUCKETS INTO"
+    ],
+    [
+      "pa-contract-value",
+      "pa-cost-growth",
+      "DENOMINATES"
+    ],
+    [
+      "pa-final-cost-at",
+      "pa-cost-growth",
+      "YIELDS"
+    ],
+    [
+      "pa-hard-cost",
+      "pa-cost-per-sf",
+      "NORMALIZES INTO"
+    ],
+    [
+      "pa-gross-building",
+      "pa-cost-per-sf",
+      "NORMALIZES INTO"
+    ],
+    [
+      "pa-contract-type",
+      "pa-contingency-budg",
+      "SIZES"
+    ],
+    [
+      "pa-planned-start",
+      "pa-actual-start",
+      "BASELINE FOR"
+    ],
+    [
+      "pa-planned-completi",
+      "pa-actual-completio",
+      "BASELINE FOR"
+    ],
+    [
+      "pa-planned-duration",
+      "pa-schedule-growth",
+      "DENOMINATES"
+    ],
+    [
+      "pa-actual-duration",
+      "pa-schedule-growth",
+      "YIELDS"
+    ],
+    [
+      "pa-actual-start",
+      "pa-season-start",
+      "DERIVES"
+    ],
+    [
+      "pa-dlvy-method",
+      "pa-contract-type",
+      "PAIRS WITH"
+    ],
+    [
+      "pa-dlvy-method",
+      "pa-fast-track",
+      "ENABLES"
+    ],
+    [
+      "pa-dlvy-method",
+      "pa-preconstruction",
+      "SHAPES DURATION OF"
+    ],
+    [
+      "pa-building-height",
+      "pa-const-type",
+      "CONSTRAINS"
+    ],
+    [
+      "pa-occupancy-group",
+      "pa-fire-sprinkler",
+      "TRIGGERS"
+    ],
+    [
+      "pa-building-code",
+      "pa-energy-code",
+      "INCORPORATES"
+    ],
+    [
+      "pa-fast-track",
+      "pa-rfi-density",
+      "INFLATES"
+    ],
+    [
+      "pa-fast-track",
+      "pa-chg-order-rate",
+      "INFLATES"
+    ],
+    [
+      "pa-modular-prefab",
+      "pa-peak-workforce",
+      "REDUCES"
+    ],
+    [
+      "pa-earned-value-cpi",
+      "pa-cost-growth",
+      "PREDICTS"
+    ],
+    [
+      "pa-earned-value-spi",
+      "pa-schedule-growth",
+      "PREDICTS"
+    ],
+    [
+      "pa-current-phase",
+      "pa-percent-complete",
+      "APPROXIMATES"
+    ],
+    [
+      "pa-chg-order-rate",
+      "pa-cost-growth",
+      "CONTRIBUTES TO"
+    ],
+    [
+      "pa-total-value-band",
+      "pa-number-subcontra",
+      "SCALES"
+    ],
+    [
+      "pa-number-subcontra",
+      "pa-admin-burden",
+      "INCREASES"
+    ],
+    [
+      "pa-rfi-density",
+      "pa-information-gaps",
+      "INDICATES"
+    ],
+    [
+      "pa-rfi-density",
+      "pa-decision-speed",
+      "DEGRADES"
+    ],
+    [
+      "pa-cost-growth",
+      "pa-margin-protection",
+      "ERODES"
+    ],
+    [
+      "pa-cost-growth",
+      "pa-profit-protection",
+      "ERODES"
+    ],
+    [
+      "pa-schedule-growth",
+      "pa-margin-protection",
+      "ERODES"
+    ],
+    [
+      "pa-chg-order-rate",
+      "pa-admin-burden",
+      "INCREASES"
+    ],
+    [
+      "pa-chg-order-rate",
+      "pa-margin-protection",
+      "THREATENS"
+    ],
+    [
+      "pa-fast-track",
+      "pa-information-gaps",
+      "AMPLIFIES"
+    ],
+    [
+      "pa-fast-track",
+      "pa-decision-speed",
+      "STRESSES"
+    ],
+    [
+      "pa-health-score",
+      "pa-risk-reduction",
+      "QUANTIFIES"
+    ],
+    [
+      "pa-earned-value-cpi",
+      "pa-margin-protection",
+      "SIGNALS"
+    ],
+    [
+      "pa-earned-value-spi",
+      "pa-decision-speed",
+      "SIGNALS"
+    ],
+    [
+      "pa-safety-incident",
+      "pa-risk-reduction",
+      "MEASURES"
+    ],
+    [
+      "pa-submittal-appr",
+      "pa-decision-speed",
+      "REFLECTS"
+    ],
+    [
+      "pa-submittal-appr",
+      "pa-information-gaps",
+      "REFLECTS"
+    ],
+    [
+      "pa-project-dates",
+      "pa-project-status",
+      "DEFINES"
+    ]
   ],
   "verbGlossary": {
     "CLASSIFIES INTO": "{source} primary classification breaks down into {target} subcategories that further refine the project's functional use within the parent type",

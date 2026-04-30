@@ -10,12 +10,12 @@
         {
           "id": "ws-open",
           "name": "Open",
-          "desc": "Record is active and available for action — the entry point for most construction records. Indicates the item has been created and is part of the active workflow. Every record type has some version of 'open' as its initial actionable state."
+          "desc": "Record is active and available for action \u2014 the entry point for most construction records. Indicates the item has been created and is part of the active workflow. Every record type has some version of 'open' as its initial actionable state."
         },
         {
           "id": "ws-progress",
           "name": "In Progress",
-          "desc": "Work has begun on the record but is not yet complete. Indicates active effort by a responsible party — distinguishes items being worked on from those sitting idle. Common on tasks, action plans, inspections, and punch items."
+          "desc": "Work has begun on the record but is not yet complete. Indicates active effort by a responsible party \u2014 distinguishes items being worked on from those sitting idle. Common on tasks, action plans, inspections, and punch items."
         },
         {
           "id": "ws-draft",
@@ -25,17 +25,17 @@
         {
           "id": "ws-closed",
           "name": "Closed",
-          "desc": "Record has completed its lifecycle — no further action required. Terminal state indicating the workflow has run its course, whether resolved successfully or not. Distinct from Void (cancelled) and Approved (decision)."
+          "desc": "Record has completed its lifecycle \u2014 no further action required. Terminal state indicating the workflow has run its course, whether resolved successfully or not. Distinct from Void (cancelled) and Approved (decision)."
         },
         {
           "id": "ws-void",
           "name": "Void",
-          "desc": "Record has been invalidated or cancelled — the work was never completed, just abandoned. Distinct from Closed (completed lifecycle). Voided records should be excluded from most metrics but tracked as a signal of rework or process waste."
+          "desc": "Record has been invalidated or cancelled \u2014 the work was never completed, just abandoned. Distinct from Closed (completed lifecycle). Voided records should be excluded from most metrics but tracked as a signal of rework or process waste."
         },
         {
           "id": "ws-hold",
           "name": "On Hold",
-          "desc": "Record is paused, awaiting external input, owner decision, or other blocking condition. Not cancelled — expected to resume. Common when waiting for design clarification, material delivery, or client direction."
+          "desc": "Record is paused, awaiting external input, owner decision, or other blocking condition. Not cancelled \u2014 expected to resume. Common when waiting for design clarification, material delivery, or client direction."
         },
         {
           "id": "ws-overdue",
@@ -56,7 +56,7 @@
         {
           "id": "ws-submitted",
           "name": "Submitted",
-          "desc": "Formally sent to the reviewer or approver — the official handoff point. Clock starts on contractual response time. The creator has completed their work and is waiting for a decision."
+          "desc": "Formally sent to the reviewer or approver \u2014 the official handoff point. Clock starts on contractual response time. The creator has completed their work and is waiting for a decision."
         },
         {
           "id": "ws-under-review",
@@ -66,22 +66,22 @@
         {
           "id": "ws-approved",
           "name": "Approved",
-          "desc": "Accepted without conditions — authorizes the associated work, cost, or material to proceed. The positive terminal decision in an approval workflow. On financial records, triggers commitment of funds."
+          "desc": "Accepted without conditions \u2014 authorizes the associated work, cost, or material to proceed. The positive terminal decision in an approval workflow. On financial records, triggers commitment of funds."
         },
         {
           "id": "ws-approved-as",
           "name": "Approved as Noted",
-          "desc": "Accepted with conditions, corrections, or minor modifications. Common on submittals — fabrication may proceed but noted changes must be incorporated. The 'yes, but' decision that avoids full rejection."
+          "desc": "Accepted with conditions, corrections, or minor modifications. Common on submittals \u2014 fabrication may proceed but noted changes must be incorporated. The 'yes, but' decision that avoids full rejection."
         },
         {
           "id": "ws-rejected",
           "name": "Rejected",
-          "desc": "Not accepted — requires rework before resubmission. A hard stop that sends the record back to the originator. Resets the workflow cycle. Should always include rejection reason for tracking."
+          "desc": "Not accepted \u2014 requires rework before resubmission. A hard stop that sends the record back to the originator. Resets the workflow cycle. Should always include rejection reason for tracking."
         },
         {
           "id": "ws-revise-resubmit",
           "name": "Revise and Resubmit",
-          "desc": "Similar to rejected but with specific revision guidance — the reviewer has identified what needs to change. Softer than rejection, implies the approach is correct but execution needs refinement. Common on submittals."
+          "desc": "Similar to rejected but with specific revision guidance \u2014 the reviewer has identified what needs to change. Softer than rejection, implies the approach is correct but execution needs refinement. Common on submittals."
         }
       ]
     },
@@ -97,17 +97,17 @@
         {
           "id": "ws-conforming",
           "name": "Conforming",
-          "desc": "Inspection item meets the specified requirements — pass disposition. The field evaluator has verified the work complies with plans, specs, or standards. Moves the item toward closure."
+          "desc": "Inspection item meets the specified requirements \u2014 pass disposition. The field evaluator has verified the work complies with plans, specs, or standards. Moves the item toward closure."
         },
         {
           "id": "ws-deficient",
           "name": "Deficient",
-          "desc": "Inspection item fails to meet requirements — requires corrective action. A formal finding that the installed work does not comply with plans, specifications, or applicable codes. Triggers rework cycle."
+          "desc": "Inspection item fails to meet requirements \u2014 requires corrective action. A formal finding that the installed work does not comply with plans, specifications, or applicable codes. Triggers rework cycle."
         },
         {
           "id": "ws-not-applicable",
           "name": "Not Applicable",
-          "desc": "Record or inspection item does not apply in this context — excluded from evaluation. Used when an inspection checklist item is irrelevant to the specific work being inspected."
+          "desc": "Record or inspection item does not apply in this context \u2014 excluded from evaluation. Used when an inspection checklist item is irrelevant to the specific work being inspected."
         }
       ]
     },
@@ -128,7 +128,7 @@
         {
           "id": "ws-ball-court",
           "name": "Ball in Court",
-          "desc": "The party currently responsible for taking the next action on a record. Construction-specific accountability term — at any moment, someone 'has the ball'. Changes as the record moves through workflow steps."
+          "desc": "The party currently responsible for taking the next action on a record. Construction-specific accountability term \u2014 at any moment, someone 'has the ball'. Changes as the record moves through workflow steps."
         },
         {
           "id": "ws-dist-list",
@@ -138,17 +138,17 @@
         {
           "id": "ws-workflow-respons",
           "name": "Workflow Response",
-          "desc": "A reviewer's formal action at a workflow step — approve, reject, forward, return, or comment. The decision record that advances (or returns) the workflow. Timestamped for cycle time calculation."
+          "desc": "A reviewer's formal action at a workflow step \u2014 approve, reject, forward, return, or comment. The decision record that advances (or returns) the workflow. Timestamped for cycle time calculation."
         },
         {
           "id": "ws-due-date",
           "name": "Due Date",
-          "desc": "The date by which action must be completed on a record or workflow step. Contractually significant — missed due dates can trigger liquidated damages, delay claims, or escalation."
+          "desc": "The date by which action must be completed on a record or workflow step. Contractually significant \u2014 missed due dates can trigger liquidated damages, delay claims, or escalation."
         },
         {
           "id": "ws-response-time",
           "name": "Response Time",
-          "desc": "The elapsed time between submission and response — either the contractual allowance or the actual measured duration. Critical for project pacing — slow responses cascade into schedule delays."
+          "desc": "The elapsed time between submission and response \u2014 either the contractual allowance or the actual measured duration. Critical for project pacing \u2014 slow responses cascade into schedule delays."
         },
         {
           "id": "ws-escalation",
@@ -158,7 +158,7 @@
         {
           "id": "ws-delegation",
           "name": "Delegation",
-          "desc": "Temporary or permanent transfer of approval authority from one party to another. Required when the primary reviewer is unavailable — prevents workflow stalls during vacations, role changes, or emergencies."
+          "desc": "Temporary or permanent transfer of approval authority from one party to another. Required when the primary reviewer is unavailable \u2014 prevents workflow stalls during vacations, role changes, or emergencies."
         }
       ]
     },
@@ -169,37 +169,37 @@
         {
           "id": "ws-sequential-appr",
           "name": "Sequential Approval",
-          "desc": "Approvers review in a defined order — each must act before the next receives the item. Ensures layered review (PM → Architect → Owner). Most formal and slowest pattern."
+          "desc": "Approvers review in a defined order \u2014 each must act before the next receives the item. Ensures layered review (PM \u2192 Architect \u2192 Owner). Most formal and slowest pattern."
         },
         {
           "id": "ws-parallel-review",
           "name": "Parallel Review",
-          "desc": "Multiple reviewers evaluate simultaneously — all must respond before the workflow advances. Faster than sequential but requires all parties to be available. Common on design submittals with multiple discipline reviewers."
+          "desc": "Multiple reviewers evaluate simultaneously \u2014 all must respond before the workflow advances. Faster than sequential but requires all parties to be available. Common on design submittals with multiple discipline reviewers."
         },
         {
           "id": "ws-submit-approve",
           "name": "Submit and Approve",
-          "desc": "Single submission followed by one or more approval decisions. The simplest and most common construction workflow pattern — the creator sends, the reviewer decides."
+          "desc": "Single submission followed by one or more approval decisions. The simplest and most common construction workflow pattern \u2014 the creator sends, the reviewer decides."
         },
         {
           "id": "ws-review-respond",
           "name": "Review and Respond",
-          "desc": "A question or information request requiring a formal written response. The RFI pattern — question asked, answer provided, response becomes part of the project record. Response may have cost/schedule impact."
+          "desc": "A question or information request requiring a formal written response. The RFI pattern \u2014 question asked, answer provided, response becomes part of the project record. Response may have cost/schedule impact."
         },
         {
           "id": "ws-inspect-disposit",
           "name": "Inspect and Disposition",
-          "desc": "Field evaluation of installed work against defined criteria, resulting in a conforming/deficient judgment. The quality assurance pattern — inspector walks the work, checks each item, renders a disposition."
+          "desc": "Field evaluation of installed work against defined criteria, resulting in a conforming/deficient judgment. The quality assurance pattern \u2014 inspector walks the work, checks each item, renders a disposition."
         },
         {
           "id": "ws-create-close",
           "name": "Create and Close",
-          "desc": "Simplest lifecycle: an item is created, worked on, and closed. No formal approval chain — the responsible party resolves and closes. The punch list and field finding pattern."
+          "desc": "Simplest lifecycle: an item is created, worked on, and closed. No formal approval chain \u2014 the responsible party resolves and closes. The punch list and field finding pattern."
         },
         {
           "id": "ws-multi-stage",
           "name": "Multi-Stage Financial Review",
-          "desc": "A change progresses through independent budget, cost, and revenue stages — each with its own approval status. The change management pattern where a single event triggers parallel financial workflows across different ledgers."
+          "desc": "A change progresses through independent budget, cost, and revenue stages \u2014 each with its own approval status. The change management pattern where a single event triggers parallel financial workflows across different ledgers."
         }
       ]
     },
@@ -210,17 +210,17 @@
         {
           "id": "ws-budget-stage",
           "name": "Budget Stage",
-          "desc": "The budget approval phase of a change event — tracks whether the budget impact has been formally recognized and approved. First stage in the three-stage financial workflow. Controls whether the project budget is adjusted."
+          "desc": "The budget approval phase of a change event \u2014 tracks whether the budget impact has been formally recognized and approved. First stage in the three-stage financial workflow. Controls whether the project budget is adjusted."
         },
         {
           "id": "ws-cost-stage",
           "name": "Cost Stage",
-          "desc": "The cost commitment phase of a change — tracks whether costs have been formally committed to subcontractors or vendors via change orders. Second stage. Controls whether the commitment is updated."
+          "desc": "The cost commitment phase of a change \u2014 tracks whether costs have been formally committed to subcontractors or vendors via change orders. Second stage. Controls whether the commitment is updated."
         },
         {
           "id": "ws-revenue-stage",
           "name": "Revenue Stage",
-          "desc": "The owner billing phase of a change — tracks whether the approved change has been incorporated into owner invoicing. Third and final stage. Controls whether the GC bills the owner for the change."
+          "desc": "The owner billing phase of a change \u2014 tracks whether the approved change has been incorporated into owner invoicing. Third and final stage. Controls whether the GC bills the owner for the change."
         },
         {
           "id": "ws-chg-event",
@@ -241,12 +241,12 @@
         {
           "id": "ws-e-signature-req",
           "name": "E-Signature Request",
-          "desc": "A digital signing request sent through an integrated e-signature platform (e.g., DocuSign). Overlays the standard approval workflow — the record's internal status and the e-signature status track independently."
+          "desc": "A digital signing request sent through an integrated e-signature platform (e.g., DocuSign). Overlays the standard approval workflow \u2014 the record's internal status and the e-signature status track independently."
         },
         {
           "id": "ws-e-signature-ball",
           "name": "E-Signature Ball in Court",
-          "desc": "The signer currently expected to act on a digital signature request. Mirrors the construction ball-in-court concept within the e-signature workflow — identifies who is holding up execution."
+          "desc": "The signer currently expected to act on a digital signature request. Mirrors the construction ball-in-court concept within the e-signature workflow \u2014 identifies who is holding up execution."
         }
       ]
     },
@@ -303,7 +303,6 @@
         {
           "id": "ws-bottleneck",
           "name": "Process Bottleneck Detection",
-          "procore": "project_management.submittals",
           "desc": "Identifies workflow bottlenecks by analyzing approval cycle times across submittals, RFIs, and observations. Measures time-in-status for each workflow stage: submittal submission-to-approval, RFI creation-to-response, observation assignment-to-closure. Ball-in-court analysis reveals which parties (architect, owner, PM, subcontractor) consistently slow the workflow. Status dwell time by record type and responsible party identifies systemic delays vs. one-off slowdowns. Overdue rates by workflow type and reviewer enable targeted process improvement. Cross-referenced with project phase to distinguish early-project bottlenecks (design coordination) from late-project bottlenecks (closeout backlog)."
         }
       ]

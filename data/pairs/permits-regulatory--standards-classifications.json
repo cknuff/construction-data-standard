@@ -68,26 +68,6 @@
       "SUPPORTS"
     ],
     [
-      "pr-osha-notificatio",
-      "sc-osha-hazard",
-      "FILED UNDER"
-    ],
-    [
-      "pr-site-safety-plan",
-      "sc-osha-hazard",
-      "ADDRESSES"
-    ],
-    [
-      "pr-osha-notificatio",
-      "sc-osha-recordkeepi",
-      "LOGGED PER"
-    ],
-    [
-      "pr-trade-permit",
-      "sc-masterformat",
-      "CLASSIFIED UNDER"
-    ],
-    [
       "pr-special-insp",
       "sc-specification-se",
       "SCOPED BY"
@@ -96,16 +76,6 @@
       "pr-stormwater-permi",
       "sc-leed-certificati",
       "SUPPORTS"
-    ],
-    [
-      "pr-labor-comp",
-      "sc-osha-recordkeepi",
-      "DOCUMENTED PER"
-    ],
-    [
-      "pr-zoning-appr",
-      "sc-omniclass",
-      "CLASSIFIED UNDER"
     ],
     [
       "pr-insp-pass-rate",

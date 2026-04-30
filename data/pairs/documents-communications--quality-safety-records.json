@@ -401,6 +401,11 @@
       "doc-lien-waiver",
       "qsr-punch-item-2",
       "DEPENDS ON"
+    ],
+    [
+      "qsr-incident-rca",
+      "doc-lessons-learned",
+      "FEEDS"
     ]
   ],
   "verbGlossary": {

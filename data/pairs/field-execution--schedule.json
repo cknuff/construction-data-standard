@@ -1,0 +1,26 @@
+{
+  "source": "field-execution",
+  "target": "schedule",
+  "edges": [
+    [
+      "sc-activity",
+      "fe-labor-allocation",
+      "RESOURCED_BY"
+    ],
+    [
+      "sc-activity",
+      "fe-production-quantity",
+      "PRODUCES_OUTPUT"
+    ],
+    [
+      "sc-lookahead-task",
+      "fe-labor-allocation",
+      "REQUIRES_LABOR"
+    ],
+    [
+      "sch-level-5",
+      "fe-iwp",
+      "ALIGNS_WITH"
+    ]
+  ]
+}

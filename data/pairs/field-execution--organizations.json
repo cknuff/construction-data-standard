@@ -1,0 +1,16 @@
+{
+  "source": "field-execution",
+  "target": "organizations",
+  "edges": [
+    [
+      "fe-project-employee",
+      "org-user",
+      "IS_A"
+    ],
+    [
+      "fe-project-employee",
+      "org-user",
+      "RESOLVES_TO"
+    ]
+  ]
+}

@@ -1,0 +1,247 @@
+{
+  "source": "models-and-assets",
+  "target": "schedule",
+  "edges": [
+    [
+      "bim-4d-model",
+      "sch-detail-activity",
+      "ANIMATES"
+    ],
+    [
+      "bim-4d-model",
+      "sch-summary-activity",
+      "ROLLS UP TO"
+    ],
+    [
+      "bim-4d-model",
+      "sch-milestone",
+      "VISUALIZES"
+    ],
+    [
+      "bim-4d-model",
+      "sch-critical-path",
+      "HIGHLIGHTS"
+    ],
+    [
+      "bim-4d-model",
+      "sch-baseline-schedul",
+      "SIMULATES"
+    ],
+    [
+      "bim-model-element",
+      "sch-detail-activity",
+      "ASSIGNED TO"
+    ],
+    [
+      "bim-model-element",
+      "sch-duration-progres",
+      "TRACKS INSTALL OF"
+    ],
+    [
+      "bim-model-element",
+      "sch-activity-codes",
+      "CODED AGAINST"
+    ],
+    [
+      "bim-3d-building-info",
+      "sch-4d-5d-bim",
+      "FEEDS"
+    ],
+    [
+      "bim-3d-building-info",
+      "sch-schedule-levels",
+      "DECOMPOSES INTO"
+    ],
+    [
+      "bim-3d-building-info",
+      "sch-look-ahead",
+      "SCOPES"
+    ],
+    [
+      "bim-federated-model",
+      "sch-detail-activity",
+      "SEQUENCES"
+    ],
+    [
+      "bim-federated-model",
+      "sch-relationship-typ",
+      "DEFINES LOGIC FOR"
+    ],
+    [
+      "bim-federated-model",
+      "sch-lag-lead-time",
+      "CONSTRAINS"
+    ],
+    [
+      "bim-5d-model-cost",
+      "sch-cost-loading",
+      "LOADS COST INTO"
+    ],
+    [
+      "bim-5d-model-cost",
+      "sch-earned-schedule",
+      "MEASURES PROGRESS FOR"
+    ],
+    [
+      "bim-quantity-takeoff",
+      "sch-labor-loading",
+      "DRIVES CREW SIZING FOR"
+    ],
+    [
+      "bim-quantity-takeoff",
+      "sch-equip-loading",
+      "SIZES EQUIPMENT FOR"
+    ],
+    [
+      "bim-quantity-takeoff",
+      "sch-duration-progres",
+      "CALCULATES DURATION FROM"
+    ],
+    [
+      "bim-quantity-takeoff",
+      "sch-resource-levelin",
+      "INFORMS"
+    ],
+    [
+      "bim-coord-issue",
+      "sch-delay-class",
+      "CAUSES"
+    ],
+    [
+      "bim-coord-issue",
+      "sch-time-impact",
+      "TRIGGERS"
+    ],
+    [
+      "bim-coord-issue",
+      "sch-float-slack",
+      "CONSUMES"
+    ],
+    [
+      "bim-coord-issue",
+      "sch-schedule-update",
+      "FORCES REVISION OF"
+    ],
+    [
+      "bim-clash-detection",
+      "sch-recovery-schedul",
+      "TRIGGERS"
+    ],
+    [
+      "bim-clash-detection",
+      "sch-schedule-constra",
+      "IMPOSES"
+    ],
+    [
+      "bim-as-built-model",
+      "sch-as-built",
+      "VALIDATES DATES IN"
+    ],
+    [
+      "bim-as-built-model",
+      "sch-retrospective-de",
+      "PROVIDES EVIDENCE FOR"
+    ],
+    [
+      "bim-point-cloud",
+      "sch-schedule-update",
+      "VERIFIES PROGRESS FOR"
+    ],
+    [
+      "bim-drone-capture",
+      "sch-percent-plan",
+      "MEASURES"
+    ],
+    [
+      "bim-const-photo",
+      "sch-schedule-field",
+      "CONFIRMS FIELD STATUS FOR"
+    ],
+    [
+      "bim-bim-coord",
+      "sch-look-ahead",
+      "REPRIORITIZES"
+    ],
+    [
+      "bim-bim-coord",
+      "sch-schedule-chg",
+      "INITIATES"
+    ],
+    [
+      "bim-digital-twin",
+      "sch-schedule-health",
+      "MONITORS"
+    ],
+    [
+      "bim-digital-twin",
+      "sch-earned-schedule",
+      "TRACKS"
+    ],
+    [
+      "bim-model-properties",
+      "sch-dependency-class",
+      "DETERMINES"
+    ],
+    [
+      "bim-level-developmen",
+      "sch-schedule-levels",
+      "MAPS TO"
+    ],
+    [
+      "bim-coord-issue-3",
+      "sch-float-erosion",
+      "CORRELATES WITH"
+    ],
+    [
+      "bim-clash-resolution",
+      "sch-milestone-adhere",
+      "IMPACTS"
+    ],
+    [
+      "bim-drawing-revision",
+      "sch-schedule-chg",
+      "PROPAGATES INTO"
+    ]
+  ],
+  "verbGlossary": {
+    "ANIMATES": "{source} elements played back in construction sequence through a 4D time-lapse simulation",
+    "ROLLS UP TO": "{source}aggregated into summary {target} activities",
+    "VISUALIZES": "{source} {target} rendered as a visible state change in the 4D model",
+    "HIGHLIGHTS": "{target} activities emphasized within the 4D simulation to show schedule risk",
+    "SIMULATES": "{source}schedule replayed through {target} to compare planned versus actual sequence",
+    "ASSIGNED TO": "{source} linked to a specific {target} for installation tracking",
+    "TRACKS INSTALL OF": "{source}measured against {target}d duration",
+    "CODED AGAINST": "{source} tagged with {target} codes to enable schedule filtering and grouping",
+    "FEEDS": "Authored BIM geometry and metadata exported into a 4D/5D scheduling environment",
+    "DECOMPOSES INTO": "Building model broken down into installation zones matching {target} hierarchy levels",
+    "SCOPES": "{source} geometry used to define the spatial scope of a look-ahead {target} period",
+    "SEQUENCES": "{source}determine installation order of activities",
+    "DEFINES LOGIC FOR": "Spatial adjacency and system routing in the federated model establish predecessor-successor logic",
+    "CONSTRAINS": "{source}requirements in {target} impose lag or lead time between activities",
+    "LOADS COST INTO": "Cost quantities from the 5D model allocated to {target} activities for cash-flow projection",
+    "MEASURES PROGRESS FOR": "{source} quantities used to calculate earned value against {target}d performance",
+    "DRIVES CREW SIZING FOR": "Takeoff quantities converted into labor-hour estimates to size crews for each {target}",
+    "SIZES EQUIPMENT FOR": "{source}determine equipment type and capacity needed per {target}",
+    "CALCULATES DURATION FROM": "{source}rates to compute {target} durations",
+    "INFORMS": "Quantity data used as input for resource leveling across concurrent activities",
+    "CAUSES": "{source}",
+    "TRIGGERS": "{source} or clash result initiates a time impact analysis or recovery {target}",
+    "CONSUMES": "{source}issue erodes available {target} on affected schedule activities",
+    "FORCES REVISION OF": "Coordination resolution changes installation approach, requiring {target}",
+    "IMPOSES": "{source}constraint on when affected activities can proceed",
+    "VALIDATES DATES IN": "{source}compared against as-built {target} dates to confirm completion",
+    "PROVIDES EVIDENCE FOR": "{source}documentation for retrospective delay analysis",
+    "VERIFIES PROGRESS FOR": "{source} compared to model to confirm percent complete for {target}s",
+    "MEASURES": "{source}calculate percent plan complete for field activities",
+    "CONFIRMS FIELD STATUS FOR": "Construction photos matched to {target} activities to verify field installation status",
+    "REPRIORITIZES": "{source} coordination meeting outcomes shift {target} priorities in the look-ahead schedule",
+    "INITIATES": "{source}create tracked {target} changes",
+    "MONITORS": "Digital twin streams real-time data to continuously assess {target} health metrics",
+    "TRACKS": "{source}compares actual progress against earned {target} benchmarks",
+    "DETERMINES": "{source} properties such as cure time or fabrication lead time establish dependency classifications",
+    "MAPS TO": "Level of development requirements aligned to {target} detail levels for each project phase",
+    "CORRELATES WITH": "{source}issue resolution times associated with higher {target} erosion rates",
+    "IMPACTS": "{source}",
+    "PROPAGATES INTO": "{source}tracked {target} changes for affected downstream activities"
+  }
+}

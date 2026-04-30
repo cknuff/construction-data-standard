@@ -196,6 +196,11 @@
       "pr-permit-renewal",
       "pa-actual-duration",
       "SCALED BY"
+    ],
+    [
+      "pr-permit",
+      "pa-project-status",
+      "AUTHORIZES"
     ]
   ],
   "verbGlossary": {

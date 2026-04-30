@@ -446,6 +446,46 @@
       "cp-scope-work",
       "fi-estimate",
       "QUANTIFIED IN"
+    ],
+    [
+      "cp-bid-item",
+      "fi-estimate-budget-item",
+      "PRICES"
+    ],
+    [
+      "cp-proposal-bid",
+      "fi-commit-subcontra",
+      "AWARDED_AS"
+    ],
+    [
+      "cp-ct-gmp",
+      "fi-project-budget",
+      "CAPS"
+    ],
+    [
+      "cp-ct-gmp",
+      "fi-cost-forecast",
+      "MEASURED_AGAINST"
+    ],
+    [
+      "fi-commit-subcontra",
+      "cp-ct-stipulated-sum",
+      "CLASSIFIED_BY"
+    ],
+    [
+      "fi-commit-subcontra",
+      "cp-ct-tm",
+      "CLASSIFIED_BY"
+    ],
+    [
+      "fi-commit-subcontra",
+      "cp-ct-unit-price",
+      "CLASSIFIED_BY"
+    ],
+    [
+      "fi-prime-contract-payment",
+      "cp-prime-contract",
+      "PAYS_AGAINST"
     ]
   ],
   "verbGlossary": {

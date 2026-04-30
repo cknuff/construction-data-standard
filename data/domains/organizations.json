@@ -10,17 +10,20 @@
         {
           "id": "org-private-develope",
           "name": "Private Developer",
-          "desc": "Company or individual funding a project for profit — develops to sell, lease, or operate. Decision authority on scope, budget, and schedule. Delivers program requirements, design approvals, change authorizations, and substantial completion acceptance. Active across all phases from conception through operations."
+          "desc": "Company or individual funding a project for profit \u2014 develops to sell, lease, or operate. Decision authority on scope, budget, and schedule. Delivers program requirements, design approvals, change authorizations, and substantial completion acceptance. Active across all phases from conception through operations.",
+          "derivation": "core.projects.owner_type ~= 'Private Developer' / 'Developer'"
         },
         {
           "id": "org-institutional-ow",
           "name": "Institutional Owner",
-          "desc": "Organization building for its own use — corporate campus, hospital, university, government facility. End user and operator of the facility. Defines program requirements, coordinates stakeholders, provides operations input, and plans occupancy. Especially active in Preconstruction and Post-Construction."
+          "desc": "Organization building for its own use \u2014 corporate campus, hospital, university, government facility. End user and operator of the facility. Defines program requirements, coordinates stakeholders, provides operations input, and plans occupancy. Especially active in Preconstruction and Post-Construction.",
+          "derivation": "core.projects.owner_type ~= 'Institutional' / 'University' / 'Hospital' / 'Healthcare'"
         },
         {
           "id": "org-public-governmen",
           "name": "Public / Government Entity",
-          "desc": "Federal, state, or local government agency procuring a public project. Regulated procurement authority with statutory constraints — competitive bidding, prevailing wage enforcement, ADA compliance, environmental review. Active across all phases with additional regulatory overlay."
+          "desc": "Federal, state, or local government agency procuring a public project. Regulated procurement authority with statutory constraints \u2014 competitive bidding, prevailing wage enforcement, ADA compliance, environmental review. Active across all phases with additional regulatory overlay.",
+          "derivation": "core.projects.owner_type ~= 'Public' / 'Government' / 'Federal' / 'State' / 'Municipal'"
         }
       ]
     },
@@ -31,28 +34,32 @@
         {
           "id": "org-gen-contr-gc",
           "name": "General Contractor (GC)",
-          "desc": "Company contracted to construct the project — holds risk for cost, schedule, and quality under lump sum or GMP contract. Single point of responsibility to the owner. Manages subcontractors, schedule, quality control, safety, and cost control. Delivers schedule, budget reports, pay applications, daily reports, punchlist management, and closeout documents. Active from Procurement through Closeout (sometimes Preconstruction if CM at Risk).",
+          "desc": "Company contracted to construct the project \u2014 holds risk for cost, schedule, and quality under lump sum or GMP contract. Single point of responsibility to the owner. Manages subcontractors, schedule, quality control, safety, and cost control. Delivers schedule, budget reports, pay applications, daily reports, punchlist management, and closeout documents. Active from Procurement through Closeout (sometimes Preconstruction if CM at Risk).",
           "procore": "core.companies"
         },
         {
           "id": "org-const-manager-at",
           "name": "Construction Manager at Risk (CM at Risk)",
-          "desc": "CM engaged during design to provide preconstruction services (estimating, VE, constructability, scheduling), then transitions to GC role during construction under a GMP. Most common delivery method for large commercial projects. Early involvement improves cost certainty. Active from Preconstruction through Closeout."
+          "desc": "CM engaged during design to provide preconstruction services (estimating, VE, constructability, scheduling), then transitions to GC role during construction under a GMP. Most common delivery method for large commercial projects. Early involvement improves cost certainty. Active from Preconstruction through Closeout.",
+          "derivation": "core.projects.delivery_method ~= 'CM at Risk' / 'CMAR'"
         },
         {
           "id": "org-const-manager",
           "name": "Construction Manager Agency (CM Agency)",
-          "desc": "CM acts as owner's agent — manages project but does NOT hold trade contracts or bear construction cost risk. Provides schedule/budget management, trade coordination, quality oversight, and reporting. Owner holds direct contracts with trades. Common on institutional and public projects. Active from Preconstruction through Closeout."
+          "desc": "CM acts as owner's agent \u2014 manages project but does NOT hold trade contracts or bear construction cost risk. Provides schedule/budget management, trade coordination, quality oversight, and reporting. Owner holds direct contracts with trades. Common on institutional and public projects. Active from Preconstruction through Closeout.",
+          "derivation": "core.projects.delivery_method ~= 'CM Agency' / 'Agency CM'"
         },
         {
           "id": "org-design-builder",
           "name": "Design-Builder",
-          "desc": "Single entity responsible for both design and construction under one contract. Single point of responsibility for owner. Manages architect directly and self-coordinates design-construction overlap. Faster delivery due to concurrent design and construction. Active across all phases."
+          "desc": "Single entity responsible for both design and construction under one contract. Single point of responsibility for owner. Manages architect directly and self-coordinates design-construction overlap. Faster delivery due to concurrent design and construction. Active across all phases.",
+          "derivation": "core.projects.delivery_method ~= 'Design-Build' / 'DB'"
         },
         {
           "id": "org-program-manager",
           "name": "Program Manager",
-          "desc": "Firm managing a portfolio of related projects for an owner — multiple projects under one program. Provides portfolio-level schedule, budget, and risk management with standardization across projects. Common for healthcare campuses, university programs, corporate rollouts. Active across all phases on multiple projects simultaneously."
+          "desc": "Firm managing a portfolio of related projects for an owner \u2014 multiple projects under one program. Provides portfolio-level schedule, budget, and risk management with standardization across projects. Common for healthcare campuses, university programs, corporate rollouts. Active across all phases on multiple projects simultaneously.",
+          "derivation": "core.project_role_memberships WHERE role_name ~= 'Program Manager'. Joined to core.users for individual; to core.project_vendors for firm."
         }
       ]
     },
@@ -63,37 +70,44 @@
         {
           "id": "org-architect-record",
           "name": "Architect of Record (AOR)",
-          "desc": "Licensed architecture firm responsible for building design and construction documents — stamp on architectural drawings. Performs construction administration (CA): submittal review, RFI response, field observation, punch list walk. Active from Preconstruction through Closeout. Contracts with owner (design-bid-build/CM) or with design-builder."
+          "desc": "Licensed architecture firm responsible for building design and construction documents \u2014 stamp on architectural drawings. Performs construction administration (CA): submittal review, RFI response, field observation, punch list walk. Active from Preconstruction through Closeout. Contracts with owner (design-bid-build/CM) or with design-builder.",
+          "derivation": "core.project_role_memberships WHERE role_name ~= 'Architect' AND `group` = 'design_team'. Joined to core.users for individual; to core.project_vendors for firm."
         },
         {
           "id": "org-struct-engineer",
           "name": "Structural Engineer",
-          "desc": "Licensed engineering firm responsible for structural system design — foundation design, connection design, structural calculations. Stamp on structural drawings. Performs submittal review and RFI response for structural scope. Active from Preconstruction through Construction. Typically subconsultant to architect or direct contract with owner."
+          "desc": "Licensed engineering firm responsible for structural system design \u2014 foundation design, connection design, structural calculations. Stamp on structural drawings. Performs submittal review and RFI response for structural scope. Active from Preconstruction through Construction. Typically subconsultant to architect or direct contract with owner.",
+          "derivation": "core.project_role_memberships WHERE role_name ~= 'Structural Engineer' AND `group` = 'design_team'. Joined to core.users for individual; to core.project_vendors for firm."
         },
         {
           "id": "org-mep-engineer",
           "name": "MEP Engineer",
-          "desc": "Licensed engineering firm(s) responsible for mechanical, electrical, and plumbing system design — HVAC, plumbing, electrical, fire protection. Energy code compliance, load calculations, equipment schedules. Performs submittal review and RFI response. Active from Preconstruction through Commissioning. Subconsultant to architect or direct owner contract."
+          "desc": "Licensed engineering firm(s) responsible for mechanical, electrical, and plumbing system design \u2014 HVAC, plumbing, electrical, fire protection. Energy code compliance, load calculations, equipment schedules. Performs submittal review and RFI response. Active from Preconstruction through Commissioning. Subconsultant to architect or direct owner contract.",
+          "derivation": "core.project_role_memberships WHERE role_name ~= 'MEP Engineer' AND `group` = 'design_team'. Joined to core.users for individual; to core.project_vendors for firm."
         },
         {
           "id": "org-civil-engineer",
           "name": "Civil Engineer",
-          "desc": "Licensed engineering firm responsible for site design — grading, utilities, stormwater, roadways, erosion control. Stamp on civil drawings. Active from Preconstruction through Sitework. Subconsultant to architect or direct owner contract."
+          "desc": "Licensed engineering firm responsible for site design \u2014 grading, utilities, stormwater, roadways, erosion control. Stamp on civil drawings. Active from Preconstruction through Sitework. Subconsultant to architect or direct owner contract.",
+          "derivation": "core.project_role_memberships WHERE role_name ~= 'Civil Engineer' AND `group` = 'design_team'. Joined to core.users for individual; to core.project_vendors for firm."
         },
         {
           "id": "org-fire-prot",
           "name": "Fire Protection Engineer",
-          "desc": "Licensed engineering firm responsible for fire protection and life safety system design — sprinkler design, fire alarm design, smoke control, egress analysis, fire code compliance. Active from Preconstruction through Commissioning. Subconsultant to architect or MEP engineer, or direct owner contract."
+          "desc": "Licensed engineering firm responsible for fire protection and life safety system design \u2014 sprinkler design, fire alarm design, smoke control, egress analysis, fire code compliance. Active from Preconstruction through Commissioning. Subconsultant to architect or MEP engineer, or direct owner contract.",
+          "derivation": "core.project_role_memberships WHERE role_name ~= 'Fire Protection Engineer' AND `group` = 'design_team'. Joined to core.users for individual; to core.project_vendors for firm."
         },
         {
           "id": "org-geotechnical-eng",
           "name": "Geotechnical Engineer",
-          "desc": "Licensed engineering firm investigating subsurface conditions and recommending foundation design — soil borings, lab testing, foundation recommendations, earthwork specs, dewatering recommendations. Produces the geotechnical report, one of the first project documents. Active from Preconstruction through Foundations. Typically direct contract with owner, engaged before architect."
+          "desc": "Licensed engineering firm investigating subsurface conditions and recommending foundation design \u2014 soil borings, lab testing, foundation recommendations, earthwork specs, dewatering recommendations. Produces the geotechnical report, one of the first project documents. Active from Preconstruction through Foundations. Typically direct contract with owner, engaged before architect.",
+          "derivation": "core.project_role_memberships WHERE role_name ~= 'Geotechnical Engineer' AND `group` = 'design_team'. Joined to core.users for individual; to core.project_vendors for firm."
         },
         {
           "id": "org-landscape-archit",
           "name": "Landscape Architect",
-          "desc": "Licensed design firm responsible for exterior landscape, hardscape, irrigation, and site amenity design. Produces planting plans, irrigation plans, hardscape details. Active during Preconstruction and Site Improvements phase. Subconsultant to architect or direct owner contract."
+          "desc": "Licensed design firm responsible for exterior landscape, hardscape, irrigation, and site amenity design. Produces planting plans, irrigation plans, hardscape details. Active during Preconstruction and Site Improvements phase. Subconsultant to architect or direct owner contract.",
+          "derivation": "core.project_role_memberships WHERE role_name ~= 'Landscape Architect' AND `group` = 'design_team'. Joined to core.users for individual; to core.project_vendors for firm."
         }
       ]
     },
@@ -104,32 +118,38 @@
         {
           "id": "org-specifications-w",
           "name": "Specifications Writer",
-          "desc": "Firm or individual that writes the project manual (specifications) governing materials and installation methods. Product research, code cross-referencing, coordination with design team. Specifications are the legal backbone of construction quality. Active during Preconstruction. Subconsultant to architect or independent contract with owner."
+          "desc": "Firm or individual that writes the project manual (specifications) governing materials and installation methods. Product research, code cross-referencing, coordination with design team. Specifications are the legal backbone of construction quality. Active during Preconstruction. Subconsultant to architect or independent contract with owner.",
+          "derivation": "core.project_role_memberships WHERE role_name ~= 'Specifications Writer' AND `group` = 'design_team'. Joined to core.users for individual; to core.project_vendors for firm."
         },
         {
           "id": "org-lighting-designe",
           "name": "Lighting Designer",
-          "desc": "Firm specializing in architectural and functional lighting design — lighting layout, fixture selection, controls design, daylighting analysis, energy code compliance. Bridges engineering and architecture. Active from Preconstruction through Finishes. Subconsultant to architect or electrical engineer."
+          "desc": "Firm specializing in architectural and functional lighting design \u2014 lighting layout, fixture selection, controls design, daylighting analysis, energy code compliance. Bridges engineering and architecture. Active from Preconstruction through Finishes. Subconsultant to architect or electrical engineer.",
+          "derivation": "core.project_role_memberships WHERE role_name ~= 'Lighting Designer' AND `group` = 'design_team'. Joined to core.users for individual; to core.project_vendors for firm."
         },
         {
           "id": "org-acoustics-consul",
           "name": "Acoustics Consultant",
-          "desc": "Firm specializing in sound isolation, room acoustics, and noise control — STC/IIC ratings, room finish recommendations, mechanical noise criteria, environmental noise assessment. Critical for healthcare, education, residential, and performing arts. Active from Preconstruction through Commissioning. Subconsultant to architect or direct owner contract."
+          "desc": "Firm specializing in sound isolation, room acoustics, and noise control \u2014 STC/IIC ratings, room finish recommendations, mechanical noise criteria, environmental noise assessment. Critical for healthcare, education, residential, and performing arts. Active from Preconstruction through Commissioning. Subconsultant to architect or direct owner contract.",
+          "derivation": "core.project_role_memberships WHERE role_name ~= 'Acoustics Consultant' AND `group` = 'design_team'. Joined to core.users for individual; to core.project_vendors for firm."
         },
         {
           "id": "org-building-envelop",
           "name": "Building Envelope Consultant",
-          "desc": "Firm specializing in design and performance of the building exterior skin — air/water/thermal barrier design, curtain wall engineering review, mock-up testing oversight, field quality inspection. Increasingly common as energy codes tighten and envelope litigation grows. Active from Preconstruction through Enclosure. Direct owner contract or subconsultant to architect."
+          "desc": "Firm specializing in design and performance of the building exterior skin \u2014 air/water/thermal barrier design, curtain wall engineering review, mock-up testing oversight, field quality inspection. Increasingly common as energy codes tighten and envelope litigation grows. Active from Preconstruction through Enclosure. Direct owner contract or subconsultant to architect.",
+          "derivation": "core.project_role_memberships WHERE role_name ~= 'Building Envelope Consultant' AND `group` = 'design_team'. Joined to core.users for individual; to core.project_vendors for firm."
         },
         {
           "id": "org-sustainability-l",
           "name": "Sustainability / LEED Consultant",
-          "desc": "Firm managing green building certification and sustainability requirements — LEED/WELL credit tracking, energy modeling coordination, material documentation (EPDs, HPDs, VOC content), commissioning coordination. Active across all phases from design through Commissioning. Direct owner contract or subconsultant to architect."
+          "desc": "Firm managing green building certification and sustainability requirements \u2014 LEED/WELL credit tracking, energy modeling coordination, material documentation (EPDs, HPDs, VOC content), commissioning coordination. Active across all phases from design through Commissioning. Direct owner contract or subconsultant to architect.",
+          "derivation": "core.project_role_memberships WHERE role_name ~= 'Sustainability / LEED' AND `group` = 'design_team'. Joined to core.users for individual; to core.project_vendors for firm."
         },
         {
           "id": "org-code-consultant",
           "name": "Code Consultant",
-          "desc": "Firm specializing in building code interpretation and life safety compliance — code analysis, occupancy classification, egress analysis, fire resistance requirements, ADA compliance, variance applications. Critical for complex occupancies. Active from Preconstruction through Permitting. Subconsultant to architect or direct owner contract."
+          "desc": "Firm specializing in building code interpretation and life safety compliance \u2014 code analysis, occupancy classification, egress analysis, fire resistance requirements, ADA compliance, variance applications. Critical for complex occupancies. Active from Preconstruction through Permitting. Subconsultant to architect or direct owner contract.",
+          "derivation": "core.project_role_memberships WHERE role_name ~= 'Code Consultant' AND `group` = 'design_team'. Joined to core.users for individual; to core.project_vendors for firm."
         }
       ]
     },
@@ -138,15 +158,130 @@
       "color": "#2cb0ed",
       "nodes": [
         {
-          "id": "org-sub-trade",
-          "name": "Subcontractor (Trade-Specific)",
-          "desc": "Specialty contractor performing a specific trade scope of work under contract to the GC — self-performs trade work, manages own workforce, procures trade-specific materials, responsible for quality of installed work and safety of own crews. Typical project has 25-40 subcontractors. Delivers installed work, submittals, daily manpower reports, pay applications, as-built markups, and warranty. Active from Procurement through Closeout. Subcontract with GC (or direct with owner in CM Agency).",
-          "procore": "core.project_vendors"
+          "id": "org-sitework-sub",
+          "name": "Sitework & Excavation Contractor",
+          "desc": "Specialty contractor performing earthwork, excavation, grading, underground utilities, and site preparation. Typically one of the first trades on site. Div 02, 31, 33.",
+          "derivation": "core.project_vendors WHERE trade keywords match: sitework, excavation, earthmoving, demo. Aggregate by project_id, vendor_id. Combine with finance.commitments for contracted work."
+        },
+        {
+          "id": "org-concrete-sub",
+          "name": "Concrete Contractor",
+          "desc": "Specialty contractor performing concrete foundations, structural concrete, flatwork, and formwork. Includes reinforcing steel placement, concrete placement, and finishing. Div 03.",
+          "derivation": "core.project_vendors WHERE trade keywords match: concrete, cast-in-place, formwork. Aggregate by project_id, vendor_id. Combine with finance.commitments for contracted work."
+        },
+        {
+          "id": "org-masonry-sub",
+          "name": "Masonry Contractor",
+          "desc": "Specialty contractor performing brick, block, stone, and masonry veneer work. Includes structural and veneer masonry, grout, and reinforcing. Div 04.",
+          "derivation": "core.project_vendors WHERE trade keywords match: masonry, brick, CMU, stone. Aggregate by project_id, vendor_id. Combine with finance.commitments for contracted work."
+        },
+        {
+          "id": "org-steel-sub",
+          "name": "Structural Steel Contractor",
+          "desc": "Specialty contractor fabricating and erecting structural steel, miscellaneous metals, and metal decking. Includes connection design, fabrication, delivery, and field erection. Div 05.",
+          "derivation": "core.project_vendors WHERE trade keywords match: structural steel, steel erection, metal framing. Aggregate by project_id, vendor_id. Combine with finance.commitments for contracted work."
+        },
+        {
+          "id": "org-drywall-sub",
+          "name": "Drywall & Framing Contractor",
+          "desc": "Specialty contractor performing metal stud framing, drywall hanging, taping, and finishing. Often also performs acoustical ceiling installation. Div 09.",
+          "derivation": "core.project_vendors WHERE trade keywords match: drywall, framing, gypsum. Aggregate by project_id, vendor_id. Combine with finance.commitments for contracted work."
+        },
+        {
+          "id": "org-painting-sub",
+          "name": "Painting Contractor",
+          "desc": "Specialty contractor performing interior and exterior painting, wall coverings, and specialty coatings. Active during finishes phase. Div 09.",
+          "derivation": "core.project_vendors WHERE trade keywords match: painting, paint, coatings. Aggregate by project_id, vendor_id. Combine with finance.commitments for contracted work."
+        },
+        {
+          "id": "org-flooring-sub",
+          "name": "Flooring Contractor",
+          "desc": "Specialty contractor installing carpet, VCT, LVT, hardwood, epoxy, polished concrete, and specialty flooring systems. Active during finishes phase. Div 09.",
+          "derivation": "core.project_vendors WHERE trade keywords match: flooring, tile, carpet. Aggregate by project_id, vendor_id. Combine with finance.commitments for contracted work."
+        },
+        {
+          "id": "org-ceiling-sub",
+          "name": "Acoustical Ceiling Contractor",
+          "desc": "Specialty contractor installing suspended acoustical ceiling grid and tile systems. Often combined with drywall contractor. Div 09.",
+          "derivation": "core.project_vendors WHERE trade keywords match: acoustic ceiling, ACT, ceiling. Aggregate by project_id, vendor_id. Combine with finance.commitments for contracted work."
+        },
+        {
+          "id": "org-roofing-sub",
+          "name": "Roofing Contractor",
+          "desc": "Specialty contractor installing roofing systems \u2014 membrane, metal, shingles, flashing, and sheet metal trim. Includes waterproofing and roof accessories. Div 07.",
+          "derivation": "core.project_vendors WHERE trade keywords match: roofing, roof. Aggregate by project_id, vendor_id. Combine with finance.commitments for contracted work."
+        },
+        {
+          "id": "org-glazing-sub",
+          "name": "Glazing & Curtain Wall Contractor",
+          "desc": "Specialty contractor installing windows, storefronts, curtain wall systems, and glass. Includes aluminum framing, sealants, and glass. Div 08.",
+          "derivation": "core.project_vendors WHERE trade keywords match: glazing, curtain wall, glass. Aggregate by project_id, vendor_id. Combine with finance.commitments for contracted work."
+        },
+        {
+          "id": "org-waterproof-sub",
+          "name": "Waterproofing Contractor",
+          "desc": "Specialty contractor performing below-grade waterproofing, dampproofing, air barriers, and joint sealants. Div 07.",
+          "derivation": "core.project_vendors WHERE trade keywords match: waterproofing, dampproofing. Aggregate by project_id, vendor_id. Combine with finance.commitments for contracted work."
+        },
+        {
+          "id": "org-insulation-sub",
+          "name": "Insulation & Fireproofing Contractor",
+          "desc": "Specialty contractor installing mechanical insulation, building insulation, and spray-applied fireproofing. Div 07.",
+          "derivation": "core.project_vendors WHERE trade keywords match: insulation, fireproofing, spray-applied. Aggregate by project_id, vendor_id. Combine with finance.commitments for contracted work."
+        },
+        {
+          "id": "org-mechanical-sub",
+          "name": "Mechanical (HVAC) Contractor",
+          "desc": "Specialty contractor installing heating, ventilation, and air conditioning systems \u2014 ductwork, piping, equipment, controls, and test & balance. Div 23.",
+          "derivation": "core.project_vendors WHERE trade keywords match: mechanical, HVAC, sheet metal. Aggregate by project_id, vendor_id. Combine with finance.commitments for contracted work."
+        },
+        {
+          "id": "org-plumbing-sub",
+          "name": "Plumbing Contractor",
+          "desc": "Specialty contractor installing domestic water, sanitary waste, storm drainage, gas piping, and plumbing fixtures. Sometimes combined with mechanical. Div 22.",
+          "derivation": "core.project_vendors WHERE trade keywords match: plumbing. Aggregate by project_id, vendor_id. Combine with finance.commitments for contracted work."
+        },
+        {
+          "id": "org-electrical-sub",
+          "name": "Electrical Contractor",
+          "desc": "Specialty contractor installing power distribution, lighting, fire alarm, and sometimes low voltage systems. Includes switchgear, panels, branch wiring, and fixtures. Div 26.",
+          "derivation": "core.project_vendors WHERE trade keywords match: electrical. Aggregate by project_id, vendor_id. Combine with finance.commitments for contracted work."
+        },
+        {
+          "id": "org-fire-prot-sub",
+          "name": "Fire Protection Contractor",
+          "desc": "Specialty contractor installing fire sprinkler, standpipe, and fire suppression systems. Usually a separate subcontract from mechanical. Div 21.",
+          "derivation": "core.project_vendors WHERE trade keywords match: fire protection, sprinkler. Aggregate by project_id, vendor_id. Combine with finance.commitments for contracted work."
+        },
+        {
+          "id": "org-elevator-sub",
+          "name": "Elevator Contractor",
+          "desc": "Specialty contractor installing elevators, escalators, and vertical transportation systems. Highly specialized trade with long lead times. Div 14.",
+          "derivation": "core.project_vendors WHERE trade keywords match: elevator, conveying. Aggregate by project_id, vendor_id. Combine with finance.commitments for contracted work."
+        },
+        {
+          "id": "org-lowvolt-sub",
+          "name": "Low Voltage & Communications Contractor",
+          "desc": "Specialty contractor installing data/telecom cabling, security systems, AV systems, and building automation. Sometimes under electrical contractor. Div 27-28.",
+          "derivation": "core.project_vendors WHERE trade keywords match: low voltage, telecom, security, AV. Aggregate by project_id, vendor_id. Combine with finance.commitments for contracted work."
+        },
+        {
+          "id": "org-landscape-sub",
+          "name": "Landscaping Contractor",
+          "desc": "Specialty contractor performing landscape installation \u2014 planting, irrigation, hardscape, site amenities. One of the last trades on site. Div 32.",
+          "derivation": "core.project_vendors WHERE trade keywords match: landscaping, landscape, irrigation. Aggregate by project_id, vendor_id. Combine with finance.commitments for contracted work."
+        },
+        {
+          "id": "org-demo-sub",
+          "name": "Demolition Contractor",
+          "desc": "Specialty contractor performing selective or complete demolition, abatement, and hazardous material removal. Often first trade on renovation projects. Div 02.",
+          "derivation": "core.project_vendors WHERE trade keywords match: demolition, demo. Aggregate by project_id, vendor_id. Combine with finance.commitments for contracted work."
         },
         {
           "id": "org-self-performing",
           "name": "Self-Performing GC Division",
-          "desc": "GC's own workforce performing specific trade work — typically concrete, carpentry, general conditions, demolition. Same scope as subcontractor but with GC-employed labor. Costs tracked as direct costs rather than commitments. Active from Construction through Closeout."
+          "desc": "GC's own workforce performing specific trade work \u2014 typically concrete, carpentry, general conditions, demolition. Same scope as subcontractor but with GC-employed labor. Costs tracked as direct costs rather than commitments. Active from Construction through Closeout.",
+          "derivation": "core.project_vendors WHERE trade keywords match: self-performed by GC. Aggregate by project_id, vendor_id. Combine with finance.commitments for contracted work."
         }
       ]
     },
@@ -157,19 +292,19 @@
         {
           "id": "org-mat-supplier",
           "name": "Material Supplier",
-          "desc": "Company that sells construction materials — manufacturer or distributor. Supplies materials per purchase order, schedules deliveries, provides product documentation and warranties. Delivery reliability directly impacts schedule. Active from Procurement through Construction. Purchase order from GC or subcontractor.",
+          "desc": "Company that sells construction materials \u2014 manufacturer or distributor. Supplies materials per purchase order, schedules deliveries, provides product documentation and warranties. Delivery reliability directly impacts schedule. Active from Procurement through Construction. Purchase order from GC or subcontractor.",
           "procore": "core.vendors"
         },
         {
           "id": "org-fabricator",
           "name": "Fabricator",
-          "desc": "Company that manufactures custom construction components from approved shop drawings — steel fabricators, curtain wall fabricators, precast producers, custom casework shops. Fabrication per approved shop drawings with factory QC. Active from Procurement through Construction. Purchase order or subcontract (if fabricator also installs).",
+          "desc": "Company that manufactures custom construction components from approved shop drawings \u2014 steel fabricators, curtain wall fabricators, precast producers, custom casework shops. Fabrication per approved shop drawings with factory QC. Active from Procurement through Construction. Purchase order or subcontract (if fabricator also installs).",
           "procore": "core.vendors"
         },
         {
           "id": "org-equip-rental",
           "name": "Equipment Rental Company",
-          "desc": "Company providing construction equipment on a rental basis — tower cranes, excavators, aerial lifts, temporary fencing, generators. Equipment mobilization, maintenance, and operator support (if provided). Active during Construction. Rental agreement typically month-to-month or project duration.",
+          "desc": "Company providing construction equipment on a rental basis \u2014 tower cranes, excavators, aerial lifts, temporary fencing, generators. Equipment mobilization, maintenance, and operator support (if provided). Active during Construction. Rental agreement typically month-to-month or project duration.",
           "procore": "core.vendors"
         }
       ]
@@ -181,22 +316,26 @@
         {
           "id": "org-special-insp",
           "name": "Special Inspection Agency",
-          "desc": "Independent testing firm performing code-required special inspections — structural steel connections, concrete testing, fireproofing thickness, welding inspection. Code requires independence from contractor. Active from Construction through Commissioning. Direct contract with owner (required by code)."
+          "desc": "Independent testing firm performing code-required special inspections \u2014 structural steel connections, concrete testing, fireproofing thickness, welding inspection. Code requires independence from contractor. Active from Construction through Commissioning. Direct contract with owner (required by code).",
+          "derivation": "core.project_role_memberships WHERE role_name ~= 'Special Inspector'. Joined to core.users for individual; to core.project_vendors for firm."
         },
         {
           "id": "org-mat-testing-lab",
           "name": "Materials Testing Lab",
-          "desc": "Laboratory that tests construction materials for specification compliance — concrete cylinder testing (7-day and 28-day strength), soil compaction, steel tensile testing, asphalt testing, mortar testing. Active during Construction. Contract with owner, GC, or subcontractor depending on specification."
+          "desc": "Laboratory that tests construction materials for specification compliance \u2014 concrete cylinder testing (7-day and 28-day strength), soil compaction, steel tensile testing, asphalt testing, mortar testing. Active during Construction. Contract with owner, GC, or subcontractor depending on specification.",
+          "derivation": "core.project_role_memberships WHERE role_name ~= 'Materials Testing'. Joined to core.users for individual; to core.project_vendors for firm."
         },
         {
           "id": "org-cx-agent-cxa",
           "name": "Commissioning Agent (CxA)",
-          "desc": "Independent professional who verifies building systems perform as designed — commissioning plan development, pre-functional testing, functional performance testing, deficiency tracking, seasonal testing, final report. Not part of design or construction team. Active from Construction through Post-Construction (seasonal). Decision authority: Medium — identifies deficiencies and requires correction; does not authorize design changes or additional cost."
+          "desc": "Independent professional who verifies building systems perform as designed \u2014 commissioning plan development, pre-functional testing, functional performance testing, deficiency tracking, seasonal testing, final report. Not part of design or construction team. Active from Construction through Post-Construction (seasonal). Decision authority: Medium \u2014 identifies deficiencies and requires correction; does not authorize design changes or additional cost.",
+          "derivation": "core.project_role_memberships WHERE role_name ~= 'Commissioning Agent'. Joined to core.users for individual; to core.project_vendors for firm."
         },
         {
           "id": "org-enviro-monitorin",
           "name": "Environmental Monitoring Firm",
-          "desc": "Firm monitoring environmental compliance during construction — air quality monitoring, noise monitoring, stormwater sampling, hazmat oversight, regulatory reporting. Required for projects with contaminated soil, asbestos abatement, noise-sensitive neighbors, or stormwater permits. Active during Construction. Contract with owner or GC."
+          "desc": "Firm monitoring environmental compliance during construction \u2014 air quality monitoring, noise monitoring, stormwater sampling, hazmat oversight, regulatory reporting. Required for projects with contaminated soil, asbestos abatement, noise-sensitive neighbors, or stormwater permits. Active during Construction. Contract with owner or GC.",
+          "derivation": "core.project_role_memberships WHERE role_name ~= 'Environmental Monitoring'. Joined to core.users for individual; to core.project_vendors for firm."
         }
       ]
     },
@@ -207,32 +346,44 @@
         {
           "id": "org-building-departm",
           "name": "Building Department",
-          "desc": "Local government agency that reviews plans, issues building permits, performs progress inspections, and issues certificates of occupancy. Permit timeline varies from 2 weeks to 12+ months. Plan review comments generate design revisions. Failed field inspections require correction and re-inspection. Active during Preconstruction (permitting) and Construction through Closeout (CO)."
+          "desc": "Local government agency that reviews plans, issues building permits, performs progress inspections, and issues certificates of occupancy. Permit timeline varies from 2 weeks to 12+ months. Plan review comments generate design revisions. Failed field inspections require correction and re-inspection. Active during Preconstruction (permitting) and Construction through Closeout (CO).",
+          "derivation": "External regulatory entity. Typically referenced via permit records (project_management.permit if available) but not maintained as a Procore vendor.",
+          "concept_type": "external-entity"
         },
         {
           "id": "org-fire-marshal",
           "name": "Fire Marshal / Fire Department",
-          "desc": "Fire authority having jurisdiction (AHJ) for fire and life safety compliance — fire protection plan review, fire alarm plan review, field inspections, acceptance testing, hydrant flow testing. Fire marshal sign-off is required for CO. Active from Preconstruction through Commissioning."
+          "desc": "Fire authority having jurisdiction (AHJ) for fire and life safety compliance \u2014 fire protection plan review, fire alarm plan review, field inspections, acceptance testing, hydrant flow testing. Fire marshal sign-off is required for CO. Active from Preconstruction through Commissioning.",
+          "derivation": "External regulatory entity. Referenced via permits and inspections; not stored as Procore organization.",
+          "concept_type": "external-entity"
         },
         {
           "id": "org-health-departmen",
           "name": "Health Department",
-          "desc": "Government agency regulating health-related construction — healthcare facilities, food service, pools, labs, childcare. Plan review for health-related spaces, field inspections, operational permits. Active from Preconstruction through Closeout."
+          "desc": "Government agency regulating health-related construction \u2014 healthcare facilities, food service, pools, labs, childcare. Plan review for health-related spaces, field inspections, operational permits. Active from Preconstruction through Closeout.",
+          "derivation": "External regulatory entity (city/county health department). Not stored as a Procore organization. Referenced indirectly via permits, inspections, and food-service / healthcare project requirements.",
+          "concept_type": "external-entity"
         },
         {
           "id": "org-enviro-epa",
           "name": "Environmental / EPA Agency",
-          "desc": "Federal, state, or local environmental regulatory authority — environmental impact review, stormwater permit oversight, air quality compliance, hazmat oversight. NEPA review on federal projects can add years. Active from Preconstruction through Construction."
+          "desc": "Federal, state, or local environmental regulatory authority \u2014 environmental impact review, stormwater permit oversight, air quality compliance, hazmat oversight. NEPA review on federal projects can add years. Active from Preconstruction through Construction.",
+          "derivation": "External regulatory / federal agency. Not in Procore data.",
+          "concept_type": "external-entity"
         },
         {
           "id": "org-osha-safety",
           "name": "OSHA / Safety Authority",
-          "desc": "Federal or state occupational safety and health authority — workplace safety regulation, site inspections (scheduled and unscheduled), citation issuance, fatality investigation. Focus areas: fall protection, scaffolding, excavation, crane operations, struck-by hazards. Active during Construction."
+          "desc": "Federal or state occupational safety and health authority \u2014 workplace safety regulation, site inspections (scheduled and unscheduled), citation issuance, fatality investigation. Focus areas: fall protection, scaffolding, excavation, crane operations, struck-by hazards. Active during Construction.",
+          "derivation": "External regulatory authority. Not stored as Procore organization.",
+          "concept_type": "external-entity"
         },
         {
           "id": "org-zoning-planning",
           "name": "Zoning / Planning Authority",
-          "desc": "Local government agency controlling land use, density, setbacks, and project approvals — zoning compliance review, variance review, site plan approval, community review facilitation. Zoning approval is a prerequisite for building permit. Active during Preconstruction."
+          "desc": "Local government agency controlling land use, density, setbacks, and project approvals \u2014 zoning compliance review, variance review, site plan approval, community review facilitation. Zoning approval is a prerequisite for building permit. Active during Preconstruction.",
+          "derivation": "External regulatory entity. Not in Procore data.",
+          "concept_type": "external-entity"
         }
       ]
     },
@@ -243,17 +394,23 @@
         {
           "id": "org-const-lender",
           "name": "Construction Lender",
-          "desc": "Bank or financial institution providing construction financing — construction loan funding, draw review, progress inspection (lender's inspector), compliance monitoring. Lender draws tied to percent complete — monthly pay applications scrutinized. Active across all phases (funding drives everything). Loan agreement with owner/developer."
+          "desc": "Bank or financial institution providing construction financing \u2014 construction loan funding, draw review, progress inspection (lender's inspector), compliance monitoring. Lender draws tied to percent complete \u2014 monthly pay applications scrutinized. Active across all phases (funding drives everything). Loan agreement with owner/developer.",
+          "derivation": "External financial entity. Typically not in Procore project data unless tracked as a contact.",
+          "concept_type": "external-entity"
         },
         {
           "id": "org-surety-bonding",
           "name": "Surety / Bonding Company",
-          "desc": "Insurance company issuing performance and payment bonds guaranteeing contractor's obligations. Bonds protect owner (performance bond) and subcontractors (payment bond). Public projects require bonds by law (Miller Act federal, Little Miller Act state). Active from Procurement through Closeout. Bond agreement with GC."
+          "desc": "Insurance company issuing performance and payment bonds guaranteeing contractor's obligations. Bonds protect owner (performance bond) and subcontractors (payment bond). Public projects require bonds by law (Miller Act federal, Little Miller Act state). Active from Procurement through Closeout. Bond agreement with GC.",
+          "derivation": "External \u2014 referenced on cp-perf-bond and cp-payment-bond. May appear in vendor list as a bonding company.",
+          "concept_type": "external-entity"
         },
         {
           "id": "org-insurance-broker",
           "name": "Insurance Broker / Carrier",
-          "desc": "Companies providing construction insurance — general liability, workers' comp, builders risk, professional liability, umbrella, OCIP/CCIP wrap-up programs. Certificate of insurance collection is a major administrative task. Active across all phases. Insurance policies held by each project party."
+          "desc": "Companies providing construction insurance \u2014 general liability, workers' comp, builders risk, professional liability, umbrella, OCIP/CCIP wrap-up programs. Certificate of insurance collection is a major administrative task. Active across all phases. Insurance policies held by each project party.",
+          "derivation": "External \u2014 referenced on cp-insurance-cert. May appear as vendor.",
+          "concept_type": "external-entity"
         }
       ]
     },
@@ -264,22 +421,30 @@
         {
           "id": "org-electric-utility",
           "name": "Electric Utility",
-          "desc": "Local electric utility company providing permanent electrical service — service design review, transformer supply/placement, metering, permanent connection, energization. Utility coordination starts early — transformer location, service size, and meter configuration affect design. Active during Preconstruction (service design) and Construction (connection). Permanent power energization is a major milestone."
+          "desc": "Local electric utility company providing permanent electrical service \u2014 service design review, transformer supply/placement, metering, permanent connection, energization. Utility coordination starts early \u2014 transformer location, service size, and meter configuration affect design. Active during Preconstruction (service design) and Construction (connection). Permanent power energization is a major milestone.",
+          "derivation": "External utility provider. May appear in vendor list for site-electrical scope.",
+          "concept_type": "external-entity"
         },
         {
           "id": "org-gas-utility",
           "name": "Gas Utility",
-          "desc": "Local gas utility providing natural gas service — service design review, gas main extension (if required), meter installation, service connection. Gas service for HVAC, domestic hot water, commercial kitchen. Active during Preconstruction and Construction. Service connection typically later in construction."
+          "desc": "Local gas utility providing natural gas service \u2014 service design review, gas main extension (if required), meter installation, service connection. Gas service for HVAC, domestic hot water, commercial kitchen. Active during Preconstruction and Construction. Service connection typically later in construction.",
+          "derivation": "External utility provider (natural gas distribution). Not native to Procore data. May appear as a vendor on commitments for gas service connections or utility coordination.",
+          "concept_type": "external-entity"
         },
         {
           "id": "org-water-sewer",
           "name": "Water / Sewer Authority",
-          "desc": "Municipal authority providing domestic water and sanitary sewer service — service size determination, tap/connection permits, meter installation, water quality testing. Water service affects fire protection (hydrant flow, fire pump supply). Active during Preconstruction and Construction. Sanitary sewer capacity can limit project density."
+          "desc": "Municipal authority providing domestic water and sanitary sewer service \u2014 service size determination, tap/connection permits, meter installation, water quality testing. Water service affects fire protection (hydrant flow, fire pump supply). Active during Preconstruction and Construction. Sanitary sewer capacity can limit project density.",
+          "derivation": "External utility / municipal authority.",
+          "concept_type": "external-entity"
         },
         {
           "id": "org-telecom-internet",
           "name": "Telecom / Internet Provider",
-          "desc": "Companies providing data, voice, and internet service — service design, conduit and fiber routing, equipment room requirements, service activation. Multiple carriers may serve the building. Active during Preconstruction and Construction. Service agreement may require conduit and room provision by contractor."
+          "desc": "Companies providing data, voice, and internet service \u2014 service design, conduit and fiber routing, equipment room requirements, service activation. Multiple carriers may serve the building. Active during Preconstruction and Construction. Service agreement may require conduit and room provision by contractor.",
+          "derivation": "External telecom / internet service provider. Not native to Procore data. May appear as a vendor for site telecom, fiber drops, or low-voltage coordination.",
+          "concept_type": "external-entity"
         }
       ]
     },
@@ -290,32 +455,38 @@
         {
           "id": "org-sub-count-per",
           "name": "Subcontractor Count per Project",
-          "desc": "Total number of distinct subcontractors and suppliers engaged on a project — measured from awarded subcontracts and purchase orders. Indicates project complexity and coordination burden."
+          "desc": "Total number of distinct subcontractors and suppliers engaged on a project \u2014 measured from awarded subcontracts and purchase orders. Indicates project complexity and coordination burden.",
+          "concept_type": "derived-metric"
         },
         {
           "id": "org-trade-coverage",
           "name": "Trade Coverage Rate",
-          "desc": "Percentage of project scope covered by contracted subcontractors vs. remaining unawarded scope — awarded value / estimated total value × 100. Tracks buyout progress during procurement."
+          "desc": "Percentage of project scope covered by contracted subcontractors vs. remaining unawarded scope \u2014 awarded value / estimated total value \u00d7 100. Tracks buyout progress during procurement.",
+          "concept_type": "derived-metric"
         },
         {
           "id": "org-vendor-insurance",
           "name": "Vendor Insurance Compliance Rate",
-          "desc": "Percentage of project vendors with current, compliant insurance certificates on file — compliant vendors / total vendors × 100. Tracks risk exposure from uninsured or underinsured trades."
+          "desc": "Percentage of project vendors with current, compliant insurance certificates on file \u2014 compliant vendors / total vendors \u00d7 100. Tracks risk exposure from uninsured or underinsured trades.",
+          "concept_type": "derived-metric"
         },
         {
           "id": "org-sub-safety",
           "name": "Subcontractor Safety Incident Rate",
-          "desc": "OSHA recordable incident rate per subcontractor — (number of recordable incidents × 200,000) / hours worked. Enables comparison of safety performance across trades and companies."
+          "desc": "OSHA recordable incident rate per subcontractor \u2014 (number of recordable incidents \u00d7 200,000) / hours worked. Enables comparison of safety performance across trades and companies.",
+          "concept_type": "derived-metric"
         },
         {
           "id": "org-design-team",
           "name": "Design Team Responsiveness",
-          "desc": "Average days for design team members to respond to RFIs and review submittals — measured from RFI creation to response and submittal submission to review completion. Indicates design team engagement quality."
+          "desc": "Average days for design team members to respond to RFIs and review submittals \u2014 measured from RFI creation to response and submittal submission to review completion. Indicates design team engagement quality.",
+          "concept_type": "derived-metric"
         },
         {
           "id": "org-chg-order",
           "name": "Change Order Dispute Rate by Trade",
-          "desc": "Percentage of change orders disputed or rejected by trade — disputed COs / total COs per trade × 100. Identifies which trade relationships generate the most commercial friction."
+          "desc": "Percentage of change orders disputed or rejected by trade \u2014 disputed COs / total COs per trade \u00d7 100. Identifies which trade relationships generate the most commercial friction.",
+          "concept_type": "derived-metric"
         }
       ]
     },
@@ -326,8 +497,55 @@
         {
           "id": "org-trade-quality",
           "name": "Trade Partner Quality Score",
-          "procore": "core.project_vendors",
           "desc": "Composite quality score for subcontractors derived from multiple quality and safety signals tied to project_vendors. Inputs: observation deficiency rate (observations assigned to vendor / total vendor scope), inspection deficiency rate (deficient items on vendor work / total inspected items), punch item density (punch items attributed to vendor / vendor contract value), safety observation frequency (safety findings assigned to vendor / vendor labor hours). Each input is normalized to a 0-100 scale using percentile ranking within the vendor trade classification. Combined score enables trade partner comparison within and across projects for prequalification and performance reviews."
+        }
+      ]
+    },
+    {
+      "name": "Identity & Access",
+      "color": "#5f9bd5",
+      "nodes": [
+        {
+          "id": "org-user",
+          "name": "User",
+          "procore": "core.users",
+          "desc": "A person with a Procore account \u2014 the foundational identity. Every action (RFI raised, observation logged, CO approved) has a user as actor. Without this concept, agents can't reason about 'who did what'. Key properties: name, email, employee status, company affiliation."
+        },
+        {
+          "id": "org-address",
+          "name": "Address",
+          "procore": "core.users",
+          "desc": "A postal or geographic address. IFC: IfcAddress / IfcPostalAddress. Reusable across users, vendors, projects, sites."
+        },
+        {
+          "id": "org-project-user",
+          "name": "Project User",
+          "procore": "core.project_users",
+          "desc": "A user's membership and permission scope on a specific project. Same user can have different permissions on different projects. Attributes: permission template, role, employee status. The atomic unit for 'who has access to what' on a project."
+        },
+        {
+          "id": "org-project-role-membership",
+          "name": "Project Role Membership",
+          "procore": "core.project_role_memberships",
+          "desc": "Assignment of a user to a project-level role (Architect, Engineer, Project Manager, Superintendent, etc.). The `group` field clusters roles into design_team, construction_team, owner_team. Source of architect/designer attribution for design change analysis. COLUMN NAME RULES: lives in core schema (NOT project_management \u2014 common wrong guess). Has NO project_vendor_id column. To resolve a role membership to a firm name: join via user_id to core.users and read users.vendor_name (denormalized firm name). Or use prm.contact_name for the individual person. The `group` field is a SQL reserved word \u2014 must use backticks in Databricks queries."
+        },
+        {
+          "id": "org-project-vendor",
+          "name": "Project Vendor",
+          "procore": "core.project_vendors",
+          "desc": "A vendor (subcontractor, supplier, design firm) registered on a specific project. Carries the vendor's per-project name, contact, and trade. Drives vendor-attribution on commitments, observations, punch items."
+        }
+      ]
+    },
+    {
+      "name": "Project Structure",
+      "color": "#42a5f5",
+      "nodes": [
+        {
+          "id": "org-sub-job",
+          "name": "Sub Job",
+          "procore": "core.sub_jobs",
+          "desc": "A project-within-a-project \u2014 common on industrial, healthcare, and large commercial work. Sub jobs have their own budgets, schedules, cost codes, but roll up to the parent project. Without this, multi-building or phased projects can't be reasoned about correctly."
         }
       ]
     }

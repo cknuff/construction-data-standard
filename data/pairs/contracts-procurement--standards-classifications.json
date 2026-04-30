@@ -8,16 +8,6 @@
       "SCOPED BY"
     ],
     [
-      "cp-scope-work",
-      "sc-masterformat",
-      "ORGANIZED BY"
-    ],
-    [
-      "cp-bid-package",
-      "sc-masterformat",
-      "ORGANIZED BY"
-    ],
-    [
       "cp-bid-package",
       "sc-std-cost-code",
       "CODED BY"
@@ -78,16 +68,6 @@
       "ENFORCED PER"
     ],
     [
-      "cp-req-qualificatio",
-      "sc-osha-recordkeepi",
-      "VERIFIED AGAINST"
-    ],
-    [
-      "cp-prequalification",
-      "sc-osha-hazard",
-      "SCREENED AGAINST"
-    ],
-    [
       "cp-insurance-cert",
       "sc-nfpa-stds",
       "COMPLIES WITH"
@@ -103,11 +83,6 @@
       "SCOPED BY"
     ],
     [
-      "cp-warranty",
-      "sc-uniformat",
-      "TAGGED TO"
-    ],
-    [
       "cp-closeout-doc",
       "sc-leed-certificati",
       "COMPLIES WITH"
@@ -121,11 +96,6 @@
       "cp-prevailing-wage",
       "sc-std-cost-code",
       "CLASSIFIED UNDER"
-    ],
-    [
-      "cp-diversity-dbe",
-      "sc-masterformat",
-      "SEGMENTED BY"
     ],
     [
       "cp-bid-evaluation",
@@ -151,6 +121,21 @@
       "cp-insurance-comp",
       "sc-safety-class",
       "BENCHMARKED TO"
+    ],
+    [
+      "sc-cii-modularization",
+      "cp-ct-stipulated-sum",
+      "INFLUENCES_TYPE"
+    ],
+    [
+      "cp-pm-ipd",
+      "sc-cii-front-end-planning",
+      "EMPHASIZES"
+    ],
+    [
+      "cp-pm-cmar",
+      "sc-cii-constructability",
+      "EMPHASIZES"
     ]
   ],
   "verbGlossary": {

@@ -3,61 +3,6 @@
   "target": "standards-classifications",
   "edges": [
     [
-      "qsr-safety-observati",
-      "sc-osha-hazard",
-      "CLASSIFIED UNDER"
-    ],
-    [
-      "qsr-safety-violation",
-      "sc-osha-hazard",
-      "CITED FOR"
-    ],
-    [
-      "qsr-hazard-recurrenc",
-      "sc-osha-hazard",
-      "RATED BY"
-    ],
-    [
-      "qsr-action-plan",
-      "sc-osha-hazard",
-      "REMEDIATES UNDER"
-    ],
-    [
-      "qsr-corrective-actio",
-      "sc-osha-hazard",
-      "REMEDIATES UNDER"
-    ],
-    [
-      "qsr-observation-reso",
-      "sc-osha-hazard",
-      "SEGMENTED BY"
-    ],
-    [
-      "qsr-incident-record",
-      "sc-osha-recordkeepi",
-      "LOGGED PER"
-    ],
-    [
-      "qsr-incident-witness",
-      "sc-osha-recordkeepi",
-      "DOCUMENTED PER"
-    ],
-    [
-      "qsr-total-recordable",
-      "sc-osha-recordkeepi",
-      "BENCHMARKED TO"
-    ],
-    [
-      "qsr-dart-rate",
-      "sc-osha-recordkeepi",
-      "BENCHMARKED TO"
-    ],
-    [
-      "qsr-near-miss-ratio",
-      "sc-osha-recordkeepi",
-      "BENCHMARKED TO"
-    ],
-    [
       "qsr-incident",
       "sc-ansi-injury",
       "CODED BY"
@@ -138,21 +83,6 @@
       "SCOPED BY"
     ],
     [
-      "qsr-punch-item-issue",
-      "sc-masterformat",
-      "CLASSIFIED UNDER"
-    ],
-    [
-      "qsr-insp",
-      "sc-masterformat",
-      "ORGANIZED BY"
-    ],
-    [
-      "qsr-observation-dens",
-      "sc-masterformat",
-      "SEGMENTED BY"
-    ],
-    [
       "qsr-punch-item",
       "sc-std-cost-code",
       "CODED BY"
@@ -176,16 +106,6 @@
       "qsr-rework-cost",
       "sc-budget-code",
       "ALLOCATED AGAINST"
-    ],
-    [
-      "qsr-mat-test-report",
-      "sc-uniformat",
-      "TAGGED TO"
-    ],
-    [
-      "qsr-coord-issue",
-      "sc-omniclass",
-      "CLASSIFIED UNDER"
     ],
     [
       "qsr-coord-issue",
@@ -251,6 +171,146 @@
       "qsr-observation-dens",
       "sc-cost-code",
       "BENCHMARKED TO"
+    ],
+    [
+      "qsr-h-falls",
+      "sc-osha-subpart-m",
+      "GOVERNED_BY"
+    ],
+    [
+      "qsr-h-falls",
+      "sc-osha-subpart-x",
+      "GOVERNED_BY"
+    ],
+    [
+      "qsr-h-struck-by",
+      "sc-osha-subpart-h",
+      "GOVERNED_BY"
+    ],
+    [
+      "qsr-h-struck-by",
+      "sc-osha-subpart-n",
+      "GOVERNED_BY"
+    ],
+    [
+      "qsr-h-struck-by",
+      "sc-osha-subpart-o",
+      "GOVERNED_BY"
+    ],
+    [
+      "qsr-h-caught",
+      "sc-osha-subpart-p",
+      "GOVERNED_BY"
+    ],
+    [
+      "qsr-h-caught",
+      "sc-osha-subpart-q",
+      "GOVERNED_BY"
+    ],
+    [
+      "qsr-h-caught",
+      "sc-osha-subpart-w",
+      "GOVERNED_BY"
+    ],
+    [
+      "qsr-h-electrocution",
+      "sc-osha-subpart-k",
+      "GOVERNED_BY"
+    ],
+    [
+      "qsr-h-electrocution",
+      "sc-osha-subpart-v",
+      "GOVERNED_BY"
+    ],
+    [
+      "qsr-h-fall-prot",
+      "sc-osha-subpart-m",
+      "GOVERNED_BY"
+    ],
+    [
+      "qsr-h-scaffolding",
+      "sc-osha-subpart-l",
+      "GOVERNED_BY"
+    ],
+    [
+      "qsr-h-excavation",
+      "sc-osha-subpart-p",
+      "GOVERNED_BY"
+    ],
+    [
+      "qsr-h-electrical",
+      "sc-osha-subpart-k",
+      "GOVERNED_BY"
+    ],
+    [
+      "qsr-h-hot-work",
+      "sc-osha-subpart-j",
+      "GOVERNED_BY"
+    ],
+    [
+      "qsr-h-crane-rigging",
+      "sc-osha-subpart-n",
+      "GOVERNED_BY"
+    ],
+    [
+      "qsr-h-mat-handling",
+      "sc-osha-subpart-h",
+      "GOVERNED_BY"
+    ],
+    [
+      "qsr-h-ppe",
+      "sc-osha-subpart-e",
+      "GOVERNED_BY"
+    ],
+    [
+      "qsr-h-fire",
+      "sc-osha-subpart-f",
+      "GOVERNED_BY"
+    ],
+    [
+      "qsr-h-hazmat",
+      "sc-osha-subpart-z",
+      "GOVERNED_BY"
+    ],
+    [
+      "qsr-h-environmental",
+      "sc-osha-subpart-d",
+      "GOVERNED_BY"
+    ],
+    [
+      "qsr-h-tool-equip",
+      "sc-osha-subpart-i",
+      "GOVERNED_BY"
+    ],
+    [
+      "qsr-h-vehicle",
+      "sc-osha-subpart-o",
+      "GOVERNED_BY"
+    ],
+    [
+      "qsr-h-vehicle",
+      "sc-osha-subpart-w",
+      "GOVERNED_BY"
+    ],
+    [
+      "sc-cii-constructability",
+      "qsr-constr-review",
+      "INSTANTIATES"
+    ],
+    [
+      "sc-cii-zat",
+      "qsr-h-fall-prot",
+      "MITIGATES"
+    ],
+    [
+      "sc-cii-zat",
+      "qsr-h-electrical",
+      "MITIGATES"
+    ],
+    [
+      "sc-cii-zat",
+      "qsr-total-recordable",
+      "REDUCES"
     ]
   ],
   "verbGlossary": {

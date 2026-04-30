@@ -4,16 +4,6 @@
   "edges": [
     [
       "ph-program",
-      "sc-uniformat",
-      "SCOPED BY"
-    ],
-    [
-      "ph-program",
-      "sc-omniclass",
-      "CATEGORIZED BY"
-    ],
-    [
-      "ph-program",
       "sc-dlvy-method",
       "STRUCTURED BY"
     ],
@@ -39,18 +29,8 @@
     ],
     [
       "ph-estimating",
-      "sc-masterformat",
-      "QUANTIFIED BY"
-    ],
-    [
-      "ph-estimating",
       "sc-std-cost-code",
       "CODED BY"
-    ],
-    [
-      "ph-estimating",
-      "sc-uniformat",
-      "PRICED BY"
     ],
     [
       "ph-estimating",
@@ -79,11 +59,6 @@
     ],
     [
       "ph-bidding",
-      "sc-masterformat",
-      "PACKAGED BY"
-    ],
-    [
-      "ph-bidding",
       "sc-aia-contract",
       "CONTRACTED PER"
     ],
@@ -96,26 +71,6 @@
       "ph-fabrication",
       "sc-specification-se",
       "FABRICATED PER"
-    ],
-    [
-      "ph-delivery",
-      "sc-masterformat",
-      "TRACKED BY"
-    ],
-    [
-      "ph-site-setup",
-      "sc-osha-hazard",
-      "SAFEGUARDED PER"
-    ],
-    [
-      "ph-safety-orient",
-      "sc-osha-hazard",
-      "ADDRESSES"
-    ],
-    [
-      "ph-safety-orient",
-      "sc-osha-recordkeepi",
-      "DOCUMENTED PER"
     ],
     [
       "ph-safety-orient",
@@ -141,11 +96,6 @@
       "ph-curtainwall",
       "sc-energy-code-stds",
       "TESTED PER"
-    ],
-    [
-      "ph-abv-ceil",
-      "sc-masterformat",
-      "COORDINATED BY"
     ],
     [
       "ph-fp-ri",
@@ -244,13 +194,23 @@
     ],
     [
       "ph-transition",
-      "sc-omniclass",
-      "CATALOGED BY"
-    ],
-    [
-      "ph-transition",
       "sc-certification-ad",
       "BENCHMARKED TO"
+    ],
+    [
+      "sc-cii-pdri-bldg",
+      "ph-fel-3",
+      "SCORED_AT"
+    ],
+    [
+      "sc-cii-front-end-planning",
+      "ph-precon-plan",
+      "GOVERNS"
+    ],
+    [
+      "sc-cii-front-end-planning",
+      "ph-fel-1",
+      "GOVERNS"
     ]
   ],
   "verbGlossary": {

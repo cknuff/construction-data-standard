@@ -271,6 +271,11 @@
       "fi-chg-event-ce",
       "sch-time-extension",
       "JUSTIFIES"
+    ],
+    [
+      "sc-activity",
+      "fi-cost-code",
+      "CHARGED_TO"
     ]
   ],
   "verbGlossary": {

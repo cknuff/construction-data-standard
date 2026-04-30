@@ -4,21 +4,6 @@
   "edges": [
     [
       "sch-activity-codes",
-      "sc-masterformat",
-      "ORGANIZED BY"
-    ],
-    [
-      "sch-detail-activity",
-      "sc-masterformat",
-      "CLASSIFIED UNDER"
-    ],
-    [
-      "sch-summary-activity",
-      "sc-uniformat",
-      "MAPPED TO"
-    ],
-    [
-      "sch-activity-codes",
       "sc-std-cost-code",
       "CODED BY"
     ],
@@ -68,19 +53,9 @@
       "SEQUENCED FOR"
     ],
     [
-      "sch-detail-activity",
-      "sc-omniclass",
-      "TAGGED TO"
-    ],
-    [
       "sch-4d-5d-bim",
       "sc-ifc-class",
       "LINKED TO"
-    ],
-    [
-      "sch-4d-5d-bim",
-      "sc-uniformat",
-      "MODELED AGAINST"
     ],
     [
       "sch-delay-class",

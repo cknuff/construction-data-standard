@@ -3,46 +3,6 @@
   "target": "standards-classifications",
   "edges": [
     [
-      "sc-masterformat",
-      "sc-uniformat",
-      "COMPLEMENTS"
-    ],
-    [
-      "sc-uniformat",
-      "sc-masterformat",
-      "CROSS-MAPS TO"
-    ],
-    [
-      "sc-omniclass",
-      "sc-masterformat",
-      "INCORPORATES"
-    ],
-    [
-      "sc-omniclass",
-      "sc-uniformat",
-      "INCORPORATES"
-    ],
-    [
-      "sc-ifc-class",
-      "sc-omniclass",
-      "ALIGNS WITH"
-    ],
-    [
-      "sc-ifc-class",
-      "sc-uniformat",
-      "MAPS ENTITIES TO"
-    ],
-    [
-      "sc-specification-se",
-      "sc-masterformat",
-      "NUMBERED PER"
-    ],
-    [
-      "sc-std-cost-code",
-      "sc-masterformat",
-      "DERIVED FROM"
-    ],
-    [
       "sc-wbs-code",
       "sc-std-cost-code",
       "SEGMENTS"
@@ -51,26 +11,6 @@
       "sc-budget-code",
       "sc-std-cost-code",
       "ROLLS UP"
-    ],
-    [
-      "sc-budget-code",
-      "sc-uniformat",
-      "ALIGNS WITH"
-    ],
-    [
-      "sc-osha-hazard",
-      "sc-osha-recordkeepi",
-      "CLASSIFIES INCIDENTS FOR"
-    ],
-    [
-      "sc-ansi-injury",
-      "sc-osha-recordkeepi",
-      "DETAILS INJURIES FOR"
-    ],
-    [
-      "sc-ansi-injury",
-      "sc-osha-hazard",
-      "REFINES"
     ],
     [
       "sc-nfpa-stds",
@@ -86,11 +26,6 @@
       "sc-energy-code-stds",
       "sc-international-bu",
       "REFERENCED BY"
-    ],
-    [
-      "sc-international-bu",
-      "sc-masterformat",
-      "DRIVES SCOPE IN"
     ],
     [
       "sc-leed-certificati",
@@ -148,11 +83,6 @@
       "DICTATES CONTENT OF"
     ],
     [
-      "sc-masterformat-map",
-      "sc-masterformat",
-      "MEASURES ADOPTION OF"
-    ],
-    [
       "sc-cost-code",
       "sc-std-cost-code",
       "MEASURES ADOPTION OF"
@@ -160,11 +90,6 @@
     [
       "sc-specification-se-2",
       "sc-specification-se",
-      "MEASURES ADOPTION OF"
-    ],
-    [
-      "sc-safety-class",
-      "sc-osha-hazard",
       "MEASURES ADOPTION OF"
     ],
     [
@@ -186,16 +111,6 @@
       "sc-well-building",
       "sc-energy-code-stds",
       "BUILDS UPON"
-    ],
-    [
-      "sc-nfpa-stds",
-      "sc-osha-hazard",
-      "CODIFIES PROTECTIONS FOR"
-    ],
-    [
-      "sc-aia-contract",
-      "sc-masterformat",
-      "REFERENCES"
     ]
   ],
   "verbGlossary": {

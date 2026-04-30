@@ -186,6 +186,21 @@
       "cp-sub-retention",
       "rk-labor-risk",
       "SIGNALS"
+    ],
+    [
+      "cp-ct-cost-plus-fee",
+      "rk-financial-risk",
+      "HAS_RISK"
+    ],
+    [
+      "cp-ct-tm",
+      "rk-financial-risk",
+      "HAS_RISK"
+    ],
+    [
+      "cp-ct-stipulated-sum",
+      "rk-financial-risk",
+      "HAS_RISK"
     ]
   ],
   "verbGlossary": {

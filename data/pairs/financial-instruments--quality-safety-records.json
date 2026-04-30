@@ -371,6 +371,11 @@
       "fi-chg-event-ce",
       "qsr-rework-cost",
       "CONTRIBUTES TO"
+    ],
+    [
+      "qsr-constr-review",
+      "fi-budget-line-item",
+      "REDUCES_VARIANCE_OF"
     ]
   ],
   "verbGlossary": {

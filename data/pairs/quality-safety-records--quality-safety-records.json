@@ -281,6 +281,131 @@
       "qsr-corrective-actio",
       "qsr-incident",
       "FAILS TO PREVENT"
+    ],
+    [
+      "qsr-h-falls",
+      "qsr-h-fall-prot",
+      "ENCOMPASSES"
+    ],
+    [
+      "qsr-h-struck-by",
+      "qsr-h-mat-handling",
+      "ENCOMPASSES"
+    ],
+    [
+      "qsr-h-struck-by",
+      "qsr-h-crane-rigging",
+      "ENCOMPASSES"
+    ],
+    [
+      "qsr-h-caught",
+      "qsr-h-excavation",
+      "ENCOMPASSES"
+    ],
+    [
+      "qsr-h-electrocution",
+      "qsr-h-electrical",
+      "ENCOMPASSES"
+    ],
+    [
+      "qsr-safety-observati",
+      "qsr-h-fall-prot",
+      "REPORTS"
+    ],
+    [
+      "qsr-safety-observati",
+      "qsr-h-scaffolding",
+      "REPORTS"
+    ],
+    [
+      "qsr-safety-observati",
+      "qsr-h-excavation",
+      "REPORTS"
+    ],
+    [
+      "qsr-safety-observati",
+      "qsr-h-electrical",
+      "REPORTS"
+    ],
+    [
+      "qsr-safety-observati",
+      "qsr-h-ppe",
+      "REPORTS"
+    ],
+    [
+      "qsr-recurring-hazard",
+      "qsr-h-fall-prot",
+      "INSTANCE_OF"
+    ],
+    [
+      "qsr-recurring-hazard",
+      "qsr-h-scaffolding",
+      "INSTANCE_OF"
+    ],
+    [
+      "qsr-recurring-hazard",
+      "qsr-h-electrical",
+      "INSTANCE_OF"
+    ],
+    [
+      "qsr-incident",
+      "qsr-inj-near-miss",
+      "CLASSIFIED_AS"
+    ],
+    [
+      "qsr-incident",
+      "qsr-inj-first-aid",
+      "CLASSIFIED_AS"
+    ],
+    [
+      "qsr-incident",
+      "qsr-inj-recordable",
+      "CLASSIFIED_AS"
+    ],
+    [
+      "qsr-incident",
+      "qsr-inj-medical",
+      "CLASSIFIED_AS"
+    ],
+    [
+      "qsr-incident",
+      "qsr-inj-restricted",
+      "CLASSIFIED_AS"
+    ],
+    [
+      "qsr-incident",
+      "qsr-inj-lost-time",
+      "CLASSIFIED_AS"
+    ],
+    [
+      "qsr-incident",
+      "qsr-inj-fatality",
+      "CLASSIFIED_AS"
+    ],
+    [
+      "qsr-total-recordable",
+      "qsr-inj-recordable",
+      "COUNTS"
+    ],
+    [
+      "qsr-dart-rate",
+      "qsr-inj-restricted",
+      "COUNTS"
+    ],
+    [
+      "qsr-dart-rate",
+      "qsr-inj-lost-time",
+      "COUNTS"
+    ],
+    [
+      "qsr-incident-rca",
+      "qsr-incident",
+      "ANALYZES"
+    ],
+    [
+      "qsr-incident-rca",
+      "qsr-corrective-actio",
+      "DRIVES"
     ]
   ],
   "verbGlossary": {
@@ -292,7 +417,7 @@
     "PROMPTS SCHEDULING OF": "{source} causes a new {target} or recurring check to be scheduled to monitor the condition",
     "BECOMES": "{target} documenting active-construction deficiency converts to a punch item if unresolved by closeout",
     "PROMPTS": "{source} causes a formal {target} to be initiated to verify the extent or resolution of the issue",
-    "CONTAINS": "{source} is composed of individual {target} checklist lines — each item is evaluated independently for conformance",
+    "CONTAINS": "{source} is composed of individual {target} checklist lines \u2014 each item is evaluated independently for conformance",
     "GENERATES": "{source} or test produces findings documented as observations, punch items, or non-conformances",
     "RESULTS IN": "{source}record as its direct output or consequence",
     "CONVERTS TO": "{source}{target} item is rewritten as a punch item for tracking through the closeout resolution workflow",

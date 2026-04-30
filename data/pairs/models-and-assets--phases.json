@@ -1,0 +1,328 @@
+{
+  "source": "models-and-assets",
+  "target": "phases",
+  "edges": [
+    [
+      "bim-3d-building-info",
+      "ph-design",
+      "DEVELOPED DURING"
+    ],
+    [
+      "bim-3d-building-info",
+      "ph-permit",
+      "SUBMITTED FOR"
+    ],
+    [
+      "bim-3d-building-info",
+      "ph-estimating",
+      "SUPPORTS"
+    ],
+    [
+      "bim-federated-model",
+      "ph-abv-ceil",
+      "COORDINATES"
+    ],
+    [
+      "bim-federated-model",
+      "ph-hvac-dist",
+      "COORDINATES"
+    ],
+    [
+      "bim-federated-model",
+      "ph-fp-ri",
+      "COORDINATES"
+    ],
+    [
+      "bim-4d-model",
+      "ph-steel",
+      "SEQUENCES"
+    ],
+    [
+      "bim-4d-model",
+      "ph-curtainwall",
+      "SEQUENCES"
+    ],
+    [
+      "bim-4d-model",
+      "ph-precon-plan",
+      "SIMULATES"
+    ],
+    [
+      "bim-5d-model-cost",
+      "ph-estimating",
+      "QUANTIFIES"
+    ],
+    [
+      "bim-5d-model-cost",
+      "ph-bidding",
+      "QUANTIFIES"
+    ],
+    [
+      "bim-as-built-model",
+      "ph-asbuilt",
+      "DELIVERED DURING"
+    ],
+    [
+      "bim-as-built-model",
+      "ph-punch",
+      "REFERENCED DURING"
+    ],
+    [
+      "bim-as-built-model",
+      "ph-transition",
+      "HANDED OVER DURING"
+    ],
+    [
+      "bim-model-element",
+      "ph-submittals",
+      "DETAILED FOR"
+    ],
+    [
+      "bim-model-element",
+      "ph-fabrication",
+      "EXTRACTED FOR"
+    ],
+    [
+      "bim-level-developmen",
+      "ph-design",
+      "PROGRESSES THROUGH"
+    ],
+    [
+      "bim-level-developmen",
+      "ph-submittals",
+      "REFINED DURING"
+    ],
+    [
+      "bim-level-developmen",
+      "ph-asbuilt",
+      "FINALIZED DURING"
+    ],
+    [
+      "bim-quantity-takeoff",
+      "ph-estimating",
+      "FEEDS"
+    ],
+    [
+      "bim-quantity-takeoff",
+      "ph-delivery",
+      "DRIVES"
+    ],
+    [
+      "bim-model-properties",
+      "ph-startup",
+      "VALIDATED DURING"
+    ],
+    [
+      "bim-model-properties",
+      "ph-tab",
+      "BENCHMARKED DURING"
+    ],
+    [
+      "bim-clash-detection",
+      "ph-abv-ceil",
+      "PRECEDES"
+    ],
+    [
+      "bim-clash-detection",
+      "ph-design",
+      "RESOLVES CONFLICTS BEFORE"
+    ],
+    [
+      "bim-coord-issue",
+      "ph-abv-ceil",
+      "FLAGGED BEFORE"
+    ],
+    [
+      "bim-coord-issue",
+      "ph-hvac-dist",
+      "FLAGGED BEFORE"
+    ],
+    [
+      "bim-bim-coord",
+      "ph-precon-plan",
+      "CONDUCTED DURING"
+    ],
+    [
+      "bim-bim-coord",
+      "ph-abv-ceil",
+      "CONDUCTED DURING"
+    ],
+    [
+      "bim-point-cloud",
+      "ph-foundations",
+      "SURVEYS"
+    ],
+    [
+      "bim-point-cloud",
+      "ph-steel",
+      "VERIFIES PLACEMENT DURING"
+    ],
+    [
+      "bim-point-cloud",
+      "ph-asbuilt",
+      "CAPTURES CONDITIONS FOR"
+    ],
+    [
+      "bim-drone-capture",
+      "ph-earthwork",
+      "MONITORS"
+    ],
+    [
+      "bim-drone-capture",
+      "ph-roofing",
+      "INSPECTS"
+    ],
+    [
+      "bim-drone-capture",
+      "ph-site-setup",
+      "DOCUMENTS"
+    ],
+    [
+      "bim-360-photo",
+      "ph-drywall",
+      "RECORDS PROGRESS DURING"
+    ],
+    [
+      "bim-360-photo",
+      "ph-final-insp",
+      "EVIDENCES"
+    ],
+    [
+      "bim-const-photo",
+      "ph-slab",
+      "RECORDS PROGRESS DURING"
+    ],
+    [
+      "bim-const-photo",
+      "ph-masonry",
+      "DOCUMENTS"
+    ],
+    [
+      "bim-model-based",
+      "ph-submittals",
+      "PRODUCED FOR"
+    ],
+    [
+      "bim-model-based",
+      "ph-fabrication",
+      "PRODUCED FOR"
+    ],
+    [
+      "bim-digital-twin",
+      "ph-perf-ver",
+      "VALIDATES"
+    ],
+    [
+      "bim-digital-twin",
+      "ph-seasonal-cx",
+      "MONITORS"
+    ],
+    [
+      "bim-digital-twin",
+      "ph-transition",
+      "ENABLES"
+    ],
+    [
+      "bim-coord-issue-2",
+      "ph-abv-ceil",
+      "BENCHMARKS"
+    ],
+    [
+      "bim-coord-issue-3",
+      "ph-precon-plan",
+      "TRACKS EFFICIENCY OF"
+    ],
+    [
+      "bim-clash-resolution",
+      "ph-design",
+      "MEASURES PROGRESS OF"
+    ],
+    [
+      "bim-drawing-revision",
+      "ph-submittals",
+      "TRACKS CHURN DURING"
+    ],
+    [
+      "bim-photo-docs-rate",
+      "ph-final-insp",
+      "SCORES"
+    ],
+    [
+      "bim-bim-coord-2",
+      "ph-precon-plan",
+      "EVALUATES"
+    ],
+    [
+      "asset",
+      "ph-prefunc",
+      "GOES_THROUGH_COMMISSIONING"
+    ],
+    [
+      "asset",
+      "ph-startup",
+      "GOES_THROUGH_STARTUP"
+    ],
+    [
+      "asset",
+      "ph-tab",
+      "GOES_THROUGH_TAB"
+    ],
+    [
+      "asset",
+      "ph-perf-ver",
+      "GOES_THROUGH_PERFORMANCE_VERIFICATION"
+    ],
+    [
+      "asset",
+      "ph-asbuilt",
+      "DOCUMENTED_IN_AS_BUILT"
+    ],
+    [
+      "asset",
+      "ph-training",
+      "REQUIRES_OWNER_TRAINING"
+    ]
+  ],
+  "verbGlossary": {
+    "DEVELOPED DURING": "{source} authored or substantially advanced within the named {target}",
+    "SUBMITTED FOR": "{source} package delivered to an authority as part of {target} approval process",
+    "SUPPORTS": "{source} or artifact provides ongoing reference value throughout {target}",
+    "COORDINATES": "{source} used to spatially align multiple trade scopes during {target}",
+    "SEQUENCES": "{source} assigns construction sequence and timing to work in {target}",
+    "SIMULATES": "{source} runs schedule simulation to rehearse execution of {target}",
+    "QUANTIFIES": "{source} extracts material quantities and cost data for {target}",
+    "DELIVERED DURING": "{source} artifact formally handed over as a deliverable of {target}",
+    "REFERENCED DURING": "{source} consulted as a baseline or source of truth during {target}",
+    "HANDED OVER DURING": "{source} transferred to the owner or operator as part of facility transition",
+    "DETAILED FOR": "{source} refined with additional geometry or data to satisfy {target} requirements",
+    "EXTRACTED FOR": "{source} geometry or data exported to drive fabrication or procurement",
+    "PROGRESSES THROUGH": "{source} level advances as the design matures through {target}",
+    "REFINED DURING": "{source} or element detail upgraded to meet submittal review requirements",
+    "FINALIZED DURING": "{source} or model element locked to as-built accuracy during closeout",
+    "FEEDS": "Takeoff or property data flows downstream into {target} workflow",
+    "DRIVES": "{source}directly triggers procurement or ordering actions in {target}",
+    "VALIDATED DURING": "{source} properties checked against installed equipment performance during commissioning",
+    "BENCHMARKED DURING": "{source} properties compared to field-measured values during testing and balancing",
+    "PRECEDES": "{source} or coordination work completed before {target} begins in the field",
+    "RESOLVES CONFLICTS BEFORE": "{source} identifies and resolves spatial conflicts prior to {target}",
+    "FLAGGED BEFORE": "{source} raised and tracked ahead of {target} installation",
+    "CONDUCTED DURING": "{source} coordination meeting held within the timeframe of {target}",
+    "SURVEYS": "{source} or laser scan captures existing conditions for {target}",
+    "VERIFIES PLACEMENT DURING": "{source} confirms element positions match {target} during the target phase",
+    "CAPTURES CONDITIONS FOR": "{source}capture records as-built geometry for closeout documentation",
+    "MONITORS": "{source}provides ongoing visual or data monitoring of {target}",
+    "INSPECTS": "{source}capture used to visually inspect hard-to-reach work during {target}",
+    "DOCUMENTS": "{source}capture creates a visual record of work performed in {target}",
+    "RECORDS PROGRESS DURING": "{source}captures installation progress at intervals during {target}",
+    "EVIDENCES": "{source}of completed conditions for inspections",
+    "PRODUCED FOR": "{source}-based drawing generated to satisfy submittal or fabrication requirements of {target}",
+    "VALIDATES": "{source}confirms system performance meets design intent during {target}",
+    "ENABLES": "{source}provides the data foundation that makes {target} workflow possible",
+    "BENCHMARKS": "{source}establishes a coordination density baseline for {target}",
+    "TRACKS EFFICIENCY OF": "{source}measures how quickly coordination issues are resolved during {target}",
+    "MEASURES PROGRESS OF": "{source}quantifies clash resolution throughput during {target}",
+    "TRACKS CHURN DURING": "{source}counts drawing revision cycles occurring within {target}",
+    "SCORES": "{source}rates the completeness of photo documentation for {target}",
+    "EVALUATES": "Metric assesses overall BIM coordination maturity during {target}"
+  }
+}

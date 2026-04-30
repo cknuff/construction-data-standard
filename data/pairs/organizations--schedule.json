@@ -251,6 +251,11 @@
       "org-chg-order",
       "sch-time-impact",
       "FEEDS"
+    ],
+    [
+      "org-sub-job",
+      "sc-activity",
+      "HAS_OWN_SCHEDULE"
     ]
   ],
   "verbGlossary": {

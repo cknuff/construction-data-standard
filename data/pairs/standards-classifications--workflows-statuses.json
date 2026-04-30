@@ -18,16 +18,6 @@
       "DISPOSITIONS TO"
     ],
     [
-      "sc-masterformat",
-      "ws-inspect-disposit",
-      "SCOPES"
-    ],
-    [
-      "sc-masterformat",
-      "ws-workflow-step",
-      "STRUCTURES"
-    ],
-    [
       "sc-std-cost-code",
       "ws-budget-stage",
       "VALIDATES DURING"
@@ -46,21 +36,6 @@
       "sc-budget-code",
       "ws-budget-stage",
       "ESTABLISHED DURING"
-    ],
-    [
-      "sc-osha-hazard",
-      "ws-deficient",
-      "CITES"
-    ],
-    [
-      "sc-osha-hazard",
-      "ws-escalation",
-      "TRIGGERS"
-    ],
-    [
-      "sc-osha-recordkeepi",
-      "ws-closed",
-      "REQUIRED BEFORE"
     ],
     [
       "sc-international-bu",

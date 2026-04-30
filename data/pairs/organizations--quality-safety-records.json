@@ -426,6 +426,21 @@
       "org-chg-order",
       "qsr-insp-pass-rate",
       "CORRELATES WITH"
+    ],
+    [
+      "qsr-punch-item",
+      "org-user",
+      "HELD_BY"
+    ],
+    [
+      "org-project-vendor",
+      "qsr-observation",
+      "ATTRIBUTED_BY"
+    ],
+    [
+      "org-project-vendor",
+      "qsr-punch-item",
+      "ATTRIBUTED_BY"
     ]
   ],
   "verbGlossary": {

@@ -226,6 +226,11 @@
       "org-gen-contr-gc",
       "rl-tech-manager",
       "EMPLOYS"
+    ],
+    [
+      "org-project-role-membership",
+      "rl-project-manager",
+      "MAY_BE_ROLE"
     ]
   ],
   "verbGlossary": {

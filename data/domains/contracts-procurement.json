@@ -15,7 +15,8 @@
         {
           "id": "cp-bid-package",
           "name": "Bid Package",
-          "desc": "A defined scope of work issued to qualified contractors for competitive pricing. Bundles drawings, specifications, schedule, and commercial terms into a single solicitation. The unit of procurement — one package per trade or work scope."
+          "desc": "A defined scope of work issued to qualified contractors for competitive pricing. Bundles drawings, specifications, schedule, and commercial terms into a single solicitation. The unit of procurement \u2014 one package per trade or work scope.",
+          "procore": "preconstruction.bid_package"
         },
         {
           "id": "cp-req-qualificatio",
@@ -25,22 +26,41 @@
         {
           "id": "cp-req-proposal",
           "name": "Request for Proposal",
-          "desc": "Detailed solicitation requesting scope, approach, schedule, and price from qualified contractors. More comprehensive than a simple bid — evaluates methodology, not just price. Common on negotiated or best-value procurements."
+          "desc": "Detailed solicitation requesting scope, approach, schedule, and price from qualified contractors. More comprehensive than a simple bid \u2014 evaluates methodology, not just price. Common on negotiated or best-value procurements."
         },
         {
           "id": "cp-proposal-bid",
           "name": "Proposal / Bid",
-          "desc": "A contractor's formal response to an ITB, RFQ, or RFP — includes pricing, scope clarifications, exclusions, alternates, and schedule. The document that becomes the basis for contract negotiation upon award."
+          "desc": "A contractor's formal response to an ITB, RFQ, or RFP \u2014 includes pricing, scope clarifications, exclusions, alternates, and schedule. The document that becomes the basis for contract negotiation upon award.",
+          "procore": "preconstruction.bid"
         },
         {
           "id": "cp-bid-evaluation",
           "name": "Bid Evaluation / Leveling",
-          "desc": "Comparative analysis of competing proposals — normalizing scope, pricing, qualifications, and exclusions to make an apples-to-apples recommendation. Identifies the apparent low bidder or best-value selection."
+          "desc": "Comparative analysis of competing proposals \u2014 normalizing scope, pricing, qualifications, and exclusions to make an apples-to-apples recommendation. Identifies the apparent low bidder or best-value selection."
         },
         {
           "id": "cp-award-notice",
           "name": "Award / Notice to Proceed",
           "desc": "Formal notification to the selected contractor that they have won the work and are authorized to begin. Triggers mobilization, procurement, and insurance/bonding requirements. May precede the executed contract via a Letter of Intent."
+        },
+        {
+          "id": "cp-bid-form",
+          "name": "Bid Form",
+          "procore": "preconstruction.bid_form",
+          "desc": "The structured template a bidder fills in \u2014 defines what fields and line items the bid must include. One form per bid package. Standardizes bid comparison across vendors. Lifecycle: Created (with bid package) \u2192 Distributed \u2192 Submitted \u2192 Closed. Upstream: bid package. Downstream: bid items."
+        },
+        {
+          "id": "cp-bid-item",
+          "name": "Bid Item",
+          "procore": "preconstruction.bid_item",
+          "desc": "A line item within a bid \u2014 the granular priced scope element. Sum of bid items = total bid amount. Enables line-level bid leveling and apples-to-apples vendor comparison. Key properties: description, quantity, unit, unit price, extended price. Upstream: bid form, parent bid. Downstream: post-award estimate budget items."
+        },
+        {
+          "id": "cp-bid-vendor",
+          "name": "Bid Vendor",
+          "procore": "preconstruction.bid_vendor",
+          "desc": "A vendor invited to bid on a package \u2014 distinct from a vendor that submitted a bid (relationship: invited vs submitted vs awarded). Tracks bid coverage rate and bidder participation. Key properties: invitation date, response status, bid amount (if submitted), award status. Upstream: bid package, prequalification. Downstream: proposal/bid, award."
         }
       ]
     },
@@ -57,7 +77,7 @@
         {
           "id": "cp-purchase-order",
           "name": "Purchase Order",
-          "desc": "Agreement for material supply, equipment rental, or services at a specified price. Simpler than a subcontract — typically no labor/scope-of-work component. Tracks what was ordered, from whom, at what cost.",
+          "desc": "Agreement for material supply, equipment rental, or services at a specified price. Simpler than a subcontract \u2014 typically no labor/scope-of-work component. Tracks what was ordered, from whom, at what cost.",
           "procore": "finance.commitments"
         },
         {
@@ -80,12 +100,12 @@
         {
           "id": "cp-scope-work",
           "name": "Scope of Work",
-          "desc": "Detailed description of contracted work — defines what the subcontractor or vendor is responsible for delivering. May reference drawings, specifications, and schedule. The single most important exhibit to any construction contract."
+          "desc": "Detailed description of contracted work \u2014 defines what the subcontractor or vendor is responsible for delivering. May reference drawings, specifications, and schedule. The single most important exhibit to any construction contract."
         },
         {
           "id": "cp-gen-cond",
           "name": "General Conditions",
-          "desc": "The standard legal and administrative terms that apply to all contracts on a project — defines roles, responsibilities, dispute resolution, insurance requirements, and procedural obligations. The 'rules of the game' for the project."
+          "desc": "The standard legal and administrative terms that apply to all contracts on a project \u2014 defines roles, responsibilities, dispute resolution, insurance requirements, and procedural obligations. The 'rules of the game' for the project."
         },
         {
           "id": "cp-retainage-terms",
@@ -126,7 +146,7 @@
         {
           "id": "cp-insurance-cert",
           "name": "Insurance Certificate",
-          "desc": "Proof of insurance coverage — documents that the contractor carries required general liability, workers' comp, auto, umbrella, and builders risk coverage. Verified before work begins and tracked throughout the project.",
+          "desc": "Proof of insurance coverage \u2014 documents that the contractor carries required general liability, workers' comp, auto, umbrella, and builders risk coverage. Verified before work begins and tracked throughout the project.",
           "procore": "core.company_vendor_insurances"
         },
         {
@@ -148,12 +168,12 @@
         {
           "id": "cp-substantial-comp",
           "name": "Substantial Completion",
-          "desc": "The milestone when the project is sufficiently complete for the owner to occupy and use for its intended purpose. Triggers warranty start dates, retainage release, and final completion punchlist. A contractual — not just physical — milestone."
+          "desc": "The milestone when the project is sufficiently complete for the owner to occupy and use for its intended purpose. Triggers warranty start dates, retainage release, and final completion punchlist. A contractual \u2014 not just physical \u2014 milestone."
         },
         {
           "id": "cp-final-completion",
           "name": "Final Completion",
-          "desc": "The point at which ALL contract work is complete — all punch items resolved, all closeout documents delivered, all training completed. Triggers final retainage release and contract closeout. The true end of the project."
+          "desc": "The point at which ALL contract work is complete \u2014 all punch items resolved, all closeout documents delivered, all training completed. Triggers final retainage release and contract closeout. The true end of the project."
         }
       ]
     },
@@ -174,7 +194,7 @@
         {
           "id": "cp-closeout-doc",
           "name": "Closeout Document Package",
-          "desc": "The collection of documents required for project handover — as-builts, O&M manuals, warranties, training records, commissioning reports, and final lien waivers. The deliverable set that closes out the contract.",
+          "desc": "The collection of documents required for project handover \u2014 as-builts, O&M manuals, warranties, training records, commissioning reports, and final lien waivers. The deliverable set that closes out the contract.",
           "procore": "finance.contract_compliance_documents"
         }
       ]
@@ -207,6 +227,90 @@
           "id": "cp-sub-retention",
           "name": "Subcontractor Retention Rate",
           "desc": "Percentage of subcontractors used on previous projects that are re-engaged on new projects. Formula: COUNT(repeat_subs) / COUNT(total_subs). Higher rate = stronger trade partner relationships."
+        }
+      ]
+    },
+    {
+      "name": "Contract Types",
+      "color": "#9c27b0",
+      "nodes": [
+        {
+          "id": "cp-ct-stipulated-sum",
+          "name": "Stipulated Sum / Lump Sum",
+          "procore": "",
+          "desc": "Fixed-price contract \u2014 contractor agrees to a single price for the full scope. AIA A101. Contractor takes scope and productivity risk. Owner takes design/scope-change risk only. Most common form for well-defined scopes. Variance = scope creep + estimating accuracy. Cost growth on stipulated sum = bad estimating or bad scope control.",
+          "derivation": "finance.commitments WHERE single fixed grand_total, no hourly billing markers, no GMP attribute. Default contract type."
+        },
+        {
+          "id": "cp-ct-cost-plus-fee",
+          "name": "Cost Plus Fee",
+          "procore": "",
+          "desc": "Cost-reimbursable contract \u2014 owner pays actual cost plus a fee (fixed, fixed percentage, or sliding scale). AIA A102. Owner takes scope risk. Used for fast-track work, undefined scopes, emergency response. Fee structures: fixed fee (CPFF), percentage fee (CPPF), incentive fee (CPIF), award fee (CPAF). Higher administrative overhead \u2014 every cost line must be auditable.",
+          "derivation": "finance.commitments WHERE line items have separate fee component (look for 'fee' / 'markup' / 'overhead' as line items separate from cost)."
+        },
+        {
+          "id": "cp-ct-cost-plus-gmp",
+          "name": "Cost Plus with GMP",
+          "procore": "",
+          "desc": "Hybrid: cost-plus reimbursement up to a Guaranteed Maximum Price (GMP) cap. AIA A102/A103. Owner takes scope risk up to the cap; contractor takes risk above. Often includes shared-savings clause: savings below GMP split per agreed percentage. Most common large-project structure where speed-to-start outweighs full-scope-definition needs.",
+          "derivation": "finance.commitments WHERE GMP cap attribute exists, plus shared-savings clause indicators in commitment notes/description."
+        },
+        {
+          "id": "cp-ct-gmp",
+          "name": "Guaranteed Maximum Price (GMP)",
+          "procore": "",
+          "desc": "The not-to-exceed price ceiling on a cost-plus contract. AIA A102/A103. Established at GMP conversion \u2014 typically when design reaches 60-90% complete. Original GMP, GMP changes (via owner-approved scope changes), revised GMP. GMP buster = projected cost > revised GMP, signaling need for scope cuts or contract restructure. Critical metric: GMP utilization % over time.",
+          "derivation": "Project-level concept: total commitment + CE forecast capped at a known GMP value. Detect via fi-cost-forecast vs known-cap reference."
+        },
+        {
+          "id": "cp-ct-tm",
+          "name": "Time & Material (T&M)",
+          "procore": "",
+          "desc": "Hourly billing for labor + cost reimbursement for material, plus markup. Used for emergency, repair, and undefined-scope work. Highest cost risk for owner \u2014 no fixed price, no GMP cap (unless specifically negotiated). Each line is daily \u2014 labor hours \u00d7 rate, materials at cost + markup, equipment at hourly/daily rate. Often capped with a not-to-exceed clause to limit exposure.",
+          "derivation": "finance.commitments WHERE line items use rate \u00d7 hours pattern, OR vendor appears in workforce.time_and_material_subcontractors. Higher cost-risk pattern."
+        },
+        {
+          "id": "cp-ct-unit-price",
+          "name": "Unit Price",
+          "procore": "",
+          "desc": "Per-unit pricing for variable-quantity work \u2014 $X per CY of excavation, $Y per LF of pipe, $Z per ton of asphalt. Common in civil/infrastructure contracts. Owner pays based on measured installed quantities. Risk allocation: contractor on unit production rate, owner on total quantity. Quantity overruns above a threshold (typically \u00b115%) often trigger renegotiation clauses.",
+          "derivation": "finance.commitments WHERE line items follow unit_quantity \u00d7 unit_price structure (commitment_line_items with quantity AND unit_price both populated)."
+        }
+      ]
+    },
+    {
+      "name": "Procurement Methods",
+      "color": "#ce93d8",
+      "nodes": [
+        {
+          "id": "cp-pm-dbb",
+          "name": "Design-Bid-Build (DBB)",
+          "procore": "",
+          "desc": "Traditional procurement: owner contracts separately with designer (engineer/architect) and contractor. Design completes first, then bid, then build. Lowest first-cost path but longest duration; designer-contractor relationship is adversarial. Most common for public sector."
+        },
+        {
+          "id": "cp-pm-db",
+          "name": "Design-Build (DB)",
+          "procore": "",
+          "desc": "Single contract with one entity for both design and construction. Faster, fewer disputes, single point of accountability. Risk is owner has less direct design control. Common for fast-track and design-build-friendly project types."
+        },
+        {
+          "id": "cp-pm-cmar",
+          "name": "Construction Manager at Risk (CMAR)",
+          "procore": "",
+          "desc": "Owner contracts CM during design (consulting role) who then converts to GC at GMP for construction. Front-end constructability input + competitive subbidding + GMP cost cap. Common for complex commercial and institutional work."
+        },
+        {
+          "id": "cp-pm-ipd",
+          "name": "Integrated Project Delivery (IPD)",
+          "procore": "",
+          "desc": "Multi-party contract among owner, architect, contractor (and sometimes key trades) with shared risk/reward and joint decision-making. Lean construction principles. Highest collaboration but requires mature parties and aligned incentives."
+        },
+        {
+          "id": "cp-pm-p3",
+          "name": "Public-Private Partnership (P3)",
+          "procore": "",
+          "desc": "Long-term contract where private party finances, designs, builds, operates, maintains a public asset for the public sector \u2014 recovers investment via tolls, availability payments, etc. Common for infrastructure (highways, bridges, schools, hospitals)."
         }
       ]
     }

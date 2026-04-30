@@ -4,21 +4,6 @@
   "edges": [
     [
       "res-electrician",
-      "sc-masterformat",
-      "SCOPED UNDER"
-    ],
-    [
-      "res-plumber",
-      "sc-masterformat",
-      "SCOPED UNDER"
-    ],
-    [
-      "res-sheetmetal",
-      "sc-masterformat",
-      "SCOPED UNDER"
-    ],
-    [
-      "res-electrician",
       "sc-std-cost-code",
       "BILLED AGAINST"
     ],
@@ -78,16 +63,6 @@
       "ESTIMATED UNDER"
     ],
     [
-      "res-safety",
-      "sc-osha-hazard",
-      "INSPECTS PER"
-    ],
-    [
-      "res-qc",
-      "sc-osha-hazard",
-      "INSPECTS PER"
-    ],
-    [
       "res-sprinkler",
       "sc-nfpa-stds",
       "INSTALLS PER"
@@ -101,11 +76,6 @@
       "mat-fp",
       "sc-nfpa-stds",
       "TESTED PER"
-    ],
-    [
-      "res-safety",
-      "sc-osha-recordkeepi",
-      "REPORTS PER"
     ],
     [
       "res-qc",
@@ -146,16 +116,6 @@
       "res-cxa",
       "sc-well-building",
       "VERIFIES FOR"
-    ],
-    [
-      "mat-glass",
-      "sc-uniformat",
-      "CLASSIFIED UNDER"
-    ],
-    [
-      "mat-doors",
-      "sc-uniformat",
-      "CLASSIFIED UNDER"
     ],
     [
       "res-surveyor",

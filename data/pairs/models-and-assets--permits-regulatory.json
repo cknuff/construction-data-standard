@@ -1,0 +1,98 @@
+{
+  "source": "models-and-assets",
+  "target": "permits-regulatory",
+  "edges": [
+    [
+      "bim-3d-building-info",
+      "pr-building-permit",
+      "SUBMITTED FOR"
+    ],
+    [
+      "bim-3d-building-info",
+      "pr-building-departm",
+      "REVIEWED DURING"
+    ],
+    [
+      "bim-3d-building-info",
+      "pr-fire-marshal",
+      "REVIEWED DURING"
+    ],
+    [
+      "bim-3d-building-info",
+      "pr-zoning-appr",
+      "VALIDATED AGAINST"
+    ],
+    [
+      "bim-model-based",
+      "pr-building-permit",
+      "ATTACHED TO"
+    ],
+    [
+      "bim-model-based",
+      "pr-trade-permit",
+      "ATTACHED TO"
+    ],
+    [
+      "bim-model-based",
+      "pr-renovation-alter",
+      "ATTACHED TO"
+    ],
+    [
+      "bim-federated-model",
+      "pr-ahj-insp",
+      "REFERENCED DURING"
+    ],
+    [
+      "bim-as-built-model",
+      "pr-cert-occupancy",
+      "VERIFIED FOR"
+    ],
+    [
+      "bim-as-built-model",
+      "pr-cert-completion",
+      "VERIFIED FOR"
+    ],
+    [
+      "bim-as-built-model",
+      "pr-temp-cert",
+      "VERIFIED FOR"
+    ],
+    [
+      "bim-point-cloud",
+      "pr-special-insp",
+      "DOCUMENTED FOR"
+    ],
+    [
+      "bim-360-photo",
+      "pr-ahj-insp",
+      "DOCUMENTED FOR"
+    ],
+    [
+      "bim-const-photo",
+      "pr-ahj-insp",
+      "EVIDENCED IN"
+    ],
+    [
+      "bim-clash-detection",
+      "pr-building-departm",
+      "DEMONSTRATES COMPLIANCE TO"
+    ],
+    [
+      "bim-digital-twin",
+      "pr-cert-occupancy",
+      "MAINTAINED AFTER"
+    ]
+  ],
+  "verbGlossary": {
+    "SUBMITTED FOR": "{source} submitted as part of {target} application package",
+    "REVIEWED DURING": "{source} referenced by {target} during plan review",
+    "VALIDATED AGAINST": "{source} geometry checked for compliance with zoning setback and height requirements",
+    "ATTACHED TO": "{source}-based drawings included as required {target} submission documents",
+    "REFERENCED DURING": "{source} used on-site during {target} inspection to verify installed conditions",
+    "VERIFIED FOR": "{source}confirms installed conditions meet {target} issuance requirements",
+    "DOCUMENTED FOR": "{source}capture data provides inspection evidence for regulatory compliance",
+    "EVIDENCED IN": "Construction photos serve as visual proof during {target}s",
+    "DEMONSTRATES COMPLIANCE TO": "Clash-free model proves spatial coordination meets code separation requirements",
+    "MAINTAINED AFTER": "Digital twin kept current after occupancy {target} to support ongoing compliance"
+  }
+}

@@ -10,25 +10,25 @@
         {
           "id": "qsr-observation",
           "name": "Observation",
-          "desc": "A documented finding from a site walk or inspection — captures conditions, hazards, deficiencies, or noteworthy items during active construction. The primary during-construction quality and safety signal. Key properties: name (issue description, 0% null, avg 33 chars), category (structured: Quality, Safety, Environmental, Commissioning, Warranty, Work to Complete — 0% null), type_name (severity/workflow: Corrective Action, Deficiency, Non-Conformance, Safety Hazard, Safety Violation — NOT issue type), status (Open, In Progress, Ready for Review, Closed), assignee (responsible party via vendor_id, 80% populated), location. Observations are LEADING indicators — 63% correlation with downstream rework, 28-day lead time, 1.98x multiplier. Lifecycle: Created → Assigned → In Progress → Ready for Review → Closed.",
+          "desc": "A documented finding from a site walk or inspection \u2014 captures conditions, hazards, deficiencies, or noteworthy items during active construction. The primary during-construction quality and safety signal. Key properties: name (issue description, 0% null, avg 33 chars), category (structured: Quality, Safety, Environmental, Commissioning, Warranty, Work to Complete \u2014 0% null), type_name (severity/workflow: Corrective Action, Deficiency, Non-Conformance, Safety Hazard, Safety Violation \u2014 NOT issue type), status (Open, In Progress, Ready for Review, Closed), assignee (responsible party via vendor_id, 80% populated), location. Observations are LEADING indicators \u2014 63% correlation with downstream rework, 28-day lead time, 1.98x multiplier. Lifecycle: Created \u2192 Assigned \u2192 In Progress \u2192 Ready for Review \u2192 Closed.",
           "procore": "project_management.observation"
         },
         {
           "id": "qsr-safety-observati",
           "name": "Safety Observation",
-          "desc": "An observation with category = 'Safety' — documents hazards, unsafe conditions, and safety compliance findings during site walks. Key addition: hazard_name field provides OSHA-aligned structured taxonomy (Fall, Struck By, Electrical, Caught In/Between, etc.) — 55% populated on safety observations. 16 hazard types with 50+ companies each. Recurrence detection: same hazard × project × week; 2+ consecutive weeks = 'recurring', 3+ = 'systemic'. Recurrence rates range 29–45% by hazard type.",
+          "desc": "An observation with category = 'Safety' \u2014 documents hazards, unsafe conditions, and safety compliance findings during site walks. Key addition: hazard_name field provides OSHA-aligned structured taxonomy (Fall, Struck By, Electrical, Caught In/Between, etc.) \u2014 55% populated on safety observations. 16 hazard types with 50+ companies each. Recurrence detection: same hazard \u00d7 project \u00d7 week; 2+ consecutive weeks = 'recurring', 3+ = 'systemic'. Recurrence rates range 29\u201345% by hazard type.",
           "procore": "project_management.observation"
         },
         {
           "id": "qsr-quality-observat",
           "name": "Quality Observation",
-          "desc": "An observation with category = 'Quality' — documents workmanship deficiencies, material issues, and quality non-conformances during active construction. The strongest during-construction quality signal. keyword clustering on observation.name yields 18 issue categories including Doors/Windows, Electrical, Paint/Finish, Plumbing/Piping, Cracks/Damage, HVAC, Waterproofing. 43% of quality observations cluster into named categories. 3D analysis validated: issue distribution varies by project type (Commercial = Doors/Windows #1, Healthcare = Electrical #1, Industrial = Cracks/Damage #1).",
+          "desc": "An observation with category = 'Quality' \u2014 documents workmanship deficiencies, material issues, and quality non-conformances during active construction. The strongest during-construction quality signal. keyword clustering on observation.name yields 18 issue categories including Doors/Windows, Electrical, Paint/Finish, Plumbing/Piping, Cracks/Damage, HVAC, Waterproofing. 43% of quality observations cluster into named categories. 3D analysis validated: issue distribution varies by project type (Commercial = Doors/Windows #1, Healthcare = Electrical #1, Industrial = Cracks/Damage #1).",
           "procore": "project_management.observation"
         },
         {
           "id": "qsr-enviro-cx",
           "name": "Environmental / Commissioning Observation",
-          "desc": "Observations with category = 'Environmental' or 'Commissioning' — documents environmental compliance findings (erosion control, dust, spills) and commissioning findings (system performance, functional testing results, equipment issues). Lower volume than Quality and Safety categories but important for specialized compliance and handover tracking.",
+          "desc": "Observations with category = 'Environmental' or 'Commissioning' \u2014 documents environmental compliance findings (erosion control, dust, spills) and commissioning findings (system performance, functional testing results, equipment issues). Lower volume than Quality and Safety categories but important for specialized compliance and handover tracking.",
           "procore": "project_management.observation"
         }
       ]
@@ -40,25 +40,26 @@
         {
           "id": "qsr-insp",
           "name": "Inspection",
-          "desc": "A formal structured examination of work against defined criteria — conducted by quality managers, safety officers, third-party inspectors, or regulatory authorities. Key properties: name, status (Open, In Progress, Ready for Review, Closed), type (company-defined), inspection_type (Safety, Quality, Commissioning — but 93% null on group field, nearly useless). Inspections contain inspection items (individual checklist lines). Scheduled inspections track recurring compliance checks. Lifecycle: Created/Scheduled → In Progress → Complete → Closed.",
+          "desc": "A formal structured examination of work against defined criteria \u2014 conducted by quality managers, safety officers, third-party inspectors, or regulatory authorities. Key properties: name, status (Open, In Progress, Ready for Review, Closed), type (company-defined), inspection_type (Safety, Quality, Commissioning \u2014 but 93% null on group field, nearly useless). Inspections contain inspection items (individual checklist lines). Scheduled inspections track recurring compliance checks. Lifecycle: Created/Scheduled \u2192 In Progress \u2192 Complete \u2192 Closed.",
           "procore": "project_management.inspections"
         },
         {
           "id": "qsr-insp-item",
           "name": "Inspection Item",
-          "desc": "An individual line item within an inspection checklist — the atomic unit of conformance checking. Key properties: name (item description), status (structured, capitalized: 'Conforming', 'Deficient', 'Not Applicable', 'Uninspected', 'Neutral'). Deficient items trigger corrective action workflows. Deficiency rate ranges 2–6% by inspection type across 5,470 companies. Names are safety-focused and more descriptive than observation names.",
+          "desc": "An individual line item within an inspection checklist \u2014 the atomic unit of conformance checking. Key properties: name (item description), status (structured, capitalized: 'Conforming', 'Deficient', 'Not Applicable', 'Uninspected', 'Neutral'). Deficient items trigger corrective action workflows. Deficiency rate ranges 2\u20136% by inspection type across 5,470 companies. Names are safety-focused and more descriptive than observation names.",
           "procore": "project_management.inspection_items"
         },
         {
           "id": "qsr-scheduled-insp",
           "name": "Scheduled Inspection",
-          "desc": "A recurring or planned inspection defined in advance — ensures systematic compliance checking on a regular cadence. Tracks inspection frequency, assigned inspector, and schedule compliance. Scheduled inspections that are missed or late are a compliance gap signal.",
+          "desc": "A recurring or planned inspection defined in advance \u2014 ensures systematic compliance checking on a regular cadence. Tracks inspection frequency, assigned inspector, and schedule compliance. Scheduled inspections that are missed or late are a compliance gap signal.",
           "procore": "project_management.inspection_schedules"
         },
         {
           "id": "qsr-third-party",
           "name": "Third-Party / Special Inspection",
-          "desc": "An inspection conducted by an independent testing or inspection agency — required by building codes for structural, fire protection, and other critical systems. Special inspections are mandated by IBC Chapter 17 for specific construction activities (structural steel, concrete placement, fireproofing, sprinkler systems). Results are reported to the authority having jurisdiction (AHJ). Distinct from internal QC inspections — third-party inspections carry regulatory weight."
+          "desc": "An inspection conducted by an independent testing or inspection agency \u2014 required by building codes for structural, fire protection, and other critical systems. Special inspections are mandated by IBC Chapter 17 for specific construction activities (structural steel, concrete placement, fireproofing, sprinkler systems). Results are reported to the authority having jurisdiction (AHJ). Distinct from internal QC inspections \u2014 third-party inspections carry regulatory weight.",
+          "procore": "project_management.inspections"
         }
       ]
     },
@@ -69,18 +70,18 @@
         {
           "id": "qsr-punch-item",
           "name": "Punch Item",
-          "desc": "A documented deficiency or incomplete work item that must be corrected before the owner accepts the project — compiled during substantial completion walkthrough. The strongest closeout quality signal. Key properties: name (issue description, 0% null, avg 33 chars), punch_item_type_name (severity/priority — NOT issue type), workflow_status (Open, In Progress, Ready for Review, Closed, Not Accepted), assignee (responsible vendor via vendor_id), location, due_date. Keyword clustering on name yields 18 issue categories — Paint/Finish is #1 universally (closeout cosmetic), but #2–#4 vary by project type. 11,722 companies with punch item data. Lifecycle: Created → Assigned → In Progress → Ready for Review → Closed.",
+          "desc": "A documented deficiency or incomplete work item that must be corrected before the owner accepts the project \u2014 compiled during substantial completion walkthrough. The strongest closeout quality signal. Key properties: name (issue description, 0% null, avg 33 chars), punch_item_type_name (severity/priority \u2014 NOT issue type), workflow_status (Open, In Progress, Ready for Review, Closed, Not Accepted), assignee (responsible vendor via vendor_id), location, due_date. Keyword clustering on name yields 18 issue categories \u2014 Paint/Finish is #1 universally (closeout cosmetic), but #2\u2013#4 vary by project type. 11,722 companies with punch item data. Lifecycle: Created \u2192 Assigned \u2192 In Progress \u2192 Ready for Review \u2192 Closed.",
           "procore": "project_management.punch_item"
         },
         {
           "id": "qsr-punch-item-issue",
           "name": "Punch Item (by Issue Category)",
-          "desc": "A categorized view of punch items grouped by the 18 validated issue categories derived from keyword clustering on name field. Categories: Paint/Finish, Doors/Windows, Plumbing/Piping, Electrical, HVAC, Caulk/Sealant, Hardware, Drywall/Plaster, Flooring, Fire Protection, Cracks/Damage, Concrete, Roofing, Waterproofing, Insulation, Elevator, Glass/Glazing, Cleanup. Distribution varies by project type — this is the '3D hot sheet' for quality issue prioritization."
+          "desc": "A categorized view of punch items grouped by the 18 validated issue categories derived from keyword clustering on name field. Categories: Paint/Finish, Doors/Windows, Plumbing/Piping, Electrical, HVAC, Caulk/Sealant, Hardware, Drywall/Plaster, Flooring, Fire Protection, Cracks/Damage, Concrete, Roofing, Waterproofing, Insulation, Elevator, Glass/Glazing, Cleanup. Distribution varies by project type \u2014 this is the '3D hot sheet' for quality issue prioritization."
         },
         {
           "id": "qsr-punch-item-2",
           "name": "Punch Item Resolution",
-          "desc": "The lifecycle tracking of a punch item from creation to closure — measures how quickly deficiencies are corrected and by whom. Key properties: workflow_status transitions (with timestamps), assignee response, resolution description, verification. Resolution time = Closed Date − Created Date. Resolution involves: vendor fixes deficiency → PM verifies → owner/architect accepts. Not Accepted items require rework and restart the cycle.",
+          "desc": "The lifecycle tracking of a punch item from creation to closure \u2014 measures how quickly deficiencies are corrected and by whom. Key properties: workflow_status transitions (with timestamps), assignee response, resolution description, verification. Resolution time = Closed Date \u2212 Created Date. Resolution involves: vendor fixes deficiency \u2192 PM verifies \u2192 owner/architect accepts. Not Accepted items require rework and restart the cycle.",
           "procore": "project_management.punch_item"
         }
       ]
@@ -92,26 +93,32 @@
         {
           "id": "qsr-incident",
           "name": "Incident",
-          "desc": "A safety event that results in injury, illness, property damage, near-miss, or environmental release — the formal record of what happened. Key properties: title, status (Draft, Open, Closed), description, date/time, location, severity, recordable (OSHA classification). Incidents trigger investigation, corrective actions, and regulatory reporting. Lifecycle: Reported → Under Investigation → Corrective Actions Assigned → Closed. More severe than observations — incidents are reactive (something happened), observations are proactive (something could happen).",
+          "desc": "A safety event that results in injury, illness, property damage, near-miss, or environmental release \u2014 the formal record of what happened. Key properties: title, status (Draft, Open, Closed), description, date/time, location, severity, recordable (OSHA classification). Incidents trigger investigation, corrective actions, and regulatory reporting. Lifecycle: Reported \u2192 Under Investigation \u2192 Corrective Actions Assigned \u2192 Closed. More severe than observations \u2014 incidents are reactive (something happened), observations are proactive (something could happen).",
           "procore": "project_management.incident"
         },
         {
           "id": "qsr-incident-record",
           "name": "Incident Record",
-          "desc": "A detailed record within an incident — captures specific injury details, property damage details, or environmental release information. One incident may have multiple records (e.g., two people injured in the same event). Key properties: record type (injury, damage, cost), involved person details, body part, nature of injury, cause, medical treatment, days away/restricted. The OSHA 301 equivalent.",
+          "desc": "A detailed record within an incident \u2014 captures specific injury details, property damage details, or environmental release information. One incident may have multiple records (e.g., two people injured in the same event). Key properties: record type (injury, damage, cost), involved person details, body part, nature of injury, cause, medical treatment, days away/restricted. The OSHA 301 equivalent.",
           "procore": "project_management.incident_record"
         },
         {
           "id": "qsr-incident-witness",
           "name": "Incident Witness Statement",
-          "desc": "A documented account from a person who witnessed a safety event — captured as part of the incident investigation. Key properties: witness identity, statement text, date. Witness statements support root cause analysis and regulatory compliance. Required for OSHA investigations and insurance claims.",
+          "desc": "A documented account from a person who witnessed a safety event \u2014 captured as part of the incident investigation. Key properties: witness identity, statement text, date. Witness statements support root cause analysis and regulatory compliance. Required for OSHA investigations and insurance claims.",
           "procore": "project_management.incident_witness_statement"
         },
         {
           "id": "qsr-corrective-actio",
           "name": "Corrective Action / Incident Action",
-          "desc": "A required remediation or preventive measure assigned in response to an incident or recurring safety observation. Key properties: action description, assignee, due date, status (Open, In Progress, Complete), linked incident or observation. Corrective actions close the loop between identifying a problem and fixing it. Lifecycle: Assigned → In Progress → Complete → Verified.",
+          "desc": "A required remediation or preventive measure assigned in response to an incident or recurring safety observation. Key properties: action description, assignee, due date, status (Open, In Progress, Complete), linked incident or observation. Corrective actions close the loop between identifying a problem and fixing it. Lifecycle: Assigned \u2192 In Progress \u2192 Complete \u2192 Verified.",
           "procore": "project_management.incident_action"
+        },
+        {
+          "id": "qsr-incident-rca",
+          "name": "Incident Root Cause Analysis",
+          "procore": "project_management.incident_root_cause_analysis",
+          "desc": "Structured root cause analysis on a safety incident \u2014 why it happened, contributing factors, corrective actions. Distinct from the incident record itself (the what). Foundational for safety reasoning beyond surface-level incident counts. Drives lessons-learned and prevention work."
         }
       ]
     },
@@ -122,18 +129,19 @@
         {
           "id": "qsr-safety-violation",
           "name": "Safety Violation",
-          "desc": "A specific regulatory violation documented during construction — OSHA citation, code violation, or company safety rule infraction. More formal than a safety observation — a violation implies a specific regulation was breached. May be issued by safety officers, OSHA inspectors, or project management. Key properties: violation type, regulation cited, responsible party, corrective action required, abatement date.",
+          "desc": "A specific regulatory violation documented during construction \u2014 OSHA citation, code violation, or company safety rule infraction. More formal than a safety observation \u2014 a violation implies a specific regulation was breached. May be issued by safety officers, OSHA inspectors, or project management. Key properties: violation type, regulation cited, responsible party, corrective action required, abatement date.",
           "procore": "project_management.daily_log_safety_violation"
         },
         {
           "id": "qsr-non-conformance",
           "name": "Non-Conformance Report (NCR)",
-          "desc": "A formal documented deviation from specifications, drawings, or quality standards — triggers investigation and disposition (accept as-is, rework, reject/replace). More rigorous than an observation or deficiency — NCRs require root cause analysis and formal disposition authority (typically architect or engineer of record). Key properties: description, specification reference, drawing reference, root cause, disposition, responsible party."
+          "desc": "A formal documented deviation from specifications, drawings, or quality standards \u2014 triggers investigation and disposition (accept as-is, rework, reject/replace). More rigorous than an observation or deficiency \u2014 NCRs require root cause analysis and formal disposition authority (typically architect or engineer of record). Key properties: description, specification reference, drawing reference, root cause, disposition, responsible party.",
+          "procore": "project_management.observation"
         },
         {
           "id": "qsr-deficiency-notic",
           "name": "Deficiency Notice",
-          "desc": "A formal written notification to a subcontractor or vendor that their work does not meet contract requirements — triggers contractual obligations to correct. More formal than an observation — a deficiency notice is a contractual instrument with potential financial consequences (backcharges, liquidated damages). Key properties: description, contract reference, specification reference, cure period, financial consequences."
+          "desc": "A formal written notification to a subcontractor or vendor that their work does not meet contract requirements \u2014 triggers contractual obligations to correct. More formal than an observation \u2014 a deficiency notice is a contractual instrument with potential financial consequences (backcharges, liquidated damages). Key properties: description, contract reference, specification reference, cure period, financial consequences."
         }
       ]
     },
@@ -144,13 +152,13 @@
         {
           "id": "qsr-coord-issue",
           "name": "Coordination Issue",
-          "desc": "A design or constructability problem identified during BIM coordination, drawing review, or field coordination — captures clashes, design conflicts, and constructability concerns before they become field problems. Key properties: issue_type (structured: Clash, Coordination, Design Review, Constructability, Requirement Change, Existing Condition, Client Feedback, Building Code, Other), trade (free text — NOT standardized), status, priority, rfi_header_id (links to RFIs, 4,967 linked issues across 204 cos). Lifecycle: Identified → Under Review → Resolved → Closed.",
+          "desc": "A design or constructability problem identified during BIM coordination, drawing review, or field coordination \u2014 captures clashes, design conflicts, and constructability concerns before they become field problems. Key properties: issue_type (structured: Clash, Coordination, Design Review, Constructability, Requirement Change, Existing Condition, Client Feedback, Building Code, Other), trade (free text \u2014 NOT standardized), status, priority, rfi_header_id (links to RFIs, 4,967 linked issues across 204 cos). Lifecycle: Identified \u2192 Under Review \u2192 Resolved \u2192 Closed.",
           "procore": "project_management.coordination_issue"
         },
         {
           "id": "qsr-coord-issue-2",
           "name": "Coordination Issue (Design-Related)",
-          "desc": "Coordination issues with issue_type in (Design Review, Constructability, Requirement Change) — the subset that signals design quality and completeness problems. These issues often become RFIs (via rfi_header_id link) and ultimately change events with cost impact. Part of the design-related change impact tracing path (insight #31): Coordination Issue → RFI → Change Event → Cost.",
+          "desc": "Coordination issues with issue_type in (Design Review, Constructability, Requirement Change) \u2014 the subset that signals design quality and completeness problems. These issues often become RFIs (via rfi_header_id link) and ultimately change events with cost impact. Part of the design-related change impact tracing path (insight #31): Coordination Issue \u2192 RFI \u2192 Change Event \u2192 Cost.",
           "procore": "project_management.coordination_issue"
         }
       ]
@@ -162,12 +170,12 @@
         {
           "id": "qsr-mat-test-report",
           "name": "Material Test Report",
-          "desc": "Results of material testing required by specifications and building codes — concrete cylinder breaks, soil compaction tests, steel mill certifications, fireproofing adhesion tests, waterproofing tests. Conducted by independent testing laboratories. Pass/fail results directly affect whether construction can proceed. Key properties: test type, material, specification reference, result (pass/fail/value), tested by (lab), date."
+          "desc": "Results of material testing required by specifications and building codes \u2014 concrete cylinder breaks, soil compaction tests, steel mill certifications, fireproofing adhesion tests, waterproofing tests. Conducted by independent testing laboratories. Pass/fail results directly affect whether construction can proceed. Key properties: test type, material, specification reference, result (pass/fail/value), tested by (lab), date."
         },
         {
           "id": "qsr-system-perf-test",
           "name": "System Performance Test",
-          "desc": "Results of functional testing for building systems — HVAC air balance, electrical load testing, fire alarm testing, plumbing pressure tests, elevator load tests, generator load bank tests. Conducted during commissioning phase. Key properties: system tested, test procedure, acceptance criteria, actual results, pass/fail, deficiencies noted, retest requirements."
+          "desc": "Results of functional testing for building systems \u2014 HVAC air balance, electrical load testing, fire alarm testing, plumbing pressure tests, elevator load tests, generator load bank tests. Conducted during commissioning phase. Key properties: system tested, test procedure, acceptance criteria, actual results, pass/fail, deficiencies noted, retest requirements."
         }
       ]
     },
@@ -178,13 +186,13 @@
         {
           "id": "qsr-action-plan",
           "name": "Action Plan",
-          "desc": "A structured set of tasks created in response to quality or safety findings — groups related corrective actions into a trackable plan with assignees, due dates, and approval workflows. Key properties: title, status, assignees, due dates, approval workflow. Action plans aggregate individual tasks (line items) that may reference observations, punch items, inspections, or incidents as source records. Lifecycle: Created → In Progress → Under Review → Approved → Closed.",
+          "desc": "A structured set of tasks created in response to quality or safety findings \u2014 groups related corrective actions into a trackable plan with assignees, due dates, and approval workflows. Key properties: title, status, assignees, due dates, approval workflow. Action plans aggregate individual tasks (line items) that may reference observations, punch items, inspections, or incidents as source records. Lifecycle: Created \u2192 In Progress \u2192 Under Review \u2192 Approved \u2192 Closed.",
           "procore": "project_management.action_plan"
         },
         {
           "id": "qsr-action-plan-line",
           "name": "Action Plan Line Item (Task)",
-          "desc": "An individual task within an action plan — the atomic unit of remediation work. Key properties: description, assignee, due date, status, linked record (the source observation, punch item, or incident that triggered this task). The action_plan_line_item_record linkage connects tasks to their source issues, creating traceability from finding to resolution.",
+          "desc": "An individual task within an action plan \u2014 the atomic unit of remediation work. Key properties: description, assignee, due date, status, linked record (the source observation, punch item, or incident that triggered this task). The action_plan_line_item_record linkage connects tasks to their source issues, creating traceability from finding to resolution.",
           "procore": "project_management.action_plan_line_item"
         }
       ]
@@ -196,57 +204,68 @@
         {
           "id": "qsr-observation-dens",
           "name": "Observation Density",
-          "desc": "Total observations per unit of project size — measures the intensity of quality and safety monitoring. Formula: Total Observations / Project Value (per $M) or Total Observations / Project SF. Can be segmented by category (Quality vs. Safety). High observation density indicates proactive monitoring culture, not necessarily more problems."
+          "desc": "Total observations per unit of project size \u2014 measures the intensity of quality and safety monitoring. Formula: Total Observations / Project Value (per $M) or Total Observations / Project SF. Can be segmented by category (Quality vs. Safety). High observation density indicates proactive monitoring culture, not necessarily more problems.",
+          "concept_type": "derived-metric"
         },
         {
           "id": "qsr-deficiency-rate",
           "name": "Deficiency Rate",
-          "desc": "Percentage of inspection items found deficient — measures quality conformance. Formula: Deficient Items / Total Inspected Items × 100. Can be segmented by inspection type, building system, and trade. Deficiency rate 2–6% is typical across 5,470 companies."
+          "desc": "Percentage of inspection items found deficient \u2014 measures quality conformance. Formula: Deficient Items / Total Inspected Items \u00d7 100. Can be segmented by inspection type, building system, and trade. Deficiency rate 2\u20136% is typical across 5,470 companies.",
+          "concept_type": "derived-metric"
         },
         {
           "id": "qsr-punch-item-3",
           "name": "Punch Item Density",
-          "desc": "Total punch items per unit of project size at substantial completion — measures closeout quality. Formula: Punch Items / Gross SF or Punch Items / Unit Count. Lower density = cleaner handover. Can be segmented by issue category (18 categories) and responsible trade."
+          "desc": "Total punch items per unit of project size at substantial completion \u2014 measures closeout quality. Formula: Punch Items / Gross SF or Punch Items / Unit Count. Lower density = cleaner handover. Can be segmented by issue category (18 categories) and responsible trade.",
+          "concept_type": "derived-metric"
         },
         {
           "id": "qsr-total-recordable",
           "name": "Total Recordable Incident Rate (TRIR)",
-          "desc": "The number of OSHA-recordable incidents per 200,000 worker hours — the standard safety performance metric in construction. Formula: (Recordable Incidents × 200,000) / Total Worker Hours. Recordable = medical treatment beyond first aid, restricted duty, days away from work, fatality. The primary safety benchmark used by owners for prequalification."
+          "desc": "The number of OSHA-recordable incidents per 200,000 worker hours \u2014 the standard safety performance metric in construction. Formula: (Recordable Incidents \u00d7 200,000) / Total Worker Hours. Recordable = medical treatment beyond first aid, restricted duty, days away from work, fatality. The primary safety benchmark used by owners for prequalification.",
+          "concept_type": "derived-metric"
         },
         {
           "id": "qsr-dart-rate",
           "name": "DART Rate",
-          "desc": "Days Away, Restricted, or Transferred rate — incidents per 200,000 hours that result in days away from work, restricted duty, or job transfer. A subset of TRIR that measures more severe incidents. Formula: (DART Incidents × 200,000) / Total Worker Hours. More meaningful than TRIR because it focuses on incidents with actual impact."
+          "desc": "Days Away, Restricted, or Transferred rate \u2014 incidents per 200,000 hours that result in days away from work, restricted duty, or job transfer. A subset of TRIR that measures more severe incidents. Formula: (DART Incidents \u00d7 200,000) / Total Worker Hours. More meaningful than TRIR because it focuses on incidents with actual impact.",
+          "concept_type": "derived-metric"
         },
         {
           "id": "qsr-hazard-recurrenc",
           "name": "Hazard Recurrence Rate",
-          "desc": "Percentage of identified hazards that recur within the same project — measures safety program effectiveness at eliminating root causes. Formula: Recurring Hazards / Total Unique Hazards × 100. A recurring hazard = same hazard_name appearing in 2+ consecutive weeks on the same project. 3+ consecutive weeks = systemic."
+          "desc": "Percentage of identified hazards that recur within the same project \u2014 measures safety program effectiveness at eliminating root causes. Formula: Recurring Hazards / Total Unique Hazards \u00d7 100. A recurring hazard = same hazard_name appearing in 2+ consecutive weeks on the same project. 3+ consecutive weeks = systemic.",
+          "concept_type": "derived-metric"
         },
         {
           "id": "qsr-rework-cost",
           "name": "Rework Cost Percentage",
-          "desc": "Rework-attributable cost as a percentage of total project cost — the financial impact of quality failures. Formula: Rework Cost / Total Project Cost × 100. Rework cost sourced from four signals: backcharges (CE/CCO with rework change_reason, deduplicated via GREATEST), direct costs (WBS-coded rework), budget modifications (to rework-coded lines), and observation/punch item linkage. Conservative total: ~$4.8B structured; with NLP: ~$5.8B."
+          "desc": "Rework-attributable cost as a percentage of total project cost \u2014 the financial impact of quality failures. Formula: Rework Cost / Total Project Cost \u00d7 100. Rework cost sourced from four signals: backcharges (CE/CCO with rework change_reason, deduplicated via GREATEST), direct costs (WBS-coded rework), budget modifications (to rework-coded lines), and observation/punch item linkage. Conservative total: ~$4.8B structured; with NLP: ~$5.8B.",
+          "concept_type": "derived-metric"
         },
         {
           "id": "qsr-observation-reso",
           "name": "Observation Resolution Time",
-          "desc": "Average elapsed time from observation creation to closure — measures how quickly quality and safety findings are addressed. Formula: Closed Date − Created Date (in business days). Can be segmented by category (Quality vs. Safety), type_name (severity), and responsible vendor."
+          "desc": "Average elapsed time from observation creation to closure \u2014 measures how quickly quality and safety findings are addressed. Formula: Closed Date \u2212 Created Date (in business days). Can be segmented by category (Quality vs. Safety), type_name (severity), and responsible vendor.",
+          "concept_type": "derived-metric"
         },
         {
           "id": "qsr-insp-pass-rate",
           "name": "Inspection Pass Rate",
-          "desc": "Percentage of inspections that pass on first attempt — measures work quality at the point of formal examination. Formula: Passed Inspections / Total Inspections × 100 (or at item level: Conforming Items / Total Items). First-pass yield is a stronger quality signal than overall pass rate."
+          "desc": "Percentage of inspections that pass on first attempt \u2014 measures work quality at the point of formal examination. Formula: Passed Inspections / Total Inspections \u00d7 100 (or at item level: Conforming Items / Total Items). First-pass yield is a stronger quality signal than overall pass rate.",
+          "concept_type": "derived-metric"
         },
         {
           "id": "qsr-near-miss-ratio",
           "name": "Near-Miss Ratio",
-          "desc": "Ratio of near-miss reports to actual incidents — measures safety culture and proactive reporting. Formula: Near-Miss Count / Incident Count. Higher ratio = better safety culture (more proactive identification). Industry target: 10:1 near-miss-to-incident ratio. Low ratio suggests underreporting of near-misses, not absence of hazards."
+          "desc": "Ratio of near-miss reports to actual incidents \u2014 measures safety culture and proactive reporting. Formula: Near-Miss Count / Incident Count. Higher ratio = better safety culture (more proactive identification). Industry target: 10:1 near-miss-to-incident ratio. Low ratio suggests underreporting of near-misses, not absence of hazards.",
+          "concept_type": "derived-metric"
         },
         {
           "id": "qsr-corrective-actio-2",
           "name": "Corrective Action Closure Rate",
-          "desc": "Percentage of corrective actions completed by their due date — measures the effectiveness of the remediation loop. Formula: On-Time Closures / Total Corrective Actions × 100. Tracks whether identified problems actually get fixed. Overdue corrective actions indicate systemic follow-through failures."
+          "desc": "Percentage of corrective actions completed by their due date \u2014 measures the effectiveness of the remediation loop. Formula: On-Time Closures / Total Corrective Actions \u00d7 100. Tracks whether identified problems actually get fixed. Overdue corrective actions indicate systemic follow-through failures.",
+          "concept_type": "derived-metric"
         }
       ]
     },
@@ -257,20 +276,209 @@
         {
           "id": "qsr-quality-pattern",
           "name": "Quality Issue Pattern",
-          "procore": "project_management.punch_item",
-          "desc": "Cross-signal analytical pattern that classifies quality issues into 18 named categories using keyword clustering on two complementary data surfaces. Primary: punch_item.name (0% null, ~74% keyword match rate, 11,722 companies) captures closeout-phase quality issues — Paint/Finish is #1 universally, but #2-#4 vary by project type. Secondary: observation.name filtered by category = 'Quality' (43% clustering rate, 5,923 companies) captures during-construction issues with different distributions — Commercial projects show Doors/Windows #1, Healthcare shows Electrical #1, Industrial shows Cracks/Damage #1. Combined coverage: 12,556 unique companies. 3D analysis by issue category, project type, and value band reveals actionable patterns."
+          "desc": "Cross-signal analytical pattern that classifies quality issues into 18 named categories using keyword clustering on two complementary data surfaces. Primary: punch_item.name (0% null, ~74% keyword match rate, 11,722 companies) captures closeout-phase quality issues \u2014 Paint/Finish is #1 universally, but #2-#4 vary by project type. Secondary: observation.name filtered by category = 'Quality' (43% clustering rate, 5,923 companies) captures during-construction issues with different distributions \u2014 Commercial projects show Doors/Windows #1, Healthcare shows Electrical #1, Industrial shows Cracks/Damage #1. Combined coverage: 12,556 unique companies. 3D analysis by issue category, project type, and value band reveals actionable patterns."
         },
         {
           "id": "qsr-recurring-hazard",
           "name": "Recurring Safety Hazard",
-          "procore": "project_management.observation",
-          "desc": "Detects recurring safety hazards by tracking observation.hazard_name patterns over time within a project. Hazard_name is an OSHA-aligned structured taxonomy (Fall, Struck By, Electrical, Caught In/Between, etc.) with 16 types having 50+ companies each — 55% populated on safety observations. Recurrence detection: same hazard per project per week using LAG window functions with 14-day gap tolerance. 2+ consecutive weeks = recurring, 3+ = systemic. Recurrence rates range 29-45% by hazard type. Trade attribution via vendor_id (86.3% populated). Supplemented by inspection_items with status = 'Deficient' for formal inspection failures (91K+ patterns, 1,630 companies). Benchmarks by hazard type, project type, and duration."
+          "desc": "Detects recurring safety hazards by tracking observation.hazard_name patterns over time within a project. Hazard_name is an OSHA-aligned structured taxonomy (Fall, Struck By, Electrical, Caught In/Between, etc.) with 16 types having 50+ companies each \u2014 55% populated on safety observations. Recurrence detection: same hazard per project per week using LAG window functions with 14-day gap tolerance. 2+ consecutive weeks = recurring, 3+ = systemic. Recurrence rates range 29-45% by hazard type. Trade attribution via vendor_id (86.3% populated). Supplemented by inspection_items with status = 'Deficient' for formal inspection failures (91K+ patterns, 1,630 companies). Benchmarks by hazard type, project type, and duration."
         },
         {
           "id": "qsr-punch-density",
           "name": "Punch List Density as Quality Predictor",
-          "procore": "project_management.punch_item",
           "desc": "Uses punch item volume and composition at substantial completion as a predictor of closeout duration and warranty risk. Formula: punch items per gross SF or per unit count, segmented by the 18 issue categories derived from punch_item.name keyword clustering. Projects with punch density above the 75th percentile for their type/size band take significantly longer to reach final completion. Category composition matters: high structural or MEP punch density predicts longer resolution than cosmetic items. Punch items created during construction (vs. at substantial completion) are early warning signals of systemic quality problems."
+        }
+      ]
+    },
+    {
+      "name": "OSHA Focus Four Hazards",
+      "color": "#e57373",
+      "nodes": [
+        {
+          "id": "qsr-h-falls",
+          "name": "Falls (Focus Four)",
+          "procore": "project_management.observation.hazard_name",
+          "desc": "The #1 cause of construction fatalities. OSHA Focus Four hazard. Includes falls from height, falls on same level, slips and trips. Maps to OSHA Subpart M (Fall Protection) and Subpart X (Stairways and Ladders). Fall protection is the most-cited OSHA standard every year."
+        },
+        {
+          "id": "qsr-h-struck-by",
+          "name": "Struck-By (Focus Four)",
+          "procore": "project_management.observation.hazard_name",
+          "desc": "Worker struck by falling, swinging, flying, or rolling objects. Focus Four hazard. Examples: dropped tools, swinging crane loads, flying debris, vehicles. Maps to OSHA Subpart H (Materials Handling), N (Cranes), O (Motor Vehicles)."
+        },
+        {
+          "id": "qsr-h-caught",
+          "name": "Caught-In / Between (Focus Four)",
+          "procore": "project_management.observation.hazard_name",
+          "desc": "Worker caught, crushed, or pinched between objects, equipment, or material. Focus Four hazard. Examples: trench cave-ins, equipment rollovers, machine pinch points. Maps to OSHA Subpart P (Excavations), Q (Concrete & Masonry), W (Rollover Protection)."
+        },
+        {
+          "id": "qsr-h-electrocution",
+          "name": "Electrocution (Focus Four)",
+          "procore": "project_management.observation.hazard_name",
+          "desc": "Worker contact with energized electrical equipment, overhead power lines, or wiring. Focus Four hazard. Maps to OSHA Subpart K (Electrical), V (Electric Power Transmission). Lockout/tagout failures are a primary contributor."
+        }
+      ]
+    },
+    {
+      "name": "OSHA Hazard Categories",
+      "color": "#f48fb1",
+      "nodes": [
+        {
+          "id": "qsr-h-fall-prot",
+          "name": "Fall Protection / Working at Height",
+          "procore": "project_management.observation.hazard_name",
+          "desc": "Hazards involving work above 6 ft requiring fall protection. PFAS, guardrails, safety nets. Subpart M. Top citation category."
+        },
+        {
+          "id": "qsr-h-scaffolding",
+          "name": "Scaffolding",
+          "procore": "project_management.observation.hazard_name",
+          "desc": "Improper scaffold erection, missing guardrails, overloading, unsafe access. Subpart L."
+        },
+        {
+          "id": "qsr-h-excavation",
+          "name": "Excavation / Trenching",
+          "procore": "project_management.observation.hazard_name",
+          "desc": "Trench cave-in, missing protective system, unsafe slope/bench, surcharge loads. Subpart P. Daily competent person inspection required."
+        },
+        {
+          "id": "qsr-h-electrical",
+          "name": "Electrical Safety",
+          "procore": "project_management.observation.hazard_name",
+          "desc": "Energized contact, missing GFCI, improper wiring, lockout/tagout violations. Subpart K."
+        },
+        {
+          "id": "qsr-h-hot-work",
+          "name": "Hot Work / Welding / Cutting",
+          "procore": "project_management.observation.hazard_name",
+          "desc": "Welding without screens, missing fire watch, hot work in flammable areas, missing permits. Subpart J."
+        },
+        {
+          "id": "qsr-h-confined-space",
+          "name": "Confined Space",
+          "procore": "project_management.observation.hazard_name",
+          "desc": "Permit-required confined space entry, atmospheric testing, attendant. CFR 1910.146 cross-reference."
+        },
+        {
+          "id": "qsr-h-crane-rigging",
+          "name": "Crane / Hoist / Rigging",
+          "procore": "project_management.observation.hazard_name",
+          "desc": "Crane upset, rigging failure, swing path violation, missing signal person, operator certification. Subpart N."
+        },
+        {
+          "id": "qsr-h-mat-handling",
+          "name": "Materials Handling",
+          "procore": "project_management.observation.hazard_name",
+          "desc": "Improper lifting, falling materials, unsafe storage, manual handling injuries. Subpart H."
+        },
+        {
+          "id": "qsr-h-ppe",
+          "name": "Personal Protective Equipment (PPE)",
+          "procore": "project_management.observation.hazard_name",
+          "desc": "Missing or improper PPE \u2014 head, eye, foot, hand, hearing, respiratory. Subpart E."
+        },
+        {
+          "id": "qsr-h-fire",
+          "name": "Fire Protection",
+          "procore": "project_management.observation.hazard_name",
+          "desc": "Inadequate firefighting equipment, blocked exits, improper flammables storage. Subpart F."
+        },
+        {
+          "id": "qsr-h-hazmat",
+          "name": "Hazardous Material / Chemical Exposure",
+          "procore": "project_management.observation.hazard_name",
+          "desc": "Lead, asbestos, silica, chemical exposure. Subpart Z. Requires written exposure control plans."
+        },
+        {
+          "id": "qsr-h-environmental",
+          "name": "Environmental / Heat / Cold Stress",
+          "procore": "project_management.observation.hazard_name",
+          "desc": "Heat illness, cold stress, noise exposure. Subpart D and emerging OSHA heat illness standards."
+        },
+        {
+          "id": "qsr-h-tool-equip",
+          "name": "Tool / Equipment Safety",
+          "procore": "project_management.observation.hazard_name",
+          "desc": "Improper hand-tool use, defective power tools, abrasive wheel hazards. Subpart I."
+        },
+        {
+          "id": "qsr-h-vehicle",
+          "name": "Vehicle / Mobile Equipment",
+          "procore": "project_management.observation.hazard_name",
+          "desc": "Site vehicle safety, backing accidents, equipment rollover, missing ROPS/FOPS. Subparts O, W."
+        },
+        {
+          "id": "qsr-h-housekeeping",
+          "name": "Housekeeping / Slip-Trip",
+          "procore": "project_management.observation.hazard_name",
+          "desc": "Unsafe walking/working surfaces, debris, water, ice. Foundational for fall prevention."
+        },
+        {
+          "id": "qsr-h-other",
+          "name": "Other / General Safety",
+          "procore": "project_management.observation.hazard_name",
+          "desc": "Hazards not fitting a specific structured category. Catch-all bucket \u2014 should be minimized through hazard taxonomy refinement."
+        }
+      ]
+    },
+    {
+      "name": "OSHA Injury Classifications",
+      "color": "#ce93d8",
+      "nodes": [
+        {
+          "id": "qsr-inj-near-miss",
+          "name": "Near Miss",
+          "procore": "project_management.incident_record.incident_injury_severity",
+          "desc": "An incident with no injury that could have caused harm. Not OSHA-recordable but tracked as a leading indicator of safety risk. Near-miss frequency is the strongest predictor of future recordables."
+        },
+        {
+          "id": "qsr-inj-first-aid",
+          "name": "First Aid Only",
+          "procore": "project_management.incident_record.incident_injury_severity",
+          "desc": "Minor injury treated with first aid. Not OSHA-recordable. Examples: minor scrapes, single dose of medication, removal of splinters."
+        },
+        {
+          "id": "qsr-inj-recordable",
+          "name": "OSHA Recordable",
+          "procore": "project_management.incident_record.incident_injury_severity",
+          "desc": "Injury or illness recorded on the OSHA 300 log. Beyond first aid \u2014 required medical treatment, loss of consciousness, restricted activity, or death. Drives TRIR (Total Recordable Incident Rate)."
+        },
+        {
+          "id": "qsr-inj-medical",
+          "name": "Medical Treatment Case",
+          "procore": "project_management.incident_record.incident_injury_severity",
+          "desc": "Recordable case requiring medical treatment beyond first aid but no lost time. Subset of OSHA Recordables."
+        },
+        {
+          "id": "qsr-inj-restricted",
+          "name": "Restricted Duty / Light Duty",
+          "procore": "project_management.incident_record.incident_injury_severity",
+          "desc": "Recordable case where worker can't perform regular duties but is on restricted/light duty. Counts toward DART (Days Away, Restricted, Transferred) rate."
+        },
+        {
+          "id": "qsr-inj-lost-time",
+          "name": "Lost Time / Days Away",
+          "procore": "project_management.incident_record.incident_injury_severity",
+          "desc": "Recordable case with one or more days away from work beyond the day of injury. Highest-severity recordable. Drives DART and LWIR (Lost Workday Incident Rate)."
+        },
+        {
+          "id": "qsr-inj-fatality",
+          "name": "Fatality",
+          "procore": "project_management.incident_record.incident_injury_severity",
+          "desc": "Death resulting from a work-related injury or illness. OSHA-reportable within 8 hours regardless of recordability. Triggers OSHA inspection."
+        }
+      ]
+    },
+    {
+      "name": "Constructability",
+      "color": "#a5d6a7",
+      "nodes": [
+        {
+          "id": "qsr-constr-review",
+          "name": "Constructability Review",
+          "procore": "",
+          "desc": "Pre-construction review of design by construction-experienced personnel to identify build issues, sequence problems, access constraints. CII research: early constructability reviews avert ~5x their cost in rework."
         }
       ]
     }
